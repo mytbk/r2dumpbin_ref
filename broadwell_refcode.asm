@@ -58699,6 +58699,7 @@ dd 0x00000000
 dd 0x00000000
 dd 0x00000000
 
+;; The following should be the .bss section
 ref_00029a88:
 dd 0x00000000
 
