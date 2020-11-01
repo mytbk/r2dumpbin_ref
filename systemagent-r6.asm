@@ -60238,21 +60238,7 @@ dd 0x10100e0e
 dd 0x10101010
 
 ref_fffceebc:
-dd 0x6f6f766f
-dd 0x73666f6f
-dd 0x6b6b6b6b
-dd 0x66667161
-dd 0x6e5c6666
-dd 0x62626262
-dd 0x5e5e6c57
-dd 0x766f5e5e
-dd 0x6f6f6f6f
-dd 0x6b6b7366
-dd 0x71616b6b
-dd 0x66666666
-dd 0x62626e5c
-dd 0x6c576262
-dd 0x5e5e5e5e
+db 'ovoooofskkkkaqffff\nbbbbWl^^^^ovoooofskkkkaqffff\nbbbbWl^^^^'
 
 ref_fffceef8:
 dd 0x08080808
@@ -60378,86 +60364,10 @@ dd 0x15151414
 dd 0x15151515
 
 ref_fffcf0bc:
-dd 0x6f6f7669
-dd 0x74636f6f
-dd 0x6b6b6b6b
-dd 0x6a6a7361
-dd 0x715d6a6a
-dd 0x67676767
-dd 0x63636f58
-dd 0x6f576363
-dd 0x62626262
-dd 0x60606d54
-dd 0x6c516060
-dd 0x5e5e5e5e
-dd 0x5d5d6b50
-dd 0x6a4b5d5d
-dd 0x5a5a5a5a
-dd 0x57576847
-dd 0x67455757
-dd 0x56565656
-dd 0x53536642
-dd 0x76695353
-dd 0x6f6f6f6f
-dd 0x6b6b7463
-dd 0x73616b6b
-dd 0x6a6a6a6a
-dd 0x6767715d
-dd 0x6f586767
-dd 0x63636363
-dd 0x62626f57
-dd 0x6d546262
-dd 0x60606060
-dd 0x5e5e6c51
-dd 0x6b505e5e
-dd 0x5d5d5d5d
-dd 0x5a5a6a4b
-dd 0x68475a5a
-dd 0x57575757
-dd 0x56566745
-dd 0x66425656
-dd 0x53535353
+db 'ivooooctkkkkasjjjj]qggggXoccccWobbbbTm````Ql^^^^Pk]]]]KjZZZZGhWWWWEgVVVVBfSSSSivooooctkkkkasjjjj]qggggXoccccWobbbbTm````Ql^^^^Pk]]]]KjZZZZGhWWWWEgVVVVBfSSSS'
 
 ref_fffcf158:
-dd 0x6c706c6c
-dd 0x68686c6c
-dd 0x6868686c
-dd 0x666b6666
-dd 0x63636666
-dd 0x63636368
-dd 0x5f655f5f
-dd 0x5e5e5f5f
-dd 0x5e5e5e64
-dd 0x5b625b5b
-dd 0x59595b5b
-dd 0x59595960
-dd 0x585f5858
-dd 0x54545858
-dd 0x5454545c
-dd 0x50595050
-dd 0x4f4f5050
-dd 0x4f4f4f58
-dd 0x4d564d4d
-dd 0x75754d4d
-dd 0x75757578
-dd 0x72767272
-dd 0x71717272
-dd 0x71717176
-dd 0x6f746f6f
-dd 0x6d6d6f6f
-dd 0x6d6d6d73
-dd 0x6c726c6c
-dd 0x6a6a6c6c
-dd 0x6a6a6a71
-dd 0x69706969
-dd 0x68686969
-dd 0x68686870
-dd 0x666e6666
-dd 0x64646666
-dd 0x6464646d
-dd 0x636c6363
-dd 0x62626363
-dd 0x6262626b
+db 'llplllhhlhhhffkfffcchccc__e___^^d^^^[[b[[[YY`YYYXX_XXXTT\TTTPPYPPPOOXOOOMMVMMMuuxuuurrvrrrqqvqqqootooommsmmmllrllljjqjjjiipiiihhphhhffnfffddmdddcclcccbbkbbb'
 
 ref_fffcf1f4:
 dd loc_fffbb758
@@ -60528,16 +60438,16 @@ dd loc_fffbfbb5
 dd loc_fffbfbc6
 
 ref_fffcf298:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf29c:
 dd 0x1c181410
 
 ref_fffcf2a0:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf2a4:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf2a8:
 dd 0x1c181410

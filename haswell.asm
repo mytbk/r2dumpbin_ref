@@ -56931,12 +56931,7 @@ dd 0x1e3c1e3c
 dd 0x1e3c1e3c
 
 ref_fffcbd44:
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
+db '<<<<<(<(<(<(<<<<<(<(<(<('
 
 ref_fffcbd5c:
 dd 0xfafafabb
@@ -57378,7 +57373,7 @@ dd 0x00000000
 dd 0x00000200
 
 ref_fffcc32c:
-dd 0x45454552
+db 'REEE'
 
 ref_fffcc330:
 dd ref_fffcd58c

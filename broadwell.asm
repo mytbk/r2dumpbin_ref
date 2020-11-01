@@ -68913,12 +68913,7 @@ dd 0x0000f000
 dd 0x00000000
 
 ref_fffd3364:
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
+db '<<<<<(<(<(<(<<<<<(<(<(<('
 
 ref_fffd337c:
 dd 0x3c3c3c3c
