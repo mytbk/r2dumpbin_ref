@@ -5,6 +5,7 @@
 ;; f fcn3 @ 0xfffab07d
 ;; f fcn4 @ 0xfffb742b
 ;; f fcn5 @ 0xfffb7458
+;; f fcn6 @ 0xfffd295d
 
 bits 32
 org 0xfffa0000
@@ -67927,16 +67928,15 @@ mov eax, dword [esp + 8]
 pop edi
 ret
 
-loc_fffd295d:
-db 0x57
-db 0x8b
-db 0x44
-dd 0x7c8b1024
-dd 0x4c8b0824
-dd 0xabf30c24
-dd 0x0824448b
-db 0x5f
-db 0xc3
+fcn_fffd295d:
+push edi
+mov eax, dword [esp + 0x10]
+mov edi, dword [esp + 8]
+mov ecx, dword [esp + 0xc]
+rep stosd  ; rep stosd dword es:[edi], eax
+mov eax, dword [esp + 8]
+pop edi
+ret
 
 loc_fffd2972:  ; not directly referenced
 mov ecx, dword [esp + 0xc]
@@ -68913,12 +68913,7 @@ dd 0x0000f000
 dd 0x00000000
 
 ref_fffd3364:
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
-dd 0x3c3c3c3c
-dd 0x283c283c
-dd 0x283c283c
+db '<<<<<(<(<(<(<<<<<(<(<(<('
 
 ref_fffd337c:
 dd 0x3c3c3c3c
