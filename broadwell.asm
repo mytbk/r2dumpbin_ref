@@ -71896,12 +71896,14 @@ dd 0x48d8b06b
 dd 0xe5ba01a2
 dd 0x567dcdf1
 
+;; FIXME: r2dumpbin failed to analyze this, while this is very important
 ref_fffd605c:
-dd 0xfb3f4b01
-dd 0xfb878bff
-dd 0xfc5590ff
-dd 0xfb8736ff
-dd 0x000000ff
+db 0x01
+dd fcn_fffb3f4b
+dd fcn_fffb878b
+dd fcn_fffc5590
+dd fcn_fffb8736
+db 0x00, 0x00, 0x00
 
 ref_fffd6070:
 dd 0x794a0deb
