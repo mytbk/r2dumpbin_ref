@@ -1,11 +1,10 @@
 ;; Generated with r2dumpbin (https://github.com/mytbk/r2dumpbin)
-;; f va @ 0xfffa0000
-;; f fcn1 @ 0xfffb8dbb
+;; label comments removed
 
 bits 32
 org 0xfffa0000
 
-loc_fffa0000:
+fcn_fffa0000:
 push eax
 mov al, 1
 out 0x80, al
@@ -18,10 +17,10 @@ out 0x80, al
 pop eax
 ret
 
-loc_fffa0013:
+endloc_fffa0013:
 db 0x00
 
-fcn_fffa0014:  ; not directly referenced
+fcn_fffa0014:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0xc]
@@ -36,7 +35,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_fffa0032:  ; not directly referenced
+fcn_fffa0032:
 push ebp
 and edx, 0x7f
 mov ebp, esp
@@ -48,7 +47,7 @@ mov byte [ebp - 9], cl
 xor ecx, ecx
 jmp short loc_fffa0054  ; jmp 0xfffa0054
 
-loc_fffa0045:  ; not directly referenced
+loc_fffa0045:
 imul esi, ecx, 0x11
 inc ecx
 mov bl, byte [eax + esi + 0x39]
@@ -56,7 +55,7 @@ and ebx, 0x7f
 cmp dl, bl
 je short loc_fffa0092  ; je 0xfffa0092
 
-loc_fffa0054:  ; not directly referenced
+loc_fffa0054:
 cmp byte [ebp - 9], cl
 ja short loc_fffa0045  ; ja 0xfffa0045
 movzx edx, dl
@@ -65,19 +64,19 @@ add edx, edx
 xor ecx, ecx
 jmp short loc_fffa0077  ; jmp 0xfffa0077
 
-loc_fffa0068:  ; not directly referenced
+loc_fffa0068:
 mov esi, dword [eax + 0xc2]
 movzx esi, byte [esi + ecx]
 inc ecx
 cmp edx, esi
 je short loc_fffa0092  ; je 0xfffa0092
 
-loc_fffa0077:  ; not directly referenced
+loc_fffa0077:
 cmp bl, cl
 ja short loc_fffa0068  ; ja 0xfffa0068
 xor eax, eax
 
-loc_fffa007d:  ; not directly referenced
+loc_fffa007d:
 movzx ecx, byte [eax + ref_fffc9950]  ; movzx ecx, byte [eax - 0x366b0]
 cmp edx, ecx
 je short loc_fffa0092  ; je 0xfffa0092
@@ -87,17 +86,17 @@ jne short loc_fffa007d  ; jne 0xfffa007d
 mov al, 1
 jmp short loc_fffa0094  ; jmp 0xfffa0094
 
-loc_fffa0092:  ; not directly referenced
+loc_fffa0092:
 xor eax, eax
 
-loc_fffa0094:  ; not directly referenced
+loc_fffa0094:
 pop edx
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_fffa0099:  ; not directly referenced
+fcn_fffa0099:
 push ebp
 mov ebp, esp
 push edi
@@ -111,7 +110,7 @@ and ecx, 0xffffff80
 or ecx, 3
 jmp short loc_fffa00ca  ; jmp 0xfffa00ca
 
-loc_fffa00ae:  ; not directly referenced
+loc_fffa00ae:
 mov dl, cl
 mov eax, esi
 mov byte [ebp - 0x10], cl
@@ -124,7 +123,7 @@ and ecx, 0xffffff80
 and edi, 0x7f
 or ecx, edi
 
-loc_fffa00ca:  ; not directly referenced
+loc_fffa00ca:
 mov byte [ebx], cl
 mov edi, 0x7f
 mov cl, byte [ebx]
@@ -135,10 +134,10 @@ jne short loc_fffa00ae  ; jne 0xfffa00ae
 mov eax, 0x80000009
 jmp short loc_fffa00e4  ; jmp 0xfffa00e4
 
-loc_fffa00e2:  ; not directly referenced
+loc_fffa00e2:
 xor eax, eax
 
-loc_fffa00e4:  ; not directly referenced
+loc_fffa00e4:
 pop ebx
 pop ebx
 pop esi
@@ -146,7 +145,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffa00ea:  ; not directly referenced
+fcn_fffa00ea:
 push ebp
 mov eax, dword [0xf00f8040]
 and eax, 0xff80
@@ -158,7 +157,7 @@ and eax, 1
 pop ebp
 ret
 
-fcn_fffa0103:  ; not directly referenced
+fcn_fffa0103:
 push ebp
 mov edx, dword [0xf00f8040]
 and edx, 0xff80
@@ -170,7 +169,7 @@ setne al
 pop ebp
 ret
 
-fcn_fffa0120:  ; not directly referenced
+fcn_fffa0120:
 push ebp
 mov eax, dword [0xf00f8040]
 mov byte [0xfeffc000], 1
@@ -186,7 +185,7 @@ out dx, eax
 pop ebp
 ret
 
-fcn_fffa014f:  ; not directly referenced
+fcn_fffa014f:
 push ebp
 mov eax, dword [0xf00f8040]
 and eax, 0xff80
@@ -198,7 +197,7 @@ and eax, 1
 pop ebp
 ret
 
-fcn_fffa0168:  ; not directly referenced
+fcn_fffa0168:
 push ebp
 mov eax, dword [0xf00f8040]
 and eax, 0xff80
@@ -213,7 +212,7 @@ out dx, eax
 pop ebp
 ret
 
-fcn_fffa0190:  ; not directly referenced
+fcn_fffa0190:
 push ebp
 mov eax, 0x80000002
 mov ebp, esp
@@ -240,12 +239,12 @@ mov eax, ecx
 out dx, eax
 xor eax, eax
 
-loc_fffa01e8:  ; not directly referenced
+loc_fffa01e8:
 pop ebx
 pop ebp
 ret
 
-fcn_fffa01eb:  ; not directly referenced
+fcn_fffa01eb:
 push ebp
 mov eax, dword [0xf00f80f0]
 mov ebp, esp
@@ -259,36 +258,36 @@ cmp ecx, 2
 jne short loc_fffa0252  ; jne 0xfffa0252
 jmp short loc_fffa0243  ; jmp 0xfffa0243
 
-loc_fffa020c:  ; not directly referenced
+loc_fffa020c:
 mov cl, byte [eax + 0x38f4]
 and cl, 1
 jne short loc_fffa021e  ; jne 0xfffa021e
 mov word [edx], 0
 jmp short loc_fffa0252  ; jmp 0xfffa0252
 
-loc_fffa021e:  ; not directly referenced
+loc_fffa021e:
 mov ax, word [eax + 0x38f8]
 mov word [edx], ax
 jmp short loc_fffa0252  ; jmp 0xfffa0252
 
-loc_fffa022a:  ; not directly referenced
+loc_fffa022a:
 mov dx, word [edx]
 mov word [eax + 0x38f8], dx
 mov dl, byte [eax + 0x38f4]
 or edx, 1
 mov byte [eax + 0x38f4], dl
 
-loc_fffa0243:  ; not directly referenced
+loc_fffa0243:
 mov dl, byte [eax + 0x38f0]
 or edx, 1
 mov byte [eax + 0x38f0], dl
 
-loc_fffa0252:  ; not directly referenced
+loc_fffa0252:
 xor eax, eax
 pop ebp
 ret
 
-fcn_fffa0256:  ; not directly referenced
+fcn_fffa0256:
 push ebp
 mov eax, dword [0xf00f80f0]
 and eax, 0xffffc000
@@ -306,11 +305,11 @@ and edx, 0xfffffff0
 or edx, 2
 mov byte [eax + 0x21b0], dl
 
-loc_fffa029b:  ; not directly referenced
+loc_fffa029b:
 pop ebp
 ret
 
-fcn_fffa029d:  ; not directly referenced
+fcn_fffa029d:
 push ebp
 mov ebp, esp
 push edi
@@ -341,7 +340,7 @@ mov eax, dword [esi + 0x50]
 or eax, 0xa0000
 mov dword [esi + 0x50], eax
 
-loc_fffa02f7:  ; not directly referenced
+loc_fffa02f7:
 mov eax, dword [esi + 0x50]
 mov al, byte [esi + 0x1114]
 or eax, 5
@@ -350,7 +349,7 @@ xor ecx, ecx
 mov ebx, dword [ebp - 0x20]
 mov edx, 1
 
-loc_fffa0313:  ; not directly referenced
+loc_fffa0313:
 mov edi, dword [ebx + ecx*4]
 mov eax, edx
 shl eax, cl
@@ -364,7 +363,7 @@ xor cl, cl
 mov dword [ebp - 0x30], eax
 mov dword [ebp - 0x34], edx
 
-loc_fffa0338:  ; not directly referenced
+loc_fffa0338:
 mov eax, dword [ebp - 0x20]
 lea edx, [ecx + 0x10]
 mov byte [ebp - 0x2c], cl
@@ -384,14 +383,14 @@ mov ebx, dword [ebp - 0x30]
 cmove ebx, dword [ebp - 0x34]
 jmp short loc_fffa0384  ; jmp 0xfffa0384
 
-loc_fffa0376:  ; not directly referenced
+loc_fffa0376:
 lea ebx, [esi + 0x2030]
 jmp short loc_fffa0384  ; jmp 0xfffa0384
 
-loc_fffa037e:  ; not directly referenced
+loc_fffa037e:
 lea ebx, [esi + 0x2040]
 
-loc_fffa0384:  ; not directly referenced
+loc_fffa0384:
 mov eax, dword [ebx]
 and eax, 0xf0ffff01
 or eax, edi
@@ -403,7 +402,7 @@ cmp al, 1
 ja short loc_fffa039b  ; ja 0xfffa039b
 mov eax, dword [ebx]
 
-loc_fffa039b:  ; not directly referenced
+loc_fffa039b:
 inc ecx
 cmp ecx, 4
 jne short loc_fffa0338  ; jne 0xfffa0338
@@ -417,7 +416,7 @@ xor eax, eax
 lea ebx, [esi + 0x201a]
 mov dword [ebp - 0x2c], edx
 
-loc_fffa03c3:  ; not directly referenced
+loc_fffa03c3:
 cmp byte [ecx + eax*2 + 0x20], 1
 mov dl, al
 jne short loc_fffa03f6  ; jne 0xfffa03f6
@@ -430,19 +429,19 @@ mov edx, dword [ebp - 0x2c]
 cmovne edx, ebx
 jmp short loc_fffa03ec  ; jmp 0xfffa03ec
 
-loc_fffa03de:  ; not directly referenced
+loc_fffa03de:
 lea edx, [esi + 0x2036]
 jmp short loc_fffa03ec  ; jmp 0xfffa03ec
 
-loc_fffa03e6:  ; not directly referenced
+loc_fffa03e6:
 lea edx, [esi + 0x2046]
 
-loc_fffa03ec:  ; not directly referenced
+loc_fffa03ec:
 mov di, word [edx]
 test di, 2
 jne short loc_fffa03ec  ; jne 0xfffa03ec
 
-loc_fffa03f6:  ; not directly referenced
+loc_fffa03f6:
 inc eax
 cmp eax, 4
 jne short loc_fffa03c3  ; jne 0xfffa03c3
@@ -469,7 +468,7 @@ loc_fffa041c:
 pop ebp
 ret
 
-fcn_fffa041e:  ; not directly referenced
+fcn_fffa041e:
 push ebp
 mov ebp, esp
 push edi
@@ -484,10 +483,10 @@ mov ebx, 3
 mov eax, dword [eax + 0x250]
 jmp short loc_fffa0444  ; jmp 0xfffa0444
 
-loc_fffa0442:  ; not directly referenced
+loc_fffa0442:
 jmp short loc_fffa0442  ; jmp 0xfffa0442
 
-loc_fffa0444:  ; not directly referenced
+loc_fffa0444:
 cmp eax, 0x13
 ja short loc_fffa0474  ; ja 0xfffa0474
 inc eax
@@ -506,17 +505,17 @@ jns short loc_fffa0444  ; jns 0xfffa0444
 xor eax, eax
 jmp short loc_fffa0479  ; jmp 0xfffa0479
 
-loc_fffa0474:  ; not directly referenced
+loc_fffa0474:
 mov eax, 0x80000009
 
-loc_fffa0479:  ; not directly referenced
+loc_fffa0479:
 pop ebx
 pop esi
 pop edi
 pop ebp
 ret
 
-fcn_fffa047e:  ; not directly referenced
+fcn_fffa047e:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -524,10 +523,10 @@ mov eax, dword [eax]
 cmp dword [eax - 4], 0xfeadb00b
 je short loc_fffa0491  ; je 0xfffa0491
 
-loc_fffa048f:  ; not directly referenced
+loc_fffa048f:
 jmp short loc_fffa048f  ; jmp 0xfffa048f
 
-loc_fffa0491:  ; not directly referenced
+loc_fffa0491:
 mov edx, dword [eax + 0x254]
 mov eax, dword [ebp + 0xc]
 mov dword [eax], edx
@@ -535,7 +534,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_fffa04a0:  ; not directly referenced
+fcn_fffa04a0:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -543,10 +542,10 @@ mov eax, dword [eax]
 cmp dword [eax - 4], 0xfeadb00b
 je short loc_fffa04b3  ; je 0xfffa04b3
 
-loc_fffa04b1:  ; not directly referenced
+loc_fffa04b1:
 jmp short loc_fffa04b1  ; jmp 0xfffa04b1
 
-loc_fffa04b3:  ; not directly referenced
+loc_fffa04b3:
 mov edx, dword [eax + 0x68]
 mov eax, dword [ebp + 0xc]
 mov dword [eax], edx
@@ -554,7 +553,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_fffa04bf:  ; not directly referenced
+fcn_fffa04bf:
 push ebp
 mov ebp, esp
 mov edx, dword [ebp + 0x10]
@@ -563,7 +562,7 @@ out dx, ax
 pop ebp
 ret
 
-fcn_fffa04cc:  ; not directly referenced
+fcn_fffa04cc:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -571,7 +570,7 @@ pop ebp
 mov eax, dword [eax]
 ret
 
-fcn_fffa04d6:  ; not directly referenced
+fcn_fffa04d6:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -579,28 +578,28 @@ pop ebp
 mov al, byte [eax]
 ret
 
-fcn_fffa04e0:  ; not directly referenced
+fcn_fffa04e0:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_fffa04e7:  ; not directly referenced
+fcn_fffa04e7:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_fffa04ee:  ; not directly referenced
+fcn_fffa04ee:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_fffa04f5:  ; not directly referenced
+fcn_fffa04f5:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -610,7 +609,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_fffa050c:  ; not directly referenced
+fcn_fffa050c:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -625,7 +624,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_fffa0537:  ; not directly referenced
+fcn_fffa0537:
 push ebp
 mov ebp, esp
 lea esp, [esp - 0x2c]
@@ -685,7 +684,7 @@ call fcn_fffb7031  ; call 0xfffb7031
 leave
 ret
 
-fcn_fffa05e3:  ; not directly referenced
+fcn_fffa05e3:
 push ebp
 mov ebp, esp
 push edi
@@ -698,7 +697,7 @@ cmp byte [ebp + 0x10], 0
 mov esi, dword [ebp + 0x14]
 mov al, byte [edi + 0x38]
 mov byte [ebp - 0x3d], al
-je loc_fffa077c  ; je 0xfffa077c
+je near loc_fffa077c  ; je 0xfffa077c
 push eax
 lea eax, [ebp - 0x31]
 lea esi, [ebp - 0x30]
@@ -716,10 +715,10 @@ test eax, eax
 mov ebx, eax
 jns short loc_fffa0643  ; jns 0xfffa0643
 cmp eax, 0x80000007
-jne loc_fffa0827  ; jne 0xfffa0827
+jne near loc_fffa0827  ; jne 0xfffa0827
 jmp near loc_fffa082b  ; jmp 0xfffa082b
 
-loc_fffa0643:  ; not directly referenced
+loc_fffa0643:
 movzx eax, byte [edi + 0x38]
 lea edx, [ebp - 0x29]
 imul eax, eax, 0x11
@@ -739,9 +738,9 @@ push 1
 call fcn_fffb7031  ; call 0xfffb7031
 add esp, 0x10
 test eax, eax
-js loc_fffa082b  ; js 0xfffa082b
+js near loc_fffa082b  ; js 0xfffa082b
 cmp dword [ebp - 0x30], 0x11
-jne loc_fffa082b  ; jne 0xfffa082b
+jne near loc_fffa082b  ; jne 0xfffa082b
 mov al, byte [ebp - 0x28]
 mov cl, byte [ebp - 0x29]
 mov byte [ebx + 0xf], al
@@ -793,14 +792,14 @@ and eax, 0x7f
 cmp al, 0x7f
 jne short loc_fffa074c  ; jne 0xfffa074c
 
-loc_fffa072e:  ; not directly referenced
+loc_fffa072e:
 mov edx, ebx
 mov eax, edi
 call fcn_fffa0099  ; call 0xfffa0099
 test eax, eax
 js short loc_fffa079b  ; js 0xfffa079b
 
-loc_fffa073b:  ; not directly referenced
+loc_fffa073b:
 mov edx, ebx
 mov eax, edi
 call fcn_fffa0537  ; call 0xfffa0537
@@ -809,7 +808,7 @@ mov ebx, eax
 jns short loc_fffa076a  ; jns 0xfffa076a
 jmp short loc_fffa075e  ; jmp 0xfffa075e
 
-loc_fffa074c:  ; not directly referenced
+loc_fffa074c:
 and cl, 0xc0
 je short loc_fffa073b  ; je 0xfffa073b
 mov eax, edi
@@ -818,35 +817,35 @@ test al, al
 jne short loc_fffa073b  ; jne 0xfffa073b
 jmp short loc_fffa072e  ; jmp 0xfffa072e
 
-loc_fffa075e:  ; not directly referenced
+loc_fffa075e:
 cmp eax, 0x80000007
 je short loc_fffa076d  ; je 0xfffa076d
 jmp near loc_fffa0827  ; jmp 0xfffa0827
 
-loc_fffa076a:  ; not directly referenced
+loc_fffa076a:
 inc byte [edi + 0x38]
 
-loc_fffa076d:  ; not directly referenced
+loc_fffa076d:
 cmp byte [edi + 0x38], 7
-jbe loc_fffa0643  ; jbe 0xfffa0643
+jbe near loc_fffa0643  ; jbe 0xfffa0643
 jmp near loc_fffa082b  ; jmp 0xfffa082b
 
-loc_fffa077c:  ; not directly referenced
+loc_fffa077c:
 cmp dword [ebp + 0x18], 0
 mov ebx, 0x80000002
 sete dl
 test esi, esi
 sete al
 or dl, al
-jne loc_fffa084c  ; jne 0xfffa084c
+jne near loc_fffa084c  ; jne 0xfffa084c
 cmp byte [ebp - 0x3d], 7
 jbe short loc_fffa07a5  ; jbe 0xfffa07a5
 
-loc_fffa079b:  ; not directly referenced
+loc_fffa079b:
 mov ebx, 0x80000009
 jmp near loc_fffa084c  ; jmp 0xfffa084c
 
-loc_fffa07a5:  ; not directly referenced
+loc_fffa07a5:
 movzx eax, byte [ebp - 0x3d]
 imul eax, eax, 0x11
 lea eax, [edi + eax + 0x30]
@@ -891,11 +890,11 @@ or eax, edx
 mov byte [ecx], al
 jmp short loc_fffa082b  ; jmp 0xfffa082b
 
-loc_fffa0827:  ; not directly referenced
+loc_fffa0827:
 test ebx, ebx
 js short loc_fffa084c  ; js 0xfffa084c
 
-loc_fffa082b:  ; not directly referenced
+loc_fffa082b:
 xor ebx, ebx
 cmp byte [ebp - 0x3d], 0
 jne short loc_fffa084c  ; jne 0xfffa084c
@@ -910,7 +909,7 @@ push edx
 call dword [eax + 0x24]  ; ucall
 add esp, 0x10
 
-loc_fffa084c:  ; not directly referenced
+loc_fffa084c:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -933,7 +932,7 @@ pop ebx
 pop ebp
 ret
 
-fcn_fffa0871:  ; not directly referenced
+fcn_fffa0871:
 push ebp
 mov edx, dword [0xf00fb020]
 and edx, 0xffe0
@@ -943,7 +942,7 @@ in al, dx
 pop ebp
 ret
 
-fcn_fffa0885:  ; not directly referenced
+fcn_fffa0885:
 push ebp
 mov ebp, esp
 push edi
@@ -961,7 +960,7 @@ lea eax, [ebx + 0x1c]
 mov dword [ebp - 0x24], eax
 jmp short loc_fffa0919  ; jmp 0xfffa0919
 
-loc_fffa08b1:  ; not directly referenced
+loc_fffa08b1:
 imul eax, dword [ebp - 0x20], 9
 mov al, byte [ebx + eax + 0xc7]
 and eax, 0x7f
@@ -991,11 +990,11 @@ call dword [edx + 0xcc]  ; ucall
 add esp, 0x10
 mov edx, dword [ebp - 0x28]
 
-loc_fffa0913:  ; not directly referenced
+loc_fffa0913:
 inc dword [ebp - 0x20]
 add edx, 9
 
-loc_fffa0919:  ; not directly referenced
+loc_fffa0919:
 movzx eax, byte [ebx + 0xc6]
 cmp dword [ebp - 0x20], eax
 jb short loc_fffa08b1  ; jb 0xfffa08b1
@@ -1008,7 +1007,7 @@ pop ebp
 mov eax, 0x10
 jmp near fcn_fffa0856  ; jmp 0xfffa0856
 
-fcn_fffa093b:  ; not directly referenced
+fcn_fffa093b:
 push ebp
 mov ebp, esp
 push edi
@@ -1048,10 +1047,10 @@ mov eax, ebx
 call fcn_fffa0885  ; call 0xfffa0885
 jmp short loc_fffa09b0  ; jmp 0xfffa09b0
 
-loc_fffa09ab:  ; not directly referenced
+loc_fffa09ab:
 mov esi, 0x80000002
 
-loc_fffa09b0:  ; not directly referenced
+loc_fffa09b0:
 lea esp, [esp + 0xc]
 mov eax, esi
 pop ebx
@@ -1060,7 +1059,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffa09bb:  ; not directly referenced
+fcn_fffa09bb:
 push ebp
 mov ebp, esp
 push esi
@@ -1087,7 +1086,7 @@ je short loc_fffa0a03  ; je 0xfffa0a03
 mov eax, ebx
 call fcn_fffa0885  ; call 0xfffa0885
 
-loc_fffa0a03:  ; not directly referenced
+loc_fffa0a03:
 lea esp, [ebp - 8]
 mov eax, esi
 pop ebx
@@ -1136,7 +1135,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_fffa0aa4:  ; not directly referenced
+fcn_fffa0aa4:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -1435,7 +1434,7 @@ call dword [edx + 0x20]  ; ucall
 add esp, 0x20
 test eax, eax
 mov dword [ebp - 0x64], eax
-jne loc_fffa1ddb  ; jne 0xfffa1ddb
+jne near loc_fffa1ddb  ; jne 0xfffa1ddb
 mov eax, dword [ebp - 0x3c]
 lea edi, [ebp - 0x28]
 mov esi, ref_fffc9924  ; mov esi, 0xfffc9924
@@ -1593,11 +1592,11 @@ loc_fffa0f88:
 inc ebx
 add edi, 6
 cmp bl, 2
-jne loc_fffa0de0  ; jne 0xfffa0de0
+jne near loc_fffa0de0  ; jne 0xfffa0de0
 mov ebx, dword [ebp - 0x50]
 mov di, word [0xf00f8002]
 test byte [ebx], 1
-je loc_fffa10ca  ; je 0xfffa10ca
+je near loc_fffa10ca  ; je 0xfffa10ca
 mov eax, dword [ebp - 0x60]
 and eax, 0xffffff80
 add eax, 0x3c
@@ -1711,7 +1710,7 @@ je short loc_fffa1111  ; je 0xfffa1111
 cmp eax, 7
 ja short loc_fffa10f8  ; ja 0xfffa10f8
 cmp edx, 3
-ja loc_fffa1da9  ; ja 0xfffa1da9
+ja near loc_fffa1da9  ; ja 0xfffa1da9
 lea ecx, [eax + edx*8]
 mov edx, 1
 shl edx, cl
@@ -1721,7 +1720,7 @@ jmp short loc_fffa1111  ; jmp 0xfffa1111
 loc_fffa10f8:
 lea ecx, [edx - 4]
 cmp ecx, 3
-ja loc_fffa1da9  ; ja 0xfffa1da9
+ja near loc_fffa1da9  ; ja 0xfffa1da9
 lea ecx, [eax + edx*8 - 0x28]
 mov edx, 1
 shl edx, cl
@@ -1830,7 +1829,7 @@ jmp near loc_fffa13ae  ; jmp 0xfffa13ae
 
 loc_fffa1243:
 cmp ax, 0x14f
-ja loc_fffa13da  ; ja 0xfffa13da
+ja near loc_fffa13da  ; ja 0xfffa13da
 mov eax, dword [ecx]
 and eax, 0xdffff000
 or eax, 0x20000f5b
@@ -1874,9 +1873,9 @@ and al, 1
 je short loc_fffa12ed  ; je 0xfffa12ed
 mov ax, word [edx + ebx*2 + 0x49]
 cmp ax, 0x5f
-ja loc_fffa13da  ; ja 0xfffa13da
+ja near loc_fffa13da  ; ja 0xfffa13da
 cmp ax, 0x2f
-jbe loc_fffa13da  ; jbe 0xfffa13da
+jbe near loc_fffa13da  ; jbe 0xfffa13da
 
 loc_fffa12dc:
 mov eax, dword [ecx]
@@ -1886,7 +1885,7 @@ jmp near loc_fffa13d8  ; jmp 0xfffa13d8
 
 loc_fffa12ed:
 test al, al
-jne loc_fffa13da  ; jne 0xfffa13da
+jne near loc_fffa13da  ; jne 0xfffa13da
 mov edx, dword [ebp - 0x50]
 mov ax, word [edx + ebx*2 + 0x49]
 cmp ax, 0x7f
@@ -1981,9 +1980,9 @@ loc_fffa13da:
 inc ebx
 add ecx, 4
 cmp ebx, 0xe
-jne loc_fffa11e1  ; jne 0xfffa11e1
+jne near loc_fffa11e1  ; jne 0xfffa11e1
 cmp word [ebp - 0x58], 0x1c42
-je loc_fffa1486  ; je 0xfffa1486
+je near loc_fffa1486  ; je 0xfffa1486
 cmp di, 0x1c4c
 sete dl
 cmp di, 0x1c4a
@@ -2028,7 +2027,7 @@ jne short loc_fffa1486  ; jne 0xfffa1486
 loc_fffa1478:
 mov ebx, dword [ebp - 0x50]
 test byte [ebx], 1
-jne loc_fffa1535  ; jne 0xfffa1535
+jne near loc_fffa1535  ; jne 0xfffa1535
 jmp short loc_fffa1501  ; jmp 0xfffa1501
 
 loc_fffa1486:
@@ -2091,7 +2090,7 @@ cmp word [ebp - 0x58], 0x1c43
 mov ebx, 0x2000772
 sete cl
 test cl, cl
-jne loc_fffa1641  ; jne 0xfffa1641
+jne near loc_fffa1641  ; jne 0xfffa1641
 jmp near loc_fffa15ba  ; jmp 0xfffa15ba
 
 loc_fffa1535:
@@ -2196,7 +2195,7 @@ or eax, ebx
 mov dword [edx + 0x3570], eax
 test cl, cl
 mov ebx, 0x1630
-jne loc_fffa16e7  ; jne 0xfffa16e7
+jne near loc_fffa16e7  ; jne 0xfffa16e7
 mov eax, edi
 and eax, 0xfffffffd
 cmp ax, 0x1c49
@@ -2262,7 +2261,7 @@ mov dword [ebx + 0x3590], eax
 
 loc_fffa172e:
 cmp byte [ebp - 0x5e], 0
-jne loc_fffa17bb  ; jne 0xfffa17bb
+jne near loc_fffa17bb  ; jne 0xfffa17bb
 lea eax, [edi - 0x1e46]
 cmp ax, 1
 jbe short loc_fffa17bb  ; jbe 0xfffa17bb
@@ -2299,7 +2298,7 @@ sete dl
 cmp di, 0x1e43
 sete al
 or dl, al
-je loc_fffa1db0  ; je 0xfffa1db0
+je near loc_fffa1db0  ; je 0xfffa1db0
 
 loc_fffa17bb:
 mov ebx, dword [ebp - 0x54]
@@ -2541,7 +2540,7 @@ je short loc_fffa1abd  ; je 0xfffa1abd
 loc_fffa1aa3:
 cmp byte [ebp - 0x65], 2
 mov cl, 1
-jbe loc_fffa1b7d  ; jbe 0xfffa1b7d
+jbe near loc_fffa1b7d  ; jbe 0xfffa1b7d
 jmp short loc_fffa1af3  ; jmp 0xfffa1af3
 
 loc_fffa1ab1:
@@ -2637,13 +2636,13 @@ setne al
 cmp cl, 1
 sete dl
 test dl, al
-je loc_fffa1cda  ; je 0xfffa1cda
+je near loc_fffa1cda  ; je 0xfffa1cda
 mov edx, dword [0xf00a00d0]
 test edx, edx
 jne short loc_fffa1ba8  ; jne 0xfffa1ba8
 mov edx, dword [0xf00a00d8]
 test edx, edx
-je loc_fffa1cda  ; je 0xfffa1cda
+je near loc_fffa1cda  ; je 0xfffa1cda
 
 loc_fffa1ba8:
 xor eax, eax
@@ -2863,7 +2862,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffa1de6:  ; not directly referenced
+fcn_fffa1de6:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -2871,7 +2870,7 @@ test eax, eax
 je short loc_fffa1df5  ; je 0xfffa1df5
 call fcn_fffa0cba  ; call 0xfffa0cba
 
-loc_fffa1df5:  ; not directly referenced
+loc_fffa1df5:
 xor eax, eax
 pop ebp
 ret
@@ -3114,39 +3113,39 @@ loc_fffa1faa:
 mov esi, dword [ebp + 8]
 mov al, byte [esi]
 cmp al, 0x6e
-je loc_fffa2143  ; je 0xfffa2143
+je near loc_fffa2143  ; je 0xfffa2143
 jg short loc_fffa1fe9  ; jg 0xfffa1fe9
 cmp al, 0x63
 je short loc_fffa201d  ; je 0xfffa201d
 jg short loc_fffa1fd4  ; jg 0xfffa1fd4
 cmp al, 0x25
-je loc_fffa2164  ; je 0xfffa2164
+je near loc_fffa2164  ; je 0xfffa2164
 cmp al, 0x58
-jne loc_fffa2186  ; jne 0xfffa2186
+jne near loc_fffa2186  ; jne 0xfffa2186
 jmp near loc_fffa217a  ; jmp 0xfffa217a
 
 loc_fffa1fd4:
 cmp al, 0x64
-je loc_fffa2180  ; je 0xfffa2180
+je near loc_fffa2180  ; je 0xfffa2180
 cmp al, 0x69
-jne loc_fffa2186  ; jne 0xfffa2186
+jne near loc_fffa2186  ; jne 0xfffa2186
 jmp near loc_fffa2180  ; jmp 0xfffa2180
 
 loc_fffa1fe9:
 cmp al, 0x73
-je loc_fffa2073  ; je 0xfffa2073
+je near loc_fffa2073  ; je 0xfffa2073
 jg short loc_fffa2008  ; jg 0xfffa2008
 cmp al, 0x6f
-je loc_fffa2171  ; je 0xfffa2171
+je near loc_fffa2171  ; je 0xfffa2171
 cmp al, 0x70
-jne loc_fffa2186  ; jne 0xfffa2186
+jne near loc_fffa2186  ; jne 0xfffa2186
 jmp near loc_fffa2119  ; jmp 0xfffa2119
 
 loc_fffa2008:
 cmp al, 0x75
-je loc_fffa21b4  ; je 0xfffa21b4
+je near loc_fffa21b4  ; je 0xfffa21b4
 cmp al, 0x78
-jne loc_fffa2186  ; jne 0xfffa2186
+jne near loc_fffa2186  ; jne 0xfffa2186
 jmp near loc_fffa21bd  ; jmp 0xfffa21bd
 
 loc_fffa201d:
@@ -3425,7 +3424,7 @@ loc_fffa2217:
 mov esi, dword [ebp + 8]
 movzx eax, byte [esi]
 test al, al
-jne loc_fffa1e6c  ; jne 0xfffa1e6c
+jne near loc_fffa1e6c  ; jne 0xfffa1e6c
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -3434,7 +3433,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffa222f:  ; not directly referenced
+fcn_fffa222f:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -3465,7 +3464,7 @@ add esp, 0x30
 leave
 ret
 
-fcn_fffa2279:  ; not directly referenced
+fcn_fffa2279:
 push ebp
 mov ebp, esp
 push edi
@@ -3483,17 +3482,17 @@ mov dword [ebp - 0x1c], edx
 xor ecx, ecx
 jmp short loc_fffa22d3  ; jmp 0xfffa22d3
 
-loc_fffa22a4:  ; not directly referenced
+loc_fffa22a4:
 jmp short loc_fffa22a4  ; jmp 0xfffa22a4
 
-loc_fffa22a6:  ; not directly referenced
+loc_fffa22a6:
 imul edx, ecx, 0xc
 mov esi, dword [ebp - 0x20]
 lea ebx, [esi + edx + 0x70]
 xor edx, edx
 mov edi, dword [ebx + 4]
 
-loc_fffa22b5:  ; not directly referenced
+loc_fffa22b5:
 mov esi, dword [ebp + 0xc]
 mov al, byte [edi + edx]
 cmp byte [esi + edx], al
@@ -3507,17 +3506,17 @@ mov dword [eax], edx
 xor eax, eax
 jmp short loc_fffa22e5  ; jmp 0xfffa22e5
 
-loc_fffa22d2:  ; not directly referenced
+loc_fffa22d2:
 inc ecx
 
-loc_fffa22d3:  ; not directly referenced
+loc_fffa22d3:
 cmp ecx, dword [ebp - 0x1c]
 jl short loc_fffa22a6  ; jl 0xfffa22a6
 mov eax, dword [ebp + 0xc]
 call fcn_fffa222f  ; call 0xfffa222f
 mov eax, 0x8000000e
 
-loc_fffa22e5:  ; not directly referenced
+loc_fffa22e5:
 lea esp, [esp + 0x1c]
 pop ebx
 pop esi
@@ -3525,7 +3524,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffa22ee:  ; not directly referenced
+fcn_fffa22ee:
 push ebp
 mov ebp, esp
 push edi
@@ -3539,15 +3538,15 @@ jne short loc_fffa230b  ; jne 0xfffa230b
 sub ebx, 4
 jmp short loc_fffa230d  ; jmp 0xfffa230d
 
-loc_fffa230b:  ; not directly referenced
+loc_fffa230b:
 jmp short loc_fffa230b  ; jmp 0xfffa230b
 
-loc_fffa230d:  ; not directly referenced
+loc_fffa230d:
 mov edi, dword [ebx + 0x160]
 xor esi, esi
 jmp short loc_fffa235c  ; jmp 0xfffa235c
 
-loc_fffa2317:  ; not directly referenced
+loc_fffa2317:
 imul eax, esi, 0xc
 mov ecx, dword [ebp + 0xc]
 mov ecx, dword [ecx + 4]
@@ -3555,7 +3554,7 @@ mov dword [ebp - 0x1c], ecx
 mov ecx, dword [ebx + eax + 0x74]
 xor eax, eax
 
-loc_fffa2329:  ; not directly referenced
+loc_fffa2329:
 mov edx, dword [ebp - 0x1c]
 mov dl, byte [edx + eax]
 cmp byte [ecx + eax], dl
@@ -3574,14 +3573,14 @@ call fcn_fffa222f  ; call 0xfffa222f
 add esp, 0x10
 jmp short loc_fffa2360  ; jmp 0xfffa2360
 
-loc_fffa235b:  ; not directly referenced
+loc_fffa235b:
 inc esi
 
-loc_fffa235c:  ; not directly referenced
+loc_fffa235c:
 cmp esi, edi
 jne short loc_fffa2317  ; jne 0xfffa2317
 
-loc_fffa2360:  ; not directly referenced
+loc_fffa2360:
 cmp esi, dword [ebx + 0x160]
 jne short loc_fffa2391  ; jne 0xfffa2391
 cmp esi, 0x13
@@ -3595,11 +3594,11 @@ add esp, 0x10
 mov eax, 0x80000009
 jmp short loc_fffa2400  ; jmp 0xfffa2400
 
-loc_fffa2388:  ; not directly referenced
+loc_fffa2388:
 lea eax, [esi + 1]
 mov dword [ebx + 0x160], eax
 
-loc_fffa2391:  ; not directly referenced
+loc_fffa2391:
 imul esi, esi, 0xc
 mov ecx, 3
 lea eax, [ebx + esi + 0x70]
@@ -3609,7 +3608,7 @@ rep movsd  ; rep movsd dword es:[edi], dword ptr [esi]
 xor esi, esi
 jmp short loc_fffa23e3  ; jmp 0xfffa23e3
 
-loc_fffa23a8:  ; not directly referenced
+loc_fffa23a8:
 imul eax, esi, 0xc
 lea edx, [ebx + eax + 0x164]
 mov eax, dword [ebp + 0xc]
@@ -3618,7 +3617,7 @@ mov eax, dword [eax + 4]
 mov dword [ebp - 0x1c], eax
 xor eax, eax
 
-loc_fffa23c0:  ; not directly referenced
+loc_fffa23c0:
 mov ecx, dword [ebp - 0x1c]
 mov cl, byte [ecx + eax]
 cmp byte [edi + eax], cl
@@ -3634,10 +3633,10 @@ push dword [ebp + 8]
 call dword [edx + 8]  ; ucall
 add esp, 0x10
 
-loc_fffa23e2:  ; not directly referenced
+loc_fffa23e2:
 inc esi
 
-loc_fffa23e3:  ; not directly referenced
+loc_fffa23e3:
 cmp esi, dword [ebx + 0x254]
 jb short loc_fffa23a8  ; jb 0xfffa23a8
 mov edx, dword [ebp + 0xc]
@@ -3645,10 +3644,10 @@ mov eax, dword [edx]
 add edx, 0xc
 test eax, eax
 mov dword [ebp + 0xc], edx
-jns loc_fffa230d  ; jns 0xfffa230d
+jns near loc_fffa230d  ; jns 0xfffa230d
 xor eax, eax
 
-loc_fffa2400:  ; not directly referenced
+loc_fffa2400:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -3707,7 +3706,7 @@ pop esi
 pop ebp
 ret
 
-fcn_fffa2462:  ; not directly referenced
+fcn_fffa2462:
 push ebp
 mov ebp, esp
 push esi
@@ -3740,7 +3739,7 @@ pop esi
 pop ebp
 ret
 
-fcn_fffa24af:  ; not directly referenced
+fcn_fffa24af:
 push ebp
 mov ebp, esp
 mov ecx, dword [ebp + 0x10]
@@ -3807,7 +3806,7 @@ mov dword [ebp - 0xc], eax
 cmp edx, 0x3e7
 jmp short loc_fffa2561  ; jmp 0xfffa2561
 
-loc_fffa254a:
+endloc_fffa254a:
 db 0x52
 db 0x6a
 dd 0x997c683a
@@ -3841,7 +3840,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_fffa2594:  ; not directly referenced
+fcn_fffa2594:
 push ebp
 mov ebp, esp
 push edi
@@ -3864,10 +3863,10 @@ mov edx, dword [ebp - 0x1c]
 jne short loc_fffa25ce  ; jne 0xfffa25ce
 jmp short loc_fffa25f8  ; jmp 0xfffa25f8
 
-loc_fffa25cc:  ; not directly referenced
+loc_fffa25cc:
 jmp short loc_fffa25cc  ; jmp 0xfffa25cc
 
-loc_fffa25ce:  ; not directly referenced
+loc_fffa25ce:
 lea ecx, [eax + 4]
 mov dword [esi], ecx
 mov word [eax + 4], dx
@@ -3881,10 +3880,10 @@ mov dword [ebx + 0x254], eax
 xor eax, eax
 jmp short loc_fffa25fd  ; jmp 0xfffa25fd
 
-loc_fffa25f8:  ; not directly referenced
+loc_fffa25f8:
 mov eax, 0x80000009
 
-loc_fffa25fd:  ; not directly referenced
+loc_fffa25fd:
 lea esp, [esp + 0x1c]
 pop ebx
 pop esi
@@ -3892,7 +3891,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffa2606:
+endloc_fffa2606:
 db 0x00
 db 0x00
 
@@ -3926,7 +3925,7 @@ mov eax, 1
 cpuid
 add esp, 0x10
 and cl, 0x40
-je loc_fffa26fb  ; je 0xfffa26fb
+je near loc_fffa26fb  ; je 0xfffa26fb
 mov ebx, dword [ebp - 0x62fc]
 mov eax, dword [ebx]
 mov eax, dword [eax + 0x60]
@@ -3963,7 +3962,7 @@ add esp, 0x10
 cmp al, 0xff
 je short loc_fffa26f0  ; je 0xfffa26f0
 test al, al
-js loc_fffa499a  ; js 0xfffa499a
+js near loc_fffa499a  ; js 0xfffa499a
 push ecx
 mov eax, dword [ebp - 0x62c0]
 push 0x3e8
@@ -3994,7 +3993,7 @@ call dword [eax + 0x20]  ; ucall
 add esp, 0x20
 test eax, eax
 mov dword [ebp - 0x6310], 0x80000006
-js loc_fffa4b12  ; js 0xfffa4b12
+js near loc_fffa4b12  ; js 0xfffa4b12
 mov eax, dword [ebp - 0x62e4]
 mov eax, dword [eax + 0x11]
 test eax, eax
@@ -4023,7 +4022,7 @@ jne short loc_fffa2796  ; jne 0xfffa2796
 mov eax, esi
 mov dword [ebp - 0x6310], 0x8000000e
 test al, al
-je loc_fffa4b12  ; je 0xfffa4b12
+je near loc_fffa4b12  ; je 0xfffa4b12
 mov dword [ebp - 0x6308], 0
 jmp short loc_fffa27be  ; jmp 0xfffa27be
 
@@ -4126,12 +4125,12 @@ jne short loc_fffa28e7  ; jne 0xfffa28e7
 cmp dword [ebp - 0x62ec], 0x11
 je short loc_fffa28fe  ; je 0xfffa28fe
 test ebx, ebx
-je loc_fffa49a7  ; je 0xfffa49a7
+je near loc_fffa49a7  ; je 0xfffa49a7
 jmp short loc_fffa28fe  ; jmp 0xfffa28fe
 
 loc_fffa28e7:
 cmp dword [ebp - 0x6308], 2
-je loc_fffa49a7  ; je 0xfffa49a7
+je near loc_fffa49a7  ; je 0xfffa49a7
 mov dword [ebp - 0x6308], 1
 
 loc_fffa28fe:
@@ -4140,7 +4139,7 @@ test al, al
 jne short loc_fffa2934  ; jne 0xfffa2934
 mov eax, dword [edx + 9]
 cmp byte [eax + 0x30], 1
-jne loc_fffa49a7  ; jne 0xfffa49a7
+jne near loc_fffa49a7  ; jne 0xfffa49a7
 mov edx, dword [ebp - 0x62fc]
 sub esp, 0xc
 mov eax, dword [edx]
@@ -4160,7 +4159,7 @@ mov eax, dword [ebp - 0x62e4]
 je short loc_fffa2991  ; je 0xfffa2991
 mov eax, dword [eax + 9]
 cmp byte [eax + 0x30], 1
-jne loc_fffa49a7  ; jne 0xfffa49a7
+jne near loc_fffa49a7  ; jne 0xfffa49a7
 mov ecx, dword [ebp - 0x62fc]
 sub esp, 0xc
 lea edx, [ebp - 0x62dc]
@@ -4294,7 +4293,7 @@ mov eax, dword [edx + 9]
 cmp dword [ebp - 0x3df1], 0
 mov eax, dword [eax + 0x3a]
 mov dword [ebp - 0x3dcd], eax
-jne loc_fffa3fa9  ; jne 0xfffa3fa9
+jne near loc_fffa3fa9  ; jne 0xfffa3fa9
 mov eax, dword [edx + 9]
 movzx eax, byte [eax + 0x11]
 mov dword [ebp - 0x3d87], eax
@@ -4312,7 +4311,7 @@ movzx eax, byte [eax + 0x2d]
 mov dword [ebp - 0x3dd9], eax
 xor eax, eax
 cmp dword [ebp - 0x6308], 3
-jne loc_fffa2ff5  ; jne 0xfffa2ff5
+jne near loc_fffa2ff5  ; jne 0xfffa2ff5
 sub esp, 0xc
 mov ecx, 3
 push 4
@@ -4328,7 +4327,7 @@ mov edx, eax
 add esp, 0x10
 test edx, edx
 mov eax, 0x10
-je loc_fffa2ff5  ; je 0xfffa2ff5
+je near loc_fffa2ff5  ; je 0xfffa2ff5
 mov edx, 0xdd20
 lea eax, [ebp - 0x6049]
 call fcn_fffad891  ; call 0xfffad891
@@ -4359,7 +4358,7 @@ mov dword [edx + 0x46b0], eax
 loc_fffa2c5a:
 imul eax, ebx, 0x1055
 cmp byte [ebp + eax - 0x600f], 0
-jne loc_fffa49b6  ; jne 0xfffa49b6
+jne near loc_fffa49b6  ; jne 0xfffa49b6
 
 loc_fffa2c6e:
 inc ebx
@@ -4419,7 +4418,7 @@ mov edx, esi
 lea eax, [ebp - 0x6049]
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffa2fd5  ; je 0xfffa2fd5
+je near loc_fffa2fd5  ; je 0xfffa2fd5
 push eax
 mov edx, 2
 mov ecx, 0xfffffff9
@@ -4450,7 +4449,7 @@ mov edx, ebx
 lea eax, [ebp - 0x6049]
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffa2ff0  ; jne 0xfffa2ff0
+jne near loc_fffa2ff0  ; jne 0xfffa2ff0
 movzx eax, byte [ebp - 0x3f94]
 mov ecx, dword [ebp - 0x3e26]
 lea edx, [eax*4 + 0x4340]
@@ -4465,7 +4464,7 @@ add eax, 4
 add edi, ecx
 mov edi, dword [edi]
 test edi, edi
-je loc_fffa2ff0  ; je 0xfffa2ff0
+je near loc_fffa2ff0  ; je 0xfffa2ff0
 
 loc_fffa2ddd:
 cmp eax, edx
@@ -4500,7 +4499,7 @@ mov edx, ebx
 lea eax, [ebp - 0x6049]
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffa2ff0  ; jne 0xfffa2ff0
+jne near loc_fffa2ff0  ; jne 0xfffa2ff0
 movzx eax, byte [ebp - 0x3f94]
 mov ecx, dword [ebp - 0x3e26]
 lea edx, [eax*4 + 0x4340]
@@ -4515,7 +4514,7 @@ add eax, 4
 add edi, ecx
 mov edi, dword [edi]
 test edi, edi
-jne loc_fffa2ff0  ; jne 0xfffa2ff0
+jne near loc_fffa2ff0  ; jne 0xfffa2ff0
 
 loc_fffa2e7f:
 cmp eax, edx
@@ -4550,7 +4549,7 @@ mov edx, ebx
 lea eax, [ebp - 0x6049]
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffa2ff0  ; jne 0xfffa2ff0
+jne near loc_fffa2ff0  ; jne 0xfffa2ff0
 movzx eax, byte [ebp - 0x3f94]
 mov ecx, dword [ebp - 0x3e26]
 lea edx, [eax*4 + 0x4340]
@@ -4565,7 +4564,7 @@ add eax, 4
 add edi, ecx
 mov edi, dword [edi]
 test edi, edi
-jne loc_fffa2ff0  ; jne 0xfffa2ff0
+jne near loc_fffa2ff0  ; jne 0xfffa2ff0
 
 loc_fffa2f21:
 cmp eax, edx
@@ -4633,9 +4632,9 @@ add esp, 0x10
 loc_fffa2fd5:
 inc esi
 cmp esi, 4
-jne loc_fffa2d28  ; jne 0xfffa2d28
+jne near loc_fffa2d28  ; jne 0xfffa2d28
 dec byte [ebp - 0x6314]
-jne loc_fffa2d13  ; jne 0xfffa2d13
+jne near loc_fffa2d13  ; jne 0xfffa2d13
 jmp near loc_fffa2c6e  ; jmp 0xfffa2c6e
 
 loc_fffa2ff0:
@@ -4647,7 +4646,7 @@ sete dl
 cmp dword [ebp - 0x6308], 2
 sete al
 or dl, al
-je loc_fffa31a0  ; je 0xfffa31a0
+je near loc_fffa31a0  ; je 0xfffa31a0
 mov eax, dword [ebp - 0x62e4]
 mov dword [ebp - 0x3ded], 2
 mov edx, dword [eax + 9]
@@ -4755,11 +4754,11 @@ lea eax, [ebp - 0x3d44]
 call fcn_fffc76c6  ; call 0xfffc76c6
 mov esi, dword [ebp - 0x31a0]
 cmp dword [ebp - 0x62c0], esi
-jne loc_fffa439c  ; jne 0xfffa439c
+jne near loc_fffa439c  ; jne 0xfffa439c
 lea eax, [ebp - 0x6049]
 call fcn_fffb58fa  ; call 0xfffb58fa
 test eax, eax
-jne loc_fffa439c  ; jne 0xfffa439c
+jne near loc_fffa439c  ; jne 0xfffa439c
 mov eax, dword [ebp - 0x3f57]
 mov dword [ebp - 0x3dc1], eax
 
@@ -4788,7 +4787,7 @@ push eax
 call fcn_fffb0b48  ; call 0xfffb0b48
 add esp, 0x10
 test eax, eax
-jne loc_fffa439c  ; jne 0xfffa439c
+jne near loc_fffa439c  ; jne 0xfffa439c
 cmp dword [ebp - 0x3f98], 0
 jne short loc_fffa326e  ; jne 0xfffa326e
 cmp dword [ebp - 0x3d4c], 0
@@ -4798,7 +4797,7 @@ loc_fffa326e:
 lea eax, [ebp - 0x6049]
 call fcn_fffb0e9a  ; call 0xfffb0e9a
 test eax, eax
-jne loc_fffa439c  ; jne 0xfffa439c
+jne near loc_fffa439c  ; jne 0xfffa439c
 jmp short loc_fffa320e  ; jmp 0xfffa320e
 
 loc_fffa3283:
@@ -4814,7 +4813,7 @@ xor edi, edi
 
 loc_fffa32a4:
 cmp byte [esi + 0x3a], 0
-jne loc_fffa49c8  ; jne 0xfffa49c8
+jne near loc_fffa49c8  ; jne 0xfffa49c8
 jmp near loc_fffa351a  ; jmp 0xfffa351a
 
 loc_fffa32b3:
@@ -4842,7 +4841,7 @@ mov dword [ebp - 0x631c], eax
 loc_fffa32fb:
 imul eax, dword [ebp - 0x6318], 0x1d
 cmp dword [esi + eax + 0xa], 0
-je loc_fffa34a8  ; je 0xfffa34a8
+je near loc_fffa34a8  ; je 0xfffa34a8
 mov ecx, dword [ebp - 0x631c]
 mov eax, dword [ebp - 0x6318]
 mov edx, dword [ebp - 0x6320]
@@ -4851,7 +4850,7 @@ movzx ebx, byte [edx + eax + 0x22c6]
 mov al, cl
 and eax, 0xf
 dec eax
-jle loc_fffa34a8  ; jle 0xfffa34a8
+jle near loc_fffa34a8  ; jle 0xfffa34a8
 push eax
 lea ecx, [ebp - 0x62c4]
 mov edx, ebx
@@ -4866,9 +4865,9 @@ call fcn_fffc4947  ; call 0xfffc4947
 add esp, 0x10
 cmp dword [ebp - 0x62c0], 0
 mov eax, dword [ebp - 0x62c4]
-jne loc_fffa34a8  ; jne 0xfffa34a8
+jne near loc_fffa34a8  ; jne 0xfffa34a8
 cmp ax, 0xad80
-jne loc_fffa3419  ; jne 0xfffa3419
+jne near loc_fffa3419  ; jne 0xfffa3419
 sub esp, 0xc
 lea eax, [ebp - 0x62d4]
 push eax
@@ -4895,7 +4894,7 @@ je short loc_fffa33e6  ; je 0xfffa33e6
 cmp al, 0x34
 je short loc_fffa340a  ; je 0xfffa340a
 cmp al, 0x31
-jne loc_fffa34a8  ; jne 0xfffa34a8
+jne near loc_fffa34a8  ; jne 0xfffa34a8
 jmp short loc_fffa33ef  ; jmp 0xfffa33ef
 
 loc_fffa33e6:
@@ -4910,17 +4909,17 @@ loc_fffa33f8:
 cmp byte [ebp - 0x62cc], 0x41
 
 loc_fffa33ff:
-jne loc_fffa34a8  ; jne 0xfffa34a8
+jne near loc_fffa34a8  ; jne 0xfffa34a8
 jmp near loc_fffa34c7  ; jmp 0xfffa34c7
 
 loc_fffa340a:
 cmp byte [ebp - 0x62d0], 0x4d
-jne loc_fffa34a8  ; jne 0xfffa34a8
+jne near loc_fffa34a8  ; jne 0xfffa34a8
 jmp short loc_fffa33f8  ; jmp 0xfffa33f8
 
 loc_fffa3419:
 cmp ax, 0xb83
-jne loc_fffa34a8  ; jne 0xfffa34a8
+jne near loc_fffa34a8  ; jne 0xfffa34a8
 mov edx, dword [ebp - 0x631c]
 mov al, byte [edx + 4]
 and eax, 0xf
@@ -4964,7 +4963,7 @@ loc_fffa34a8:
 inc dword [ebp - 0x6318]
 add dword [ebp - 0x631c], 0x46
 cmp dword [ebp - 0x6318], 2
-je loc_fffa32b9  ; je 0xfffa32b9
+je near loc_fffa32b9  ; je 0xfffa32b9
 jmp near loc_fffa32fb  ; jmp 0xfffa32fb
 
 loc_fffa34c7:
@@ -4994,7 +4993,7 @@ inc edi
 add esi, 0x1055
 add dword [ebp - 0x6320], 2
 cmp edi, 2
-jne loc_fffa32a4  ; jne 0xfffa32a4
+jne near loc_fffa32a4  ; jne 0xfffa32a4
 mov ecx, dword [ebp - 0x3e26]
 cmp dword [ebp - 0x3df5], 3
 sbb edx, edx
@@ -5043,14 +5042,14 @@ mov dword [eax + 0x4f88], 0x5f7003ff
 mov eax, dword [ebp - 0x3e26]
 mov dword [eax + 0x5064], 0x330f0
 cmp dword [ebp - 0x3ded], 2
-jne loc_fffa372f  ; jne 0xfffa372f
+jne near loc_fffa372f  ; jne 0xfffa372f
 cmp byte [ebp - 0x3d7f], 1
-jne loc_fffa371f  ; jne 0xfffa371f
+jne near loc_fffa371f  ; jne 0xfffa371f
 jmp near loc_fffa36fe  ; jmp 0xfffa36fe
 
 loc_fffa3612:
 cmp dword [edi - 8], 0
-je loc_fffa36bb  ; je 0xfffa36bb
+je near loc_fffa36bb  ; je 0xfffa36bb
 mov bl, byte [edi + 2]
 cmp bl, 8
 jne short loc_fffa364c  ; jne 0xfffa364c
@@ -5111,7 +5110,7 @@ loc_fffa36bb:
 inc byte [ebp - 0x6300]
 add edi, 0x1d
 cmp byte [ebp - 0x6300], 2
-jne loc_fffa3612  ; jne 0xfffa3612
+jne near loc_fffa3612  ; jne 0xfffa3612
 shl eax, 8
 shl edx, 0x10
 or eax, ecx
@@ -5155,7 +5154,7 @@ jne short loc_fffa3765  ; jne 0xfffa3765
 
 loc_fffa3753:
 cmp dword [ebp - 0x3ded], 2
-jne loc_fffa3dfa  ; jne 0xfffa3dfa
+jne near loc_fffa3dfa  ; jne 0xfffa3dfa
 jmp near loc_fffa3e23  ; jmp 0xfffa3e23
 
 loc_fffa3765:
@@ -5164,7 +5163,7 @@ mov edx, 0xdd52
 call fcn_fffad891  ; call 0xfffad891
 mov eax, dword [ebp - 0x3ded]
 cmp eax, 2
-jne loc_fffa3d73  ; jne 0xfffa3d73
+jne near loc_fffa3d73  ; jne 0xfffa3d73
 mov eax, dword [ebp - 0x6000]
 mov esi, dword [ebp - 0x3e01]
 mov dword [ebp - 0x35ad], eax
@@ -5232,9 +5231,9 @@ cmove edi, ebx
 xor edx, edx
 call fcn_fffb4d47  ; call 0xfffb4d47
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 test edi, edi
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a58  ; mov ecx, 0xfffc9a58
 mov edx, esi
@@ -5245,7 +5244,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a58  ; mov ecx, 0xfffc9a58
 mov edx, esi
@@ -5256,7 +5255,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
 mov edx, esi
@@ -5267,7 +5266,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
 mov edx, esi
@@ -5278,7 +5277,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
 mov edx, esi
@@ -5289,7 +5288,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
 mov edx, esi
@@ -5300,7 +5299,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a4c  ; mov ecx, 0xfffc9a4c
 mov edx, esi
@@ -5311,7 +5310,7 @@ push 1
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 push 0
 mov ecx, ref_fffc9a4c  ; mov ecx, 0xfffc9a4c
 mov edx, esi
@@ -5323,7 +5322,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov dword [ebp - 0x6300], eax
-jne loc_fffa4b12  ; jne 0xfffa4b12
+jne near loc_fffa4b12  ; jne 0xfffa4b12
 mov edx, esi
 lea eax, [ebp - 0x35e1]
 call fcn_fffcf92f  ; call 0xfffcf92f
@@ -5360,10 +5359,10 @@ call fcn_fffa2408  ; call 0xfffa2408
 imul eax, ebx, 0x1d
 mov ecx, dword [ebp - 0x6314]
 cmp dword [ecx + eax + 0xa], 0
-je loc_fffa3c01  ; je 0xfffa3c01
+je near loc_fffa3c01  ; je 0xfffa3c01
 mov eax, esi
 test al, al
-jne loc_fffa3c01  ; jne 0xfffa3c01
+jne near loc_fffa3c01  ; jne 0xfffa3c01
 mov edx, edi
 mov ecx, dword [ebp - 0x3e26]
 cmp dl, 1
@@ -5440,11 +5439,11 @@ mov esi, 1
 loc_fffa3c01:
 inc ebx
 cmp ebx, 2
-jne loc_fffa3a96  ; jne 0xfffa3a96
+jne near loc_fffa3a96  ; jne 0xfffa3a96
 inc edi
 add dword [ebp - 0x6314], 0x1055
 cmp edi, 2
-je loc_fffa3cba  ; je 0xfffa3cba
+je near loc_fffa3cba  ; je 0xfffa3cba
 
 loc_fffa3c1f:
 imul eax, edi, 0x8c
@@ -5557,7 +5556,7 @@ cmove ebx, dword [ebp - 0x6300]
 lea eax, [ebp - 0x6049]
 call fcn_fffad891  ; call 0xfffad891
 test ebx, ebx
-je loc_fffa3753  ; je 0xfffa3753
+je near loc_fffa3753  ; je 0xfffa3753
 jmp near loc_fffa4b12  ; jmp 0xfffa4b12
 
 loc_fffa3dfa:
@@ -5591,7 +5590,7 @@ mov edi, dword [ebp - 0x3e26]
 cmp byte [ebp - 0x600f], 0
 mov ecx, dword [edi + 0x5064]
 mov dword [ebp - 0x6314], ecx
-jne loc_fffa49da  ; jne 0xfffa49da
+jne near loc_fffa49da  ; jne 0xfffa49da
 jmp near loc_fffa49e5  ; jmp 0xfffa49e5
 
 loc_fffa3e70:
@@ -5720,7 +5719,7 @@ movzx eax, byte [eax + 0x46]
 mov dword [ebp - 0x3d54], eax
 je short loc_fffa40d6  ; je 0xfffa40d6
 cmp dword [ebp - 0x6308], 3
-jne loc_fffa4211  ; jne 0xfffa4211
+jne near loc_fffa4211  ; jne 0xfffa4211
 mov eax, dword [ebx + 1]
 sub esp, 0xc
 mov edx, ebx
@@ -5847,10 +5846,10 @@ mov dword [ebp - 0x633c], ecx
 call fcn_fffad891  ; call 0xfffad891
 cmp dword [edi + ref_fffc9a68], 0  ; cmp dword [edi - 0x36598], 0
 mov ecx, dword [ebp - 0x633c]
-je loc_fffa4332  ; je 0xfffa4332
+je near loc_fffa4332  ; je 0xfffa4332
 mov dl, byte [ebx + 0xb]
 cmp byte [ebp - 0x3d7a], dl
-jae loc_fffa4332  ; jae 0xfffa4332
+jae near loc_fffa4332  ; jae 0xfffa4332
 mov eax, dword [ebp - 0x3d79]
 test eax, eax
 jne short loc_fffa42a7  ; jne 0xfffa42a7
@@ -5859,7 +5858,7 @@ jmp short loc_fffa42b2  ; jmp 0xfffa42b2
 
 loc_fffa42a7:
 dec eax
-jne loc_fffa4332  ; jne 0xfffa4332
+jne near loc_fffa4332  ; jne 0xfffa4332
 test byte [ebx + 0xa], 0x20
 
 loc_fffa42b2:
@@ -5922,14 +5921,14 @@ jne short loc_fffa4345  ; jne 0xfffa4345
 loc_fffa4332:
 inc dword [ebp - 0x6310]
 cmp dword [ebp - 0x6310], 0x1b
-jne loc_fffa4244  ; jne 0xfffa4244
+jne near loc_fffa4244  ; jne 0xfffa4244
 
 loc_fffa4345:
 cmp ecx, 0x10
 je short loc_fffa436b  ; je 0xfffa436b
 ja short loc_fffa435b  ; ja 0xfffa435b
 test ecx, ecx
-je loc_fffa49fd  ; je 0xfffa49fd
+je near loc_fffa49fd  ; je 0xfffa49fd
 cmp ecx, 0xf
 jne short loc_fffa439c  ; jne 0xfffa439c
 jmp short loc_fffa43ab  ; jmp 0xfffa43ab
@@ -5938,7 +5937,7 @@ loc_fffa435b:
 cmp ecx, 0x11
 je short loc_fffa437a  ; je 0xfffa437a
 cmp ecx, 0x12
-je loc_fffa498b  ; je 0xfffa498b
+je near loc_fffa498b  ; je 0xfffa498b
 jmp short loc_fffa439c  ; jmp 0xfffa439c
 
 loc_fffa436b:
@@ -5987,7 +5986,7 @@ jmp near loc_fffa498b  ; jmp 0xfffa498b
 
 loc_fffa43e7:
 cmp dword [ebp - 0x62ec], 0x11
-je loc_fffa4562  ; je 0xfffa4562
+je near loc_fffa4562  ; je 0xfffa4562
 mov esi, dword [ebp - 0x62fc]
 lea edx, [ebp - 0x62c0]
 mov eax, dword [esi]
@@ -5998,7 +5997,7 @@ push esi
 call dword [eax + 0x34]  ; ucall
 add esp, 0x10
 test eax, eax
-js loc_fffa4562  ; js 0xfffa4562
+js near loc_fffa4562  ; js 0xfffa4562
 mov edi, dword [ebp - 0x62c0]
 mov esi, ref_fffcfaac  ; mov esi, 0xfffcfaac
 add edi, 8
@@ -6195,7 +6194,7 @@ mov esi, dword [ebp - 0x62d0]
 dec eax
 test esi, esi
 mov byte [ebp - 0x6314], al
-je loc_fffa481f  ; je 0xfffa481f
+je near loc_fffa481f  ; je 0xfffa481f
 movzx eax, byte [ebp - 0x62fc]
 lea edx, [ebp - 0x6219]
 imul eax, eax, 0x1d
@@ -6251,20 +6250,20 @@ test edx, edx
 jne short loc_fffa4839  ; jne 0xfffa4839
 shr eax, 1
 cmp eax, 0x40
-je loc_fffa4a42  ; je 0xfffa4a42
+je near loc_fffa4a42  ; je 0xfffa4a42
 ja short loc_fffa485c  ; ja 0xfffa485c
 cmp eax, 8
-je loc_fffa4a42  ; je 0xfffa4a42
+je near loc_fffa4a42  ; je 0xfffa4a42
 cmp eax, 0x10
 jmp short loc_fffa486c  ; jmp 0xfffa486c
 
 loc_fffa485c:
 cmp eax, 0x80
-je loc_fffa4a42  ; je 0xfffa4a42
+je near loc_fffa4a42  ; je 0xfffa4a42
 cmp eax, 0x100
 
 loc_fffa486c:
-je loc_fffa4a42  ; je 0xfffa4a42
+je near loc_fffa4a42  ; je 0xfffa4a42
 
 loc_fffa4872:
 movzx eax, byte [ebp - 0x62fc]
@@ -6365,7 +6364,7 @@ jmp near loc_fffa4b12  ; jmp 0xfffa4b12
 
 loc_fffa499a:
 test al, 1
-jne loc_fffa26f0  ; jne 0xfffa26f0
+jne near loc_fffa26f0  ; jne 0xfffa26f0
 jmp near loc_fffa26fb  ; jmp 0xfffa26fb
 
 loc_fffa49a7:
@@ -6374,12 +6373,12 @@ jmp near loc_fffa29b2  ; jmp 0xfffa29b2
 
 loc_fffa49b6:
 cmp dword [ebp - 0x3f98], 1
-jne loc_fffa2c96  ; jne 0xfffa2c96
+jne near loc_fffa2c96  ; jne 0xfffa2c96
 jmp near loc_fffa2c7b  ; jmp 0xfffa2c7b
 
 loc_fffa49c8:
 cmp dword [ebp - 0x3d48], 1
-jne loc_fffa34c7  ; jne 0xfffa34c7
+jne near loc_fffa34c7  ; jne 0xfffa34c7
 jmp near loc_fffa32b3  ; jmp 0xfffa32b3
 
 loc_fffa49da:
@@ -6388,7 +6387,7 @@ jmp near loc_fffa3e70  ; jmp 0xfffa3e70
 
 loc_fffa49e5:
 cmp byte [ebp - 0x4fba], 0
-je loc_fffa3f94  ; je 0xfffa3f94
+je near loc_fffa3f94  ; je 0xfffa3f94
 mov ebx, dword [edi + 0x46a4]
 jmp near loc_fffa3e70  ; jmp 0xfffa3e70
 
@@ -6481,7 +6480,7 @@ call fcn_fffc543c  ; call 0xfffc543c
 test eax, eax
 mov dword [ebp - 0x80], eax
 mov edx, 0xdd22
-jne loc_fffa6d57  ; jne 0xfffa6d57
+jne near loc_fffa6d57  ; jne 0xfffa6d57
 mov edx, 0xdd21
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -6579,24 +6578,24 @@ mov edx, dword [edi + 0x20b6]
 cmp eax, edx
 jae short loc_fffa4c9b  ; jae 0xfffa4c9b
 test eax, eax
-je loc_fffa5106  ; je 0xfffa5106
+je near loc_fffa5106  ; je 0xfffa5106
 mov dword [edi + 0x20b6], eax
 mov eax, edi
 call fcn_fffc543c  ; call 0xfffc543c
 test eax, eax
-jne loc_fffa5106  ; jne 0xfffa5106
+jne near loc_fffa5106  ; jne 0xfffa5106
 jmp near loc_fffa6c5d  ; jmp 0xfffa6c5d
 
 loc_fffa4c9b:
 cmp edx, eax
-jb loc_fffa5106  ; jb 0xfffa5106
+jb near loc_fffa5106  ; jb 0xfffa5106
 test eax, eax
-je loc_fffa5106  ; je 0xfffa5106
+je near loc_fffa5106  ; je 0xfffa5106
 jmp near loc_fffa6c5d  ; jmp 0xfffa6c5d
 
 loc_fffa4cb0:
 cmp byte [ebx + 0x3a], 0
-jne loc_fffa6c8a  ; jne 0xfffa6c8a
+jne near loc_fffa6c8a  ; jne 0xfffa6c8a
 jmp near loc_fffa4dae  ; jmp 0xfffa4dae
 
 loc_fffa4cbf:
@@ -6668,13 +6667,13 @@ loc_fffa4dae:
 inc esi
 add ebx, 0x1055
 cmp esi, 2
-jne loc_fffa4cb0  ; jne 0xfffa4cb0
+jne near loc_fffa4cb0  ; jne 0xfffa4cb0
 cmp byte [edi + 0x3a], 0
-jne loc_fffa6ca0  ; jne 0xfffa6ca0
+jne near loc_fffa6ca0  ; jne 0xfffa6ca0
 
 loc_fffa4dc8:
 cmp byte [edi + 0x108f], 0
-jne loc_fffa6cb7  ; jne 0xfffa6cb7
+jne near loc_fffa6cb7  ; jne 0xfffa6cb7
 
 loc_fffa4dd5:
 mov eax, dword [edi + 0x2223]
@@ -6744,7 +6743,7 @@ loc_fffa4eb7:
 cmp dword [edi + 0x107c], 0
 je short loc_fffa4e43  ; je 0xfffa4e43
 cmp dword [edi + 0x105f], 0
-je loc_fffa4e43  ; je 0xfffa4e43
+je near loc_fffa4e43  ; je 0xfffa4e43
 mov ebx, dword [edi + 0x1055]
 cmp dword [edi + 0x1072], ebx
 jae short loc_fffa4eea  ; jae 0xfffa4eea
@@ -6923,14 +6922,14 @@ or eax, edx
 loc_fffa50d1:
 mov esi, dword [ebp - 0x88]
 cmp byte [esi + 0x3a], 0
-jne loc_fffa6cd4  ; jne 0xfffa6cd4
+jne near loc_fffa6cd4  ; jne 0xfffa6cd4
 
 loc_fffa50e1:
 inc dword [ebp - 0x80]
 add dword [ebp - 0x84], 4
 add dword [ebp - 0x88], 0x1055
 cmp dword [ebp - 0x80], 2
-jne loc_fffa4e32  ; jne 0xfffa4e32
+jne near loc_fffa4e32  ; jne 0xfffa4e32
 mov eax, edi
 call fcn_fffbf908  ; call 0xfffbf908
 
@@ -7130,7 +7129,7 @@ add ebx, 0x1055
 or eax, ecx
 cmp dword [ebp - 0x80], 2
 mov dword [edx], eax
-jne loc_fffa51af  ; jne 0xfffa51af
+jne near loc_fffa51af  ; jne 0xfffa51af
 mov eax, dword [edi + 0x20b6]
 cmp eax, 0x535
 je short loc_fffa540b  ; je 0xfffa540b
@@ -7138,7 +7137,7 @@ ja short loc_fffa53e9  ; ja 0xfffa53e9
 cmp eax, 0x320
 je short loc_fffa5404  ; je 0xfffa5404
 cmp eax, 0x42b
-jne loc_fffa550e  ; jne 0xfffa550e
+jne near loc_fffa550e  ; jne 0xfffa550e
 jmp short loc_fffa5427  ; jmp 0xfffa5427
 
 loc_fffa53e9:
@@ -7147,7 +7146,7 @@ je short loc_fffa5419  ; je 0xfffa5419
 cmp eax, 0x855
 je short loc_fffa5420  ; je 0xfffa5420
 cmp eax, 0x640
-jne loc_fffa550e  ; jne 0xfffa550e
+jne near loc_fffa550e  ; jne 0xfffa550e
 jmp short loc_fffa5412  ; jmp 0xfffa5412
 
 loc_fffa5404:
@@ -7265,7 +7264,7 @@ mov edx, esi
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 dec eax
-jne loc_fffa5b0b  ; jne 0xfffa5b0b
+jne near loc_fffa5b0b  ; jne 0xfffa5b0b
 mov ebx, dword [ebp - 0x98]
 mov edx, esi
 movzx eax, byte [edi + ebx + 0x3f]
@@ -7296,7 +7295,7 @@ mov dword [ebp - 0x53], 0
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-jne loc_fffa5b49  ; jne 0xfffa5b49
+jne near loc_fffa5b49  ; jne 0xfffa5b49
 mov edx, 0xdd30
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -7389,7 +7388,7 @@ loc_fffa5704:
 mov al, byte [edi + 0x20b5]
 movzx edx, al
 cmp dword [ebp - 0x8c], edx
-jb loc_fffa5679  ; jb 0xfffa5679
+jb near loc_fffa5679  ; jb 0xfffa5679
 cmp byte [ebp - 0x90], al
 jne short loc_fffa575a  ; jne 0xfffa575a
 mov ebx, dword [ebp - 0x7c]
@@ -7524,7 +7523,7 @@ call fcn_fffb93db  ; call 0xfffb93db
 add esp, 0x10
 test eax, eax
 mov ecx, eax
-jne loc_fffa5972  ; jne 0xfffa5972
+jne near loc_fffa5972  ; jne 0xfffa5972
 sub esp, 0xc
 mov ecx, dword [ebp - 0x80]
 push esi
@@ -7534,7 +7533,7 @@ call fcn_fffbdcf9  ; call 0xfffbdcf9
 add esp, 0x10
 test eax, eax
 mov ecx, eax
-jne loc_fffa5972  ; jne 0xfffa5972
+jne near loc_fffa5972  ; jne 0xfffa5972
 sub esp, 0xc
 lea ecx, [ebp - 0x70]
 push ebx
@@ -7730,7 +7729,7 @@ loc_fffa5b0b:
 inc esi
 add dword [ebp - 0x94], 0x2f
 cmp esi, 4
-jne loc_fffa555b  ; jne 0xfffa555b
+jne near loc_fffa555b  ; jne 0xfffa555b
 inc dword [ebp - 0x80]
 cmp dword [ebp - 0x80], 2
 je short loc_fffa5b5b  ; je 0xfffa5b5b
@@ -7750,7 +7749,7 @@ mov dword [ebp - 0x80], eax
 loc_fffa5b4c:
 cmp dword [ebp - 0x80], 0
 mov edx, 0xdd2e
-jne loc_fffa6d57  ; jne 0xfffa6d57
+jne near loc_fffa6d57  ; jne 0xfffa6d57
 
 loc_fffa5b5b:
 mov edx, 0xdd2d
@@ -7764,7 +7763,7 @@ call fcn_fffc06b8  ; call 0xfffc06b8
 test eax, eax
 mov dword [ebp - 0x80], eax
 mov edx, 0xdd38
-jne loc_fffa6d57  ; jne 0xfffa6d57
+jne near loc_fffa6d57  ; jne 0xfffa6d57
 mov edx, 0xdd37
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -7853,7 +7852,7 @@ mov dword [ebp - 0xac], ebx
 loc_fffa5ca5:
 mov esi, dword [ebp - 0x8c]
 cmp byte [esi + 0x3a], 0
-jne loc_fffa6cec  ; jne 0xfffa6cec
+jne near loc_fffa6cec  ; jne 0xfffa6cec
 
 loc_fffa5cb5:
 xor ebx, ebx
@@ -7917,7 +7916,7 @@ mov eax, edi
 call fcn_fffc900b  ; call 0xfffc900b
 test eax, eax
 mov dword [ebp - 0x80], eax
-jne loc_fffa619f  ; jne 0xfffa619f
+jne near loc_fffa619f  ; jne 0xfffa619f
 imul eax, ebx, 0x900
 mov dl, byte [ebp + ebx - 0x6b]
 add eax, 0x3c30
@@ -8038,11 +8037,11 @@ mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x80], eax
-jne loc_fffa619f  ; jne 0xfffa619f
+jne near loc_fffa619f  ; jne 0xfffa619f
 mov eax, dword [ebp - 0xa4]
 test eax, eax
 mov dword [ebp - 0x80], eax
-jne loc_fffa619f  ; jne 0xfffa619f
+jne near loc_fffa619f  ; jne 0xfffa619f
 mov ecx, dword [ebp - 0xa8]
 sub esp, 0xc
 push esi
@@ -8056,12 +8055,12 @@ add esp, 0x10
 loc_fffa5f4f:
 mov al, byte [ebp - 0x90]
 cmp al, byte [ebp + ebx - 0x67]
-jbe loc_fffa5d81  ; jbe 0xfffa5d81
+jbe near loc_fffa5d81  ; jbe 0xfffa5d81
 jmp near loc_fffa5ccd  ; jmp 0xfffa5ccd
 
 loc_fffa5f64:
 dec dword [ebp - 0x98]
-jne loc_fffa5ca5  ; jne 0xfffa5ca5
+jne near loc_fffa5ca5  ; jne 0xfffa5ca5
 imul esi, dword [ebp - 0x7c], 0x1055
 mov ebx, dword [ebp - 0xa0]
 mov dword [ebp - 0x90], ebx
@@ -8139,20 +8138,20 @@ inc ebx
 
 loc_fffa605f:
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffa5fca  ; jb 0xfffa5fca
+jb near loc_fffa5fca  ; jb 0xfffa5fca
 jmp near loc_fffa5fa1  ; jmp 0xfffa5fa1
 
 loc_fffa6070:
 inc dword [ebp - 0x7c]
 add dword [ebp - 0x8c], 0x1055
 cmp dword [ebp - 0x7c], 2
-jne loc_fffa5c5a  ; jne 0xfffa5c5a
+jne near loc_fffa5c5a  ; jne 0xfffa5c5a
 inc dword [ebp - 0x84]
 
 loc_fffa608d:
 mov ebx, dword [ebp - 0x94]
 cmp dword [ebp - 0x84], ebx
-jbe loc_fffa5c2a  ; jbe 0xfffa5c2a
+jbe near loc_fffa5c2a  ; jbe 0xfffa5c2a
 xor ebx, ebx
 jmp near loc_fffa613c  ; jmp 0xfffa613c
 
@@ -8247,12 +8246,12 @@ jmp near loc_fffa62d5  ; jmp 0xfffa62d5
 loc_fffa61a9:
 imul eax, esi, 0x1055
 cmp byte [edi + eax + 0x3a], 0
-jne loc_fffa6cfe  ; jne 0xfffa6cfe
+jne near loc_fffa6cfe  ; jne 0xfffa6cfe
 
 loc_fffa61ba:
 inc esi
 cmp esi, 2
-je loc_fffa62e1  ; je 0xfffa62e1
+je near loc_fffa62e1  ; je 0xfffa62e1
 jmp short loc_fffa61a9  ; jmp 0xfffa61a9
 
 loc_fffa61c6:
@@ -8333,18 +8332,18 @@ add esp, 0x10
 loc_fffa6292:
 mov dl, byte [ebp - 0x7c]
 cmp dl, byte [ebp + ebx - 0x63]
-jbe loc_fffa620b  ; jbe 0xfffa620b
+jbe near loc_fffa620b  ; jbe 0xfffa620b
 jmp near loc_fffa61e3  ; jmp 0xfffa61e3
 
 loc_fffa62a4:
 dec dword [ebp - 0x84]
-jne loc_fffa61c6  ; jne 0xfffa61c6
+jne near loc_fffa61c6  ; jne 0xfffa61c6
 mov ecx, dword [ebp - 0x94]
 mov edx, esi
 mov eax, edi
 call fcn_fffaf8cd  ; call 0xfffaf8cd
 test eax, eax
-je loc_fffa61ba  ; je 0xfffa61ba
+je near loc_fffa61ba  ; je 0xfffa61ba
 
 loc_fffa62c7:
 mov dword [ebp - 0x80], eax
@@ -8373,7 +8372,7 @@ mov word [ebp - 0x8c], 0
 loc_fffa6315:
 imul eax, dword [ebp - 0x7c], 0x1055
 cmp byte [edi + eax + 0x3a], 0
-je loc_fffa649d  ; je 0xfffa649d
+je near loc_fffa649d  ; je 0xfffa649d
 lea eax, [edi + eax + 0x7b]
 mov dword [ebp - 0x84], 0
 mov dword [ebp - 0x94], eax
@@ -8384,7 +8383,7 @@ mov edx, dword [ebp - 0x84]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-jne loc_fffa63f3  ; jne 0xfffa63f3
+jne near loc_fffa63f3  ; jne 0xfffa63f3
 jmp near loc_fffa6483  ; jmp 0xfffa6483
 
 loc_fffa6358:
@@ -8439,7 +8438,7 @@ mov byte [ebp - 0x90], 0
 loc_fffa63fa:
 mov bl, byte [ebp - 0x90]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffa6358  ; jb 0xfffa6358
+jb near loc_fffa6358  ; jb 0xfffa6358
 mov ecx, dword [ebp - 0x7c]
 mov edx, dword [ebp - 0x84]
 shr word [ebp - 0x8c], 6
@@ -8475,19 +8474,19 @@ loc_fffa6483:
 inc dword [ebp - 0x84]
 add dword [ebp - 0x94], 0x2f
 cmp dword [ebp - 0x84], 4
-jne loc_fffa633b  ; jne 0xfffa633b
+jne near loc_fffa633b  ; jne 0xfffa633b
 
 loc_fffa649d:
 inc dword [ebp - 0x7c]
 cmp dword [ebp - 0x7c], 2
-jne loc_fffa6315  ; jne 0xfffa6315
+jne near loc_fffa6315  ; jne 0xfffa6315
 mov dword [ebp - 0x8c], edi
 mov dword [ebp - 0x7c], 0
 
 loc_fffa64b7:
 mov ebx, dword [ebp - 0x88]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffa6d3f  ; jne 0xfffa6d3f
+jne near loc_fffa6d3f  ; jne 0xfffa6d3f
 jmp near loc_fffa6b2e  ; jmp 0xfffa6b2e
 
 loc_fffa64cc:
@@ -8506,39 +8505,39 @@ jmp near loc_fffa67e5  ; jmp 0xfffa67e5
 loc_fffa64f9:
 cmp eax, 2
 mov byte [ebp - 0x94], 2
-jbe loc_fffa67e5  ; jbe 0xfffa67e5
+jbe near loc_fffa67e5  ; jbe 0xfffa67e5
 mov esi, dword [ebp - 0x88]
 cmp dword [esi + 0xa], 0
 mov dword [esi + 0x19], 6
 mov dword [esi + 0x36], 6
-je loc_fffa67b0  ; je 0xfffa67b0
+je near loc_fffa67b0  ; je 0xfffa67b0
 cmp dword [esi + 0x27], 0
-je loc_fffa67b0  ; je 0xfffa67b0
+je near loc_fffa67b0  ; je 0xfffa67b0
 mov ebx, dword [ebp - 0x8c]
 cmp byte [ebx + 0x210e], 3
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 cmp byte [ebx + 0x2154], 3
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov al, byte [ebx + 0x2178]
 mov dl, byte [ebx + 0x2132]
 and eax, 0x1f
 and edx, 0x1f
 mov cl, al
 or cl, dl
-je loc_fffa67b0  ; je 0xfffa67b0
+je near loc_fffa67b0  ; je 0xfffa67b0
 test dl, dl
 sete byte [ebp - 0x84]
 cmp al, 1
 mov bl, byte [ebp - 0x84]
 sete byte [ebp - 0xa0]
 test byte [ebp - 0xa0], bl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 cmp dl, 1
 sete byte [ebp - 0x94]
 cmp al, 1
 setbe cl
 test byte [ebp - 0x94], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 lea ecx, [edx - 2]
 cmp cl, 1
 lea ecx, [eax - 1]
@@ -8550,40 +8549,40 @@ sete byte [ebp - 0x90]
 cmp cl, 1
 setbe cl
 test byte [ebp - 0xa8], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0x94]
 test byte [ebp - 0x90], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 test al, al
 sete byte [ebp - 0xa4]
 mov bl, byte [ebp - 0xa4]
 test byte [ebp - 0xa8], bl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0x84]
 test byte [ebp - 0x90], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 cmp dl, 5
 sete bl
 cmp al, 5
 sete cl
 test cl, bl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 test byte [ebp - 0x90], bl
-jne loc_fffa676e  ; jne 0xfffa676e
+jne near loc_fffa676e  ; jne 0xfffa676e
 test byte [ebp - 0xa8], cl
 je short loc_fffa664c  ; je 0xfffa664c
 jmp near loc_fffa676e  ; jmp 0xfffa676e
 
 loc_fffa664c:
 test byte [ebp - 0xa0], bl
-jne loc_fffa6748  ; jne 0xfffa6748
+jne near loc_fffa6748  ; jne 0xfffa6748
 test byte [ebp - 0x94], cl
 je short loc_fffa6665  ; je 0xfffa6665
 jmp near loc_fffa6748  ; jmp 0xfffa6748
 
 loc_fffa6665:
 test byte [ebp - 0xa4], bl
-jne loc_fffa676e  ; jne 0xfffa676e
+jne near loc_fffa676e  ; jne 0xfffa676e
 test byte [ebp - 0x84], cl
 je short loc_fffa667e  ; je 0xfffa667e
 jmp near loc_fffa676e  ; jmp 0xfffa676e
@@ -8592,7 +8591,7 @@ loc_fffa667e:
 cmp al, 3
 sete byte [ebp - 0x98]
 test byte [ebp - 0x98], bl
-jne loc_fffa679c  ; jne 0xfffa679c
+jne near loc_fffa679c  ; jne 0xfffa679c
 cmp dl, 3
 sete byte [ebp - 0x9c]
 test byte [ebp - 0x9c], cl
@@ -8602,22 +8601,22 @@ jmp near loc_fffa679c  ; jmp 0xfffa679c
 loc_fffa66aa:
 mov cl, byte [ebp - 0x98]
 test byte [ebp - 0xac], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0x90]
 test byte [ebp - 0x9c], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0x94]
 test byte [ebp - 0x98], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0xa0]
 test byte [ebp - 0x9c], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0x84]
 test byte [ebp - 0x98], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 mov cl, byte [ebp - 0xa4]
 test byte [ebp - 0x9c], cl
-jne loc_fffa67b0  ; jne 0xfffa67b0
+jne near loc_fffa67b0  ; jne 0xfffa67b0
 cmp dl, 4
 sete dl
 test cl, dl
@@ -8768,7 +8767,7 @@ cmp byte [ebx + 0x12], 2
 mov dword [ebp - 0x84], edx
 je short loc_fffa68ec  ; je 0xfffa68ec
 cmp byte [ebx + 0x2f], 2
-jne loc_fffa6a28  ; jne 0xfffa6a28
+jne near loc_fffa6a28  ; jne 0xfffa6a28
 
 loc_fffa68ec:
 push ecx
@@ -8887,7 +8886,7 @@ mov byte [ebp - 0x90], 0
 loc_fffa6a4d:
 mov bl, byte [ebp - 0x90]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffa6921  ; jb 0xfffa6921
+jb near loc_fffa6921  ; jb 0xfffa6921
 mov dl, byte [ebp - 0x98]
 mov al, 2
 add edx, 0x3f
@@ -8955,7 +8954,7 @@ inc dword [ebp - 0x7c]
 add dword [ebp - 0x88], 0x1055
 add dword [ebp - 0x8c], 0x8c
 cmp dword [ebp - 0x7c], 2
-jne loc_fffa64b7  ; jne 0xfffa64b7
+jne near loc_fffa64b7  ; jne 0xfffa64b7
 mov edx, 0xdd4d
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -9004,7 +9003,7 @@ jmp short loc_fffa6b5f  ; jmp 0xfffa6b5f
 
 loc_fffa6bda:
 cmp dword [edi + 0x22c2], 1
-jne loc_fffa6d5e  ; jne 0xfffa6d5e
+jne near loc_fffa6d5e  ; jne 0xfffa6d5e
 mov edx, 0xdd62
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -9062,7 +9061,7 @@ mov edx, esi
 mov eax, edi
 call fcn_fffbf510  ; call 0xfffbf510
 test eax, eax
-je loc_fffa4ce6  ; je 0xfffa4ce6
+je near loc_fffa4ce6  ; je 0xfffa4ce6
 jmp near loc_fffa4cbf  ; jmp 0xfffa4cbf
 
 loc_fffa6ca0:
@@ -9116,7 +9115,7 @@ jmp near loc_fffa61c6  ; jmp 0xfffa61c6
 loc_fffa6d3f:
 mov eax, dword [edi + 0x2254]
 test eax, eax
-je loc_fffa64cc  ; je 0xfffa64cc
+je near loc_fffa64cc  ; je 0xfffa64cc
 jmp near loc_fffa64f9  ; jmp 0xfffa64f9
 
 loc_fffa6d52:
@@ -9135,7 +9134,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffa6d69:
+endloc_fffa6d69:
 db 0x00
 db 0x00
 db 0x00
@@ -9604,7 +9603,7 @@ lea eax, [ebp - 0x4ed]
 mov dword [ebp - 0x17c], eax
 lea eax, [ebp - 0x274]
 mov dword [ebp - 0x510], eax
-jne loc_fffa9af7  ; jne 0xfffa9af7
+jne near loc_fffa9af7  ; jne 0xfffa9af7
 sub esp, 0xc
 lea eax, [ebp - 0x510]
 mov dword [0xfeffc010], eax
@@ -9730,7 +9729,7 @@ mov bx, word [0xf00f8002]
 mov eax, ebx
 and eax, 0xfffffffb
 cmp ax, 0x1c42
-je loc_fffa7943  ; je 0xfffa7943
+je near loc_fffa7943  ; je 0xfffa7943
 cmp bx, 0x1c4c
 sete cl
 cmp bx, 0x1c4a
@@ -9892,7 +9891,7 @@ and eax, 3
 cmp al, 2
 je short loc_fffa7b21  ; je 0xfffa7b21
 cmp al, 3
-jne loc_fffa7bbd  ; jne 0xfffa7bbd
+jne near loc_fffa7bbd  ; jne 0xfffa7bbd
 jmp short loc_fffa7b59  ; jmp 0xfffa7b59
 
 loc_fffa7b21:
@@ -9946,7 +9945,7 @@ and eax, 0xc
 cmp al, 8
 je short loc_fffa7be5  ; je 0xfffa7be5
 cmp al, 0xc
-jne loc_fffa7c81  ; jne 0xfffa7c81
+jne near loc_fffa7c81  ; jne 0xfffa7c81
 jmp short loc_fffa7c1d  ; jmp 0xfffa7c1d
 
 loc_fffa7be5:
@@ -10030,7 +10029,7 @@ mov eax, esi
 add esp, 0x10
 and eax, 0xfffffffb
 cmp ax, 0x1c42
-je loc_fffa7db8  ; je 0xfffa7db8
+je near loc_fffa7db8  ; je 0xfffa7db8
 cmp si, 0x1c4c
 sete cl
 cmp si, 0x1c4a
@@ -10177,7 +10176,7 @@ jmp near loc_fffa7ff4  ; jmp 0xfffa7ff4
 
 loc_fffa7f71:
 cmp ax, 0x60
-ja loc_fffa8003  ; ja 0xfffa8003
+ja near loc_fffa8003  ; ja 0xfffa8003
 sub esp, 0xc
 mov ecx, 0xff88caff
 push 0x880a00
@@ -10251,7 +10250,7 @@ jmp near loc_fffa80d1  ; jmp 0xfffa80d1
 
 loc_fffa804d:
 cmp ax, 0x60
-ja loc_fffa80e0  ; ja 0xfffa80e0
+ja near loc_fffa80e0  ; ja 0xfffa80e0
 sub esp, 0xc
 mov ecx, 0xff88caff
 push 0x880a00
@@ -10350,10 +10349,10 @@ cmp si, 0x1e41
 sete al
 or dl, al
 mov byte [ebp - 0x524], dl
-jne loc_fffa8246  ; jne 0xfffa8246
+jne near loc_fffa8246  ; jne 0xfffa8246
 lea eax, [esi - 0x1e46]
 cmp ax, 1
-jbe loc_fffa8246  ; jbe 0xfffa8246
+jbe near loc_fffa8246  ; jbe 0xfffa8246
 lea eax, [esi - 0x1e48]
 cmp ax, 1
 jbe short loc_fffa8246  ; jbe 0xfffa8246
@@ -10392,7 +10391,7 @@ jne short loc_fffa8246  ; jne 0xfffa8246
 loc_fffa8234:
 lea eax, [esi - 0x1e46]
 cmp ax, 1
-ja loc_fffa8544  ; ja 0xfffa8544
+ja near loc_fffa8544  ; ja 0xfffa8544
 jmp short loc_fffa82b3  ; jmp 0xfffa82b3
 
 loc_fffa8246:
@@ -10580,43 +10579,43 @@ jmp near loc_fffa85d3  ; jmp 0xfffa85d3
 loc_fffa8544:
 lea eax, [esi - 0x1e48]
 cmp ax, 1
-jbe loc_fffa82b3  ; jbe 0xfffa82b3
+jbe near loc_fffa82b3  ; jbe 0xfffa82b3
 cmp si, 0x1e53
 sete dl
 cmp si, 0x1e4a
 sete al
 or dl, al
-jne loc_fffa82b3  ; jne 0xfffa82b3
+jne near loc_fffa82b3  ; jne 0xfffa82b3
 cmp si, 0x1e5e
 sete dl
 cmp si, 0x1e42
 sete al
 or dl, al
-jne loc_fffa82b3  ; jne 0xfffa82b3
+jne near loc_fffa82b3  ; jne 0xfffa82b3
 mov eax, esi
 and eax, 0xfffffff7
 cmp ax, 0x1e55
-je loc_fffa82b3  ; je 0xfffa82b3
+je near loc_fffa82b3  ; je 0xfffa82b3
 lea eax, [esi - 0x1e57]
 cmp ax, 1
-jbe loc_fffa82b3  ; jbe 0xfffa82b3
+jbe near loc_fffa82b3  ; jbe 0xfffa82b3
 cmp si, 0x1e5f
 sete dl
 cmp si, 0x1e59
 sete al
 or dl, al
-jne loc_fffa82b3  ; jne 0xfffa82b3
+jne near loc_fffa82b3  ; jne 0xfffa82b3
 cmp si, 0x1e56
 sete dl
 cmp si, 0x1e43
 sete al
 or dl, al
-jne loc_fffa82b3  ; jne 0xfffa82b3
+jne near loc_fffa82b3  ; jne 0xfffa82b3
 
 loc_fffa85d3:
 mov ax, word [ebx + 0x400]
 test ah, 8
-je loc_fffa86df  ; je 0xfffa86df
+je near loc_fffa86df  ; je 0xfffa86df
 mov edi, dword [ebx + 0x400]
 sub esp, 0xc
 and edi, 0x700
@@ -10699,7 +10698,7 @@ jmp near loc_fffa8797  ; jmp 0xfffa8797
 
 loc_fffa86fe:
 cmp byte [ebx + 0xa], 0
-jne loc_fffa8797  ; jne 0xfffa8797
+jne near loc_fffa8797  ; jne 0xfffa8797
 
 loc_fffa8708:
 cmp byte [ebx + 0xa], 0
@@ -10825,7 +10824,7 @@ mov eax, dword [eax + 0x3418]
 loc_fffa8890:
 inc ecx
 cmp ecx, 8
-jne loc_fffa87bd  ; jne 0xfffa87bd
+jne near loc_fffa87bd  ; jne 0xfffa87bd
 mov eax, dword [ebx + 2]
 mov edx, dword [eax + 0x3598]
 and dl, 1
@@ -10922,7 +10921,7 @@ mov ebx, dword [ebp - 0x504]
 mov dword [ebp - 0x524], ebx
 mov eax, dword [ebx + 0xb]
 test eax, eax
-je loc_fffa8be1  ; je 0xfffa8be1
+je near loc_fffa8be1  ; je 0xfffa8be1
 movzx esi, byte [ebx + 1]
 mov edi, ebx
 shl esi, 0x14
@@ -11264,7 +11263,7 @@ call dword [eax + 0x20]  ; ucall
 add esp, 0x20
 test eax, eax
 mov ecx, dword [ebp - 0x57c]
-js loc_fffa8fe5  ; js 0xfffa8fe5
+js near loc_fffa8fe5  ; js 0xfffa8fe5
 cmp byte [ebp - 0x524], 0x50
 jne short loc_fffa8ef6  ; jne 0xfffa8ef6
 test bl, bl
@@ -11417,7 +11416,7 @@ mov bx, word [0xf0010000]
 mov word [ebp - 0x546], bx
 mov ax, word [0xf00f0000]
 inc ax
-je loc_fffa920b  ; je 0xfffa920b
+je near loc_fffa920b  ; je 0xfffa920b
 mov dword [0xf00f0018], 0xff0200
 mov bl, byte [0xf00f0019]
 movzx eax, bl
@@ -11441,7 +11440,7 @@ mov dword [ebp - 0x538], eax
 mov edi, eax
 mov ax, word [eax - 0x10000000]
 inc ax
-je loc_fffa9170  ; je 0xfffa9170
+je near loc_fffa9170  ; je 0xfffa9170
 mov bl, byte [edi - 0xffffff2]
 mov byte [ebp - 0x532], 0
 sar bl, 7
@@ -11478,7 +11477,7 @@ jbe short loc_fffa9102  ; jbe 0xfffa9102
 loc_fffa9170:
 inc esi
 cmp esi, 0x20
-jne loc_fffa90cd  ; jne 0xfffa90cd
+jne near loc_fffa90cd  ; jne 0xfffa90cd
 inc byte [ebp - 0x530]
 
 loc_fffa9180:
@@ -11570,7 +11569,7 @@ mov dword [ebp - 0x538], eax
 mov edi, eax
 mov ax, word [eax - 0x10000000]
 inc ax
-je loc_fffa934c  ; je 0xfffa934c
+je near loc_fffa934c  ; je 0xfffa934c
 mov bl, byte [edi - 0xffffff2]
 mov byte [ebp - 0x533], 0
 sar bl, 7
@@ -11608,7 +11607,7 @@ jbe short loc_fffa92d6  ; jbe 0xfffa92d6
 loc_fffa934c:
 inc dword [ebp - 0x530]
 cmp dword [ebp - 0x530], 0x20
-jne loc_fffa929d  ; jne 0xfffa929d
+jne near loc_fffa929d  ; jne 0xfffa929d
 inc byte [ebp - 0x532]
 
 loc_fffa9365:
@@ -11693,7 +11692,7 @@ movzx edx, byte [esi]
 test word [esi + 3], di
 movzx ecx, byte [esi + 1]
 movzx eax, byte [esi + 2]
-je loc_fffa96b4  ; je 0xfffa96b4
+je near loc_fffa96b4  ; je 0xfffa96b4
 shl ecx, 0xf
 shl edx, 0x14
 shl eax, 0xc
@@ -11701,7 +11700,7 @@ add edx, ecx
 lea edi, [edx + eax]
 mov al, byte [edi - 0xfffff46]
 test al, 0x40
-je loc_fffa96b4  ; je 0xfffa96b4
+je near loc_fffa96b4  ; je 0xfffa96b4
 mov eax, dword [edi - 0xfffffe8]
 and eax, 0xff0000ff
 or eax, 0x10100
@@ -11709,7 +11708,7 @@ mov dword [edi - 0xfffffe8], eax
 mov word [0xf0100000], 0
 mov ax, word [0xf0100000]
 inc ax
-je loc_fffa96b4  ; je 0xfffa96b4
+je near loc_fffa96b4  ; je 0xfffa96b4
 mov bl, byte [0xf010000e]
 xor esi, esi
 sar bl, 7
@@ -11761,12 +11760,12 @@ jmp near loc_fffa96a3  ; jmp 0xfffa96a3
 
 loc_fffa957e:
 cmp dword [ebp - 0x524], 1
-je loc_fffa9699  ; je 0xfffa9699
+je near loc_fffa9699  ; je 0xfffa9699
 jmp near loc_fffa9688  ; jmp 0xfffa9688
 
 loc_fffa9590:
 cmp al, 6
-jne loc_fffa96a3  ; jne 0xfffa96a3
+jne near loc_fffa96a3  ; jne 0xfffa96a3
 mov byte [edi - 0xfffffe7], 1
 mov eax, 1
 mov byte [edi - 0xfffffe6], 0xff
@@ -11866,9 +11865,9 @@ loc_fffa96b4:
 add dword [ebp - 0x528], 5
 mov ebx, dword [ebp - 0x51c]
 cmp dword [ebp - 0x528], ebx
-jne loc_fffa947d  ; jne 0xfffa947d
+jne near loc_fffa947d  ; jne 0xfffa947d
 cmp word [ebp - 0x546], 0xffff
-je loc_fffa97d3  ; je 0xfffa97d3
+je near loc_fffa97d3  ; je 0xfffa97d3
 mov ebx, dword [ebp - 0x52c]
 cmp dword [ebp - 0x524], 0
 mov eax, dword [ebx + 5]
@@ -11882,7 +11881,7 @@ jne short loc_fffa9703  ; jne 0xfffa9703
 
 loc_fffa96f9:
 cmp byte [eax + 6], 1
-jne loc_fffa97d3  ; jne 0xfffa97d3
+jne near loc_fffa97d3  ; jne 0xfffa97d3
 
 loc_fffa9703:
 mov ax, word [0xf0000050]
@@ -12239,7 +12238,7 @@ jmp short loc_fffa9b0e  ; jmp 0xfffa9b0e
 
 loc_fffa9afc:
 cmp byte [ebp - 0x524], 0
-jne loc_fffa8f64  ; jne 0xfffa8f64
+jne near loc_fffa8f64  ; jne 0xfffa8f64
 jmp near loc_fffa8f53  ; jmp 0xfffa8f53
 
 loc_fffa9b0e:
@@ -12250,11 +12249,11 @@ pop edi
 pop ebp
 ret
 
-loc_fffa9b16:
+endloc_fffa9b16:
 db 0x00
 db 0x00
 
-fcn_fffa9b18:  ; not directly referenced
+fcn_fffa9b18:
 push ebp
 xor ecx, ecx
 mov eax, 1
@@ -12295,11 +12294,11 @@ and eax, 0x2000000
 add eax, 0x80000000
 jmp short loc_fffa9b9c  ; jmp 0xfffa9b9c
 
-loc_fffa9b92:  ; not directly referenced
+loc_fffa9b92:
 mov eax, 0x80000000
 mov edx, 0x7fffffff
 
-loc_fffa9b9c:  ; not directly referenced
+loc_fffa9b9c:
 mov ecx, dword [esi + 0x5d14]
 and edx, ecx
 or edx, eax
@@ -12512,14 +12511,14 @@ loc_fffa9e5b:
 inc dword [ebp - 0xc7c]
 add ebx, 0x21
 cmp dword [ebp - 0xc7c], 6
-jne loc_fffa9da8  ; jne 0xfffa9da8
+jne near loc_fffa9da8  ; jne 0xfffa9da8
 inc dword [ebp - 0xc80]
 add dword [ebp - 0xc98], 0xc6
 
 loc_fffa9e81:
 mov ecx, dword [ebp + 0xc]
 cmp dword [ebp - 0xc80], ecx
-jne loc_fffa9d88  ; jne 0xfffa9d88
+jne near loc_fffa9d88  ; jne 0xfffa9d88
 xor edx, edx
 cmp dword [ebp - 0xc84], 0xc8
 ja short loc_fffa9ed2  ; ja 0xfffa9ed2
@@ -12549,7 +12548,7 @@ jmp near loc_fffa9fdd  ; jmp 0xfffa9fdd
 loc_fffa9edc:
 inc dword [ebp - 0xc84]
 cmp dword [ebp - 0xc84], 0x3e8
-je loc_fffa9fdd  ; je 0xfffa9fdd
+je near loc_fffa9fdd  ; je 0xfffa9fdd
 
 loc_fffa9ef2:
 xor ebx, ebx
@@ -12625,7 +12624,7 @@ xor eax, eax
 call fcn_fffb6133  ; call 0xfffb6133
 add esp, 0x10
 cmp ebx, 6
-jne loc_fffa9f07  ; jne 0xfffa9f07
+jne near loc_fffa9f07  ; jne 0xfffa9f07
 inc esi
 jmp short loc_fffa9fec  ; jmp 0xfffa9fec
 
@@ -12636,7 +12635,7 @@ mov dword [ebp - 0xca0], edx
 
 loc_fffa9fec:
 cmp esi, dword [ebp + 0xc]
-jne loc_fffa9ef9  ; jne 0xfffa9ef9
+jne near loc_fffa9ef9  ; jne 0xfffa9ef9
 cmp byte [ebp - 0xc8b], 2
 jbe short loc_fffaa03f  ; jbe 0xfffaa03f
 
@@ -12711,7 +12710,7 @@ jmp short loc_fffaa0df  ; jmp 0xfffaa0df
 
 loc_fffaa0d1:
 cmp edx, 0xa
-jbe loc_fffa9e33  ; jbe 0xfffa9e33
+jbe near loc_fffa9e33  ; jbe 0xfffa9e33
 jmp near loc_fffa9e11  ; jmp 0xfffa9e11
 
 loc_fffaa0df:
@@ -12733,56 +12732,56 @@ lea esp, [esp - 8]
 mov ebx, dword [edx + 9]
 movzx eax, word [ebx + 1]
 cmp dword [ecx + 0x2aa6], eax
-jne loc_fffaa2bb  ; jne 0xfffaa2bb
+jne near loc_fffaa2bb  ; jne 0xfffaa2bb
 mov si, word [0xf0000050]
 cmp si, word [ecx + 0x2a78]
 mov al, 1
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 movzx esi, byte [ebx]
 cmp dword [ecx + 0x2e1a], esi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 movzx esi, byte [ebx + 0x3e]
 cmp dword [ecx + 0x2e1e], esi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 movzx esi, byte [ecx + 0x2e22]
 cmp esi, dword [ebx + 6]
 mov dword [ebp - 0x14], esi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov esi, dword [edx + 5]
 movzx edi, word [esi]
 cmp dword [ecx + 0x2e23], edi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov di, word [esi + 2]
 cmp word [ecx + 0x2e27], di
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov edx, dword [edx + 1]
 mov edx, dword [edx + 0x20]
 shr edx, 0x14
 cmp dword [ecx + 0x2e29], edx
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [esi + 4]
 cmp byte [ecx + 0x2e2d], dl
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov esi, dword [ebx + 0x36]
 cmp dword [ecx + 0x2e2e], esi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov edi, dword [ebx + 0x3a]
 cmp dword [ecx + 0x2e32], edi
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0x10]
 cmp byte [ecx + 0x2e36], dl
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0x27]
 cmp byte [ecx + 0x2e37], dl
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 movzx edx, byte [ebx + 0x11]
 cmp dword [ecx + 0x2e38], edx
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0x41]
 cmp byte [ecx + 0x2e3c], dl
 je short loc_fffaa1f9  ; je 0xfffaa1f9
 cmp dword [ecx + 0x2258], 1
-je loc_fffaa2bd  ; je 0xfffaa2bd
+je near loc_fffaa2bd  ; je 0xfffaa2bd
 
 loc_fffaa1f9:
 cmp dword [ebp - 0x14], 1
@@ -12796,13 +12795,13 @@ loc_fffaa206:
 mov dl, byte [ebx + 0xa]
 cmp byte [ecx + 0x2e3d], dl
 mov al, 1
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0x12]
 cmp byte [ecx + 0x2e3f], dl
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0xb]
 cmp byte [ecx + 0x2e40], dl
-jne loc_fffaa2bd  ; jne 0xfffaa2bd
+jne near loc_fffaa2bd  ; jne 0xfffaa2bd
 mov dl, byte [ebx + 0xc]
 cmp byte [ecx + 0x2e41], dl
 jne short loc_fffaa2bd  ; jne 0xfffaa2bd
@@ -12937,7 +12936,7 @@ mov byte [ebp - 0x1c4], al
 loc_fffaa412:
 mov edx, dword [ebp - 0x1b8]
 cmp byte [edx], 0x14
-jbe loc_fffaa599  ; jbe 0xfffaa599
+jbe near loc_fffaa599  ; jbe 0xfffaa599
 mov ecx, dword [ebp - 0x1b0]
 lea edx, [ebp - 0x184]
 mov eax, dword [ecx]
@@ -12948,10 +12947,10 @@ push ecx
 call dword [eax + 0x34]  ; ucall
 add esp, 0x10
 test eax, eax
-jne loc_fffaa599  ; jne 0xfffaa599
+jne near loc_fffaa599  ; jne 0xfffaa599
 mov eax, dword [ebp - 0x184]
 test eax, eax
-je loc_fffaa599  ; je 0xfffaa599
+je near loc_fffaa599  ; je 0xfffaa599
 lea edi, [eax + 8]
 mov esi, ref_fffcfc20  ; mov esi, 0xfffcfc20
 mov ecx, 4
@@ -12979,7 +12978,7 @@ mov edx, dword [esi + 0xd]
 mov dl, byte [edx + 0x2b]
 mov byte [eax + 0x2c], dl
 cmp byte [esi], 0x16
-ja loc_fffaa584  ; ja 0xfffaa584
+ja near loc_fffaa584  ; ja 0xfffaa584
 jmp near loc_fffaa595  ; jmp 0xfffaa595
 
 loc_fffaa4b7:
@@ -13022,9 +13021,9 @@ mov ecx, dword [ebp - 0x1b8]
 mov edx, dword [ecx + 0xd]
 mov dl, byte [edx + 0x2b]
 cmp byte [eax + 0x2c], dl
-je loc_fffaa494  ; je 0xfffaa494
+je near loc_fffaa494  ; je 0xfffaa494
 dec dl
-je loc_fffaa494  ; je 0xfffaa494
+je near loc_fffaa494  ; je 0xfffaa494
 mov dword [eax + 0x18], 0
 mov dword [eax + 0x1c], 0
 mov dword [eax + 0x20], 0
@@ -13050,9 +13049,9 @@ mov byte [eax + 0x2f], 0
 
 loc_fffaa599:
 cmp byte [ebp - 0x1b9], 0
-je loc_fffaaafc  ; je 0xfffaaafc
+je near loc_fffaaafc  ; je 0xfffaaafc
 cmp byte [ebp - 0x1bb], 2
-ja loc_fffaa656  ; ja 0xfffaa656
+ja near loc_fffaa656  ; ja 0xfffaa656
 mov edx, dword [ebp - 0x1a8]
 and edx, 0xfffffffe
 mov eax, dword [edx + 0xc30]
@@ -13120,11 +13119,11 @@ mov eax, dword [ebp - 0x1b8]
 call fcn_fffb619f  ; call 0xfffb619f
 add esp, 0x10
 cmp byte [ebp - 0x1c4], 1
-jne loc_fffaaa8b  ; jne 0xfffaaa8b
+jne near loc_fffaaa8b  ; jne 0xfffaaa8b
 mov edx, dword [ebp - 0x1b8]
 mov eax, dword [edx + 0xd]
 cmp byte [eax + 8], 0
-je loc_fffaaa8b  ; je 0xfffaaa8b
+je near loc_fffaaa8b  ; je 0xfffaaa8b
 cmp byte [eax + 0x2a], 2
 jne short loc_fffaa6fb  ; jne 0xfffaa6fb
 cmp byte [ebp - 0x1bb], 0
@@ -13163,10 +13162,10 @@ mov dword [ebp - 0x1a8], ecx
 
 loc_fffaa763:
 cmp dword [ebp - 0x1c0], 2
-je loc_fffaa807  ; je 0xfffaa807
+je near loc_fffaa807  ; je 0xfffaa807
 xor edx, edx
 cmp dword [ebp - 0x1c0], 3
-jne loc_fffaa8f9  ; jne 0xfffaa8f9
+jne near loc_fffaa8f9  ; jne 0xfffaa8f9
 
 loc_fffaa77f:
 lea esi, [edx + 0x780046d0]
@@ -13201,7 +13200,7 @@ jne short loc_fffaa77f  ; jne 0xfffaa77f
 
 loc_fffaa7f5:
 cmp byte [ebp - 0x1bb], 0
-je loc_fffaaa64  ; je 0xfffaaa64
+je near loc_fffaaa64  ; je 0xfffaaa64
 jmp near loc_fffaaa8b  ; jmp 0xfffaaa8b
 
 loc_fffaa807:
@@ -13262,7 +13261,7 @@ or edx, ecx
 or edx, dword [ebp - 0x1c8]
 cmp eax, 8
 mov dword [esi + esi], edx
-jne loc_fffaa809  ; jne 0xfffaa809
+jne near loc_fffaa809  ; jne 0xfffaa809
 jmp near loc_fffaa7f5  ; jmp 0xfffaa7f5
 
 loc_fffaa8f9:
@@ -13352,7 +13351,7 @@ or edx, ecx
 or edx, dword [ebp - 0x1c8]
 cmp eax, 4
 mov dword [esi + esi], edx
-je loc_fffaa7f5  ; je 0xfffaa7f5
+je near loc_fffaa7f5  ; je 0xfffaa7f5
 jmp near loc_fffaa971  ; jmp 0xfffaa971
 
 loc_fffaaa64:
@@ -13415,22 +13414,22 @@ add edx, ecx
 movzx esi, byte [eax + 5]
 mov cx, word [edx - 0x10000000]
 inc cx
-je loc_fffaabef  ; je 0xfffaabef
+je near loc_fffaabef  ; je 0xfffaabef
 mov ecx, dword [ebp - 0x1b8]
 and edi, 0xff
 mov ebx, dword [ecx + 0xd]
 mov cl, byte [ebx + edi + 4]
 test cl, cl
-jne loc_fffac388  ; jne 0xfffac388
+jne near loc_fffac388  ; jne 0xfffac388
 cmp byte [ebp - 0x1bb], 2
 mov bl, byte [ebp - 0x1b9]
 setbe byte [ebp - 0x1ac]
 test byte [ebp - 0x1ac], bl
-je loc_fffac36d  ; je 0xfffac36d
+je near loc_fffac36d  ; je 0xfffac36d
 mov ebx, dword [ebp - 0x1b8]
 mov edi, dword [ebx + 1]
 cmp word [edi + 0x25], 1
-jne loc_fffac36d  ; jne 0xfffac36d
+jne near loc_fffac36d  ; jne 0xfffac36d
 jmp near loc_fffac388  ; jmp 0xfffac388
 
 loc_fffaab99:
@@ -13460,9 +13459,9 @@ mov word [edx - 0xfffff30], cx
 loc_fffaabef:
 add eax, 6
 cmp eax, dword [ebp - 0x19c]
-jne loc_fffaab16  ; jne 0xfffaab16
+jne near loc_fffaab16  ; jne 0xfffaab16
 cmp byte [ebp - 0x1b9], 0
-je loc_fffab134  ; je 0xfffab134
+je near loc_fffab134  ; je 0xfffab134
 mov edx, dword [ebp - 0x1b8]
 cmp byte [edx], 0x15
 ja short loc_fffaac95  ; ja 0xfffaac95
@@ -13493,14 +13492,14 @@ mov eax, dword [0xf0030c24]
 and eax, 0xfffeffff
 mov dword [0xf0030c24], eax
 cmp byte [ebp - 0x1bb], 0
-jne loc_fffaafc4  ; jne 0xfffaafc4
+jne near loc_fffaafc4  ; jne 0xfffaafc4
 jmp short loc_fffaacfa  ; jmp 0xfffaacfa
 
 loc_fffaac95:
 mov edx, dword [ebp - 0x1b8]
 mov eax, dword [edx + 0xd]
 cmp byte [eax + 0x5d], 1
-jne loc_fffaac16  ; jne 0xfffaac16
+jne near loc_fffaac16  ; jne 0xfffaac16
 movzx eax, byte [eax + 0x5e]
 mov edx, dword [0xf0008d0c]
 shl eax, 0x10
@@ -13564,7 +13563,7 @@ jne short loc_fffaad2b  ; jne 0xfffaad2b
 
 loc_fffaad67:
 cmp byte [ebp - 0x1ba], 0
-jne loc_fffaae5b  ; jne 0xfffaae5b
+jne near loc_fffaae5b  ; jne 0xfffaae5b
 test dl, dl
 jne short loc_fffaadad  ; jne 0xfffaadad
 mov ecx, 7
@@ -13618,7 +13617,7 @@ mov word [0xf00090f0], 0x800
 
 loc_fffaae31:
 test ax, ax
-je loc_fffaaf33  ; je 0xfffaaf33
+je near loc_fffaaf33  ; je 0xfffaaf33
 movzx eax, ax
 mov edx, dword [0xf000a224]
 and edx, 0xffffffe0
@@ -13629,7 +13628,7 @@ jmp near loc_fffaaf33  ; jmp 0xfffaaf33
 
 loc_fffaae5b:
 cmp byte [ebp - 0x1ba], 2
-jne loc_fffaaeed  ; jne 0xfffaaeed
+jne near loc_fffaaeed  ; jne 0xfffaaeed
 test dl, dl
 jne short loc_fffaae89  ; jne 0xfffaae89
 mov ecx, 7
@@ -13755,7 +13754,7 @@ loc_fffaafc4:
 mov al, byte [0xf00f80a2]
 mov edx, dword [ebp - 0x184]
 test al, 0x20
-jne loc_fffac390  ; jne 0xfffac390
+jne near loc_fffac390  ; jne 0xfffac390
 
 loc_fffaafd7:
 test edx, edx
@@ -13892,11 +13891,11 @@ shr al, 6
 and eax, 1
 cmp byte [ebp - 0x1b9], 0
 mov byte [ebp - 0x13d], al
-je loc_fffab296  ; je 0xfffab296
+je near loc_fffab296  ; je 0xfffab296
 mov edx, dword [ebp - 0x1b8]
 mov eax, dword [edx + 0xd]
 cmp byte [eax + 0x29], 1
-jne loc_fffab296  ; jne 0xfffab296
+jne near loc_fffab296  ; jne 0xfffab296
 mov ax, word [0xf0008000]
 mov ebx, dword [ebp - 0x188]
 inc ax
@@ -13968,7 +13967,7 @@ loc_fffab296:
 cmp byte [ebp - 0x1bb], 3
 seta al
 test byte [ebp - 0x1b9], al
-je loc_fffabd4d  ; je 0xfffabd4d
+je near loc_fffabd4d  ; je 0xfffabd4d
 mov edx, dword [ebp - 0x1b8]
 mov ebx, dword [ebp - 0x184]
 mov esi, dword [ebp - 0x188]
@@ -13976,7 +13975,7 @@ mov dword [ebp - 0x1d4], ebx
 mov dword [ebp - 0x1ac], esi
 mov ecx, dword [edx + 0xd]
 cmp byte [ecx + 0x2b], 1
-jne loc_fffabd4d  ; jne 0xfffabd4d
+jne near loc_fffabd4d  ; jne 0xfffabd4d
 xor eax, eax
 mov esi, 1
 
@@ -14014,7 +14013,7 @@ mov edi, dword [ebp - 0x19c]
 cmp dword [ebp - 0x1a8], edi
 jne short loc_fffab2de  ; jne 0xfffab2de
 test al, al
-je loc_fffabd4d  ; je 0xfffabd4d
+je near loc_fffabd4d  ; je 0xfffabd4d
 mov al, byte [ebp - 0x1ba]
 mov byte [ebp - 0x1df], 0
 add eax, eax
@@ -14036,7 +14035,7 @@ je short loc_fffab3ac  ; je 0xfffab3ac
 loc_fffab398:
 inc byte [ebp - 0x1df]
 shr byte [ebp - 0x1b4], 1
-je loc_fffabd4d  ; je 0xfffabd4d
+je near loc_fffabd4d  ; je 0xfffabd4d
 jmp short loc_fffab378  ; jmp 0xfffab378
 
 loc_fffab3ac:
@@ -14085,11 +14084,11 @@ mov dword [edi - 0xfff7fe8], edx
 je short loc_fffab460  ; je 0xfffab460
 mov esi, dword [ebp - 0x1d4]
 cmp byte [esi + 0x30], 0
-je loc_fffac3a8  ; je 0xfffac3a8
+je near loc_fffac3a8  ; je 0xfffac3a8
 mov ebx, dword [ebp - 0x1a8]
 mov dl, 1
 cmp dword [esi + ebx*4 + 0x18], ecx
-jne loc_fffac3aa  ; jne 0xfffac3aa
+jne near loc_fffac3aa  ; jne 0xfffac3aa
 xor ecx, ecx
 jmp short loc_fffab464  ; jmp 0xfffab464
 
@@ -14099,7 +14098,7 @@ xor edx, edx
 
 loc_fffab464:
 test al, al
-je loc_fffab398  ; je 0xfffab398
+je near loc_fffab398  ; je 0xfffab398
 mov ax, word [edi - 0xfff7f4e]
 lea esi, [edi - 0xfff7f4e]
 mov ebx, eax
@@ -14134,10 +14133,10 @@ cmp byte [ebp - 0x1fe], 0
 jne short loc_fffab50f  ; jne 0xfffab50f
 mov edx, dword [ebp - 0x1b8]
 cmp byte [edx], 0x15
-jbe loc_fffabc6b  ; jbe 0xfffabc6b
+jbe near loc_fffabc6b  ; jbe 0xfffabc6b
 mov eax, dword [edx + 0xd]
 cmp byte [eax + 0x5f], 1
-jne loc_fffabc6b  ; jne 0xfffabc6b
+jne near loc_fffabc6b  ; jne 0xfffabc6b
 
 loc_fffab50f:
 mov edx, dword [ebp - 0x1b8]
@@ -14233,7 +14232,7 @@ add esp, 0x10
 mov ax, word [ebx]
 and eax, 0xf
 cmp ax, 3
-jne loc_fffabbe7  ; jne 0xfffabbe7
+jne near loc_fffabbe7  ; jne 0xfffabbe7
 push ecx
 mov edx, 1
 xor eax, eax
@@ -14322,7 +14321,7 @@ dec ebx
 
 loc_fffab7f3:
 cmp ebx, 3
-ja loc_fffab6f0  ; ja 0xfffab6f0
+ja near loc_fffab6f0  ; ja 0xfffab6f0
 jmp short loc_fffab800  ; jmp 0xfffab800
 
 loc_fffab7fe:
@@ -14352,7 +14351,7 @@ add esp, 0x10
 
 loc_fffab85d:
 cmp esi, dword [ebp - 0x224]
-jb loc_fffab6e5  ; jb 0xfffab6e5
+jb near loc_fffab6e5  ; jb 0xfffab6e5
 movzx ebx, byte [ebp - 0x225]
 mov byte [ebp - 0x1de], 0
 mov dword [ebp - 0x20c], ebx
@@ -14422,7 +14421,7 @@ loc_fffab970:
 inc ebx
 add esi, 8
 cmp ebx, 2
-jne loc_fffab8f6  ; jne 0xfffab8f6
+jne near loc_fffab8f6  ; jne 0xfffab8f6
 inc dword [ebp - 0x1ec]
 add dword [ebp - 0x1f0], 4
 cmp dword [ebp - 0x1ec], 2
@@ -14524,7 +14523,7 @@ dec dword [ebp - 0x1cc]
 
 loc_fffabade:
 cmp dword [ebp - 0x1cc], 3
-ja loc_fffab8bb  ; ja 0xfffab8bb
+ja near loc_fffab8bb  ; ja 0xfffab8bb
 jmp short loc_fffabaa4  ; jmp 0xfffabaa4
 
 loc_fffabaed:
@@ -14578,7 +14577,7 @@ add esp, 0x10
 loc_fffabb9b:
 mov esi, dword [ebp - 0x210]
 cmp dword [ebp - 0x1fc], esi
-jne loc_fffab882  ; jne 0xfffab882
+jne near loc_fffab882  ; jne 0xfffab882
 inc byte [ebp - 0x1de]
 cmp byte [ebp - 0x1de], 2
 je short loc_fffabbc8  ; je 0xfffabbc8
@@ -14696,7 +14695,7 @@ movzx ebx, byte [ebp - 0x1dd]
 mov esi, dword [ebp - 0x1d8]
 cmp ebx, esi
 mov dword [ebp - 0x1f8], ebx
-jb loc_fffab4ea  ; jb 0xfffab4ea
+jb near loc_fffab4ea  ; jb 0xfffab4ea
 jmp near loc_fffab398  ; jmp 0xfffab398
 
 loc_fffabd4d:
@@ -14727,7 +14726,7 @@ jne short loc_fffabdcb  ; jne 0xfffabdcb
 
 loc_fffabda0:
 cmp byte [eax + 5], 0
-je loc_fffabf21  ; je 0xfffabf21
+je near loc_fffabf21  ; je 0xfffabf21
 
 loc_fffabdaa:
 cmp byte [ebp - 0x1a8], 0
@@ -14735,7 +14734,7 @@ sete dl
 cmp byte [ebp - 0x1ba], 3
 sete al
 test dl, al
-je loc_fffabee7  ; je 0xfffabee7
+je near loc_fffabee7  ; je 0xfffabee7
 jmp near loc_fffabf90  ; jmp 0xfffabf90
 
 loc_fffabdcb:
@@ -14748,7 +14747,7 @@ mov dword [ecx - 0xfffffe8], eax
 mov word [0xf0100000], 0
 mov ax, word [ecx - 0xffffee6]
 test al, 2
-jne loc_fffabf21  ; jne 0xfffabf21
+jne near loc_fffabf21  ; jne 0xfffabf21
 mov eax, dword [ecx - 0xfffffe8]
 and eax, 0xff0000ff
 mov dword [ecx - 0xfffffe8], eax
@@ -14797,7 +14796,7 @@ jne short loc_fffabe6a  ; jne 0xfffabe6a
 loc_fffabeb8:
 mov ax, word [ecx - 0xffffee6]
 test al, 2
-jne loc_fffabdaa  ; jne 0xfffabdaa
+jne near loc_fffabdaa  ; jne 0xfffabdaa
 mov al, byte [ecx - 0xfffff50]
 or eax, 0x20
 mov byte [ecx - 0xfffff50], al
@@ -14814,13 +14813,13 @@ sete dl
 cmp byte [ebp - 0x1ba], 2
 sete al
 test dl, al
-jne loc_fffabf9c  ; jne 0xfffabf9c
+jne near loc_fffabf9c  ; jne 0xfffabf9c
 cmp byte [ebp - 0x1a8], 2
 sete dl
 cmp byte [ebp - 0x1ba], 0
 sete al
 test dl, al
-jne loc_fffabfb4  ; jne 0xfffabfb4
+jne near loc_fffabfb4  ; jne 0xfffabfb4
 jmp short loc_fffabf7f  ; jmp 0xfffabf7f
 
 loc_fffabf21:
@@ -14856,7 +14855,7 @@ mov byte [ebp - 0x1b0], 1
 loc_fffabf7f:
 add ebx, 6
 cmp ebx, dword [ebp - 0x19c]
-jne loc_fffabd65  ; jne 0xfffabd65
+jne near loc_fffabd65  ; jne 0xfffabd65
 jmp short loc_fffabfb4  ; jmp 0xfffabfb4
 
 loc_fffabf90:
@@ -15032,7 +15031,7 @@ mov eax, dword [ecx + 1]
 cmp word [eax + 0x25], 2
 setne al
 test dl, al
-jne loc_fffac33d  ; jne 0xfffac33d
+jne near loc_fffac33d  ; jne 0xfffac33d
 mov bl, byte [ebp - 0x1b0]
 mov cl, byte [ebp - 0x1c0]
 mov eax, dword [0xf0000048]
@@ -15174,7 +15173,7 @@ loc_fffac390:
 mov ebx, dword [ebp - 0x1b8]
 mov eax, dword [ebx + 0xd]
 cmp byte [eax + 0x5c], 0
-je loc_fffaafd7  ; je 0xfffaafd7
+je near loc_fffaafd7  ; je 0xfffaafd7
 jmp near loc_fffaafdf  ; jmp 0xfffaafdf
 
 loc_fffac3a8:
@@ -15246,7 +15245,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffac43f:
+endloc_fffac43f:
 db 0x00
 
 fcn_fffac440:
@@ -15314,16 +15313,16 @@ cmovg eax, edx
 loc_fffac4fd:
 mov edx, esi
 test dl, dl
-je loc_fffac5b6  ; je 0xfffac5b6
+je near loc_fffac5b6  ; je 0xfffac5b6
 cmp ecx, 0xae62d
 mov eax, 0xaf0
-jle loc_fffac5b6  ; jle 0xfffac5b6
+jle near loc_fffac5b6  ; jle 0xfffac5b6
 cmp ecx, 0xb71b0
 mov al, 0x6b
-jle loc_fffac5b6  ; jle 0xfffac5b6
+jle near loc_fffac5b6  ; jle 0xfffac5b6
 cmp ecx, 0xbbcce
 mov al, 0x28
-jle loc_fffac5b6  ; jle 0xfffac5b6
+jle near loc_fffac5b6  ; jle 0xfffac5b6
 cmp ecx, 0xcb735
 mov ax, 0x960
 jle short loc_fffac5b6  ; jle 0xfffac5b6
@@ -15367,7 +15366,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffac5bc:  ; not directly referenced
+fcn_fffac5bc:
 push ebp
 mov ebp, esp
 push edi
@@ -15391,14 +15390,14 @@ ja short loc_fffac5fb  ; ja 0xfffac5fb
 movzx eax, cl
 movzx eax, byte [eax + ref_fffc9cb4]  ; movzx eax, byte [eax - 0x3634c]
 
-loc_fffac5fb:  ; not directly referenced
+loc_fffac5fb:
 cmp edx, 8
 lea ecx, [edx + 1]
 jbe short loc_fffac60c  ; jbe 0xfffac60c
 movzx ecx, byte [esi + 0x20b5]
 xor edx, edx
 
-loc_fffac60c:  ; not directly referenced
+loc_fffac60c:
 cmp byte [ebp - 0x1a], 1
 sbb ebx, ebx
 sub esp, 0xc
@@ -15419,7 +15418,7 @@ push 0x14
 call fcn_fffc64bb  ; call 0xfffc64bb
 add esp, 0x30
 
-loc_fffac646:  ; not directly referenced
+loc_fffac646:
 mov eax, dword [ebp + 0xc]
 dec eax
 cmp eax, 1
@@ -15432,14 +15431,14 @@ ja short loc_fffac66a  ; ja 0xfffac66a
 movzx eax, byte [ebp - 0x19]
 movzx eax, byte [eax + ref_fffc9cb4]  ; movzx eax, byte [eax - 0x3634c]
 
-loc_fffac66a:  ; not directly referenced
+loc_fffac66a:
 cmp edx, 8
 lea ecx, [edx + 1]
 jbe short loc_fffac67b  ; jbe 0xfffac67b
 movzx ecx, byte [esi + 0x20b5]
 xor edx, edx
 
-loc_fffac67b:  ; not directly referenced
+loc_fffac67b:
 cmp byte [ebp - 0x1a], 1
 sbb ebx, ebx
 sub esp, 0xc
@@ -15460,7 +15459,7 @@ push 8
 call fcn_fffc64bb  ; call 0xfffc64bb
 add esp, 0x30
 
-loc_fffac6b5:  ; not directly referenced
+loc_fffac6b5:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -15468,7 +15467,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffac6bd:  ; not directly referenced
+fcn_fffac6bd:
 push ebp
 mov ebp, esp
 push edi
@@ -15482,7 +15481,7 @@ mov byte [ebp - 0x954], dl
 mov byte [ebp - 0x958], cl
 mov byte [ebp - 0x94b], bl
 
-loc_fffac6e3:  ; not directly referenced
+loc_fffac6e3:
 mov word [ebp + eax*2 - 0x93c], 0
 mov word [ebp + eax*2 - 0x92a], 0
 mov byte [ebp + eax - 0x945], 0
@@ -15502,7 +15501,7 @@ mov byte [ebp - 0x950], al
 mov word [ebp - 0x94a], 0x100
 jmp short loc_fffac775  ; jmp 0xfffac775
 
-loc_fffac73d:  ; not directly referenced
+loc_fffac73d:
 mov edx, dword [ebp + 8]
 mov eax, esi
 shl eax, cl
@@ -15517,14 +15516,14 @@ movzx edx, al
 mov word [ebp + ecx*2 - 0x92a], dx
 inc ecx
 cmp bl, al
-ja loc_fffac97c  ; ja 0xfffac97c
+ja near loc_fffac97c  ; ja 0xfffac97c
 
-loc_fffac775:  ; not directly referenced
+loc_fffac775:
 cmp byte [ebp - 0x950], cl
 ja short loc_fffac73d  ; ja 0xfffac73d
 jmp near loc_fffac95b  ; jmp 0xfffac95b
 
-loc_fffac782:  ; not directly referenced
+loc_fffac782:
 mov ecx, esi
 movzx ebx, cl
 movzx ecx, word [ebp - 0x94a]
@@ -15540,7 +15539,7 @@ shl eax, cl
 or word [ebp - 0x94a], ax
 jmp short loc_fffac824  ; jmp 0xfffac824
 
-loc_fffac7b9:  ; not directly referenced
+loc_fffac7b9:
 add eax, edx
 mov ecx, 2
 cdq
@@ -15574,13 +15573,13 @@ mov eax, edi
 call fcn_fffac5bc  ; call 0xfffac5bc
 add esp, 0x20
 
-loc_fffac824:  ; not directly referenced
+loc_fffac824:
 inc esi
 
-loc_fffac825:  ; not directly referenced
+loc_fffac825:
 mov ebx, esi
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffac782  ; jb 0xfffac782
+jb near loc_fffac782  ; jb 0xfffac782
 sub esp, 0xc
 mov ecx, dword [ebp - 0x958]
 movzx eax, byte [ebp - 0x94b]
@@ -15591,7 +15590,7 @@ call fcn_fffc657b  ; call 0xfffc657b
 add esp, 0x10
 test eax, eax
 mov dword [ebp - 0x954], eax
-jne loc_fffac99d  ; jne 0xfffac99d
+jne near loc_fffac99d  ; jne 0xfffac99d
 push esi
 lea eax, [ebp - 0x945]
 mov ecx, dword [ebp - 0x950]
@@ -15608,7 +15607,7 @@ xor eax, eax
 mov dword [ebp - 0x960], esi
 jmp near loc_fffac942  ; jmp 0xfffac942
 
-loc_fffac8a0:  ; not directly referenced
+loc_fffac8a0:
 movzx ecx, al
 mov edx, dword [ebp - 0x960]
 bt edx, eax
@@ -15620,13 +15619,13 @@ mov ebx, ecx
 shl ebx, 7
 lea esi, [edx + ebx]
 cmp word [ebp + esi*2 - 0x918], 0
-jne loc_fffac988  ; jne 0xfffac988
+jne near loc_fffac988  ; jne 0xfffac988
 mov esi, 1
 shl esi, cl
 or word [ebp - 0x968], si
 jmp near loc_fffac988  ; jmp 0xfffac988
 
-loc_fffac8e8:  ; not directly referenced
+loc_fffac8e8:
 mov ebx, dword [ebp + 0x10]
 mov dl, byte [ebp - 0x965]
 movzx esi, al
@@ -15636,7 +15635,7 @@ mov edx, 1
 shl edx, cl
 or word [esi], dx
 
-loc_fffac904:  ; not directly referenced
+loc_fffac904:
 movzx edx, word [ebp - 0x968]
 cmp dword [ebp + 0x18], 0
 jne short loc_fffac920  ; jne 0xfffac920
@@ -15645,51 +15644,51 @@ movzx edx, byte [ebp + ecx - 0x945]
 jae short loc_fffac92d  ; jae 0xfffac92d
 jmp short loc_fffac938  ; jmp 0xfffac938
 
-loc_fffac920:  ; not directly referenced
+loc_fffac920:
 bt edx, ecx
 movzx edx, byte [ebp + ecx - 0x945]
 jae short loc_fffac938  ; jae 0xfffac938
 
-loc_fffac92d:  ; not directly referenced
+loc_fffac92d:
 inc edx
 mov word [ebp + ecx*2 - 0x93c], dx
 jmp short loc_fffac941  ; jmp 0xfffac941
 
-loc_fffac938:  ; not directly referenced
+loc_fffac938:
 dec edx
 mov word [ebp + ecx*2 - 0x92a], dx
 
-loc_fffac941:  ; not directly referenced
+loc_fffac941:
 inc eax
 
-loc_fffac942:  ; not directly referenced
+loc_fffac942:
 cmp al, byte [edi + 0x20b5]
-jb loc_fffac8a0  ; jb 0xfffac8a0
+jb near loc_fffac8a0  ; jb 0xfffac8a0
 cmp word [ebp - 0x94a], 0x1ff
 jne short loc_fffac975  ; jne 0xfffac975
 jmp short loc_fffac99d  ; jmp 0xfffac99d
 
-loc_fffac95b:  ; not directly referenced
+loc_fffac95b:
 movzx ebx, byte [ebp - 0x958]
 movzx esi, byte [ebp - 0x954]
 mov dword [ebp - 0x958], ebx
 mov dword [ebp - 0x950], esi
 
-loc_fffac975:  ; not directly referenced
+loc_fffac975:
 xor esi, esi
 jmp near loc_fffac825  ; jmp 0xfffac825
 
-loc_fffac97c:  ; not directly referenced
+loc_fffac97c:
 mov dword [ebp - 0x954], 1
 jmp short loc_fffac99d  ; jmp 0xfffac99d
 
-loc_fffac988:  ; not directly referenced
+loc_fffac988:
 movzx esi, word [ebp - 0x968]
 bt esi, ecx
-jb loc_fffac8e8  ; jb 0xfffac8e8
+jb near loc_fffac8e8  ; jb 0xfffac8e8
 jmp near loc_fffac904  ; jmp 0xfffac904
 
-loc_fffac99d:  ; not directly referenced
+loc_fffac99d:
 mov eax, dword [ebp - 0x954]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -15698,7 +15697,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffac9ab:  ; not directly referenced
+fcn_fffac9ab:
 push ebp
 mov ebp, esp
 push edi
@@ -15721,7 +15720,7 @@ call fcn_fffa24c1  ; call 0xfffa24c1
 mov byte [ebp - 0x930], 0
 jmp short loc_fffaca52  ; jmp 0xfffaca52
 
-loc_fffac9f9:  ; not directly referenced
+loc_fffac9f9:
 movzx eax, bl
 mov ecx, dword [ebp + 0x18]
 movzx edx, word [ecx]
@@ -15746,10 +15745,10 @@ xor ecx, ecx
 lea eax, [esi + eax*2]
 call fcn_fffa24c1  ; call 0xfffa24c1
 
-loc_fffaca51:  ; not directly referenced
+loc_fffaca51:
 inc ebx
 
-loc_fffaca52:  ; not directly referenced
+loc_fffaca52:
 mov eax, dword [ebp - 0x92c]
 cmp bl, byte [eax + 0x20b5]
 jb short loc_fffac9f9  ; jb 0xfffac9f9
@@ -15767,12 +15766,12 @@ movzx edi, byte [ebp - 0x934]
 mov eax, dword [eax]
 jmp near loc_fffacbdd  ; jmp 0xfffacbdd
 
-loc_fffaca9f:  ; not directly referenced
+loc_fffaca9f:
 movzx esi, bl
 mov edx, dword [ebp + 0x18]
 movzx eax, word [edx]
 bt eax, ebx
-jae loc_fffacb43  ; jae 0xfffacb43
+jae near loc_fffacb43  ; jae 0xfffacb43
 mov ecx, dword [ebp + 8]
 add ecx, esi
 mov dword [ebp - 0x934], ecx
@@ -15816,13 +15815,13 @@ mov eax, dword [ebp - 0x92c]
 call fcn_fffac5bc  ; call 0xfffac5bc
 add esp, 0x20
 
-loc_fffacb43:  ; not directly referenced
+loc_fffacb43:
 inc ebx
 
-loc_fffacb44:  ; not directly referenced
+loc_fffacb44:
 mov eax, dword [ebp - 0x92c]
 cmp bl, byte [eax + 0x20b5]
-jb loc_fffaca9f  ; jb 0xfffaca9f
+jb near loc_fffaca9f  ; jb 0xfffaca9f
 sub esp, 0xc
 mov ecx, dword [ebp - 0x938]
 movzx eax, byte [ebp - 0x939]
@@ -15832,7 +15831,7 @@ mov eax, dword [ebp - 0x92c]
 call fcn_fffc657b  ; call 0xfffc657b
 add esp, 0x10
 test eax, eax
-jne loc_fffaccf5  ; jne 0xfffaccf5
+jne near loc_fffaccf5  ; jne 0xfffaccf5
 push ecx
 movzx eax, byte [ebp - 0x928]
 lea edx, [ebp - 0x918]
@@ -15855,19 +15854,19 @@ mov dword [ebp - 0x938], ecx
 mov dword [ebp - 0x934], edi
 jmp near loc_fffaccdb  ; jmp 0xfffaccdb
 
-loc_fffacbdd:  ; not directly referenced
+loc_fffacbdd:
 movzx eax, byte [ebp - 0x928]
 xor ebx, ebx
 mov dword [ebp - 0x940], eax
 jmp near loc_fffacb44  ; jmp 0xfffacb44
 
-loc_fffacbf1:  ; not directly referenced
+loc_fffacbf1:
 mov edx, dword [ebp + 0x18]
 mov cl, byte [ebp - 0x928]
 movzx ebx, byte [ebp - 0x928]
 movzx eax, word [edx]
 bt eax, ecx
-jae loc_fffaccd5  ; jae 0xfffaccd5
+jae near loc_fffaccd5  ; jae 0xfffaccd5
 mov eax, dword [ebp + 0xc]
 mov ecx, ebx
 add eax, ebx
@@ -15922,27 +15921,27 @@ mov eax, dword [ebp + 0x14]
 mov byte [eax + ebx], dl
 jmp short loc_fffaccd5  ; jmp 0xfffaccd5
 
-loc_fffacccf:  ; not directly referenced
+loc_fffacccf:
 mov esi, ecx
 jmp short loc_fffaccd5  ; jmp 0xfffaccd5
 
-loc_fffaccd3:  ; not directly referenced
+loc_fffaccd3:
 xor esi, esi
 
-loc_fffaccd5:  ; not directly referenced
+loc_fffaccd5:
 inc byte [ebp - 0x928]
 
-loc_fffaccdb:  ; not directly referenced
+loc_fffaccdb:
 mov eax, dword [ebp - 0x92c]
 mov dl, byte [ebp - 0x928]
 cmp dl, byte [eax + 0x20b5]
-jb loc_fffacbf1  ; jb 0xfffacbf1
+jb near loc_fffacbf1  ; jb 0xfffacbf1
 jmp short loc_fffaccf7  ; jmp 0xfffaccf7
 
-loc_fffaccf5:  ; not directly referenced
+loc_fffaccf5:
 mov esi, eax
 
-loc_fffaccf7:  ; not directly referenced
+loc_fffaccf7:
 lea esp, [ebp - 0xc]
 mov eax, esi
 pop ebx
@@ -15951,10 +15950,10 @@ pop edi
 pop ebp
 ret
 
-fcn_fffacd01:  ; not directly referenced
+fcn_fffacd01:
 cmp al, 1
 
-fcn_fffacd03:  ; not directly referenced
+fcn_fffacd03:
 push ebp
 sbb eax, eax
 dec edx
@@ -15966,42 +15965,42 @@ ja short loc_fffacd5c  ; ja 0xfffacd5c
 movzx edx, dl
 jmp dword [edx*4 + ref_fffc9c90]  ; ujmp: jmp dword [edx*4 - 0x36370]
 
-loc_fffacd1f:  ; not directly referenced
+loc_fffacd1f:
 add eax, 0x200
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd26:  ; not directly referenced
+loc_fffacd26:
 add eax, 0x400
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd2d:  ; not directly referenced
+loc_fffacd2d:
 add eax, 0x600
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd34:  ; not directly referenced
+loc_fffacd34:
 add eax, 0x1000
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd3b:  ; not directly referenced
+loc_fffacd3b:
 add eax, 0x1200
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd42:  ; not directly referenced
+loc_fffacd42:
 add eax, 0x1400
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd49:  ; not directly referenced
+loc_fffacd49:
 add eax, 0x1600
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd50:  ; not directly referenced
+loc_fffacd50:
 add eax, 0x800
 jmp short loc_fffacd5c  ; jmp 0xfffacd5c
 
-loc_fffacd57:  ; not directly referenced
+loc_fffacd57:
 add eax, 0x3000
 
-loc_fffacd5c:  ; not directly referenced
+loc_fffacd5c:
 pop ebp
 ret
 
@@ -16122,7 +16121,7 @@ mov dword [ebp - 0x828], eax
 mov eax, dword [edx]
 mov byte [ebp - 0x829], cl
 test eax, eax
-je loc_fffacf3a  ; je 0xfffacf3a
+je near loc_fffacf3a  ; je 0xfffacf3a
 mov ecx, eax
 lea edx, [ebp - 0x818]
 neg ecx
@@ -16278,7 +16277,7 @@ test dl, dl
 mov byte [ebp - 0x38], dl
 jne short loc_fffad056  ; jne 0xfffad056
 cmp byte [ebp - 0x34], 0
-jne loc_fffad39c  ; jne 0xfffad39c
+jne near loc_fffad39c  ; jne 0xfffad39c
 mov eax, dword [0xfeffc010]
 mov ecx, dword [ebp - 0x48]
 mov eax, dword [eax]
@@ -16327,7 +16326,7 @@ cmp dword [ebp - 0x50], 2
 sete al
 mov byte [esi + 0x22f3], cl
 or dl, al
-je loc_fffad2d4  ; je 0xfffad2d4
+je near loc_fffad2d4  ; je 0xfffad2d4
 imul eax, dword [ebp - 0x34], 0x46
 mov edx, dword [ebp - 0x48]
 movzx ecx, byte [ebp - 0x38]
@@ -16373,7 +16372,7 @@ loc_fffad121:
 mov edx, dword [ebp - 0x3c]
 cmp dword [ebp - 0x58], 1
 mov dword [edx], 1
-ja loc_fffad254  ; ja 0xfffad254
+ja near loc_fffad254  ; ja 0xfffad254
 sub esp, 0xc
 lea ecx, [ebp - 0x19]
 push ecx
@@ -16420,43 +16419,43 @@ jmp near loc_fffad39c  ; jmp 0xfffad39c
 
 loc_fffad1af:
 cmp byte [ebx + 0xa], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0xb], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0xc], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0xe], 0
 jne short loc_fffad1dd  ; jne 0xfffad1dd
 cmp byte [ebx + 0xf], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 
 loc_fffad1dd:
 cmp byte [ebx + 0x10], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0x11], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0x12], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0x13], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0x14], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 test byte [ebx + 0x15], 0xf
 jne short loc_fffad21f  ; jne 0xfffad21f
 cmp byte [ebx + 0x16], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 
 loc_fffad21f:
 cmp byte [ebx + 0x18], 0
 jne short loc_fffad22f  ; jne 0xfffad22f
 cmp byte [ebx + 0x19], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 
 loc_fffad22f:
 cmp byte [ebx + 0x1a], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 cmp byte [ebx + 0x1b], 0
-je loc_fffad39c  ; je 0xfffad39c
+je near loc_fffad39c  ; je 0xfffad39c
 test byte [ebx + 0x1c], 0xf
 jne short loc_fffad254  ; jne 0xfffad254
 cmp byte [ebx + 0x1d], 0
@@ -16466,7 +16465,7 @@ jmp near loc_fffad39c  ; jmp 0xfffad39c
 loc_fffad254:
 lea eax, [edi - 1]
 cmp eax, 1
-ja loc_fffad33a  ; ja 0xfffad33a
+ja near loc_fffad33a  ; ja 0xfffad33a
 cmp edi, 1
 mov eax, 0xf3
 movzx ebx, byte [ebp - 0x38]
@@ -16555,7 +16554,7 @@ inc dword [ebp - 0x34]
 inc dword [ebp - 0x44]
 add dword [ebp - 0x3c], 0x46
 cmp dword [ebp - 0x34], 2
-jne loc_fffad003  ; jne 0xfffad003
+jne near loc_fffad003  ; jne 0xfffad003
 inc dword [ebp - 0x40]
 cmp dword [ebp - 0x40], 2
 je short loc_fffad384  ; je 0xfffad384
@@ -16613,7 +16612,7 @@ push eax
 call dword [edx + 0x20]  ; ucall
 add esp, 0x20
 test eax, eax
-js loc_fffad721  ; js 0xfffad721
+js near loc_fffad721  ; js 0xfffad721
 mov eax, dword [ebp - 0x20]
 mov dword [ebp - 0x34], eax
 mov edx, dword [eax + 9]
@@ -16684,11 +16683,11 @@ mov eax, dword [edx + 9]
 cmp byte [eax + 0x29], 0
 jne short loc_fffad4f0  ; jne 0xfffad4f0
 cmp byte [eax + 0x2a], 0
-je loc_fffad69f  ; je 0xfffad69f
+je near loc_fffad69f  ; je 0xfffad69f
 
 loc_fffad4f0:
 cmp byte [eax + 0x2a], 0
-je loc_fffad69f  ; je 0xfffad69f
+je near loc_fffad69f  ; je 0xfffad69f
 mov dword [ebp - 0x40], ebx
 mov dword [ebp - 0x38], ebx
 mov dword [ebp - 0x3c], 0
@@ -16711,7 +16710,7 @@ loc_fffad534:
 imul eax, dword [ebp - 0x30], 0x1d
 mov edx, dword [ebp - 0x38]
 cmp dword [edx + eax + 0xa], 0
-je loc_fffad693  ; je 0xfffad693
+je near loc_fffad693  ; je 0xfffad693
 mov edx, dword [ebp - 0x34]
 mov eax, dword [ebp - 0x30]
 add eax, dword [edx + 1]
@@ -16731,7 +16730,7 @@ call fcn_fffc4947  ; call 0xfffc4947
 add esp, 0x10
 cmp dword [ebp - 0x1c], 0
 mov di, word [ebp - 0x22]
-jne loc_fffad693  ; jne 0xfffad693
+jne near loc_fffad693  ; jne 0xfffad693
 rol di, 8
 imul eax, dword [ebp - 0x30], 0x46
 mov edx, dword [ebp - 0x40]
@@ -16889,7 +16888,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffad729:  ; not directly referenced
+fcn_fffad729:
 cmp dword [eax + 0x2258], 1
 jne short loc_fffad7a6  ; jne 0xfffad7a6
 push ebp
@@ -16919,13 +16918,13 @@ je short loc_fffad783  ; je 0xfffad783
 and dword [ebx], 0x80ffffff
 jmp short loc_fffad7a2  ; jmp 0xfffad7a2
 
-loc_fffad775:  ; not directly referenced
+loc_fffad775:
 mov eax, dword [ebx]
 and eax, 0xc0ffffff
 or eax, 0x40000000
 jmp short loc_fffad7a0  ; jmp 0xfffad7a0
 
-loc_fffad783:  ; not directly referenced
+loc_fffad783:
 mov eax, dword [ebx]
 mov ecx, eax
 and eax, 0x80ffffff
@@ -16936,14 +16935,14 @@ movzx edx, byte [edx + 0x2f]
 shl edx, 0x18
 or eax, edx
 
-loc_fffad7a0:  ; not directly referenced
+loc_fffad7a0:
 mov dword [ebx], eax
 
-loc_fffad7a2:  ; not directly referenced
+loc_fffad7a2:
 mov ebx, dword [ebp - 4]
 leave
 
-loc_fffad7a6:  ; not directly referenced
+loc_fffad7a6:
 ret
 
 fcn_fffad7a7:
@@ -17065,133 +17064,133 @@ out 0x80, ax
 mov ebx, dword [edi + 0x2ead]
 call fcn_fffad7a7  ; call 0xfffad7a7
 cmp dword [edi + 0x2258], 0
-jne loc_fffadbef  ; jne 0xfffadbef
+jne near loc_fffadbef  ; jne 0xfffadbef
 cmp si, 0xdd41
-je loc_fffadb40  ; je 0xfffadb40
-ja loc_fffad9be  ; ja 0xfffad9be
+je near loc_fffadb40  ; je 0xfffadb40
+ja near loc_fffad9be  ; ja 0xfffad9be
 cmp si, 0xdd2a
-je loc_fffadaf0  ; je 0xfffadaf0
+je near loc_fffadaf0  ; je 0xfffadaf0
 ja short loc_fffad941  ; ja 0xfffad941
 cmp si, 0xdd23
-je loc_fffadac8  ; je 0xfffadac8
+je near loc_fffadac8  ; je 0xfffadac8
 ja short loc_fffad909  ; ja 0xfffad909
 cmp si, 0xdd20
-je loc_fffadab3  ; je 0xfffadab3
+je near loc_fffadab3  ; je 0xfffadab3
 cmp si, 0xdd21
-je loc_fffadac0  ; je 0xfffadac0
+je near loc_fffadac0  ; je 0xfffadac0
 cmp si, 0x55
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadbe4  ; jmp 0xfffadbe4
 
 loc_fffad909:
 cmp si, 0xdd26
-je loc_fffadad8  ; je 0xfffadad8
+je near loc_fffadad8  ; je 0xfffadad8
 ja short loc_fffad926  ; ja 0xfffad926
 cmp si, 0xdd24
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadad0  ; jmp 0xfffadad0
 
 loc_fffad926:
 cmp si, 0xdd27
-je loc_fffadae0  ; je 0xfffadae0
+je near loc_fffadae0  ; je 0xfffadae0
 cmp si, 0xdd29
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadae8  ; jmp 0xfffadae8
 
 loc_fffad941:
 cmp si, 0xdd39
-je loc_fffadb18  ; je 0xfffadb18
+je near loc_fffadb18  ; je 0xfffadb18
 ja short loc_fffad986  ; ja 0xfffad986
 cmp si, 0xdd31
-je loc_fffadb00  ; je 0xfffadb00
+je near loc_fffadb00  ; je 0xfffadb00
 ja short loc_fffad96b  ; ja 0xfffad96b
 cmp si, 0xdd30
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadaf8  ; jmp 0xfffadaf8
 
 loc_fffad96b:
 cmp si, 0xdd33
-je loc_fffadb08  ; je 0xfffadb08
+je near loc_fffadb08  ; je 0xfffadb08
 cmp si, 0xdd34
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb10  ; jmp 0xfffadb10
 
 loc_fffad986:
 cmp si, 0xdd3c
-je loc_fffadb28  ; je 0xfffadb28
+je near loc_fffadb28  ; je 0xfffadb28
 ja short loc_fffad9a3  ; ja 0xfffad9a3
 cmp si, 0xdd3a
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb20  ; jmp 0xfffadb20
 
 loc_fffad9a3:
 cmp si, 0xdd3d
-je loc_fffadb30  ; je 0xfffadb30
+je near loc_fffadb30  ; je 0xfffadb30
 cmp si, 0xdd40
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb38  ; jmp 0xfffadb38
 
 loc_fffad9be:
 cmp si, 0xdd52
-je loc_fffadb88  ; je 0xfffadb88
+je near loc_fffadb88  ; je 0xfffadb88
 ja short loc_fffada36  ; ja 0xfffada36
 cmp si, 0xdd4a
-je loc_fffadb60  ; je 0xfffadb60
+je near loc_fffadb60  ; je 0xfffadb60
 ja short loc_fffad9fe  ; ja 0xfffad9fe
 cmp si, 0xdd47
-je loc_fffadb50  ; je 0xfffadb50
+je near loc_fffadb50  ; je 0xfffadb50
 cmp si, 0xdd49
-je loc_fffadb58  ; je 0xfffadb58
+je near loc_fffadb58  ; je 0xfffadb58
 cmp si, 0xdd46
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb48  ; jmp 0xfffadb48
 
 loc_fffad9fe:
 cmp si, 0xdd4d
-je loc_fffadb70  ; je 0xfffadb70
+je near loc_fffadb70  ; je 0xfffadb70
 ja short loc_fffada1b  ; ja 0xfffada1b
 cmp si, 0xdd4c
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb68  ; jmp 0xfffadb68
 
 loc_fffada1b:
 cmp si, 0xdd50
-je loc_fffadb78  ; je 0xfffadb78
+je near loc_fffadb78  ; je 0xfffadb78
 cmp si, 0xdd51
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb80  ; jmp 0xfffadb80
 
 loc_fffada36:
 cmp si, 0xdd5b
-je loc_fffadbb0  ; je 0xfffadbb0
+je near loc_fffadbb0  ; je 0xfffadbb0
 ja short loc_fffada7b  ; ja 0xfffada7b
 cmp si, 0xdd56
-je loc_fffadb98  ; je 0xfffadb98
+je near loc_fffadb98  ; je 0xfffadb98
 ja short loc_fffada60  ; ja 0xfffada60
 cmp si, 0xdd53
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadb90  ; jmp 0xfffadb90
 
 loc_fffada60:
 cmp si, 0xdd57
-je loc_fffadba0  ; je 0xfffadba0
+je near loc_fffadba0  ; je 0xfffadba0
 cmp si, 0xdd59
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadba8  ; jmp 0xfffadba8
 
 loc_fffada7b:
 cmp si, 0xdd5e
-je loc_fffadbc3  ; je 0xfffadbc3
+je near loc_fffadbc3  ; je 0xfffadbc3
 ja short loc_fffada98  ; ja 0xfffada98
 cmp si, 0xdd5c
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadbb8  ; jmp 0xfffadbb8
 
 loc_fffada98:
 cmp si, 0xdd5f
-je loc_fffadbce  ; je 0xfffadbce
+je near loc_fffadbce  ; je 0xfffadbce
 cmp si, 0xdd61
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadbd9  ; jmp 0xfffadbd9
 
 loc_fffadab3:
@@ -17345,205 +17344,205 @@ jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadbef:
 cmp si, 0xdd41
-je loc_fffade31  ; je 0xfffade31
-ja loc_fffadc9d  ; ja 0xfffadc9d
+je near loc_fffade31  ; je 0xfffade31
+ja near loc_fffadc9d  ; ja 0xfffadc9d
 cmp si, 0xdd2c
-je loc_fffaddb0  ; je 0xfffaddb0
+je near loc_fffaddb0  ; je 0xfffaddb0
 ja short loc_fffadc4f  ; ja 0xfffadc4f
 cmp si, 0xdd23
-je loc_fffadd5c  ; je 0xfffadd5c
+je near loc_fffadd5c  ; je 0xfffadd5c
 ja short loc_fffadc34  ; ja 0xfffadc34
 cmp si, 0x55
-je loc_fffadf2c  ; je 0xfffadf2c
+je near loc_fffadf2c  ; je 0xfffadf2c
 cmp si, 0xdd20
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadd46  ; jmp 0xfffadd46
 
 loc_fffadc34:
 cmp si, 0xdd26
-je loc_fffadd71  ; je 0xfffadd71
+je near loc_fffadd71  ; je 0xfffadd71
 cmp si, 0xdd29
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadd9b  ; jmp 0xfffadd9b
 
 loc_fffadc4f:
 cmp si, 0xdd3a
-je loc_fffadde9  ; je 0xfffadde9
+je near loc_fffadde9  ; je 0xfffadde9
 ja short loc_fffadc77  ; ja 0xfffadc77
 cmp si, 0xdd36
-je loc_fffaddc5  ; je 0xfffaddc5
+je near loc_fffaddc5  ; je 0xfffaddc5
 cmp si, 0xdd39
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffaddd7  ; jmp 0xfffaddd7
 
 loc_fffadc77:
 cmp si, 0xdd3d
-je loc_fffade0d  ; je 0xfffade0d
+je near loc_fffade0d  ; je 0xfffade0d
 cmp si, 0xdd40
-je loc_fffade1f  ; je 0xfffade1f
+je near loc_fffade1f  ; je 0xfffade1f
 cmp si, 0xdd3c
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffaddfb  ; jmp 0xfffaddfb
 
 loc_fffadc9d:
 cmp si, 0xdd50
-je loc_fffadf0a  ; je 0xfffadf0a
+je near loc_fffadf0a  ; je 0xfffadf0a
 ja short loc_fffadcf8  ; ja 0xfffadcf8
 cmp si, 0xdd49
-je loc_fffade7c  ; je 0xfffade7c
+je near loc_fffade7c  ; je 0xfffade7c
 ja short loc_fffadcd2  ; ja 0xfffadcd2
 cmp si, 0xdd46
-je loc_fffade55  ; je 0xfffade55
+je near loc_fffade55  ; je 0xfffade55
 cmp si, 0xdd47
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffade6a  ; jmp 0xfffade6a
 
 loc_fffadcd2:
 cmp si, 0xdd4c
-je loc_fffadea0  ; je 0xfffadea0
+je near loc_fffadea0  ; je 0xfffadea0
 cmp si, 0xdd4d
-je loc_fffadeb2  ; je 0xfffadeb2
+je near loc_fffadeb2  ; je 0xfffadeb2
 cmp si, 0xdd4a
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffade8e  ; jmp 0xfffade8e
 
 loc_fffadcf8:
 cmp si, 0xdd59
-je loc_fffadd86  ; je 0xfffadd86
+je near loc_fffadd86  ; je 0xfffadd86
 ja short loc_fffadd20  ; ja 0xfffadd20
 cmp si, 0xdd52
-je loc_fffadf1e  ; je 0xfffadf1e
+je near loc_fffadf1e  ; je 0xfffadf1e
 cmp si, 0xdd56
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffade43  ; jmp 0xfffade43
 
 loc_fffadd20:
 cmp si, 0xdd5f
-je loc_fffadebd  ; je 0xfffadebd
+je near loc_fffadebd  ; je 0xfffadebd
 cmp si, 0xdd65
-je loc_fffadece  ; je 0xfffadece
+je near loc_fffadece  ; je 0xfffadece
 cmp si, 0xdd5c
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 jmp near loc_fffadee5  ; jmp 0xfffadee5
 
 loc_fffadd46:
 cmp dword [ebx], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx], eax
 mov dword [ebx + 0x98], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadd5c:
 cmp dword [ebx + 4], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 4], eax
 mov dword [ebx + 8], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadd71:
 cmp dword [ebx + 0xc], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0xc], eax
 mov dword [ebx + 0x10], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadd86:
 cmp dword [ebx + 0x14], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x14], eax
 mov dword [ebx + 0x78], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadd9b:
 cmp dword [ebx + 0x7c], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x7c], eax
 mov dword [ebx + 0x18], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffaddb0:
 cmp dword [ebx + 0x1c], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x1c], eax
 mov dword [ebx + 0x20], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffaddc5:
 cmp dword [ebx + 0x2c], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x2c], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffaddd7:
 cmp dword [ebx + 0x30], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x30], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadde9:
 cmp dword [ebx + 0x34], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x34], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffaddfb:
 cmp dword [ebx + 0x38], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x38], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade0d:
 cmp dword [ebx + 0x3c], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x3c], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade1f:
 cmp dword [ebx + 0x40], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x40], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade31:
 cmp dword [ebx + 0x44], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x44], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade43:
 cmp dword [ebx + 0x70], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x70], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade55:
 cmp dword [ebx + 0x74], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x74], eax
 mov dword [ebx + 0x48], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade6a:
 cmp dword [ebx + 0x4c], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x4c], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade7c:
 cmp dword [ebx + 0x50], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x50], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffade8e:
 cmp dword [ebx + 0x54], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x54], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
 loc_fffadea0:
 cmp dword [ebx + 0x58], 0
-jne loc_fffadf35  ; jne 0xfffadf35
+jne near loc_fffadf35  ; jne 0xfffadf35
 mov dword [ebx + 0x58], eax
 jmp near loc_fffadf35  ; jmp 0xfffadf35
 
@@ -17703,9 +17702,9 @@ mov ecx, 2
 call fcn_fffacfd8  ; call 0xfffacfd8
 add esp, 0x10
 test eax, eax
-jne loc_fffae356  ; jne 0xfffae356
+jne near loc_fffae356  ; jne 0xfffae356
 cmp dword [0x2258], 0
-jne loc_fffae0d2  ; jne 0xfffae0d2
+jne near loc_fffae0d2  ; jne 0xfffae0d2
 mov dword [ebp - 0x1c], 0
 mov dword [ebp - 0x20], 0xaf1
 mov byte [ebp - 0x25], 0xff
@@ -17768,7 +17767,7 @@ cmp dword [ebp - 0x24], 2
 jne short loc_fffae068  ; jne 0xfffae068
 inc dword [ebp - 0x1c]
 cmp dword [ebp - 0x1c], 2
-jne loc_fffae02a  ; jne 0xfffae02a
+jne near loc_fffae02a  ; jne 0xfffae02a
 xor eax, eax
 call fcn_fffbacbd  ; call 0xfffbacbd
 jmp near loc_fffae22a  ; jmp 0xfffae22a
@@ -17837,7 +17836,7 @@ cmp dword [ebp - 0x24], 2
 jne short loc_fffae129  ; jne 0xfffae129
 inc dword [ebp - 0x1c]
 cmp dword [ebp - 0x1c], 2
-jne loc_fffae0f5  ; jne 0xfffae0f5
+jne near loc_fffae0f5  ; jne 0xfffae0f5
 mov edx, dword [ebp - 0x20]
 mov dword [0x20b6], edx
 cmp byte [ebp - 0x2c], 0
@@ -17893,7 +17892,7 @@ loc_fffae22a:
 cmp dword [ebp - 0x20], 0x855
 jbe short loc_fffae240  ; jbe 0xfffae240
 cmp dword [0x2258], 1
-jne loc_fffae356  ; jne 0xfffae356
+jne near loc_fffae356  ; jne 0xfffae356
 
 loc_fffae240:
 mov al, byte [0x1090]
@@ -17976,7 +17975,7 @@ mov ebx, eax
 lea esp, [esp - 0xc]
 mov eax, dword [edx + 9]
 cmp dword [eax + 6], 1
-jne loc_fffae410  ; jne 0xfffae410
+jne near loc_fffae410  ; jne 0xfffae410
 mov al, byte [eax + 0xa]
 mov byte [ebx + 0x22d9], 0
 mov byte [ebx + 0x22d8], al
@@ -18038,12 +18037,12 @@ pop edi
 pop ebp
 ret
 
-loc_fffae451:
+endloc_fffae451:
 db 0x00
 db 0x00
 db 0x00
 
-fcn_fffae454:  ; not directly referenced
+fcn_fffae454:
 push ebp
 mov ebp, esp
 push edi
@@ -18150,7 +18149,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffae5de:  ; not directly referenced
+fcn_fffae5de:
 push ebp
 mov ebp, esp
 push edi
@@ -18169,12 +18168,12 @@ mov byte [ebp - 0x11], dl
 xor edx, edx
 jmp short loc_fffae60e  ; jmp 0xfffae60e
 
-loc_fffae608:  ; not directly referenced
+loc_fffae608:
 inc edx
 mov byte [ebp - 0x11], dl
 mov dl, bl
 
-loc_fffae60e:  ; not directly referenced
+loc_fffae60e:
 movzx ebx, byte [ebp - 0x12]
 imul ebx, ebx, 0x24
 add ebx, dword [ebp + 0x10]
@@ -18185,7 +18184,7 @@ or ebx, 0x80000
 mov dword [ebp - 0x10], ebx
 jmp short loc_fffae674  ; jmp 0xfffae674
 
-loc_fffae62b:  ; not directly referenced
+loc_fffae62b:
 mov esi, dword [ebp - 0x1c]
 xor edi, edi
 movzx ecx, dl
@@ -18195,7 +18194,7 @@ ja short loc_fffae646  ; ja 0xfffae646
 mov ecx, dword [ebp - 0x18]
 movzx edi, byte [ecx + ref_fffced64]  ; movzx edi, byte [ecx - 0x3129c]
 
-loc_fffae646:  ; not directly referenced
+loc_fffae646:
 movzx esi, dl
 cmp byte [ebp - 0x12], 1
 sbb ecx, ecx
@@ -18210,7 +18209,7 @@ add ecx, esi
 inc edx
 mov dword [ecx], ebx
 
-loc_fffae674:  ; not directly referenced
+loc_fffae674:
 cmp dl, byte [ebp - 0x11]
 jb short loc_fffae62b  ; jb 0xfffae62b
 lea esp, [esp + 0x10]
@@ -18220,7 +18219,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffae682:  ; not directly referenced
+fcn_fffae682:
 push ebp
 mov ebp, esp
 push edi
@@ -18238,7 +18237,7 @@ lea edi, [ebx + edx + 0x4d]
 jne short loc_fffae725  ; jne 0xfffae725
 jmp short loc_fffae70b  ; jmp 0xfffae70b
 
-loc_fffae6aa:  ; not directly referenced
+loc_fffae6aa:
 movzx edx, byte [ebp - 0x20]
 mov eax, dword [ebp - 0x2c]
 add eax, edi
@@ -18259,11 +18258,11 @@ push 1
 sub ecx, 0x40
 jmp short loc_fffae6f4  ; jmp 0xfffae6f4
 
-loc_fffae6ee:  ; not directly referenced
+loc_fffae6ee:
 push 0
 movzx ecx, byte [ebp - 0x19]
 
-loc_fffae6f4:  ; not directly referenced
+loc_fffae6f4:
 push ecx
 mov ecx, esi
 push eax
@@ -18275,19 +18274,19 @@ add esp, 0x10
 inc byte [ebp - 0x20]
 jmp short loc_fffae718  ; jmp 0xfffae718
 
-loc_fffae70b:  ; not directly referenced
+loc_fffae70b:
 movzx esi, cl
 mov byte [ebp - 0x20], 0
 imul eax, esi, 0x12
 mov dword [ebp - 0x2c], eax
 
-loc_fffae718:  ; not directly referenced
+loc_fffae718:
 mov cl, byte [ebp - 0x20]
 cmp cl, byte [ebx + 0x20b5]
 jb short loc_fffae6aa  ; jb 0xfffae6aa
 jmp short loc_fffae781  ; jmp 0xfffae781
 
-loc_fffae725:  ; not directly referenced
+loc_fffae725:
 movzx ecx, cl
 movzx edx, al
 imul eax, ecx, 0x12
@@ -18309,11 +18308,11 @@ push 1
 sub esi, 0x40
 jmp short loc_fffae771  ; jmp 0xfffae771
 
-loc_fffae76b:  ; not directly referenced
+loc_fffae76b:
 push 0
 movzx esi, byte [ebp - 0x19]
 
-loc_fffae771:  ; not directly referenced
+loc_fffae771:
 push esi
 push eax
 mov eax, ebx
@@ -18322,7 +18321,7 @@ mov edx, dword [ebp - 0x24]
 call fcn_fffbfc84  ; call 0xfffbfc84
 add esp, 0x10
 
-loc_fffae781:  ; not directly referenced
+loc_fffae781:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -18330,7 +18329,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffae789:  ; not directly referenced
+fcn_fffae789:
 push ebp
 mov ebp, esp
 push edi
@@ -18357,7 +18356,7 @@ mov word [ebp - 0x4a], 0x100
 mov esi, 1
 jmp short loc_fffae808  ; jmp 0xfffae808
 
-loc_fffae7d9:  ; not directly referenced
+loc_fffae7d9:
 mov edx, dword [ebp + 8]
 mov eax, esi
 shl eax, cl
@@ -18372,9 +18371,9 @@ movzx edx, al
 mov word [ebp + ecx*2 - 0x2a], dx
 inc ecx
 cmp bl, al
-ja loc_fffae96c  ; ja 0xfffae96c
+ja near loc_fffae96c  ; ja 0xfffae96c
 
-loc_fffae808:  ; not directly referenced
+loc_fffae808:
 cmp byte [ebp - 0x50], cl
 ja short loc_fffae7d9  ; ja 0xfffae7d9
 movzx ebx, byte [ebp - 0x58]
@@ -18384,7 +18383,7 @@ mov dword [ebp - 0x58], ebx
 mov dword [ebp - 0x54], esi
 jmp near loc_fffae965  ; jmp 0xfffae965
 
-loc_fffae824:  ; not directly referenced
+loc_fffae824:
 movzx esi, word [ebp - 0x4a]
 movzx ecx, bl
 bt esi, ebx
@@ -18398,7 +18397,7 @@ shl eax, cl
 or word [ebp - 0x4a], ax
 jmp short loc_fffae872  ; jmp 0xfffae872
 
-loc_fffae84b:  ; not directly referenced
+loc_fffae84b:
 add eax, edx
 mov esi, 2
 cdq
@@ -18415,10 +18414,10 @@ mov eax, edi
 call fcn_fffae682  ; call 0xfffae682
 add esp, 0x10
 
-loc_fffae872:  ; not directly referenced
+loc_fffae872:
 inc ebx
 
-loc_fffae873:  ; not directly referenced
+loc_fffae873:
 cmp bl, byte [edi + 0x20b5]
 jb short loc_fffae824  ; jb 0xfffae824
 push edx
@@ -18436,7 +18435,7 @@ call fcn_fffae454  ; call 0xfffae454
 add esp, 0x10
 test eax, eax
 mov dword [ebp - 0x50], eax
-jne loc_fffae980  ; jne 0xfffae980
+jne near loc_fffae980  ; jne 0xfffae980
 push eax
 mov edx, dword [ebp - 0x60]
 mov ecx, dword [ebp - 0x54]
@@ -18453,7 +18452,7 @@ xor eax, eax
 mov dword [ebp - 0x68], edx
 jmp short loc_fffae94e  ; jmp 0xfffae94e
 
-loc_fffae8d0:  ; not directly referenced
+loc_fffae8d0:
 movzx ecx, al
 mov ebx, dword [ebp - 0x68]
 bt ebx, eax
@@ -18471,7 +18470,7 @@ shl esi, cl
 or word [ebp - 0x70], si
 jmp short loc_fffae975  ; jmp 0xfffae975
 
-loc_fffae906:  ; not directly referenced
+loc_fffae906:
 mov esi, dword [ebp + 0x10]
 mov bl, byte [ebp - 0x6d]
 movzx edx, al
@@ -18481,7 +18480,7 @@ mov edx, 1
 shl edx, cl
 or word [ebx], dx
 
-loc_fffae91f:  ; not directly referenced
+loc_fffae91f:
 movzx edx, word [ebp - 0x70]
 cmp dword [ebp + 0x18], 0
 jne short loc_fffae935  ; jne 0xfffae935
@@ -18490,45 +18489,45 @@ movzx edx, byte [ebp + ecx - 0x45]
 jae short loc_fffae93f  ; jae 0xfffae93f
 jmp short loc_fffae947  ; jmp 0xfffae947
 
-loc_fffae935:  ; not directly referenced
+loc_fffae935:
 bt edx, ecx
 movzx edx, byte [ebp + ecx - 0x45]
 jae short loc_fffae947  ; jae 0xfffae947
 
-loc_fffae93f:  ; not directly referenced
+loc_fffae93f:
 inc edx
 mov word [ebp + ecx*2 - 0x3c], dx
 jmp short loc_fffae94d  ; jmp 0xfffae94d
 
-loc_fffae947:  ; not directly referenced
+loc_fffae947:
 dec edx
 mov word [ebp + ecx*2 - 0x2a], dx
 
-loc_fffae94d:  ; not directly referenced
+loc_fffae94d:
 inc eax
 
-loc_fffae94e:  ; not directly referenced
+loc_fffae94e:
 cmp al, byte [edi + 0x20b5]
-jb loc_fffae8d0  ; jb 0xfffae8d0
+jb near loc_fffae8d0  ; jb 0xfffae8d0
 inc byte [ebp - 0x4b]
 cmp word [ebp - 0x4a], 0x1ff
 je short loc_fffae980  ; je 0xfffae980
 
-loc_fffae965:  ; not directly referenced
+loc_fffae965:
 xor ebx, ebx
 jmp near loc_fffae873  ; jmp 0xfffae873
 
-loc_fffae96c:  ; not directly referenced
+loc_fffae96c:
 mov dword [ebp - 0x50], 1
 jmp short loc_fffae980  ; jmp 0xfffae980
 
-loc_fffae975:  ; not directly referenced
+loc_fffae975:
 movzx esi, word [ebp - 0x70]
 bt esi, ecx
 jb short loc_fffae906  ; jb 0xfffae906
 jmp short loc_fffae91f  ; jmp 0xfffae91f
 
-loc_fffae980:  ; not directly referenced
+loc_fffae980:
 mov eax, dword [ebp - 0x50]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -18537,7 +18536,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffae98b:  ; not directly referenced
+fcn_fffae98b:
 push ebp
 mov ebp, esp
 push edi
@@ -18561,7 +18560,7 @@ call fcn_fffa24c1  ; call 0xfffa24c1
 mov byte [ebp - 0x2c], 0
 jmp short loc_fffaea1b  ; jmp 0xfffaea1b
 
-loc_fffae9ce:  ; not directly referenced
+loc_fffae9ce:
 movzx eax, bl
 mov ecx, dword [ebp + 0x18]
 movzx edx, word [ecx]
@@ -18586,10 +18585,10 @@ xor ecx, ecx
 lea eax, [esi + eax*2 + 1]
 call fcn_fffa24c1  ; call 0xfffa24c1
 
-loc_fffaea1a:  ; not directly referenced
+loc_fffaea1a:
 inc ebx
 
-loc_fffaea1b:  ; not directly referenced
+loc_fffaea1b:
 cmp bl, byte [esi + 0x20b5]
 jb short loc_fffae9ce  ; jb 0xfffae9ce
 cmp byte [ebp - 0x28], 1
@@ -18605,7 +18604,7 @@ mov dword [ebp - 0x30], edi
 movzx edi, byte [ebp - 0x28]
 jmp near loc_fffaeb05  ; jmp 0xfffaeb05
 
-loc_fffaea4e:  ; not directly referenced
+loc_fffaea4e:
 movzx eax, byte [ebp - 0x28]
 mov ecx, dword [ebp + 0x18]
 movzx edx, word [ecx]
@@ -18633,10 +18632,10 @@ mov edx, edi
 call fcn_fffae682  ; call 0xfffae682
 add esp, 0x10
 
-loc_fffaea93:  ; not directly referenced
+loc_fffaea93:
 inc byte [ebp - 0x28]
 
-loc_fffaea96:  ; not directly referenced
+loc_fffaea96:
 mov al, byte [ebp - 0x28]
 cmp al, byte [esi + 0x20b5]
 jb short loc_fffaea4e  ; jb 0xfffaea4e
@@ -18654,7 +18653,7 @@ mov eax, esi
 call fcn_fffae454  ; call 0xfffae454
 add esp, 0x10
 test eax, eax
-jne loc_fffaebee  ; jne 0xfffaebee
+jne near loc_fffaebee  ; jne 0xfffaebee
 push eax
 mov ecx, edi
 mov edx, dword [ebp - 0x34]
@@ -18676,19 +18675,19 @@ mov dword [ebp - 0x34], edx
 mov dword [ebp - 0x38], edi
 jmp near loc_fffaebdd  ; jmp 0xfffaebdd
 
-loc_fffaeb05:  ; not directly referenced
+loc_fffaeb05:
 movzx ecx, bl
 mov byte [ebp - 0x28], 0
 mov dword [ebp - 0x40], ecx
 jmp short loc_fffaea96  ; jmp 0xfffaea96
 
-loc_fffaeb11:  ; not directly referenced
+loc_fffaeb11:
 mov edx, dword [ebp + 0x18]
 mov cl, byte [ebp - 0x28]
 movzx ebx, byte [ebp - 0x28]
 movzx eax, word [edx]
 bt eax, ecx
-jae loc_fffaebda  ; jae 0xfffaebda
+jae near loc_fffaebda  ; jae 0xfffaebda
 mov eax, dword [ebp + 0xc]
 mov ecx, ebx
 add eax, ebx
@@ -18741,26 +18740,26 @@ mov eax, dword [ebp + 0x14]
 mov byte [eax + ebx], dl
 jmp short loc_fffaebda  ; jmp 0xfffaebda
 
-loc_fffaebce:  ; not directly referenced
+loc_fffaebce:
 mov dword [ebp - 0x2c], ecx
 jmp short loc_fffaebda  ; jmp 0xfffaebda
 
-loc_fffaebd3:  ; not directly referenced
+loc_fffaebd3:
 mov dword [ebp - 0x2c], 0
 
-loc_fffaebda:  ; not directly referenced
+loc_fffaebda:
 inc byte [ebp - 0x28]
 
-loc_fffaebdd:  ; not directly referenced
+loc_fffaebdd:
 mov dl, byte [ebp - 0x28]
 cmp dl, byte [esi + 0x20b5]
-jb loc_fffaeb11  ; jb 0xfffaeb11
+jb near loc_fffaeb11  ; jb 0xfffaeb11
 jmp short loc_fffaebf1  ; jmp 0xfffaebf1
 
-loc_fffaebee:  ; not directly referenced
+loc_fffaebee:
 mov dword [ebp - 0x2c], eax
 
-loc_fffaebf1:  ; not directly referenced
+loc_fffaebf1:
 mov eax, dword [ebp - 0x2c]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -18769,7 +18768,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffaebfc:  ; not directly referenced
+fcn_fffaebfc:
 push ebp
 shl edx, 8
 mov ebp, esp
@@ -18806,7 +18805,7 @@ setbe bl
 test dl, bl
 je short loc_fffaec73  ; je 0xfffaec73
 
-loc_fffaec5f:  ; not directly referenced
+loc_fffaec5f:
 mov bl, byte [ebp - 0x1d]
 mov dl, cl
 sub ebx, ecx
@@ -18816,21 +18815,21 @@ cmp byte [ebp - 0x1d], cl
 cmovbe ebx, esi
 jmp short loc_fffaec7c  ; jmp 0xfffaec7c
 
-loc_fffaec73:  ; not directly referenced
+loc_fffaec73:
 and esi, 0x1f
 and ecx, 0x1f
 lea ebx, [ecx + esi]
 
-loc_fffaec7c:  ; not directly referenced
+loc_fffaec7c:
 cmp bl, 9
 mov edx, 0x37ef
 jbe short loc_fffaec8b  ; jbe 0xfffaec8b
 mov edx, 0x6fde
 
-loc_fffaec8b:  ; not directly referenced
+loc_fffaec8b:
 call fcn_fffbfa08  ; call 0xfffbfa08
 
-loc_fffaec90:  ; not directly referenced
+loc_fffaec90:
 lea esp, [esp + 0x1c]
 xor eax, eax
 pop ebx
@@ -18839,7 +18838,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffaec9b:  ; not directly referenced
+fcn_fffaec9b:
 push ebp
 mov ebp, esp
 push edi
@@ -18885,23 +18884,23 @@ mov dword [ebp - 0x774], esi
 mov dword [ebp - 0x7a4], edi
 mov dword [ebp - 0x7b4], ebx
 
-loc_fffaed76:  ; not directly referenced
+loc_fffaed76:
 mov ecx, dword [ebp - 0x79c]
 mov esi, dword [ebp - 0x76c]
 test byte [ecx + esi], 0xdf
-jne loc_fffaee37  ; jne 0xfffaee37
+jne near loc_fffaee37  ; jne 0xfffaee37
 xor ecx, ecx
 mov edx, 0x10
 lea eax, [ebp - 0x730]
 call fcn_fffa24c1  ; call 0xfffa24c1
 mov ecx, dword [ebp - 0x79c]
 cmp byte [ecx + esi], 0x20
-jne loc_fffaee37  ; jne 0xfffaee37
+jne near loc_fffaee37  ; jne 0xfffaee37
 lea esi, [esi + esi*8]
 xor ebx, ebx
 mov dword [ebp - 0x75c], esi
 
-loc_fffaedb9:  ; not directly referenced
+loc_fffaedb9:
 mov ecx, dword [ebp - 0x768]
 mov edx, ebx
 mov eax, dword [ebp - 0x760]
@@ -18924,19 +18923,19 @@ add eax, edi
 mov ecx, 9
 call fcn_fffa2408  ; call 0xfffa2408
 
-loc_fffaee12:  ; not directly referenced
+loc_fffaee12:
 inc ebx
 cmp ebx, 4
 jne short loc_fffaedb9  ; jne 0xfffaedb9
 
-loc_fffaee18:  ; not directly referenced
+loc_fffaee18:
 inc dword [ebp - 0x76c]
 add dword [ebp - 0x780], 9
 cmp dword [ebp - 0x76c], 0x18
-jne loc_fffaed76  ; jne 0xfffaed76
+jne near loc_fffaed76  ; jne 0xfffaed76
 jmp near loc_fffaf47d  ; jmp 0xfffaf47d
 
-loc_fffaee37:  ; not directly referenced
+loc_fffaee37:
 mov eax, dword [ebp - 0x79c]
 mov edi, dword [ebp - 0x76c]
 mov edx, dword [ebp - 0x768]
@@ -18952,7 +18951,7 @@ mov dword [ebp - 0x798], ebx
 mov dword [ebp - 0x790], 0
 jmp near loc_fffaf3bd  ; jmp 0xfffaf3bd
 
-loc_fffaee8a:  ; not directly referenced
+loc_fffaee8a:
 mov ecx, dword [ebp - 0x768]
 lea edx, [ebp - 0x73c]
 mov eax, dword [ebp - 0x760]
@@ -18967,7 +18966,7 @@ mov dword [ebp - 0x784], ebx
 lea esi, [ebp + esi - 0x730]
 mov dword [ebp - 0x778], esi
 
-loc_fffaeee2:  ; not directly referenced
+loc_fffaeee2:
 mov ecx, dword [ebp - 0x768]
 mov edx, dword [ebp - 0x75c]
 mov eax, dword [ebp - 0x760]
@@ -18975,7 +18974,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffaef22  ; jne 0xfffaef22
 
-loc_fffaeefd:  ; not directly referenced
+loc_fffaeefd:
 inc dword [ebp - 0x75c]
 add dword [ebp - 0x778], 2
 add dword [ebp - 0x764], 0xd8
@@ -18983,7 +18982,7 @@ cmp dword [ebp - 0x75c], 4
 jne short loc_fffaeee2  ; jne 0xfffaeee2
 jmp near loc_fffaf3b7  ; jmp 0xfffaf3b7
 
-loc_fffaef22:  ; not directly referenced
+loc_fffaef22:
 mov esi, dword [ebp - 0x778]
 mov ax, word [esi]
 cmp ax, word [ebp - 0x78c]
@@ -18999,7 +18998,7 @@ add eax, 0x476c
 add eax, dword [edi + 0x2223]
 cmp dword [ebp - 0x790], 0
 mov eax, dword [eax]
-jne loc_fffaf14f  ; jne 0xfffaf14f
+jne near loc_fffaf14f  ; jne 0xfffaf14f
 xor ecx, ecx
 mov edx, 9
 lea ebx, [ebp - 0x74e]
@@ -19022,7 +19021,7 @@ xor eax, eax
 add ebx, dword [ebp - 0x764]
 jmp near loc_fffaf0c8  ; jmp 0xfffaf0c8
 
-loc_fffaefd6:  ; not directly referenced
+loc_fffaefd6:
 push ecx
 push dword [ebp - 0x784]
 lea eax, [ebp - 0x750]
@@ -19057,10 +19056,10 @@ add ecx, dword [ebp - 0x764]
 add ebx, dword [ebp - 0x764]
 jmp short loc_fffaf095  ; jmp 0xfffaf095
 
-loc_fffaf06e:  ; not directly referenced
+loc_fffaf06e:
 mov esi, dword [ebp - 0x7ac]
 bt esi, eax
-jae loc_fffaf7ff  ; jae 0xfffaf7ff
+jae near loc_fffaf7ff  ; jae 0xfffaf7ff
 movzx edx, byte [ecx + eax]
 mov edi, dword [ebp - 0x794]
 movzx esi, byte [ebx + eax]
@@ -19070,12 +19069,12 @@ mov edx, esi
 mov byte [edi + eax], dl
 inc eax
 
-loc_fffaf095:  ; not directly referenced
+loc_fffaf095:
 cmp byte [ebp - 0x77c], al
 ja short loc_fffaf06e  ; ja 0xfffaf06e
 jmp near loc_fffaeefd  ; jmp 0xfffaeefd
 
-loc_fffaf0a2:  ; not directly referenced
+loc_fffaf0a2:
 movzx edi, byte [ebx + eax - 9]
 mov esi, dword [ebp - 0x774]
 add esi, dword [ebp - 0x780]
@@ -19087,11 +19086,11 @@ mov edx, esi
 mov byte [ecx + eax], dl
 inc eax
 
-loc_fffaf0c8:  ; not directly referenced
+loc_fffaf0c8:
 cmp byte [ebp - 0x77c], al
 ja short loc_fffaf0a2  ; ja 0xfffaf0a2
 
-loc_fffaf0d0:  ; not directly referenced
+loc_fffaf0d0:
 imul eax, dword [ebp - 0x768], 0x360
 imul esi, dword [ebp - 0x75c], 0xd8
 add esi, dword [ebp - 0x7a0]
@@ -19118,10 +19117,10 @@ call fcn_fffae789  ; call 0xfffae789
 add esp, 0x20
 test eax, eax
 mov edi, eax
-je loc_fffaf1cc  ; je 0xfffaf1cc
+je near loc_fffaf1cc  ; je 0xfffaf1cc
 jmp near loc_fffaf804  ; jmp 0xfffaf804
 
-loc_fffaf14f:  ; not directly referenced
+loc_fffaf14f:
 imul ebx, dword [ebp - 0x75c], 0xd8
 mov edx, dword [ebp - 0x770]
 add ebx, dword [ebp - 0x7a0]
@@ -19141,7 +19140,7 @@ mov dl, byte [eax + 0x20b5]
 xor eax, eax
 jmp short loc_fffaf1c3  ; jmp 0xfffaf1c3
 
-loc_fffaf1ab:  ; not directly referenced
+loc_fffaf1ab:
 movzx esi, byte [ebp + eax - 0x74e]
 movzx ebx, byte [ebp + eax - 0x745]
 add ebx, esi
@@ -19149,12 +19148,12 @@ sar ebx, 1
 mov byte [ecx + eax], bl
 inc eax
 
-loc_fffaf1c3:  ; not directly referenced
+loc_fffaf1c3:
 cmp dl, al
 ja short loc_fffaf1ab  ; ja 0xfffaf1ab
 jmp near loc_fffaf0d0  ; jmp 0xfffaf0d0
 
-loc_fffaf1cc:  ; not directly referenced
+loc_fffaf1cc:
 mov dx, word [ebp - 0x752]
 cmp word [ebp - 0x750], dx
 je short loc_fffaf208  ; je 0xfffaf208
@@ -19172,7 +19171,7 @@ push eax
 push ecx
 jmp short loc_fffaf284  ; jmp 0xfffaf284
 
-loc_fffaf208:  ; not directly referenced
+loc_fffaf208:
 push eax
 add esi, dword [ebp - 0x774]
 mov ecx, dword [ebp - 0x75c]
@@ -19191,7 +19190,7 @@ call fcn_fffae789  ; call 0xfffae789
 add esp, 0x20
 test eax, eax
 mov edi, eax
-jne loc_fffaf804  ; jne 0xfffaf804
+jne near loc_fffaf804  ; jne 0xfffaf804
 mov di, word [ebp - 0x752]
 cmp word [ebp - 0x750], di
 je short loc_fffaf29e  ; je 0xfffaf29e
@@ -19206,14 +19205,14 @@ lea eax, [ebp - 0x74e]
 push esi
 push eax
 
-loc_fffaf284:  ; not directly referenced
+loc_fffaf284:
 mov ecx, dword [ebp - 0x75c]
 mov edx, dword [ebp - 0x768]
 mov eax, dword [ebp - 0x760]
 call fcn_fffae98b  ; call 0xfffae98b
 add esp, 0x20
 
-loc_fffaf29e:  ; not directly referenced
+loc_fffaf29e:
 imul esi, dword [ebp - 0x768], 0x24
 imul eax, dword [ebp - 0x75c], 0xd8
 mov ebx, dword [ebp - 0x774]
@@ -19227,7 +19226,7 @@ xor edx, edx
 mov dword [ebp - 0x788], ebx
 jmp near loc_fffaf3a0  ; jmp 0xfffaf3a0
 
-loc_fffaf2e3:  ; not directly referenced
+loc_fffaf2e3:
 movzx eax, dl
 mov edi, dword [ebp - 0x7ac]
 bt edi, edx
@@ -19243,7 +19242,7 @@ mov byte [edi + eax], 0
 or word [esi], bx
 mov byte [ecx + eax], 0
 
-loc_fffaf31d:  ; not directly referenced
+loc_fffaf31d:
 mov esi, dword [ebp - 0x788]
 mov ecx, dword [ebp - 0x770]
 add ecx, dword [ebp - 0x77c]
@@ -19268,7 +19267,7 @@ mov esi, 1
 shl esi, cl
 or word [edi], si
 
-loc_fffaf37a:  ; not directly referenced
+loc_fffaf37a:
 imul ecx, dword [ebp - 0x75c], 9
 add ecx, dword [ebp - 0x794]
 lea esi, [ebp - 0x18]
@@ -19280,19 +19279,19 @@ cmovb ebx, ecx
 inc edx
 mov byte [eax - 0x708], bl
 
-loc_fffaf3a0:  ; not directly referenced
+loc_fffaf3a0:
 mov eax, dword [ebp - 0x760]
 cmp dl, byte [eax + 0x20b5]
-jb loc_fffaf2e3  ; jb 0xfffaf2e3
+jb near loc_fffaf2e3  ; jb 0xfffaf2e3
 jmp near loc_fffaeefd  ; jmp 0xfffaeefd
 
-loc_fffaf3b7:  ; not directly referenced
+loc_fffaf3b7:
 inc dword [ebp - 0x790]
 
-loc_fffaf3bd:  ; not directly referenced
+loc_fffaf3bd:
 mov ebx, dword [ebp - 0x7b0]
 cmp dword [ebp - 0x790], ebx
-jb loc_fffaee8a  ; jb 0xfffaee8a
+jb near loc_fffaee8a  ; jb 0xfffaee8a
 mov esi, dword [ebp - 0x770]
 mov ebx, dword [ebp - 0x774]
 add esi, dword [ebp - 0x780]
@@ -19301,7 +19300,7 @@ xor edi, edi
 mov dword [ebp - 0x778], esi
 mov dword [ebp - 0x784], ebx
 
-loc_fffaf3f5:  ; not directly referenced
+loc_fffaf3f5:
 mov ecx, dword [ebp - 0x768]
 mov edx, edi
 mov eax, dword [ebp - 0x760]
@@ -19309,13 +19308,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffaf417  ; jne 0xfffaf417
 
-loc_fffaf40c:  ; not directly referenced
+loc_fffaf40c:
 inc edi
 cmp edi, 4
 jne short loc_fffaf3f5  ; jne 0xfffaf3f5
 jmp near loc_fffaee18  ; jmp 0xfffaee18
 
-loc_fffaf417:  ; not directly referenced
+loc_fffaf417:
 imul ebx, edi, 0xd8
 mov eax, dword [ebp - 0x760]
 mov esi, dword [ebp - 0x778]
@@ -19330,7 +19329,7 @@ mov byte [ebp - 0x75c], al
 xor eax, eax
 jmp short loc_fffaf473  ; jmp 0xfffaf473
 
-loc_fffaf455:  ; not directly referenced
+loc_fffaf455:
 movzx esi, byte [ecx + eax]
 mov edx, dword [ebp - 0x788]
 movzx ebx, byte [edx + eax]
@@ -19341,15 +19340,15 @@ mov ebx, esi
 mov byte [edx + eax], bl
 inc eax
 
-loc_fffaf473:  ; not directly referenced
+loc_fffaf473:
 cmp byte [ebp - 0x75c], al
 ja short loc_fffaf455  ; ja 0xfffaf455
 jmp short loc_fffaf40c  ; jmp 0xfffaf40c
 
-loc_fffaf47d:  ; not directly referenced
+loc_fffaf47d:
 xor edi, edi
 cmp dword [ebp + 0x18], 0
-je loc_fffaf804  ; je 0xfffaf804
+je near loc_fffaf804  ; je 0xfffaf804
 mov ebx, dword [ebp - 0x760]
 mov eax, 0x3d09
 xor edx, edx
@@ -19376,7 +19375,7 @@ movzx ebx, byte [ebp - 0x79c]
 mov word [ebp - 0x7a6], bx
 jmp near loc_fffaf7e6  ; jmp 0xfffaf7e6
 
-loc_fffaf4fe:  ; not directly referenced
+loc_fffaf4fe:
 movzx esi, byte [ebp - 0x778]
 mov ecx, dword [ebp - 0x768]
 mov edx, esi
@@ -19385,7 +19384,7 @@ mov dword [ebp - 0x780], esi
 xor edi, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffaf7e0  ; je 0xfffaf7e0
+je near loc_fffaf7e0  ; je 0xfffaf7e0
 imul ebx, esi, 0xd8
 mov edx, dword [ebp - 0x770]
 mov eax, dword [ebp - 0x770]
@@ -19415,7 +19414,7 @@ mov dword [ebp - 0x7b4], esi
 mov dword [ebp - 0x7ac], eax
 jmp near loc_fffaf7c4  ; jmp 0xfffaf7c4
 
-loc_fffaf5b6:  ; not directly referenced
+loc_fffaf5b6:
 movzx eax, byte [ebp - 0x75c]
 mov edx, dword [ebp - 0x77c]
 add edx, eax
@@ -19456,11 +19455,11 @@ sub ecx, ebx
 shr eax, 1
 jmp short loc_fffaf64b  ; jmp 0xfffaf64b
 
-loc_fffaf647:  ; not directly referenced
+loc_fffaf647:
 xor eax, eax
 xor ecx, ecx
 
-loc_fffaf64b:  ; not directly referenced
+loc_fffaf64b:
 cmp cl, byte [ebp - 0x798]
 mov edx, 8
 movzx ecx, byte [ebp - 0x764]
@@ -19498,9 +19497,9 @@ movzx edx, cl
 sub edx, dword [ebp - 0x788]
 sub edx, eax
 cmp word [ebp - 0x7a8], dx
-jg loc_fffaf7b9  ; jg 0xfffaf7b9
+jg near loc_fffaf7b9  ; jg 0xfffaf7b9
 cmp edi, 8
-je loc_fffaf7be  ; je 0xfffaf7be
+je near loc_fffaf7be  ; je 0xfffaf7be
 movzx eax, byte [ebp - 0x79c]
 mov ecx, dword [ebp - 0x790]
 movzx edx, byte [ebp - 0x7a0]
@@ -19522,7 +19521,7 @@ cmovle ecx, esi
 cmp cl, bl
 cmova ecx, ebx
 
-loc_fffaf769:  ; not directly referenced
+loc_fffaf769:
 imul edx, dword [ebp - 0x784], 3
 imul eax, dword [ebp - 0x780], 0x24
 mov ebx, dword [ebp - 0x7a4]
@@ -19541,36 +19540,36 @@ movzx eax, byte [ebp - 0x75c]
 mov byte [esi + eax], cl
 jmp short loc_fffaf7be  ; jmp 0xfffaf7be
 
-loc_fffaf7b9:  ; not directly referenced
+loc_fffaf7b9:
 mov edi, 8
 
-loc_fffaf7be:  ; not directly referenced
+loc_fffaf7be:
 inc byte [ebp - 0x75c]
 
-loc_fffaf7c4:  ; not directly referenced
+loc_fffaf7c4:
 mov edx, dword [ebp - 0x760]
 mov al, byte [ebp - 0x75c]
 cmp al, byte [edx + 0x20b5]
 jae short loc_fffaf7e0  ; jae 0xfffaf7e0
 test edi, edi
-je loc_fffaf5b6  ; je 0xfffaf5b6
+je near loc_fffaf5b6  ; je 0xfffaf5b6
 
-loc_fffaf7e0:  ; not directly referenced
+loc_fffaf7e0:
 inc byte [ebp - 0x778]
 
-loc_fffaf7e6:  ; not directly referenced
+loc_fffaf7e6:
 test edi, edi
 sete dl
 cmp byte [ebp - 0x778], 3
 setbe al
 test dl, al
-jne loc_fffaf4fe  ; jne 0xfffaf4fe
+jne near loc_fffaf4fe  ; jne 0xfffaf4fe
 jmp short loc_fffaf804  ; jmp 0xfffaf804
 
-loc_fffaf7ff:  ; not directly referenced
+loc_fffaf7ff:
 mov edi, 1
 
-loc_fffaf804:  ; not directly referenced
+loc_fffaf804:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -19753,7 +19752,7 @@ add esp, 0x10
 loc_fffaf990:
 mov al, byte [ebp - 0x29]
 cmp al, byte [esi + 0x20b5]
-jb loc_fffaf91a  ; jb 0xfffaf91a
+jb near loc_fffaf91a  ; jb 0xfffaf91a
 jmp near loc_fffaf8fa  ; jmp 0xfffaf8fa
 
 loc_fffaf9a4:
@@ -19874,7 +19873,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffafb37:  ; not directly referenced
+fcn_fffafb37:
 push ebp
 mov ebp, esp
 push edi
@@ -19917,19 +19916,19 @@ push ebx
 call fcn_fffc6704  ; call 0xfffc6704
 add esp, 0x20
 
-loc_fffafbd2:  ; not directly referenced
+loc_fffafbd2:
 cmp byte [edi + 0x108f], 0
-jne loc_fffb000b  ; jne 0xfffb000b
+jne near loc_fffb000b  ; jne 0xfffb000b
 
-loc_fffafbdf:  ; not directly referenced
+loc_fffafbdf:
 cmp byte [edi + 0x3a], 0
-jne loc_fffb0047  ; jne 0xfffb0047
+jne near loc_fffb0047  ; jne 0xfffb0047
 
-loc_fffafbe9:  ; not directly referenced
+loc_fffafbe9:
 cmp byte [edi + 0x108f], 0
-jne loc_fffb0064  ; jne 0xfffb0064
+jne near loc_fffb0064  ; jne 0xfffb0064
 
-loc_fffafbf6:  ; not directly referenced
+loc_fffafbf6:
 lea ebx, [ebp - 0x2418]
 mov dword [ebp - 0x2440], 0
 mov dword [ebp - 0x2454], ebx
@@ -19937,13 +19936,13 @@ mov byte [ebp - 0x244f], 3
 lea ebx, [ebp - 0x1218]
 mov dword [ebp - 0x2468], ebx
 
-loc_fffafc1f:  ; not directly referenced
+loc_fffafc1f:
 imul eax, dword [ebp - 0x2440], 0x1055
 cmp byte [edi + eax + 0x3a], 0
-jne loc_fffb0084  ; jne 0xfffb0084
+jne near loc_fffb0084  ; jne 0xfffb0084
 jmp near loc_fffaffdf  ; jmp 0xfffaffdf
 
-loc_fffafc39:  ; not directly referenced
+loc_fffafc39:
 movzx ebx, byte [ebp - 0x244e]
 mov ecx, dword [ebp - 0x2440]
 mov edx, ebx
@@ -19951,10 +19950,10 @@ mov eax, edi
 mov dword [ebp - 0x2458], ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-jne loc_fffafe8d  ; jne 0xfffafe8d
+jne near loc_fffafe8d  ; jne 0xfffafe8d
 jmp near loc_fffafed6  ; jmp 0xfffafed6
 
-loc_fffafc62:  ; not directly referenced
+loc_fffafc62:
 mov edx, dword [ebp - 0x2480]
 mov eax, dword [ebp - 0x248c]
 add eax, 0x18
@@ -19974,7 +19973,7 @@ mov dword [ebp - 0x247c], edx
 mov dword [ebp - 0x2488], ebx
 jmp near loc_fffafe6a  ; jmp 0xfffafe6a
 
-loc_fffafcc7:  ; not directly referenced
+loc_fffafcc7:
 movzx edx, byte [ebp - 0x2444]
 mov ecx, dword [ebp - 0x2488]
 add ecx, edx
@@ -20011,11 +20010,11 @@ shr edx, 1
 sub ecx, ebx
 jmp short loc_fffafd44  ; jmp 0xfffafd44
 
-loc_fffafd40:  ; not directly referenced
+loc_fffafd40:
 xor edx, edx
 xor ecx, ecx
 
-loc_fffafd44:  ; not directly referenced
+loc_fffafd44:
 movzx eax, byte [ebp - 0x244c]
 mov dword [ebp - 0x245c], eax
 mov esi, dword [ebp - 0x245c]
@@ -20029,7 +20028,7 @@ xor eax, eax
 cmp cl, byte [ebp - 0x2450]
 setb al
 
-loc_fffafd7e:  ; not directly referenced
+loc_fffafd7e:
 movzx ecx, byte [ebp - 0x2472]
 mov word [ebp - 0x2474], cx
 mov si, word [ebp - 0x2482]
@@ -20076,7 +20075,7 @@ cmovle ecx, esi
 cmp cl, bl
 cmova ecx, ebx
 
-loc_fffafe37:  ; not directly referenced
+loc_fffafe37:
 movzx eax, byte [ebp - 0x2444]
 mov bl, byte [ebp - 0x2448]
 mov dl, byte [ebp - 0x244c]
@@ -20088,25 +20087,25 @@ mov byte [eax + 1], dl
 xor eax, eax
 jmp short loc_fffafe64  ; jmp 0xfffafe64
 
-loc_fffafe5f:  ; not directly referenced
+loc_fffafe5f:
 mov eax, 1
 
-loc_fffafe64:  ; not directly referenced
+loc_fffafe64:
 inc byte [ebp - 0x2444]
 
-loc_fffafe6a:  ; not directly referenced
+loc_fffafe6a:
 mov cl, byte [ebp - 0x2444]
 cmp cl, byte [edi + 0x20b5]
 jae short loc_fffafe85  ; jae 0xfffafe85
 test eax, eax
-je loc_fffafcc7  ; je 0xfffafcc7
+je near loc_fffafcc7  ; je 0xfffafcc7
 mov eax, 1
 
-loc_fffafe85:  ; not directly referenced
+loc_fffafe85:
 inc dword [ebp - 0x243c]
 jmp short loc_fffafebf  ; jmp 0xfffafebf
 
-loc_fffafe8d:  ; not directly referenced
+loc_fffafe8d:
 imul ecx, dword [ebp - 0x2458], 0x36
 imul edx, dword [ebp - 0x2440], 0x1055
 mov dword [ebp - 0x243c], 0
@@ -20116,31 +20115,31 @@ mov dword [ebp - 0x2480], edx
 lea ebx, [edi + edx + 0x1c0]
 mov dword [ebp - 0x248c], ebx
 
-loc_fffafebf:  ; not directly referenced
+loc_fffafebf:
 test eax, eax
 sete cl
 cmp dword [ebp - 0x243c], 1
 setbe dl
 test cl, dl
-jne loc_fffafc62  ; jne 0xfffafc62
+jne near loc_fffafc62  ; jne 0xfffafc62
 
-loc_fffafed6:  ; not directly referenced
+loc_fffafed6:
 inc byte [ebp - 0x244e]
 
-loc_fffafedc:  ; not directly referenced
+loc_fffafedc:
 test eax, eax
 sete cl
 cmp byte [ebp - 0x244e], 3
 setbe dl
 test cl, dl
-jne loc_fffafc39  ; jne 0xfffafc39
+jne near loc_fffafc39  ; jne 0xfffafc39
 test eax, eax
-jne loc_fffaffcc  ; jne 0xfffaffcc
+jne near loc_fffaffcc  ; jne 0xfffaffcc
 imul ebx, dword [ebp - 0x2440], 0x1055
 xor esi, esi
 mov dword [ebp - 0x244c], ebx
 
-loc_fffaff0d:  ; not directly referenced
+loc_fffaff0d:
 mov ecx, dword [ebp - 0x2440]
 mov edx, esi
 mov eax, edi
@@ -20148,18 +20147,18 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffaff2b  ; jne 0xfffaff2b
 
-loc_fffaff20:  ; not directly referenced
+loc_fffaff20:
 inc esi
 cmp esi, 4
 jne short loc_fffaff0d  ; jne 0xfffaff0d
 jmp near loc_fffaffdf  ; jmp 0xfffaffdf
 
-loc_fffaff2b:  ; not directly referenced
+loc_fffaff2b:
 imul eax, esi, 0x36
 xor ebx, ebx
 mov dword [ebp - 0x2448], eax
 
-loc_fffaff36:  ; not directly referenced
+loc_fffaff36:
 test ebx, ebx
 mov ecx, dword [ebp - 0x2448]
 mov edx, dword [ebp - 0x244c]
@@ -20168,16 +20167,16 @@ lea eax, [ecx + edx + 0x1b0]
 lea eax, [edi + eax + 0xd]
 jmp short loc_fffaff5e  ; jmp 0xfffaff5e
 
-loc_fffaff53:  ; not directly referenced
+loc_fffaff53:
 lea eax, [ecx + edx + 0x1c0]
 lea eax, [edi + eax + 0x18]
 
-loc_fffaff5e:  ; not directly referenced
+loc_fffaff5e:
 mov dword [ebp - 0x2444], eax
 mov byte [ebp - 0x243c], 0
 jmp short loc_fffaffaf  ; jmp 0xfffaffaf
 
-loc_fffaff6d:  ; not directly referenced
+loc_fffaff6d:
 push eax
 movzx eax, byte [ebp - 0x243c]
 mov edx, dword [ebp - 0x2444]
@@ -20197,30 +20196,30 @@ call fcn_fffac5bc  ; call 0xfffac5bc
 inc byte [ebp - 0x243c]
 add esp, 0x20
 
-loc_fffaffaf:  ; not directly referenced
+loc_fffaffaf:
 mov cl, byte [ebp - 0x243c]
 cmp cl, byte [edi + 0x20b5]
 jb short loc_fffaff6d  ; jb 0xfffaff6d
 inc ebx
 cmp ebx, 2
-jne loc_fffaff36  ; jne 0xfffaff36
+jne near loc_fffaff36  ; jne 0xfffaff36
 jmp near loc_fffaff20  ; jmp 0xfffaff20
 
-loc_fffaffcc:  ; not directly referenced
+loc_fffaffcc:
 mov cl, byte [ebp - 0x2440]
 mov eax, 0xfffffffe
 rol eax, cl
 and byte [ebp - 0x244f], al
 
-loc_fffaffdf:  ; not directly referenced
+loc_fffaffdf:
 inc dword [ebp - 0x2440]
 add dword [ebp - 0x2454], 0x900
 add dword [ebp - 0x2468], 0x900
 cmp dword [ebp - 0x2440], 2
-jne loc_fffafc1f  ; jne 0xfffafc1f
+jne near loc_fffafc1f  ; jne 0xfffafc1f
 jmp near loc_fffb00e5  ; jmp 0xfffb00e5
 
-loc_fffb000b:  ; not directly referenced
+loc_fffb000b:
 push ecx
 lea eax, [ebp - 0x1218]
 mov edx, 1
@@ -20238,7 +20237,7 @@ call fcn_fffc6704  ; call 0xfffc6704
 add esp, 0x20
 jmp near loc_fffafbdf  ; jmp 0xfffafbdf
 
-loc_fffb0047:  ; not directly referenced
+loc_fffb0047:
 mov edx, 9
 xor eax, eax
 call fcn_fffacd01  ; call 0xfffacd01
@@ -20246,7 +20245,7 @@ add eax, dword [edi + 0x2223]
 mov dword [eax], 0
 jmp near loc_fffafbe9  ; jmp 0xfffafbe9
 
-loc_fffb0064:  ; not directly referenced
+loc_fffb0064:
 mov edx, 9
 mov eax, 1
 call fcn_fffacd01  ; call 0xfffacd01
@@ -20254,7 +20253,7 @@ add eax, dword [edi + 0x2223]
 mov dword [eax], 0
 jmp near loc_fffafbf6  ; jmp 0xfffafbf6
 
-loc_fffb0084:  ; not directly referenced
+loc_fffb0084:
 mov eax, 0x3d09
 xor edx, edx
 div dword [edi + 0x20b6]
@@ -20279,7 +20278,7 @@ movzx ebx, byte [ebp - 0x2471]
 mov word [ebp - 0x2482], bx
 jmp near loc_fffafedc  ; jmp 0xfffafedc
 
-loc_fffb00e5:  ; not directly referenced
+loc_fffb00e5:
 mov al, byte [ebp - 0x244f]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -20288,7 +20287,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb00f3:  ; not directly referenced
+fcn_fffb00f3:
 push ebp
 mov ebp, esp
 push edi
@@ -20300,7 +20299,7 @@ mov dword [ebp - 0x26ec], eax
 mov dword [ebp - 0x2724], ecx
 xor eax, eax
 
-loc_fffb0110:  ; not directly referenced
+loc_fffb0110:
 lea edx, [eax + eax]
 mov byte [ebp + eax - 0x26c0], dl
 inc eax
@@ -20309,7 +20308,7 @@ jne short loc_fffb0110  ; jne 0xfffb0110
 lea edx, [ebp - 0x26b0]
 mov al, 0x20
 
-loc_fffb0128:  ; not directly referenced
+loc_fffb0128:
 mov byte [edx], al
 add eax, 2
 inc edx
@@ -20377,7 +20376,7 @@ mov byte [ebp - 0x26e8], dl
 xor ebx, ebx
 jmp near loc_fffb035f  ; jmp 0xfffb035f
 
-loc_fffb0238:  ; not directly referenced
+loc_fffb0238:
 mov eax, dword [ebp - 0x26fc]
 mov edx, dword [ebp - 0x2700]
 add eax, ebx
@@ -20386,10 +20385,10 @@ xor esi, esi
 mov dword [ebp - 0x2710], eax
 mov dword [ebp - 0x2714], edx
 
-loc_fffb0256:  ; not directly referenced
+loc_fffb0256:
 mov ecx, esi
 cmp cl, 0x10
-je loc_fffb0335  ; je 0xfffb0335
+je near loc_fffb0335  ; je 0xfffb0335
 imul eax, esi, 0x12
 mov edx, dword [ebp - 0x2710]
 mov ecx, dword [ebp - 0x2714]
@@ -20400,7 +20399,7 @@ mov dword [ebp - 0x26f8], ecx
 mov dword [ebp - 0x26dc], 0
 mov dword [ebp - 0x2708], eax
 
-loc_fffb0290:  ; not directly referenced
+loc_fffb0290:
 mov ecx, dword [ebp - 0x26f4]
 mov edx, dword [ebp - 0x26dc]
 mov eax, dword [ebp - 0x26ec]
@@ -20408,13 +20407,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb02bc  ; jne 0xfffb02bc
 
-loc_fffb02ab:  ; not directly referenced
+loc_fffb02ab:
 inc dword [ebp - 0x26dc]
 cmp dword [ebp - 0x26dc], 4
 jne short loc_fffb0290  ; jne 0xfffb0290
 jmp short loc_fffb0318  ; jmp 0xfffb0318
 
-loc_fffb02bc:  ; not directly referenced
+loc_fffb02bc:
 imul edx, dword [ebp - 0x26dc], 0x240
 mov eax, dword [ebp - 0x26fc]
 add edx, dword [ebp - 0x2708]
@@ -20427,7 +20426,7 @@ cmp al, byte [edi + esi]
 jae short loc_fffb02e9  ; jae 0xfffb02e9
 mov byte [edi + esi], al
 
-loc_fffb02e9:  ; not directly referenced
+loc_fffb02e9:
 imul edx, dword [ebp - 0x26dc], 0x240
 mov eax, dword [ebp - 0x26f0]
 mov ecx, dword [ebp - 0x26f8]
@@ -20440,7 +20439,7 @@ jae short loc_fffb02ab  ; jae 0xfffb02ab
 mov byte [edi + esi], al
 jmp short loc_fffb02ab  ; jmp 0xfffb02ab
 
-loc_fffb0318:  ; not directly referenced
+loc_fffb0318:
 mov al, byte [edi + esi]
 cmp al, 4
 jbe short loc_fffb0335  ; jbe 0xfffb0335
@@ -20450,33 +20449,33 @@ mov byte [edx + esi], al
 movzx eax, al
 add dword [ebp + ebx*4 - 0x26a0], eax
 
-loc_fffb0335:  ; not directly referenced
+loc_fffb0335:
 inc esi
 cmp esi, 0x20
-jne loc_fffb0256  ; jne 0xfffb0256
+jne near loc_fffb0256  ; jne 0xfffb0256
 cmp dword [ebp + ebx*4 - 0x26a0], 0
 jne short loc_fffb0354  ; jne 0xfffb0354
 mov dword [ebp + ebx*4 - 0x26a0], 1
 
-loc_fffb0354:  ; not directly referenced
+loc_fffb0354:
 inc ebx
 add dword [ebp - 0x26e4], 0x20
 add edi, 0x20
 
-loc_fffb035f:  ; not directly referenced
+loc_fffb035f:
 cmp byte [ebp - 0x26e8], bl
-ja loc_fffb0238  ; ja 0xfffb0238
+ja near loc_fffb0238  ; ja 0xfffb0238
 xor ecx, ecx
 jmp near loc_fffb0431  ; jmp 0xfffb0431
 
-loc_fffb0372:  ; not directly referenced
+loc_fffb0372:
 mov ebx, dword [ebp + ecx*4 - 0x26a0]
 xor eax, eax
 shr ebx, 1
 mov dword [ebp - 0x26dc], ebx
 xor ebx, ebx
 
-loc_fffb0385:  ; not directly referenced
+loc_fffb0385:
 mov edi, dword [ebp - 0x26e0]
 lea edx, [ebx + 0x1f]
 mov byte [ebp - 0x26e4], dl
@@ -20496,7 +20495,7 @@ mov byte [ebp + ecx - 0x26d2], bl
 div esi
 jmp short loc_fffb0409  ; jmp 0xfffb0409
 
-loc_fffb03cb:  ; not directly referenced
+loc_fffb03cb:
 dec ebx
 cmp ebx, 0xfffffff1
 jne short loc_fffb0385  ; jne 0xfffb0385
@@ -20504,7 +20503,7 @@ cmp eax, dword [ebp - 0x26dc]
 jae short loc_fffb0429  ; jae 0xfffb0429
 xor esi, esi
 
-loc_fffb03db:  ; not directly referenced
+loc_fffb03db:
 mov edi, dword [ebp - 0x26e0]
 movzx ebx, byte [edi + esi]
 test bl, bl
@@ -20519,33 +20518,33 @@ mov byte [ebp + ecx - 0x26d2], dl
 xor edx, edx
 div ebx
 
-loc_fffb0409:  ; not directly referenced
+loc_fffb0409:
 cmp al, 0x4a
 jbe short loc_fffb0417  ; jbe 0xfffb0417
 mov byte [ebp + ecx - 0x26c9], 0xff
 jmp short loc_fffb0429  ; jmp 0xfffb0429
 
-loc_fffb0417:  ; not directly referenced
+loc_fffb0417:
 cmp al, 0x19
 setbe byte [ebp + ecx - 0x26c9]
 jmp short loc_fffb0429  ; jmp 0xfffb0429
 
-loc_fffb0423:  ; not directly referenced
+loc_fffb0423:
 inc esi
 cmp esi, 0x10
 jne short loc_fffb03db  ; jne 0xfffb03db
 
-loc_fffb0429:  ; not directly referenced
+loc_fffb0429:
 inc ecx
 add dword [ebp - 0x26e0], 0x20
 
-loc_fffb0431:  ; not directly referenced
+loc_fffb0431:
 cmp byte [ebp - 0x26e8], cl
-ja loc_fffb0372  ; ja 0xfffb0372
+ja near loc_fffb0372  ; ja 0xfffb0372
 xor ecx, ecx
 jmp short loc_fffb04a9  ; jmp 0xfffb04a9
 
-loc_fffb0441:  ; not directly referenced
+loc_fffb0441:
 movzx edx, cl
 movzx eax, byte [ebp + edx - 0x26d2]
 mov bl, byte [ebp + eax - 0x26c0]
@@ -20556,7 +20555,7 @@ lea eax, [ebx - 1]
 lea esi, [ebx + 1]
 jmp short loc_fffb0474  ; jmp 0xfffb0474
 
-loc_fffb0466:  ; not directly referenced
+loc_fffb0466:
 inc al
 jne short loc_fffb0480  ; jne 0xfffb0480
 test bl, bl
@@ -20564,16 +20563,16 @@ je short loc_fffb047e  ; je 0xfffb047e
 lea eax, [ebx + 1]
 lea esi, [ebx - 1]
 
-loc_fffb0474:  ; not directly referenced
+loc_fffb0474:
 cmp bl, 0x20
 mov bl, al
 cmovb ebx, esi
 jmp short loc_fffb0480  ; jmp 0xfffb0480
 
-loc_fffb047e:  ; not directly referenced
+loc_fffb047e:
 mov bl, 0x21
 
-loc_fffb0480:  ; not directly referenced
+loc_fffb0480:
 mov eax, dword [ebp - 0x26f4]
 mov byte [ebp - 0x2750], cl
 call fcn_fffacd01  ; call 0xfffacd01
@@ -20584,7 +20583,7 @@ mov dword [eax], ebx
 mov cl, byte [ebp - 0x2750]
 inc ecx
 
-loc_fffb04a9:  ; not directly referenced
+loc_fffb04a9:
 mov eax, dword [ebp - 0x26ec]
 cmp cl, byte [eax + 0x20b5]
 jb short loc_fffb0441  ; jb 0xfffb0441
@@ -20592,16 +20591,16 @@ imul ebx, dword [ebp - 0x26f4], 0x1055
 mov dword [ebp - 0x26f0], 0
 mov dword [ebp - 0x273c], ebx
 
-loc_fffb04d1:  ; not directly referenced
+loc_fffb04d1:
 mov ecx, dword [ebp - 0x26f4]
 mov edx, dword [ebp - 0x26f0]
 mov eax, dword [ebp - 0x26ec]
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb0b26  ; je 0xfffb0b26
+je near loc_fffb0b26  ; je 0xfffb0b26
 jmp near loc_fffb0aea  ; jmp 0xfffb0aea
 
-loc_fffb04f5:  ; not directly referenced
+loc_fffb04f5:
 movzx eax, byte [ebp - 0x2710]
 mov dl, 0
 mov edi, eax
@@ -20629,7 +20628,7 @@ mov dword [ebp - 0x2718], ebx
 mov dword [ebp - 0x271c], eax
 mov dword [ebp - 0x2734], esi
 
-loc_fffb057a:  ; not directly referenced
+loc_fffb057a:
 xor ecx, ecx
 mov edx, 0x90
 lea eax, [ebp - 0x2538]
@@ -20661,7 +20660,7 @@ cdq
 idiv esi
 mov dword [ebp - 0x2730], eax
 
-loc_fffb0608:  ; not directly referenced
+loc_fffb0608:
 mov al, byte [ebp - 0x26e4]
 mov bl, byte [ebp - 0x2714]
 cmp byte [ebp - 0x271d], al
@@ -20670,7 +20669,7 @@ setb dl
 cmp al, bl
 setb al
 or dl, al
-jne loc_fffb09ca  ; jne 0xfffb09ca
+jne near loc_fffb09ca  ; jne 0xfffb09ca
 mov ecx, dword [ebp - 0x272c]
 mov edx, 2
 lea eax, [ebp - 0x26d4]
@@ -20679,19 +20678,19 @@ cmp byte [ebp - 0x26dc], 0x10
 mov al, byte [ebp - 0x26d3]
 je short loc_fffb0662  ; je 0xfffb0662
 cmp byte [ebp - 0x26dc], 0xf
-ja loc_fffb07b1  ; ja 0xfffb07b1
+ja near loc_fffb07b1  ; ja 0xfffb07b1
 
-loc_fffb0662:  ; not directly referenced
+loc_fffb0662:
 imul esi, dword [ebp - 0x26e8], 9
 mov dl, byte [ebp - 0x26f8]
 xor ecx, ecx
 mov dword [ebp - 0x270c], esi
 jmp short loc_fffb067b  ; jmp 0xfffb067b
 
-loc_fffb0679:  ; not directly referenced
+loc_fffb0679:
 mov dl, bl
 
-loc_fffb067b:  ; not directly referenced
+loc_fffb067b:
 movzx ebx, dl
 mov esi, dword [ebp - 0x2700]
 imul ebx, ebx, 0x12
@@ -20703,17 +20702,17 @@ mov bl, byte [ebp - 0x26e0]
 cmp byte [esi + edi], bl
 jbe short loc_fffb06c6  ; jbe 0xfffb06c6
 
-loc_fffb06a6:  ; not directly referenced
+loc_fffb06a6:
 mov byte [ebp - 0x26d3], al
 
-loc_fffb06ac:  ; not directly referenced
+loc_fffb06ac:
 imul edx, dword [ebp - 0x26e8], 9
 mov al, byte [ebp - 0x26d4]
 xor esi, esi
 mov dword [ebp - 0x270c], edx
 jmp near loc_fffb078e  ; jmp 0xfffb078e
 
-loc_fffb06c6:  ; not directly referenced
+loc_fffb06c6:
 mov esi, dword [ebp - 0x2728]
 add esi, dword [ebp - 0x26fc]
 mov bl, byte [ebp - 0x26e0]
@@ -20721,7 +20720,7 @@ cmp bl, byte [esi + edi]
 jbe short loc_fffb06df  ; jbe 0xfffb06df
 jmp short loc_fffb06a6  ; jmp 0xfffb06a6
 
-loc_fffb06df:  ; not directly referenced
+loc_fffb06df:
 cmp dl, 0xf
 lea ebx, [edx + 1]
 ja short loc_fffb06f1  ; ja 0xfffb06f1
@@ -20730,15 +20729,15 @@ mov bl, 0x11
 lea eax, [edx - 1]
 cmovne ebx, eax
 
-loc_fffb06f1:  ; not directly referenced
+loc_fffb06f1:
 inc ecx
 cmp cl, byte [ebp - 0x271f]
 mov al, dl
-jbe loc_fffb0679  ; jbe 0xfffb0679
+jbe near loc_fffb0679  ; jbe 0xfffb0679
 mov byte [ebp - 0x26d3], dl
 jmp short loc_fffb06ac  ; jmp 0xfffb06ac
 
-loc_fffb0708:  ; not directly referenced
+loc_fffb0708:
 movzx ecx, dl
 mov ebx, dword [ebp - 0x2700]
 imul ecx, ecx, 0x12
@@ -20750,10 +20749,10 @@ mov cl, byte [ebp - 0x26e0]
 cmp byte [ebx + edi], cl
 jbe short loc_fffb0772  ; jbe 0xfffb0772
 
-loc_fffb0733:  ; not directly referenced
+loc_fffb0733:
 mov byte [ebp - 0x26d4], al
 
-loc_fffb0739:  ; not directly referenced
+loc_fffb0739:
 mov ebx, dword [ebp - 0x26e4]
 mov dl, byte [ebp - 0x26d4]
 lea eax, [ebp + ebx*2 - 0x2538]
@@ -20763,10 +20762,10 @@ mov byte [eax + 1], dl
 mov al, byte [ebp + ebx*2 - 0x2538]
 cmp al, 0xf
 mov dl, byte [ebp + ebx*2 - 0x2537]
-jbe loc_fffb08e1  ; jbe 0xfffb08e1
+jbe near loc_fffb08e1  ; jbe 0xfffb08e1
 jmp near loc_fffb0908  ; jmp 0xfffb0908
 
-loc_fffb0772:  ; not directly referenced
+loc_fffb0772:
 mov ecx, dword [ebp - 0x2728]
 add ecx, dword [ebp - 0x26fc]
 inc esi
@@ -20775,10 +20774,10 @@ cmp bl, byte [ecx + edi]
 jbe short loc_fffb078c  ; jbe 0xfffb078c
 jmp short loc_fffb0733  ; jmp 0xfffb0733
 
-loc_fffb078c:  ; not directly referenced
+loc_fffb078c:
 mov al, dl
 
-loc_fffb078e:  ; not directly referenced
+loc_fffb078e:
 mov ecx, esi
 mov dl, byte [ebp - 0x26f8]
 add edx, ecx
@@ -20787,10 +20786,10 @@ seta bl
 cmp cl, byte [ebp - 0x271e]
 setbe cl
 or bl, cl
-jne loc_fffb0708  ; jne 0xfffb0708
+jne near loc_fffb0708  ; jne 0xfffb0708
 jmp short loc_fffb0733  ; jmp 0xfffb0733
 
-loc_fffb07b1:  ; not directly referenced
+loc_fffb07b1:
 imul esi, dword [ebp - 0x26e8], 9
 mov byte [ebp - 0x2744], 0x1f
 mov bl, byte [ebp - 0x26dc]
@@ -20798,7 +20797,7 @@ xor edx, edx
 sub byte [ebp - 0x2744], bl
 mov dword [ebp - 0x2728], esi
 
-loc_fffb07d3:  ; not directly referenced
+loc_fffb07d3:
 mov bl, byte [ebp - 0x26dc]
 mov ecx, dword [ebp - 0x2700]
 add ebx, edx
@@ -20813,7 +20812,7 @@ mov cl, byte [ebp - 0x26e0]
 cmp byte [esi + edi], cl
 jbe short loc_fffb0838  ; jbe 0xfffb0838
 
-loc_fffb0808:  ; not directly referenced
+loc_fffb0808:
 imul esi, dword [ebp - 0x26e8], 9
 mov bl, byte [ebp - 0x26dc]
 dec ebx
@@ -20825,7 +20824,7 @@ xor edx, edx
 mov dword [ebp - 0x2744], esi
 jmp short loc_fffb0864  ; jmp 0xfffb0864
 
-loc_fffb0838:  ; not directly referenced
+loc_fffb0838:
 mov esi, dword [ebp - 0x2754]
 add esi, dword [ebp - 0x26fc]
 mov cl, byte [ebp - 0x26e0]
@@ -20833,17 +20832,17 @@ cmp cl, byte [esi + edi]
 jbe short loc_fffb0851  ; jbe 0xfffb0851
 jmp short loc_fffb0808  ; jmp 0xfffb0808
 
-loc_fffb0851:  ; not directly referenced
+loc_fffb0851:
 inc edx
 cmp byte [ebp - 0x2744], dl
 mov al, bl
-jae loc_fffb07d3  ; jae 0xfffb07d3
+jae near loc_fffb07d3  ; jae 0xfffb07d3
 jmp short loc_fffb0808  ; jmp 0xfffb0808
 
-loc_fffb0862:  ; not directly referenced
+loc_fffb0862:
 mov eax, esi
 
-loc_fffb0864:  ; not directly referenced
+loc_fffb0864:
 movzx ebx, al
 imul esi, ebx, 0x12
 mov dword [ebp - 0x2754], ebx
@@ -20858,18 +20857,18 @@ cmp byte [esi + edi], bl
 jbe short loc_fffb0899  ; jbe 0xfffb0899
 jmp short loc_fffb08b0  ; jmp 0xfffb08b0
 
-loc_fffb0899:  ; not directly referenced
+loc_fffb0899:
 mov esi, dword [ebp - 0x2758]
 add esi, dword [ebp - 0x26fc]
 mov bl, byte [ebp - 0x26e0]
 cmp bl, byte [esi + edi]
 jbe short loc_fffb08bb  ; jbe 0xfffb08bb
 
-loc_fffb08b0:  ; not directly referenced
+loc_fffb08b0:
 mov byte [ebp - 0x26d4], cl
 jmp near loc_fffb0739  ; jmp 0xfffb0739
 
-loc_fffb08bb:  ; not directly referenced
+loc_fffb08bb:
 cmp al, 0x10
 lea esi, [eax + 1]
 jbe short loc_fffb08d1  ; jbe 0xfffb08d1
@@ -20878,14 +20877,14 @@ cmp dword [ebp - 0x2754], 0x11
 lea ecx, [eax - 1]
 cmovne esi, ecx
 
-loc_fffb08d1:  ; not directly referenced
+loc_fffb08d1:
 inc edx
 cmp dl, byte [ebp - 0x270c]
 mov cl, al
 jbe short loc_fffb0862  ; jbe 0xfffb0862
 jmp near loc_fffb0733  ; jmp 0xfffb0733
 
-loc_fffb08e1:  ; not directly referenced
+loc_fffb08e1:
 cmp byte [ebp - 0x26dc], 0xf
 ja short loc_fffb08f7  ; ja 0xfffb08f7
 sub eax, dword [ebp - 0x26dc]
@@ -20893,39 +20892,39 @@ cmp dl, 0xf
 jbe short loc_fffb0917  ; jbe 0xfffb0917
 jmp short loc_fffb092c  ; jmp 0xfffb092c
 
-loc_fffb08f7:  ; not directly referenced
+loc_fffb08f7:
 mov bl, byte [ebp - 0x26dc]
 cmp dl, 0xf
 lea eax, [ebx + eax - 0x10]
 jbe short loc_fffb0917  ; jbe 0xfffb0917
 jmp short loc_fffb0938  ; jmp 0xfffb0938
 
-loc_fffb0908:  ; not directly referenced
+loc_fffb0908:
 mov bl, byte [ebp - 0x26dc]
 sub ebx, eax
 cmp dl, 0xf
 mov al, bl
 ja short loc_fffb0923  ; ja 0xfffb0923
 
-loc_fffb0917:  ; not directly referenced
+loc_fffb0917:
 mov bl, byte [ebp - 0x26dc]
 sub ebx, edx
 mov dl, bl
 jmp short loc_fffb093e  ; jmp 0xfffb093e
 
-loc_fffb0923:  ; not directly referenced
+loc_fffb0923:
 cmp byte [ebp - 0x26dc], 0xf
 ja short loc_fffb0938  ; ja 0xfffb0938
 
-loc_fffb092c:  ; not directly referenced
+loc_fffb092c:
 mov bl, byte [ebp - 0x26dc]
 lea edx, [ebx + edx - 0x10]
 jmp short loc_fffb093e  ; jmp 0xfffb093e
 
-loc_fffb0938:  ; not directly referenced
+loc_fffb0938:
 sub edx, dword [ebp - 0x26dc]
 
-loc_fffb093e:  ; not directly referenced
+loc_fffb093e:
 movzx ebx, al
 movzx ecx, dl
 add ecx, ebx
@@ -20940,11 +20939,11 @@ jae short loc_fffb0971  ; jae 0xfffb0971
 and dword [ebp - 0x2704], 0xff
 jmp short loc_fffb097a  ; jmp 0xfffb097a
 
-loc_fffb0971:  ; not directly referenced
+loc_fffb0971:
 movzx eax, al
 mov dword [ebp - 0x2704], eax
 
-loc_fffb097a:  ; not directly referenced
+loc_fffb097a:
 mov edx, dword [ebp - 0x26e4]
 mov eax, dword [ebp - 0x274c]
 sub edx, dword [ebp - 0x2748]
@@ -20957,22 +20956,22 @@ sub eax, dword [ebp - 0x2714]
 mov byte [ebp + ebx - 0x26a0], al
 jmp short loc_fffb09ca  ; jmp 0xfffb09ca
 
-loc_fffb09b1:  ; not directly referenced
+loc_fffb09b1:
 mov esi, dword [ebp - 0x26e4]
 mov al, byte [ebp - 0x271d]
 sub eax, dword [ebp - 0x26e0]
 mov byte [ebp + esi - 0x26a0], al
 
-loc_fffb09ca:  ; not directly referenced
+loc_fffb09ca:
 inc dword [ebp - 0x26e4]
 cmp dword [ebp - 0x26e4], 0x48
-jne loc_fffb0608  ; jne 0xfffb0608
+jne near loc_fffb0608  ; jne 0xfffb0608
 mov dl, byte [ebp - 0x2714]
 xor eax, eax
 add edx, dword [ebp - 0x2730]
 xor esi, esi
 
-loc_fffb09ed:  ; not directly referenced
+loc_fffb09ed:
 movzx ebx, byte [ebp + eax - 0x2658]
 movzx ecx, byte [ebp + eax - 0x26a0]
 imul ebx, dword [ebp - 0x2730]
@@ -20983,7 +20982,7 @@ jae short loc_fffb0a15  ; jae 0xfffb0a15
 mov esi, ecx
 mov dl, al
 
-loc_fffb0a15:  ; not directly referenced
+loc_fffb0a15:
 inc eax
 cmp eax, 0x48
 jne short loc_fffb09ed  ; jne 0xfffb09ed
@@ -20997,12 +20996,12 @@ lea eax, [eax + ebx + 0x1b0]
 lea eax, [esi + eax + 0xd]
 jmp short loc_fffb0a5a  ; jmp 0xfffb0a5a
 
-loc_fffb0a49:  ; not directly referenced
+loc_fffb0a49:
 mov esi, dword [ebp - 0x26ec]
 lea eax, [eax + ebx + 0x1c0]
 lea eax, [esi + eax + 0x18]
 
-loc_fffb0a5a:  ; not directly referenced
+loc_fffb0a5a:
 mov ebx, dword [ebp - 0x2718]
 mov esi, dword [ebp - 0x271c]
 cmp dword [ebp - 0x26e8], 0
@@ -21021,7 +21020,7 @@ push edi
 push 0
 jmp short loc_fffb0aa3  ; jmp 0xfffb0aa3
 
-loc_fffb0a90:  ; not directly referenced
+loc_fffb0a90:
 push eax
 push dword [ebp + 0x10]
 push dword [ebp + 0xc]
@@ -21030,7 +21029,7 @@ push dword [ebp - 0x2724]
 push edi
 push 1
 
-loc_fffb0aa3:  ; not directly referenced
+loc_fffb0aa3:
 movzx edx, dl
 mov ecx, dword [ebp - 0x26f0]
 push edx
@@ -21042,27 +21041,27 @@ inc dword [ebp - 0x26e8]
 add dword [ebp - 0x2718], 9
 add dword [ebp - 0x271c], 9
 cmp dword [ebp - 0x26e8], 2
-jne loc_fffb057a  ; jne 0xfffb057a
+jne near loc_fffb057a  ; jne 0xfffb057a
 inc byte [ebp - 0x2710]
 jmp short loc_fffb0b0e  ; jmp 0xfffb0b0e
 
-loc_fffb0aea:  ; not directly referenced
+loc_fffb0aea:
 imul edi, dword [ebp - 0x26f0], 0x240
 imul ebx, dword [ebp - 0x26f0], 0x36
 mov byte [ebp - 0x2710], 0
 mov dword [ebp - 0x2708], edi
 mov dword [ebp - 0x2738], ebx
 
-loc_fffb0b0e:  ; not directly referenced
+loc_fffb0b0e:
 mov eax, dword [ebp - 0x26ec]
 mov bl, byte [ebp - 0x2710]
 cmp bl, byte [eax + 0x20b5]
-jb loc_fffb04f5  ; jb 0xfffb04f5
+jb near loc_fffb04f5  ; jb 0xfffb04f5
 
-loc_fffb0b26:  ; not directly referenced
+loc_fffb0b26:
 inc dword [ebp - 0x26f0]
 cmp dword [ebp - 0x26f0], 4
-jne loc_fffb04d1  ; jne 0xfffb04d1
+jne near loc_fffb04d1  ; jne 0xfffb04d1
 mov eax, dword [ebp - 0x2740]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -21071,7 +21070,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffb0b47:
+endloc_fffb0b47:
 db 0x00
 
 fcn_fffb0b48:
@@ -21154,11 +21153,11 @@ inc eax
 cmp eax, 8
 jne short loc_fffb0c63  ; jne 0xfffb0c63
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb0e55  ; jne 0xfffb0e55
+jne near loc_fffb0e55  ; jne 0xfffb0e55
 
 loc_fffb0ca5:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffb0e71  ; jne 0xfffb0e71
+jne near loc_fffb0e71  ; jne 0xfffb0e71
 
 loc_fffb0cb2:
 mov dword [ebp - 0xbc], 0
@@ -21177,9 +21176,9 @@ mov edx, dword [ebp - 0xbc]
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb0e14  ; je 0xfffb0e14
+je near loc_fffb0e14  ; je 0xfffb0e14
 test esi, esi
-jne loc_fffb0e14  ; jne 0xfffb0e14
+jne near loc_fffb0e14  ; jne 0xfffb0e14
 mov eax, 0x4f40
 
 loc_fffb0cf4:
@@ -21271,10 +21270,10 @@ jne short loc_fffb0daa  ; jne 0xfffb0daa
 loc_fffb0e14:
 inc edi
 cmp edi, 2
-jne loc_fffb0cd0  ; jne 0xfffb0cd0
+jne near loc_fffb0cd0  ; jne 0xfffb0cd0
 inc dword [ebp - 0xbc]
 cmp dword [ebp - 0xbc], 4
-jne loc_fffb0cbc  ; jne 0xfffb0cbc
+jne near loc_fffb0cbc  ; jne 0xfffb0cbc
 test esi, esi
 jne short loc_fffb0e45  ; jne 0xfffb0e45
 mov edx, 0xdd61
@@ -21361,7 +21360,7 @@ jmp short loc_fffb0ed0  ; jmp 0xfffb0ed0
 
 loc_fffb0eff:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffb1126  ; jne 0xfffb1126
+jne near loc_fffb1126  ; jne 0xfffb1126
 jmp short loc_fffb0f3c  ; jmp 0xfffb0f3c
 
 loc_fffb0f0e:
@@ -21392,7 +21391,7 @@ mov edx, dword [ebp - 0x88]
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb10c8  ; je 0xfffb10c8
+je near loc_fffb10c8  ; je 0xfffb10c8
 xor eax, eax
 cmp byte [ebp - 0x7e], 1
 seta al
@@ -21480,7 +21479,7 @@ add dword [ebp - 0x84], 0x10
 loc_fffb10a1:
 mov eax, dword [ebp - 0x8c]
 cmp dword [ebp - 0x84], eax
-jb loc_fffb0f90  ; jb 0xfffb0f90
+jb near loc_fffb0f90  ; jb 0xfffb0f90
 inc byte [ebp - 0x7d]
 cmp byte [ebp - 0x7d], 8
 je short loc_fffb10c8  ; je 0xfffb10c8
@@ -21492,7 +21491,7 @@ jmp short loc_fffb10a1  ; jmp 0xfffb10a1
 loc_fffb10c8:
 inc dword [ebp - 0x88]
 cmp dword [ebp - 0x88], 4
-jne loc_fffb0f4a  ; jne 0xfffb0f4a
+jne near loc_fffb0f4a  ; jne 0xfffb0f4a
 xor ecx, ecx
 mov edx, dword [ebp - 0x7c]
 mov eax, ebx
@@ -21519,7 +21518,7 @@ jmp short loc_fffb1138  ; jmp 0xfffb1138
 
 loc_fffb1126:
 cmp dword [ebx + 0x20b1], 1
-jne loc_fffb0f25  ; jne 0xfffb0f25
+jne near loc_fffb0f25  ; jne 0xfffb0f25
 jmp near loc_fffb0f0e  ; jmp 0xfffb0f0e
 
 loc_fffb1138:
@@ -21534,7 +21533,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb114e:  ; not directly referenced
+fcn_fffb114e:
 push ebp
 mov ebp, esp
 push edi
@@ -21547,7 +21546,7 @@ jbe short loc_fffb117a  ; jbe 0xfffb117a
 mov eax, dword [eax + 0x2223]
 mov dword [eax + 0x4ea8], 1
 
-loc_fffb117a:  ; not directly referenced
+loc_fffb117a:
 mov ecx, 0xff
 mov edx, 0x18c
 lea eax, [ebp - 0xf24]
@@ -21601,16 +21600,16 @@ not ebx
 add ebx, 3
 jmp short loc_fffb125c  ; jmp 0xfffb125c
 
-loc_fffb1250:  ; not directly referenced
+loc_fffb1250:
 mov bl, 3
 mov dword [ebp - 0x12d4], 0
 
-loc_fffb125c:  ; not directly referenced
+loc_fffb125c:
 mov eax, dword [ebp - 0x12a8]
 cmp byte [eax + 0x108f], 0
-jne loc_fffb29f0  ; jne 0xfffb29f0
+jne near loc_fffb29f0  ; jne 0xfffb29f0
 
-loc_fffb126f:  ; not directly referenced
+loc_fffb126f:
 cmp bl, 3
 je short loc_fffb1291  ; je 0xfffb1291
 movzx eax, bl
@@ -21620,28 +21619,28 @@ mov byte [ebp - 0x129c], dl
 mov byte [ebp - 0x12b6], al
 jmp short loc_fffb129f  ; jmp 0xfffb129f
 
-loc_fffb1291:  ; not directly referenced
+loc_fffb1291:
 mov byte [ebp - 0x12b6], 1
 mov byte [ebp - 0x129c], 0
 
-loc_fffb129f:  ; not directly referenced
+loc_fffb129f:
 mov cl, byte [ebp - 0x129c]
 mov byte [ebp - 0x12b5], cl
 jmp near loc_fffb1368  ; jmp 0xfffb1368
 
-loc_fffb12b0:  ; not directly referenced
+loc_fffb12b0:
 movzx esi, byte [ebp - 0x12b5]
 mov eax, dword [ebp - 0x12a8]
 imul edi, esi, 0x1055
 mov dword [ebp - 0x12a4], esi
 cmp byte [eax + edi + 0x3a], 0
-jne loc_fffb2a3a  ; jne 0xfffb2a3a
+jne near loc_fffb2a3a  ; jne 0xfffb2a3a
 
-loc_fffb12d4:  ; not directly referenced
+loc_fffb12d4:
 inc byte [ebp - 0x12b5]
 jmp near loc_fffb1368  ; jmp 0xfffb1368
 
-loc_fffb12df:  ; not directly referenced
+loc_fffb12df:
 mov ecx, dword [ebp - 0x12a4]
 mov edx, esi
 mov eax, dword [ebp - 0x12a8]
@@ -21649,13 +21648,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb1342  ; jne 0xfffb1342
 
-loc_fffb12f6:  ; not directly referenced
+loc_fffb12f6:
 inc esi
 cmp esi, 4
 jne short loc_fffb12df  ; jne 0xfffb12df
 jmp short loc_fffb12d4  ; jmp 0xfffb12d4
 
-loc_fffb12fe:  ; not directly referenced
+loc_fffb12fe:
 movzx eax, byte [ebp - 0x12a0]
 mov ecx, esi
 push edx
@@ -21674,22 +21673,22 @@ inc byte [ebp - 0x12a0]
 add esp, 0x10
 jmp short loc_fffb1352  ; jmp 0xfffb1352
 
-loc_fffb1342:  ; not directly referenced
+loc_fffb1342:
 imul ecx, esi, 0x24
 mov byte [ebp - 0x12a0], 0
 mov dword [ebp - 0x12ac], ecx
 
-loc_fffb1352:  ; not directly referenced
+loc_fffb1352:
 mov edx, dword [ebp - 0x12a8]
 mov al, byte [ebp - 0x12a0]
 cmp al, byte [edx + 0x20b5]
 jb short loc_fffb12fe  ; jb 0xfffb12fe
 jmp short loc_fffb12f6  ; jmp 0xfffb12f6
 
-loc_fffb1368:  ; not directly referenced
+loc_fffb1368:
 mov cl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12b5], cl
-jbe loc_fffb12b0  ; jbe 0xfffb12b0
+jbe near loc_fffb12b0  ; jbe 0xfffb12b0
 cmp byte [ebp - 0x129c], cl
 jne short loc_fffb13a3  ; jne 0xfffb13a3
 mov byte [ebp - 0x12b5], 1
@@ -21699,16 +21698,16 @@ mov dl, byte [ebp - 0x12b5]
 mov byte [ebp - 0x12b6], dl
 jmp short loc_fffb13b1  ; jmp 0xfffb13b1
 
-loc_fffb13a3:  ; not directly referenced
+loc_fffb13a3:
 mov byte [ebp - 0x12b6], 1
 mov byte [ebp - 0x12b5], 0
 
-loc_fffb13b1:  ; not directly referenced
+loc_fffb13b1:
 cmp bl, 3
-je loc_fffb29c8  ; je 0xfffb29c8
+je near loc_fffb29c8  ; je 0xfffb29c8
 xor eax, eax
 
-loc_fffb13bc:  ; not directly referenced
+loc_fffb13bc:
 lea edx, [eax + eax]
 mov byte [ebp + eax - 0x125c], dl
 inc eax
@@ -21717,7 +21716,7 @@ jne short loc_fffb13bc  ; jne 0xfffb13bc
 lea edx, [ebp - 0x1250]
 mov al, 0x20
 
-loc_fffb13d4:  ; not directly referenced
+loc_fffb13d4:
 mov byte [edx], al
 add eax, 2
 inc edx
@@ -21725,10 +21724,10 @@ cmp al, 0x38
 jne short loc_fffb13d4  ; jne 0xfffb13d4
 jmp near loc_fffb2a54  ; jmp 0xfffb2a54
 
-loc_fffb13e3:  ; not directly referenced
+loc_fffb13e3:
 mov eax, dword [eax + 0x5f08]
 
-loc_fffb13e9:  ; not directly referenced
+loc_fffb13e9:
 mov ecx, dword [ebp - 0x12a8]
 test ah, 1
 mov eax, dword [ecx + 0x2223]
@@ -21751,19 +21750,19 @@ mov byte [ebp - 0x1281], 0x1a
 mov byte [ebp - 0x12a0], bl
 jmp near loc_fffb1550  ; jmp 0xfffb1550
 
-loc_fffb1467:  ; not directly referenced
+loc_fffb1467:
 movzx esi, byte [ebp - 0x12a0]
 imul eax, esi, 0x1055
 add eax, dword [ebp - 0x12a8]
 mov dword [ebp - 0x12a4], esi
 cmp byte [eax + 0x3a], 0
-jne loc_fffb2a8e  ; jne 0xfffb2a8e
+jne near loc_fffb2a8e  ; jne 0xfffb2a8e
 
-loc_fffb148a:  ; not directly referenced
+loc_fffb148a:
 inc byte [ebp - 0x12a0]
 jmp near loc_fffb1550  ; jmp 0xfffb1550
 
-loc_fffb1495:  ; not directly referenced
+loc_fffb1495:
 mov al, byte [eax + 0x12]
 test al, al
 je short loc_fffb14a8  ; je 0xfffb14a8
@@ -21773,17 +21772,17 @@ sbb ebx, ebx
 inc ebx
 jmp short loc_fffb14ac  ; jmp 0xfffb14ac
 
-loc_fffb14a8:  ; not directly referenced
+loc_fffb14a8:
 xor ebx, ebx
 xor esi, esi
 
-loc_fffb14ac:  ; not directly referenced
+loc_fffb14ac:
 imul eax, dword [ebp - 0x12a4], 9
 mov byte [ebp - 0x129c], 0
 mov dword [ebp - 0x12b0], eax
 jmp short loc_fffb1533  ; jmp 0xfffb1533
 
-loc_fffb14c2:  ; not directly referenced
+loc_fffb14c2:
 test esi, esi
 je short loc_fffb14f6  ; je 0xfffb14f6
 push eax
@@ -21799,7 +21798,7 @@ add edi, dword [ebp - 0x12b0]
 add esp, 0x10
 mov dword [ebp + edi*4 - 0x1244], eax
 
-loc_fffb14f6:  ; not directly referenced
+loc_fffb14f6:
 test ebx, ebx
 je short loc_fffb152d  ; je 0xfffb152d
 push edi
@@ -21815,34 +21814,34 @@ add edi, dword [ebp - 0x12b0]
 add esp, 0x10
 mov dword [ebp + edi*4 - 0x11fc], eax
 
-loc_fffb152d:  ; not directly referenced
+loc_fffb152d:
 inc byte [ebp - 0x129c]
 
-loc_fffb1533:  ; not directly referenced
+loc_fffb1533:
 mov eax, dword [ebp - 0x12a8]
 mov dl, byte [ebp - 0x129c]
 cmp dl, byte [eax + 0x20b5]
-jb loc_fffb14c2  ; jb 0xfffb14c2
+jb near loc_fffb14c2  ; jb 0xfffb14c2
 jmp near loc_fffb148a  ; jmp 0xfffb148a
 
-loc_fffb1550:  ; not directly referenced
+loc_fffb1550:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12a0], bl
-jbe loc_fffb1467  ; jbe 0xfffb1467
+jbe near loc_fffb1467  ; jbe 0xfffb1467
 mov dword [ebp - 0x129c], 0
 jmp near loc_fffb17eb  ; jmp 0xfffb17eb
 
-loc_fffb1571:  ; not directly referenced
+loc_fffb1571:
 movzx esi, bl
 mov edx, dword [ebp - 0x12a8]
 imul eax, esi, 0x1055
 cmp byte [edx + eax + 0x3a], 0
-jne loc_fffb2a9d  ; jne 0xfffb2a9d
+jne near loc_fffb2a9d  ; jne 0xfffb2a9d
 
-loc_fffb158b:  ; not directly referenced
+loc_fffb158b:
 inc ebx
 
-loc_fffb158c:  ; not directly referenced
+loc_fffb158c:
 cmp bl, byte [ebp - 0x12b6]
 jbe short loc_fffb1571  ; jbe 0xfffb1571
 xor ecx, ecx
@@ -21857,17 +21856,17 @@ call fcn_fffa24c1  ; call 0xfffa24c1
 mov bl, byte [ebp - 0x12b5]
 jmp short loc_fffb15dd  ; jmp 0xfffb15dd
 
-loc_fffb15c2:  ; not directly referenced
+loc_fffb15c2:
 movzx edx, bl
 mov ecx, dword [ebp - 0x12a8]
 imul eax, edx, 0x1055
 cmp byte [ecx + eax + 0x3a], 0
-jne loc_fffb2aec  ; jne 0xfffb2aec
+jne near loc_fffb2aec  ; jne 0xfffb2aec
 
-loc_fffb15dc:  ; not directly referenced
+loc_fffb15dc:
 inc ebx
 
-loc_fffb15dd:  ; not directly referenced
+loc_fffb15dd:
 cmp bl, byte [ebp - 0x12b6]
 jbe short loc_fffb15c2  ; jbe 0xfffb15c2
 imul esi, dword [ebp - 0x129c], 0x24
@@ -21876,19 +21875,19 @@ mov byte [ebp - 0x12a4], bl
 mov dword [ebp - 0x12cc], esi
 jmp near loc_fffb17ac  ; jmp 0xfffb17ac
 
-loc_fffb1603:  ; not directly referenced
+loc_fffb1603:
 movzx ebx, byte [ebp - 0x12a4]
 mov esi, dword [ebp - 0x12a8]
 imul eax, ebx, 0x1055
 mov dword [ebp - 0x12a0], ebx
 cmp byte [esi + eax + 0x3a], 0
-jne loc_fffb2b16  ; jne 0xfffb2b16
+jne near loc_fffb2b16  ; jne 0xfffb2b16
 
-loc_fffb1627:  ; not directly referenced
+loc_fffb1627:
 inc byte [ebp - 0x12a4]
 jmp near loc_fffb17ac  ; jmp 0xfffb17ac
 
-loc_fffb1632:  ; not directly referenced
+loc_fffb1632:
 mov ecx, dword [ebp - 0x12a0]
 mov edx, dword [ebp - 0x12d0]
 mov eax, dword [ebp - 0x12a8]
@@ -21896,7 +21895,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb1667  ; jne 0xfffb1667
 
-loc_fffb164d:  ; not directly referenced
+loc_fffb164d:
 inc dword [ebp - 0x12d0]
 add edi, 0x12
 add esi, 0x12
@@ -21904,7 +21903,7 @@ cmp dword [ebp - 0x12d0], 4
 jne short loc_fffb1632  ; jne 0xfffb1632
 jmp near loc_fffb170b  ; jmp 0xfffb170b
 
-loc_fffb1667:  ; not directly referenced
+loc_fffb1667:
 mov eax, dword [ebp - 0x12a8]
 xor edx, edx
 imul ecx, dword [ebp - 0x12d0], 0xd8
@@ -21912,7 +21911,7 @@ mov al, byte [eax + 0x20b5]
 mov byte [ebp - 0x12bc], al
 mov dword [ebp - 0x12c4], ecx
 
-loc_fffb168b:  ; not directly referenced
+loc_fffb168b:
 lea eax, [edx + edx*8]
 add eax, dword [ebp - 0x12c4]
 add eax, dword [ebp - 0x12c8]
@@ -21924,7 +21923,7 @@ mov dword [ebp - 0x12b4], eax
 xor eax, eax
 jmp short loc_fffb16f8  ; jmp 0xfffb16f8
 
-loc_fffb16b9:  ; not directly referenced
+loc_fffb16b9:
 mov ebx, dword [ebp - 0x12b4]
 cmp byte [ebp + edx - 0x125c], 0x16
 movzx ecx, byte [ebx + eax]
@@ -21936,17 +21935,17 @@ sub ecx, ebx
 mov word [edi + eax*2], cx
 jmp short loc_fffb16f7  ; jmp 0xfffb16f7
 
-loc_fffb16e3:  ; not directly referenced
+loc_fffb16e3:
 mov ebx, dword [ebp - 0x12b0]
 add cx, word [esi + eax*2]
 movzx ebx, byte [ebx + eax]
 sub ecx, ebx
 mov word [esi + eax*2], cx
 
-loc_fffb16f7:  ; not directly referenced
+loc_fffb16f7:
 inc eax
 
-loc_fffb16f8:  ; not directly referenced
+loc_fffb16f8:
 cmp byte [ebp - 0x12bc], al
 ja short loc_fffb16b9  ; ja 0xfffb16b9
 inc edx
@@ -21954,7 +21953,7 @@ cmp edx, 0x18
 jne short loc_fffb168b  ; jne 0xfffb168b
 jmp near loc_fffb164d  ; jmp 0xfffb164d
 
-loc_fffb170b:  ; not directly referenced
+loc_fffb170b:
 imul eax, dword [ebp - 0x12a0], 0x12
 mov ebx, dword [ebp - 0x12a8]
 add eax, dword [ebp - 0x12cc]
@@ -21964,7 +21963,7 @@ lea edi, [ebp + eax - 0xf24]
 xor ebx, ebx
 jmp short loc_fffb177d  ; jmp 0xfffb177d
 
-loc_fffb1735:  ; not directly referenced
+loc_fffb1735:
 mov ecx, dword [ebp - 0x12a0]
 mov edx, esi
 mov eax, dword [ebp - 0x12a8]
@@ -21982,15 +21981,15 @@ cmp dx, ax
 cmovbe eax, edx
 mov word [edi + ebx*2], ax
 
-loc_fffb1776:  ; not directly referenced
+loc_fffb1776:
 inc esi
 cmp esi, 4
 jne short loc_fffb1735  ; jne 0xfffb1735
 inc ebx
 
-loc_fffb177d:  ; not directly referenced
+loc_fffb177d:
 cmp byte [ebp - 0x12b4], bl
-jbe loc_fffb1627  ; jbe 0xfffb1627
+jbe near loc_fffb1627  ; jbe 0xfffb1627
 lea eax, [ebx + ebx]
 lea esi, [ebp - 0x116c]
 add esi, eax
@@ -22001,10 +22000,10 @@ mov dword [ebp - 0x12bc], esi
 xor esi, esi
 jmp short loc_fffb1735  ; jmp 0xfffb1735
 
-loc_fffb17ac:  ; not directly referenced
+loc_fffb17ac:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12a4], bl
-jbe loc_fffb1603  ; jbe 0xfffb1603
+jbe near loc_fffb1603  ; jbe 0xfffb1603
 inc dword [ebp - 0x129c]
 cmp dword [ebp - 0x129c], 0xb
 jne short loc_fffb17eb  ; jne 0xfffb17eb
@@ -22014,22 +22013,22 @@ mov byte [ebp - 0x12a0], bl
 mov dword [ebp - 0x12c4], esi
 jmp near loc_fffb19ac  ; jmp 0xfffb19ac
 
-loc_fffb17eb:  ; not directly referenced
+loc_fffb17eb:
 mov bl, byte [ebp - 0x12b5]
 jmp near loc_fffb158c  ; jmp 0xfffb158c
 
-loc_fffb17f6:  ; not directly referenced
+loc_fffb17f6:
 movzx eax, byte [ebp - 0x12a0]
 mov ecx, dword [ebp - 0x12a8]
 imul edx, eax, 0x1055
 cmp byte [ecx + edx + 0x3a], 0
 jne short loc_fffb181b  ; jne 0xfffb181b
 
-loc_fffb1810:  ; not directly referenced
+loc_fffb1810:
 inc byte [ebp - 0x12a0]
 jmp near loc_fffb19ac  ; jmp 0xfffb19ac
 
-loc_fffb181b:  ; not directly referenced
+loc_fffb181b:
 imul edx, eax, 0x12
 mov ebx, dword [ebp - 0x12a8]
 lea eax, [eax + eax*8]
@@ -22049,7 +22048,7 @@ mov dword [ebp - 0x12a4], eax
 mov dword [ebp - 0x12c0], ecx
 jmp near loc_fffb1986  ; jmp 0xfffb1986
 
-loc_fffb1873:  ; not directly referenced
+loc_fffb1873:
 imul ecx, eax, 0x24
 movzx ecx, word [ebx + ecx]
 cmp ecx, edx
@@ -22058,7 +22057,7 @@ mov edx, dword [ebp - 0x12c0]
 mov byte [edi + edx - 0x1256], al
 mov edx, ecx
 
-loc_fffb188d:  ; not directly referenced
+loc_fffb188d:
 inc eax
 cmp eax, 0xb
 jne short loc_fffb1873  ; jne 0xfffb1873
@@ -22071,7 +22070,7 @@ mov word [ebp - 0x12d0], 0
 mov dl, 0xa0
 jmp short loc_fffb1900  ; jmp 0xfffb1900
 
-loc_fffb18b2:  ; not directly referenced
+loc_fffb18b2:
 cmp al, 0xa
 jne short loc_fffb18ca  ; jne 0xfffb18ca
 mov bx, word [esi + 0x144]
@@ -22080,7 +22079,7 @@ mov word [ebp - 0x12d0], bx
 mov dl, 0xa
 jmp short loc_fffb1900  ; jmp 0xfffb1900
 
-loc_fffb18ca:  ; not directly referenced
+loc_fffb18ca:
 movzx edx, al
 lea ecx, [edx - 1]
 inc edx
@@ -22095,7 +22094,7 @@ mov word [ebp - 0x12d0], cx
 mov cx, word [ebp + edx*2 - 0xf24]
 mov dl, 0xee
 
-loc_fffb1900:  ; not directly referenced
+loc_fffb1900:
 imul eax, eax, 0x12
 add eax, dword [ebp - 0x12a4]
 add eax, edi
@@ -22112,7 +22111,7 @@ idiv ebx
 xor edx, edx
 mov dword [ebp - 0x12cc], eax
 
-loc_fffb1947:  ; not directly referenced
+loc_fffb1947:
 mov word [esi + edx], 0xffff
 add edx, 0x24
 cmp edx, 0x18c
@@ -22127,10 +22126,10 @@ mov word [esi + 0x120], cx
 inc edi
 add esi, 2
 
-loc_fffb1986:  ; not directly referenced
+loc_fffb1986:
 mov eax, edi
 cmp byte [ebp - 0x12ac], al
-jbe loc_fffb1810  ; jbe 0xfffb1810
+jbe near loc_fffb1810  ; jbe 0xfffb1810
 mov eax, dword [ebp - 0x129c]
 xor edx, edx
 add eax, edi
@@ -22138,13 +22137,13 @@ lea ebx, [ebp + eax*2 - 0xf24]
 xor eax, eax
 jmp near loc_fffb1873  ; jmp 0xfffb1873
 
-loc_fffb19ac:  ; not directly referenced
+loc_fffb19ac:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12a0], bl
-jbe loc_fffb17f6  ; jbe 0xfffb17f6
+jbe near loc_fffb17f6  ; jbe 0xfffb17f6
 mov dword [ebp - 0x12a0], 1
 
-loc_fffb19c8:  ; not directly referenced
+loc_fffb19c8:
 mov al, byte [ebp - 0x12a0]
 cmp al, 4
 je short loc_fffb1a05  ; je 0xfffb1a05
@@ -22159,7 +22158,7 @@ mov byte [ebp - 0x12ac], al
 mov dword [ebp - 0x12bc], esi
 jmp near loc_fffb1b43  ; jmp 0xfffb1b43
 
-loc_fffb1a05:  ; not directly referenced
+loc_fffb1a05:
 inc dword [ebp - 0x12a0]
 cmp dword [ebp - 0x12a0], 8
 jne short loc_fffb19c8  ; jne 0xfffb19c8
@@ -22168,70 +22167,70 @@ mov byte [ebp - 0x12ac], 4
 mov byte [ebp - 0x129c], bl
 jmp near loc_fffb1ed8  ; jmp 0xfffb1ed8
 
-loc_fffb1a2c:  ; not directly referenced
+loc_fffb1a2c:
 movzx esi, byte [ebp - 0x129c]
 mov edx, dword [ebp - 0x12a8]
 imul eax, esi, 0x1055
 mov byte [ebp - 0x12a4], 0
 cmp byte [edx + eax + 0x3a], 0
-jne loc_fffb1b18  ; jne 0xfffb1b18
+jne near loc_fffb1b18  ; jne 0xfffb1b18
 
-loc_fffb1a51:  ; not directly referenced
+loc_fffb1a51:
 inc byte [ebp - 0x129c]
 jmp near loc_fffb1b43  ; jmp 0xfffb1b43
 
-loc_fffb1a5c:  ; not directly referenced
+loc_fffb1a5c:
 movzx edi, byte [ebp - 0x12a4]
 mov eax, dword [ebp - 0x12b4]
 add eax, edi
 movzx edx, byte [eax - 0x1268]
 test dword [ebp - 0x12b0], edx
-je loc_fffb1b10  ; je 0xfffb1b10
+je near loc_fffb1b10  ; je 0xfffb1b10
 cmp byte [ebp - 0x12ac], 6
 mov al, byte [eax - 0x1256]
 ja short loc_fffb1abe  ; ja 0xfffb1abe
 mov ebx, dword [ebp - 0x12bc]
 jmp dword [ebx*4 + ref_fffced68]  ; ujmp: jmp dword [ebx*4 - 0x31298]
 
-loc_fffb1a9a:  ; not directly referenced
+loc_fffb1a9a:
 lea edx, [eax + 1]
 jmp short loc_fffb1aa1  ; jmp 0xfffb1aa1
 
-loc_fffb1a9f:  ; not directly referenced
+loc_fffb1a9f:
 mov dl, al
 
-loc_fffb1aa1:  ; not directly referenced
+loc_fffb1aa1:
 lea ebx, [eax - 1]
 jmp short loc_fffb1aba  ; jmp 0xfffb1aba
 
-loc_fffb1aa6:  ; not directly referenced
+loc_fffb1aa6:
 mov bl, al
 dec eax
 jmp short loc_fffb1ac0  ; jmp 0xfffb1ac0
 
-loc_fffb1aab:  ; not directly referenced
+loc_fffb1aab:
 mov bl, al
 inc eax
 jmp short loc_fffb1ac0  ; jmp 0xfffb1ac0
 
-loc_fffb1ab0:  ; not directly referenced
+loc_fffb1ab0:
 lea edx, [eax - 1]
 jmp short loc_fffb1ab7  ; jmp 0xfffb1ab7
 
-loc_fffb1ab5:  ; not directly referenced
+loc_fffb1ab5:
 mov dl, al
 
-loc_fffb1ab7:  ; not directly referenced
+loc_fffb1ab7:
 lea ebx, [eax + 1]
 
-loc_fffb1aba:  ; not directly referenced
+loc_fffb1aba:
 mov al, dl
 jmp short loc_fffb1ac0  ; jmp 0xfffb1ac0
 
-loc_fffb1abe:  ; not directly referenced
+loc_fffb1abe:
 mov bl, al
 
-loc_fffb1ac0:  ; not directly referenced
+loc_fffb1ac0:
 push ecx
 lea edx, [ebp - 0x1244]
 xor ecx, ecx
@@ -22256,27 +22255,27 @@ push edi
 call fcn_fffae5de  ; call 0xfffae5de
 add esp, 0x10
 
-loc_fffb1b10:  ; not directly referenced
+loc_fffb1b10:
 inc byte [ebp - 0x12a4]
 jmp short loc_fffb1b26  ; jmp 0xfffb1b26
 
-loc_fffb1b18:  ; not directly referenced
+loc_fffb1b18:
 lea eax, [esi + esi*8]
 lea ebx, [ebp - 0x18]
 add ebx, eax
 mov dword [ebp - 0x12b4], ebx
 
-loc_fffb1b26:  ; not directly referenced
+loc_fffb1b26:
 mov eax, dword [ebp - 0x12a8]
 mov bl, byte [ebp - 0x12a4]
 cmp bl, byte [eax + 0x20b5]
-jb loc_fffb1a5c  ; jb 0xfffb1a5c
+jb near loc_fffb1a5c  ; jb 0xfffb1a5c
 jmp near loc_fffb1a51  ; jmp 0xfffb1a51
 
-loc_fffb1b43:  ; not directly referenced
+loc_fffb1b43:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x129c], bl
-jbe loc_fffb1a2c  ; jbe 0xfffb1a2c
+jbe near loc_fffb1a2c  ; jbe 0xfffb1a2c
 xor ecx, ecx
 mov edx, 0x6c0
 lea eax, [ebp - 0xd98]
@@ -22288,17 +22287,17 @@ call fcn_fffa24c1  ; call 0xfffa24c1
 mov bl, byte [ebp - 0x12b5]
 jmp short loc_fffb1b9c  ; jmp 0xfffb1b9c
 
-loc_fffb1b81:  ; not directly referenced
+loc_fffb1b81:
 movzx edx, bl
 mov esi, dword [ebp - 0x12a8]
 imul eax, edx, 0x1055
 cmp byte [esi + eax + 0x3a], 0
-jne loc_fffb2b65  ; jne 0xfffb2b65
+jne near loc_fffb2b65  ; jne 0xfffb2b65
 
-loc_fffb1b9b:  ; not directly referenced
+loc_fffb1b9b:
 inc ebx
 
-loc_fffb1b9c:  ; not directly referenced
+loc_fffb1b9c:
 cmp bl, byte [ebp - 0x12b6]
 jbe short loc_fffb1b81  ; jbe 0xfffb1b81
 imul esi, dword [ebp - 0x12a0], 0x24
@@ -22307,19 +22306,19 @@ mov byte [ebp - 0x12ac], bl
 mov dword [ebp - 0x12d0], esi
 jmp near loc_fffb1d82  ; jmp 0xfffb1d82
 
-loc_fffb1bc2:  ; not directly referenced
+loc_fffb1bc2:
 movzx ebx, byte [ebp - 0x12ac]
 mov esi, dword [ebp - 0x12a8]
 imul eax, ebx, 0x1055
 mov dword [ebp - 0x129c], ebx
 cmp byte [esi + eax + 0x3a], 0
-jne loc_fffb2b95  ; jne 0xfffb2b95
+jne near loc_fffb2b95  ; jne 0xfffb2b95
 
-loc_fffb1be6:  ; not directly referenced
+loc_fffb1be6:
 inc byte [ebp - 0x12ac]
 jmp near loc_fffb1d82  ; jmp 0xfffb1d82
 
-loc_fffb1bf1:  ; not directly referenced
+loc_fffb1bf1:
 mov ecx, dword [ebp - 0x129c]
 mov edx, dword [ebp - 0x12a4]
 mov eax, dword [ebp - 0x12a8]
@@ -22327,7 +22326,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb1c26  ; jne 0xfffb1c26
 
-loc_fffb1c0c:  ; not directly referenced
+loc_fffb1c0c:
 inc dword [ebp - 0x12a4]
 add ebx, 0x12
 add edi, 0x12
@@ -22335,7 +22334,7 @@ cmp dword [ebp - 0x12a4], 4
 jne short loc_fffb1bf1  ; jne 0xfffb1bf1
 jmp near loc_fffb1ce1  ; jmp 0xfffb1ce1
 
-loc_fffb1c26:  ; not directly referenced
+loc_fffb1c26:
 mov eax, dword [ebp - 0x12a8]
 xor edx, edx
 imul ecx, dword [ebp - 0x12a4], 0xd8
@@ -22343,7 +22342,7 @@ mov al, byte [eax + 0x20b5]
 mov byte [ebp - 0x12bc], al
 mov dword [ebp - 0x12c8], ecx
 
-loc_fffb1c4a:  ; not directly referenced
+loc_fffb1c4a:
 lea esi, [edx + edx*8]
 add esi, dword [ebp - 0x12c8]
 add esi, dword [ebp - 0x12cc]
@@ -22356,7 +22355,7 @@ mov dword [ebp - 0x12d8], ecx
 xor eax, eax
 jmp short loc_fffb1cca  ; jmp 0xfffb1cca
 
-loc_fffb1c79:  ; not directly referenced
+loc_fffb1c79:
 mov ecx, dword [ebp - 0x12c0]
 movzx esi, byte [ecx + eax]
 test dword [ebp - 0x12b0], esi
@@ -22372,25 +22371,25 @@ sub ecx, esi
 mov word [ebx + eax*2], cx
 jmp short loc_fffb1cc9  ; jmp 0xfffb1cc9
 
-loc_fffb1cb5:  ; not directly referenced
+loc_fffb1cb5:
 mov esi, dword [ebp - 0x12b4]
 add cx, word [edi + eax*2]
 movzx esi, byte [esi + eax]
 sub ecx, esi
 mov word [edi + eax*2], cx
 
-loc_fffb1cc9:  ; not directly referenced
+loc_fffb1cc9:
 inc eax
 
-loc_fffb1cca:  ; not directly referenced
+loc_fffb1cca:
 cmp byte [ebp - 0x12bc], al
 ja short loc_fffb1c79  ; ja 0xfffb1c79
 inc edx
 cmp edx, 0x18
-jne loc_fffb1c4a  ; jne 0xfffb1c4a
+jne near loc_fffb1c4a  ; jne 0xfffb1c4a
 jmp near loc_fffb1c0c  ; jmp 0xfffb1c0c
 
-loc_fffb1ce1:  ; not directly referenced
+loc_fffb1ce1:
 imul eax, dword [ebp - 0x129c], 0x12
 mov ebx, dword [ebp - 0x12a8]
 add eax, dword [ebp - 0x12d0]
@@ -22400,7 +22399,7 @@ lea edi, [ebp + eax - 0xf24]
 xor ebx, ebx
 jmp short loc_fffb1d53  ; jmp 0xfffb1d53
 
-loc_fffb1d0b:  ; not directly referenced
+loc_fffb1d0b:
 mov ecx, dword [ebp - 0x129c]
 mov edx, esi
 mov eax, dword [ebp - 0x12a8]
@@ -22418,15 +22417,15 @@ cmp dx, ax
 cmovbe eax, edx
 mov word [edi + ebx*2], ax
 
-loc_fffb1d4c:  ; not directly referenced
+loc_fffb1d4c:
 inc esi
 cmp esi, 4
 jne short loc_fffb1d0b  ; jne 0xfffb1d0b
 inc ebx
 
-loc_fffb1d53:  ; not directly referenced
+loc_fffb1d53:
 cmp byte [ebp - 0x12b4], bl
-jbe loc_fffb1be6  ; jbe 0xfffb1be6
+jbe near loc_fffb1be6  ; jbe 0xfffb1be6
 lea eax, [ebx + ebx]
 lea esi, [ebp - 0x116c]
 add esi, eax
@@ -22437,19 +22436,19 @@ mov dword [ebp - 0x12bc], esi
 xor esi, esi
 jmp short loc_fffb1d0b  ; jmp 0xfffb1d0b
 
-loc_fffb1d82:  ; not directly referenced
+loc_fffb1d82:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12ac], bl
-jbe loc_fffb1bc2  ; jbe 0xfffb1bc2
+jbe near loc_fffb1bc2  ; jbe 0xfffb1bc2
 jmp near loc_fffb1a05  ; jmp 0xfffb1a05
 
-loc_fffb1d99:  ; not directly referenced
+loc_fffb1d99:
 movzx esi, byte [ebp - 0x129c]
 mov edx, dword [ebp - 0x12a8]
 imul eax, esi, 0x1055
 mov dword [ebp - 0x12a4], esi
 cmp byte [edx + eax + 0x3a], 0
-je loc_fffb1ed2  ; je 0xfffb1ed2
+je near loc_fffb1ed2  ; je 0xfffb1ed2
 lea esi, [esi + esi*8]
 lea ebx, [ebp - 0x18]
 add ebx, esi
@@ -22457,7 +22456,7 @@ mov byte [ebp - 0x12a0], 0
 mov dword [ebp - 0x12b0], ebx
 jmp near loc_fffb1ea8  ; jmp 0xfffb1ea8
 
-loc_fffb1dd7:  ; not directly referenced
+loc_fffb1dd7:
 imul ecx, eax, 0x24
 movzx ecx, word [ebx + ecx]
 cmp ecx, edx
@@ -22465,7 +22464,7 @@ jb short loc_fffb1dea  ; jb 0xfffb1dea
 mov edx, ecx
 mov byte [ebp - 0x12ac], al
 
-loc_fffb1dea:  ; not directly referenced
+loc_fffb1dea:
 inc eax
 cmp eax, 0xa
 jne short loc_fffb1dd7  ; jne 0xfffb1dd7
@@ -22476,62 +22475,62 @@ ja short loc_fffb1e14  ; ja 0xfffb1e14
 movzx edx, byte [ebp - 0x12ac]
 jmp dword [edx*4 + ref_fffced84]  ; ujmp: jmp dword [edx*4 - 0x3127c]
 
-loc_fffb1e14:  ; not directly referenced
+loc_fffb1e14:
 mov bl, al
 jmp short loc_fffb1e4a  ; jmp 0xfffb1e4a
 
-loc_fffb1e18:  ; not directly referenced
+loc_fffb1e18:
 lea edx, [eax - 1]
 jmp short loc_fffb1e1f  ; jmp 0xfffb1e1f
 
-loc_fffb1e1d:  ; not directly referenced
+loc_fffb1e1d:
 mov dl, al
 
-loc_fffb1e1f:  ; not directly referenced
+loc_fffb1e1f:
 lea ebx, [eax - 1]
 jmp short loc_fffb1e42  ; jmp 0xfffb1e42
 
-loc_fffb1e24:  ; not directly referenced
+loc_fffb1e24:
 lea ebx, [eax - 1]
 jmp short loc_fffb1e2b  ; jmp 0xfffb1e2b
 
-loc_fffb1e29:  ; not directly referenced
+loc_fffb1e29:
 mov bl, al
 
-loc_fffb1e2b:  ; not directly referenced
+loc_fffb1e2b:
 inc eax
 jmp short loc_fffb1e4a  ; jmp 0xfffb1e4a
 
-loc_fffb1e2e:  ; not directly referenced
+loc_fffb1e2e:
 lea ebx, [eax + 1]
 jmp short loc_fffb1e35  ; jmp 0xfffb1e35
 
-loc_fffb1e33:  ; not directly referenced
+loc_fffb1e33:
 mov bl, al
 
-loc_fffb1e35:  ; not directly referenced
+loc_fffb1e35:
 dec eax
 jmp short loc_fffb1e4a  ; jmp 0xfffb1e4a
 
-loc_fffb1e38:  ; not directly referenced
+loc_fffb1e38:
 lea edx, [eax + 1]
 jmp short loc_fffb1e3f  ; jmp 0xfffb1e3f
 
-loc_fffb1e3d:  ; not directly referenced
+loc_fffb1e3d:
 mov dl, al
 
-loc_fffb1e3f:  ; not directly referenced
+loc_fffb1e3f:
 lea ebx, [eax + 1]
 
-loc_fffb1e42:  ; not directly referenced
+loc_fffb1e42:
 mov al, dl
 jmp short loc_fffb1e4a  ; jmp 0xfffb1e4a
 
-loc_fffb1e46:  ; not directly referenced
+loc_fffb1e46:
 mov bl, 5
 mov al, 5
 
-loc_fffb1e4a:  ; not directly referenced
+loc_fffb1e4a:
 push edx
 lea edx, [ebp - 0x1244]
 xor ecx, ecx
@@ -22557,7 +22556,7 @@ call fcn_fffae5de  ; call 0xfffae5de
 inc byte [ebp - 0x12a0]
 add esp, 0x10
 
-loc_fffb1ea8:  ; not directly referenced
+loc_fffb1ea8:
 mov eax, dword [ebp - 0x12a8]
 mov bl, byte [ebp - 0x12a0]
 cmp bl, byte [eax + 0x20b5]
@@ -22569,13 +22568,13 @@ lea ebx, [ebp + eax*2 - 0xf24]
 xor eax, eax
 jmp near loc_fffb1dd7  ; jmp 0xfffb1dd7
 
-loc_fffb1ed2:  ; not directly referenced
+loc_fffb1ed2:
 inc byte [ebp - 0x129c]
 
-loc_fffb1ed8:  ; not directly referenced
+loc_fffb1ed8:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x129c], bl
-jbe loc_fffb1d99  ; jbe 0xfffb1d99
+jbe near loc_fffb1d99  ; jbe 0xfffb1d99
 mov eax, dword [ebp - 0x12a8]
 xor ecx, ecx
 lea esi, [ebp - 0x6d8]
@@ -22593,28 +22592,28 @@ call fcn_fffa24c1  ; call 0xfffa24c1
 mov bl, byte [ebp - 0x12b5]
 jmp short loc_fffb1f4e  ; jmp 0xfffb1f4e
 
-loc_fffb1f33:  ; not directly referenced
+loc_fffb1f33:
 movzx edx, bl
 mov ecx, dword [ebp - 0x12a8]
 imul eax, edx, 0x1055
 cmp byte [ecx + eax + 0x3a], 0
-jne loc_fffb2bf8  ; jne 0xfffb2bf8
+jne near loc_fffb2bf8  ; jne 0xfffb2bf8
 
-loc_fffb1f4d:  ; not directly referenced
+loc_fffb1f4d:
 inc ebx
 
-loc_fffb1f4e:  ; not directly referenced
+loc_fffb1f4e:
 cmp bl, byte [ebp - 0x12b6]
 jbe short loc_fffb1f33  ; jbe 0xfffb1f33
 jmp near loc_fffb29b6  ; jmp 0xfffb29b6
 
-loc_fffb1f5b:  ; not directly referenced
+loc_fffb1f5b:
 movzx edx, byte [ebp - 0x12b5]
 mov ecx, dword [ebp - 0x12a8]
 imul eax, edx, 0x1055
 mov dword [ebp - 0x12bc], edx
 cmp byte [ecx + eax + 0x3a], 0
-je loc_fffb29b0  ; je 0xfffb29b0
+je near loc_fffb29b0  ; je 0xfffb29b0
 imul eax, edx, 0x360
 lea ebx, [ebp - 0x6d8]
 lea esi, [ebp - 0xd98]
@@ -22626,9 +22625,9 @@ xor ebx, ebx
 xor edi, edi
 mov dword [ebp - 0x129c], 0
 
-loc_fffb1faf:  ; not directly referenced
+loc_fffb1faf:
 cmp bl, 0xc
-je loc_fffb2096  ; je 0xfffb2096
+je near loc_fffb2096  ; je 0xfffb2096
 mov edx, dword [ebp - 0x12c0]
 lea eax, [ebx + ebx*8]
 add edx, eax
@@ -22639,7 +22638,7 @@ xor esi, esi
 mov dword [ebp - 0x12b0], edx
 mov dword [ebp - 0x12b4], eax
 
-loc_fffb1feb:  ; not directly referenced
+loc_fffb1feb:
 mov ecx, dword [ebp - 0x12bc]
 mov edx, esi
 mov eax, dword [ebp - 0x12a8]
@@ -22647,13 +22646,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb200a  ; jne 0xfffb200a
 
-loc_fffb2002:  ; not directly referenced
+loc_fffb2002:
 inc esi
 cmp esi, 4
 jne short loc_fffb1feb  ; jne 0xfffb1feb
 jmp short loc_fffb206d  ; jmp 0xfffb206d
 
-loc_fffb200a:  ; not directly referenced
+loc_fffb200a:
 mov ecx, dword [ebp - 0x12a8]
 mov eax, dword [ebp - 0x12b0]
 mov cl, byte [ecx + 0x20b5]
@@ -22665,7 +22664,7 @@ mov dword [ebp - 0x12a0], eax
 xor eax, eax
 jmp short loc_fffb2063  ; jmp 0xfffb2063
 
-loc_fffb203a:  ; not directly referenced
+loc_fffb203a:
 mov edx, dword [ebp - 0x12a0]
 mov dl, byte [edx + eax]
 mov byte [ebp - 0x12fa], dl
@@ -22676,15 +22675,15 @@ cmp dx, word [ebp + ebx*2 - 0x10a4]
 jae short loc_fffb2062  ; jae 0xfffb2062
 mov word [ebp + ebx*2 - 0x10a4], dx
 
-loc_fffb2062:  ; not directly referenced
+loc_fffb2062:
 inc eax
 
-loc_fffb2063:  ; not directly referenced
+loc_fffb2063:
 cmp byte [ebp - 0x12a4], al
 ja short loc_fffb203a  ; ja 0xfffb203a
 jmp short loc_fffb2002  ; jmp 0xfffb2002
 
-loc_fffb206d:  ; not directly referenced
+loc_fffb206d:
 mov dx, word [ebp + ebx*2 - 0x10a4]
 cmp dx, 4
 lea eax, [edx - 5]
@@ -22696,10 +22695,10 @@ add edi, eax
 imul edx, ebx
 add dword [ebp - 0x129c], edx
 
-loc_fffb2096:  ; not directly referenced
+loc_fffb2096:
 inc ebx
 cmp ebx, 0x18
-jne loc_fffb1faf  ; jne 0xfffb1faf
+jne near loc_fffb1faf  ; jne 0xfffb1faf
 test edi, edi
 mov eax, 1
 cmove edi, eax
@@ -22712,7 +22711,7 @@ xor bl, bl
 mov edi, 0x17
 xor edx, edx
 
-loc_fffb20c1:  ; not directly referenced
+loc_fffb20c1:
 cmp word [ebp + ebx - 0x1076], 4
 jbe short loc_fffb20e5  ; jbe 0xfffb20e5
 movzx ecx, word [ebp + ebx - 0xff6]
@@ -22725,7 +22724,7 @@ xor edx, edx
 div ecx
 jmp short loc_fffb2118  ; jmp 0xfffb2118
 
-loc_fffb20e5:  ; not directly referenced
+loc_fffb20e5:
 sub ebx, 2
 dec edi
 cmp ebx, 0xffffffea
@@ -22734,7 +22733,7 @@ cmp edx, esi
 jae short loc_fffb212b  ; jae 0xfffb212b
 xor ecx, ecx
 
-loc_fffb20f4:  ; not directly referenced
+loc_fffb20f4:
 cmp word [ebp + ecx*2 - 0x10a4], 4
 mov edi, ecx
 jbe short loc_fffb2125  ; jbe 0xfffb2125
@@ -22747,7 +22746,7 @@ imul eax, edx, 0x64
 xor edx, edx
 div ebx
 
-loc_fffb2118:  ; not directly referenced
+loc_fffb2118:
 cmp al, 0x4a
 mov cl, 0xff
 ja short loc_fffb212f  ; ja 0xfffb212f
@@ -22755,20 +22754,20 @@ cmp al, 0x19
 setbe cl
 jmp short loc_fffb212f  ; jmp 0xfffb212f
 
-loc_fffb2125:  ; not directly referenced
+loc_fffb2125:
 inc ecx
 cmp ecx, 0xc
 jne short loc_fffb20f4  ; jne 0xfffb20f4
 
-loc_fffb212b:  ; not directly referenced
+loc_fffb212b:
 mov edi, eax
 xor ecx, ecx
 
-loc_fffb212f:  ; not directly referenced
+loc_fffb212f:
 mov ebx, 0x1e
 jmp near loc_fffb21bc  ; jmp 0xfffb21bc
 
-loc_fffb2139:  ; not directly referenced
+loc_fffb2139:
 mov edx, dword [ebp - 0x12ac]
 cmp word [edx], bx
 jb short loc_fffb2167  ; jb 0xfffb2167
@@ -22778,22 +22777,22 @@ je short loc_fffb2157  ; je 0xfffb2157
 mov esi, dword [ebp - 0x12b0]
 jmp short loc_fffb2165  ; jmp 0xfffb2165
 
-loc_fffb2157:  ; not directly referenced
+loc_fffb2157:
 mov al, byte [ebp - 0x12b0]
 mov byte [ebp - 0x12a4], al
 mov esi, eax
 
-loc_fffb2165:  ; not directly referenced
+loc_fffb2165:
 mov al, 1
 
-loc_fffb2167:  ; not directly referenced
+loc_fffb2167:
 dec byte [ebp - 0x12b0]
 sub dword [ebp - 0x12ac], 2
 cmp byte [ebp - 0x12b0], 0xc
 jne short loc_fffb2139  ; jne 0xfffb2139
 xor edx, edx
 
-loc_fffb217f:  ; not directly referenced
+loc_fffb217f:
 cmp word [ebp + edx*2 - 0x10a4], bx
 jb short loc_fffb21a0  ; jb 0xfffb21a0
 add byte [ebp - 0x129c], 2
@@ -22801,14 +22800,14 @@ test al, al
 je short loc_fffb2196  ; je 0xfffb2196
 jmp short loc_fffb219c  ; jmp 0xfffb219c
 
-loc_fffb2196:  ; not directly referenced
+loc_fffb2196:
 mov byte [ebp - 0x12a4], dl
 
-loc_fffb219c:  ; not directly referenced
+loc_fffb219c:
 mov esi, edx
 mov al, 1
 
-loc_fffb21a0:  ; not directly referenced
+loc_fffb21a0:
 inc edx
 cmp edx, 0xc
 jne short loc_fffb217f  ; jne 0xfffb217f
@@ -22819,7 +22818,7 @@ dec byte [ebp - 0x12a0]
 cmp bx, 4
 je short loc_fffb21ec  ; je 0xfffb21ec
 
-loc_fffb21bc:  ; not directly referenced
+loc_fffb21bc:
 lea edx, [ebp - 0x1076]
 mov byte [ebp - 0x12a0], bl
 mov dword [ebp - 0x12ac], edx
@@ -22830,7 +22829,7 @@ xor eax, eax
 mov byte [ebp - 0x129c], 0
 jmp near loc_fffb2139  ; jmp 0xfffb2139
 
-loc_fffb21ec:  ; not directly referenced
+loc_fffb21ec:
 imul eax, dword [ebp - 0x12bc], 5
 mov ebx, edi
 mov edx, esi
@@ -22856,7 +22855,7 @@ inc edx
 cmp bl, 0x17
 jmp short loc_fffb2276  ; jmp 0xfffb2276
 
-loc_fffb2254:  ; not directly referenced
+loc_fffb2254:
 inc cl
 jne short loc_fffb2288  ; jne 0xfffb2288
 cmp byte [ebp - 0x12b4], 0
@@ -22867,15 +22866,15 @@ inc eax
 dec edx
 cmp byte [ebp - 0x12b4], 0x17
 
-loc_fffb2276:  ; not directly referenced
+loc_fffb2276:
 cmovb eax, edx
 mov byte [ebp - 0x12b4], al
 jmp short loc_fffb2288  ; jmp 0xfffb2288
 
-loc_fffb2281:  ; not directly referenced
+loc_fffb2281:
 mov byte [ebp - 0x12b4], 0x21
 
-loc_fffb2288:  ; not directly referenced
+loc_fffb2288:
 cmp byte [ebp - 0x12a4], 0xc
 mov bl, 0
 mov al, byte [ebp - 0x12a4]
@@ -22892,16 +22891,16 @@ imul ebx, dword [ebp - 0x12bc], 0x1055
 mov dword [ebp - 0x12f4], esi
 mov dword [ebp - 0x12f8], ebx
 
-loc_fffb22e3:  ; not directly referenced
+loc_fffb22e3:
 mov ecx, dword [ebp - 0x12bc]
 mov edx, dword [ebp - 0x12c8]
 mov eax, dword [ebp - 0x12a8]
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb2985  ; je 0xfffb2985
+je near loc_fffb2985  ; je 0xfffb2985
 jmp near loc_fffb2956  ; jmp 0xfffb2956
 
-loc_fffb2307:  ; not directly referenced
+loc_fffb2307:
 xor ecx, ecx
 mov edx, 0x100
 lea eax, [ebp - 0x1024]
@@ -22934,7 +22933,7 @@ idiv ecx
 mov dword [ebp - 0x12f0], eax
 jmp short loc_fffb23c1  ; jmp 0xfffb23c1
 
-loc_fffb2392:  ; not directly referenced
+loc_fffb2392:
 movzx edx, byte [ebp - 0x12ac]
 mov eax, 0x80
 sub eax, edx
@@ -22946,7 +22945,7 @@ cdq
 idiv ecx
 mov dword [ebp - 0x12f0], eax
 
-loc_fffb23c1:  ; not directly referenced
+loc_fffb23c1:
 movzx esi, byte [ebp - 0x12ac]
 mov dword [ebp - 0x129c], 0
 movzx ebx, byte [ebp - 0x12b0]
@@ -22955,7 +22954,7 @@ mov dword [ebp - 0x12e8], esi
 mov dword [ebp - 0x12ec], ebx
 jmp near loc_fffb281c  ; jmp 0xfffb281c
 
-loc_fffb23f4:  ; not directly referenced
+loc_fffb23f4:
 cmp dword [ebp - 0x12e0], 0
 jne short loc_fffb2416  ; jne 0xfffb2416
 mov bl, byte [ebp - 0x12a0]
@@ -22965,17 +22964,17 @@ setb dl
 cmp bl, al
 jmp short loc_fffb2431  ; jmp 0xfffb2431
 
-loc_fffb2416:  ; not directly referenced
+loc_fffb2416:
 mov bl, byte [ebp - 0x12b0]
 cmp byte [ebp - 0x12a0], bl
 setb dl
 mov bl, byte [ebp - 0x12a0]
 cmp byte [ebp - 0x12ac], bl
 
-loc_fffb2431:  ; not directly referenced
+loc_fffb2431:
 setb al
 or dl, al
-jne loc_fffb2816  ; jne 0xfffb2816
+jne near loc_fffb2816  ; jne 0xfffb2816
 mov ecx, dword [ebp - 0x12e4]
 mov edx, 2
 lea eax, [ebp - 0x1297]
@@ -22984,18 +22983,18 @@ cmp byte [ebp - 0x12a4], 0xc
 mov al, byte [ebp - 0x1296]
 je short loc_fffb246e  ; je 0xfffb246e
 cmp byte [ebp - 0x12a4], 0xb
-ja loc_fffb2597  ; ja 0xfffb2597
+ja near loc_fffb2597  ; ja 0xfffb2597
 
-loc_fffb246e:  ; not directly referenced
+loc_fffb246e:
 mov cl, al
 xor edx, edx
 mov al, byte [ebp - 0x12cc]
 jmp short loc_fffb247c  ; jmp 0xfffb247c
 
-loc_fffb247a:  ; not directly referenced
+loc_fffb247a:
 mov al, bl
 
-loc_fffb247c:  ; not directly referenced
+loc_fffb247c:
 movzx ebx, al
 mov esi, dword [ebp - 0x12c4]
 lea ebx, [ebx + ebx*8]
@@ -23006,15 +23005,15 @@ mov bl, byte [ebp - 0x12a0]
 cmp byte [esi + edi], bl
 jbe short loc_fffb24b4  ; jbe 0xfffb24b4
 
-loc_fffb24a1:  ; not directly referenced
+loc_fffb24a1:
 mov byte [ebp - 0x1296], cl
 
-loc_fffb24a7:  ; not directly referenced
+loc_fffb24a7:
 mov al, byte [ebp - 0x1297]
 xor esi, esi
 jmp near loc_fffb2574  ; jmp 0xfffb2574
 
-loc_fffb24b4:  ; not directly referenced
+loc_fffb24b4:
 mov esi, dword [ebp - 0x1300]
 add esi, dword [ebp - 0x12c0]
 mov bl, byte [ebp - 0x12a0]
@@ -23022,7 +23021,7 @@ cmp bl, byte [esi + edi]
 jbe short loc_fffb24cd  ; jbe 0xfffb24cd
 jmp short loc_fffb24a1  ; jmp 0xfffb24a1
 
-loc_fffb24cd:  ; not directly referenced
+loc_fffb24cd:
 cmp al, 0xb
 lea ebx, [eax + 1]
 ja short loc_fffb24e1  ; ja 0xfffb24e1
@@ -23031,7 +23030,7 @@ mov esi, 0xd
 lea ebx, [eax - 1]
 cmove ebx, esi
 
-loc_fffb24e1:  ; not directly referenced
+loc_fffb24e1:
 inc edx
 cmp dl, byte [ebp - 0x12f9]
 mov cl, al
@@ -23039,7 +23038,7 @@ jbe short loc_fffb247a  ; jbe 0xfffb247a
 mov byte [ebp - 0x1296], al
 jmp short loc_fffb24a7  ; jmp 0xfffb24a7
 
-loc_fffb24f4:  ; not directly referenced
+loc_fffb24f4:
 movzx edx, bl
 mov ecx, dword [ebp - 0x12c4]
 lea edx, [edx + edx*8]
@@ -23050,10 +23049,10 @@ mov dl, byte [ebp - 0x12a0]
 cmp byte [ecx + edi], dl
 jbe short loc_fffb2558  ; jbe 0xfffb2558
 
-loc_fffb2519:  ; not directly referenced
+loc_fffb2519:
 mov byte [ebp - 0x1297], al
 
-loc_fffb251f:  ; not directly referenced
+loc_fffb251f:
 mov ebx, dword [ebp - 0x129c]
 mov dl, byte [ebp - 0x1297]
 lea eax, [ebp + ebx*2 - 0x1024]
@@ -23063,10 +23062,10 @@ mov byte [eax + 1], dl
 mov al, byte [ebp + ebx*2 - 0x1024]
 cmp al, 0xb
 mov dl, byte [ebp + ebx*2 - 0x1023]
-jbe loc_fffb269d  ; jbe 0xfffb269d
+jbe near loc_fffb269d  ; jbe 0xfffb269d
 jmp near loc_fffb26c4  ; jmp 0xfffb26c4
 
-loc_fffb2558:  ; not directly referenced
+loc_fffb2558:
 mov edx, dword [ebp - 0x12dc]
 add edx, dword [ebp - 0x12c0]
 inc esi
@@ -23075,10 +23074,10 @@ cmp cl, byte [edx + edi]
 jbe short loc_fffb2572  ; jbe 0xfffb2572
 jmp short loc_fffb2519  ; jmp 0xfffb2519
 
-loc_fffb2572:  ; not directly referenced
+loc_fffb2572:
 mov al, bl
 
-loc_fffb2574:  ; not directly referenced
+loc_fffb2574:
 mov edx, esi
 mov bl, byte [ebp - 0x12cc]
 add ebx, edx
@@ -23087,16 +23086,16 @@ setbe cl
 cmp dl, byte [ebp - 0x12b8]
 setbe dl
 test cl, dl
-jne loc_fffb24f4  ; jne 0xfffb24f4
+jne near loc_fffb24f4  ; jne 0xfffb24f4
 jmp short loc_fffb2519  ; jmp 0xfffb2519
 
-loc_fffb2597:  ; not directly referenced
+loc_fffb2597:
 mov byte [ebp - 0x1300], 0x17
 mov bl, byte [ebp - 0x12a4]
 xor edx, edx
 sub byte [ebp - 0x1300], bl
 
-loc_fffb25ac:  ; not directly referenced
+loc_fffb25ac:
 mov bl, byte [ebp - 0x12a4]
 mov ecx, dword [ebp - 0x12c4]
 add ebx, edx
@@ -23110,7 +23109,7 @@ mov cl, byte [ebp - 0x12a0]
 cmp byte [esi + edi], cl
 jbe short loc_fffb25fe  ; jbe 0xfffb25fe
 
-loc_fffb25db:  ; not directly referenced
+loc_fffb25db:
 mov bl, byte [ebp - 0x12a4]
 mov byte [ebp - 0x1296], al
 dec ebx
@@ -23120,7 +23119,7 @@ mov al, byte [ebp - 0x12a4]
 xor edx, edx
 jmp short loc_fffb2626  ; jmp 0xfffb2626
 
-loc_fffb25fe:  ; not directly referenced
+loc_fffb25fe:
 mov esi, dword [ebp - 0x1304]
 add esi, dword [ebp - 0x12c0]
 mov cl, byte [ebp - 0x12a0]
@@ -23128,17 +23127,17 @@ cmp cl, byte [esi + edi]
 jbe short loc_fffb2617  ; jbe 0xfffb2617
 jmp short loc_fffb25db  ; jmp 0xfffb25db
 
-loc_fffb2617:  ; not directly referenced
+loc_fffb2617:
 inc edx
 cmp byte [ebp - 0x1300], dl
 mov al, bl
 jae short loc_fffb25ac  ; jae 0xfffb25ac
 jmp short loc_fffb25db  ; jmp 0xfffb25db
 
-loc_fffb2624:  ; not directly referenced
+loc_fffb2624:
 mov eax, esi
 
-loc_fffb2626:  ; not directly referenced
+loc_fffb2626:
 movzx ebx, al
 lea esi, [ebx + ebx*8]
 mov dword [ebp - 0x1304], ebx
@@ -23152,18 +23151,18 @@ cmp byte [esi + edi], bl
 jbe short loc_fffb2655  ; jbe 0xfffb2655
 jmp short loc_fffb266c  ; jmp 0xfffb266c
 
-loc_fffb2655:  ; not directly referenced
+loc_fffb2655:
 mov esi, dword [ebp - 0x1308]
 add esi, dword [ebp - 0x12c0]
 mov bl, byte [ebp - 0x12a0]
 cmp bl, byte [esi + edi]
 jbe short loc_fffb2677  ; jbe 0xfffb2677
 
-loc_fffb266c:  ; not directly referenced
+loc_fffb266c:
 mov byte [ebp - 0x1297], cl
 jmp near loc_fffb251f  ; jmp 0xfffb251f
 
-loc_fffb2677:  ; not directly referenced
+loc_fffb2677:
 cmp al, 0xc
 lea esi, [eax + 1]
 jbe short loc_fffb268d  ; jbe 0xfffb268d
@@ -23172,14 +23171,14 @@ mov cl, 0
 lea esi, [eax - 1]
 cmove esi, ecx
 
-loc_fffb268d:  ; not directly referenced
+loc_fffb268d:
 inc edx
 cmp dl, byte [ebp - 0x12dc]
 mov cl, al
 jbe short loc_fffb2624  ; jbe 0xfffb2624
 jmp near loc_fffb2519  ; jmp 0xfffb2519
 
-loc_fffb269d:  ; not directly referenced
+loc_fffb269d:
 cmp byte [ebp - 0x12a4], 0xb
 ja short loc_fffb26b3  ; ja 0xfffb26b3
 sub eax, dword [ebp - 0x12a4]
@@ -23187,44 +23186,44 @@ cmp dl, 0xb
 jbe short loc_fffb26d3  ; jbe 0xfffb26d3
 jmp short loc_fffb26e8  ; jmp 0xfffb26e8
 
-loc_fffb26b3:  ; not directly referenced
+loc_fffb26b3:
 mov bl, byte [ebp - 0x12a4]
 cmp dl, 0xb
 lea eax, [ebx + eax - 0xc]
 jbe short loc_fffb26d3  ; jbe 0xfffb26d3
 jmp short loc_fffb26f4  ; jmp 0xfffb26f4
 
-loc_fffb26c4:  ; not directly referenced
+loc_fffb26c4:
 mov bl, byte [ebp - 0x12a4]
 sub ebx, eax
 cmp dl, 0xb
 mov al, bl
 ja short loc_fffb26df  ; ja 0xfffb26df
 
-loc_fffb26d3:  ; not directly referenced
+loc_fffb26d3:
 mov bl, byte [ebp - 0x12a4]
 sub ebx, edx
 mov dl, bl
 jmp short loc_fffb26fa  ; jmp 0xfffb26fa
 
-loc_fffb26df:  ; not directly referenced
+loc_fffb26df:
 cmp byte [ebp - 0x12a4], 0xb
 ja short loc_fffb26f4  ; ja 0xfffb26f4
 
-loc_fffb26e8:  ; not directly referenced
+loc_fffb26e8:
 mov bl, byte [ebp - 0x12a4]
 lea edx, [ebx + edx - 0xc]
 jmp short loc_fffb26fa  ; jmp 0xfffb26fa
 
-loc_fffb26f4:  ; not directly referenced
+loc_fffb26f4:
 sub edx, dword [ebp - 0x12a4]
 
-loc_fffb26fa:  ; not directly referenced
+loc_fffb26fa:
 movzx ebx, al
 movzx ecx, dl
 add ecx, ebx
 cmp ecx, 8
-jle loc_fffb2816  ; jle 0xfffb2816
+jle near loc_fffb2816  ; jle 0xfffb2816
 mov esi, dword [ebp - 0x129c]
 cmp al, dl
 cmova eax, edx
@@ -23234,11 +23233,11 @@ jae short loc_fffb2731  ; jae 0xfffb2731
 and dword [ebp - 0x12d8], 0xff
 jmp short loc_fffb273a  ; jmp 0xfffb273a
 
-loc_fffb2731:  ; not directly referenced
+loc_fffb2731:
 movzx eax, al
 mov dword [ebp - 0x12d8], eax
 
-loc_fffb273a:  ; not directly referenced
+loc_fffb273a:
 cmp dword [ebp - 0x12e0], 0
 jne short loc_fffb2778  ; jne 0xfffb2778
 mov edx, dword [ebp - 0x129c]
@@ -23251,11 +23250,11 @@ mov al, byte [ebp - 0x12a0]
 sub eax, dword [ebp - 0x12ac]
 jmp near loc_fffb2809  ; jmp 0xfffb2809
 
-loc_fffb2770:  ; not directly referenced
+loc_fffb2770:
 mov al, byte [ebp - 0x12b0]
 jmp short loc_fffb27a7  ; jmp 0xfffb27a7
 
-loc_fffb2778:  ; not directly referenced
+loc_fffb2778:
 mov bl, byte [ebp - 0x12b0]
 cmp byte [ebp - 0x12a0], bl
 ja short loc_fffb27c0  ; ja 0xfffb27c0
@@ -23268,17 +23267,17 @@ cmp edx, eax
 jg short loc_fffb27af  ; jg 0xfffb27af
 mov al, bl
 
-loc_fffb27a7:  ; not directly referenced
+loc_fffb27a7:
 sub eax, dword [ebp - 0x12a0]
 jmp short loc_fffb27eb  ; jmp 0xfffb27eb
 
-loc_fffb27af:  ; not directly referenced
+loc_fffb27af:
 mov al, byte [ebp - 0x12a0]
 sub eax, dword [ebp - 0x12ac]
 add eax, 0xffffff80
 jmp short loc_fffb2809  ; jmp 0xfffb2809
 
-loc_fffb27c0:  ; not directly referenced
+loc_fffb27c0:
 mov eax, dword [ebp - 0x12ec]
 sub eax, dword [ebp - 0x129c]
 mov edx, dword [ebp - 0x129c]
@@ -23289,28 +23288,28 @@ jg short loc_fffb27fa  ; jg 0xfffb27fa
 mov al, byte [ebp - 0x12a0]
 sub eax, dword [ebp - 0x12ac]
 
-loc_fffb27eb:  ; not directly referenced
+loc_fffb27eb:
 mov esi, dword [ebp - 0x129c]
 mov byte [ebp + esi - 0x1124], al
 jmp short loc_fffb2816  ; jmp 0xfffb2816
 
-loc_fffb27fa:  ; not directly referenced
+loc_fffb27fa:
 mov al, byte [ebp - 0x12b0]
 add eax, 0xffffff80
 sub eax, dword [ebp - 0x12a0]
 
-loc_fffb2809:  ; not directly referenced
+loc_fffb2809:
 mov ebx, dword [ebp - 0x129c]
 mov byte [ebp + ebx - 0x1124], al
 
-loc_fffb2816:  ; not directly referenced
+loc_fffb2816:
 inc dword [ebp - 0x129c]
 
-loc_fffb281c:  ; not directly referenced
+loc_fffb281c:
 mov al, byte [ebp - 0x129c]
 cmp dword [ebp - 0x129c], 0x80
 mov byte [ebp - 0x12a0], al
-jne loc_fffb23f4  ; jne 0xfffb23f4
+jne near loc_fffb23f4  ; jne 0xfffb23f4
 cmp dword [ebp - 0x12e0], 0
 jne short loc_fffb2867  ; jne 0xfffb2867
 movzx edx, byte [ebp - 0x12ac]
@@ -23322,12 +23321,12 @@ idiv ecx
 mov dl, byte [ebp - 0x12ac]
 add edx, eax
 
-loc_fffb2861:  ; not directly referenced
+loc_fffb2861:
 xor esi, esi
 xor eax, eax
 jmp short loc_fffb2892  ; jmp 0xfffb2892
 
-loc_fffb2867:  ; not directly referenced
+loc_fffb2867:
 movzx ecx, byte [ebp - 0x12ac]
 mov eax, dword [ebp - 0x129c]
 movzx edx, byte [ebp - 0x12b0]
@@ -23341,7 +23340,7 @@ cdq
 idiv dword [ebp - 0x129c]
 jmp short loc_fffb2861  ; jmp 0xfffb2861
 
-loc_fffb2892:  ; not directly referenced
+loc_fffb2892:
 movzx ecx, al
 movzx ebx, byte [ebp + ecx - 0x10a4]
 movzx ecx, byte [ebp + ecx - 0x1124]
@@ -23353,7 +23352,7 @@ jae short loc_fffb28bd  ; jae 0xfffb28bd
 mov esi, ecx
 mov dl, al
 
-loc_fffb28bd:  ; not directly referenced
+loc_fffb28bd:
 inc eax
 cmp al, 0x80
 jne short loc_fffb2892  ; jne 0xfffb2892
@@ -23392,43 +23391,43 @@ inc byte [ebp - 0x12b7]
 add esp, 0x10
 jmp short loc_fffb296d  ; jmp 0xfffb296d
 
-loc_fffb2956:  ; not directly referenced
+loc_fffb2956:
 imul ebx, dword [ebp - 0x12c8], 0xd8
 mov byte [ebp - 0x12b7], 0
 mov dword [ebp - 0x12d0], ebx
 
-loc_fffb296d:  ; not directly referenced
+loc_fffb296d:
 mov eax, dword [ebp - 0x12a8]
 mov bl, byte [ebp - 0x12b7]
 cmp bl, byte [eax + 0x20b5]
-jb loc_fffb2307  ; jb 0xfffb2307
+jb near loc_fffb2307  ; jb 0xfffb2307
 
-loc_fffb2985:  ; not directly referenced
+loc_fffb2985:
 inc dword [ebp - 0x12c8]
 cmp dword [ebp - 0x12c8], 4
-jne loc_fffb22e3  ; jne 0xfffb22e3
+jne near loc_fffb22e3  ; jne 0xfffb22e3
 movzx ecx, byte [ebp - 0x12b4]
 mov edx, dword [ebp - 0x12bc]
 mov eax, dword [ebp - 0x12a8]
 call fcn_fffaebfc  ; call 0xfffaebfc
 
-loc_fffb29b0:  ; not directly referenced
+loc_fffb29b0:
 inc byte [ebp - 0x12b5]
 
-loc_fffb29b6:  ; not directly referenced
+loc_fffb29b6:
 mov bl, byte [ebp - 0x12b6]
 cmp byte [ebp - 0x12b5], bl
-jbe loc_fffb1f5b  ; jbe 0xfffb1f5b
+jbe near loc_fffb1f5b  ; jbe 0xfffb1f5b
 
-loc_fffb29c8:  ; not directly referenced
+loc_fffb29c8:
 mov eax, dword [ebp - 0x12a8]
 cmp dword [eax + 0x2254], 1
-jbe loc_fffb2c28  ; jbe 0xfffb2c28
+jbe near loc_fffb2c28  ; jbe 0xfffb2c28
 mov eax, dword [eax + 0x2223]
 mov dword [eax + 0x4ea8], 0
 jmp near loc_fffb2c28  ; jmp 0xfffb2c28
 
-loc_fffb29f0:  ; not directly referenced
+loc_fffb29f0:
 sub esp, 0xc
 lea eax, [ebp - 0x6d8]
 push 1
@@ -23449,7 +23448,7 @@ cmp dword [ebp - 0x12d4], 0
 cmovne ebx, eax
 jmp near loc_fffb126f  ; jmp 0xfffb126f
 
-loc_fffb2a3a:  ; not directly referenced
+loc_fffb2a3a:
 xor ecx, ecx
 mov edx, dword [ebp - 0x12a4]
 mov eax, dword [ebp - 0x12a8]
@@ -23457,7 +23456,7 @@ xor esi, esi
 call fcn_fffaebfc  ; call 0xfffaebfc
 jmp near loc_fffb12df  ; jmp 0xfffb12df
 
-loc_fffb2a54:  ; not directly referenced
+loc_fffb2a54:
 mov eax, dword [ebp - 0x12a8]
 mov bl, 0x6e
 cmp dword [eax + 0x2234], 1
@@ -23471,12 +23470,12 @@ or ah, 1
 mov dword [edx + 0x5f08], eax
 jmp near loc_fffb13e9  ; jmp 0xfffb13e9
 
-loc_fffb2a8e:  ; not directly referenced
+loc_fffb2a8e:
 cmp dword [eax + 0xa], 1
-je loc_fffb1495  ; je 0xfffb1495
+je near loc_fffb1495  ; je 0xfffb1495
 jmp near loc_fffb14a8  ; jmp 0xfffb14a8
 
-loc_fffb2a9d:  ; not directly referenced
+loc_fffb2a9d:
 mov edx, dword [ebp - 0x129c]
 mov eax, dword [ebp - 0x12a8]
 push ecx
@@ -23500,7 +23499,7 @@ call fcn_fffae5de  ; call 0xfffae5de
 add esp, 0x10
 jmp near loc_fffb158b  ; jmp 0xfffb158b
 
-loc_fffb2aec:  ; not directly referenced
+loc_fffb2aec:
 sub esp, 0xc
 lea eax, [ebp - 0xd98]
 push 0
@@ -23514,7 +23513,7 @@ call fcn_fffaec9b  ; call 0xfffaec9b
 add esp, 0x20
 jmp near loc_fffb15dc  ; jmp 0xfffb15dc
 
-loc_fffb2b16:  ; not directly referenced
+loc_fffb2b16:
 xor ecx, ecx
 mov edx, 0x48
 lea eax, [ebp - 0x11b4]
@@ -23530,7 +23529,7 @@ mov dword [ebp - 0x12d0], 0
 mov dword [ebp - 0x12c8], ebx
 jmp near loc_fffb1632  ; jmp 0xfffb1632
 
-loc_fffb2b65:  ; not directly referenced
+loc_fffb2b65:
 sub esp, 0xc
 lea esi, [ebp - 0x6d8]
 push 0
@@ -23545,7 +23544,7 @@ call fcn_fffaec9b  ; call 0xfffaec9b
 add esp, 0x20
 jmp near loc_fffb1b9b  ; jmp 0xfffb1b9b
 
-loc_fffb2b95:  ; not directly referenced
+loc_fffb2b95:
 xor ecx, ecx
 mov edx, 0x48
 lea eax, [ebp - 0x11b4]
@@ -23564,7 +23563,7 @@ lea eax, [ebp + eax - 0x1280]
 mov dword [ebp - 0x12c0], eax
 jmp near loc_fffb1bf1  ; jmp 0xfffb1bf1
 
-loc_fffb2bf8:  ; not directly referenced
+loc_fffb2bf8:
 sub esp, 0xc
 lea eax, [ebp - 0xd98]
 push 0
@@ -23579,7 +23578,7 @@ mov dword [ebp - 0x12d4], eax
 add esp, 0x20
 jmp near loc_fffb1f4d  ; jmp 0xfffb1f4d
 
-loc_fffb2c28:  ; not directly referenced
+loc_fffb2c28:
 mov eax, dword [ebp - 0x12d4]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -23588,11 +23587,11 @@ pop edi
 pop ebp
 ret
 
-loc_fffb2c36:
+endloc_fffb2c36:
 db 0x00
 db 0x00
 
-fcn_fffb2c38:  ; not directly referenced
+fcn_fffb2c38:
 push ebp
 mov ebp, esp
 push edi
@@ -23613,16 +23612,16 @@ mov dword [ebp - 0x150], edi
 mov dword [ebp - 0x12c], 0
 mov dword [ebp - 0x168], esi
 
-loc_fffb2c89:  ; not directly referenced
+loc_fffb2c89:
 mov esi, dword [ebp - 0x150]
 cmp byte [esi + 0x3a], 0
-jne loc_fffb3df1  ; jne 0xfffb3df1
+jne near loc_fffb3df1  ; jne 0xfffb3df1
 jmp near loc_fffb3dcf  ; jmp 0xfffb3dcf
 
-loc_fffb2c9e:  ; not directly referenced
+loc_fffb2c9e:
 mov dword [ebp - 0x13c], 0
 
-loc_fffb2ca8:  ; not directly referenced
+loc_fffb2ca8:
 xor ecx, ecx
 mov edx, 0x2400
 mov eax, dword [ebp - 0x168]
@@ -23632,7 +23631,7 @@ sete byte [ebp - 0x146]
 cmp dword [ebp - 0x154], 3
 sete al
 test byte [ebp - 0x146], al
-je loc_fffb321f  ; je 0xfffb321f
+je near loc_fffb321f  ; je 0xfffb321f
 mov eax, dword [ebp - 0x12c]
 mov dword [ebp - 0x120], 0
 shl eax, 8
@@ -23642,13 +23641,13 @@ imul eax, dword [ebp - 0x128], 0x1055
 add eax, edi
 mov dword [ebp - 0x138], eax
 
-loc_fffb2d0e:  ; not directly referenced
+loc_fffb2d0e:
 mov ecx, dword [ebp - 0x12c]
 mov edx, dword [ebp - 0x120]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb3207  ; je 0xfffb3207
+je near loc_fffb3207  ; je 0xfffb3207
 mov al, byte [ebp - 0x120]
 lea edx, [ebp - 0xf0]
 mov byte [ebp - 0x61], al
@@ -23676,22 +23675,22 @@ ja short loc_fffb2da0  ; ja 0xfffb2da0
 mov byte [ebp - 0x134], al
 jmp short loc_fffb2dad  ; jmp 0xfffb2dad
 
-loc_fffb2da0:  ; not directly referenced
+loc_fffb2da0:
 mov byte [ebp - 0x134], 0x20
 sub byte [ebp - 0x134], al
 
-loc_fffb2dad:  ; not directly referenced
+loc_fffb2dad:
 mov dword [ebp - 0x140], 0
 jmp near loc_fffb2f9f  ; jmp 0xfffb2f9f
 
-loc_fffb2dbc:  ; not directly referenced
+loc_fffb2dbc:
 test bl, bl
 jns short loc_fffb2dca  ; jns 0xfffb2dca
 mov bl, 0x20
 sub ebx, dword [ebp - 0x134]
 sub ebx, eax
 
-loc_fffb2dca:  ; not directly referenced
+loc_fffb2dca:
 mov eax, dword [ebp - 0x11c]
 mov esi, ebx
 and eax, 0xc0ffffff
@@ -23715,36 +23714,36 @@ mov word [ebp - 0x146], 0x800
 movzx eax, al
 mov dword [ebp - 0x14c], eax
 
-loc_fffb2e2f:  ; not directly referenced
+loc_fffb2e2f:
 mov ecx, dword [ebp - 0x12c]
 lea edx, [ebp - 0xf0]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 mov ebx, dword [ebp - 0x138]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb4114  ; jne 0xfffb4114
+jne near loc_fffb4114  ; jne 0xfffb4114
 
-loc_fffb2e52:  ; not directly referenced
+loc_fffb2e52:
 xor eax, eax
 mov bl, byte [ebp - 0x12c]
 jmp short loc_fffb2e7c  ; jmp 0xfffb2e7c
 
-loc_fffb2e5c:  ; not directly referenced
+loc_fffb2e5c:
 movzx ecx, al
 test bl, bl
 jne short loc_fffb2e6c  ; jne 0xfffb2e6c
 lea ecx, [ecx*4 + 0x4340]
 jmp short loc_fffb2e73  ; jmp 0xfffb2e73
 
-loc_fffb2e6c:  ; not directly referenced
+loc_fffb2e6c:
 lea ecx, [ecx*4 + 0x4740]
 
-loc_fffb2e73:  ; not directly referenced
+loc_fffb2e73:
 add edx, ecx
 inc eax
 mov dword [edx], 0
 
-loc_fffb2e7c:  ; not directly referenced
+loc_fffb2e7c:
 cmp al, byte [edi + 0x20b5]
 mov edx, dword [edi + 0x2223]
 jb short loc_fffb2e5c  ; jb 0xfffb2e5c
@@ -23767,11 +23766,11 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffb3207  ; jne 0xfffb3207
+jne near loc_fffb3207  ; jne 0xfffb3207
 cmp dword [ebp - 0x13c], 0
 jne short loc_fffb2f04  ; jne 0xfffb2f04
 
-loc_fffb2ed2:  ; not directly referenced
+loc_fffb2ed2:
 mov eax, dword [edi + 0x2223]
 or esi, 0x10
 xor ecx, ecx
@@ -23785,17 +23784,17 @@ mov dl, byte [ebp - 0x12c]
 mov byte [ebp - 0x148], dl
 jmp near loc_fffb2f84  ; jmp 0xfffb2f84
 
-loc_fffb2f04:  ; not directly referenced
+loc_fffb2f04:
 mov ebx, dword [ebp - 0x138]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb412c  ; jne 0xfffb412c
+jne near loc_fffb412c  ; jne 0xfffb412c
 jmp short loc_fffb2ed2  ; jmp 0xfffb2ed2
 
-loc_fffb2f16:  ; not directly referenced
+loc_fffb2f16:
 mov ebx, 0xc
 jmp near loc_fffb3207  ; jmp 0xfffb3207
 
-loc_fffb2f20:  ; not directly referenced
+loc_fffb2f20:
 cmp byte [ebp - 0x148], 0
 mov ecx, dword [edi + 0x2223]
 movzx edx, al
@@ -23803,10 +23802,10 @@ jne short loc_fffb2f3b  ; jne 0xfffb2f3b
 lea edx, [edx*4 + 0x4340]
 jmp short loc_fffb2f42  ; jmp 0xfffb2f42
 
-loc_fffb2f3b:  ; not directly referenced
+loc_fffb2f3b:
 lea edx, [edx*4 + 0x4740]
 
-loc_fffb2f42:  ; not directly referenced
+loc_fffb2f42:
 add edx, ecx
 mov esi, dword [ebp - 0x124]
 mov ecx, dword [edx]
@@ -23822,37 +23821,37 @@ mov ebx, dword [ebp - 0x124]
 mov word [ebx + edx*2], 0xffff
 jmp short loc_fffb2f83  ; jmp 0xfffb2f83
 
-loc_fffb2f77:  ; not directly referenced
+loc_fffb2f77:
 mov esi, dword [ebp - 0x124]
 add ecx, ebx
 mov word [esi + edx*2], cx
 
-loc_fffb2f83:  ; not directly referenced
+loc_fffb2f83:
 inc eax
 
-loc_fffb2f84:  ; not directly referenced
+loc_fffb2f84:
 cmp al, byte [edi + 0x20b5]
 jb short loc_fffb2f20  ; jb 0xfffb2f20
 dec word [ebp - 0x146]
-jne loc_fffb2e2f  ; jne 0xfffb2e2f
+jne near loc_fffb2e2f  ; jne 0xfffb2e2f
 inc dword [ebp - 0x140]
 
-loc_fffb2f9f:  ; not directly referenced
+loc_fffb2f9f:
 mov al, byte [ebp - 0x140]
 mov bl, byte [ebp - 0x134]
 add ebx, eax
 cmp bl, 0x1f
-jle loc_fffb2dbc  ; jle 0xfffb2dbc
+jle near loc_fffb2dbc  ; jle 0xfffb2dbc
 mov dword [ebp - 0x140], 0
 jmp near loc_fffb319e  ; jmp 0xfffb319e
 
-loc_fffb2fc5:  ; not directly referenced
+loc_fffb2fc5:
 test bl, bl
 jns short loc_fffb2fd2  ; jns 0xfffb2fd2
 sub eax, dword [ebp - 0x134]
 lea ebx, [eax + 0x20]
 
-loc_fffb2fd2:  ; not directly referenced
+loc_fffb2fd2:
 mov eax, dword [ebp - 0x11c]
 mov esi, ebx
 and eax, 0xc0ffffff
@@ -23876,36 +23875,36 @@ mov word [ebp - 0x146], 0x800
 movzx eax, al
 mov dword [ebp - 0x14c], eax
 
-loc_fffb3037:  ; not directly referenced
+loc_fffb3037:
 mov ecx, dword [ebp - 0x12c]
 lea edx, [ebp - 0xf0]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 mov ebx, dword [ebp - 0x138]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb4163  ; jne 0xfffb4163
+jne near loc_fffb4163  ; jne 0xfffb4163
 
-loc_fffb305a:  ; not directly referenced
+loc_fffb305a:
 xor eax, eax
 mov bl, byte [ebp - 0x12c]
 jmp short loc_fffb3084  ; jmp 0xfffb3084
 
-loc_fffb3064:  ; not directly referenced
+loc_fffb3064:
 movzx ecx, al
 test bl, bl
 jne short loc_fffb3074  ; jne 0xfffb3074
 lea ecx, [ecx*4 + 0x4340]
 jmp short loc_fffb307b  ; jmp 0xfffb307b
 
-loc_fffb3074:  ; not directly referenced
+loc_fffb3074:
 lea ecx, [ecx*4 + 0x4740]
 
-loc_fffb307b:  ; not directly referenced
+loc_fffb307b:
 add edx, ecx
 inc eax
 mov dword [edx], 0
 
-loc_fffb3084:  ; not directly referenced
+loc_fffb3084:
 cmp al, byte [edi + 0x20b5]
 mov edx, dword [edi + 0x2223]
 jb short loc_fffb3064  ; jb 0xfffb3064
@@ -23928,11 +23927,11 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffb3207  ; jne 0xfffb3207
+jne near loc_fffb3207  ; jne 0xfffb3207
 cmp dword [ebp - 0x13c], 0
 jne short loc_fffb310d  ; jne 0xfffb310d
 
-loc_fffb30da:  ; not directly referenced
+loc_fffb30da:
 mov eax, dword [edi + 0x2223]
 or esi, 0x10
 xor ecx, ecx
@@ -23941,18 +23940,18 @@ mov dword [eax + 0x5030], esi
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffb2f16  ; jne 0xfffb2f16
+jne near loc_fffb2f16  ; jne 0xfffb2f16
 mov dl, byte [ebp - 0x12c]
 mov byte [ebp - 0x148], dl
 jmp short loc_fffb3183  ; jmp 0xfffb3183
 
-loc_fffb310d:  ; not directly referenced
+loc_fffb310d:
 mov ebx, dword [ebp - 0x138]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb417b  ; jne 0xfffb417b
+jne near loc_fffb417b  ; jne 0xfffb417b
 jmp short loc_fffb30da  ; jmp 0xfffb30da
 
-loc_fffb311f:  ; not directly referenced
+loc_fffb311f:
 cmp byte [ebp - 0x148], 0
 mov ecx, dword [edi + 0x2223]
 movzx edx, al
@@ -23960,10 +23959,10 @@ jne short loc_fffb313a  ; jne 0xfffb313a
 lea edx, [edx*4 + 0x4340]
 jmp short loc_fffb3141  ; jmp 0xfffb3141
 
-loc_fffb313a:  ; not directly referenced
+loc_fffb313a:
 lea edx, [edx*4 + 0x4740]
 
-loc_fffb3141:  ; not directly referenced
+loc_fffb3141:
 add edx, ecx
 mov esi, dword [ebp - 0x124]
 mov ecx, dword [edx]
@@ -23979,38 +23978,38 @@ mov ebx, dword [ebp - 0x124]
 mov word [ebx + edx*2], 0xffff
 jmp short loc_fffb3182  ; jmp 0xfffb3182
 
-loc_fffb3176:  ; not directly referenced
+loc_fffb3176:
 mov esi, dword [ebp - 0x124]
 add ecx, ebx
 mov word [esi + edx*2], cx
 
-loc_fffb3182:  ; not directly referenced
+loc_fffb3182:
 inc eax
 
-loc_fffb3183:  ; not directly referenced
+loc_fffb3183:
 cmp al, byte [edi + 0x20b5]
 jb short loc_fffb311f  ; jb 0xfffb311f
 dec word [ebp - 0x146]
-jne loc_fffb3037  ; jne 0xfffb3037
+jne near loc_fffb3037  ; jne 0xfffb3037
 inc dword [ebp - 0x140]
 
-loc_fffb319e:  ; not directly referenced
+loc_fffb319e:
 mov al, byte [ebp - 0x140]
 mov bl, byte [ebp - 0x134]
 sub ebx, eax
 cmp bl, 0xe1
-jge loc_fffb2fc5  ; jge 0xfffb2fc5
+jge near loc_fffb2fc5  ; jge 0xfffb2fc5
 xor eax, eax
 jmp short loc_fffb31cd  ; jmp 0xfffb31cd
 
-loc_fffb31b9:  ; not directly referenced
+loc_fffb31b9:
 movzx edx, al
 mov ebx, dword [ebp - 0x124]
 shl edx, 8
 inc eax
 mov word [ebx + edx + 0x7e], 0xff
 
-loc_fffb31cd:  ; not directly referenced
+loc_fffb31cd:
 cmp al, byte [edi + 0x20b5]
 jb short loc_fffb31b9  ; jb 0xfffb31b9
 mov eax, dword [ebp - 0x11c]
@@ -24026,44 +24025,44 @@ mov edx, 0x37ef
 mov eax, edi
 call fcn_fffbfa08  ; call 0xfffbfa08
 
-loc_fffb3207:  ; not directly referenced
+loc_fffb3207:
 inc dword [ebp - 0x120]
 cmp dword [ebp - 0x120], 4
-jne loc_fffb2d0e  ; jne 0xfffb2d0e
+jne near loc_fffb2d0e  ; jne 0xfffb2d0e
 jmp near loc_fffb39b4  ; jmp 0xfffb39b4
 
-loc_fffb321f:  ; not directly referenced
+loc_fffb321f:
 imul eax, dword [ebp - 0x128], 0x1055
 mov word [ebp - 0x148], 0x800
 add eax, edi
 mov dword [ebp - 0x15c], eax
 
-loc_fffb323a:  ; not directly referenced
+loc_fffb323a:
 mov ecx, dword [ebp - 0x12c]
 lea edx, [ebp - 0x108]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 mov esi, dword [ebp - 0x15c]
 cmp byte [esi + 0x3a], 0
-jne loc_fffb41b2  ; jne 0xfffb41b2
+jne near loc_fffb41b2  ; jne 0xfffb41b2
 
-loc_fffb325d:  ; not directly referenced
+loc_fffb325d:
 mov dword [ebp - 0x124], 0
 
-loc_fffb3267:  ; not directly referenced
+loc_fffb3267:
 mov ecx, dword [ebp - 0x12c]
 mov edx, dword [ebp - 0x124]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb396d  ; je 0xfffb396d
+je near loc_fffb396d  ; je 0xfffb396d
 mov al, byte [ebp - 0x124]
 cmp byte [ebp - 0x146], 0
 mov byte [ebp - 0x61], al
 mov byte [ebp - 0x4c], al
 mov byte [ebp - 0x37], al
 mov byte [ebp - 0x22], al
-je loc_fffb392f  ; je 0xfffb392f
+je near loc_fffb392f  ; je 0xfffb392f
 imul eax, dword [ebp - 0x124], 0x900
 lea esi, [edi + eax + 0x3c31]
 mov al, byte [ebp - 0x12c]
@@ -24074,10 +24073,10 @@ jne short loc_fffb32cc  ; jne 0xfffb32cc
 mov edx, dword [eax]
 jmp short loc_fffb32d2  ; jmp 0xfffb32d2
 
-loc_fffb32cc:  ; not directly referenced
+loc_fffb32cc:
 mov edx, dword [eax + 0x100]
 
-loc_fffb32d2:  ; not directly referenced
+loc_fffb32d2:
 and edx, 0xbfffffff
 mov dword [eax + 0x4eb0], 0
 mov cl, byte [edi + 0x20b5]
@@ -24088,7 +24087,7 @@ mov byte [ebp - 0x134], 0xe0
 mov byte [ebp - 0x130], 0x1f
 jmp near loc_fffb3390  ; jmp 0xfffb3390
 
-loc_fffb3309:  ; not directly referenced
+loc_fffb3309:
 mov edx, ebx
 mov eax, dword [ebp - 0x12c]
 mov dword [ebp + ebx*4 - 0xe4], 1
@@ -24110,7 +24109,7 @@ movsx edx, byte [ebp - 0x134]
 cmp eax, edx
 jmp short loc_fffb3380  ; jmp 0xfffb3380
 
-loc_fffb3361:  ; not directly referenced
+loc_fffb3361:
 mov al, 0x20
 sub eax, edx
 mov dl, byte [ebp - 0x130]
@@ -24119,20 +24118,20 @@ cmovg edx, eax
 cmp al, byte [ebp - 0x134]
 mov byte [ebp - 0x130], dl
 
-loc_fffb3380:  ; not directly referenced
+loc_fffb3380:
 mov cl, byte [ebp - 0x134]
 cmovg ecx, eax
 inc ebx
 mov byte [ebp - 0x134], cl
 
-loc_fffb3390:  ; not directly referenced
+loc_fffb3390:
 cmp byte [ebp - 0x11c], bl
-ja loc_fffb3309  ; ja 0xfffb3309
+ja near loc_fffb3309  ; ja 0xfffb3309
 mov dword [ebp - 0x14c], 0
 mov byte [ebp - 0x140], 0
 jmp near loc_fffb3611  ; jmp 0xfffb3611
 
-loc_fffb33b2:  ; not directly referenced
+loc_fffb33b2:
 cmp byte [ebp - 0x11c], 0
 jns short loc_fffb33d4  ; jns 0xfffb33d4
 mov byte [ebp - 0x11c], 0x20
@@ -24140,7 +24139,7 @@ mov bl, byte [ebp - 0x130]
 sub byte [ebp - 0x11c], bl
 sub byte [ebp - 0x11c], al
 
-loc_fffb33d4:  ; not directly referenced
+loc_fffb33d4:
 mov eax, dword [ebp - 0x120]
 mov bl, byte [ebp - 0x11c]
 shl ebx, 0x18
@@ -24152,23 +24151,23 @@ mov eax, dword [edi + 0x2223]
 jne short loc_fffb3409  ; jne 0xfffb3409
 mov dword [eax + 0x3000], ebx
 
-loc_fffb3405:  ; not directly referenced
+loc_fffb3405:
 xor edx, edx
 jmp short loc_fffb3466  ; jmp 0xfffb3466
 
-loc_fffb3409:  ; not directly referenced
+loc_fffb3409:
 mov ebx, dword [ebp - 0x120]
 mov dword [eax + 0x3100], ebx
 jmp short loc_fffb3405  ; jmp 0xfffb3405
 
-loc_fffb3417:  ; not directly referenced
+loc_fffb3417:
 movzx eax, dl
 mov bl, byte [ebp - 0x11c]
 cmp bl, byte [ebp + eax - 0xf0]
 jne short loc_fffb3434  ; jne 0xfffb3434
 mov dword [ebp + eax*4 - 0xe4], 0
 
-loc_fffb3434:  ; not directly referenced
+loc_fffb3434:
 cmp dword [ebp + eax*4 - 0xe4], 0
 jne short loc_fffb3465  ; jne 0xfffb3465
 cmp byte [ebp - 0x144], 0
@@ -24177,17 +24176,17 @@ jne short loc_fffb3456  ; jne 0xfffb3456
 lea eax, [eax*4 + 0x4340]
 jmp short loc_fffb345d  ; jmp 0xfffb345d
 
-loc_fffb3456:  ; not directly referenced
+loc_fffb3456:
 lea eax, [eax*4 + 0x4740]
 
-loc_fffb345d:  ; not directly referenced
+loc_fffb345d:
 add ecx, eax
 mov dword [ecx], 0
 
-loc_fffb3465:  ; not directly referenced
+loc_fffb3465:
 inc edx
 
-loc_fffb3466:  ; not directly referenced
+loc_fffb3466:
 cmp dl, byte [edi + 0x20b5]
 jb short loc_fffb3417  ; jb 0xfffb3417
 mov eax, dword [edi + 0x2223]
@@ -24211,11 +24210,11 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffb396d  ; jne 0xfffb396d
+jne near loc_fffb396d  ; jne 0xfffb396d
 cmp dword [ebp - 0x13c], 0
 jne short loc_fffb3517  ; jne 0xfffb3517
 
-loc_fffb34c2:  ; not directly referenced
+loc_fffb34c2:
 mov edx, dword [edi + 0x2223]
 mov eax, dword [ebp - 0x138]
 or eax, 0x10
@@ -24237,32 +24236,32 @@ movzx edx, al
 mov dword [ebp - 0x138], edx
 jmp near loc_fffb35f9  ; jmp 0xfffb35f9
 
-loc_fffb3517:  ; not directly referenced
+loc_fffb3517:
 mov ebx, dword [ebp - 0x15c]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb41ca  ; jne 0xfffb41ca
+jne near loc_fffb41ca  ; jne 0xfffb41ca
 jmp short loc_fffb34c2  ; jmp 0xfffb34c2
 
-loc_fffb3529:  ; not directly referenced
+loc_fffb3529:
 mov ebx, 0xc
 jmp near loc_fffb396d  ; jmp 0xfffb396d
 
-loc_fffb3533:  ; not directly referenced
+loc_fffb3533:
 movzx edx, byte [ebp - 0x11c]
 cmp dword [ebp + edx*4 - 0xe4], 0
-jne loc_fffb35f3  ; jne 0xfffb35f3
+jne near loc_fffb35f3  ; jne 0xfffb35f3
 test al, al
-js loc_fffb3928  ; js 0xfffb3928
+js near loc_fffb3928  ; js 0xfffb3928
 cmp byte [ebp - 0x144], 0
 mov ebx, dword [edi + 0x2223]
 jne short loc_fffb3568  ; jne 0xfffb3568
 lea ecx, [edx*4 + 0x4340]
 jmp short loc_fffb356f  ; jmp 0xfffb356f
 
-loc_fffb3568:  ; not directly referenced
+loc_fffb3568:
 lea ecx, [edx*4 + 0x4740]
 
-loc_fffb356f:  ; not directly referenced
+loc_fffb356f:
 add ecx, ebx
 mov ecx, dword [ecx]
 mov dword [ebp - 0x174], ecx
@@ -24277,12 +24276,12 @@ jbe short loc_fffb35a5  ; jbe 0xfffb35a5
 mov word [esi + ecx*2], 0xffff
 jmp short loc_fffb35b5  ; jmp 0xfffb35b5
 
-loc_fffb35a5:  ; not directly referenced
+loc_fffb35a5:
 mov ebx, dword [ebp - 0x174]
 add ebx, dword [ebp - 0x158]
 mov word [esi + ecx*2], bx
 
-loc_fffb35b5:  ; not directly referenced
+loc_fffb35b5:
 mov ecx, edx
 shl ecx, 7
 add ecx, dword [ebp - 0x138]
@@ -24296,24 +24295,24 @@ add ecx, esi
 xor edx, edx
 jmp short loc_fffb35ef  ; jmp 0xfffb35ef
 
-loc_fffb35e8:  ; not directly referenced
+loc_fffb35e8:
 mov word [ecx + edx*2], 0xffff
 inc edx
 
-loc_fffb35ef:  ; not directly referenced
+loc_fffb35ef:
 cmp al, dl
 ja short loc_fffb35e8  ; ja 0xfffb35e8
 
-loc_fffb35f3:  ; not directly referenced
+loc_fffb35f3:
 inc byte [ebp - 0x11c]
 
-loc_fffb35f9:  ; not directly referenced
+loc_fffb35f9:
 mov dl, byte [ebp - 0x11c]
 cmp dl, byte [edi + 0x20b5]
-jb loc_fffb3533  ; jb 0xfffb3533
+jb near loc_fffb3533  ; jb 0xfffb3533
 inc dword [ebp - 0x14c]
 
-loc_fffb3611:  ; not directly referenced
+loc_fffb3611:
 mov al, byte [ebp - 0x14c]
 mov bl, byte [ebp - 0x130]
 add ebx, eax
@@ -24322,32 +24321,32 @@ mov byte [ebp - 0x11c], bl
 jg short loc_fffb363c  ; jg 0xfffb363c
 mov bl, byte [ebp - 0x140]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffb33b2  ; jb 0xfffb33b2
+jb near loc_fffb33b2  ; jb 0xfffb33b2
 
-loc_fffb363c:  ; not directly referenced
+loc_fffb363c:
 movzx edx, byte [edi + 0x20b5]
 xor eax, eax
 jmp short loc_fffb3653  ; jmp 0xfffb3653
 
-loc_fffb3647:  ; not directly referenced
+loc_fffb3647:
 mov dword [ebp + eax*4 - 0xe4], 1
 inc eax
 
-loc_fffb3653:  ; not directly referenced
+loc_fffb3653:
 cmp eax, edx
 jl short loc_fffb3647  ; jl 0xfffb3647
 mov dword [ebp - 0x140], 0
 mov byte [ebp - 0x138], 0
 jmp near loc_fffb38bd  ; jmp 0xfffb38bd
 
-loc_fffb366d:  ; not directly referenced
+loc_fffb366d:
 cmp byte [ebp - 0x11c], 0
 jns short loc_fffb3685  ; jns 0xfffb3685
 sub eax, dword [ebp - 0x134]
 add eax, 0x20
 mov byte [ebp - 0x11c], al
 
-loc_fffb3685:  ; not directly referenced
+loc_fffb3685:
 mov eax, dword [ebp - 0x120]
 mov bl, byte [ebp - 0x11c]
 shl ebx, 0x18
@@ -24359,23 +24358,23 @@ mov eax, dword [edi + 0x2223]
 jne short loc_fffb36ba  ; jne 0xfffb36ba
 mov dword [eax + 0x3000], ebx
 
-loc_fffb36b6:  ; not directly referenced
+loc_fffb36b6:
 xor edx, edx
 jmp short loc_fffb3717  ; jmp 0xfffb3717
 
-loc_fffb36ba:  ; not directly referenced
+loc_fffb36ba:
 mov ebx, dword [ebp - 0x120]
 mov dword [eax + 0x3100], ebx
 jmp short loc_fffb36b6  ; jmp 0xfffb36b6
 
-loc_fffb36c8:  ; not directly referenced
+loc_fffb36c8:
 movzx eax, dl
 mov bl, byte [ebp - 0x11c]
 cmp bl, byte [ebp + eax - 0xf0]
 jne short loc_fffb36e5  ; jne 0xfffb36e5
 mov dword [ebp + eax*4 - 0xe4], 0
 
-loc_fffb36e5:  ; not directly referenced
+loc_fffb36e5:
 cmp dword [ebp + eax*4 - 0xe4], 0
 jne short loc_fffb3716  ; jne 0xfffb3716
 cmp byte [ebp - 0x144], 0
@@ -24384,17 +24383,17 @@ jne short loc_fffb3707  ; jne 0xfffb3707
 lea eax, [eax*4 + 0x4340]
 jmp short loc_fffb370e  ; jmp 0xfffb370e
 
-loc_fffb3707:  ; not directly referenced
+loc_fffb3707:
 lea eax, [eax*4 + 0x4740]
 
-loc_fffb370e:  ; not directly referenced
+loc_fffb370e:
 add ecx, eax
 mov dword [ecx], 0
 
-loc_fffb3716:  ; not directly referenced
+loc_fffb3716:
 inc edx
 
-loc_fffb3717:  ; not directly referenced
+loc_fffb3717:
 cmp dl, byte [edi + 0x20b5]
 jb short loc_fffb36c8  ; jb 0xfffb36c8
 mov eax, dword [edi + 0x2223]
@@ -24418,11 +24417,11 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffb396d  ; jne 0xfffb396d
+jne near loc_fffb396d  ; jne 0xfffb396d
 cmp dword [ebp - 0x13c], 0
 jne short loc_fffb37cc  ; jne 0xfffb37cc
 
-loc_fffb3773:  ; not directly referenced
+loc_fffb3773:
 mov edx, dword [edi + 0x2223]
 mov eax, dword [ebp - 0x130]
 or eax, 0x10
@@ -24432,7 +24431,7 @@ mov edx, 0x64
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffb3529  ; jne 0xfffb3529
+jne near loc_fffb3529  ; jne 0xfffb3529
 mov dl, byte [ebp - 0x11c]
 mov al, 0x1f
 dec edx
@@ -24444,26 +24443,26 @@ movzx edx, al
 mov dword [ebp - 0x130], edx
 jmp near loc_fffb38a5  ; jmp 0xfffb38a5
 
-loc_fffb37cc:  ; not directly referenced
+loc_fffb37cc:
 mov ebx, dword [ebp - 0x15c]
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb4201  ; jne 0xfffb4201
+jne near loc_fffb4201  ; jne 0xfffb4201
 jmp short loc_fffb3773  ; jmp 0xfffb3773
 
-loc_fffb37de:  ; not directly referenced
+loc_fffb37de:
 movzx edx, byte [ebp - 0x11c]
 cmp dword [ebp + edx*4 - 0xe4], 0
-jne loc_fffb389f  ; jne 0xfffb389f
+jne near loc_fffb389f  ; jne 0xfffb389f
 cmp byte [ebp - 0x144], 0
 mov ebx, dword [edi + 0x2223]
 jne short loc_fffb380b  ; jne 0xfffb380b
 lea ecx, [edx*4 + 0x4340]
 jmp short loc_fffb3812  ; jmp 0xfffb3812
 
-loc_fffb380b:  ; not directly referenced
+loc_fffb380b:
 lea ecx, [edx*4 + 0x4740]
 
-loc_fffb3812:  ; not directly referenced
+loc_fffb3812:
 add ecx, ebx
 mov ecx, dword [ecx]
 mov dword [ebp - 0x160], ecx
@@ -24478,12 +24477,12 @@ jbe short loc_fffb3848  ; jbe 0xfffb3848
 mov word [esi + ecx*2], 0xffff
 jmp short loc_fffb3858  ; jmp 0xfffb3858
 
-loc_fffb3848:  ; not directly referenced
+loc_fffb3848:
 mov ebx, dword [ebp - 0x160]
 add ebx, dword [ebp - 0x14c]
 mov word [esi + ecx*2], bx
 
-loc_fffb3858:  ; not directly referenced
+loc_fffb3858:
 mov ecx, edx
 shl ecx, 7
 add ecx, dword [ebp - 0x130]
@@ -24498,25 +24497,25 @@ xor ecx, ecx
 mov dl, 0x3f
 jmp short loc_fffb3898  ; jmp 0xfffb3898
 
-loc_fffb388d:  ; not directly referenced
+loc_fffb388d:
 mov word [ebx + ecx + 0x80], 0xffff
 dec edx
 
-loc_fffb3898:  ; not directly referenced
+loc_fffb3898:
 sub ecx, 2
 cmp dl, al
 ja short loc_fffb388d  ; ja 0xfffb388d
 
-loc_fffb389f:  ; not directly referenced
+loc_fffb389f:
 inc byte [ebp - 0x11c]
 
-loc_fffb38a5:  ; not directly referenced
+loc_fffb38a5:
 mov dl, byte [ebp - 0x11c]
 cmp dl, byte [edi + 0x20b5]
-jb loc_fffb37de  ; jb 0xfffb37de
+jb near loc_fffb37de  ; jb 0xfffb37de
 inc dword [ebp - 0x140]
 
-loc_fffb38bd:  ; not directly referenced
+loc_fffb38bd:
 mov al, byte [ebp - 0x140]
 mov bl, byte [ebp - 0x134]
 sub ebx, eax
@@ -24525,10 +24524,10 @@ mov byte [ebp - 0x11c], bl
 jl short loc_fffb391a  ; jl 0xfffb391a
 mov bl, byte [ebp - 0x138]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffb366d  ; jb 0xfffb366d
+jb near loc_fffb366d  ; jb 0xfffb366d
 jmp short loc_fffb391a  ; jmp 0xfffb391a
 
-loc_fffb38ea:  ; not directly referenced
+loc_fffb38ea:
 movzx esi, bl
 mov eax, dword [ebp - 0x12c]
 mov edx, esi
@@ -24543,20 +24542,20 @@ or edx, ecx
 mov dword [eax], edx
 jmp short loc_fffb391c  ; jmp 0xfffb391c
 
-loc_fffb391a:  ; not directly referenced
+loc_fffb391a:
 xor ebx, ebx
 
-loc_fffb391c:  ; not directly referenced
+loc_fffb391c:
 cmp bl, byte [edi + 0x20b5]
 jb short loc_fffb38ea  ; jb 0xfffb38ea
 xor ebx, ebx
 jmp short loc_fffb396d  ; jmp 0xfffb396d
 
-loc_fffb3928:  ; not directly referenced
+loc_fffb3928:
 mov ebx, 2
 jmp short loc_fffb396d  ; jmp 0xfffb396d
 
-loc_fffb392f:  ; not directly referenced
+loc_fffb392f:
 imul eax, dword [ebp - 0x124], 0x900
 sub esp, 0xc
 mov ecx, dword [ebp - 0x12c]
@@ -24572,19 +24571,19 @@ call fcn_fffc7b0a  ; call 0xfffc7b0a
 mov ebx, eax
 add esp, 0x20
 
-loc_fffb396d:  ; not directly referenced
+loc_fffb396d:
 inc dword [ebp - 0x124]
 cmp dword [ebp - 0x124], 4
-jne loc_fffb3267  ; jne 0xfffb3267
+jne near loc_fffb3267  ; jne 0xfffb3267
 dec word [ebp - 0x148]
-jne loc_fffb323a  ; jne 0xfffb323a
+jne near loc_fffb323a  ; jne 0xfffb323a
 imul esi, dword [ebp - 0x12c], 0x1055
 cmp byte [ebp - 0x146], 0
 mov dword [ebp - 0x128], 0
 mov dword [ebp - 0x11c], esi
-je loc_fffb3b24  ; je 0xfffb3b24
+je near loc_fffb3b24  ; je 0xfffb3b24
 
-loc_fffb39b4:  ; not directly referenced
+loc_fffb39b4:
 imul esi, dword [ebp - 0x12c], 0x1055
 mov eax, dword [ebp - 0x12c]
 shl eax, 8
@@ -24593,16 +24592,16 @@ add eax, 0xe3c
 mov dword [ebp - 0x124], esi
 mov dword [ebp - 0x13c], eax
 
-loc_fffb39e2:  ; not directly referenced
+loc_fffb39e2:
 mov ecx, dword [ebp - 0x12c]
 mov edx, dword [ebp - 0x128]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-jne loc_fffb3ae6  ; jne 0xfffb3ae6
+jne near loc_fffb3ae6  ; jne 0xfffb3ae6
 jmp near loc_fffb3b0c  ; jmp 0xfffb3b0c
 
-loc_fffb3a02:  ; not directly referenced
+loc_fffb3a02:
 movzx edx, byte [ebp - 0x11c]
 mov esi, dword [ebp - 0x134]
 add esi, edx
@@ -24619,7 +24618,7 @@ call fcn_fffc3287  ; call 0xfffc3287
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb3ade  ; jne 0xfffb3ade
+jne near loc_fffb3ade  ; jne 0xfffb3ade
 cmp dword [ebp - 0x154], 2
 mov ecx, dword [edi + 0x2223]
 ja short loc_fffb3aa7  ; ja 0xfffb3aa7
@@ -24642,7 +24641,7 @@ mov dl, byte [ebp - 0x109]
 mov byte [eax + 0xe], dl
 jmp short loc_fffb3ade  ; jmp 0xfffb3ade
 
-loc_fffb3aa7:  ; not directly referenced
+loc_fffb3aa7:
 add ecx, dword [ebp - 0x13c]
 mov dl, byte [ebp - 0x10a]
 mov eax, dword [ecx]
@@ -24656,43 +24655,43 @@ mov byte [eax + 0x15], dl
 mov dl, byte [ebp - 0x109]
 mov byte [eax + 0x16], dl
 
-loc_fffb3ade:  ; not directly referenced
+loc_fffb3ade:
 inc byte [ebp - 0x11c]
 jmp short loc_fffb3afa  ; jmp 0xfffb3afa
 
-loc_fffb3ae6:  ; not directly referenced
+loc_fffb3ae6:
 imul esi, dword [ebp - 0x128], 9
 mov byte [ebp - 0x11c], 0
 mov dword [ebp - 0x134], esi
 
-loc_fffb3afa:  ; not directly referenced
+loc_fffb3afa:
 mov al, byte [ebp - 0x11c]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb3a02  ; jb 0xfffb3a02
+jb near loc_fffb3a02  ; jb 0xfffb3a02
 
-loc_fffb3b0c:  ; not directly referenced
+loc_fffb3b0c:
 inc dword [ebp - 0x128]
 cmp dword [ebp - 0x128], 4
-jne loc_fffb39e2  ; jne 0xfffb39e2
+jne near loc_fffb39e2  ; jne 0xfffb39e2
 jmp near loc_fffb3dcf  ; jmp 0xfffb3dcf
 
-loc_fffb3b24:  ; not directly referenced
+loc_fffb3b24:
 mov ecx, dword [ebp - 0x12c]
 mov edx, dword [ebp - 0x128]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb3dbc  ; je 0xfffb3dbc
+je near loc_fffb3dbc  ; je 0xfffb3dbc
 cmp dword [ebp - 0x154], 1
-je loc_fffb3ced  ; je 0xfffb3ced
-jb loc_fffb3c5f  ; jb 0xfffb3c5f
+je near loc_fffb3ced  ; je 0xfffb3ced
+jb near loc_fffb3c5f  ; jb 0xfffb3c5f
 cmp dword [ebp - 0x154], 2
-je loc_fffb3d96  ; je 0xfffb3d96
+je near loc_fffb3d96  ; je 0xfffb3d96
 cmp dword [ebp - 0x154], 3
-jne loc_fffb3dbc  ; jne 0xfffb3dbc
+jne near loc_fffb3dbc  ; jne 0xfffb3dbc
 jmp short loc_fffb3bd1  ; jmp 0xfffb3bd1
 
-loc_fffb3b6e:  ; not directly referenced
+loc_fffb3b6e:
 movzx eax, byte [ebp - 0x120]
 mov esi, dword [ebp - 0x124]
 add esi, eax
@@ -24717,22 +24716,22 @@ mov byte [eax + 0xd], dl
 mov dl, byte [ebp - 0x109]
 mov byte [eax + 0xe], dl
 
-loc_fffb3bc9:  ; not directly referenced
+loc_fffb3bc9:
 inc byte [ebp - 0x120]
 jmp short loc_fffb3be5  ; jmp 0xfffb3be5
 
-loc_fffb3bd1:  ; not directly referenced
+loc_fffb3bd1:
 imul esi, dword [ebp - 0x128], 9
 mov byte [ebp - 0x120], 0
 mov dword [ebp - 0x124], esi
 
-loc_fffb3be5:  ; not directly referenced
+loc_fffb3be5:
 mov al, byte [ebp - 0x120]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb3b6e  ; jb 0xfffb3b6e
+jb near loc_fffb3b6e  ; jb 0xfffb3b6e
 jmp near loc_fffb3dbc  ; jmp 0xfffb3dbc
 
-loc_fffb3bfc:  ; not directly referenced
+loc_fffb3bfc:
 movzx eax, byte [ebp - 0x120]
 mov esi, dword [ebp - 0x124]
 add esi, eax
@@ -24757,22 +24756,22 @@ mov byte [eax + 0x15], dl
 mov dl, byte [ebp - 0x109]
 mov byte [eax + 0x16], dl
 
-loc_fffb3c57:  ; not directly referenced
+loc_fffb3c57:
 inc byte [ebp - 0x120]
 jmp short loc_fffb3c73  ; jmp 0xfffb3c73
 
-loc_fffb3c5f:  ; not directly referenced
+loc_fffb3c5f:
 imul esi, dword [ebp - 0x128], 9
 mov byte [ebp - 0x120], 0
 mov dword [ebp - 0x124], esi
 
-loc_fffb3c73:  ; not directly referenced
+loc_fffb3c73:
 mov al, byte [ebp - 0x120]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb3bfc  ; jb 0xfffb3bfc
+jb near loc_fffb3bfc  ; jb 0xfffb3bfc
 jmp near loc_fffb3dbc  ; jmp 0xfffb3dbc
 
-loc_fffb3c8a:  ; not directly referenced
+loc_fffb3c8a:
 movzx eax, byte [ebp - 0x120]
 mov esi, dword [ebp - 0x124]
 add esi, eax
@@ -24797,22 +24796,22 @@ mov byte [eax + 0xd], dl
 mov dl, byte [ebp - 0x109]
 mov byte [eax + 0xe], dl
 
-loc_fffb3ce5:  ; not directly referenced
+loc_fffb3ce5:
 inc byte [ebp - 0x120]
 jmp short loc_fffb3d01  ; jmp 0xfffb3d01
 
-loc_fffb3ced:  ; not directly referenced
+loc_fffb3ced:
 imul esi, dword [ebp - 0x128], 9
 mov byte [ebp - 0x120], 0
 mov dword [ebp - 0x124], esi
 
-loc_fffb3d01:  ; not directly referenced
+loc_fffb3d01:
 mov al, byte [ebp - 0x120]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb3c8a  ; jb 0xfffb3c8a
+jb near loc_fffb3c8a  ; jb 0xfffb3c8a
 jmp near loc_fffb3dbc  ; jmp 0xfffb3dbc
 
-loc_fffb3d18:  ; not directly referenced
+loc_fffb3d18:
 movzx eax, byte [ebp - 0x120]
 mov esi, dword [ebp - 0x124]
 add esi, eax
@@ -24843,33 +24842,33 @@ mov dl, byte [ebp - 0x10a]
 mov byte [ecx + 0xd], dl
 mov byte [ecx + 0xe], al
 
-loc_fffb3d8e:  ; not directly referenced
+loc_fffb3d8e:
 inc byte [ebp - 0x120]
 jmp short loc_fffb3daa  ; jmp 0xfffb3daa
 
-loc_fffb3d96:  ; not directly referenced
+loc_fffb3d96:
 imul esi, dword [ebp - 0x128], 9
 mov byte [ebp - 0x120], 0
 mov dword [ebp - 0x124], esi
 
-loc_fffb3daa:  ; not directly referenced
+loc_fffb3daa:
 mov al, byte [ebp - 0x120]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb3d18  ; jb 0xfffb3d18
+jb near loc_fffb3d18  ; jb 0xfffb3d18
 
-loc_fffb3dbc:  ; not directly referenced
+loc_fffb3dbc:
 inc dword [ebp - 0x128]
 cmp dword [ebp - 0x128], 4
-jne loc_fffb3b24  ; jne 0xfffb3b24
+jne near loc_fffb3b24  ; jne 0xfffb3b24
 
-loc_fffb3dcf:  ; not directly referenced
+loc_fffb3dcf:
 inc dword [ebp - 0x12c]
 add dword [ebp - 0x150], 0x1055
 cmp dword [ebp - 0x12c], 2
-jne loc_fffb2c89  ; jne 0xfffb2c89
+jne near loc_fffb2c89  ; jne 0xfffb2c89
 jmp near loc_fffb4238  ; jmp 0xfffb4238
 
-loc_fffb3df1:  ; not directly referenced
+loc_fffb3df1:
 mov al, byte [edi + 0x44]
 mov esi, dword [ebp - 0x150]
 shr al, 2
@@ -24953,7 +24952,7 @@ mov dword [ebp - 0x29], 0
 mov dword [ebp - 0x108], 0
 mov dword [ebp - 0xfc], 0x140
 mov dword [ebp - 0x128], esi
-je loc_fffb2c9e  ; je 0xfffb2c9e
+je near loc_fffb2c9e  ; je 0xfffb2c9e
 cmp dword [eax + 0xa], 1
 mov ecx, dword [ebp - 0x11c]
 sbb eax, eax
@@ -25016,14 +25015,14 @@ mov dword [ebp - 0x7d], 0
 mov dword [ebp - 0x13c], esi
 jmp near loc_fffb2ca8  ; jmp 0xfffb2ca8
 
-loc_fffb4114:  ; not directly referenced
+loc_fffb4114:
 mov ecx, dword [ebp - 0x128]
 lea edx, [ebp - 0xe4]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 jmp near loc_fffb2e52  ; jmp 0xfffb2e52
 
-loc_fffb412c:  ; not directly referenced
+loc_fffb412c:
 push ebx
 mov ecx, 3
 mov edx, dword [ebp - 0x128]
@@ -25039,17 +25038,17 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-je loc_fffb2ed2  ; je 0xfffb2ed2
+je near loc_fffb2ed2  ; je 0xfffb2ed2
 jmp near loc_fffb3207  ; jmp 0xfffb3207
 
-loc_fffb4163:  ; not directly referenced
+loc_fffb4163:
 mov ecx, dword [ebp - 0x128]
 lea edx, [ebp - 0xe4]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 jmp near loc_fffb305a  ; jmp 0xfffb305a
 
-loc_fffb417b:  ; not directly referenced
+loc_fffb417b:
 push ecx
 mov edx, dword [ebp - 0x128]
 mov ecx, 3
@@ -25065,17 +25064,17 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-je loc_fffb30da  ; je 0xfffb30da
+je near loc_fffb30da  ; je 0xfffb30da
 jmp near loc_fffb3207  ; jmp 0xfffb3207
 
-loc_fffb41b2:  ; not directly referenced
+loc_fffb41b2:
 mov ecx, dword [ebp - 0x128]
 lea edx, [ebp - 0xfc]
 mov eax, edi
 call fcn_ffface48  ; call 0xffface48
 jmp near loc_fffb325d  ; jmp 0xfffb325d
 
-loc_fffb41ca:  ; not directly referenced
+loc_fffb41ca:
 push edx
 mov ecx, 3
 mov edx, dword [ebp - 0x128]
@@ -25091,10 +25090,10 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-je loc_fffb34c2  ; je 0xfffb34c2
+je near loc_fffb34c2  ; je 0xfffb34c2
 jmp near loc_fffb396d  ; jmp 0xfffb396d
 
-loc_fffb4201:  ; not directly referenced
+loc_fffb4201:
 push eax
 mov ecx, 3
 mov edx, dword [ebp - 0x128]
@@ -25110,10 +25109,10 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-je loc_fffb3773  ; je 0xfffb3773
+je near loc_fffb3773  ; je 0xfffb3773
 jmp near loc_fffb396d  ; jmp 0xfffb396d
 
-loc_fffb4238:  ; not directly referenced
+loc_fffb4238:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -25122,11 +25121,11 @@ pop edi
 pop ebp
 ret
 
-loc_fffb4242:
+endloc_fffb4242:
 db 0x00
 db 0x00
 
-fcn_fffb4244:  ; not directly referenced
+fcn_fffb4244:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -25152,17 +25151,17 @@ not eax
 add eax, 3
 jmp short loc_fffb428e  ; jmp 0xfffb428e
 
-loc_fffb4288:  ; not directly referenced
+loc_fffb4288:
 mov al, byte [ecx + 0x22b2]
 
-loc_fffb428e:  ; not directly referenced
+loc_fffb428e:
 movzx eax, al
 mov edx, ebx
 shl eax, 0x15
 or edx, 0x800000
 or edx, eax
 
-loc_fffb429e:  ; not directly referenced
+loc_fffb429e:
 mov eax, dword [ecx + 0x2223]
 mov dword [eax + 0x5024], edx
 xor eax, eax
@@ -25170,7 +25169,7 @@ pop ebx
 pop ebp
 ret
 
-fcn_fffb42af:  ; not directly referenced
+fcn_fffb42af:
 push ebp
 mov ebp, esp
 push edi
@@ -25197,7 +25196,7 @@ mov edx, ebx
 mov eax, ecx
 out dx, eax
 
-loc_fffb42ee:  ; not directly referenced
+loc_fffb42ee:
 mov eax, dword [ebp + 8]
 mov esi, 0x64
 mov edx, dword [eax + 0x2223]
@@ -25247,13 +25246,13 @@ div ebx
 add ecx, eax
 jmp short loc_fffb43c5  ; jmp 0xfffb43c5
 
-loc_fffb43b4:  ; not directly referenced
+loc_fffb43b4:
 imul eax, edx, 0x3e8
 xor edx, edx
 div ebx
 lea ecx, [ecx + eax + 0x1f4]
 
-loc_fffb43c5:  ; not directly referenced
+loc_fffb43c5:
 lea eax, [ecx + 0x1f3]
 mov ebx, 0x1f4
 xor edx, edx
@@ -25278,11 +25277,11 @@ and edx, 0xff
 shr eax, 8
 jmp short loc_fffb4427  ; jmp 0xfffb4427
 
-loc_fffb4420:  ; not directly referenced
+loc_fffb4420:
 mov edx, 0x32
 xor eax, eax
 
-loc_fffb4427:  ; not directly referenced
+loc_fffb4427:
 mov ebx, dword [edi + 0x5d10]
 add eax, edx
 and ebx, 0xffffc0c0
@@ -25314,7 +25313,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb448c:  ; not directly referenced
+fcn_fffb448c:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -25323,7 +25322,7 @@ push ebx
 mov ebx, eax
 lea esp, [esp - 0x400]
 
-loc_fffb449c:  ; not directly referenced
+loc_fffb449c:
 mov esi, edx
 mov eax, edx
 shl eax, 0x10
@@ -25352,12 +25351,12 @@ jne short loc_fffb449c  ; jne 0xfffb449c
 cmp byte [ebx + 0x3a], 0
 jne short loc_fffb44f2  ; jne 0xfffb44f2
 
-loc_fffb44e7:  ; not directly referenced
+loc_fffb44e7:
 cmp byte [ebx + 0x108f], 0
 jne short loc_fffb450b  ; jne 0xfffb450b
 jmp short loc_fffb4525  ; jmp 0xfffb4525
 
-loc_fffb44f2:  ; not directly referenced
+loc_fffb44f2:
 sub esp, 0xc
 lea ecx, [ebp - 0x408]
 push 0x10
@@ -25367,7 +25366,7 @@ call fcn_fffc7760  ; call 0xfffc7760
 add esp, 0x10
 jmp short loc_fffb44e7  ; jmp 0xfffb44e7
 
-loc_fffb450b:  ; not directly referenced
+loc_fffb450b:
 sub esp, 0xc
 lea ecx, [ebp - 0x408]
 push 0x10
@@ -25376,14 +25375,14 @@ mov eax, ebx
 call fcn_fffc7760  ; call 0xfffc7760
 add esp, 0x10
 
-loc_fffb4525:  ; not directly referenced
+loc_fffb4525:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_fffb452c:  ; not directly referenced
+fcn_fffb452c:
 push ebp
 mov edx, 0xdd65
 mov ebp, esp
@@ -25432,7 +25431,7 @@ mov edx, dword [eax + 0x40a0]
 mov dword [eax + 0x40a0], 0xff
 mov dword [ebp - 0x70], edx
 
-loc_fffb45ff:  ; not directly referenced
+loc_fffb45ff:
 mov eax, dword [ebx + 0x2223]
 cmp byte [ebx + 0x20b5], 8
 mov dword [ebp - 0x6c], 0
@@ -25443,19 +25442,19 @@ mov edx, dword [eax + 0x44a0]
 mov dword [eax + 0x44a0], 0xff
 mov dword [ebp - 0x6c], edx
 
-loc_fffb4634:  ; not directly referenced
+loc_fffb4634:
 mov eax, dword [ebx + 0x2223]
 xor esi, esi
 mov edx, dword [eax + 0x476c]
 mov eax, dword [eax + 0x476c]
 
-loc_fffb4648:  ; not directly referenced
+loc_fffb4648:
 imul eax, esi, 0x1055
 mov dword [ebp - 0x5c], 0
 add eax, ebx
 mov dword [ebp - 0x60], eax
 
-loc_fffb465a:  ; not directly referenced
+loc_fffb465a:
 mov al, byte [ebp - 0x5c]
 mov ecx, esi
 mov byte [ebp - 0x61], al
@@ -25465,13 +25464,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb467e  ; jne 0xfffb467e
 
-loc_fffb4670:  ; not directly referenced
+loc_fffb4670:
 inc dword [ebp - 0x5c]
 cmp dword [ebp - 0x5c], 4
 jne short loc_fffb465a  ; jne 0xfffb465a
 jmp near loc_fffb4745  ; jmp 0xfffb4745
 
-loc_fffb467e:  ; not directly referenced
+loc_fffb467e:
 xor eax, eax
 cmp byte [ebp - 0x61], 1
 seta al
@@ -25491,7 +25490,7 @@ xor dh, dh
 mov dword [eax], edx
 jmp near loc_fffb4737  ; jmp 0xfffb4737
 
-loc_fffb46b7:  ; not directly referenced
+loc_fffb46b7:
 mov edx, dword [ebp - 0x60]
 mov al, byte [ebp - 0x61]
 mov byte [ebp - 0x4c], al
@@ -25525,33 +25524,33 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ecx, eax
-jne loc_fffb48d0  ; jne 0xfffb48d0
+jne near loc_fffb48d0  ; jne 0xfffb48d0
 mov edx, esi
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov ecx, eax
-jne loc_fffb48d0  ; jne 0xfffb48d0
+jne near loc_fffb48d0  ; jne 0xfffb48d0
 add edi, 0x1000
 
-loc_fffb4737:  ; not directly referenced
+loc_fffb4737:
 cmp edi, dword [ebp - 0x68]
-jb loc_fffb46b7  ; jb 0xfffb46b7
+jb near loc_fffb46b7  ; jb 0xfffb46b7
 jmp near loc_fffb4670  ; jmp 0xfffb4670
 
-loc_fffb4745:  ; not directly referenced
+loc_fffb4745:
 inc esi
 cmp esi, 2
-jne loc_fffb4648  ; jne 0xfffb4648
+jne near loc_fffb4648  ; jne 0xfffb4648
 mov dword [ebp - 0x42], 4
 xor si, si
 
-loc_fffb4759:  ; not directly referenced
+loc_fffb4759:
 imul edi, esi, 0x1055
 mov dword [ebp - 0x60], 0
 add edi, ebx
 
-loc_fffb4768:  ; not directly referenced
+loc_fffb4768:
 mov dl, byte [ebp - 0x60]
 mov ecx, esi
 mov byte [ebp - 0x61], dl
@@ -25561,13 +25560,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb478c  ; jne 0xfffb478c
 
-loc_fffb477e:  ; not directly referenced
+loc_fffb477e:
 inc dword [ebp - 0x60]
 cmp dword [ebp - 0x60], 4
 jne short loc_fffb4768  ; jne 0xfffb4768
 jmp near loc_fffb4864  ; jmp 0xfffb4864
 
-loc_fffb478c:  ; not directly referenced
+loc_fffb478c:
 xor eax, eax
 cmp byte [ebp - 0x61], 1
 seta al
@@ -25586,7 +25585,7 @@ and edx, 0xff00ffff
 mov dword [eax], edx
 jmp near loc_fffb4853  ; jmp 0xfffb4853
 
-loc_fffb47cb:  ; not directly referenced
+loc_fffb47cb:
 mov al, byte [ebp - 0x61]
 mov edx, dword [ebp - 0x5c]
 mov byte [ebp - 0x4c], al
@@ -25622,25 +25621,25 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ecx, eax
-jne loc_fffb48d0  ; jne 0xfffb48d0
+jne near loc_fffb48d0  ; jne 0xfffb48d0
 mov edx, esi
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov ecx, eax
-jne loc_fffb48d0  ; jne 0xfffb48d0
+jne near loc_fffb48d0  ; jne 0xfffb48d0
 add dword [ebp - 0x5c], 0x1000
 
-loc_fffb4853:  ; not directly referenced
+loc_fffb4853:
 mov eax, dword [ebp - 0x68]
 cmp dword [ebp - 0x5c], eax
-jb loc_fffb47cb  ; jb 0xfffb47cb
+jb near loc_fffb47cb  ; jb 0xfffb47cb
 jmp near loc_fffb477e  ; jmp 0xfffb477e
 
-loc_fffb4864:  ; not directly referenced
+loc_fffb4864:
 inc esi
 cmp esi, 2
-jne loc_fffb4759  ; jne 0xfffb4759
+jne near loc_fffb4759  ; jne 0xfffb4759
 mov eax, dword [ebx + 0x2223]
 xor ecx, ecx
 mov edx, dword [eax + 0x4368]
@@ -25649,7 +25648,7 @@ je short loc_fffb4888  ; je 0xfffb4888
 mov edx, dword [eax + 0x4eac]
 mov cl, 0x12
 
-loc_fffb4888:  ; not directly referenced
+loc_fffb4888:
 mov edx, dword [ebp - 0x70]
 mov dword [eax + 0x40a0], edx
 mov eax, dword [ebx + 0x2223]
@@ -25659,7 +25658,7 @@ je short loc_fffb48ac  ; je 0xfffb48ac
 mov edx, dword [eax + 0x4eac]
 mov ecx, 0x12
 
-loc_fffb48ac:  ; not directly referenced
+loc_fffb48ac:
 mov edx, dword [ebp - 0x6c]
 test ecx, ecx
 mov dword [eax + 0x44a0], edx
@@ -25667,13 +25666,13 @@ mov edx, 0xdd67
 je short loc_fffb48c3  ; je 0xfffb48c3
 mov edx, 0xdd66
 
-loc_fffb48c3:  ; not directly referenced
+loc_fffb48c3:
 mov eax, ebx
 mov dword [ebp - 0x74], ecx
 call fcn_fffad891  ; call 0xfffad891
 mov ecx, dword [ebp - 0x74]
 
-loc_fffb48d0:  ; not directly referenced
+loc_fffb48d0:
 lea esp, [ebp - 0xc]
 mov eax, ecx
 pop ebx
@@ -25682,7 +25681,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb48da:  ; not directly referenced
+fcn_fffb48da:
 push ebp
 mov edx, 0xdd50
 mov ebp, esp
@@ -25700,10 +25699,10 @@ jne short loc_fffb493a  ; jne 0xfffb493a
 mov eax, dword [ebx + 0x2223]
 mov esi, dword [eax + 0x5024]
 test esi, 0x800000
-jne loc_fffb4c05  ; jne 0xfffb4c05
+jne near loc_fffb4c05  ; jne 0xfffb4c05
 xor edi, edi
 
-loc_fffb491d:  ; not directly referenced
+loc_fffb491d:
 mov eax, ebx
 call fcn_fffb0e9a  ; call 0xfffb0e9a
 test edi, edi
@@ -25712,29 +25711,29 @@ mov eax, dword [ebx + 0x2223]
 or esi, 0x800000
 mov dword [eax + 0x5024], esi
 
-loc_fffb493a:  ; not directly referenced
+loc_fffb493a:
 cmp byte [ebx + 0x3a], 0
-jne loc_fffb4c1b  ; jne 0xfffb4c1b
+jne near loc_fffb4c1b  ; jne 0xfffb4c1b
 jmp short loc_fffb495d  ; jmp 0xfffb495d
 
-loc_fffb4946:  ; not directly referenced
+loc_fffb4946:
 mov edx, dword [ebx + 0x2223]
 mov eax, dword [edx + 0x5004]
 or eax, 0x3000000
 mov dword [edx + 0x5004], eax
 
-loc_fffb495d:  ; not directly referenced
+loc_fffb495d:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffb4c5d  ; jne 0xfffb4c5d
+jne near loc_fffb4c5d  ; jne 0xfffb4c5d
 jmp short loc_fffb4983  ; jmp 0xfffb4983
 
-loc_fffb496c:  ; not directly referenced
+loc_fffb496c:
 mov edx, dword [ebx + 0x2223]
 mov eax, dword [edx + 0x5008]
 or eax, 0x3000000
 mov dword [edx + 0x5008], eax
 
-loc_fffb4983:  ; not directly referenced
+loc_fffb4983:
 mov eax, dword [ebx + 0x2223]
 mov edx, dword [ebx + 0x2260]
 mov dword [eax + 0x4cd4], edx
@@ -25758,12 +25757,12 @@ jne short loc_fffb49e0  ; jne 0xfffb49e0
 cmp eax, 7
 jne short loc_fffb49e8  ; jne 0xfffb49e8
 
-loc_fffb49e0:  ; not directly referenced
+loc_fffb49e0:
 shl eax, 8
 or eax, 0x40
 jmp short loc_fffb4a12  ; jmp 0xfffb4a12
 
-loc_fffb49e8:  ; not directly referenced
+loc_fffb49e8:
 cmp dword [ebx + 0x2234], 1
 mov eax, 0x40
 jne short loc_fffb4a12  ; jne 0xfffb4a12
@@ -25774,7 +25773,7 @@ sbb eax, eax
 and eax, 0x400
 add eax, 0x240
 
-loc_fffb4a12:  ; not directly referenced
+loc_fffb4a12:
 mov edx, dword [ebx + 0x2223]
 mov dword [edx + 0x4cb0], eax
 mov eax, dword [ebx + 0x2223]
@@ -25797,14 +25796,14 @@ add eax, 3
 or eax, 0x73000
 mov dword [edx + 0x5064], eax
 cmp dword [ebx + 0x225c], 2
-jne loc_fffb4ca3  ; jne 0xfffb4ca3
+jne near loc_fffb4ca3  ; jne 0xfffb4ca3
 cmp byte [ebx + 0x22ca], 1
-jne loc_fffb4bf0  ; jne 0xfffb4bf0
+jne near loc_fffb4bf0  ; jne 0xfffb4bf0
 mov edi, ebx
 mov byte [ebp - 0x19], 0
 jmp near loc_fffb4ba3  ; jmp 0xfffb4ba3
 
-loc_fffb4aa3:  ; not directly referenced
+loc_fffb4aa3:
 mov cl, byte [edi + 0x2f]
 mov byte [ebp - 0x1a], cl
 dec cl
@@ -25820,7 +25819,7 @@ mov cl, 0x37
 cmovb eax, ecx
 jmp short loc_fffb4adf  ; jmp 0xfffb4adf
 
-loc_fffb4ac9:  ; not directly referenced
+loc_fffb4ac9:
 cmp byte [ebp - 0x1a], 2
 mov cl, 0xa1
 cmove esi, ecx
@@ -25829,7 +25828,7 @@ cmove edx, ecx
 mov cl, 0x9b
 cmove eax, ecx
 
-loc_fffb4adf:  ; not directly referenced
+loc_fffb4adf:
 cmp byte [ebx + 0x20fe], 0
 je short loc_fffb4b65  ; je 0xfffb4b65
 cmp dword [edi + 0xa], 0
@@ -25846,18 +25845,18 @@ cmovne edx, eax
 mov eax, esi
 jmp short loc_fffb4b23  ; jmp 0xfffb4b23
 
-loc_fffb4b0f:  ; not directly referenced
+loc_fffb4b0f:
 xor esi, esi
 xor edx, edx
 xor eax, eax
 jmp short loc_fffb4b23  ; jmp 0xfffb4b23
 
-loc_fffb4b17:  ; not directly referenced
+loc_fffb4b17:
 mov esi, 0x1d
 mov edx, 0x1d
 mov al, 0x21
 
-loc_fffb4b23:  ; not directly referenced
+loc_fffb4b23:
 cmp dword [edi + 0x27], 0
 je short loc_fffb4b65  ; je 0xfffb4b65
 mov cl, byte [edi + 0x2f]
@@ -25875,7 +25874,7 @@ mov cl, 0x21
 cmovb eax, ecx
 jmp short loc_fffb4b65  ; jmp 0xfffb4b65
 
-loc_fffb4b4f:  ; not directly referenced
+loc_fffb4b4f:
 cmp byte [ebp - 0x1a], 2
 mov cl, 0x5d
 cmove esi, ecx
@@ -25884,7 +25883,7 @@ cmove edx, ecx
 mov cl, 0x5d
 cmove eax, ecx
 
-loc_fffb4b65:  ; not directly referenced
+loc_fffb4b65:
 shl edx, 8
 and esi, 0xff
 movzx eax, al
@@ -25900,9 +25899,9 @@ add eax, 0x4784
 add eax, dword [ebx + 0x2223]
 cmp byte [ebp - 0x19], 2
 mov dword [eax], edx
-je loc_fffb4ca3  ; je 0xfffb4ca3
+je near loc_fffb4ca3  ; je 0xfffb4ca3
 
-loc_fffb4ba3:  ; not directly referenced
+loc_fffb4ba3:
 cmp dword [edi + 0xa], 0
 je short loc_fffb4bcd  ; je 0xfffb4bcd
 mov cl, byte [edi + 0x12]
@@ -25918,34 +25917,34 @@ cmovne edx, eax
 cmove eax, ecx
 jmp short loc_fffb4be1  ; jmp 0xfffb4be1
 
-loc_fffb4bcd:  ; not directly referenced
+loc_fffb4bcd:
 xor esi, esi
 xor edx, edx
 xor eax, eax
 jmp short loc_fffb4be1  ; jmp 0xfffb4be1
 
-loc_fffb4bd5:  ; not directly referenced
+loc_fffb4bd5:
 mov esi, 0x31
 mov edx, 0x31
 mov al, 0x37
 
-loc_fffb4be1:  ; not directly referenced
+loc_fffb4be1:
 cmp dword [edi + 0x27], 0
-jne loc_fffb4aa3  ; jne 0xfffb4aa3
+jne near loc_fffb4aa3  ; jne 0xfffb4aa3
 jmp near loc_fffb4adf  ; jmp 0xfffb4adf
 
-loc_fffb4bf0:  ; not directly referenced
+loc_fffb4bf0:
 mov eax, dword [ebx + 0x2223]
 mov dword [eax + 0x4f84], 0
 jmp near loc_fffb4ca3  ; jmp 0xfffb4ca3
 
-loc_fffb4c05:  ; not directly referenced
+loc_fffb4c05:
 and esi, 0xfeffffff
 mov edi, 1
 mov dword [eax + 0x5024], esi
 jmp near loc_fffb491d  ; jmp 0xfffb491d
 
-loc_fffb4c1b:  ; not directly referenced
+loc_fffb4c1b:
 mov edx, dword [ebx + 0x2223]
 mov eax, dword [edx + 0x4004]
 and eax, 0xdfffffff
@@ -25957,10 +25956,10 @@ and eax, 0xf
 or ah, 0x10
 mov dword [edx + 0x42a0], eax
 cmp dword [ebx + 0x20b1], 1
-jne loc_fffb495d  ; jne 0xfffb495d
+jne near loc_fffb495d  ; jne 0xfffb495d
 jmp near loc_fffb4946  ; jmp 0xfffb4946
 
-loc_fffb4c5d:  ; not directly referenced
+loc_fffb4c5d:
 mov edx, dword [ebx + 0x2223]
 mov eax, dword [edx + 0x4404]
 and eax, 0xdfffffff
@@ -25972,10 +25971,10 @@ and eax, 0xf
 or ah, 0x10
 mov dword [edx + 0x46a0], eax
 cmp dword [ebx + 0x20b1], 1
-jne loc_fffb4983  ; jne 0xfffb4983
+jne near loc_fffb4983  ; jne 0xfffb4983
 jmp near loc_fffb496c  ; jmp 0xfffb496c
 
-loc_fffb4ca3:  ; not directly referenced
+loc_fffb4ca3:
 mov eax, ebx
 call fcn_fffad3a9  ; call 0xfffad3a9
 mov eax, ebx
@@ -26136,7 +26135,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 leave
 ret
 
-loc_fffb4def:
+endloc_fffb4def:
 db 0x00
 
 fcn_fffb4df0:
@@ -26278,7 +26277,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb4fc8:  ; not directly referenced
+fcn_fffb4fc8:
 push ebp
 mov ebp, esp
 push edi
@@ -26292,7 +26291,7 @@ mov byte [ebp - 0x19], 0
 mov dword [ebp - 0x20], eax
 jmp short loc_fffb503c  ; jmp 0xfffb503c
 
-loc_fffb4fe5:  ; not directly referenced
+loc_fffb4fe5:
 imul eax, ebx, 0x32
 cmp byte [ebp - 0x19], 0
 jne short loc_fffb4fff  ; jne 0xfffb4fff
@@ -26301,14 +26300,14 @@ lea eax, [edi + eax + 0x2f3]
 push dword [ebx*4 + ref_fffcf5b0]  ; push dword [ebx*4 - 0x30a50]
 jmp short loc_fffb5015  ; jmp 0xfffb5015
 
-loc_fffb4fff:  ; not directly referenced
+loc_fffb4fff:
 push esi
 mov edx, dword [ebx*4 + ref_fffcf5b0]  ; mov edx, dword [ebx*4 - 0x30a50]
 lea eax, [edi + eax + 0x4b5]
 add edx, 0x100
 push edx
 
-loc_fffb5015:  ; not directly referenced
+loc_fffb5015:
 push 0x32
 mov ecx, ref_fffcedbc  ; mov ecx, 0xfffcedbc
 mov edx, dword [ebp - 0x20]
@@ -26324,14 +26323,14 @@ inc byte [ebp - 0x19]
 cmp byte [ebp - 0x19], 2
 je short loc_fffb5045  ; je 0xfffb5045
 
-loc_fffb503c:  ; not directly referenced
+loc_fffb503c:
 xor ebx, ebx
 jmp short loc_fffb4fe5  ; jmp 0xfffb4fe5
 
-loc_fffb5040:  ; not directly referenced
+loc_fffb5040:
 mov eax, 1
 
-loc_fffb5045:  ; not directly referenced
+loc_fffb5045:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -26339,7 +26338,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb504d:  ; not directly referenced
+fcn_fffb504d:
 push ebp
 mov edx, 0xdd20
 mov ebp, esp
@@ -26357,7 +26356,7 @@ call fcn_fffc76c6  ; call 0xfffc76c6
 mov edx, dword [edi + 0x2ea9]
 cmp dword [ebp - 0x1c], edx
 mov eax, 0xd
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 mov eax, dword [edi + 0x2a9c]
 mov dl, byte [edi + 0x2aab]
 mov dword [edi + 0x49], eax
@@ -26369,13 +26368,13 @@ je short loc_fffb50b3  ; je 0xfffb50b3
 mov byte [edi + 0x12], dl
 mov dword [edi + 0xa], 1
 
-loc_fffb50b3:  ; not directly referenced
+loc_fffb50b3:
 test al, al
 je short loc_fffb50c1  ; je 0xfffb50c1
 mov byte [edi + 0x2f], al
 mov dword [edi + 0x27], 1
 
-loc_fffb50c1:  ; not directly referenced
+loc_fffb50c1:
 mov eax, dword [edi + 0x2aa0]
 mov dl, byte [edi + 0x2aad]
 mov dword [edi + 0x109e], eax
@@ -26387,13 +26386,13 @@ je short loc_fffb50f6  ; je 0xfffb50f6
 mov byte [edi + 0x1067], dl
 mov dword [edi + 0x105f], 1
 
-loc_fffb50f6:  ; not directly referenced
+loc_fffb50f6:
 test al, al
 je short loc_fffb510a  ; je 0xfffb510a
 mov byte [edi + 0x1084], al
 mov dword [edi + 0x107c], 1
 
-loc_fffb510a:  ; not directly referenced
+loc_fffb510a:
 mov eax, dword [edi + 0x2e12]
 mov dword [edi + 0x2248], eax
 mov eax, dword [edi + 0x2e0e]
@@ -26406,7 +26405,7 @@ mov byte [edi + 0x20b5], al
 jne short loc_fffb5148  ; jne 0xfffb5148
 mov dword [edi + 0x20b1], 1
 
-loc_fffb5148:  ; not directly referenced
+loc_fffb5148:
 mov eax, dword [edi + 0x2e2e]
 mov bl, byte [edi + 0x2aa5]
 movzx edx, bl
@@ -26436,10 +26435,10 @@ mov edx, dword [edi + 0x2e0e]
 mov dword [edx + 0x5e00], eax
 jmp short loc_fffb51d9  ; jmp 0xfffb51d9
 
-loc_fffb51d3:  ; not directly referenced
+loc_fffb51d3:
 mov eax, dword [eax + 0x5e00]
 
-loc_fffb51d9:  ; not directly referenced
+loc_fffb51d9:
 test eax, eax
 mov eax, dword [edi + 0x2e0e]
 js short loc_fffb51d3  ; js 0xfffb51d3
@@ -26449,11 +26448,11 @@ mov ebx, edx
 mov eax, 0xe
 and ebx, 0xf
 cmp ebx, ecx
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 shr edx, 8
 movzx ecx, byte [edi + 0x2aa5]
 cmp edx, ecx
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea ebx, [edi + 0x2e0a]
 mov ecx, ref_fffcf4cc  ; mov ecx, 0xfffcf4cc
@@ -26493,7 +26492,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x20
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x299a]
 mov ecx, ref_fffcf56c  ; mov ecx, 0xfffcf56c
@@ -26504,7 +26503,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x29b8]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -26515,7 +26514,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x29d6]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -26526,7 +26525,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x29f4]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -26537,7 +26536,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x2a12]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -26548,7 +26547,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x2a30]
 mov ecx, ref_fffcf560  ; mov ecx, 0xfffcf560
@@ -26559,7 +26558,7 @@ push 1
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 push 1
 lea eax, [edi + 0x2a4c]
 mov ecx, ref_fffcf560  ; mov ecx, 0xfffcf560
@@ -26570,7 +26569,7 @@ push 1
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 mov eax, dword [edi + 0x2e0a]
 mov edx, dword [ebp - 0x2c]
 call fcn_fffbeabd  ; call 0xfffbeabd
@@ -26585,12 +26584,12 @@ mov dword [edi + 0x1d], edx
 mov dword [edi], eax
 jmp short loc_fffb5403  ; jmp 0xfffb5403
 
-loc_fffb53f9:  ; not directly referenced
+loc_fffb53f9:
 and eax, 0xff00
 mov dword [edi], edx
 mov dword [edi + 0x1d], eax
 
-loc_fffb5403:  ; not directly referenced
+loc_fffb5403:
 mov eax, dword [ecx + 0x5008]
 movzx edx, al
 shl edx, 8
@@ -26600,29 +26599,29 @@ and eax, 0xff00
 mov dword [edi + 0x1072], edx
 mov dword [edi + 0x1055], eax
 
-loc_fffb5427:  ; not directly referenced
+loc_fffb5427:
 mov eax, edi
 xor ecx, ecx
 jmp short loc_fffb5440  ; jmp 0xfffb5440
 
-loc_fffb542d:  ; not directly referenced
+loc_fffb542d:
 and eax, 0xff00
 mov dword [edi + 0x1055], edx
 mov dword [edi + 0x1072], eax
 jmp short loc_fffb5427  ; jmp 0xfffb5427
 
-loc_fffb5440:  ; not directly referenced
+loc_fffb5440:
 cmp byte [eax + 0x3a], 0
-jne loc_fffb5567  ; jne 0xfffb5567
+jne near loc_fffb5567  ; jne 0xfffb5567
 jmp short loc_fffb5451  ; jmp 0xfffb5451
 
-loc_fffb544c:  ; not directly referenced
+loc_fffb544c:
 mov dl, 0x10
 
-loc_fffb544e:  ; not directly referenced
+loc_fffb544e:
 mov byte [eax + 0x45], dl
 
-loc_fffb5451:  ; not directly referenced
+loc_fffb5451:
 inc ecx
 add eax, 0x1055
 cmp cl, 2
@@ -26659,7 +26658,7 @@ mov dword [edi + 0x1076], eax
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
-jne loc_fffb565c  ; jne 0xfffb565c
+jne near loc_fffb565c  ; jne 0xfffb565c
 mov eax, edi
 call fcn_fffbc6ee  ; call 0xfffbc6ee
 cmp dword [edi + 0x225c], 0
@@ -26683,18 +26682,18 @@ mov eax, edi
 call fcn_fffb4df0  ; call 0xfffb4df0
 jmp short loc_fffb5556  ; jmp 0xfffb5556
 
-loc_fffb554a:  ; not directly referenced
+loc_fffb554a:
 sub esp, 0xc
 push edi
 call fcn_fffc7efc  ; call 0xfffc7efc
 add esp, 0x10
 
-loc_fffb5556:  ; not directly referenced
+loc_fffb5556:
 mov edx, dword [edi + 0x20f2]
 mov dword [edi + 0x2288], edx
 jmp near loc_fffb565c  ; jmp 0xfffb565c
 
-loc_fffb5567:  ; not directly referenced
+loc_fffb5567:
 cmp cl, 1
 mov ebx, dword [edi + 0x2223]
 sbb edx, edx
@@ -26761,10 +26760,10 @@ and ebx, 0x20000000
 shr ebx, 0x1d
 mov byte [eax + 0x46], bl
 cmp byte [edi + 0x2e49], 0x10
-jne loc_fffb544e  ; jne 0xfffb544e
+jne near loc_fffb544e  ; jne 0xfffb544e
 jmp near loc_fffb544c  ; jmp 0xfffb544c
 
-loc_fffb565c:  ; not directly referenced
+loc_fffb565c:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -26793,10 +26792,10 @@ jmp near loc_fffb5843  ; jmp 0xfffb5843
 
 loc_fffb5692:
 cmp dword [ebp - 0x2c], 1
-je loc_fffb5731  ; je 0xfffb5731
+je near loc_fffb5731  ; je 0xfffb5731
 jb short loc_fffb56aa  ; jb 0xfffb56aa
 cmp dword [ebp - 0x2c], 2
-jne loc_fffb5773  ; jne 0xfffb5773
+jne near loc_fffb5773  ; jne 0xfffb5773
 jmp short loc_fffb56ef  ; jmp 0xfffb56ef
 
 loc_fffb56aa:
@@ -26953,7 +26952,7 @@ add esp, 0x10
 loc_fffb5843:
 mov al, byte [ebp - 0x1a]
 cmp al, byte [esi + 0x20b5]
-jb loc_fffb5692  ; jb 0xfffb5692
+jb near loc_fffb5692  ; jb 0xfffb5692
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -27122,7 +27121,7 @@ movzx edx, byte [edi + 0x2aa4]
 mov ecx, dword [eax + 0x5e04]
 cmp ecx, edx
 mov eax, 0xe
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea ebx, [edi + 0x2e0a]
 mov ecx, ref_fffc99b8  ; mov ecx, 0xfffc99b8
@@ -27163,7 +27162,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x20
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x299a]
 mov ecx, ref_fffc9a58  ; mov ecx, 0xfffc9a58
@@ -27174,7 +27173,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x29b8]
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
@@ -27185,7 +27184,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x29d6]
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
@@ -27196,7 +27195,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x29f4]
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
@@ -27207,7 +27206,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x2a12]
 mov ecx, ref_fffc9a50  ; mov ecx, 0xfffc9a50
@@ -27218,7 +27217,7 @@ push 2
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x2a30]
 mov ecx, ref_fffc9a4c  ; mov ecx, 0xfffc9a4c
@@ -27229,7 +27228,7 @@ push 1
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 push 1
 lea eax, [edi + 0x2a4c]
 mov ecx, ref_fffc9a4c  ; mov ecx, 0xfffc9a4c
@@ -27240,7 +27239,7 @@ push 1
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 mov edx, dword [edi + 0x2e0e]
 mov eax, dword [edx + 0x5f08]
 or ah, 1
@@ -27287,7 +27286,7 @@ jmp short loc_fffb5c84  ; jmp 0xfffb5c84
 
 loc_fffb5c9d:
 cmp byte [eax + 0x3a], 0
-jne loc_fffb5dba  ; jne 0xfffb5dba
+jne near loc_fffb5dba  ; jne 0xfffb5dba
 jmp short loc_fffb5cae  ; jmp 0xfffb5cae
 
 loc_fffb5ca9:
@@ -27333,7 +27332,7 @@ mov dword [edi + 0x1076], eax
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
-jne loc_fffb5ea1  ; jne 0xfffb5ea1
+jne near loc_fffb5ea1  ; jne 0xfffb5ea1
 mov eax, edi
 call fcn_fffbc6ee  ; call 0xfffbc6ee
 cmp dword [edi + 0x225c], 0
@@ -27433,7 +27432,7 @@ shr ebx, 0x10
 shr ecx, 0x1e
 mov byte [eax + 0x44], bl
 cmp byte [edi + 0x2e49], 0x10
-jne loc_fffb5cab  ; jne 0xfffb5cab
+jne near loc_fffb5cab  ; jne 0xfffb5cab
 jmp near loc_fffb5ca9  ; jmp 0xfffb5ca9
 
 loc_fffb5ea1:
@@ -27444,12 +27443,12 @@ pop edi
 pop ebp
 ret
 
-loc_fffb5ea9:
+endloc_fffb5ea9:
 db 0x00
 db 0x00
 db 0x00
 
-fcn_fffb5eac:  ; not directly referenced
+fcn_fffb5eac:
 push ebp
 mov edx, 4
 mov eax, ref_fffcfc20  ; mov eax, 0xfffcfc20
@@ -27470,7 +27469,7 @@ out dx, eax
 mov al, cl
 out 0xb2, al
 
-loc_fffb5ee3:  ; not directly referenced
+loc_fffb5ee3:
 xor eax, eax
 leave
 ret
@@ -27537,7 +27536,7 @@ mov eax, dword [eax]
 shr eax, 0x10
 and eax, 0xf
 or edx, eax
-je loc_fffb6056  ; je 0xfffb6056
+je near loc_fffb6056  ; je 0xfffb6056
 test esi, esi
 mov dx, word [ecx - 0xfffff56]
 mov word [ecx - 0xfffff56], 0xffff
@@ -27883,7 +27882,7 @@ cmp byte [ebp - 0xe], 2
 mov bl, byte [ebp - 0xd]
 setbe byte [ebp - 0x34]
 test byte [ebp - 0x34], bl
-jne loc_fffb63e1  ; jne 0xfffb63e1
+jne near loc_fffb63e1  ; jne 0xfffb63e1
 jmp short loc_fffb63d7  ; jmp 0xfffb63d7
 
 loc_fffb635e:
@@ -28415,9 +28414,9 @@ add eax, 0x20
 cmp ecx, dword [ebp - 0x18]
 jb short loc_fffb67fa  ; jb 0xfffb67fa
 cmp byte [ebp - 0xd], 0
-je loc_fffb6e7c  ; je 0xfffb6e7c
+je near loc_fffb6e7c  ; je 0xfffb6e7c
 cmp byte [ebp - 0x35], 0
-je loc_fffb695c  ; je 0xfffb695c
+je near loc_fffb695c  ; je 0xfffb695c
 cmp byte [ebp - 0x10], 1
 je short loc_fffb685f  ; je 0xfffb685f
 mov eax, 0x14
@@ -28537,7 +28536,7 @@ jb short loc_fffb6945  ; jb 0xfffb6945
 
 loc_fffb695c:
 cmp byte [ebp - 0xe], 4
-jbe loc_fffb6b56  ; jbe 0xfffb6b56
+jbe near loc_fffb6b56  ; jbe 0xfffb6b56
 mov ebx, 0xf0000000
 lea eax, [edi + 0x700]
 mov dword [ebp - 0x2c], 0
@@ -28683,7 +28682,7 @@ add eax, 0x20
 cmp edx, dword [ebp - 0x18]
 jb short loc_fffb6a99  ; jb 0xfffb6a99
 cmp byte [ebp - 0xe], 5
-je loc_fffb6b56  ; je 0xfffb6b56
+je near loc_fffb6b56  ; je 0xfffb6b56
 mov ebx, 0xf0000000
 lea eax, [edi + 0x914]
 mov dword [ebp - 0x2c], 0
@@ -28747,7 +28746,7 @@ cmp byte [ebp - 0xe], 5
 mov bl, byte [ebp - 0xf]
 seta byte [ebp - 0x1c]
 test byte [ebp - 0x1c], bl
-je loc_fffb6c16  ; je 0xfffb6c16
+je near loc_fffb6c16  ; je 0xfffb6c16
 mov ecx, 0xf0008000
 lea eax, [edi + 0x914]
 xor edx, edx
@@ -28829,7 +28828,7 @@ jmp short loc_fffb6c22  ; jmp 0xfffb6c22
 
 loc_fffb6c16:
 cmp byte [ebp - 0x1c], 0
-je loc_fffb6d4a  ; je 0xfffb6d4a
+je near loc_fffb6d4a  ; je 0xfffb6d4a
 jmp short loc_fffb6c0b  ; jmp 0xfffb6c0b
 
 loc_fffb6c22:
@@ -28928,7 +28927,7 @@ jmp short loc_fffb6d54  ; jmp 0xfffb6d54
 
 loc_fffb6d4a:
 cmp byte [ebp - 0xf], 0
-jne loc_fffb6cac  ; jne 0xfffb6cac
+jne near loc_fffb6cac  ; jne 0xfffb6cac
 
 loc_fffb6d54:
 cmp byte [ebp - 0xd], 0
@@ -28950,7 +28949,7 @@ jne short loc_fffb6d96  ; jne 0xfffb6d96
 
 loc_fffb6d87:
 cmp byte [ebp - 0xf], 0
-je loc_fffb6eba  ; je 0xfffb6eba
+je near loc_fffb6eba  ; je 0xfffb6eba
 jmp near loc_fffb6e37  ; jmp 0xfffb6e37
 
 loc_fffb6d96:
@@ -29006,7 +29005,7 @@ inc ecx
 add eax, 0x20
 add dword [ebp - 0x24], 0x20
 cmp ecx, dword [ebp - 0x18]
-jb loc_fffb6da5  ; jb 0xfffb6da5
+jb near loc_fffb6da5  ; jb 0xfffb6da5
 jmp near loc_fffb6d87  ; jmp 0xfffb6d87
 
 loc_fffb6e37:
@@ -29029,17 +29028,17 @@ jmp near loc_fffb64ea  ; jmp 0xfffb64ea
 
 loc_fffb6e7c:
 cmp byte [ebp - 0x35], 0
-jne loc_fffb6896  ; jne 0xfffb6896
+jne near loc_fffb6896  ; jne 0xfffb6896
 jmp near loc_fffb6b56  ; jmp 0xfffb6b56
 
 loc_fffb6e8b:
 cmp byte [ebp - 0xf], 0
-je loc_fffb6cde  ; je 0xfffb6cde
+je near loc_fffb6cde  ; je 0xfffb6cde
 jmp near loc_fffb6c58  ; jmp 0xfffb6c58
 
 loc_fffb6e9a:
 cmp byte [ebp - 0x10], 1
-je loc_fffb68d4  ; je 0xfffb68d4
+je near loc_fffb68d4  ; je 0xfffb68d4
 mov ebx, 0x14
 cmp byte [ebp - 0x10], 2
 mov eax, 3
@@ -29235,7 +29234,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb7031:  ; not directly referenced
+fcn_fffb7031:
 push ebp
 mov ebp, esp
 push edi
@@ -29256,21 +29255,21 @@ sete dl
 test edi, edi
 sete al
 or dl, al
-jne loc_fffb74bb  ; jne 0xfffb74bb
+jne near loc_fffb74bb  ; jne 0xfffb74bb
 
-loc_fffb706b:  ; not directly referenced
+loc_fffb706b:
 xor eax, eax
 mov ebx, 0x80000012
 call fcn_fffa0871  ; call 0xfffa0871
 test al, 0x40
-jne loc_fffb74bb  ; jne 0xfffb74bb
+jne near loc_fffb74bb  ; jne 0xfffb74bb
 test al, 1
 je short loc_fffb708f  ; je 0xfffb708f
 mov edx, 0xff
 xor eax, eax
 jmp near loc_fffb74a7  ; jmp 0xfffb74a7
 
-loc_fffb708f:  ; not directly referenced
+loc_fffb708f:
 movzx edx, al
 xor eax, eax
 call fcn_fffa0856  ; call 0xfffa0856
@@ -29281,34 +29280,34 @@ mov dword [ebp - 0x28], 3
 mov byte [ebp - 0x24], 0
 mov byte [ebp - 0x21], cl
 
-loc_fffb70af:  ; not directly referenced
+loc_fffb70af:
 mov cl, byte [ebp - 0x2d]
 mov al, byte [ebp - 0x34]
 cmp dword [ebp - 0x20], 0xb
 mov byte [ebp - 0x1c], cl
 mov byte [ebp - 0x22], al
-ja loc_fffb720e  ; ja 0xfffb720e
+ja near loc_fffb720e  ; ja 0xfffb720e
 mov ecx, dword [ebp - 0x20]
 jmp dword [ecx*4 + ref_fffcedc4]  ; ujmp: jmp dword [ecx*4 - 0x3123c]
 
-loc_fffb70cf:  ; not directly referenced
+loc_fffb70cf:
 mov cl, byte [ebp - 0x21]
 mov byte [ebp - 0x1c], cl
 
-loc_fffb70d5:  ; not directly referenced
+loc_fffb70d5:
 cmp byte [ebp - 0x23], 1
-je loc_fffb7218  ; je 0xfffb7218
+je near loc_fffb7218  ; je 0xfffb7218
 xor esi, esi
 jmp near loc_fffb7208  ; jmp 0xfffb7208
 
-loc_fffb70e6:  ; not directly referenced
+loc_fffb70e6:
 mov ecx, dword [ebp + 0x10]
 mov cl, byte [ecx]
 mov byte [ebp - 0x22], cl
 mov cl, byte [ebp - 0x21]
 mov byte [ebp - 0x1c], cl
 
-loc_fffb70f4:  ; not directly referenced
+loc_fffb70f4:
 cmp dword [edi], 1
 mov esi, 4
 sbb ebx, ebx
@@ -29316,7 +29315,7 @@ mov dword [edi], 1
 and ebx, 0x80000005
 jmp near loc_fffb71f5  ; jmp 0xfffb71f5
 
-loc_fffb710f:  ; not directly referenced
+loc_fffb710f:
 mov ecx, dword [ebp + 0x10]
 mov eax, 5
 movzx edx, byte [ecx]
@@ -29325,20 +29324,20 @@ mov cl, byte [ebp - 0x21]
 mov dword [edi], 1
 mov byte [ebp - 0x1c], cl
 
-loc_fffb712b:  ; not directly referenced
+loc_fffb712b:
 mov eax, dword [edi]
 test eax, eax
-je loc_fffb71f9  ; je 0xfffb71f9
+je near loc_fffb71f9  ; je 0xfffb71f9
 cmp eax, 1
-je loc_fffb7203  ; je 0xfffb7203
+je near loc_fffb7203  ; je 0xfffb7203
 cmp eax, 0x100
-ja loc_fffb720e  ; ja 0xfffb720e
+ja near loc_fffb720e  ; ja 0xfffb720e
 cmp byte [ebp - 0x23], 1
-je loc_fffb7218  ; je 0xfffb7218
+je near loc_fffb7218  ; je 0xfffb7218
 mov esi, 0x18
 jmp near loc_fffb7208  ; jmp 0xfffb7208
 
-loc_fffb715d:  ; not directly referenced
+loc_fffb715d:
 mov cl, byte [ebp - 0x21]
 mov eax, 6
 mov byte [ebp - 0x1c], cl
@@ -29350,7 +29349,7 @@ mov eax, 5
 movzx edx, byte [ecx]
 call fcn_fffa0856  ; call 0xfffa0856
 
-loc_fffb7184:  ; not directly referenced
+loc_fffb7184:
 cmp dword [edi], 2
 mov esi, 0xc
 sbb ebx, ebx
@@ -29358,7 +29357,7 @@ mov dword [edi], 2
 and ebx, 0x80000005
 jmp short loc_fffb71f5  ; jmp 0xfffb71f5
 
-loc_fffb719c:  ; not directly referenced
+loc_fffb719c:
 movzx edx, byte [edi]
 mov eax, 5
 call fcn_fffa0856  ; call 0xfffa0856
@@ -29367,14 +29366,14 @@ mov byte [ebp - 0x1c], cl
 mov cl, byte [edi]
 mov byte [ebp - 0x24], cl
 
-loc_fffb71b4:  ; not directly referenced
+loc_fffb71b4:
 mov eax, dword [edi]
 dec eax
 cmp eax, 0x1f
 jbe short loc_fffb7222  ; jbe 0xfffb7222
 jmp short loc_fffb720e  ; jmp 0xfffb720e
 
-loc_fffb71be:  ; not directly referenced
+loc_fffb71be:
 mov ecx, dword [ebp + 0x10]
 mov eax, 6
 mov esi, 0x10
@@ -29389,42 +29388,42 @@ mov dword [edi], 2
 sbb ebx, ebx
 and ebx, 0x80000005
 
-loc_fffb71f5:  ; not directly referenced
+loc_fffb71f5:
 xor edx, edx
 jmp short loc_fffb722b  ; jmp 0xfffb722b
 
-loc_fffb71f9:  ; not directly referenced
+loc_fffb71f9:
 mov ebx, 0x80000005
 jmp near loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7203:  ; not directly referenced
+loc_fffb7203:
 mov esi, 8
 
-loc_fffb7208:  ; not directly referenced
+loc_fffb7208:
 xor edx, edx
 
-loc_fffb720a:  ; not directly referenced
+loc_fffb720a:
 xor ebx, ebx
 jmp short loc_fffb7233  ; jmp 0xfffb7233
 
-loc_fffb720e:  ; not directly referenced
+loc_fffb720e:
 mov ebx, 0x80000002
 jmp near loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7218:  ; not directly referenced
+loc_fffb7218:
 mov ebx, 0x80000003
 jmp near loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7222:  ; not directly referenced
+loc_fffb7222:
 mov esi, 0x14
 mov dl, 2
 jmp short loc_fffb720a  ; jmp 0xfffb720a
 
-loc_fffb722b:  ; not directly referenced
+loc_fffb722b:
 test ebx, ebx
-js loc_fffb7485  ; js 0xfffb7485
+js near loc_fffb7485  ; js 0xfffb7485
 
-loc_fffb7233:  ; not directly referenced
+loc_fffb7233:
 mov al, dl
 or eax, 1
 cmp byte [ebp - 0x23], 1
@@ -29437,7 +29436,7 @@ call fcn_fffa0871  ; call 0xfffa0871
 cmp dword [ebp - 0x20], 9
 je short loc_fffb728c  ; je 0xfffb728c
 
-loc_fffb725c:  ; not directly referenced
+loc_fffb725c:
 movzx edx, byte [ebp - 0x1c]
 mov eax, 4
 call fcn_fffa0856  ; call 0xfffa0856
@@ -29445,7 +29444,7 @@ cmp dword [ebp - 0x20], 4
 jne short loc_fffb72ac  ; jne 0xfffb72ac
 jmp short loc_fffb729c  ; jmp 0xfffb729c
 
-loc_fffb7272:  ; not directly referenced
+loc_fffb7272:
 mov eax, dword [ebp + 0x10]
 movzx edx, byte [eax + ecx]
 mov eax, 7
@@ -29455,28 +29454,28 @@ mov ecx, dword [ebp - 0x38]
 inc ecx
 jmp short loc_fffb7295  ; jmp 0xfffb7295
 
-loc_fffb728c:  ; not directly referenced
+loc_fffb728c:
 movzx edx, byte [ebp - 0x24]
 xor ecx, ecx
 mov dword [ebp - 0x2c], edx
 
-loc_fffb7295:  ; not directly referenced
+loc_fffb7295:
 cmp ecx, dword [ebp - 0x2c]
 jb short loc_fffb7272  ; jb 0xfffb7272
 jmp short loc_fffb725c  ; jmp 0xfffb725c
 
-loc_fffb729c:  ; not directly referenced
+loc_fffb729c:
 cmp dword [edi], 1
 jbe short loc_fffb72ac  ; jbe 0xfffb72ac
 movzx edx, byte [ebp - 0x22]
 mov eax, 6
 jmp short loc_fffb72b5  ; jmp 0xfffb72b5
 
-loc_fffb72ac:  ; not directly referenced
+loc_fffb72ac:
 movzx edx, byte [ebp - 0x22]
 mov eax, 3
 
-loc_fffb72b5:  ; not directly referenced
+loc_fffb72b5:
 add esi, 0x40
 call fcn_fffa0856  ; call 0xfffa0856
 mov ecx, esi
@@ -29485,18 +29484,18 @@ movzx edx, cl
 mov esi, 0x186a0
 call fcn_fffa0856  ; call 0xfffa0856
 
-loc_fffb72d1:  ; not directly referenced
+loc_fffb72d1:
 xor eax, eax
 call fcn_fffa0871  ; call 0xfffa0871
 test al, 0x8e
-jne loc_fffb74ae  ; jne 0xfffb74ae
+jne near loc_fffb74ae  ; jne 0xfffb74ae
 mov eax, 0xa
 call fcn_fffa0cba  ; call 0xfffa0cba
 dec esi
 jne short loc_fffb72d1  ; jne 0xfffb72d1
 jmp near loc_fffb7414  ; jmp 0xfffb7414
 
-loc_fffb72f2:  ; not directly referenced
+loc_fffb72f2:
 mov eax, 0xc
 call fcn_fffa0871  ; call 0xfffa0871
 and eax, 1
@@ -29506,7 +29505,7 @@ and ebx, 0xffffffec
 sub ebx, 0x7fffffe5
 jmp near loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7311:  ; not directly referenced
+loc_fffb7311:
 test al, 8
 je short loc_fffb7359  ; je 0xfffb7359
 xor eax, eax
@@ -29521,31 +29520,31 @@ call fcn_fffa0856  ; call 0xfffa0856
 mov eax, 0xa
 call fcn_fffa0cba  ; call 0xfffa0cba
 dec dword [ebp - 0x28]
-jne loc_fffb70af  ; jne 0xfffb70af
+jne near loc_fffb70af  ; jne 0xfffb70af
 mov ebx, 0x80000007
 jmp near loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7359:  ; not directly referenced
+loc_fffb7359:
 mov eax, dword [ebp - 0x20]
 sub eax, 2
 cmp eax, 8
-ja loc_fffb7485  ; ja 0xfffb7485
+ja near loc_fffb7485  ; ja 0xfffb7485
 jmp dword [eax*4 + ref_fffcedf4]  ; ujmp: jmp dword [eax*4 - 0x3120c]
 
-loc_fffb736f:  ; not directly referenced
+loc_fffb736f:
 mov eax, 6
 call fcn_fffa0871  ; call 0xfffa0871
 mov ecx, dword [ebp + 0x10]
 mov byte [ecx + 1], al
 jmp near loc_fffb7426  ; jmp 0xfffb7426
 
-loc_fffb7384:  ; not directly referenced
+loc_fffb7384:
 xor esi, esi
 cmp dword [edi], 1
-ja loc_fffb741c  ; ja 0xfffb741c
+ja near loc_fffb741c  ; ja 0xfffb741c
 jmp near loc_fffb7426  ; jmp 0xfffb7426
 
-loc_fffb7394:  ; not directly referenced
+loc_fffb7394:
 mov eax, 7
 call fcn_fffa0871  ; call 0xfffa0871
 mov ecx, dword [ebp + 0x10]
@@ -29560,7 +29559,7 @@ or eax, 0x20
 movzx edx, al
 jmp short loc_fffb73d6  ; jmp 0xfffb73d6
 
-loc_fffb73bf:  ; not directly referenced
+loc_fffb73bf:
 dec eax
 cmp esi, eax
 jne short loc_fffb73e0  ; jne 0xfffb73e0
@@ -29569,11 +29568,11 @@ call fcn_fffa0871  ; call 0xfffa0871
 mov edx, eax
 and edx, 0xdf
 
-loc_fffb73d6:  ; not directly referenced
+loc_fffb73d6:
 mov eax, 2
 call fcn_fffa0856  ; call 0xfffa0856
 
-loc_fffb73e0:  ; not directly referenced
+loc_fffb73e0:
 xor eax, eax
 mov edx, 0x80
 call fcn_fffa0856  ; call 0xfffa0856
@@ -29583,7 +29582,7 @@ cmp esi, eax
 jae short loc_fffb741b  ; jae 0xfffb741b
 mov dword [ebp - 0x1c], 0x64
 
-loc_fffb73fa:  ; not directly referenced
+loc_fffb73fa:
 xor eax, eax
 call fcn_fffa0871  ; call 0xfffa0871
 test al, al
@@ -29593,32 +29592,32 @@ call fcn_fffa0cba  ; call 0xfffa0cba
 dec dword [ebp - 0x1c]
 jne short loc_fffb73fa  ; jne 0xfffb73fa
 
-loc_fffb7414:  ; not directly referenced
+loc_fffb7414:
 mov ebx, 0x80000012
 jmp short loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb741b:  ; not directly referenced
+loc_fffb741b:
 inc esi
 
-loc_fffb741c:  ; not directly referenced
+loc_fffb741c:
 cmp esi, dword [edi]
-jb loc_fffb7394  ; jb 0xfffb7394
+jb near loc_fffb7394  ; jb 0xfffb7394
 jmp short loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7426:  ; not directly referenced
+loc_fffb7426:
 mov eax, 5
 call fcn_fffa0871  ; call 0xfffa0871
 mov ecx, dword [ebp + 0x10]
 mov byte [ecx], al
 jmp short loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7437:  ; not directly referenced
+loc_fffb7437:
 mov edx, 0x80
 xor eax, eax
 call fcn_fffa0856  ; call 0xfffa0856
 jmp short loc_fffb7485  ; jmp 0xfffb7485
 
-loc_fffb7445:  ; not directly referenced
+loc_fffb7445:
 mov eax, 5
 xor esi, esi
 call fcn_fffa0871  ; call 0xfffa0871
@@ -29628,7 +29627,7 @@ mov al, 1
 jae short loc_fffb7473  ; jae 0xfffb7473
 jmp short loc_fffb7479  ; jmp 0xfffb7479
 
-loc_fffb745c:  ; not directly referenced
+loc_fffb745c:
 mov eax, 7
 mov dword [ebp - 0x38], edx
 call fcn_fffa0871  ; call 0xfffa0871
@@ -29637,18 +29636,18 @@ mov byte [ecx + esi], al
 inc esi
 mov edx, dword [ebp - 0x38]
 
-loc_fffb7473:  ; not directly referenced
+loc_fffb7473:
 cmp esi, edx
 jb short loc_fffb745c  ; jb 0xfffb745c
 xor eax, eax
 
-loc_fffb7479:  ; not directly referenced
+loc_fffb7479:
 test al, al
 mov eax, 0x80000005
 mov dword [edi], edx
 cmovne ebx, eax
 
-loc_fffb7485:  ; not directly referenced
+loc_fffb7485:
 mov edx, 0xff
 xor eax, eax
 call fcn_fffa0856  ; call 0xfffa0856
@@ -29658,16 +29657,16 @@ call fcn_fffa0856  ; call 0xfffa0856
 xor edx, edx
 mov eax, 0xd
 
-loc_fffb74a7:  ; not directly referenced
+loc_fffb74a7:
 call fcn_fffa0856  ; call 0xfffa0856
 jmp short loc_fffb74bb  ; jmp 0xfffb74bb
 
-loc_fffb74ae:  ; not directly referenced
+loc_fffb74ae:
 test al, 4
-je loc_fffb7311  ; je 0xfffb7311
+je near loc_fffb7311  ; je 0xfffb7311
 jmp near loc_fffb72f2  ; jmp 0xfffb72f2
 
-loc_fffb74bb:  ; not directly referenced
+loc_fffb74bb:
 lea esp, [esp + 0x2c]
 mov eax, ebx
 pop ebx
@@ -29676,7 +29675,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffb74c6:
+endloc_fffb74c6:
 db 0x00
 db 0x00
 
@@ -29763,9 +29762,9 @@ mov al, byte [esi + 0x23]
 
 loc_fffb7561:
 or bl, cl
-js loc_fffb7684  ; js 0xfffb7684
+js near loc_fffb7684  ; js 0xfffb7684
 or dl, al
-js loc_fffb7684  ; js 0xfffb7684
+js near loc_fffb7684  ; js 0xfffb7684
 imul eax, dword [ebp - 0x20], 0x1055
 mov dword [ebp - 0x1c], 0
 lea ebx, [edi + eax + 0x376]
@@ -29778,7 +29777,7 @@ mov edx, dword [ebp - 0x1c]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb764d  ; je 0xfffb764d
+je near loc_fffb764d  ; je 0xfffb764d
 mov edx, dword [ebp - 0x28]
 imul eax, dword [ebp - 0x1c], 0xa
 cmp byte [edx + 0x45], 0
@@ -29849,14 +29848,14 @@ inc dword [ebp - 0x1c]
 add ebx, 0xa
 add dword [ebp - 0x24], 0x2f
 cmp dword [ebp - 0x1c], 4
-jne loc_fffb758d  ; jne 0xfffb758d
+jne near loc_fffb758d  ; jne 0xfffb758d
 
 loc_fffb7661:
 inc dword [ebp - 0x20]
 add dword [ebp - 0x28], 0x1055
 add esi, 0x28
 cmp dword [ebp - 0x20], 2
-jne loc_fffb753a  ; jne 0xfffb753a
+jne near loc_fffb753a  ; jne 0xfffb753a
 mov dword [ebp - 0x24], 0
 jmp near loc_fffb79cb  ; jmp 0xfffb79cb
 
@@ -29911,7 +29910,7 @@ mov edx, dword [ebp - 0x1c]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb77bd  ; je 0xfffb77bd
+je near loc_fffb77bd  ; je 0xfffb77bd
 mov eax, dword [ebp - 0x28]
 cmp byte [eax + 0x45], 0
 jne short loc_fffb771a  ; jne 0xfffb771a
@@ -29986,7 +29985,7 @@ inc dword [ebp - 0x1c]
 add ebx, 0xa
 add dword [ebp - 0x30], 0x2f
 cmp dword [ebp - 0x1c], 4
-jne loc_fffb76f2  ; jne 0xfffb76f2
+jne near loc_fffb76f2  ; jne 0xfffb76f2
 jmp near loc_fffb7661  ; jmp 0xfffb7661
 
 loc_fffb77d6:
@@ -29997,16 +29996,16 @@ mov edx, dword [ebp - 0x20]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb79b2  ; je 0xfffb79b2
+je near loc_fffb79b2  ; je 0xfffb79b2
 cmp byte [ebp - 0x28], 1
 seta cl
 movzx eax, cl
 imul eax, eax, 0x1d
 add eax, dword [ebp - 0x30]
 cmp byte [edi + eax + 0x12], 1
-jbe loc_fffb78aa  ; jbe 0xfffb78aa
+jbe near loc_fffb78aa  ; jbe 0xfffb78aa
 test byte [ebp - 0x20], 1
-je loc_fffb78aa  ; je 0xfffb78aa
+je near loc_fffb78aa  ; je 0xfffb78aa
 cmp byte [ebp - 0x1c], 1
 mov esi, dword [edi + 0x2223]
 sbb eax, eax
@@ -30158,7 +30157,7 @@ loc_fffb79b2:
 inc dword [ebp - 0x20]
 add ebx, 0xa
 cmp dword [ebp - 0x20], 4
-jne loc_fffb77d6  ; jne 0xfffb77d6
+jne near loc_fffb77d6  ; jne 0xfffb77d6
 inc dword [ebp - 0x24]
 cmp dword [ebp - 0x24], 2
 je short loc_fffb79ee  ; je 0xfffb79ee
@@ -30180,7 +30179,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffb79f6:  ; not directly referenced
+fcn_fffb79f6:
 push ebp
 xor ecx, ecx
 mov edx, 0x50
@@ -30212,13 +30211,13 @@ mov eax, edi
 call fcn_fffbd650  ; call 0xfffbd650
 mov dword [ebp - 0x8f0], 0xffffff81
 
-loc_fffb7a76:  ; not directly referenced
+loc_fffb7a76:
 mov edx, dword [ebp - 0x8f0]
 mov eax, edi
 call fcn_fffbda8b  ; call 0xfffbda8b
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov ecx, dword [ebp - 0x8f0]
 lea eax, [ebp - 0x8e4]
 add ecx, 0x7f
@@ -30229,16 +30228,16 @@ mov dword [ebp - 0x8ec], 0
 mov dword [ebp - 0x904], ecx
 jmp near loc_fffb7d43  ; jmp 0xfffb7d43
 
-loc_fffb7ac3:  ; not directly referenced
+loc_fffb7ac3:
 mov ecx, dword [ebp - 0x8ec]
 mov edx, esi
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb7d12  ; je 0xfffb7d12
+je near loc_fffb7d12  ; je 0xfffb7d12
 mov eax, dword [ebp - 0x8fc]
 cmp dword [eax + esi*4], 0
-jne loc_fffb7d12  ; jne 0xfffb7d12
+jne near loc_fffb7d12  ; jne 0xfffb7d12
 sub esp, 0xc
 mov ecx, dword [ebp - 0x8ec]
 push esi
@@ -30248,7 +30247,7 @@ call fcn_fffbde1b  ; call 0xfffbde1b
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov dl, byte [ebp - 0x8ec]
 mov ecx, dword [ebp - 0x8ec]
 cmp dl, 1
@@ -30280,7 +30279,7 @@ sete al
 or dl, al
 jne short loc_fffb7bbe  ; jne 0xfffb7bbe
 
-loc_fffb7b83:  ; not directly referenced
+loc_fffb7b83:
 push edx
 push dword [ebp - 0x8f0]
 lea ecx, [ebp - 0x86c]
@@ -30298,19 +30297,19 @@ mov ebx, eax
 je short loc_fffb7bf7  ; je 0xfffb7bf7
 jmp near loc_fffb81a5  ; jmp 0xfffb81a5
 
-loc_fffb7bbe:  ; not directly referenced
+loc_fffb7bbe:
 mov eax, edi
 call fcn_fffc0529  ; call 0xfffc0529
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 sub esp, 0xc
 push edi
 call fcn_fffc7efc  ; call 0xfffc7efc
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
@@ -30318,9 +30317,9 @@ mov ebx, eax
 je short loc_fffb7b83  ; je 0xfffb7b83
 jmp near loc_fffb81a5  ; jmp 0xfffb81a5
 
-loc_fffb7bf7:  ; not directly referenced
+loc_fffb7bf7:
 cmp dword [ebp - 0x8e8], 1
-jne loc_fffb7ce2  ; jne 0xfffb7ce2
+jne near loc_fffb7ce2  ; jne 0xfffb7ce2
 mov ecx, dword [ebp - 0x8f8]
 mov edx, dword [ebp - 0x8f4]
 mov eax, edi
@@ -30329,7 +30328,7 @@ mov byte [ecx], 2
 mov byte [ecx + 1], 2
 call fcn_fffb74c8  ; call 0xfffb74c8
 dec eax
-jne loc_fffb7d12  ; jne 0xfffb7d12
+jne near loc_fffb7d12  ; jne 0xfffb7d12
 sub esp, 0xc
 mov ecx, dword [ebp - 0x8ec]
 push esi
@@ -30339,7 +30338,7 @@ call fcn_fffbde1b  ; call 0xfffbde1b
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 cmp byte [ebp - 0x900], 1
 mov ecx, dword [ebp - 0x8ec]
 sbb eax, eax
@@ -30373,7 +30372,7 @@ call fcn_fffbd81a  ; call 0xfffbd81a
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 cmp dword [ebp - 0x8e8], 1
 jne short loc_fffb7d12  ; jne 0xfffb7d12
 mov ecx, dword [ebp - 0x8f8]
@@ -30381,7 +30380,7 @@ mov byte [ecx], 0
 mov byte [ecx + 1], 0
 jmp short loc_fffb7d12  ; jmp 0xfffb7d12
 
-loc_fffb7ce2:  ; not directly referenced
+loc_fffb7ce2:
 mov ecx, dword [ebp - 0x8f4]
 mov eax, 0x80
 sub eax, dword [ebp - 0x8f0]
@@ -30391,22 +30390,22 @@ jge short loc_fffb7d08  ; jge 0xfffb7d08
 mov eax, dword [ebp - 0x8fc]
 mov dword [eax + esi*4], 1
 
-loc_fffb7d08:  ; not directly referenced
+loc_fffb7d08:
 mov edx, dword [ebp - 0x8f4]
 mov byte [edx + esi], 0
 
-loc_fffb7d12:  ; not directly referenced
+loc_fffb7d12:
 inc esi
 add dword [ebp - 0x8f8], 0x100
 cmp esi, 4
-jne loc_fffb7ac3  ; jne 0xfffb7ac3
+jne near loc_fffb7ac3  ; jne 0xfffb7ac3
 inc dword [ebp - 0x8ec]
 add dword [ebp - 0x8f4], 4
 add dword [ebp - 0x8fc], 0x10
 cmp dword [ebp - 0x8ec], 2
 je short loc_fffb7d67  ; je 0xfffb7d67
 
-loc_fffb7d43:  ; not directly referenced
+loc_fffb7d43:
 mov eax, dword [ebp - 0x8ec]
 lea ecx, [ebp - 0x818]
 shl eax, 0xa
@@ -30416,14 +30415,14 @@ xor esi, esi
 mov dword [ebp - 0x8f8], ecx
 jmp near loc_fffb7ac3  ; jmp 0xfffb7ac3
 
-loc_fffb7d67:  ; not directly referenced
+loc_fffb7d67:
 add dword [ebp - 0x8f0], 2
 cmp dword [ebp - 0x8f0], 0x81
-jne loc_fffb7a76  ; jne 0xfffb7a76
+jne near loc_fffb7a76  ; jne 0xfffb7a76
 mov dword [ebp - 0x8f8], edi
 mov dword [ebp - 0x8ec], 0
 
-loc_fffb7d8e:  ; not directly referenced
+loc_fffb7d8e:
 imul edx, dword [ebp - 0x8ec], 0x1055
 mov eax, dword [ebp - 0x8f8]
 lea esi, [ebp - 0x8bc]
@@ -30438,7 +30437,7 @@ add esi, eax
 mov dword [ebp - 0x8fc], eax
 mov dword [ebp - 0x900], edx
 
-loc_fffb7ddd:  ; not directly referenced
+loc_fffb7ddd:
 mov ecx, dword [ebp - 0x8ec]
 mov edx, dword [ebp - 0x8f4]
 mov eax, edi
@@ -30458,7 +30457,7 @@ mov eax, edi
 call fcn_fffbd45d  ; call 0xfffbd45d
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov edx, dword [ebp - 0x8f0]
 mov al, byte [esi]
 mov ecx, dword [ebp - 0x8f8]
@@ -30475,16 +30474,16 @@ cmp edx, eax
 jae short loc_fffb7e61  ; jae 0xfffb7e61
 mov byte [ecx + 0x45], al
 
-loc_fffb7e61:  ; not directly referenced
+loc_fffb7e61:
 inc dword [ebp - 0x8f4]
 add esi, 0xa
 add dword [ebp - 0x8f0], 0xa
 cmp dword [ebp - 0x8f4], 4
-jne loc_fffb7ddd  ; jne 0xfffb7ddd
+jne near loc_fffb7ddd  ; jne 0xfffb7ddd
 inc dword [ebp - 0x8ec]
 add dword [ebp - 0x8f8], 0x1055
 cmp dword [ebp - 0x8ec], 2
-jne loc_fffb7d8e  ; jne 0xfffb7d8e
+jne near loc_fffb7d8e  ; jne 0xfffb7d8e
 mov al, byte [edi + 0x109a]
 mov dl, byte [edi + 0x45]
 cmp dl, al
@@ -30492,15 +30491,15 @@ cmovae eax, edx
 cmp al, 3
 mov byte [edi + 0x45], al
 mov byte [edi + 0x109a], al
-je loc_fffb8154  ; je 0xfffb8154
+je near loc_fffb8154  ; je 0xfffb8154
 cmp byte [edi + 0x3a], 0
-jne loc_fffb815b  ; jne 0xfffb815b
+jne near loc_fffb815b  ; jne 0xfffb815b
 
-loc_fffb7ec4:  ; not directly referenced
+loc_fffb7ec4:
 cmp byte [edi + 0x108f], 0
-jne loc_fffb817d  ; jne 0xfffb817d
+jne near loc_fffb817d  ; jne 0xfffb817d
 
-loc_fffb7ed1:  ; not directly referenced
+loc_fffb7ed1:
 lea edx, [ebp - 0x8bc]
 mov eax, edi
 call fcn_fffb7522  ; call 0xfffb7522
@@ -30508,23 +30507,23 @@ mov eax, edi
 call fcn_fffc0529  ; call 0xfffc0529
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 sub esp, 0xc
 push edi
 call fcn_fffc7efc  ; call 0xfffc7efc
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
 mov ebx, eax
-jne loc_fffb81a5  ; jne 0xfffb81a5
+jne near loc_fffb81a5  ; jne 0xfffb81a5
 mov dword [ebp - 0x8f0], 0
 jmp near loc_fffb812f  ; jmp 0xfffb812f
 
-loc_fffb7f25:  ; not directly referenced
+loc_fffb7f25:
 mov ecx, dword [ebp - 0x8f0]
 mov edx, dword [ebp - 0x8ec]
 mov eax, edi
@@ -30532,13 +30531,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffb7f50  ; jne 0xfffb7f50
 
-loc_fffb7f3c:  ; not directly referenced
+loc_fffb7f3c:
 inc dword [ebp - 0x8ec]
 cmp dword [ebp - 0x8ec], 4
 jne short loc_fffb7f25  ; jne 0xfffb7f25
 jmp near loc_fffb8120  ; jmp 0xfffb8120
 
-loc_fffb7f50:  ; not directly referenced
+loc_fffb7f50:
 mov edx, dword [ebp - 0x8fc]
 mov al, byte [edi + edx + 0x45]
 cmp al, 2
@@ -30552,7 +30551,7 @@ sub esp, 0xc
 sub eax, 2
 jmp short loc_fffb7f9c  ; jmp 0xfffb7f9c
 
-loc_fffb7f7c:  ; not directly referenced
+loc_fffb7f7c:
 test al, al
 jne short loc_fffb7fb3  ; jne 0xfffb7fb3
 mov ecx, dword [ebp - 0x8f0]
@@ -30563,7 +30562,7 @@ movzx eax, al
 sub esp, 0xc
 sub eax, 4
 
-loc_fffb7f9c:  ; not directly referenced
+loc_fffb7f9c:
 push eax
 mov ecx, dword [ebp - 0x8f0]
 mov edx, dword [ebp - 0x8ec]
@@ -30571,13 +30570,13 @@ mov eax, edi
 call fcn_fffbb521  ; call 0xfffbb521
 add esp, 0x10
 
-loc_fffb7fb3:  ; not directly referenced
+loc_fffb7fb3:
 imul ecx, dword [ebp - 0x8ec], 0x2f
 mov byte [ebp - 0x8f8], 0
 mov dword [ebp - 0x908], ecx
 jmp near loc_fffb8109  ; jmp 0xfffb8109
 
-loc_fffb7fcc:  ; not directly referenced
+loc_fffb7fcc:
 push eax
 movzx esi, byte [ebp - 0x8f8]
 mov ecx, dword [ebp - 0x8ec]
@@ -30657,29 +30656,29 @@ inc byte [ebp - 0x8f8]
 add esp, 0x10
 mov byte [esi + edx + 0x32e], al
 
-loc_fffb8109:  ; not directly referenced
+loc_fffb8109:
 mov al, byte [ebp - 0x8f8]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb7fcc  ; jb 0xfffb7fcc
+jb near loc_fffb7fcc  ; jb 0xfffb7fcc
 jmp near loc_fffb7f3c  ; jmp 0xfffb7f3c
 
-loc_fffb8120:  ; not directly referenced
+loc_fffb8120:
 inc dword [ebp - 0x8f0]
 cmp dword [ebp - 0x8f0], 2
 je short loc_fffb81a5  ; je 0xfffb81a5
 
-loc_fffb812f:  ; not directly referenced
+loc_fffb812f:
 imul edx, dword [ebp - 0x8f0], 0x1055
 mov dword [ebp - 0x8ec], 0
 mov dword [ebp - 0x8fc], edx
 mov dword [ebp - 0x8f4], edx
 jmp near loc_fffb7f25  ; jmp 0xfffb7f25
 
-loc_fffb8154:  ; not directly referenced
+loc_fffb8154:
 mov ebx, 1
 jmp short loc_fffb81a5  ; jmp 0xfffb81a5
 
-loc_fffb815b:  ; not directly referenced
+loc_fffb815b:
 shl eax, 0x1e
 mov ecx, dword [edi + 0x2223]
 mov edx, dword [ecx + 0x4004]
@@ -30688,7 +30687,7 @@ or eax, edx
 mov dword [ecx + 0x4004], eax
 jmp near loc_fffb7ec4  ; jmp 0xfffb7ec4
 
-loc_fffb817d:  ; not directly referenced
+loc_fffb817d:
 movzx edx, byte [edi + 0x109a]
 mov ecx, dword [edi + 0x2223]
 shl edx, 0x1e
@@ -30698,7 +30697,7 @@ or eax, edx
 mov dword [ecx + 0x4404], eax
 jmp near loc_fffb7ed1  ; jmp 0xfffb7ed1
 
-loc_fffb81a5:  ; not directly referenced
+loc_fffb81a5:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -30745,7 +30744,7 @@ mov eax, edi
 call fcn_fffbda8b  ; call 0xfffbda8b
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov ecx, dword [ebp - 0x8f0]
 lea eax, [ebp - 0x8e4]
 add ecx, 0x7f
@@ -30762,10 +30761,10 @@ mov edx, esi
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb84c5  ; je 0xfffb84c5
+je near loc_fffb84c5  ; je 0xfffb84c5
 mov eax, dword [ebp - 0x8fc]
 cmp dword [eax + esi*4], 0
-jne loc_fffb84c5  ; jne 0xfffb84c5
+jne near loc_fffb84c5  ; jne 0xfffb84c5
 sub esp, 0xc
 mov ecx, dword [ebp - 0x8ec]
 push esi
@@ -30775,7 +30774,7 @@ call fcn_fffbde1b  ; call 0xfffbde1b
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov dl, byte [ebp - 0x8ec]
 mov ecx, dword [ebp - 0x8ec]
 cmp dl, 1
@@ -30830,12 +30829,12 @@ mov eax, edi
 call fcn_fffc0529  ; call 0xfffc0529
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov eax, edi
 call fcn_fffbc722  ; call 0xfffbc722
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
@@ -30845,7 +30844,7 @@ jmp near loc_fffb8922  ; jmp 0xfffb8922
 
 loc_fffb83aa:
 cmp dword [ebp - 0x8e8], 1
-jne loc_fffb8495  ; jne 0xfffb8495
+jne near loc_fffb8495  ; jne 0xfffb8495
 mov ecx, dword [ebp - 0x8f8]
 mov edx, dword [ebp - 0x8f4]
 mov eax, edi
@@ -30854,7 +30853,7 @@ mov byte [ecx], 2
 mov byte [ecx + 1], 2
 call fcn_fffb74c8  ; call 0xfffb74c8
 dec eax
-jne loc_fffb84c5  ; jne 0xfffb84c5
+jne near loc_fffb84c5  ; jne 0xfffb84c5
 sub esp, 0xc
 mov ecx, dword [ebp - 0x8ec]
 push esi
@@ -30864,7 +30863,7 @@ call fcn_fffbde1b  ; call 0xfffbde1b
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 cmp byte [ebp - 0x900], 1
 mov ecx, dword [ebp - 0x8ec]
 sbb eax, eax
@@ -30898,7 +30897,7 @@ call fcn_fffbd81a  ; call 0xfffbd81a
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 cmp dword [ebp - 0x8e8], 1
 jne short loc_fffb84c5  ; jne 0xfffb84c5
 mov ecx, dword [ebp - 0x8f8]
@@ -30924,7 +30923,7 @@ loc_fffb84c5:
 inc esi
 add dword [ebp - 0x8f8], 0x100
 cmp esi, 4
-jne loc_fffb827b  ; jne 0xfffb827b
+jne near loc_fffb827b  ; jne 0xfffb827b
 inc dword [ebp - 0x8ec]
 add dword [ebp - 0x8f4], 4
 add dword [ebp - 0x8fc], 0x10
@@ -30944,7 +30943,7 @@ jmp near loc_fffb827b  ; jmp 0xfffb827b
 loc_fffb851a:
 add dword [ebp - 0x8f0], 2
 cmp dword [ebp - 0x8f0], 0x81
-jne loc_fffb822e  ; jne 0xfffb822e
+jne near loc_fffb822e  ; jne 0xfffb822e
 lea eax, [ebp - 0x8bc]
 mov esi, edi
 mov dword [ebp - 0x8f4], eax
@@ -30981,7 +30980,7 @@ mov eax, edi
 call fcn_fffbd45d  ; call 0xfffbd45d
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov edx, dword [ebp - 0x8f8]
 mov ecx, dword [ebp - 0x8f4]
 mov eax, dword [ecx + edx + 6]
@@ -30993,12 +30992,12 @@ mov byte [esi + 0x45], al
 loc_fffb85ea:
 inc dword [ebp - 0x8ec]
 cmp dword [ebp - 0x8ec], 4
-jne loc_fffb8573  ; jne 0xfffb8573
+jne near loc_fffb8573  ; jne 0xfffb8573
 inc dword [ebp - 0x8f0]
 add esi, 0x1055
 add dword [ebp - 0x8f4], 0x28
 cmp dword [ebp - 0x8f0], 2
-jne loc_fffb8549  ; jne 0xfffb8549
+jne near loc_fffb8549  ; jne 0xfffb8549
 mov al, byte [edi + 0x109a]
 mov dl, byte [edi + 0x45]
 cmp dl, al
@@ -31006,13 +31005,13 @@ cmovae eax, edx
 cmp al, 3
 mov byte [edi + 0x45], al
 mov byte [edi + 0x109a], al
-je loc_fffb88d1  ; je 0xfffb88d1
+je near loc_fffb88d1  ; je 0xfffb88d1
 cmp byte [edi + 0x3a], 0
-jne loc_fffb88d8  ; jne 0xfffb88d8
+jne near loc_fffb88d8  ; jne 0xfffb88d8
 
 loc_fffb8646:
 cmp byte [edi + 0x108f], 0
-jne loc_fffb88fa  ; jne 0xfffb88fa
+jne near loc_fffb88fa  ; jne 0xfffb88fa
 
 loc_fffb8653:
 lea edx, [ebp - 0x8bc]
@@ -31022,17 +31021,17 @@ mov eax, edi
 call fcn_fffc0529  ; call 0xfffc0529
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov eax, edi
 call fcn_fffbc722  ; call 0xfffbc722
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 test eax, eax
 mov ebx, eax
-jne loc_fffb8922  ; jne 0xfffb8922
+jne near loc_fffb8922  ; jne 0xfffb8922
 mov dword [ebp - 0x8f0], 0
 jmp near loc_fffb88ac  ; jmp 0xfffb88ac
 
@@ -31172,7 +31171,7 @@ mov byte [esi + edx + 0x32e], al
 loc_fffb8886:
 mov al, byte [ebp - 0x8f8]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb8749  ; jb 0xfffb8749
+jb near loc_fffb8749  ; jb 0xfffb8749
 jmp near loc_fffb86b9  ; jmp 0xfffb86b9
 
 loc_fffb889d:
@@ -31233,7 +31232,7 @@ mov byte [ebp - 0x1c], cl
 mov ecx, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffb8a63  ; je 0xfffb8a63
+je near loc_fffb8a63  ; je 0xfffb8a63
 mov eax, dword [esi + 0x20b6]
 cmp eax, 0x640
 je short loc_fffb8979  ; je 0xfffb8979
@@ -31282,7 +31281,7 @@ add eax, dword [ebp - 0x1c]
 add eax, esi
 mov al, byte [edi + eax + 0x2140]
 test al, al
-jne loc_fffb8a65  ; jne 0xfffb8a65
+jne near loc_fffb8a65  ; jne 0xfffb8a65
 
 loc_fffb89cc:
 cmp dword [esi + 0x2238], 4
@@ -31364,7 +31363,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffb8a6e:
+endloc_fffb8a6e:
 db 0x00
 db 0x00
 
@@ -31436,15 +31435,15 @@ ret
 fcn_fffb8b71:
 mov eax, dword [eax + 0x20b6]
 cmp eax, 0x7d0
-je loc_fffb8c09  ; je 0xfffb8c09
+je near loc_fffb8c09  ; je 0xfffb8c09
 ja short loc_fffb8bc7  ; ja 0xfffb8bc7
 cmp eax, 0x578
-je loc_fffb8c55  ; je 0xfffb8c55
+je near loc_fffb8c55  ; je 0xfffb8c55
 ja short loc_fffb8bac  ; ja 0xfffb8bac
 cmp eax, 0x42b
-je loc_fffb8c4e  ; je 0xfffb8c4e
+je near loc_fffb8c4e  ; je 0xfffb8c4e
 cmp eax, 0x535
-jne loc_fffb8c63  ; jne 0xfffb8c63
+jne near loc_fffb8c63  ; jne 0xfffb8c63
 jmp near loc_fffb8c55  ; jmp 0xfffb8c55
 
 loc_fffb8bac:
@@ -31453,7 +31452,7 @@ je short loc_fffb8bfb  ; je 0xfffb8bfb
 cmp eax, 0x74b
 je short loc_fffb8c02  ; je 0xfffb8c02
 cmp eax, 0x640
-jne loc_fffb8c63  ; jne 0xfffb8c63
+jne near loc_fffb8c63  ; jne 0xfffb8c63
 jmp short loc_fffb8c02  ; jmp 0xfffb8c02
 
 loc_fffb8bc7:
@@ -31463,7 +31462,7 @@ ja short loc_fffb8be4  ; ja 0xfffb8be4
 cmp eax, 0x855
 je short loc_fffb8c09  ; je 0xfffb8c09
 cmp eax, 0x898
-jne loc_fffb8c63  ; jne 0xfffb8c63
+jne near loc_fffb8c63  ; jne 0xfffb8c63
 jmp short loc_fffb8c09  ; jmp 0xfffb8c09
 
 loc_fffb8be4:
@@ -31664,7 +31663,7 @@ inc byte [ebp - 0x20]
 loc_fffb8d9e:
 mov al, byte [ebp - 0x20]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffb8d18  ; jb 0xfffb8d18
+jb near loc_fffb8d18  ; jb 0xfffb8d18
 mov al, 1
 jmp short loc_fffb8db3  ; jmp 0xfffb8db3
 
@@ -31693,7 +31692,7 @@ mov dword [ebp - 0x2c], 0
 
 loc_fffb8dd4:
 cmp byte [edi + 0x3a], 0
-jne loc_fffb93a5  ; jne 0xfffb93a5
+jne near loc_fffb93a5  ; jne 0xfffb93a5
 jmp near loc_fffb9389  ; jmp 0xfffb9389
 
 loc_fffb8de3:
@@ -31825,76 +31824,76 @@ loc_fffb8ef2:
 cmp dword [edi + 0xa], 0
 mov dword [edi + 0x19], 6
 mov dword [edi + 0x36], 6
-je loc_fffb90d2  ; je 0xfffb90d2
+je near loc_fffb90d2  ; je 0xfffb90d2
 cmp dword [edi + 0x27], 0
-je loc_fffb90d2  ; je 0xfffb90d2
+je near loc_fffb90d2  ; je 0xfffb90d2
 mov ecx, dword [ebp - 0x48]
 cmp byte [ecx + 0x210e], 3
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 cmp byte [ecx + 0x2154], 3
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 mov al, byte [ecx + 0x2178]
 mov dl, byte [ecx + 0x2132]
 and eax, 0x1f
 and edx, 0x1f
 mov cl, al
 or cl, dl
-je loc_fffb90d2  ; je 0xfffb90d2
+je near loc_fffb90d2  ; je 0xfffb90d2
 test dl, dl
 sete byte [ebp - 0x30]
 cmp al, 1
 mov cl, byte [ebp - 0x30]
 sete byte [ebp - 0x42]
 test byte [ebp - 0x42], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 cmp dl, 1
 sete byte [ebp - 0x34]
 cmp al, 1
 setbe cl
 test byte [ebp - 0x34], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 cmp dl, 2
 lea ecx, [eax - 1]
 sete byte [ebp - 0x44]
 cmp cl, 1
 setbe cl
 test byte [ebp - 0x44], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 cmp al, 2
 mov cl, byte [ebp - 0x34]
 sete byte [ebp - 0x38]
 test byte [ebp - 0x38], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 test al, al
 sete byte [ebp - 0x43]
 mov cl, byte [ebp - 0x43]
 test byte [ebp - 0x44], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 mov cl, byte [ebp - 0x30]
 test byte [ebp - 0x38], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 cmp dl, 5
 sete bl
 cmp al, 5
 sete cl
 test cl, bl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 test byte [ebp - 0x38], bl
-jne loc_fffb90a2  ; jne 0xfffb90a2
+jne near loc_fffb90a2  ; jne 0xfffb90a2
 test byte [ebp - 0x44], cl
 je short loc_fffb8fe9  ; je 0xfffb8fe9
 jmp near loc_fffb90a2  ; jmp 0xfffb90a2
 
 loc_fffb8fe9:
 test byte [ebp - 0x42], bl
-jne loc_fffb90a2  ; jne 0xfffb90a2
+jne near loc_fffb90a2  ; jne 0xfffb90a2
 test byte [ebp - 0x34], cl
 je short loc_fffb8ffc  ; je 0xfffb8ffc
 jmp near loc_fffb90a2  ; jmp 0xfffb90a2
 
 loc_fffb8ffc:
 test byte [ebp - 0x43], bl
-jne loc_fffb90a2  ; jne 0xfffb90a2
+jne near loc_fffb90a2  ; jne 0xfffb90a2
 test byte [ebp - 0x30], cl
 je short loc_fffb900f  ; je 0xfffb900f
 jmp near loc_fffb90a2  ; jmp 0xfffb90a2
@@ -31903,7 +31902,7 @@ loc_fffb900f:
 cmp al, 3
 sete byte [ebp - 0x3c]
 test byte [ebp - 0x3c], bl
-jne loc_fffb90c4  ; jne 0xfffb90c4
+jne near loc_fffb90c4  ; jne 0xfffb90c4
 cmp dl, 3
 sete byte [ebp - 0x40]
 test byte [ebp - 0x40], cl
@@ -31915,10 +31914,10 @@ lea ecx, [edx - 2]
 cmp cl, 1
 setbe cl
 test byte [ebp - 0x3c], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 mov cl, byte [ebp - 0x38]
 test byte [ebp - 0x40], cl
-jne loc_fffb90d2  ; jne 0xfffb90d2
+jne near loc_fffb90d2  ; jne 0xfffb90d2
 mov cl, byte [ebp - 0x34]
 test byte [ebp - 0x3c], cl
 jne short loc_fffb90d2  ; jne 0xfffb90d2
@@ -32061,7 +32060,7 @@ cmp byte [edi + 0x12], 2
 mov dword [ebp - 0x30], edx
 je short loc_fffb91c8  ; je 0xfffb91c8
 cmp byte [edi + 0x2f], 2
-jne loc_fffb92d6  ; jne 0xfffb92d6
+jne near loc_fffb92d6  ; jne 0xfffb92d6
 
 loc_fffb91c8:
 push ebx
@@ -32179,7 +32178,7 @@ loc_fffb92ef:
 mov eax, dword [ebp + 8]
 mov dl, byte [ebp - 0x34]
 cmp dl, byte [eax + 0x20b5]
-jb loc_fffb91ff  ; jb 0xfffb91ff
+jb near loc_fffb91ff  ; jb 0xfffb91ff
 mov dl, byte [ebp - 0x38]
 mov al, 2
 add edx, 0x3f
@@ -32229,13 +32228,13 @@ inc dword [ebp - 0x2c]
 add edi, 0x1055
 add dword [ebp - 0x48], 0x8c
 cmp dword [ebp - 0x2c], 2
-jne loc_fffb8dd4  ; jne 0xfffb8dd4
+jne near loc_fffb8dd4  ; jne 0xfffb8dd4
 jmp short loc_fffb93c4  ; jmp 0xfffb93c4
 
 loc_fffb93a5:
 mov eax, dword [ebp + 8]
 cmp dword [eax + 0x20b6], 0x95f
-jbe loc_fffb8de3  ; jbe 0xfffb8de3
+jbe near loc_fffb8de3  ; jbe 0xfffb8de3
 xor ebx, ebx
 mov esi, 1
 jmp near loc_fffb8e04  ; jmp 0xfffb8e04
@@ -32295,7 +32294,7 @@ mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov ebx, eax
-jne loc_fffb974a  ; jne 0xfffb974a
+jne near loc_fffb974a  ; jne 0xfffb974a
 mov esi, dword [ebp - 0x420]
 jmp near loc_fffb9518  ; jmp 0xfffb9518
 
@@ -32347,7 +32346,7 @@ inc ebx
 
 loc_fffb9518:
 cmp byte [ebp - 0x41a], bl
-ja loc_fffb948b  ; ja 0xfffb948b
+ja near loc_fffb948b  ; ja 0xfffb948b
 mov dword [ebp - 0x40c], 0x32
 
 loc_fffb952e:
@@ -32367,14 +32366,14 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffb974a  ; jne 0xfffb974a
+jne near loc_fffb974a  ; jne 0xfffb974a
 xor ecx, ecx
 mov edx, dword [ebp - 0x410]
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov ebx, eax
-jne loc_fffb974a  ; jne 0xfffb974a
+jne near loc_fffb974a  ; jne 0xfffb974a
 xor eax, eax
 jmp short loc_fffb95d2  ; jmp 0xfffb95d2
 
@@ -32409,11 +32408,11 @@ loc_fffb95d2:
 cmp byte [ebp - 0x41a], al
 ja short loc_fffb957e  ; ja 0xfffb957e
 dec dword [ebp - 0x40c]
-jne loc_fffb952e  ; jne 0xfffb952e
+jne near loc_fffb952e  ; jne 0xfffb952e
 inc byte [ebp - 0x419]
 add dword [ebp - 0x418], 2
 cmp byte [ebp - 0x419], 0x19
-jne loc_fffb9467  ; jne 0xfffb9467
+jne near loc_fffb9467  ; jne 0xfffb9467
 imul eax, dword [ebp - 0x410], 0x1055
 imul edx, dword [ebp - 0x414], 0x2f
 mov dword [ebp - 0x410], 0
@@ -32438,7 +32437,7 @@ loc_fffb9657:
 movzx edi, al
 mov edx, dword [ebp - 0x418]
 cmp word [edx + edi*2], 0
-jne loc_fffb973a  ; jne 0xfffb973a
+jne near loc_fffb973a  ; jne 0xfffb973a
 mov di, word [edx + edi*2 + 2]
 test di, di
 je short loc_fffb96a6  ; je 0xfffb96a6
@@ -32519,7 +32518,7 @@ add ecx, 5
 loc_fffb971f:
 mov al, byte [ebp - 0x410]
 cmp byte [ebp - 0x41a], al
-ja loc_fffb9628  ; ja 0xfffb9628
+ja near loc_fffb9628  ; ja 0xfffb9628
 jmp short loc_fffb974a  ; jmp 0xfffb974a
 
 loc_fffb9733:
@@ -32529,7 +32528,7 @@ jmp short loc_fffb974a  ; jmp 0xfffb974a
 loc_fffb973a:
 mov edx, esi
 cmp dl, 0x32
-jne loc_fffb9684  ; jne 0xfffb9684
+jne near loc_fffb9684  ; jne 0xfffb9684
 jmp near loc_fffb96a6  ; jmp 0xfffb96a6
 
 loc_fffb974a:
@@ -32659,14 +32658,14 @@ inc eax
 
 loc_fffb98ec:
 cmp byte [ebp - 0xa3], al
-ja loc_fffb985d  ; ja 0xfffb985d
+ja near loc_fffb985d  ; ja 0xfffb985d
 cmp dword [ebp - 0x9c], 1
 jne short loc_fffb996f  ; jne 0xfffb996f
 xor eax, eax
 
 loc_fffb9903:
 cmp dword [ebp + eax*4 - 0x90], 0
-je loc_fffb99b0  ; je 0xfffb99b0
+je near loc_fffb99b0  ; je 0xfffb99b0
 inc eax
 cmp eax, 9
 jne short loc_fffb9903  ; jne 0xfffb9903
@@ -32724,7 +32723,7 @@ setbe dl
 test eax, eax
 sete al
 test dl, al
-jne loc_fffb97fc  ; jne 0xfffb97fc
+jne near loc_fffb97fc  ; jne 0xfffb97fc
 jmp short loc_fffb99e9  ; jmp 0xfffb99e9
 
 loc_fffb99b0:
@@ -32804,7 +32803,7 @@ mov byte [eax], 0
 mov byte [eax + 2], 0
 mov byte [eax + 3], 0
 cmp dword [ecx], 1
-jne loc_fffb9b3b  ; jne 0xfffb9b3b
+jne near loc_fffb9b3b  ; jne 0xfffb9b3b
 jmp near loc_fffb9b6f  ; jmp 0xfffb9b6f
 
 loc_fffb9a67:
@@ -32924,7 +32923,7 @@ mov dword [ebp - 0x10], 0
 
 loc_fffb9b5a:
 cmp dword [esi], 0
-je loc_fffb9a67  ; je 0xfffb9a67
+je near loc_fffb9a67  ; je 0xfffb9a67
 cmp byte [eax + 3], 3
 ja short loc_fffb9b6f  ; ja 0xfffb9b6f
 mov dword [esi], 0
@@ -33084,10 +33083,10 @@ add ebx, 0x10
 
 loc_fffb9d75:
 cmp byte [ebp - 0x13e], cl
-ja loc_fffb9ceb  ; ja 0xfffb9ceb
+ja near loc_fffb9ceb  ; ja 0xfffb9ceb
 inc dword [ebp - 0x138]
 cmp dword [ebp - 0x138], 2
-jne loc_fffb9c0f  ; jne 0xfffb9c0f
+jne near loc_fffb9c0f  ; jne 0xfffb9c0f
 xor edx, edx
 cmp dword [edi + 0x2240], 0
 jne short loc_fffb9dd1  ; jne 0xfffb9dd1
@@ -33261,12 +33260,12 @@ pop esi
 pop ebp
 ret
 
-loc_fffb9f09:
+endloc_fffb9f09:
 db 0x00
 db 0x00
 db 0x00
 
-fcn_fffb9f0c:  ; not directly referenced
+fcn_fffb9f0c:
 push ebp
 mov ebp, esp
 push edi
@@ -33291,7 +33290,7 @@ mov dword [edx + 0xd00], eax
 mov edx, dword [ebx + 0x2223]
 mov dword [edx + 0x3300], eax
 
-loc_fffb9f66:  ; not directly referenced
+loc_fffb9f66:
 imul esi, edi, 0x1055
 xor ecx, ecx
 mov edx, 0xa
@@ -33345,14 +33344,14 @@ mov dword [ebp - 0x20], eax
 lea eax, [ebx + edi*2]
 mov dword [ebp - 0x34], eax
 
-loc_fffba037:  ; not directly referenced
+loc_fffba037:
 mov edx, dword [ebp - 0x1c]
 mov ecx, edi
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 mov dl, 8
-je loc_fffba1d5  ; je 0xfffba1d5
+je near loc_fffba1d5  ; je 0xfffba1d5
 mov eax, dword [ebx + 0x20b6]
 cmp eax, 0x7d0
 je short loc_fffba0d7  ; je 0xfffba0d7
@@ -33361,19 +33360,19 @@ cmp eax, 0x640
 je short loc_fffba0c2  ; je 0xfffba0c2
 ja short loc_fffba079  ; ja 0xfffba079
 cmp eax, 0x535
-je loc_fffba101  ; je 0xfffba101
+je near loc_fffba101  ; je 0xfffba101
 cmp eax, 0x578
 jne short loc_fffba0b7  ; jne 0xfffba0b7
 jmp short loc_fffba0bb  ; jmp 0xfffba0bb
 
-loc_fffba079:  ; not directly referenced
+loc_fffba079:
 cmp eax, 0x708
 je short loc_fffba0c9  ; je 0xfffba0c9
 cmp eax, 0x74b
 jne short loc_fffba0b7  ; jne 0xfffba0b7
 jmp short loc_fffba0d0  ; jmp 0xfffba0d0
 
-loc_fffba089:  ; not directly referenced
+loc_fffba089:
 cmp eax, 0x960
 je short loc_fffba0e5  ; je 0xfffba0e5
 ja short loc_fffba0a2  ; ja 0xfffba0a2
@@ -33383,7 +33382,7 @@ cmp eax, 0x898
 jne short loc_fffba0b7  ; jne 0xfffba0b7
 jmp short loc_fffba0de  ; jmp 0xfffba0de
 
-loc_fffba0a2:  ; not directly referenced
+loc_fffba0a2:
 cmp eax, 0xa6b
 je short loc_fffba0f3  ; je 0xfffba0f3
 cmp eax, 0xaf0
@@ -33391,54 +33390,54 @@ je short loc_fffba0fa  ; je 0xfffba0fa
 cmp eax, 0xa28
 je short loc_fffba0ec  ; je 0xfffba0ec
 
-loc_fffba0b7:  ; not directly referenced
+loc_fffba0b7:
 xor eax, eax
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0bb:  ; not directly referenced
+loc_fffba0bb:
 mov eax, 2
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0c2:  ; not directly referenced
+loc_fffba0c2:
 mov eax, 3
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0c9:  ; not directly referenced
+loc_fffba0c9:
 mov eax, 4
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0d0:  ; not directly referenced
+loc_fffba0d0:
 mov eax, 5
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0d7:  ; not directly referenced
+loc_fffba0d7:
 mov eax, 6
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0de:  ; not directly referenced
+loc_fffba0de:
 mov eax, 8
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0e5:  ; not directly referenced
+loc_fffba0e5:
 mov eax, 9
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0ec:  ; not directly referenced
+loc_fffba0ec:
 mov eax, 0xa
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0f3:  ; not directly referenced
+loc_fffba0f3:
 mov eax, 7
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba0fa:  ; not directly referenced
+loc_fffba0fa:
 mov eax, 0xc
 jmp short loc_fffba106  ; jmp 0xfffba106
 
-loc_fffba101:  ; not directly referenced
+loc_fffba101:
 mov eax, 1
 
-loc_fffba106:  ; not directly referenced
+loc_fffba106:
 xor edx, edx
 cmp byte [ebp - 0x1c], 1
 seta dl
@@ -33454,9 +33453,9 @@ add edx, dword [ebp - 0x30]
 add edx, ebx
 mov dl, byte [ecx + edx + 0x2140]
 test dl, dl
-jne loc_fffba1d5  ; jne 0xfffba1d5
+jne near loc_fffba1d5  ; jne 0xfffba1d5
 
-loc_fffba142:  ; not directly referenced
+loc_fffba142:
 mov ecx, dword [ebx + 0x2238]
 cmp ecx, 1
 je short loc_fffba15b  ; je 0xfffba15b
@@ -33467,30 +33466,30 @@ cmp ecx, 3
 jne short loc_fffba188  ; jne 0xfffba188
 jmp short loc_fffba179  ; jmp 0xfffba179
 
-loc_fffba15b:  ; not directly referenced
+loc_fffba15b:
 imul eax, eax, 6
 imul ecx, edi, 0x4e
 lea eax, [eax + ecx + ref_fffcf020]  ; lea eax, [eax + ecx - 0x30fe0]
 jmp short loc_fffba195  ; jmp 0xfffba195
 
-loc_fffba16a:  ; not directly referenced
+loc_fffba16a:
 imul eax, eax, 6
 imul ecx, edi, 0x4e
 lea eax, [eax + ecx + ref_fffcf0bc]  ; lea eax, [eax + ecx - 0x30f44]
 jmp short loc_fffba195  ; jmp 0xfffba195
 
-loc_fffba179:  ; not directly referenced
+loc_fffba179:
 imul eax, eax, 6
 imul ecx, edi, 0x4e
 lea eax, [eax + ecx + ref_fffcf158]  ; lea eax, [eax + ecx - 0x30ea8]
 jmp short loc_fffba195  ; jmp 0xfffba195
 
-loc_fffba188:  ; not directly referenced
+loc_fffba188:
 imul eax, eax, 6
 imul ecx, edi, 0x4e
 lea eax, [eax + ecx + ref_fffcef84]  ; lea eax, [eax + ecx - 0x3107c]
 
-loc_fffba195:  ; not directly referenced
+loc_fffba195:
 imul edx, dword [ebp - 0x2c], 0x46
 imul ecx, edi, 0x8c
 add edx, ecx
@@ -33501,30 +33500,30 @@ ja short loc_fffba1d2  ; ja 0xfffba1d2
 movzx edx, dl
 jmp dword [edx*4 + ref_fffcef70]  ; ujmp: jmp dword [edx*4 - 0x31090]
 
-loc_fffba1ba:  ; not directly referenced
+loc_fffba1ba:
 mov dl, byte [eax]
 jmp short loc_fffba1d5  ; jmp 0xfffba1d5
 
-loc_fffba1be:  ; not directly referenced
+loc_fffba1be:
 mov dl, byte [eax + 1]
 jmp short loc_fffba1d5  ; jmp 0xfffba1d5
 
-loc_fffba1c3:  ; not directly referenced
+loc_fffba1c3:
 mov dl, byte [eax + 2]
 jmp short loc_fffba1d5  ; jmp 0xfffba1d5
 
-loc_fffba1c8:  ; not directly referenced
+loc_fffba1c8:
 mov dl, byte [eax + 3]
 jmp short loc_fffba1d5  ; jmp 0xfffba1d5
 
-loc_fffba1cd:  ; not directly referenced
+loc_fffba1cd:
 mov dl, byte [eax + 4]
 jmp short loc_fffba1d5  ; jmp 0xfffba1d5
 
-loc_fffba1d2:  ; not directly referenced
+loc_fffba1d2:
 mov dl, byte [eax + 5]
 
-loc_fffba1d5:  ; not directly referenced
+loc_fffba1d5:
 imul ecx, dword [ebp - 0x1c], 6
 mov eax, 0x3f
 shl eax, cl
@@ -33544,15 +33543,15 @@ and eax, 0x3f
 mov byte [esi + 1], al
 jmp short loc_fffba20d  ; jmp 0xfffba20d
 
-loc_fffba207:  ; not directly referenced
+loc_fffba207:
 mov byte [esi], 0
 mov byte [esi + 1], dl
 
-loc_fffba20d:  ; not directly referenced
+loc_fffba20d:
 inc dword [ebp - 0x1c]
 add esi, 0xa
 cmp dword [ebp - 0x1c], 4
-jne loc_fffba037  ; jne 0xfffba037
+jne near loc_fffba037  ; jne 0xfffba037
 cmp byte [ebp - 0x21], 1
 mov edx, dword [ebx + 0x2223]
 sbb eax, eax
@@ -33568,7 +33567,7 @@ xor ecx, ecx
 lea eax, [edx + eax + 0xd18]
 mov eax, dword [eax]
 
-loc_fffba250:  ; not directly referenced
+loc_fffba250:
 mov esi, 1
 shl esi, cl
 not esi
@@ -33591,10 +33590,10 @@ cmp edi, 2
 mov dword [ebp - 0x28], esi
 lea edx, [edx + ecx + 0xd18]
 mov dword [edx], eax
-jne loc_fffb9f66  ; jne 0xfffb9f66
+jne near loc_fffb9f66  ; jne 0xfffb9f66
 mov eax, dword [ebx + 0x20b6]
 cmp eax, 0x74b
-je loc_fffba33a  ; je 0xfffba33a
+je near loc_fffba33a  ; je 0xfffba33a
 ja short loc_fffba2e6  ; ja 0xfffba2e6
 cmp eax, 0x535
 je short loc_fffba32c  ; je 0xfffba32c
@@ -33602,19 +33601,19 @@ ja short loc_fffba2cb  ; ja 0xfffba2cb
 cmp eax, 0x320
 je short loc_fffba325  ; je 0xfffba325
 cmp eax, 0x42b
-jne loc_fffba3bc  ; jne 0xfffba3bc
+jne near loc_fffba3bc  ; jne 0xfffba3bc
 jmp short loc_fffba348  ; jmp 0xfffba348
 
-loc_fffba2cb:  ; not directly referenced
+loc_fffba2cb:
 cmp eax, 0x640
 je short loc_fffba333  ; je 0xfffba333
 cmp eax, 0x708
 je short loc_fffba333  ; je 0xfffba333
 cmp eax, 0x578
-jne loc_fffba3bc  ; jne 0xfffba3bc
+jne near loc_fffba3bc  ; jne 0xfffba3bc
 jmp short loc_fffba32c  ; jmp 0xfffba32c
 
-loc_fffba2e6:  ; not directly referenced
+loc_fffba2e6:
 cmp eax, 0x960
 je short loc_fffba341  ; je 0xfffba341
 ja short loc_fffba30a  ; ja 0xfffba30a
@@ -33623,47 +33622,47 @@ je short loc_fffba341  ; je 0xfffba341
 cmp eax, 0x898
 je short loc_fffba341  ; je 0xfffba341
 cmp eax, 0x7d0
-jne loc_fffba3bc  ; jne 0xfffba3bc
+jne near loc_fffba3bc  ; jne 0xfffba3bc
 jmp short loc_fffba33a  ; jmp 0xfffba33a
 
-loc_fffba30a:  ; not directly referenced
+loc_fffba30a:
 cmp eax, 0xa6b
 je short loc_fffba341  ; je 0xfffba341
 cmp eax, 0xaf0
 je short loc_fffba341  ; je 0xfffba341
 cmp eax, 0xa28
-jne loc_fffba3bc  ; jne 0xfffba3bc
+jne near loc_fffba3bc  ; jne 0xfffba3bc
 jmp short loc_fffba341  ; jmp 0xfffba341
 
-loc_fffba325:  ; not directly referenced
+loc_fffba325:
 mov esi, 0xd6ff5e4
 jmp short loc_fffba34d  ; jmp 0xfffba34d
 
-loc_fffba32c:  ; not directly referenced
+loc_fffba32c:
 mov esi, 0xca8c264
 jmp short loc_fffba34d  ; jmp 0xfffba34d
 
-loc_fffba333:  ; not directly referenced
+loc_fffba333:
 mov esi, 0xc6671e4
 jmp short loc_fffba34d  ; jmp 0xfffba34d
 
-loc_fffba33a:  ; not directly referenced
+loc_fffba33a:
 mov esi, 0xc446964
 jmp short loc_fffba34d  ; jmp 0xfffba34d
 
-loc_fffba341:  ; not directly referenced
+loc_fffba341:
 mov esi, 0xc235924
 jmp short loc_fffba34d  ; jmp 0xfffba34d
 
-loc_fffba348:  ; not directly referenced
+loc_fffba348:
 mov esi, 0xcebdb64
 
-loc_fffba34d:  ; not directly referenced
+loc_fffba34d:
 mov eax, ebx
 call fcn_fffbc6ee  ; call 0xfffbc6ee
 mov eax, 0x1814
 
-loc_fffba359:  ; not directly referenced
+loc_fffba359:
 mov edx, dword [ebx + 0x2223]
 mov ecx, esi
 add edx, eax
@@ -33692,10 +33691,10 @@ call fcn_fffc7adb  ; call 0xfffc7adb
 xor eax, eax
 jmp short loc_fffba3c1  ; jmp 0xfffba3c1
 
-loc_fffba3bc:  ; not directly referenced
+loc_fffba3bc:
 mov eax, 1
 
-loc_fffba3c1:  ; not directly referenced
+loc_fffba3c1:
 lea esp, [esp + 0x2c]
 pop ebx
 pop esi
@@ -33851,15 +33850,15 @@ cmp edx, 1
 sbb eax, 0xffffffff
 cmp ecx, 0x74b
 mov byte [ebx + 0x20ab], al
-je loc_fffba5b1  ; je 0xfffba5b1
+je near loc_fffba5b1  ; je 0xfffba5b1
 ja short loc_fffba55e  ; ja 0xfffba55e
 cmp ecx, 0x535
-je loc_fffba5bf  ; je 0xfffba5bf
+je near loc_fffba5bf  ; je 0xfffba5bf
 ja short loc_fffba544  ; ja 0xfffba544
 cmp ecx, 0x320
-je loc_fffba5cd  ; je 0xfffba5cd
+je near loc_fffba5cd  ; je 0xfffba5cd
 cmp ecx, 0x42b
-jne loc_fffba5d4  ; jne 0xfffba5d4
+jne near loc_fffba5d4  ; jne 0xfffba5d4
 jmp near loc_fffba5c6  ; jmp 0xfffba5c6
 
 loc_fffba544:
@@ -33930,7 +33929,7 @@ xor eax, eax
 loc_fffba5d6:
 cmp ecx, 0x74b
 mov byte [ebx + 0x20ac], al
-je loc_fffba66c  ; je 0xfffba66c
+je near loc_fffba66c  ; je 0xfffba66c
 ja short loc_fffba620  ; ja 0xfffba620
 cmp ecx, 0x535
 je short loc_fffba665  ; je 0xfffba665
@@ -33997,15 +33996,15 @@ xor eax, eax
 loc_fffba683:
 cmp ecx, 0x74b
 mov byte [ebx + 0x20ad], al
-je loc_fffba741  ; je 0xfffba741
+je near loc_fffba741  ; je 0xfffba741
 ja short loc_fffba6d9  ; ja 0xfffba6d9
 cmp ecx, 0x535
-je loc_fffba725  ; je 0xfffba725
+je near loc_fffba725  ; je 0xfffba725
 ja short loc_fffba6bb  ; ja 0xfffba6bb
 cmp ecx, 0x320
 je short loc_fffba717  ; je 0xfffba717
 cmp ecx, 0x42b
-jne loc_fffba772  ; jne 0xfffba772
+jne near loc_fffba772  ; jne 0xfffba772
 jmp short loc_fffba71e  ; jmp 0xfffba71e
 
 loc_fffba6bb:
@@ -34014,7 +34013,7 @@ je short loc_fffba733  ; je 0xfffba733
 cmp ecx, 0x708
 je short loc_fffba73a  ; je 0xfffba73a
 cmp ecx, 0x578
-jne loc_fffba772  ; jne 0xfffba772
+jne near loc_fffba772  ; jne 0xfffba772
 jmp short loc_fffba72c  ; jmp 0xfffba72c
 
 loc_fffba6d9:
@@ -34096,7 +34095,7 @@ xor eax, eax
 loc_fffba774:
 cmp ecx, 0x74b
 mov byte [ebx + 0x20ae], al
-je loc_fffba815  ; je 0xfffba815
+je near loc_fffba815  ; je 0xfffba815
 ja short loc_fffba7c2  ; ja 0xfffba7c2
 cmp ecx, 0x535
 je short loc_fffba807  ; je 0xfffba807
@@ -34104,7 +34103,7 @@ ja short loc_fffba7a8  ; ja 0xfffba7a8
 cmp ecx, 0x320
 je short loc_fffba800  ; je 0xfffba800
 cmp ecx, 0x42b
-jne loc_fffba831  ; jne 0xfffba831
+jne near loc_fffba831  ; jne 0xfffba831
 jmp short loc_fffba807  ; jmp 0xfffba807
 
 loc_fffba7a8:
@@ -34171,13 +34170,13 @@ xor eax, eax
 loc_fffba833:
 cmp ecx, 0x74b
 mov byte [ebx + 0x20af], al
-je loc_fffba8cf  ; je 0xfffba8cf
+je near loc_fffba8cf  ; je 0xfffba8cf
 ja short loc_fffba881  ; ja 0xfffba881
 cmp ecx, 0x535
 je short loc_fffba8c8  ; je 0xfffba8c8
 ja short loc_fffba867  ; ja 0xfffba867
 cmp ecx, 0x320
-je loc_fffba8f2  ; je 0xfffba8f2
+je near loc_fffba8f2  ; je 0xfffba8f2
 cmp ecx, 0x42b
 jne short loc_fffba8bd  ; jne 0xfffba8bd
 jmp short loc_fffba8c1  ; jmp 0xfffba8c1
@@ -34250,7 +34249,7 @@ loc_fffba8f7:
 movzx ecx, word [ebx + 0x22e2]
 mov byte [ebx + 0x20b0], al
 test cx, cx
-jne loc_fffba9a0  ; jne 0xfffba9a0
+jne near loc_fffba9a0  ; jne 0xfffba9a0
 mov eax, ebx
 mov esi, ebx
 call fcn_fffbff43  ; call 0xfffbff43
@@ -34306,7 +34305,7 @@ mov byte [ebx + 0x44], cl
 mov byte [ebx + 0x1099], cl
 movzx ecx, byte [ebx + 0x22e1]
 test cl, cl
-jne loc_fffbaa69  ; jne 0xfffbaa69
+jne near loc_fffbaa69  ; jne 0xfffbaa69
 mov eax, ebx
 mov esi, ebx
 call fcn_fffbff43  ; call 0xfffbff43
@@ -34359,14 +34358,14 @@ loc_fffbaa56:
 inc dword [ebp - 0x20]
 add esi, 0x1055
 cmp dword [ebp - 0x20], 2
-jne loc_fffba9d6  ; jne 0xfffba9d6
+jne near loc_fffba9d6  ; jne 0xfffba9d6
 
 loc_fffbaa69:
 mov byte [ebx + 0x43], cl
 mov byte [ebx + 0x1098], cl
 movzx ecx, byte [ebx + 0x22e0]
 test cl, cl
-jne loc_fffbab32  ; jne 0xfffbab32
+jne near loc_fffbab32  ; jne 0xfffbab32
 mov eax, ebx
 mov esi, ebx
 call fcn_fffbff43  ; call 0xfffbff43
@@ -34419,14 +34418,14 @@ loc_fffbab1f:
 inc dword [ebp - 0x20]
 add esi, 0x1055
 cmp dword [ebp - 0x20], 2
-jne loc_fffbaa9f  ; jne 0xfffbaa9f
+jne near loc_fffbaa9f  ; jne 0xfffbaa9f
 
 loc_fffbab32:
 mov byte [ebx + 0x42], cl
 mov byte [ebx + 0x1097], cl
 movzx ecx, byte [ebx + 0x22df]
 test cl, cl
-jne loc_fffbabfb  ; jne 0xfffbabfb
+jne near loc_fffbabfb  ; jne 0xfffbabfb
 mov eax, ebx
 mov esi, ebx
 call fcn_fffbff43  ; call 0xfffbff43
@@ -34479,14 +34478,14 @@ loc_fffbabe8:
 inc dword [ebp - 0x20]
 add esi, 0x1055
 cmp dword [ebp - 0x20], 2
-jne loc_fffbab68  ; jne 0xfffbab68
+jne near loc_fffbab68  ; jne 0xfffbab68
 
 loc_fffbabfb:
 mov byte [ebx + 0x41], cl
 mov byte [ebx + 0x1096], cl
 movzx ecx, word [ebx + 0x22e6]
 test cx, cx
-jne loc_fffbaca7  ; jne 0xfffbaca7
+jne near loc_fffbaca7  ; jne 0xfffbaca7
 mov eax, ebx
 mov esi, ebx
 call fcn_fffbff43  ; call 0xfffbff43
@@ -34954,7 +34953,7 @@ mov eax, dword [ebp - 0x1c]
 mov byte [eax + 0x44], bl
 movzx ecx, byte [esi + 0x22e1]
 test cl, cl
-jne loc_fffbb0cf  ; jne 0xfffbb0cf
+jne near loc_fffbb0cf  ; jne 0xfffbb0cf
 mov eax, esi
 call fcn_fffc019c  ; call 0xfffc019c
 mov edx, dword [ebp - 0x1c]
@@ -34999,7 +34998,7 @@ mov eax, dword [ebp - 0x1c]
 mov byte [eax + 0x43], cl
 movzx ecx, byte [esi + 0x22e0]
 test cl, cl
-jne loc_fffbb16b  ; jne 0xfffbb16b
+jne near loc_fffbb16b  ; jne 0xfffbb16b
 mov eax, esi
 call fcn_fffc019c  ; call 0xfffc019c
 mov edx, dword [ebp - 0x1c]
@@ -35044,7 +35043,7 @@ mov eax, dword [ebp - 0x1c]
 mov byte [eax + 0x42], cl
 movzx ecx, byte [esi + 0x22df]
 test cl, cl
-jne loc_fffbb207  ; jne 0xfffbb207
+jne near loc_fffbb207  ; jne 0xfffbb207
 mov eax, esi
 call fcn_fffc019c  ; call 0xfffc019c
 mov edx, dword [ebp - 0x1c]
@@ -35138,7 +35137,7 @@ mov word [eax + 0x47], bx
 add eax, 0x1055
 cmp dword [ebp - 0x2c], 2
 mov dword [ebp - 0x1c], eax
-jne loc_fffbafae  ; jne 0xfffbafae
+jne near loc_fffbafae  ; jne 0xfffbafae
 lea esp, [esp + 0x3c]
 xor eax, eax
 pop ebx
@@ -35463,7 +35462,7 @@ ret
 fcn_fffbb589:
 cmp ecx, 1
 
-fcn_fffbb58c:  ; not directly referenced
+fcn_fffbb58c:
 push ebp
 sbb ecx, ecx
 and ecx, 0xfffffc00
@@ -35666,7 +35665,7 @@ loc_fffbb731:
 imul ebx, ebx, 0x15
 add ebx, dword [ebp + 0x1c]
 cmp dword [ebx], 0xc
-ja loc_fffbbedb  ; ja 0xfffbbedb
+ja near loc_fffbbedb  ; ja 0xfffbbedb
 mov eax, dword [ebx]
 jmp dword [eax*4 + ref_fffcf1f4]  ; ujmp: jmp dword [eax*4 - 0x30e0c]
 
@@ -35720,7 +35719,7 @@ cmp byte [ebp - 0x32], 0x64
 mov al, byte [ebx + 0xa]
 mov byte [ebp - 0x1b], al
 mov al, byte [ebx + 0xb]
-jne loc_fffbb862  ; jne 0xfffbb862
+jne near loc_fffbb862  ; jne 0xfffbb862
 xor edx, edx
 cmp al, 1
 seta dl
@@ -35985,7 +35984,7 @@ jmp near loc_fffbbdb0  ; jmp 0xfffbbdb0
 
 loc_fffbba5e:
 cmp byte [ebp - 0x33], 0
-je loc_fffbbef4  ; je 0xfffbbef4
+je near loc_fffbbef4  ; je 0xfffbbef4
 push edx
 movzx eax, byte [ebp - 0x31]
 push edx
@@ -36128,7 +36127,7 @@ jmp near loc_fffbbdad  ; jmp 0xfffbbdad
 
 loc_fffbbbc0:
 cmp byte [ebp - 0x33], 0
-je loc_fffbbee2  ; je 0xfffbbee2
+je near loc_fffbbee2  ; je 0xfffbbee2
 push edx
 movzx eax, byte [ebp - 0x31]
 push edx
@@ -36193,7 +36192,7 @@ jmp near loc_fffbbdb0  ; jmp 0xfffbbdb0
 
 loc_fffbbc60:
 cmp byte [ebp - 0x33], 0
-je loc_fffbbef4  ; je 0xfffbbef4
+je near loc_fffbbef4  ; je 0xfffbbef4
 push edx
 movzx eax, byte [ebp - 0x31]
 push edx
@@ -36391,7 +36390,7 @@ inc byte [ebp - 0x31]
 loc_fffbbe31:
 movzx ebx, byte [ebp - 0x31]
 cmp ebx, dword [ebp - 0x3c]
-jbe loc_fffbb731  ; jbe 0xfffbb731
+jbe near loc_fffbb731  ; jbe 0xfffbb731
 cmp word [ebp - 0x36], 0x1ff
 mov ecx, 1
 movzx edx, byte [ebp - 0x37]
@@ -36448,12 +36447,12 @@ jmp short loc_fffbbf27  ; jmp 0xfffbbf27
 
 loc_fffbbee2:
 cmp dword [esi + 0x2258], 1
-jne loc_fffbbc26  ; jne 0xfffbbc26
+jne near loc_fffbbc26  ; jne 0xfffbbc26
 jmp near loc_fffbbc1d  ; jmp 0xfffbbc1d
 
 loc_fffbbef4:
 cmp dword [esi + 0x2258], 1
-jne loc_fffbbcc6  ; jne 0xfffbbcc6
+jne near loc_fffbbcc6  ; jne 0xfffbbcc6
 jmp near loc_fffbbcbd  ; jmp 0xfffbbcbd
 
 loc_fffbbf06:
@@ -36509,10 +36508,10 @@ mov al, dl
 pop ebp
 ret
 
-loc_fffbbf6b:
+endloc_fffbbf6b:
 db 0x00
 
-fcn_fffbbf6c:  ; not directly referenced
+fcn_fffbbf6c:
 push ebp
 mov ebp, esp
 push edi
@@ -36523,13 +36522,13 @@ mov dword [ebp - 0x40], 0
 mov esi, dword [ebp + 8]
 jmp near loc_fffbc4cf  ; jmp 0xfffbc4cf
 
-loc_fffbbf85:  ; not directly referenced
+loc_fffbbf85:
 mov ecx, dword [ebp - 0x40]
 mov edx, dword [ebp - 0x3c]
 mov eax, esi
 call fcn_fffbb638  ; call 0xfffbb638
 dec eax
-jne loc_fffbc4b5  ; jne 0xfffbc4b5
+jne near loc_fffbc4b5  ; jne 0xfffbc4b5
 mov al, byte [ebp - 0x3c]
 mov edx, dword [ebp - 0x54]
 mov byte [ebp - 0x22], al
@@ -36561,7 +36560,7 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffbc4f1  ; jne 0xfffbc4f1
+jne near loc_fffbc4f1  ; jne 0xfffbc4f1
 mov edx, 0xdd30
 mov eax, esi
 call fcn_fffad891  ; call 0xfffad891
@@ -36606,7 +36605,7 @@ mov dword [ebp - 0x44], edi
 mov ebx, edi
 jmp short loc_fffbc124  ; jmp 0xfffbc124
 
-loc_fffbc0a7:  ; not directly referenced
+loc_fffbc0a7:
 cmp byte [ebx + 1], 0x3f
 jbe short loc_fffbc0e8  ; jbe 0xfffbc0e8
 mov byte [ebx + 4], 1
@@ -36631,7 +36630,7 @@ call fcn_fffbfd3a  ; call 0xfffbfd3a
 inc byte [ebp - 0x4c]
 jmp short loc_fffbc11b  ; jmp 0xfffbc11b
 
-loc_fffbc0e8:  ; not directly referenced
+loc_fffbc0e8:
 mov byte [ebx + 4], 0
 mov ecx, dword [ebp - 0x3c]
 push dword [ebp - 0x48]
@@ -36651,23 +36650,23 @@ push eax
 mov eax, esi
 call fcn_fffbfd3a  ; call 0xfffbfd3a
 
-loc_fffbc11b:  ; not directly referenced
+loc_fffbc11b:
 add esp, 0x20
 inc dword [ebp - 0x48]
 add ebx, 5
 
-loc_fffbc124:  ; not directly referenced
+loc_fffbc124:
 mov al, byte [esi + 0x20b5]
 movzx edx, al
 cmp dword [ebp - 0x48], edx
-jb loc_fffbc0a7  ; jb 0xfffbc0a7
+jb near loc_fffbc0a7  ; jb 0xfffbc0a7
 cmp byte [ebp - 0x4c], al
 jne short loc_fffbc16f  ; jne 0xfffbc16f
 dec byte [edi + 0x2e]
 xor ebx, ebx
 jmp short loc_fffbc162  ; jmp 0xfffbc162
 
-loc_fffbc142:  ; not directly referenced
+loc_fffbc142:
 lea eax, [ebx + ebx*4]
 mov ecx, dword [ebp - 0x3c]
 mov byte [edi + eax + 4], 0
@@ -36681,19 +36680,19 @@ push 0
 call fcn_fffbfd3a  ; call 0xfffbfd3a
 add esp, 0x10
 
-loc_fffbc162:  ; not directly referenced
+loc_fffbc162:
 movzx eax, byte [esi + 0x20b5]
 cmp ebx, eax
 jb short loc_fffbc142  ; jb 0xfffbc142
 jmp short loc_fffbc17b  ; jmp 0xfffbc17b
 
-loc_fffbc16f:  ; not directly referenced
+loc_fffbc16f:
 cmp byte [ebp - 0x4c], 0
 je short loc_fffbc17b  ; je 0xfffbc17b
 inc byte [edi + 0x2e]
 inc byte [edi + 0x2d]
 
-loc_fffbc17b:  ; not directly referenced
+loc_fffbc17b:
 sub esp, 0xc
 mov ecx, dword [ebp - 0x40]
 movzx eax, byte [edi + 0x2d]
@@ -36725,7 +36724,7 @@ add esp, 0x10
 xor eax, eax
 jmp short loc_fffbc221  ; jmp 0xfffbc221
 
-loc_fffbc1df:  ; not directly referenced
+loc_fffbc1df:
 mov ecx, dword [ebp - 0x44]
 mov dl, byte [ecx + 2]
 cmp dl, 0x3f
@@ -36733,12 +36732,12 @@ jbe short loc_fffbc1f0  ; jbe 0xfffbc1f0
 cmp byte [ecx + 1], 0x3f
 jbe short loc_fffbc208  ; jbe 0xfffbc208
 
-loc_fffbc1f0:  ; not directly referenced
+loc_fffbc1f0:
 mov ecx, dword [ebp - 0x44]
 cmp dl, byte [ecx + 1]
 jb short loc_fffbc208  ; jb 0xfffbc208
 
-loc_fffbc1f8:  ; not directly referenced
+loc_fffbc1f8:
 mov edx, dword [ebp - 0x44]
 inc eax
 and byte [edx + 2], 0x3f
@@ -36746,7 +36745,7 @@ add edx, 5
 mov dword [ebp - 0x44], edx
 jmp short loc_fffbc221  ; jmp 0xfffbc221
 
-loc_fffbc208:  ; not directly referenced
+loc_fffbc208:
 mov ecx, dword [ebp - 0x44]
 mov cl, byte [ecx + 4]
 mov dl, cl
@@ -36757,7 +36756,7 @@ mov byte [ecx + 4], dl
 jbe short loc_fffbc1f8  ; jbe 0xfffbc1f8
 jmp near loc_fffbc35f  ; jmp 0xfffbc35f
 
-loc_fffbc221:  ; not directly referenced
+loc_fffbc221:
 movzx edx, byte [esi + 0x20b5]
 cmp eax, edx
 jb short loc_fffbc1df  ; jb 0xfffbc1df
@@ -36790,7 +36789,7 @@ call fcn_fffb93db  ; call 0xfffb93db
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffbc364  ; jne 0xfffbc364
+jne near loc_fffbc364  ; jne 0xfffbc364
 sub esp, 0xc
 mov ecx, dword [ebp - 0x40]
 push dword [ebp - 0x3c]
@@ -36800,7 +36799,7 @@ call fcn_fffbdcf9  ; call 0xfffbdcf9
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffbc364  ; jne 0xfffbc364
+jne near loc_fffbc364  ; jne 0xfffbc364
 sub esp, 0xc
 lea ecx, [ebp - 0x35]
 movzx edx, byte [esi + 0x20b5]
@@ -36821,7 +36820,7 @@ mov eax, esi
 call fcn_fffbddb1  ; call 0xfffbddb1
 jmp short loc_fffbc2fa  ; jmp 0xfffbc2fa
 
-loc_fffbc2de:  ; not directly referenced
+loc_fffbc2de:
 push ebx
 lea eax, [ebx + ebx*4]
 mov ecx, dword [ebp - 0x3c]
@@ -36834,7 +36833,7 @@ push eax
 mov eax, esi
 call fcn_fffbfd3a  ; call 0xfffbfd3a
 
-loc_fffbc2fa:  ; not directly referenced
+loc_fffbc2fa:
 movzx eax, byte [esi + 0x20b5]
 add esp, 0x10
 cmp ebx, eax
@@ -36863,14 +36862,14 @@ mov ebx, eax
 je short loc_fffbc36e  ; je 0xfffbc36e
 jmp near loc_fffbc49b  ; jmp 0xfffbc49b
 
-loc_fffbc35f:  ; not directly referenced
+loc_fffbc35f:
 mov ebx, 1
 
-loc_fffbc364:  ; not directly referenced
+loc_fffbc364:
 mov edx, 0xdd32
 jmp near loc_fffbc4a0  ; jmp 0xfffbc4a0
 
-loc_fffbc36e:  ; not directly referenced
+loc_fffbc36e:
 cmp dword [esi + 0x223c], 0
 mov eax, dword [esi + 0x2223]
 je short loc_fffbc3ce  ; je 0xfffbc3ce
@@ -36900,7 +36899,7 @@ mov ebx, eax
 cmove ebx, edi
 jmp short loc_fffbc3f3  ; jmp 0xfffbc3f3
 
-loc_fffbc3ce:  ; not directly referenced
+loc_fffbc3ce:
 mov dword [eax + 0x4eb0], 0
 mov ecx, dword [ebp - 0x40]
 push edx
@@ -36913,13 +36912,13 @@ call fcn_fffc4cf3  ; call 0xfffc4cf3
 mov ebx, eax
 add esp, 0x10
 
-loc_fffbc3f3:  ; not directly referenced
+loc_fffbc3f3:
 imul eax, dword [ebp - 0x3c], 0x36
 mov byte [ebp - 0x44], 0
 mov dword [ebp - 0x4c], eax
 jmp short loc_fffbc44c  ; jmp 0xfffbc44c
 
-loc_fffbc400:  ; not directly referenced
+loc_fffbc400:
 movzx edx, byte [ebp - 0x44]
 mov ecx, dword [ebp - 0x3c]
 push eax
@@ -36946,7 +36945,7 @@ call fcn_fffc53c6  ; call 0xfffc53c6
 inc byte [ebp - 0x44]
 add esp, 0x10
 
-loc_fffbc44c:  ; not directly referenced
+loc_fffbc44c:
 mov cl, byte [ebp - 0x44]
 cmp cl, byte [esi + 0x20b5]
 jb short loc_fffbc400  ; jb 0xfffbc400
@@ -36956,7 +36955,7 @@ xor edx, edx
 mov byte [ebp - 0x44], cl
 jmp short loc_fffbc47f  ; jmp 0xfffbc47f
 
-loc_fffbc466:  ; not directly referenced
+loc_fffbc466:
 cmp byte [ebp - 0x44], 0
 lea edi, [eax + 0x400]
 cmove edi, eax
@@ -36965,7 +36964,7 @@ add ecx, edi
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffbc47f:  ; not directly referenced
+loc_fffbc47f:
 cmp dl, byte [esi + 0x20b5]
 mov ecx, dword [esi + 0x2223]
 jb short loc_fffbc466  ; jb 0xfffbc466
@@ -36973,29 +36972,29 @@ test ebx, ebx
 mov dword [ecx + 0x4eb0], 0
 je short loc_fffbc4a9  ; je 0xfffbc4a9
 
-loc_fffbc49b:  ; not directly referenced
+loc_fffbc49b:
 mov edx, 0xdd35
 
-loc_fffbc4a0:  ; not directly referenced
+loc_fffbc4a0:
 mov eax, esi
 call fcn_fffad891  ; call 0xfffad891
 jmp short loc_fffbc4f1  ; jmp 0xfffbc4f1
 
-loc_fffbc4a9:  ; not directly referenced
+loc_fffbc4a9:
 mov edx, 0xdd34
 mov eax, esi
 call fcn_fffad891  ; call 0xfffad891
 
-loc_fffbc4b5:  ; not directly referenced
+loc_fffbc4b5:
 inc dword [ebp - 0x3c]
 add dword [ebp - 0x50], 0x2f
 cmp dword [ebp - 0x3c], 4
-jne loc_fffbbf85  ; jne 0xfffbbf85
+jne near loc_fffbbf85  ; jne 0xfffbbf85
 inc dword [ebp - 0x40]
 cmp dword [ebp - 0x40], 2
 je short loc_fffbc4ef  ; je 0xfffbc4ef
 
-loc_fffbc4cf:  ; not directly referenced
+loc_fffbc4cf:
 imul eax, dword [ebp - 0x40], 0x1055
 mov dword [ebp - 0x3c], 0
 mov dword [ebp - 0x54], eax
@@ -37004,10 +37003,10 @@ lea edx, [esi + eax + 0x7b]
 mov dword [ebp - 0x50], edx
 jmp near loc_fffbbf85  ; jmp 0xfffbbf85
 
-loc_fffbc4ef:  ; not directly referenced
+loc_fffbc4ef:
 xor ebx, ebx
 
-loc_fffbc4f1:  ; not directly referenced
+loc_fffbc4f1:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -37032,7 +37031,7 @@ mov edx, eax
 
 loc_fffbc523:
 cmp byte [edx + 0x3a], 0
-jne loc_fffbc6b7  ; jne 0xfffbc6b7
+jne near loc_fffbc6b7  ; jne 0xfffbc6b7
 jmp short loc_fffbc546  ; jmp 0xfffbc546
 
 loc_fffbc52f:
@@ -37156,7 +37155,7 @@ jmp short loc_fffbc6c6  ; jmp 0xfffbc6c6
 
 loc_fffbc6b7:
 cmp dword [edx + 0xa], 1
-jne loc_fffbc537  ; jne 0xfffbc537
+jne near loc_fffbc537  ; jne 0xfffbc537
 jmp near loc_fffbc52f  ; jmp 0xfffbc52f
 
 loc_fffbc6c6:
@@ -37237,7 +37236,7 @@ mov dword [ebp - 0x6c], 0
 
 loc_fffbc7c7:
 cmp byte [edi + 0x3a], 0
-jne loc_fffbcde4  ; jne 0xfffbcde4
+jne near loc_fffbcde4  ; jne 0xfffbcde4
 
 loc_fffbc7d1:
 inc dword [ebp - 0x6c]
@@ -37268,7 +37267,7 @@ mov ecx, edi
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffbca15  ; je 0xfffbca15
+je near loc_fffbca15  ; je 0xfffbca15
 imul ecx, dword [ebp - 0x78], 0x46
 imul edx, edi, 0x8c
 imul eax, edi, 0x1055
@@ -37294,7 +37293,7 @@ mov edx, edi
 mov eax, ebx
 call fcn_fffc0201  ; call 0xfffc0201
 test eax, eax
-je loc_fffbca30  ; je 0xfffbca30
+je near loc_fffbca30  ; je 0xfffbca30
 mov al, byte [eax]
 cmp al, 0x3c
 jne short loc_fffbc895  ; jne 0xfffbc895
@@ -37426,7 +37425,7 @@ sete cl
 cmp byte [ebp - 0x71], 1
 setbe dl
 test cl, dl
-jne loc_fffbc81a  ; jne 0xfffbc81a
+jne near loc_fffbc81a  ; jne 0xfffbc81a
 jmp short loc_fffbca37  ; jmp 0xfffbca37
 
 loc_fffbca30:
@@ -37477,7 +37476,7 @@ mov ecx, edx
 mov edx, dword [ebp - 0x70]
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffbcc52  ; je 0xfffbcc52
+je near loc_fffbcc52  ; je 0xfffbcc52
 imul edx, dword [ebp - 0x78], 0x1055
 add edx, ebx
 movzx eax, byte [edx + 0x3b]
@@ -37490,7 +37489,7 @@ sbb esi, esi
 not esi
 and esi, 3
 cmp cx, 4
-jbe loc_fffbcc6d  ; jbe 0xfffbcc6d
+jbe near loc_fffbcc6d  ; jbe 0xfffbcc6d
 cmp cx, 0xa
 setne byte [ebp - 0x84]
 cmp cx, 8
@@ -37502,7 +37501,7 @@ and edx, 0xfffffffd
 cmp dl, 0xc
 je short loc_fffbcb15  ; je 0xfffbcb15
 cmp cx, 0x10
-jne loc_fffbcc6d  ; jne 0xfffbcc6d
+jne near loc_fffbcc6d  ; jne 0xfffbcc6d
 
 loc_fffbcb15:
 cmp ax, 0xb
@@ -37614,7 +37613,7 @@ sete cl
 cmp byte [ebp - 0x71], 1
 setbe dl
 test cl, dl
-jne loc_fffbca9d  ; jne 0xfffbca9d
+jne near loc_fffbca9d  ; jne 0xfffbca9d
 jmp short loc_fffbcc77  ; jmp 0xfffbcc77
 
 loc_fffbcc6d:
@@ -37623,10 +37622,10 @@ jmp near loc_fffbcef7  ; jmp 0xfffbcef7
 
 loc_fffbcc77:
 test eax, eax
-jne loc_fffbcef7  ; jne 0xfffbcef7
+jne near loc_fffbcef7  ; jne 0xfffbcef7
 inc dword [ebp - 0x70]
 cmp dword [ebp - 0x70], 4
-jne loc_fffbc7ee  ; jne 0xfffbc7ee
+jne near loc_fffbc7ee  ; jne 0xfffbc7ee
 mov byte [ebp - 0x4c], 0
 mov dword [ebp - 0x57], 7
 mov word [ebp - 0x4f], 0
@@ -37687,11 +37686,11 @@ mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-jne loc_fffbce87  ; jne 0xfffbce87
+jne near loc_fffbce87  ; jne 0xfffbce87
 
 loc_fffbcd86:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffbce6e  ; jne 0xfffbce6e
+jne near loc_fffbce6e  ; jne 0xfffbce6e
 
 loc_fffbcd93:
 mov edx, dword [ebx + 0x2223]
@@ -37704,7 +37703,7 @@ mov dword [edx + 0x5030], eax
 loc_fffbcdad:
 mov ecx, dword [ebp - 0x80]
 cmp byte [ecx + 0x3a], 0
-jne loc_fffbce8c  ; jne 0xfffbce8c
+jne near loc_fffbce8c  ; jne 0xfffbce8c
 jmp short loc_fffbcdd2  ; jmp 0xfffbcdd2
 
 loc_fffbcdbc:
@@ -37714,7 +37713,7 @@ mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-jne loc_fffbce87  ; jne 0xfffbce87
+jne near loc_fffbce87  ; jne 0xfffbce87
 
 loc_fffbcdd2:
 inc edi
@@ -37769,7 +37768,7 @@ mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-je loc_fffbcd93  ; je 0xfffbcd93
+je near loc_fffbcd93  ; je 0xfffbcd93
 
 loc_fffbce87:
 mov eax, dword [ebp - 0x6c]
@@ -37810,7 +37809,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffbcdbc  ; je 0xfffbcdbc
+je near loc_fffbcdbc  ; je 0xfffbcdbc
 
 loc_fffbcef7:
 lea esp, [ebp - 0xc]
@@ -37820,10 +37819,10 @@ pop edi
 pop ebp
 ret
 
-loc_fffbceff:
+endloc_fffbceff:
 db 0x00
 
-fcn_fffbcf00:  ; not directly referenced
+fcn_fffbcf00:
 push ebp
 mov edx, 0xdd46
 mov ebp, esp
@@ -37852,19 +37851,19 @@ mov edx, 0x48
 lea eax, [ebp - 0x60]
 call fcn_fffa24c1  ; call 0xfffa24c1
 
-loc_fffbcf63:  ; not directly referenced
+loc_fffbcf63:
 imul eax, ebx, 0x1055
 mov byte [ebp - 0x15c], 0
 cmp byte [edi + eax + 0x3a], 0
-jne loc_fffbd025  ; jne 0xfffbd025
+jne near loc_fffbd025  ; jne 0xfffbd025
 
-loc_fffbcf7b:  ; not directly referenced
+loc_fffbcf7b:
 inc ebx
 cmp ebx, 2
-je loc_fffbd045  ; je 0xfffbd045
+je near loc_fffbd045  ; je 0xfffbd045
 jmp short loc_fffbcf63  ; jmp 0xfffbcf63
 
-loc_fffbcf87:  ; not directly referenced
+loc_fffbcf87:
 push eax
 movzx esi, byte [ebp - 0x15c]
 xor ecx, ecx
@@ -37912,17 +37911,17 @@ add esp, 0x10
 mov dword [ebp + ecx*4 - 0x60], eax
 jmp short loc_fffbd02e  ; jmp 0xfffbd02e
 
-loc_fffbd025:  ; not directly referenced
+loc_fffbd025:
 lea eax, [ebx + ebx*8]
 mov dword [ebp - 0x164], eax
 
-loc_fffbd02e:  ; not directly referenced
+loc_fffbd02e:
 mov dl, byte [ebp - 0x15c]
 cmp dl, byte [edi + 0x20b5]
-jb loc_fffbcf87  ; jb 0xfffbcf87
+jb near loc_fffbcf87  ; jb 0xfffbcf87
 jmp near loc_fffbcf7b  ; jmp 0xfffbcf7b
 
-loc_fffbd045:  ; not directly referenced
+loc_fffbd045:
 push ecx
 lea eax, [ebp - 0x60]
 lea edx, [ebp - 0x138]
@@ -37943,12 +37942,12 @@ mov byte [ebp - 0x15c], 1
 mov bl, byte [eax + ref_fffcf26c]  ; mov bl, byte [eax - 0x30d94]
 jmp short loc_fffbd0c4  ; jmp 0xfffbd0c4
 
-loc_fffbd082:  ; not directly referenced
+loc_fffbd082:
 mov byte [ebp - 0x15c], 0
 xor ebx, ebx
 jmp short loc_fffbd0c4  ; jmp 0xfffbd0c4
 
-loc_fffbd08d:  ; not directly referenced
+loc_fffbd08d:
 push edx
 lea ecx, [ebp - 0x60]
 lea eax, [ebp - 0xa8]
@@ -37967,14 +37966,14 @@ je short loc_fffbd0c3  ; je 0xfffbd0c3
 mov edx, 0xdd48
 jmp near loc_fffbd29f  ; jmp 0xfffbd29f
 
-loc_fffbd0c3:  ; not directly referenced
+loc_fffbd0c3:
 inc ebx
 
-loc_fffbd0c4:  ; not directly referenced
+loc_fffbd0c4:
 cmp bl, byte [ebp - 0x15c]
 jbe short loc_fffbd08d  ; jbe 0xfffbd08d
 
-loc_fffbd0cc:  ; not directly referenced
+loc_fffbd0cc:
 mov edx, 0xdd47
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -37989,10 +37988,10 @@ mov eax, edi
 call fcn_fffb114e  ; call 0xfffb114e
 test eax, eax
 mov esi, eax
-je loc_fffbd29a  ; je 0xfffbd29a
+je near loc_fffbd29a  ; je 0xfffbd29a
 jmp near loc_fffbd293  ; jmp 0xfffbd293
 
-loc_fffbd10a:  ; not directly referenced
+loc_fffbd10a:
 mov eax, edi
 lea ebx, [ebp - 0x144]
 mov edx, ebx
@@ -38001,26 +38000,26 @@ lea eax, [edi + 0x3c31]
 mov dword [ebp - 0x15c], 0
 mov dword [ebp - 0x16c], eax
 
-loc_fffbd12f:  ; not directly referenced
+loc_fffbd12f:
 imul eax, dword [ebp - 0x15c], 0x1055
 cmp byte [edi + eax + 0x3a], 0
-jne loc_fffbd2a8  ; jne 0xfffbd2a8
+jne near loc_fffbd2a8  ; jne 0xfffbd2a8
 
-loc_fffbd144:  ; not directly referenced
+loc_fffbd144:
 inc dword [ebp - 0x15c]
 cmp dword [ebp - 0x15c], 2
 jne short loc_fffbd12f  ; jne 0xfffbd12f
 xor esi, esi
 jmp near loc_fffbd29a  ; jmp 0xfffbd29a
 
-loc_fffbd15a:  ; not directly referenced
+loc_fffbd15a:
 mov ecx, dword [ebp - 0x15c]
 lea edx, [ebp - 0x144]
 mov eax, edi
 xor ebx, ebx
 call fcn_ffface48  ; call 0xffface48
 
-loc_fffbd16f:  ; not directly referenced
+loc_fffbd16f:
 mov ecx, dword [ebp - 0x15c]
 mov edx, ebx
 mov eax, edi
@@ -38028,13 +38027,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffbd18d  ; jne 0xfffbd18d
 
-loc_fffbd182:  ; not directly referenced
+loc_fffbd182:
 inc ebx
 cmp ebx, 4
 jne short loc_fffbd16f  ; jne 0xfffbd16f
 jmp near loc_fffbd26a  ; jmp 0xfffbd26a
 
-loc_fffbd18d:  ; not directly referenced
+loc_fffbd18d:
 imul eax, ebx, 0x900
 mov dl, byte [ebp + ebx - 0x14c]
 add eax, 0x3c30
@@ -38042,7 +38041,7 @@ mov byte [ebp - 0x160], dl
 mov dword [ebp - 0x170], eax
 jmp near loc_fffbd252  ; jmp 0xfffbd252
 
-loc_fffbd1b0:  ; not directly referenced
+loc_fffbd1b0:
 push eax
 movzx ecx, byte [ebp - 0x160]
 mov edx, dword [ebp - 0x15c]
@@ -38059,7 +38058,7 @@ xor edx, edx
 mov esi, dword [ebp - 0x15c]
 jmp short loc_fffbd20c  ; jmp 0xfffbd20c
 
-loc_fffbd1e3:  ; not directly referenced
+loc_fffbd1e3:
 lea ecx, [eax + 0x400]
 mov dword [ebp - 0x174], ecx
 mov ecx, esi
@@ -38071,7 +38070,7 @@ inc edx
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffbd20c:  ; not directly referenced
+loc_fffbd20c:
 cmp dl, byte [edi + 0x20b5]
 jb short loc_fffbd1e3  ; jb 0xfffbd1e3
 mov ecx, ebx
@@ -38091,36 +38090,36 @@ call fcn_fffacdcd  ; call 0xfffacdcd
 inc byte [ebp - 0x160]
 add esp, 0x10
 
-loc_fffbd252:  ; not directly referenced
+loc_fffbd252:
 mov dl, byte [ebp - 0x160]
 cmp dl, byte [ebp + ebx - 0x148]
-jbe loc_fffbd1b0  ; jbe 0xfffbd1b0
+jbe near loc_fffbd1b0  ; jbe 0xfffbd1b0
 jmp near loc_fffbd182  ; jmp 0xfffbd182
 
-loc_fffbd26a:  ; not directly referenced
+loc_fffbd26a:
 dec dword [ebp - 0x164]
-jne loc_fffbd15a  ; jne 0xfffbd15a
+jne near loc_fffbd15a  ; jne 0xfffbd15a
 mov ecx, dword [ebp - 0x16c]
 mov edx, dword [ebp - 0x15c]
 mov eax, edi
 call fcn_fffaf8cd  ; call 0xfffaf8cd
 test eax, eax
 mov esi, eax
-je loc_fffbd144  ; je 0xfffbd144
+je near loc_fffbd144  ; je 0xfffbd144
 
-loc_fffbd293:  ; not directly referenced
+loc_fffbd293:
 mov edx, 0xdd4b
 jmp short loc_fffbd29f  ; jmp 0xfffbd29f
 
-loc_fffbd29a:  ; not directly referenced
+loc_fffbd29a:
 mov edx, 0xdd4a
 
-loc_fffbd29f:  ; not directly referenced
+loc_fffbd29f:
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
 jmp short loc_fffbd310  ; jmp 0xfffbd310
 
-loc_fffbd2a8:  ; not directly referenced
+loc_fffbd2a8:
 xor ecx, ecx
 mov edx, dword [ebp - 0x15c]
 mov eax, edi
@@ -38140,7 +38139,7 @@ mov byte [ebp - 0x145], 0x7f
 mov dword [ebp - 0x164], 0x20
 jmp near loc_fffbd15a  ; jmp 0xfffbd15a
 
-loc_fffbd310:  ; not directly referenced
+loc_fffbd310:
 lea esp, [ebp - 0xc]
 mov eax, esi
 pop ebx
@@ -38149,7 +38148,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffbd31a:  ; not directly referenced
+fcn_fffbd31a:
 push ebp
 mov ebp, esp
 push edi
@@ -38160,15 +38159,15 @@ lea esp, [esp - 0x1c]
 mov word [ebp - 0x1c], 0
 mov edi, dword [ebp + 8]
 
-loc_fffbd32f:  ; not directly referenced
+loc_fffbd32f:
 imul eax, ebx, 0x1055
 cmp byte [edi + eax + 0x3a], 0
-je loc_fffbd449  ; je 0xfffbd449
+je near loc_fffbd449  ; je 0xfffbd449
 lea eax, [edi + eax + 0x7b]
 xor esi, esi
 mov dword [ebp - 0x20], eax
 
-loc_fffbd349:  ; not directly referenced
+loc_fffbd349:
 mov ecx, ebx
 mov edx, esi
 mov eax, edi
@@ -38177,7 +38176,7 @@ test eax, eax
 jne short loc_fffbd3cc  ; jne 0xfffbd3cc
 jmp near loc_fffbd43b  ; jmp 0xfffbd43b
 
-loc_fffbd35d:  ; not directly referenced
+loc_fffbd35d:
 push edx
 movzx eax, byte [ebp - 0x19]
 mov ecx, esi
@@ -38219,10 +38218,10 @@ inc byte [ebp - 0x19]
 mov word [ebp - 0x1c], dx
 jmp short loc_fffbd3d0  ; jmp 0xfffbd3d0
 
-loc_fffbd3cc:  ; not directly referenced
+loc_fffbd3cc:
 mov byte [ebp - 0x19], 0
 
-loc_fffbd3d0:  ; not directly referenced
+loc_fffbd3d0:
 mov dl, byte [ebp - 0x19]
 cmp dl, byte [edi + 0x20b5]
 jb short loc_fffbd35d  ; jb 0xfffbd35d
@@ -38261,16 +38260,16 @@ mov byte [edx], al
 mov al, byte [ebp - 0x19]
 mov byte [edx - 1], al
 
-loc_fffbd43b:  ; not directly referenced
+loc_fffbd43b:
 inc esi
 add dword [ebp - 0x20], 0x2f
 cmp esi, 4
-jne loc_fffbd349  ; jne 0xfffbd349
+jne near loc_fffbd349  ; jne 0xfffbd349
 
-loc_fffbd449:  ; not directly referenced
+loc_fffbd449:
 inc ebx
 cmp ebx, 2
-jne loc_fffbd32f  ; jne 0xfffbd32f
+jne near loc_fffbd32f  ; jne 0xfffbd32f
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -38372,7 +38371,7 @@ loc_fffbd53e:
 inc edi
 inc dword [ebp - 0x1c]
 cmp edi, 0xfe
-jne loc_fffbd4b0  ; jne 0xfffbd4b0
+jne near loc_fffbd4b0  ; jne 0xfffbd4b0
 cmp word [ebp - 0x14], 0xff
 sete dl
 cmp word [ebp - 0x10], 0xff
@@ -38765,7 +38764,7 @@ mov dword [eax], 0
 
 loc_fffbd982:
 cmp byte [ebp - 0x63], bl
-ja loc_fffbd8b4  ; ja 0xfffbd8b4
+ja near loc_fffbd8b4  ; ja 0xfffbd8b4
 cmp byte [ebp - 0x62], 1
 mov dl, byte [ebp - 0x61]
 sbb eax, eax
@@ -38793,13 +38792,13 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov ebx, eax
-jne loc_fffbda81  ; jne 0xfffbda81
+jne near loc_fffbda81  ; jne 0xfffbda81
 xor ecx, ecx
 mov edx, esi
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffbda7c  ; jne 0xfffbda7c
+jne near loc_fffbda7c  ; jne 0xfffbda7c
 mov edx, dword [ebp + 8]
 mov ax, 0x4340
 mov byte [ebp - 0x65], 0
@@ -38883,9 +38882,9 @@ mov byte [ebp - 0x16], al
 loc_fffbdaaf:
 mov edx, dword [ebp - 0x14]
 cmp dword [edx + 0xa], 1
-jne loc_fffbdcdc  ; jne 0xfffbdcdc
+jne near loc_fffbdcdc  ; jne 0xfffbdcdc
 cmp byte [edx + 0x12], 0
-je loc_fffbdcdc  ; je 0xfffbdcdc
+je near loc_fffbdcdc  ; je 0xfffbdcdc
 jmp near loc_fffbdcc8  ; jmp 0xfffbdcc8
 
 loc_fffbdacb:
@@ -38907,7 +38906,7 @@ add edx, 0x3f
 cmp dx, 0x3f
 ja short loc_fffbdb1b  ; ja 0xfffbdb1b
 cmp word [ebp - 0xe], 0
-je loc_fffbdbb6  ; je 0xfffbdbb6
+je near loc_fffbdbb6  ; je 0xfffbdbb6
 mov dl, byte [ebp - 0xe]
 mov byte [ebp - 0xf], al
 neg edx
@@ -38966,9 +38965,9 @@ loc_fffbdb89:
 mov ecx, 0x80
 sub ecx, esi
 cmp ecx, edx
-jg loc_fffbdcc1  ; jg 0xfffbdcc1
+jg near loc_fffbdcc1  ; jg 0xfffbdcc1
 cmp word [ebp - 0xe], 0x7f
-jg loc_fffbdcc1  ; jg 0xfffbdcc1
+jg near loc_fffbdcc1  ; jg 0xfffbdcc1
 mov dl, byte [ebp - 0x15]
 mov cl, byte [ebp - 0x16]
 mov byte [ebp - 0xf], al
@@ -39064,7 +39063,7 @@ inc byte [ebp - 0x10]
 add dword [ebp - 0x14], 0x1055
 cmp byte [ebp - 0x10], 2
 mov dword [edx], eax
-jne loc_fffbdaaf  ; jne 0xfffbdaaf
+jne near loc_fffbdaaf  ; jne 0xfffbdaaf
 xor eax, eax
 jmp short loc_fffbdcf0  ; jmp 0xfffbdcf0
 
@@ -39255,7 +39254,7 @@ loc_fffbde47:
 mov eax, dword [ebp - 0x68]
 dec eax
 cmp ax, 0x7e
-ja loc_fffbe06a  ; ja 0xfffbe06a
+ja near loc_fffbe06a  ; ja 0xfffbe06a
 imul esi, dword [ebp - 0x5c], 0x2f
 imul ebx, dword [ebp - 0x60], 0x1055
 mov al, byte [ebp - 0x68]
@@ -39401,7 +39400,7 @@ add esp, 0x20
 loc_fffbdff3:
 mov al, byte [ebp - 0x65]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffbdeb5  ; jb 0xfffbdeb5
+jb near loc_fffbdeb5  ; jb 0xfffbdeb5
 sub esp, 0xc
 mov ecx, dword [ebp - 0x60]
 push dword [ebp - 0x5c]
@@ -39411,7 +39410,7 @@ call fcn_fffbdcf9  ; call 0xfffbdcf9
 add esp, 0x10
 test eax, eax
 mov ebx, eax
-jne loc_fffbe1bd  ; jne 0xfffbe1bd
+jne near loc_fffbe1bd  ; jne 0xfffbe1bd
 sub esp, 0xc
 lea eax, [ebp - 0x48]
 push eax
@@ -39546,7 +39545,7 @@ add esp, 0x20
 loc_fffbe1a9:
 mov al, byte [ebp - 0x65]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffbe0b8  ; jb 0xfffbe0b8
+jb near loc_fffbe0b8  ; jb 0xfffbe0b8
 jmp near loc_fffbde40  ; jmp 0xfffbde40
 
 loc_fffbe1bd:
@@ -39558,10 +39557,10 @@ pop edi
 pop ebp
 ret
 
-loc_fffbe1c7:
+endloc_fffbe1c7:
 db 0x00
 
-fcn_fffbe1c8:  ; not directly referenced
+fcn_fffbe1c8:
 push ebp
 mov ebp, esp
 push edi
@@ -39588,69 +39587,69 @@ mov eax, dword [ebx + 0x2223]
 mov dword [eax + 0x4c3c], 0
 jmp near loc_fffbe9f4  ; jmp 0xfffbe9f4
 
-loc_fffbe244:  ; not directly referenced
+loc_fffbe244:
 cmp dword [ebx + 0x20ba], 0
 mov eax, dword [ebx + 0x20b6]
-jne loc_fffbe2f6  ; jne 0xfffbe2f6
+jne near loc_fffbe2f6  ; jne 0xfffbe2f6
 cmp eax, 0x640
 je short loc_fffbe2bd  ; je 0xfffbe2bd
 ja short loc_fffbe27f  ; ja 0xfffbe27f
 cmp eax, 0x42b
-je loc_fffbe2ef  ; je 0xfffbe2ef
+je near loc_fffbe2ef  ; je 0xfffbe2ef
 cmp eax, 0x535
 je short loc_fffbe2b3  ; je 0xfffbe2b3
 cmp eax, 0x320
-jne loc_fffbe369  ; jne 0xfffbe369
+jne near loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe2a9  ; jmp 0xfffbe2a9
 
-loc_fffbe27f:  ; not directly referenced
+loc_fffbe27f:
 cmp eax, 0x855
 je short loc_fffbe2d1  ; je 0xfffbe2d1
 ja short loc_fffbe295  ; ja 0xfffbe295
 cmp eax, 0x74b
-jne loc_fffbe369  ; jne 0xfffbe369
+jne near loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe2c7  ; jmp 0xfffbe2c7
 
-loc_fffbe295:  ; not directly referenced
+loc_fffbe295:
 cmp eax, 0x960
 je short loc_fffbe2db  ; je 0xfffbe2db
 cmp eax, 0xa6b
-jne loc_fffbe369  ; jne 0xfffbe369
+jne near loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe2e5  ; jmp 0xfffbe2e5
 
-loc_fffbe2a9:  ; not directly referenced
+loc_fffbe2a9:
 mov eax, 3
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2b3:  ; not directly referenced
+loc_fffbe2b3:
 mov eax, 5
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2bd:  ; not directly referenced
+loc_fffbe2bd:
 mov eax, 6
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2c7:  ; not directly referenced
+loc_fffbe2c7:
 mov eax, 7
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2d1:  ; not directly referenced
+loc_fffbe2d1:
 mov eax, 8
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2db:  ; not directly referenced
+loc_fffbe2db:
 mov eax, 9
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2e5:  ; not directly referenced
+loc_fffbe2e5:
 mov eax, 0xa
 jmp near loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2ef:  ; not directly referenced
+loc_fffbe2ef:
 mov eax, 4
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe2f6:  ; not directly referenced
+loc_fffbe2f6:
 cmp eax, 0x7d0
 je short loc_fffbe346  ; je 0xfffbe346
 ja short loc_fffbe316  ; ja 0xfffbe316
@@ -39662,7 +39661,7 @@ cmp eax, 0x578
 jne short loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe338  ; jmp 0xfffbe338
 
-loc_fffbe316:  ; not directly referenced
+loc_fffbe316:
 cmp eax, 0x960
 je short loc_fffbe354  ; je 0xfffbe354
 ja short loc_fffbe328  ; ja 0xfffbe328
@@ -39670,49 +39669,49 @@ cmp eax, 0x898
 jne short loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe34d  ; jmp 0xfffbe34d
 
-loc_fffbe328:  ; not directly referenced
+loc_fffbe328:
 cmp eax, 0xa28
 je short loc_fffbe35b  ; je 0xfffbe35b
 cmp eax, 0xaf0
 jne short loc_fffbe369  ; jne 0xfffbe369
 jmp short loc_fffbe362  ; jmp 0xfffbe362
 
-loc_fffbe338:  ; not directly referenced
+loc_fffbe338:
 mov eax, 0x107
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe33f:  ; not directly referenced
+loc_fffbe33f:
 mov eax, 0x109
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe346:  ; not directly referenced
+loc_fffbe346:
 mov eax, 0x10a
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe34d:  ; not directly referenced
+loc_fffbe34d:
 mov eax, 0x10b
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe354:  ; not directly referenced
+loc_fffbe354:
 mov eax, 0x10c
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe35b:  ; not directly referenced
+loc_fffbe35b:
 mov eax, 0x10d
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe362:  ; not directly referenced
+loc_fffbe362:
 mov eax, 0x10e
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe369:  ; not directly referenced
+loc_fffbe369:
 xor eax, eax
 jmp short loc_fffbe372  ; jmp 0xfffbe372
 
-loc_fffbe36d:  ; not directly referenced
+loc_fffbe36d:
 mov eax, 0x108
 
-loc_fffbe372:  ; not directly referenced
+loc_fffbe372:
 movzx esi, ax
 cmp word [ebx + 0x22e2], 0
 je short loc_fffbe3cf  ; je 0xfffbe3cf
@@ -39742,16 +39741,16 @@ mov eax, dword [edi + 9]
 movzx eax, byte [eax + 3]
 mov dword [ebx + 0x20ba], eax
 
-loc_fffbe3cf:  ; not directly referenced
+loc_fffbe3cf:
 mov eax, dword [ebx + 0x2223]
 or esi, 0x80000000
 mov dword [eax + 0x5e00], esi
 jmp short loc_fffbe3e9  ; jmp 0xfffbe3e9
 
-loc_fffbe3e3:  ; not directly referenced
+loc_fffbe3e3:
 mov esi, dword [eax + 0x5e00]
 
-loc_fffbe3e9:  ; not directly referenced
+loc_fffbe3e9:
 test esi, esi
 mov eax, dword [ebx + 0x2223]
 js short loc_fffbe3e3  ; js 0xfffbe3e3
@@ -39763,24 +39762,24 @@ mov edx, dword [ebx + 0x20b6]
 cmp eax, edx
 jae short loc_fffbe437  ; jae 0xfffbe437
 test eax, eax
-je loc_fffbe9ea  ; je 0xfffbe9ea
+je near loc_fffbe9ea  ; je 0xfffbe9ea
 sub esp, 0xc
 mov dword [ebx + 0x20b6], eax
 push ebx
 call fcn_fffc292c  ; call 0xfffc292c
 add esp, 0x10
 test eax, eax
-jne loc_fffbe9ea  ; jne 0xfffbe9ea
+jne near loc_fffbe9ea  ; jne 0xfffbe9ea
 jmp near loc_fffbe9f4  ; jmp 0xfffbe9f4
 
-loc_fffbe437:  ; not directly referenced
+loc_fffbe437:
 cmp edx, eax
-jb loc_fffbe9ea  ; jb 0xfffbe9ea
+jb near loc_fffbe9ea  ; jb 0xfffbe9ea
 test eax, eax
-je loc_fffbe9ea  ; je 0xfffbe9ea
+je near loc_fffbe9ea  ; je 0xfffbe9ea
 jmp near loc_fffbe9f4  ; jmp 0xfffbe9f4
 
-loc_fffbe44c:  ; not directly referenced
+loc_fffbe44c:
 xor edx, edx
 mov ecx, 1
 mov eax, ebx
@@ -39795,7 +39794,7 @@ mov byte [ebx + 0x21bb], 0
 mov byte [ebx + 0x21bc], 0
 mov byte [ebx + 0x21bd], 0
 
-loc_fffbe48a:  ; not directly referenced
+loc_fffbe48a:
 mov ecx, 1
 mov edx, 2
 mov eax, ebx
@@ -39810,7 +39809,7 @@ mov byte [ebx + 0x2201], 0
 mov byte [ebx + 0x2202], 0
 mov byte [ebx + 0x2203], 0
 
-loc_fffbe4cb:  ; not directly referenced
+loc_fffbe4cb:
 mov eax, ebx
 mov edi, ebx
 call fcn_fffba3ca  ; call 0xfffba3ca
@@ -39821,19 +39820,19 @@ mov eax, ebx
 call fcn_fffbfbe4  ; call 0xfffbfbe4
 mov dword [ebp - 0x2c], 0
 
-loc_fffbe4f4:  ; not directly referenced
+loc_fffbe4f4:
 cmp byte [esi + 0x3a], 0
-jne loc_fffbe962  ; jne 0xfffbe962
+jne near loc_fffbe962  ; jne 0xfffbe962
 jmp near loc_fffbe61a  ; jmp 0xfffbe61a
 
-loc_fffbe503:  ; not directly referenced
+loc_fffbe503:
 mov edx, dword [ebp - 0x2c]
 mov eax, ebx
 call fcn_fffbf447  ; call 0xfffbf447
 test eax, eax
 je short loc_fffbe53d  ; je 0xfffbe53d
 
-loc_fffbe511:  ; not directly referenced
+loc_fffbe511:
 mov byte [esi + 0x3a], 0
 mov dword [esi + 0xa], 0
 mov dword [esi + 0x27], 0
@@ -39843,7 +39842,7 @@ mov byte [esi + 0x12], 0
 mov byte [esi + 0x2f], 0
 jmp near loc_fffbe61a  ; jmp 0xfffbe61a
 
-loc_fffbe53d:  ; not directly referenced
+loc_fffbe53d:
 mov al, byte [ebp - 0x2c]
 mov edx, dword [ebx + 0x2223]
 cmp al, 1
@@ -39866,13 +39865,13 @@ jbe short loc_fffbe58a  ; jbe 0xfffbe58a
 or al, 0xe0
 jmp short loc_fffbe594  ; jmp 0xfffbe594
 
-loc_fffbe58a:  ; not directly referenced
+loc_fffbe58a:
 mov ecx, dword [ebp - 0x30]
 and al, 0x1f
 shl ecx, 5
 or eax, ecx
 
-loc_fffbe594:  ; not directly referenced
+loc_fffbe594:
 movzx ecx, byte [ebx + 0x20b0]
 and ah, 0xf0
 shl ecx, 8
@@ -39910,19 +39909,19 @@ mov dword [esp], 8
 call fcn_fffc0316  ; call 0xfffc0316
 add esp, 0x10
 
-loc_fffbe61a:  ; not directly referenced
+loc_fffbe61a:
 inc dword [ebp - 0x2c]
 add esi, 0x1055
 cmp dword [ebp - 0x2c], 2
-jne loc_fffbe4f4  ; jne 0xfffbe4f4
+jne near loc_fffbe4f4  ; jne 0xfffbe4f4
 cmp byte [ebx + 0x3a], 0
-jne loc_fffbe979  ; jne 0xfffbe979
+jne near loc_fffbe979  ; jne 0xfffbe979
 
-loc_fffbe637:  ; not directly referenced
+loc_fffbe637:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffbe9a4  ; jne 0xfffbe9a4
+jne near loc_fffbe9a4  ; jne 0xfffbe9a4
 
-loc_fffbe644:  ; not directly referenced
+loc_fffbe644:
 mov eax, dword [ebx + 0x2223]
 mov dword [eax + 0x4e80], 0x5500
 mov eax, dword [ebx + 0x2223]
@@ -39938,13 +39937,13 @@ mov dword [ebp - 0x34], 0
 mov dword [ebp - 0x40], eax
 shr dword [ebp - 0x40], 0x10
 
-loc_fffbe697:  ; not directly referenced
+loc_fffbe697:
 mov eax, dword [ebx + 0x221f]
 mov eax, dword [eax + 0xe4]
 test ah, 0x40
 jne short loc_fffbe700  ; jne 0xfffbe700
 
-loc_fffbe6a8:  ; not directly referenced
+loc_fffbe6a8:
 mov esi, dword [ebx + 0x107c]
 mov eax, dword [ebx + 0x105f]
 mov dword [ebp - 0x2c], eax
@@ -39967,48 +39966,48 @@ or eax, ecx
 not edx
 movzx eax, al
 test edx, eax
-je loc_fffbe77f  ; je 0xfffbe77f
+je near loc_fffbe77f  ; je 0xfffbe77f
 jmp near loc_fffbe793  ; jmp 0xfffbe793
 
-loc_fffbe700:  ; not directly referenced
+loc_fffbe700:
 cmp dword [ebx + 0x27], 0
 mov eax, dword [ebp - 0x40]
 je short loc_fffbe72f  ; je 0xfffbe72f
 cmp dword [ebx + 0xa], 0
 je short loc_fffbe72f  ; je 0xfffbe72f
 cmp ax, 2
-je loc_fffbe958  ; je 0xfffbe958
+je near loc_fffbe958  ; je 0xfffbe958
 mov esi, dword [ebx]
 cmp dword [ebx + 0x1d], esi
 jb short loc_fffbe728  ; jb 0xfffbe728
 mov dword [ebx], 0
 jmp short loc_fffbe72f  ; jmp 0xfffbe72f
 
-loc_fffbe728:  ; not directly referenced
+loc_fffbe728:
 mov dword [ebx + 0x1d], 0
 
-loc_fffbe72f:  ; not directly referenced
+loc_fffbe72f:
 cmp dword [ebx + 0x107c], 0
-je loc_fffbe6a8  ; je 0xfffbe6a8
+je near loc_fffbe6a8  ; je 0xfffbe6a8
 cmp dword [ebx + 0x105f], 0
-je loc_fffbe6a8  ; je 0xfffbe6a8
+je near loc_fffbe6a8  ; je 0xfffbe6a8
 cmp ax, 2
-je loc_fffbe958  ; je 0xfffbe958
+je near loc_fffbe958  ; je 0xfffbe958
 mov eax, dword [ebx + 0x1055]
 cmp dword [ebx + 0x1072], eax
 jae short loc_fffbe770  ; jae 0xfffbe770
 mov dword [ebx + 0x1072], 0
 jmp near loc_fffbe6a8  ; jmp 0xfffbe6a8
 
-loc_fffbe770:  ; not directly referenced
+loc_fffbe770:
 mov dword [ebx + 0x1055], 0
 jmp near loc_fffbe6a8  ; jmp 0xfffbe6a8
 
-loc_fffbe77f:  ; not directly referenced
+loc_fffbe77f:
 mov dword [ebx + 0x2278], 0
 mov dword [ebx + 0x227c], 0
 
-loc_fffbe793:  ; not directly referenced
+loc_fffbe793:
 mov eax, dword [ebx + 0x2278]
 test eax, eax
 je short loc_fffbe7c6  ; je 0xfffbe7c6
@@ -40020,7 +40019,7 @@ cmp dword [ebp - 0x3c], 0
 je short loc_fffbe7b1  ; je 0xfffbe7b1
 mov dword [ebx], 0
 
-loc_fffbe7b1:  ; not directly referenced
+loc_fffbe7b1:
 lea edx, [eax - 2]
 cmp edx, 1
 ja short loc_fffbe7c6  ; ja 0xfffbe7c6
@@ -40028,7 +40027,7 @@ cmp dword [ebp - 0x30], 0
 je short loc_fffbe7c6  ; je 0xfffbe7c6
 mov dword [ebx + 0x1d], 0
 
-loc_fffbe7c6:  ; not directly referenced
+loc_fffbe7c6:
 mov edx, dword [ebx + 0x227c]
 test edx, edx
 je short loc_fffbe7fe  ; je 0xfffbe7fe
@@ -40040,7 +40039,7 @@ cmp dword [ebp - 0x2c], 0
 je short loc_fffbe7e8  ; je 0xfffbe7e8
 mov dword [ebx + 0x1055], 0
 
-loc_fffbe7e8:  ; not directly referenced
+loc_fffbe7e8:
 lea ecx, [edx - 2]
 cmp ecx, 1
 ja short loc_fffbe7fe  ; ja 0xfffbe7fe
@@ -40048,7 +40047,7 @@ test esi, esi
 je short loc_fffbe7fe  ; je 0xfffbe7fe
 mov dword [ebx + 0x1072], 0
 
-loc_fffbe7fe:  ; not directly referenced
+loc_fffbe7fe:
 mov dword [ebx + 0x20ff], eax
 mov dword [ebx + 0x2103], edx
 mov eax, dword [edi]
@@ -40061,7 +40060,7 @@ cmp edx, dword [ebp - 0x2c]
 jae short loc_fffbe824  ; jae 0xfffbe824
 jmp short loc_fffbe882  ; jmp 0xfffbe882
 
-loc_fffbe824:  ; not directly referenced
+loc_fffbe824:
 cmp dword [ebp - 0x2c], 0
 jne short loc_fffbe837  ; jne 0xfffbe837
 movzx edx, word [ebx + 0x20f6]
@@ -40069,7 +40068,7 @@ cmp edx, eax
 jae short loc_fffbe837  ; jae 0xfffbe837
 jmp short loc_fffbe897  ; jmp 0xfffbe897
 
-loc_fffbe837:  ; not directly referenced
+loc_fffbe837:
 mov cx, word [ebx + 0x20f6]
 mov esi, dword [ebp - 0x2c]
 movzx edx, cx
@@ -40092,25 +40091,25 @@ mov dword [edi + 0x1d], ecx
 mov dword [edi], ecx
 jmp short loc_fffbe899  ; jmp 0xfffbe899
 
-loc_fffbe876:  ; not directly referenced
+loc_fffbe876:
 cmp word [ebp - 0x30], ax
 jbe short loc_fffbe887  ; jbe 0xfffbe887
 mov dword [edi], 0
 
-loc_fffbe882:  ; not directly referenced
+loc_fffbe882:
 mov dword [edi + 0x1d], edx
 jmp short loc_fffbe899  ; jmp 0xfffbe899
 
-loc_fffbe887:  ; not directly referenced
+loc_fffbe887:
 mov eax, dword [ebp - 0x2c]
 cmp word [ebp - 0x30], ax
 jbe short loc_fffbe899  ; jbe 0xfffbe899
 mov dword [edi + 0x1d], 0
 
-loc_fffbe897:  ; not directly referenced
+loc_fffbe897:
 mov dword [edi], edx
 
-loc_fffbe899:  ; not directly referenced
+loc_fffbe899:
 mov edx, dword [edi]
 cmp dword [edi + 0x1d], edx
 ja short loc_fffbe8b5  ; ja 0xfffbe8b5
@@ -40121,14 +40120,14 @@ mov dword [ebp - 0x30], eax
 xor eax, eax
 jmp short loc_fffbe8ca  ; jmp 0xfffbe8ca
 
-loc_fffbe8b5:  ; not directly referenced
+loc_fffbe8b5:
 imul edx, dword [ebp - 0x34], 0x1055
 mov eax, 0x10000
 lea ecx, [ebx + edx + 0x1d]
 add edx, ebx
 mov dword [ebp - 0x30], edx
 
-loc_fffbe8ca:  ; not directly referenced
+loc_fffbe8ca:
 mov dl, byte [ecx + 0x12]
 test dl, dl
 mov byte [ebp - 0x2c], dl
@@ -40150,7 +40149,7 @@ or eax, esi
 and eax, 0xfff7ffff
 or eax, ecx
 
-loc_fffbe8ff:  ; not directly referenced
+loc_fffbe8ff:
 mov ecx, dword [ebp - 0x30]
 movzx esi, byte [ecx + 0x12]
 mov edx, esi
@@ -40174,30 +40173,30 @@ dec edx
 shl edx, 0x14
 or eax, edx
 
-loc_fffbe93b:  ; not directly referenced
+loc_fffbe93b:
 cmp byte [edi + 0x3a], 0
-jne loc_fffbe9d5  ; jne 0xfffbe9d5
+jne near loc_fffbe9d5  ; jne 0xfffbe9d5
 jmp near loc_fffbea99  ; jmp 0xfffbea99
 
-loc_fffbe94a:  ; not directly referenced
+loc_fffbe94a:
 mov eax, ebx
 call fcn_fffbf908  ; call 0xfffbf908
 xor eax, eax
 jmp near loc_fffbeab5  ; jmp 0xfffbeab5
 
-loc_fffbe958:  ; not directly referenced
+loc_fffbe958:
 mov eax, 0x11
 jmp near loc_fffbeab5  ; jmp 0xfffbeab5
 
-loc_fffbe962:  ; not directly referenced
+loc_fffbe962:
 mov edx, dword [ebp - 0x2c]
 mov eax, ebx
 call fcn_fffbf510  ; call 0xfffbf510
 test eax, eax
-jne loc_fffbe511  ; jne 0xfffbe511
+jne near loc_fffbe511  ; jne 0xfffbe511
 jmp near loc_fffbe503  ; jmp 0xfffbe503
 
-loc_fffbe979:  ; not directly referenced
+loc_fffbe979:
 xor edx, edx
 mov eax, ebx
 call fcn_fffbf618  ; call 0xfffbf618
@@ -40210,7 +40209,7 @@ or al, 0xff
 mov dword [edx + 0x4294], eax
 jmp near loc_fffbe637  ; jmp 0xfffbe637
 
-loc_fffbe9a4:  ; not directly referenced
+loc_fffbe9a4:
 mov edx, 1
 mov eax, ebx
 call fcn_fffbf618  ; call 0xfffbf618
@@ -40223,20 +40222,20 @@ or al, 0xff
 mov dword [edx + 0x4694], eax
 jmp near loc_fffbe644  ; jmp 0xfffbe644
 
-loc_fffbe9d5:  ; not directly referenced
+loc_fffbe9d5:
 mov edx, dword [ebp - 0x38]
 add edx, dword [ebx + 0x2223]
 or eax, 0x600000
 mov dword [edx], eax
 jmp near loc_fffbea99  ; jmp 0xfffbea99
 
-loc_fffbe9ea:  ; not directly referenced
+loc_fffbe9ea:
 mov eax, 0xe
 jmp near loc_fffbeab5  ; jmp 0xfffbeab5
 
-loc_fffbe9f4:  ; not directly referenced
+loc_fffbe9f4:
 cmp dword [ebx + 0x20b6], 0x640
-ja loc_fffbe4cb  ; ja 0xfffbe4cb
+ja near loc_fffbe4cb  ; ja 0xfffbe4cb
 cmp byte [ebx + 0x3a], 0
 je short loc_fffbea87  ; je 0xfffbea87
 xor ecx, ecx
@@ -40246,7 +40245,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffbea59  ; jne 0xfffbea59
 
-loc_fffbea19:  ; not directly referenced
+loc_fffbea19:
 xor ecx, ecx
 mov edx, 2
 mov eax, ebx
@@ -40262,7 +40261,7 @@ mov byte [ebx + 0x2176], 0
 mov byte [ebx + 0x2177], 0
 jmp short loc_fffbea87  ; jmp 0xfffbea87
 
-loc_fffbea59:  ; not directly referenced
+loc_fffbea59:
 cmp byte [ebx + 0x210c], 0x10
 jbe short loc_fffbea19  ; jbe 0xfffbea19
 mov byte [ebx + 0x212d], 0
@@ -40272,20 +40271,20 @@ mov byte [ebx + 0x2130], 0
 mov byte [ebx + 0x2131], 0
 jmp short loc_fffbea19  ; jmp 0xfffbea19
 
-loc_fffbea87:  ; not directly referenced
+loc_fffbea87:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffbe44c  ; jne 0xfffbe44c
+jne near loc_fffbe44c  ; jne 0xfffbe44c
 jmp near loc_fffbe4cb  ; jmp 0xfffbe4cb
 
-loc_fffbea99:  ; not directly referenced
+loc_fffbea99:
 inc dword [ebp - 0x34]
 add dword [ebp - 0x38], 4
 add edi, 0x1055
 cmp dword [ebp - 0x34], 2
-je loc_fffbe94a  ; je 0xfffbe94a
+je near loc_fffbe94a  ; je 0xfffbe94a
 jmp near loc_fffbe697  ; jmp 0xfffbe697
 
-loc_fffbeab5:  ; not directly referenced
+loc_fffbeab5:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -40465,7 +40464,7 @@ inc esi
 
 loc_fffbecb4:
 cmp si, word [ebp - 0x1e]
-jne loc_fffbec39  ; jne 0xfffbec39
+jne near loc_fffbec39  ; jne 0xfffbec39
 mov eax, dword [ebp - 0x1c]
 lea esp, [esp + 0x1c]
 pop ebx
@@ -40574,7 +40573,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffbedc4:  ; not directly referenced
+fcn_fffbedc4:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40585,12 +40584,12 @@ mov ecx, 2
 mov edx, 1
 call fcn_fffb2c38  ; call 0xfffb2c38
 
-loc_fffbede6:  ; not directly referenced
+loc_fffbede6:
 xor eax, eax
 leave
 ret
 
-fcn_fffbedea:  ; not directly referenced
+fcn_fffbedea:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40609,12 +40608,12 @@ mov ecx, 3
 mov edx, 1
 call fcn_fffb2c38  ; call 0xfffb2c38
 
-loc_fffbee31:  ; not directly referenced
+loc_fffbee31:
 xor eax, eax
 leave
 ret
 
-fcn_fffbee35:  ; not directly referenced
+fcn_fffbee35:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40625,12 +40624,12 @@ mov ecx, 2
 xor edx, edx
 call fcn_fffb2c38  ; call 0xfffb2c38
 
-loc_fffbee54:  ; not directly referenced
+loc_fffbee54:
 xor eax, eax
 leave
 ret
 
-fcn_fffbee58:  ; not directly referenced
+fcn_fffbee58:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40641,12 +40640,12 @@ mov ecx, 3
 xor edx, edx
 call fcn_fffb2c38  ; call 0xfffb2c38
 
-loc_fffbee77:  ; not directly referenced
+loc_fffbee77:
 xor eax, eax
 leave
 ret
 
-fcn_fffbee7b:  ; not directly referenced
+fcn_fffbee7b:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40656,7 +40655,7 @@ xor eax, eax
 leave
 ret
 
-fcn_fffbee8e:  ; not directly referenced
+fcn_fffbee8e:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -40670,10 +40669,10 @@ jne short loc_fffbeebc  ; jne 0xfffbeebc
 cmp dword [eax + 0x22d4], 0
 je short loc_fffbeec1  ; je 0xfffbeec1
 
-loc_fffbeebc:  ; not directly referenced
+loc_fffbeebc:
 call fcn_fffb0e9a  ; call 0xfffb0e9a
 
-loc_fffbeec1:  ; not directly referenced
+loc_fffbeec1:
 xor eax, eax
 leave
 ret
@@ -40715,7 +40714,7 @@ jmp near loc_fffbefde  ; jmp 0xfffbefde
 
 loc_fffbef43:
 cmp byte [edx + 0x2f], 0
-jne loc_fffbefed  ; jne 0xfffbefed
+jne near loc_fffbefed  ; jne 0xfffbefed
 
 loc_fffbef4d:
 mov word [ecx], 0
@@ -40731,7 +40730,7 @@ jmp near loc_fffbf016  ; jmp 0xfffbf016
 
 loc_fffbef6d:
 cmp byte [edx + 0x2f], 1
-ja loc_fffbf025  ; ja 0xfffbf025
+ja near loc_fffbf025  ; ja 0xfffbf025
 
 loc_fffbef77:
 mov eax, dword [ebp + 8]
@@ -40748,7 +40747,7 @@ jmp near loc_fffbf048  ; jmp 0xfffbf048
 
 loc_fffbef9a:
 cmp byte [eax + 0x2f], 0
-jne loc_fffbf057  ; jne 0xfffbf057
+jne near loc_fffbf057  ; jne 0xfffbf057
 
 loc_fffbefa4:
 mov edx, dword [ebp + 0xc]
@@ -40765,7 +40764,7 @@ jmp near loc_fffbf07a  ; jmp 0xfffbf07a
 
 loc_fffbefc7:
 cmp byte [eax + 0x2f], 1
-ja loc_fffbf089  ; ja 0xfffbf089
+ja near loc_fffbf089  ; ja 0xfffbf089
 
 loc_fffbefd1:
 mov ebx, dword [ebp + 0x10]
@@ -40774,7 +40773,7 @@ jmp near loc_fffbf0a2  ; jmp 0xfffbf0a2
 
 loc_fffbefde:
 cmp dword [edx + 0x27], 1
-jne loc_fffbef4d  ; jne 0xfffbef4d
+jne near loc_fffbef4d  ; jne 0xfffbef4d
 jmp near loc_fffbef43  ; jmp 0xfffbef43
 
 loc_fffbefed:
@@ -40792,7 +40791,7 @@ jmp near loc_fffbef52  ; jmp 0xfffbef52
 
 loc_fffbf016:
 cmp dword [edx + 0x27], 1
-jne loc_fffbef77  ; jne 0xfffbef77
+jne near loc_fffbef77  ; jne 0xfffbef77
 jmp near loc_fffbef6d  ; jmp 0xfffbef6d
 
 loc_fffbf025:
@@ -40810,7 +40809,7 @@ jmp near loc_fffbef7f  ; jmp 0xfffbef7f
 
 loc_fffbf048:
 cmp dword [eax + 0x27], 1
-jne loc_fffbefa4  ; jne 0xfffbefa4
+jne near loc_fffbefa4  ; jne 0xfffbefa4
 jmp near loc_fffbef9a  ; jmp 0xfffbef9a
 
 loc_fffbf057:
@@ -40828,7 +40827,7 @@ jmp near loc_fffbefac  ; jmp 0xfffbefac
 
 loc_fffbf07a:
 cmp dword [eax + 0x27], 1
-jne loc_fffbefd1  ; jne 0xfffbefd1
+jne near loc_fffbefd1  ; jne 0xfffbefd1
 jmp near loc_fffbefc7  ; jmp 0xfffbefc7
 
 loc_fffbf089:
@@ -40967,9 +40966,9 @@ loc_fffbf1b6:
 mov eax, dword [ebp - 0x34]
 add eax, edi
 cmp byte [eax + 0x12], 2
-jne loc_fffbf2ca  ; jne 0xfffbf2ca
+jne near loc_fffbf2ca  ; jne 0xfffbf2ca
 cmp dword [eax + 0xa], 0
-je loc_fffbf2ca  ; je 0xfffbf2ca
+je near loc_fffbf2ca  ; je 0xfffbf2ca
 xor edx, edx
 mov ecx, dword [ebp - 0x1c]
 mov eax, edi
@@ -41064,9 +41063,9 @@ loc_fffbf2ca:
 mov eax, dword [ebp - 0x34]
 add eax, edi
 cmp byte [eax + 0x2f], 2
-jne loc_fffbf3ea  ; jne 0xfffbf3ea
+jne near loc_fffbf3ea  ; jne 0xfffbf3ea
 cmp dword [eax + 0x27], 0
-je loc_fffbf3ea  ; je 0xfffbf3ea
+je near loc_fffbf3ea  ; je 0xfffbf3ea
 mov ecx, dword [ebp - 0x1c]
 mov edx, 2
 mov eax, edi
@@ -41163,7 +41162,7 @@ inc byte [ebp - 0x21]
 loc_fffbf3ed:
 mov al, byte [ebp - 0x21]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffbf1b6  ; jb 0xfffbf1b6
+jb near loc_fffbf1b6  ; jb 0xfffbf1b6
 mov eax, dword [ebp - 0x28]
 xor edx, edx
 sub eax, 0x18
@@ -41425,7 +41424,7 @@ jmp near loc_fffbf900  ; jmp 0xfffbf900
 loc_fffbf6df:
 mov eax, dword [eax + 0x225c]
 cmp eax, 2
-jne loc_fffbf84b  ; jne 0xfffbf84b
+jne near loc_fffbf84b  ; jne 0xfffbf84b
 movzx eax, byte [ebx + 0x22bc]
 mov edi, 0x14
 movzx edx, byte [ebx + 0x22bb]
@@ -41484,7 +41483,7 @@ mov dl, byte [ebp - 0x58]
 cmp byte [ebp - 0x48], dl
 sete dl
 or cl, dl
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 mov dl, byte [ebp - 0x88]
 cmp byte [ebp - 0x78], dl
 sete cl
@@ -41492,37 +41491,37 @@ mov dl, byte [ebp - 0x78]
 cmp byte [ebp - 0x68], dl
 sete dl
 or cl, dl
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 cmp byte [ebp - 0x98], 0
 mov edx, esi
 sete cl
 cmp byte [ebp - 0x88], dl
 sete dl
 or cl, dl
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 cmp byte [ebp - 0x48], 0
 sete dl
 test al, al
 sete al
 or dl, al
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 cmp byte [ebp - 0x68], 0
 sete al
 cmp byte [ebp - 0x58], 0
 sete dl
 or al, dl
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 cmp byte [ebp - 0x88], 0
 sete al
 cmp byte [ebp - 0x78], 0
 sete dl
 or al, dl
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 mov eax, esi
 test al, al
-je loc_fffbf721  ; je 0xfffbf721
+je near loc_fffbf721  ; je 0xfffbf721
 dec edi
-jne loc_fffbf721  ; jne 0xfffbf721
+jne near loc_fffbf721  ; jne 0xfffbf721
 movzx esi, word [ebp - 0x2e]
 jmp short loc_fffbf86d  ; jmp 0xfffbf86d
 
@@ -41540,7 +41539,7 @@ jne short loc_fffbf874  ; jne 0xfffbf874
 loc_fffbf85f:
 mov esi, dword [ebx + 0x2284]
 test esi, esi
-je loc_fffbf900  ; je 0xfffbf900
+je near loc_fffbf900  ; je 0xfffbf900
 
 loc_fffbf86d:
 mov word [ebx + 0x20fc], si
@@ -41679,23 +41678,23 @@ pop esi
 pop ebp
 ret
 
-fcn_fffbfa08:  ; not directly referenced
+fcn_fffbfa08:
 push ebp
 mov ecx, dword [0xfed000f0]
 mov ebp, esp
 add edx, ecx
 
-loc_fffbfa13:  ; not directly referenced
+loc_fffbfa13:
 cmp edx, ecx
 mov eax, dword [0xfed000f0]
 jbe short loc_fffbfa1e  ; jbe 0xfffbfa1e
 jmp short loc_fffbfa22  ; jmp 0xfffbfa22
 
-loc_fffbfa1e:  ; not directly referenced
+loc_fffbfa1e:
 cmp eax, ecx
 jae short loc_fffbfa13  ; jae 0xfffbfa13
 
-loc_fffbfa22:  ; not directly referenced
+loc_fffbfa22:
 cmp eax, edx
 jb short loc_fffbfa13  ; jb 0xfffbfa13
 pop ebp
@@ -41737,18 +41736,18 @@ pop edi
 pop ebp
 ret
 
-fcn_fffbfa66:  ; not directly referenced
+fcn_fffbfa66:
 push ebp
 mov ebp, esp
 push esi
 push ebx
 cmp dword [eax + 0x2238], 4
 mov ebx, dword [ebp + 8]
-ja loc_fffbfb27  ; ja 0xfffbfb27
+ja near loc_fffbfb27  ; ja 0xfffbfb27
 mov esi, dword [eax + 0x2238]
 jmp dword [esi*4 + ref_fffcf270]  ; ujmp: jmp dword [esi*4 - 0x30d90]
 
-loc_fffbfa88:  ; not directly referenced
+loc_fffbfa88:
 movzx esi, cl
 cmp cl, 1
 movzx edx, dl
@@ -41763,16 +41762,16 @@ cmp byte [eax + edx + 0x210e], 2
 jne short loc_fffbfab3  ; jne 0xfffbfab3
 jmp short loc_fffbfafc  ; jmp 0xfffbfafc
 
-loc_fffbfab3:  ; not directly referenced
+loc_fffbfab3:
 cmp dword [eax + 0x20b6], 0x535
 jbe short loc_fffbfac1  ; jbe 0xfffbfac1
 jmp short loc_fffbfaf3  ; jmp 0xfffbfaf3
 
-loc_fffbfac1:  ; not directly referenced
+loc_fffbfac1:
 lea eax, [ebx + ebx + ref_fffcf36c]  ; lea eax, [ebx + ebx - 0x30c94]
 jmp short loc_fffbfb29  ; jmp 0xfffbfb29
 
-loc_fffbfaca:  ; not directly referenced
+loc_fffbfaca:
 movzx esi, cl
 cmp cl, 1
 movzx edx, dl
@@ -41786,32 +41785,32 @@ add ebx, esi
 cmp byte [eax + edx + 0x210e], 3
 jne short loc_fffbfafc  ; jne 0xfffbfafc
 
-loc_fffbfaf3:  ; not directly referenced
+loc_fffbfaf3:
 lea eax, [ebx + ebx + ref_fffcf2ac]  ; lea eax, [ebx + ebx - 0x30d54]
 jmp short loc_fffbfb29  ; jmp 0xfffbfb29
 
-loc_fffbfafc:  ; not directly referenced
+loc_fffbfafc:
 lea eax, [ebx + ebx + ref_fffcf2dc]  ; lea eax, [ebx + ebx - 0x30d24]
 jmp short loc_fffbfb29  ; jmp 0xfffbfb29
 
-loc_fffbfb05:  ; not directly referenced
+loc_fffbfb05:
 movzx ecx, cl
 imul ecx, ecx, 6
 add ebx, ecx
 lea eax, [ebx + ebx + ref_fffcf33c]  ; lea eax, [ebx + ebx - 0x30cc4]
 jmp short loc_fffbfb29  ; jmp 0xfffbfb29
 
-loc_fffbfb16:  ; not directly referenced
+loc_fffbfb16:
 movzx ecx, cl
 imul ecx, ecx, 6
 add ebx, ecx
 lea eax, [ebx + ebx + ref_fffcf30c]  ; lea eax, [ebx + ebx - 0x30cf4]
 jmp short loc_fffbfb29  ; jmp 0xfffbfb29
 
-loc_fffbfb27:  ; not directly referenced
+loc_fffbfb27:
 xor eax, eax
 
-loc_fffbfb29:  ; not directly referenced
+loc_fffbfb29:
 pop ebx
 pop esi
 pop ebp
@@ -41824,7 +41823,7 @@ push esi
 push ebx
 cmp dword [eax + 0x2238], 4
 mov ebx, dword [ebp + 8]
-ja loc_fffbfbd7  ; ja 0xfffbfbd7
+ja near loc_fffbfbd7  ; ja 0xfffbfbd7
 mov esi, dword [eax + 0x2238]
 jmp dword [esi*4 + ref_fffcf284]  ; ujmp: jmp dword [esi*4 - 0x30d7c]
 
@@ -41888,7 +41887,7 @@ pop esi
 pop ebp
 ret
 
-fcn_fffbfbdd:  ; not directly referenced
+fcn_fffbfbdd:
 push ebp
 xor eax, eax
 mov ebp, esp
@@ -41967,7 +41966,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffbfc84:  ; not directly referenced
+fcn_fffbfc84:
 push ebp
 mov ebp, esp
 push edi
@@ -41980,7 +41979,7 @@ ja short loc_fffbfc9e  ; ja 0xfffbfc9e
 movzx ecx, cl
 movzx esi, byte [ecx + ref_fffcf298]  ; movzx esi, byte [ecx - 0x30d68]
 
-loc_fffbfc9e:  ; not directly referenced
+loc_fffbfc9e:
 cmp dl, 1
 mov ecx, dword [ebp + 0xc]
 mov ebx, dword [ebp + 0x14]
@@ -42274,13 +42273,13 @@ setne dl
 loc_fffbff6d:
 mov eax, dword [eax + 0x20b6]
 cmp eax, 0x74b
-je loc_fffc0009  ; je 0xfffc0009
+je near loc_fffc0009  ; je 0xfffc0009
 ja short loc_fffbffbb  ; ja 0xfffbffbb
 cmp eax, 0x535
 je short loc_fffbfff4  ; je 0xfffbfff4
 ja short loc_fffbffa0  ; ja 0xfffbffa0
 cmp eax, 0x320
-je loc_fffc004d  ; je 0xfffc004d
+je near loc_fffc004d  ; je 0xfffc004d
 cmp eax, 0x42b
 jne short loc_fffbfff0  ; jne 0xfffbfff0
 jmp near loc_fffc0054  ; jmp 0xfffc0054
@@ -42289,7 +42288,7 @@ loc_fffbffa0:
 cmp eax, 0x640
 je short loc_fffc0002  ; je 0xfffc0002
 cmp eax, 0x708
-je loc_fffc0041  ; je 0xfffc0041
+je near loc_fffc0041  ; je 0xfffc0041
 cmp eax, 0x578
 jne short loc_fffbfff0  ; jne 0xfffbfff0
 jmp short loc_fffbfffb  ; jmp 0xfffbfffb
@@ -42381,7 +42380,7 @@ loc_fffc0059:
 pop ebp
 ret
 
-fcn_fffc005b:  ; not directly referenced
+fcn_fffc005b:
 push ebp
 mov ebp, esp
 push edi
@@ -42405,7 +42404,7 @@ movzx ecx, bl
 push 2
 jmp short loc_fffc009e  ; jmp 0xfffc009e
 
-loc_fffc0090:  ; not directly referenced
+loc_fffc0090:
 xor ebx, ebx
 cmp cl, 2
 jne short loc_fffc0104  ; jne 0xfffc0104
@@ -42413,13 +42412,13 @@ mov ebx, esi
 push 3
 movzx ecx, bl
 
-loc_fffc009e:  ; not directly referenced
+loc_fffc009e:
 call fcn_fffbfa66  ; call 0xfffbfa66
 mov ebx, eax
 pop edx
 jmp short loc_fffc0104  ; jmp 0xfffc0104
 
-loc_fffc00a8:  ; not directly referenced
+loc_fffc00a8:
 xor ebx, ebx
 cmp cl, 2
 jne short loc_fffc0104  ; jne 0xfffc0104
@@ -42431,7 +42430,7 @@ movzx ecx, bl
 push 4
 jmp short loc_fffc009e  ; jmp 0xfffc009e
 
-loc_fffc00c0:  ; not directly referenced
+loc_fffc00c0:
 cmp cl, 2
 jne short loc_fffc0104  ; jne 0xfffc0104
 mov ebx, esi
@@ -42439,7 +42438,7 @@ movzx ecx, bl
 push 5
 jmp short loc_fffc009e  ; jmp 0xfffc009e
 
-loc_fffc00ce:  ; not directly referenced
+loc_fffc00ce:
 imul ebx, edx, 0x1055
 add ebx, eax
 mov cl, byte [ebx + 0x12]
@@ -42449,28 +42448,28 @@ mov bl, byte [ebx + 0x2f]
 cmp bl, 1
 jne short loc_fffc00ef  ; jne 0xfffc00ef
 
-loc_fffc00e6:  ; not directly referenced
+loc_fffc00e6:
 mov ebx, esi
 movzx ecx, bl
 push 0
 jmp short loc_fffc009e  ; jmp 0xfffc009e
 
-loc_fffc00ef:  ; not directly referenced
+loc_fffc00ef:
 cmp cl, 2
 je short loc_fffc00f9  ; je 0xfffc00f9
 cmp bl, 2
 jne short loc_fffc0102  ; jne 0xfffc0102
 
-loc_fffc00f9:  ; not directly referenced
+loc_fffc00f9:
 mov ebx, esi
 movzx ecx, bl
 push 1
 jmp short loc_fffc009e  ; jmp 0xfffc009e
 
-loc_fffc0102:  ; not directly referenced
+loc_fffc0102:
 xor ebx, ebx
 
-loc_fffc0104:  ; not directly referenced
+loc_fffc0104:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -42479,7 +42478,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc010e:  ; not directly referenced
+fcn_fffc010e:
 push ebp
 mov ebp, esp
 push edi
@@ -42490,7 +42489,7 @@ mov dword [ebp - 0x1c], 0
 mov edi, dword [ebp + 8]
 jmp short loc_fffc0179  ; jmp 0xfffc0179
 
-loc_fffc0124:  ; not directly referenced
+loc_fffc0124:
 mov ecx, dword [ebp - 0x1c]
 mov edx, ebx
 mov eax, edi
@@ -42511,7 +42510,7 @@ movzx edx, word [esi]
 lea eax, [eax + ecx + 8]
 mov dword [eax], edx
 
-loc_fffc0167:  ; not directly referenced
+loc_fffc0167:
 inc ebx
 add esi, 2
 cmp ebx, 4
@@ -42520,7 +42519,7 @@ inc dword [ebp - 0x1c]
 cmp dword [ebp - 0x1c], 2
 je short loc_fffc0191  ; je 0xfffc0191
 
-loc_fffc0179:  ; not directly referenced
+loc_fffc0179:
 imul eax, dword [ebp - 0x1c], 0x1055
 xor ebx, ebx
 lea esi, [edi + eax + 0x39d]
@@ -42528,7 +42527,7 @@ mov al, byte [ebp - 0x1c]
 mov byte [ebp - 0x1d], al
 jmp short loc_fffc0124  ; jmp 0xfffc0124
 
-loc_fffc0191:  ; not directly referenced
+loc_fffc0191:
 lea esp, [esp + 0x1c]
 xor eax, eax
 pop ebx
@@ -42787,7 +42786,7 @@ pop esi
 pop ebp
 ret
 
-fcn_fffc038a:  ; not directly referenced
+fcn_fffc038a:
 push ebp
 test edx, edx
 mov ebp, esp
@@ -42800,7 +42799,7 @@ movzx edx, dl
 movzx eax, word [edx + edx + ref_fffcf46c]  ; movzx eax, word [edx + edx - 0x30b94]
 jmp short loc_fffc03bd  ; jmp 0xfffc03bd
 
-loc_fffc03a8:  ; not directly referenced
+loc_fffc03a8:
 lea edx, [eax - 7]
 xor eax, eax
 cmp dl, 7
@@ -42808,7 +42807,7 @@ ja short loc_fffc03bd  ; ja 0xfffc03bd
 movzx edx, dl
 movzx eax, word [edx + edx + ref_fffcf45c]  ; movzx eax, word [edx + edx - 0x30ba4]
 
-loc_fffc03bd:  ; not directly referenced
+loc_fffc03bd:
 pop ebp
 ret
 
@@ -42827,7 +42826,7 @@ mov byte [ebp - 0x19], dl
 mov edx, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc049f  ; je 0xfffc049f
+je near loc_fffc049f  ; je 0xfffc049f
 cmp dword [esi + 0x2254], 2
 jne short loc_fffc0450  ; jne 0xfffc0450
 cmp bl, 1
@@ -42977,7 +42976,7 @@ mov dword [ebp - 0x3c], eax
 
 loc_fffc053c:
 cmp byte [edi + 0x3a], 0
-jne loc_fffc05d7  ; jne 0xfffc05d7
+jne near loc_fffc05d7  ; jne 0xfffc05d7
 jmp short loc_fffc057b  ; jmp 0xfffc057b
 
 loc_fffc0548:
@@ -42986,7 +42985,7 @@ mov edx, esi
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffc06af  ; jne 0xfffc06af
+jne near loc_fffc06af  ; jne 0xfffc06af
 mov eax, esi
 cmp al, 1
 sbb eax, eax
@@ -43012,7 +43011,7 @@ mov dword [edx + 0x5030], eax
 loc_fffc05a2:
 mov eax, dword [ebp - 0x3c]
 cmp byte [eax + 0x3a], 0
-jne loc_fffc0644  ; jne 0xfffc0644
+jne near loc_fffc0644  ; jne 0xfffc0644
 
 loc_fffc05af:
 inc esi
@@ -43062,7 +43061,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc0548  ; je 0xfffc0548
+je near loc_fffc0548  ; je 0xfffc0548
 jmp short loc_fffc06af  ; jmp 0xfffc06af
 
 loc_fffc0644:
@@ -43096,7 +43095,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc05c3  ; je 0xfffc05c3
+je near loc_fffc05c3  ; je 0xfffc05c3
 
 loc_fffc06af:
 lea esp, [ebp - 0xc]
@@ -43106,7 +43105,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc06b7:
+endloc_fffc06b7:
 db 0x00
 
 fcn_fffc06b8:
@@ -43118,11 +43117,11 @@ push esi
 push ebx
 lea esp, [esp - 0x13c]
 cmp byte [eax + 0x3a], 0
-jne loc_fffc15cf  ; jne 0xfffc15cf
+jne near loc_fffc15cf  ; jne 0xfffc15cf
 
 loc_fffc06d1:
 cmp byte [edi + 0x108f], 0
-jne loc_fffc15eb  ; jne 0xfffc15eb
+jne near loc_fffc15eb  ; jne 0xfffc15eb
 
 loc_fffc06de:
 mov edx, 0xdd39
@@ -43162,7 +43161,7 @@ loc_fffc074b:
 inc dword [ebp - 0x10c]
 add dword [ebp - 0x120], 0x1055
 cmp dword [ebp - 0x10c], 2
-je loc_fffc0c3e  ; je 0xfffc0c3e
+je near loc_fffc0c3e  ; je 0xfffc0c3e
 jmp short loc_fffc0735  ; jmp 0xfffc0735
 
 loc_fffc076a:
@@ -43243,7 +43242,7 @@ mov byte [ebp - 0xbe], 3
 mov dword [ebp - 0xce], 0
 call fcn_fffc0201  ; call 0xfffc0201
 test eax, eax
-je loc_fffc07c6  ; je 0xfffc07c6
+je near loc_fffc07c6  ; je 0xfffc07c6
 movzx edx, byte [eax + 1]
 mov ecx, 0x1082
 mov eax, edi
@@ -43317,7 +43316,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-jne loc_fffc07c6  ; jne 0xfffc07c6
+jne near loc_fffc07c6  ; jne 0xfffc07c6
 xor ecx, ecx
 mov edx, dword [ebp - 0x10c]
 mov eax, edi
@@ -43375,7 +43374,7 @@ cmp byte [ebp - 0x130], cl
 ja short loc_fffc0aa1  ; ja 0xfffc0aa1
 inc dword [ebp - 0x114]
 cmp dword [ebp - 0x114], 2
-je loc_fffc1693  ; je 0xfffc1693
+je near loc_fffc1693  ; je 0xfffc1693
 jmp near loc_fffc09b0  ; jmp 0xfffc09b0
 
 loc_fffc0b29:
@@ -43463,7 +43462,7 @@ add esp, 0x20
 loc_fffc0c0f:
 movzx eax, byte [edi + 0x20b5]
 cmp esi, eax
-jb loc_fffc0b68  ; jb 0xfffc0b68
+jb near loc_fffc0b68  ; jb 0xfffc0b68
 jmp near loc_fffc074b  ; jmp 0xfffc074b
 
 loc_fffc0c23:
@@ -43526,11 +43525,11 @@ xor edx, edx
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffc16a5  ; jne 0xfffc16a5
+jne near loc_fffc16a5  ; jne 0xfffc16a5
 
 loc_fffc0d33:
 cmp byte [edi + 0x108f], 0
-jne loc_fffc1607  ; jne 0xfffc1607
+jne near loc_fffc1607  ; jne 0xfffc1607
 
 loc_fffc0d40:
 mov edx, dword [edi + 0x2223]
@@ -43542,7 +43541,7 @@ mov dword [edx + 0x5030], eax
 
 loc_fffc0d59:
 cmp byte [esi + 0x3a], 0
-jne loc_fffc1622  ; jne 0xfffc1622
+jne near loc_fffc1622  ; jne 0xfffc1622
 
 loc_fffc0d63:
 inc ebx
@@ -43599,7 +43598,7 @@ mov edx, dword [ebp - 0x110]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc118d  ; je 0xfffc118d
+je near loc_fffc118d  ; je 0xfffc118d
 push eax
 lea eax, [ebp - 0xa8]
 xor ecx, ecx
@@ -43747,10 +43746,10 @@ inc ebx
 cmp dword [edi + 0x2240], 0
 cmovne ebx, eax
 cmp bl, 0x3f
-jbe loc_fffc0ec6  ; jbe 0xfffc0ec6
+jbe near loc_fffc0ec6  ; jbe 0xfffc0ec6
 inc dword [ebp - 0x118]
 cmp dword [ebp - 0x118], 2
-jne loc_fffc0ea2  ; jne 0xfffc0ea2
+jne near loc_fffc0ea2  ; jne 0xfffc0ea2
 cmp dword [ebp - 0x114], 0
 mov eax, dword [ebp - 0x11c]
 cmovne eax, dword [ebp - 0x114]
@@ -43836,15 +43835,15 @@ inc byte [ebp - 0x118]
 loc_fffc117b:
 mov bl, byte [ebp - 0x118]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffc106d  ; jb 0xfffc106d
+jb near loc_fffc106d  ; jb 0xfffc106d
 
 loc_fffc118d:
 inc dword [ebp - 0x10c]
 cmp dword [ebp - 0x10c], 2
-jne loc_fffc0e19  ; jne 0xfffc0e19
+jne near loc_fffc0e19  ; jne 0xfffc0e19
 inc dword [ebp - 0x110]
 cmp dword [ebp - 0x110], 4
-jne loc_fffc0dd2  ; jne 0xfffc0dd2
+jne near loc_fffc0dd2  ; jne 0xfffc0dd2
 cmp dword [ebp - 0x114], 0
 je short loc_fffc11d6  ; je 0xfffc11d6
 mov eax, edi
@@ -43877,7 +43876,7 @@ mov edx, ebx
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 dec eax
-jne loc_fffc1569  ; jne 0xfffc1569
+jne near loc_fffc1569  ; jne 0xfffc1569
 mov al, byte [ebp - 0x10c]
 mov edx, dword [ebp - 0x12c]
 cmp al, 1
@@ -44046,7 +44045,7 @@ cmove esi, eax
 loc_fffc1569:
 inc ebx
 cmp ebx, 4
-jne loc_fffc1216  ; jne 0xfffc1216
+jne near loc_fffc1216  ; jne 0xfffc1216
 inc dword [ebp - 0x10c]
 add dword [ebp - 0x12c], 0x1055
 cmp dword [ebp - 0x10c], 2
@@ -44093,7 +44092,7 @@ mov edx, 1
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-je loc_fffc0d40  ; je 0xfffc0d40
+je near loc_fffc0d40  ; je 0xfffc0d40
 jmp near loc_fffc16a5  ; jmp 0xfffc16a5
 
 loc_fffc1622:
@@ -44130,12 +44129,12 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc0d71  ; je 0xfffc0d71
+je near loc_fffc0d71  ; je 0xfffc0d71
 jmp short loc_fffc16a5  ; jmp 0xfffc16a5
 
 loc_fffc1693:
 cmp dword [edi + 0x2240], 0
-jne loc_fffc0b59  ; jne 0xfffc0b59
+jne near loc_fffc0b59  ; jne 0xfffc0b59
 jmp near loc_fffc07c6  ; jmp 0xfffc07c6
 
 loc_fffc16a5:
@@ -44251,12 +44250,12 @@ pop edi
 pop ebp
 ret
 
-loc_fffc17cd:
+endloc_fffc17cd:
 db 0x00
 db 0x00
 db 0x00
 
-fcn_fffc17d0:  ; not directly referenced
+fcn_fffc17d0:
 push ebp
 mov ebp, esp
 push edi
@@ -44265,13 +44264,13 @@ push ebx
 lea esp, [esp - 0x13c]
 mov edi, dword [ebp + 8]
 cmp byte [edi + 0x3a], 0
-jne loc_fffc2821  ; jne 0xfffc2821
+jne near loc_fffc2821  ; jne 0xfffc2821
 
-loc_fffc17ea:  ; not directly referenced
+loc_fffc17ea:
 cmp byte [edi + 0x108f], 0
-jne loc_fffc283d  ; jne 0xfffc283d
+jne near loc_fffc283d  ; jne 0xfffc283d
 
-loc_fffc17f7:  ; not directly referenced
+loc_fffc17f7:
 mov edx, 0xdd39
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -44279,7 +44278,7 @@ mov eax, edi
 xor ebx, ebx
 call fcn_fffc0529  ; call 0xfffc0529
 
-loc_fffc180c:  ; not directly referenced
+loc_fffc180c:
 sub esp, 0xc
 mov eax, ebx
 push 1
@@ -44305,7 +44304,7 @@ and ebx, 0xfffffff3
 mov dword [ebp - 0x124], ebx
 jmp near loc_fffc1df7  ; jmp 0xfffc1df7
 
-loc_fffc1876:  ; not directly referenced
+loc_fffc1876:
 mov ecx, esi
 mov edx, dword [ebp - 0x10c]
 mov eax, edi
@@ -44313,14 +44312,14 @@ call fcn_fffbb638  ; call 0xfffbb638
 dec eax
 je short loc_fffc189e  ; je 0xfffc189e
 
-loc_fffc1888:  ; not directly referenced
+loc_fffc1888:
 inc esi
 add dword [ebp - 0x118], 0x1055
 cmp esi, 2
-je loc_fffc1de8  ; je 0xfffc1de8
+je near loc_fffc1de8  ; je 0xfffc1de8
 jmp short loc_fffc1876  ; jmp 0xfffc1876
 
-loc_fffc189e:  ; not directly referenced
+loc_fffc189e:
 mov ebx, dword [ebp - 0x128]
 lea edx, [ebp - 0x104]
 mov eax, edi
@@ -44346,12 +44345,12 @@ call fcn_fffc005b  ; call 0xfffc005b
 test eax, eax
 jne short loc_fffc1922  ; jne 0xfffc1922
 
-loc_fffc190d:  ; not directly referenced
+loc_fffc190d:
 mov ebx, dword [ebp - 0x134]
 mov dword [ebp - 0x110], 0
 jmp near loc_fffc1db5  ; jmp 0xfffc1db5
 
-loc_fffc1922:  ; not directly referenced
+loc_fffc1922:
 movzx edx, byte [eax]
 mov ecx, 0x82
 mov eax, edi
@@ -44405,7 +44404,7 @@ mov byte [ebp - 0xbe], 3
 mov dword [ebp - 0xce], 0
 call fcn_fffc005b  ; call 0xfffc005b
 test eax, eax
-je loc_fffc190d  ; je 0xfffc190d
+je near loc_fffc190d  ; je 0xfffc190d
 movzx edx, byte [eax + 1]
 mov ecx, 0x1082
 mov eax, edi
@@ -44426,7 +44425,7 @@ mov byte [ebp - 0xa9], 3
 mov word [ebp - 0xab], ax
 mov dword [ebp - 0x110], 0
 
-loc_fffc1b07:  ; not directly referenced
+loc_fffc1b07:
 push 9
 mov ecx, dword [ebp - 0x10c]
 mov edx, esi
@@ -44438,7 +44437,7 @@ push dword [ebp - 0x110]
 call fcn_fffbfdae  ; call 0xfffbfdae
 add esp, 0x10
 
-loc_fffc1b27:  ; not directly referenced
+loc_fffc1b27:
 mov ecx, esi
 mov edx, dword [ebp - 0x10c]
 mov eax, edi
@@ -44446,7 +44445,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 dec eax
 je short loc_fffc1b50  ; je 0xfffc1b50
 
-loc_fffc1b39:  ; not directly referenced
+loc_fffc1b39:
 lea eax, [ebx + 1]
 add ebx, 2
 cmp dword [edi + 0x2240], 0
@@ -44455,7 +44454,7 @@ cmp bl, 0x3f
 jbe short loc_fffc1b27  ; jbe 0xfffc1b27
 jmp short loc_fffc1bac  ; jmp 0xfffc1bac
 
-loc_fffc1b50:  ; not directly referenced
+loc_fffc1b50:
 push 9
 movzx eax, bl
 mov ecx, dword [ebp - 0x10c]
@@ -44480,7 +44479,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-jne loc_fffc190d  ; jne 0xfffc190d
+jne near loc_fffc190d  ; jne 0xfffc190d
 xor ecx, ecx
 mov edx, esi
 mov eax, edi
@@ -44489,7 +44488,7 @@ test eax, eax
 je short loc_fffc1b39  ; je 0xfffc1b39
 jmp near loc_fffc190d  ; jmp 0xfffc190d
 
-loc_fffc1bac:  ; not directly referenced
+loc_fffc1bac:
 mov dl, byte [edi + 0x20b5]
 mov cl, byte [ebp - 0x110]
 mov ebx, esi
@@ -44501,7 +44500,7 @@ mov byte [ebp - 0x13c], cl
 mov byte [ebp - 0x138], bl
 jmp near loc_fffc1c92  ; jmp 0xfffc1c92
 
-loc_fffc1be3:  ; not directly referenced
+loc_fffc1be3:
 mov ecx, dword [edi + 0x2223]
 cmp byte [ebp - 0x13c], 0
 mov dword [ebp - 0x144], ecx
@@ -44524,7 +44523,7 @@ or dword [edx], ebx
 or dword [edx + 4], ecx
 jmp short loc_fffc1c89  ; jmp 0xfffc1c89
 
-loc_fffc1c41:  ; not directly referenced
+loc_fffc1c41:
 mov ebx, dword [ebp - 0x114]
 cmp byte [ebp - 0x138], 1
 sbb ecx, ecx
@@ -44542,20 +44541,20 @@ mov ecx, dword [ecx]
 or dword [edx + 8], ebx
 or dword [edx + 0xc], ecx
 
-loc_fffc1c89:  ; not directly referenced
+loc_fffc1c89:
 inc dword [ebp - 0x114]
 add edx, 0x10
 
-loc_fffc1c92:  ; not directly referenced
+loc_fffc1c92:
 mov cl, byte [ebp - 0x114]
 cmp byte [ebp - 0x130], cl
-ja loc_fffc1be3  ; ja 0xfffc1be3
+ja near loc_fffc1be3  ; ja 0xfffc1be3
 inc dword [ebp - 0x110]
 cmp dword [ebp - 0x110], 2
-je loc_fffc28f1  ; je 0xfffc28f1
+je near loc_fffc28f1  ; je 0xfffc28f1
 jmp near loc_fffc1b07  ; jmp 0xfffc1b07
 
-loc_fffc1cbc:  ; not directly referenced
+loc_fffc1cbc:
 mov ebx, dword [eax]
 inc edx
 lea ecx, [ebx + ebx]
@@ -44576,15 +44575,15 @@ mov dword [eax + 0xc], ecx
 add eax, 0x10
 jmp short loc_fffc1cee  ; jmp 0xfffc1cee
 
-loc_fffc1cec:  ; not directly referenced
+loc_fffc1cec:
 xor edx, edx
 
-loc_fffc1cee:  ; not directly referenced
+loc_fffc1cee:
 cmp dl, byte [ebp - 0x130]
 jne short loc_fffc1cbc  ; jne 0xfffc1cbc
 jmp near loc_fffc190d  ; jmp 0xfffc190d
 
-loc_fffc1cfb:  ; not directly referenced
+loc_fffc1cfb:
 mov edx, dword [ebp - 0x110]
 lea eax, [ebp - 0xa8]
 shl edx, 4
@@ -44599,7 +44598,7 @@ mov dword [ebp - 0x100], 0
 call fcn_fffb9a3c  ; call 0xfffb9a3c
 add esp, 0x10
 cmp dword [ebp - 0x100], 1
-jne loc_fffc1dcd  ; jne 0xfffc1dcd
+jne near loc_fffc1dcd  ; jne 0xfffc1dcd
 cmp byte [ebx], 0x3f
 jbe short loc_fffc1d5f  ; jbe 0xfffc1d5f
 mov al, byte [ebx]
@@ -44610,12 +44609,12 @@ mov byte [ebx], al
 mov dword [ebp - 0x114], edx
 jmp short loc_fffc1d6c  ; jmp 0xfffc1d6c
 
-loc_fffc1d5f:  ; not directly referenced
+loc_fffc1d5f:
 movzx ecx, byte [ebx]
 mov byte [ebx + 4], 0
 mov dword [ebp - 0x114], ecx
 
-loc_fffc1d6c:  ; not directly referenced
+loc_fffc1d6c:
 push dword [ebp - 0x110]
 mov ecx, dword [ebp - 0x10c]
 mov edx, esi
@@ -44637,25 +44636,25 @@ call fcn_fffbfdae  ; call 0xfffbfdae
 inc dword [ebp - 0x110]
 add esp, 0x20
 
-loc_fffc1db5:  ; not directly referenced
+loc_fffc1db5:
 movzx eax, byte [edi + 0x20b5]
 cmp dword [ebp - 0x110], eax
-jb loc_fffc1cfb  ; jb 0xfffc1cfb
+jb near loc_fffc1cfb  ; jb 0xfffc1cfb
 jmp near loc_fffc1888  ; jmp 0xfffc1888
 
-loc_fffc1dcd:  ; not directly referenced
+loc_fffc1dcd:
 mov edx, 0xdd3b
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
 mov dword [ebp - 0x128], 1
 jmp near loc_fffc1f54  ; jmp 0xfffc1f54
 
-loc_fffc1de8:  ; not directly referenced
+loc_fffc1de8:
 inc dword [ebp - 0x10c]
 cmp dword [ebp - 0x10c], 4
 je short loc_fffc1e3a  ; je 0xfffc1e3a
 
-loc_fffc1df7:  ; not directly referenced
+loc_fffc1df7:
 mov bl, byte [ebp - 0x10c]
 mov eax, dword [ebp - 0x124]
 mov byte [ebp - 0x11c], bl
@@ -44670,10 +44669,10 @@ imul ebx, dword [ebp - 0x10c], 0x2d
 mov dword [ebp - 0x140], ebx
 jmp near loc_fffc1876  ; jmp 0xfffc1876
 
-loc_fffc1e3a:  ; not directly referenced
+loc_fffc1e3a:
 xor ebx, ebx
 
-loc_fffc1e3c:  ; not directly referenced
+loc_fffc1e3c:
 sub esp, 0xc
 xor ecx, ecx
 push 0
@@ -44709,13 +44708,13 @@ xor edx, edx
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffc2903  ; jne 0xfffc2903
+jne near loc_fffc2903  ; jne 0xfffc2903
 
-loc_fffc1ef0:  ; not directly referenced
+loc_fffc1ef0:
 cmp byte [edi + 0x108f], 0
-jne loc_fffc2859  ; jne 0xfffc2859
+jne near loc_fffc2859  ; jne 0xfffc2859
 
-loc_fffc1efd:  ; not directly referenced
+loc_fffc1efd:
 mov edx, dword [edi + 0x2223]
 mov esi, edi
 xor ebx, ebx
@@ -44724,18 +44723,18 @@ or eax, 8
 mov dword [ebp - 0x100], eax
 mov dword [edx + 0x5030], eax
 
-loc_fffc1f1c:  ; not directly referenced
+loc_fffc1f1c:
 cmp byte [esi + 0x3a], 0
-jne loc_fffc2874  ; jne 0xfffc2874
+jne near loc_fffc2874  ; jne 0xfffc2874
 
-loc_fffc1f26:  ; not directly referenced
+loc_fffc1f26:
 inc ebx
 add esi, 0x1055
 cmp ebx, 2
 je short loc_fffc1f48  ; je 0xfffc1f48
 jmp short loc_fffc1f1c  ; jmp 0xfffc1f1c
 
-loc_fffc1f34:  ; not directly referenced
+loc_fffc1f34:
 xor ecx, ecx
 mov edx, ebx
 mov eax, edi
@@ -44744,12 +44743,12 @@ test eax, eax
 je short loc_fffc1f26  ; je 0xfffc1f26
 jmp near loc_fffc2903  ; jmp 0xfffc2903
 
-loc_fffc1f48:  ; not directly referenced
+loc_fffc1f48:
 mov eax, edi
 call fcn_fffbfce0  ; call 0xfffbfce0
 jmp near loc_fffc2903  ; jmp 0xfffc2903
 
-loc_fffc1f54:  ; not directly referenced
+loc_fffc1f54:
 mov edx, 0xdd3c
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -44763,7 +44762,7 @@ mov dword [ebp - 0x110], 0
 mov dword [ebp - 0x114], 0
 mov dword [ebp - 0x13c], ebx
 
-loc_fffc1f95:  ; not directly referenced
+loc_fffc1f95:
 imul ebx, dword [ebp - 0x110], 0x24
 mov al, byte [ebp - 0x110]
 mov byte [ebp - 0xf1], al
@@ -44777,13 +44776,13 @@ mov byte [ebp - 0x5e], al
 mov dword [ebp - 0x10c], 0
 mov dword [ebp - 0x130], ebx
 
-loc_fffc1fdc:  ; not directly referenced
+loc_fffc1fdc:
 mov ecx, dword [ebp - 0x10c]
 mov edx, dword [ebp - 0x110]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc23ad  ; je 0xfffc23ad
+je near loc_fffc23ad  ; je 0xfffc23ad
 push esi
 lea eax, [ebp - 0xa8]
 xor ecx, ecx
@@ -44810,7 +44809,7 @@ mov dword [ebp - 0x124], edx
 mov dword [ebp - 0x134], eax
 mov dword [ebp - 0x138], ebx
 
-loc_fffc2065:  ; not directly referenced
+loc_fffc2065:
 push 9
 mov ecx, dword [ebp - 0x138]
 mov edx, dword [ebp - 0x10c]
@@ -44822,7 +44821,7 @@ call fcn_fffbfdae  ; call 0xfffbfdae
 add esp, 0x10
 mov byte [ebp - 0x118], 0
 
-loc_fffc208e:  ; not directly referenced
+loc_fffc208e:
 push 9
 movzx esi, byte [ebp - 0x118]
 mov eax, edi
@@ -44838,7 +44837,7 @@ mov dword [ebp - 0x140], 0
 mov bl, byte [ebp - 0x10c]
 jmp short loc_fffc2102  ; jmp 0xfffc2102
 
-loc_fffc20c9:  ; not directly referenced
+loc_fffc20c9:
 test bl, bl
 lea edx, [eax + 0x200]
 lea ecx, [eax + 0x600]
@@ -44853,7 +44852,7 @@ inc dword [ebp - 0x140]
 add eax, 4
 mov edx, dword [edx]
 
-loc_fffc2102:  ; not directly referenced
+loc_fffc2102:
 movzx edx, byte [edi + 0x20b5]
 cmp dword [ebp - 0x140], edx
 jb short loc_fffc20c9  ; jb 0xfffc20c9
@@ -44906,17 +44905,17 @@ lea ebx, [ebx + esi*2]
 xor eax, eax
 jmp short loc_fffc2214  ; jmp 0xfffc2214
 
-loc_fffc21b8:  ; not directly referenced
+loc_fffc21b8:
 cmp byte [ebp - 0x120], 0
 mov esi, dword [edi + 0x2223]
 jne short loc_fffc21d0  ; jne 0xfffc21d0
 lea ecx, [eax*4 + 0x4340]
 jmp short loc_fffc21d7  ; jmp 0xfffc21d7
 
-loc_fffc21d0:  ; not directly referenced
+loc_fffc21d0:
 lea ecx, [eax*4 + 0x4740]
 
-loc_fffc21d7:  ; not directly referenced
+loc_fffc21d7:
 add ecx, esi
 cmp byte [ebp - 0x11c], 1
 mov ecx, dword [ecx]
@@ -44927,7 +44926,7 @@ je short loc_fffc220d  ; je 0xfffc220d
 mov word [edx], cx
 jmp short loc_fffc220d  ; jmp 0xfffc220d
 
-loc_fffc21f6:  ; not directly referenced
+loc_fffc21f6:
 mov esi, eax
 shl esi, 8
 mov word [ebx + esi], cx
@@ -44935,11 +44934,11 @@ cmp dword [edi + 0x2240], 0
 je short loc_fffc220d  ; je 0xfffc220d
 mov word [ebx + esi + 2], cx
 
-loc_fffc220d:  ; not directly referenced
+loc_fffc220d:
 inc eax
 add edx, 0x100
 
-loc_fffc2214:  ; not directly referenced
+loc_fffc2214:
 movzx ecx, byte [edi + 0x20b5]
 cmp eax, ecx
 jb short loc_fffc21b8  ; jb 0xfffc21b8
@@ -44951,10 +44950,10 @@ cmp dword [edi + 0x2240], 0
 cmove eax, edx
 cmp al, 0x3f
 mov byte [ebp - 0x118], al
-jbe loc_fffc208e  ; jbe 0xfffc208e
+jbe near loc_fffc208e  ; jbe 0xfffc208e
 inc dword [ebp - 0x11c]
 cmp dword [ebp - 0x11c], 2
-jne loc_fffc2065  ; jne 0xfffc2065
+jne near loc_fffc2065  ; jne 0xfffc2065
 cmp dword [ebp - 0x114], 0
 mov eax, dword [ebp - 0x124]
 cmovne eax, dword [ebp - 0x114]
@@ -44964,7 +44963,7 @@ mov dword [ebp - 0x114], eax
 mov dword [ebp - 0x124], ebx
 jmp near loc_fffc239b  ; jmp 0xfffc239b
 
-loc_fffc228d:  ; not directly referenced
+loc_fffc228d:
 movzx ebx, byte [ebp - 0x118]
 mov eax, dword [ebp - 0x124]
 add eax, ebx
@@ -45010,7 +45009,7 @@ push 6
 push 0
 jmp short loc_fffc237e  ; jmp 0xfffc237e
 
-loc_fffc2342:  ; not directly referenced
+loc_fffc2342:
 push ebx
 mov eax, edi
 mov ecx, dword [ebp - 0x110]
@@ -45028,7 +45027,7 @@ push 6
 push 0
 movzx eax, byte [esi + 0x295]
 
-loc_fffc237e:  ; not directly referenced
+loc_fffc237e:
 push eax
 mov ecx, dword [ebp - 0x110]
 mov edx, dword [ebp - 0x10c]
@@ -45037,18 +45036,18 @@ call fcn_fffbfdae  ; call 0xfffbfdae
 add esp, 0x20
 inc byte [ebp - 0x118]
 
-loc_fffc239b:  ; not directly referenced
+loc_fffc239b:
 mov bl, byte [ebp - 0x118]
 cmp bl, byte [edi + 0x20b5]
-jb loc_fffc228d  ; jb 0xfffc228d
+jb near loc_fffc228d  ; jb 0xfffc228d
 
-loc_fffc23ad:  ; not directly referenced
+loc_fffc23ad:
 inc dword [ebp - 0x10c]
 cmp dword [ebp - 0x10c], 2
-jne loc_fffc1fdc  ; jne 0xfffc1fdc
+jne near loc_fffc1fdc  ; jne 0xfffc1fdc
 inc dword [ebp - 0x110]
 cmp dword [ebp - 0x110], 4
-jne loc_fffc1f95  ; jne 0xfffc1f95
+jne near loc_fffc1f95  ; jne 0xfffc1f95
 cmp dword [ebp - 0x114], 0
 je short loc_fffc23f6  ; je 0xfffc23f6
 mov eax, edi
@@ -45058,12 +45057,12 @@ mov eax, dword [ebp - 0x114]
 mov dword [ebp - 0x128], eax
 jmp short loc_fffc2402  ; jmp 0xfffc2402
 
-loc_fffc23f6:  ; not directly referenced
+loc_fffc23f6:
 mov edx, 0xdd3d
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
 
-loc_fffc2402:  ; not directly referenced
+loc_fffc2402:
 mov edx, 0xdd40
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
@@ -45080,13 +45079,13 @@ call fcn_fffc39a9  ; call 0xfffc39a9
 mov dword [ebp - 0x10c], 0
 jmp near loc_fffc27c5  ; jmp 0xfffc27c5
 
-loc_fffc244f:  ; not directly referenced
+loc_fffc244f:
 mov ecx, dword [ebp - 0x10c]
 mov edx, ebx
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 dec eax
-jne loc_fffc27a2  ; jne 0xfffc27a2
+jne near loc_fffc27a2  ; jne 0xfffc27a2
 mov al, byte [ebp - 0x10c]
 mov edx, dword [ebp - 0x12c]
 cmp al, 1
@@ -45252,20 +45251,20 @@ cmp eax, 3
 mov eax, 3
 cmove esi, eax
 
-loc_fffc27a2:  ; not directly referenced
+loc_fffc27a2:
 inc ebx
 cmp ebx, 4
-jne loc_fffc244f  ; jne 0xfffc244f
+jne near loc_fffc244f  ; jne 0xfffc244f
 inc dword [ebp - 0x10c]
 add dword [ebp - 0x12c], 0x1055
 cmp dword [ebp - 0x10c], 2
 je short loc_fffc27cc  ; je 0xfffc27cc
 
-loc_fffc27c5:  ; not directly referenced
+loc_fffc27c5:
 xor ebx, ebx
 jmp near loc_fffc244f  ; jmp 0xfffc244f
 
-loc_fffc27cc:  ; not directly referenced
+loc_fffc27cc:
 lea edx, [ebp - 0x100]
 mov eax, edi
 and dword [ebp - 0x100], 0xfffffdff
@@ -45281,36 +45280,36 @@ call fcn_fffad891  ; call 0xfffad891
 mov dword [ebp - 0x128], esi
 jmp near loc_fffc291e  ; jmp 0xfffc291e
 
-loc_fffc2810:  ; not directly referenced
+loc_fffc2810:
 mov edx, 0xdd41
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
 jmp near loc_fffc291e  ; jmp 0xfffc291e
 
-loc_fffc2821:  ; not directly referenced
+loc_fffc2821:
 mov edx, dword [edi + 0x2223]
 mov eax, dword [edx + 0x4008]
 or eax, 0x8000000
 mov dword [edx + 0x4008], eax
 jmp near loc_fffc17ea  ; jmp 0xfffc17ea
 
-loc_fffc283d:  ; not directly referenced
+loc_fffc283d:
 mov edx, dword [edi + 0x2223]
 mov eax, dword [edx + 0x4408]
 or eax, 0x8000000
 mov dword [edx + 0x4408], eax
 jmp near loc_fffc17f7  ; jmp 0xfffc17f7
 
-loc_fffc2859:  ; not directly referenced
+loc_fffc2859:
 xor ecx, ecx
 mov edx, 1
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-je loc_fffc1efd  ; je 0xfffc1efd
+je near loc_fffc1efd  ; je 0xfffc1efd
 jmp near loc_fffc2903  ; jmp 0xfffc2903
 
-loc_fffc2874:  ; not directly referenced
+loc_fffc2874:
 cmp bl, 1
 sbb eax, eax
 and eax, 0xfffffc00
@@ -45346,22 +45345,22 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc1f34  ; je 0xfffc1f34
+je near loc_fffc1f34  ; je 0xfffc1f34
 jmp short loc_fffc2903  ; jmp 0xfffc2903
 
-loc_fffc28f1:  ; not directly referenced
+loc_fffc28f1:
 cmp dword [edi + 0x2240], 0
-jne loc_fffc1cec  ; jne 0xfffc1cec
+jne near loc_fffc1cec  ; jne 0xfffc1cec
 jmp near loc_fffc190d  ; jmp 0xfffc190d
 
-loc_fffc2903:  ; not directly referenced
+loc_fffc2903:
 mov edx, 0xdd3a
 mov eax, edi
 call fcn_fffad891  ; call 0xfffad891
 mov dword [ebp - 0x128], 0
 jmp near loc_fffc1f54  ; jmp 0xfffc1f54
 
-loc_fffc291e:  ; not directly referenced
+loc_fffc291e:
 mov eax, dword [ebp - 0x128]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -45370,7 +45369,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc292c:  ; not directly referenced
+fcn_fffc292c:
 push ebp
 mov ebp, esp
 push edi
@@ -45385,7 +45384,7 @@ jne short loc_fffc2958  ; jne 0xfffc2958
 mov dword [ebx + 0x20b6], 0xa6b
 jmp short loc_fffc2987  ; jmp 0xfffc2987
 
-loc_fffc2958:  ; not directly referenced
+loc_fffc2958:
 xor edx, edx
 mov esi, 0xc8
 mov eax, ecx
@@ -45402,10 +45401,10 @@ je short loc_fffc2987  ; je 0xfffc2987
 mov dword [ebx + 0x20ba], 1
 jmp short loc_fffc2991  ; jmp 0xfffc2991
 
-loc_fffc2987:  ; not directly referenced
+loc_fffc2987:
 mov dword [ebx + 0x20ba], 0
 
-loc_fffc2991:  ; not directly referenced
+loc_fffc2991:
 mov eax, dword [ebx + 0x2223]
 mov eax, dword [eax + 0x5e04]
 test al, 0xf
@@ -45415,7 +45414,7 @@ and eax, 0xff
 call fcn_fffc038a  ; call 0xfffc038a
 mov dword [ebx + 0x20b6], eax
 
-loc_fffc29b4:  ; not directly referenced
+loc_fffc29b4:
 mov edx, dword [ebx + 0x221f]
 mov eax, dword [edx + 0xe4]
 test ah, 8
@@ -45424,12 +45423,12 @@ mov edx, dword [edx + 0x54]
 and dl, 0x10
 jne short loc_fffc29eb  ; jne 0xfffc29eb
 
-loc_fffc29cd:  ; not directly referenced
+loc_fffc29cd:
 mov dword [ebx + 0x2294], 0
 mov dword [ebx + 0x2298], 0
 mov dword [ebx + 0x22a0], 0
 
-loc_fffc29eb:  ; not directly referenced
+loc_fffc29eb:
 test ah, 0x10
 je short loc_fffc2a18  ; je 0xfffc2a18
 mov dword [ebx + 0x105f], 0
@@ -45437,12 +45436,12 @@ mov dword [ebx + 0x107c], 0
 mov dword [ebx + 0x2193], 0
 mov dword [ebx + 0x21d9], 0
 
-loc_fffc2a18:  ; not directly referenced
+loc_fffc2a18:
 test eax, 0x20000
 je short loc_fffc2a26  ; je 0xfffc2a26
 mov byte [ebx + 0x22e4], 2
 
-loc_fffc2a26:  ; not directly referenced
+loc_fffc2a26:
 mov edx, eax
 and edx, 0x180000
 shr edx, 0x13
@@ -45457,48 +45456,48 @@ cmove ecx, edx
 mov word [ebx + 0x20f6], cx
 jmp short loc_fffc2a66  ; jmp 0xfffc2a66
 
-loc_fffc2a52:  ; not directly referenced
+loc_fffc2a52:
 mov word [ebx + 0x20f6], 0x800
 jmp short loc_fffc2a66  ; jmp 0xfffc2a66
 
-loc_fffc2a5d:  ; not directly referenced
+loc_fffc2a5d:
 mov word [ebx + 0x20f6], 0x200
 
-loc_fffc2a66:  ; not directly referenced
+loc_fffc2a66:
 test eax, 0x2000000
 je short loc_fffc2a80  ; je 0xfffc2a80
 mov dword [ebx + 0x20b1], 0
 mov byte [ebx + 0x20b5], 8
 jmp short loc_fffc2ae1  ; jmp 0xfffc2ae1
 
-loc_fffc2a80:  ; not directly referenced
+loc_fffc2a80:
 cmp dword [ebx + 0x2244], 1
 jne short loc_fffc2a9c  ; jne 0xfffc2a9c
 mov dword [ebx + 0x20b1], 1
 mov byte [ebx + 0x20b5], 9
 jmp short loc_fffc2aad  ; jmp 0xfffc2aad
 
-loc_fffc2a9c:  ; not directly referenced
+loc_fffc2a9c:
 mov dword [ebx + 0x20b1], 0
 mov byte [ebx + 0x20b5], 8
 
-loc_fffc2aad:  ; not directly referenced
+loc_fffc2aad:
 test eax, 0x1000000
 je short loc_fffc2ae1  ; je 0xfffc2ae1
 cmp dword [ebx + 0x2244], 0
 mov edi, 1
-je loc_fffc3279  ; je 0xfffc3279
+je near loc_fffc3279  ; je 0xfffc3279
 mov dword [ebx + 0x22a8], 1
 mov dword [ebx + 0x20b1], 1
 mov byte [ebx + 0x20b5], 9
 
-loc_fffc2ae1:  ; not directly referenced
+loc_fffc2ae1:
 test al, 1
 jne short loc_fffc2af3  ; jne 0xfffc2af3
 and byte [ebx + 0x222f], 0xf0
 mov byte [ebx + 0x20fe], 0
 
-loc_fffc2af3:  ; not directly referenced
+loc_fffc2af3:
 mov edx, dword [ebx + 0x221f]
 mov ecx, dword [edx + 0xe8]
 mov edx, ecx
@@ -45512,27 +45511,27 @@ cmovne edx, eax
 xor ecx, ecx
 jmp short loc_fffc2b2c  ; jmp 0xfffc2b2c
 
-loc_fffc2b1c:  ; not directly referenced
+loc_fffc2b1c:
 and ecx, 0x70
 mov eax, 0x42b
 shr ecx, 4
 cmp ecx, 7
 je short loc_fffc2b34  ; je 0xfffc2b34
 
-loc_fffc2b2c:  ; not directly referenced
+loc_fffc2b2c:
 movzx eax, word [ecx + ecx + ref_fffcf4ac]  ; movzx eax, word [ecx + ecx - 0x30b54]
 
-loc_fffc2b34:  ; not directly referenced
+loc_fffc2b34:
 test edx, edx
 jne short loc_fffc2b63  ; jne 0xfffc2b63
 cmp eax, dword [ebx + 0x20b6]
 mov dword [ebx + 0x20be], 0
 mov dword [ebx + 0x20ba], 0
-jae loc_fffc3260  ; jae 0xfffc3260
+jae near loc_fffc3260  ; jae 0xfffc3260
 mov dword [ebx + 0x20b6], eax
 jmp near loc_fffc3260  ; jmp 0xfffc3260
 
-loc_fffc2b63:  ; not directly referenced
+loc_fffc2b63:
 movzx edx, word [edx + edx + ref_fffcf4ba]  ; movzx edx, word [edx + edx - 0x30b46]
 mov dword [ebx + 0x20be], 1
 cmp edx, eax
@@ -45542,14 +45541,14 @@ setne al
 cmp edx, dword [ebx + 0x20b6]
 movzx eax, al
 mov dword [ebx + 0x20ba], eax
-jae loc_fffc3260  ; jae 0xfffc3260
+jae near loc_fffc3260  ; jae 0xfffc3260
 mov dword [ebx + 0x20b6], edx
 jmp near loc_fffc3260  ; jmp 0xfffc3260
 
-loc_fffc2b9f:  ; not directly referenced
+loc_fffc2b9f:
 mov eax, dword [ebp - 0x54]
 cmp dword [eax], 0
-je loc_fffc2ff6  ; je 0xfffc2ff6
+je near loc_fffc2ff6  ; je 0xfffc2ff6
 imul eax, dword [ebp - 0x4c], 0x46
 mov edx, dword [ebp - 0x60]
 mov edi, dword [ebx + 0x20be]
@@ -45565,30 +45564,30 @@ cmp dword [eax + 7], 1
 mov cl, byte [ebx + 0x22f3]
 mov dword [ebp - 0x40], edx
 mov byte [ebp - 0x47], cl
-jne loc_fffc2f90  ; jne 0xfffc2f90
+jne near loc_fffc2f90  ; jne 0xfffc2f90
 mov edi, dword [ebp - 0x44]
 cmp byte [edi + 6], 0xb
-jne loc_fffc2f90  ; jne 0xfffc2f90
+jne near loc_fffc2f90  ; jne 0xfffc2f90
 mov al, byte [edi + 7]
 mov byte [ebp - 0x48], al
 sub eax, 2
 cmp al, 1
-ja loc_fffc2f90  ; ja 0xfffc2f90
+ja near loc_fffc2f90  ; ja 0xfffc2f90
 jmp near loc_fffc3213  ; jmp 0xfffc3213
 
-loc_fffc2c0c:  ; not directly referenced
+loc_fffc2c0c:
 mov edx, dword [ebp - 0x40]
 mov byte [edx + 0x14], 8
 jmp near loc_fffc3229  ; jmp 0xfffc3229
 
-loc_fffc2c18:  ; not directly referenced
+loc_fffc2c18:
 cmp al, 2
-jne loc_fffc2f90  ; jne 0xfffc2f90
+jne near loc_fffc2f90  ; jne 0xfffc2f90
 mov ecx, dword [ebp - 0x40]
 mov byte [ecx + 0x14], 0x10
 jmp near loc_fffc3229  ; jmp 0xfffc3229
 
-loc_fffc2c2c:  ; not directly referenced
+loc_fffc2c2c:
 mov edi, dword [ebp - 0x40]
 mov edx, dword [ebp - 0x44]
 mov byte [edi + 0x13], 0x40
@@ -45597,7 +45596,7 @@ shr al, 3
 inc eax
 cmp al, 2
 mov byte [ebp - 0x45], al
-ja loc_fffc2f90  ; ja 0xfffc2f90
+ja near loc_fffc2f90  ; ja 0xfffc2f90
 mov byte [edi + 0x12], al
 movzx esi, byte [edx + 0xe]
 imul eax, esi, 0xf4240
@@ -45626,59 +45625,59 @@ div edi
 imul eax, ecx
 add esi, eax
 
-loc_fffc2c96:  ; not directly referenced
+loc_fffc2c96:
 cmp esi, 0xb71b0
 jg short loc_fffc2caa  ; jg 0xfffc2caa
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0xa6b
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2caa:  ; not directly referenced
+loc_fffc2caa:
 cmp esi, 0xd59f8
 jg short loc_fffc2cc3  ; jg 0xfffc2cc3
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x960
 
-loc_fffc2cbc:  ; not directly referenced
+loc_fffc2cbc:
 mov ecx, 1
 jmp short loc_fffc2d3d  ; jmp 0xfffc2d3d
 
-loc_fffc2cc3:  ; not directly referenced
+loc_fffc2cc3:
 cmp esi, 0xf423f
 jg short loc_fffc2cd7  ; jg 0xfffc2cd7
 mov ecx, dword [ebp - 0x40]
 mov dword [ecx + 0xe], 0x855
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2cd7:  ; not directly referenced
+loc_fffc2cd7:
 cmp esi, 0x112a88
 jg short loc_fffc2ceb  ; jg 0xfffc2ceb
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 0xe], 0x74b
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2ceb:  ; not directly referenced
+loc_fffc2ceb:
 cmp esi, 0x1312d0
 jg short loc_fffc2cff  ; jg 0xfffc2cff
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0x640
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2cff:  ; not directly referenced
+loc_fffc2cff:
 cmp esi, 0x16e360
 jg short loc_fffc2d13  ; jg 0xfffc2d13
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x535
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2d13:  ; not directly referenced
+loc_fffc2d13:
 cmp esi, 0x1c9c38
 jg short loc_fffc2d27  ; jg 0xfffc2d27
 mov ecx, dword [ebp - 0x40]
 mov dword [ecx + 0xe], 0x42b
 jmp short loc_fffc2cbc  ; jmp 0xfffc2cbc
 
-loc_fffc2d27:  ; not directly referenced
+loc_fffc2d27:
 xor ecx, ecx
 cmp esi, 0x2625a0
 jg short loc_fffc2d3d  ; jg 0xfffc2d3d
@@ -45686,112 +45685,112 @@ mov edi, dword [ebp - 0x40]
 mov cl, 1
 mov dword [edi + 0xe], 0x320
 
-loc_fffc2d3d:  ; not directly referenced
+loc_fffc2d3d:
 cmp dword [ebp - 0x68], 1
 sete dl
 cmp byte [ebp - 0x47], 0
 setne al
 test dl, al
-je loc_fffc2e82  ; je 0xfffc2e82
+je near loc_fffc2e82  ; je 0xfffc2e82
 cmp esi, 0xae62d
 jg short loc_fffc2d6a  ; jg 0xfffc2d6a
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0xaf0
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2d6a:  ; not directly referenced
+loc_fffc2d6a:
 cmp esi, 0xb71b0
 jg short loc_fffc2d81  ; jg 0xfffc2d81
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0xa6b
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2d81:  ; not directly referenced
+loc_fffc2d81:
 cmp esi, 0xbbcce
 jg short loc_fffc2d98  ; jg 0xfffc2d98
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 0xe], 0xa28
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2d98:  ; not directly referenced
+loc_fffc2d98:
 cmp esi, 0xcb735
 jg short loc_fffc2daf  ; jg 0xfffc2daf
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0x960
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2daf:  ; not directly referenced
+loc_fffc2daf:
 cmp esi, 0xddf22
 jg short loc_fffc2dc6  ; jg 0xfffc2dc6
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x898
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2dc6:  ; not directly referenced
+loc_fffc2dc6:
 cmp esi, 0xe4e1c
 jg short loc_fffc2ddd  ; jg 0xfffc2ddd
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 0xe], 0x855
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2ddd:  ; not directly referenced
+loc_fffc2ddd:
 cmp esi, 0xf4240
 jg short loc_fffc2df4  ; jg 0xfffc2df4
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0x7d0
 jmp near loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2df4:  ; not directly referenced
+loc_fffc2df4:
 cmp esi, 0x105944
 jg short loc_fffc2e08  ; jg 0xfffc2e08
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x74b
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e08:  ; not directly referenced
+loc_fffc2e08:
 cmp esi, 0x10f447
 jg short loc_fffc2e1c  ; jg 0xfffc2e1c
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 0xe], 0x708
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e1c:  ; not directly referenced
+loc_fffc2e1c:
 cmp esi, 0x1312d0
 jg short loc_fffc2e30  ; jg 0xfffc2e30
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0x640
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e30:  ; not directly referenced
+loc_fffc2e30:
 cmp esi, 0x15cc5b
 jg short loc_fffc2e44  ; jg 0xfffc2e44
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x578
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e44:  ; not directly referenced
+loc_fffc2e44:
 cmp esi, 0x16e360
 jg short loc_fffc2e58  ; jg 0xfffc2e58
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 0xe], 0x535
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e58:  ; not directly referenced
+loc_fffc2e58:
 cmp esi, 0x1c9c38
 jg short loc_fffc2e6c  ; jg 0xfffc2e6c
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xe], 0x42b
 jmp short loc_fffc2e82  ; jmp 0xfffc2e82
 
-loc_fffc2e6c:  ; not directly referenced
+loc_fffc2e6c:
 cmp esi, 0x2625a0
-jg loc_fffc2f90  ; jg 0xfffc2f90
+jg near loc_fffc2f90  ; jg 0xfffc2f90
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x320
 
-loc_fffc2e82:  ; not directly referenced
+loc_fffc2e82:
 cmp ecx, 1
-jne loc_fffc2f90  ; jne 0xfffc2f90
+jne near loc_fffc2f90  ; jne 0xfffc2f90
 mov cl, 7
 mov edi, dword [ebp - 0x3c]
 mov esi, ref_fffcf47c  ; mov esi, 0xfffcf47c
@@ -45811,7 +45810,7 @@ movzx edx, byte [ebp - 0x45]
 imul eax, edx
 cmp eax, 0x2000
 mov dword [edi], eax
-ja loc_fffc2f90  ; ja 0xfffc2f90
+ja near loc_fffc2f90  ; ja 0xfffc2f90
 mov eax, dword [ebp - 0x44]
 xor edx, edx
 mov al, byte [eax + 9]
@@ -45823,7 +45822,7 @@ jne short loc_fffc2eec  ; jne 0xfffc2eec
 mov word [edi + 8], 0x400
 mov dl, 1
 
-loc_fffc2eec:  ; not directly referenced
+loc_fffc2eec:
 mov ecx, dword [ebp - 0x44]
 mov edi, dword [ebp - 0x40]
 mov cl, byte [ecx + 9]
@@ -45832,34 +45831,34 @@ and eax, 0x38
 sar eax, 3
 cmp eax, 4
 mov dword [edi + 4], eax
-ja loc_fffc2f90  ; ja 0xfffc2f90
+ja near loc_fffc2f90  ; ja 0xfffc2f90
 jmp dword [eax*4 + ref_fffcf498]  ; ujmp: jmp dword [eax*4 - 0x30b68]
 
-loc_fffc2f10:  ; not directly referenced
+loc_fffc2f10:
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 4], 0x1000
 jmp short loc_fffc2f4a  ; jmp 0xfffc2f4a
 
-loc_fffc2f1c:  ; not directly referenced
+loc_fffc2f1c:
 mov ecx, dword [ebp - 0x40]
 mov dword [ecx + 4], 0x2000
 jmp short loc_fffc2f4a  ; jmp 0xfffc2f4a
 
-loc_fffc2f28:  ; not directly referenced
+loc_fffc2f28:
 mov edi, dword [ebp - 0x40]
 mov dword [edi + 4], 0x4000
 jmp short loc_fffc2f4a  ; jmp 0xfffc2f4a
 
-loc_fffc2f34:  ; not directly referenced
+loc_fffc2f34:
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 4], 0x8000
 jmp short loc_fffc2f4a  ; jmp 0xfffc2f4a
 
-loc_fffc2f40:  ; not directly referenced
+loc_fffc2f40:
 mov ecx, dword [ebp - 0x40]
 mov dword [ecx + 4], 0x10000
 
-loc_fffc2f4a:  ; not directly referenced
+loc_fffc2f4a:
 dec edx
 jne short loc_fffc2f90  ; jne 0xfffc2f90
 imul eax, dword [ebp - 0x4c], 0x46
@@ -45867,9 +45866,9 @@ mov edi, dword [ebp - 0x60]
 lea eax, [eax + edi + 0x2100]
 lea eax, [ebx + eax + 0xb]
 test byte [eax + 8], 8
-je loc_fffc323f  ; je 0xfffc323f
+je near loc_fffc323f  ; je 0xfffc323f
 
-loc_fffc2f69:  ; not directly referenced
+loc_fffc2f69:
 mov edx, dword [ebp - 0x40]
 mov ecx, dword [ebp - 0x44]
 mov edi, dword [ebp - 0x40]
@@ -45882,7 +45881,7 @@ cmp byte [ebx + 0x22f3], 0
 jne short loc_fffc2fbe  ; jne 0xfffc2fbe
 jmp short loc_fffc2fb3  ; jmp 0xfffc2fb3
 
-loc_fffc2f90:  ; not directly referenced
+loc_fffc2f90:
 mov eax, dword [ebp - 0x40]
 mov dword [eax + 0xa], 0
 mov byte [eax + 0x12], 0
@@ -45891,24 +45890,24 @@ mov word [eax + 8], 0
 mov dword [eax + 4], 0
 jmp short loc_fffc2ff6  ; jmp 0xfffc2ff6
 
-loc_fffc2fb3:  ; not directly referenced
+loc_fffc2fb3:
 mov edx, dword [ebp - 0x54]
 mov dl, byte [edx + 0xa]
 and byte [ebp - 0x46], dl
 jmp short loc_fffc2fc2  ; jmp 0xfffc2fc2
 
-loc_fffc2fbe:  ; not directly referenced
+loc_fffc2fbe:
 mov byte [ebp - 0x46], 0
 
-loc_fffc2fc2:  ; not directly referenced
+loc_fffc2fc2:
 test byte [eax + 8], 8
-jne loc_fffc324e  ; jne 0xfffc324e
+jne near loc_fffc324e  ; jne 0xfffc324e
 
-loc_fffc2fcc:  ; not directly referenced
+loc_fffc2fcc:
 mov dword [ebx + 0x20b1], 0
 mov byte [ebx + 0x20b5], 8
 
-loc_fffc2fdd:  ; not directly referenced
+loc_fffc2fdd:
 imul eax, dword [ebp - 0x4c], 0x1d
 mov ecx, dword [ebp - 0x5c]
 mov eax, dword [ecx + eax + 0xe]
@@ -45916,17 +45915,17 @@ cmp eax, dword [ebx + 0x20b6]
 jae short loc_fffc2ff6  ; jae 0xfffc2ff6
 mov dword [ebx + 0x20b6], eax
 
-loc_fffc2ff6:  ; not directly referenced
+loc_fffc2ff6:
 inc dword [ebp - 0x4c]
 add dword [ebp - 0x54], 0x46
 cmp dword [ebp - 0x4c], 2
-jne loc_fffc2b9f  ; jne 0xfffc2b9f
+jne near loc_fffc2b9f  ; jne 0xfffc2b9f
 inc dword [ebp - 0x50]
 add dword [ebp - 0x5c], 0x1055
 cmp dword [ebp - 0x50], 2
 je short loc_fffc3041  ; je 0xfffc3041
 
-loc_fffc3017:  ; not directly referenced
+loc_fffc3017:
 imul eax, dword [ebp - 0x50], 0x8c
 mov dword [ebp - 0x4c], 0
 mov dword [ebp - 0x60], eax
@@ -45936,23 +45935,23 @@ imul eax, dword [ebp - 0x50], 0x1055
 mov dword [ebp - 0x64], eax
 jmp near loc_fffc2b9f  ; jmp 0xfffc2b9f
 
-loc_fffc3041:  ; not directly referenced
+loc_fffc3041:
 mov ecx, dword [ebx + 0x20b6]
 xor edx, edx
 mov esi, 0xc8
 mov eax, ecx
 div esi
 test edx, edx
-jne loc_fffc3117  ; jne 0xfffc3117
+jne near loc_fffc3117  ; jne 0xfffc3117
 xor edx, edx
 mov si, 0x320
 mov eax, ecx
 div esi
 test edx, edx
-je loc_fffc3117  ; je 0xfffc3117
+je near loc_fffc3117  ; je 0xfffc3117
 cmp dword [ebx + 0x20be], 0
 mov dword [ebx + 0x20ba], 1
-jne loc_fffc3121  ; jne 0xfffc3121
+jne near loc_fffc3121  ; jne 0xfffc3121
 cmp ecx, 0x7d0
 mov dword [ebx + 0x20ba], 0
 je short loc_fffc30e7  ; je 0xfffc30e7
@@ -45963,7 +45962,7 @@ cmp ecx, 0x708
 jne short loc_fffc310b  ; jne 0xfffc310b
 jmp short loc_fffc30f3  ; jmp 0xfffc30f3
 
-loc_fffc30a9:  ; not directly referenced
+loc_fffc30a9:
 cmp ecx, 0xa28
 je short loc_fffc30cf  ; je 0xfffc30cf
 cmp ecx, 0xaf0
@@ -45972,44 +45971,44 @@ cmp ecx, 0x898
 jne short loc_fffc310b  ; jne 0xfffc310b
 jmp short loc_fffc30db  ; jmp 0xfffc30db
 
-loc_fffc30c3:  ; not directly referenced
+loc_fffc30c3:
 mov dword [ebx + 0x20b6], 0xa6b
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc30cf:  ; not directly referenced
+loc_fffc30cf:
 mov dword [ebx + 0x20b6], 0x960
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc30db:  ; not directly referenced
+loc_fffc30db:
 mov dword [ebx + 0x20b6], 0x855
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc30e7:  ; not directly referenced
+loc_fffc30e7:
 mov dword [ebx + 0x20b6], 0x74b
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc30f3:  ; not directly referenced
+loc_fffc30f3:
 mov dword [ebx + 0x20b6], 0x640
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc30ff:  ; not directly referenced
+loc_fffc30ff:
 mov dword [ebx + 0x20b6], 0x535
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc310b:  ; not directly referenced
+loc_fffc310b:
 mov dword [ebx + 0x20b6], 0x42b
 jmp short loc_fffc3121  ; jmp 0xfffc3121
 
-loc_fffc3117:  ; not directly referenced
+loc_fffc3117:
 mov dword [ebx + 0x20ba], 0
 
-loc_fffc3121:  ; not directly referenced
+loc_fffc3121:
 mov al, byte [ebp - 0x46]
 and al, byte [ebx + 0x222f]
 mov byte [ebx + 0x20fe], al
 xor esi, esi
 
-loc_fffc3132:  ; not directly referenced
+loc_fffc3132:
 mov al, byte [ebx + 0x22d8]
 test al, al
 je short loc_fffc3162  ; je 0xfffc3162
@@ -46023,14 +46022,14 @@ mov byte [ebx + 0x108f], dl
 mov byte [ebx + 0x1090], al
 jmp short loc_fffc316f  ; jmp 0xfffc316f
 
-loc_fffc3162:  ; not directly referenced
+loc_fffc3162:
 mov eax, ebx
 call fcn_fffc59e4  ; call 0xfffc59e4
 test eax, eax
 mov edi, eax
 jne short loc_fffc319a  ; jne 0xfffc319a
 
-loc_fffc316f:  ; not directly referenced
+loc_fffc316f:
 mov eax, ebx
 call fcn_fffc6278  ; call 0xfffc6278
 test eax, eax
@@ -46046,7 +46045,7 @@ mov eax, ebx
 call fcn_fffc5d93  ; call 0xfffc5d93
 jmp short loc_fffc31cf  ; jmp 0xfffc31cf
 
-loc_fffc319a:  ; not directly referenced
+loc_fffc319a:
 cmp edi, 0xb
 je short loc_fffc31cd  ; je 0xfffc31cd
 cmp edi, 7
@@ -46062,22 +46061,22 @@ mov byte [eax + 0x12], 0
 mov byte [eax + 0x2f], 0
 jmp short loc_fffc31cf  ; jmp 0xfffc31cf
 
-loc_fffc31cd:  ; not directly referenced
+loc_fffc31cd:
 xor esi, esi
 
-loc_fffc31cf:  ; not directly referenced
+loc_fffc31cf:
 cmp edi, 4
 sete cl
 cmp edi, 0xf
 sete dl
 or cl, dl
-jne loc_fffc3279  ; jne 0xfffc3279
+jne near loc_fffc3279  ; jne 0xfffc3279
 cmp edi, 0xb
 setne al
 add esi, eax
 mov ecx, esi
 cmp cl, 1
-jbe loc_fffc3132  ; jbe 0xfffc3132
+jbe near loc_fffc3132  ; jbe 0xfffc3132
 xor edi, edi
 cmp byte [ebx + 0x3a], 0
 jne short loc_fffc3279  ; jne 0xfffc3279
@@ -46086,37 +46085,37 @@ sbb edi, edi
 and edi, 0xf
 jmp short loc_fffc3279  ; jmp 0xfffc3279
 
-loc_fffc320c:  ; not directly referenced
+loc_fffc320c:
 mov edi, 0x11
 jmp short loc_fffc3279  ; jmp 0xfffc3279
 
-loc_fffc3213:  ; not directly referenced
+loc_fffc3213:
 mov edi, dword [ebp - 0x44]
 mov al, byte [edi + 0xb]
 and eax, 7
 cmp al, 1
-jne loc_fffc2c18  ; jne 0xfffc2c18
+jne near loc_fffc2c18  ; jne 0xfffc2c18
 jmp near loc_fffc2c0c  ; jmp 0xfffc2c0c
 
-loc_fffc3229:  ; not directly referenced
+loc_fffc3229:
 mov edx, dword [ebp - 0x44]
 mov al, byte [edx + 0xc]
 and eax, 7
 cmp al, 3
-jne loc_fffc2f90  ; jne 0xfffc2f90
+jne near loc_fffc2f90  ; jne 0xfffc2f90
 jmp near loc_fffc2c2c  ; jmp 0xfffc2c2c
 
-loc_fffc323f:  ; not directly referenced
+loc_fffc323f:
 cmp dword [ebx + 0x22a8], 1
-jne loc_fffc2f69  ; jne 0xfffc2f69
+jne near loc_fffc2f69  ; jne 0xfffc2f69
 jmp short loc_fffc320c  ; jmp 0xfffc320c
 
-loc_fffc324e:  ; not directly referenced
+loc_fffc324e:
 cmp dword [ebx + 0x2244], 0
-je loc_fffc2fcc  ; je 0xfffc2fcc
+je near loc_fffc2fcc  ; je 0xfffc2fcc
 jmp near loc_fffc2fdd  ; jmp 0xfffc2fdd
 
-loc_fffc3260:  ; not directly referenced
+loc_fffc3260:
 lea edi, [ebp - 0x34]
 mov dword [ebp - 0x5c], ebx
 mov dword [ebp - 0x50], 0
@@ -46124,7 +46123,7 @@ mov byte [ebp - 0x46], 2
 mov dword [ebp - 0x3c], edi
 jmp near loc_fffc3017  ; jmp 0xfffc3017
 
-loc_fffc3279:  ; not directly referenced
+loc_fffc3279:
 lea esp, [esp + 0x8c]
 mov eax, edi
 pop ebx
@@ -46431,13 +46430,13 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov dword [ebp - 0x98], eax
-jne loc_fffc3674  ; jne 0xfffc3674
+jne near loc_fffc3674  ; jne 0xfffc3674
 xor ecx, ecx
 mov edx, dword [ebp - 0x80]
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffc366a  ; jne 0xfffc366a
+jne near loc_fffc366a  ; jne 0xfffc366a
 mov eax, edi
 mov dword [ebp - 0xa0], 0x4340
 movzx eax, al
@@ -46477,7 +46476,7 @@ lea edx, [edi + 1]
 cmove eax, edx
 cmp al, 0x47
 mov edi, eax
-jbe loc_fffc3524  ; jbe 0xfffc3524
+jbe near loc_fffc3524  ; jbe 0xfffc3524
 jmp short loc_fffc3674  ; jmp 0xfffc3674
 
 loc_fffc366a:
@@ -46543,7 +46542,7 @@ inc byte [ebp - 0x7c]
 loc_fffc3746:
 mov al, byte [ebp - 0x7c]
 cmp al, byte [ebx + 0x20b5]
-jb loc_fffc36a0  ; jb 0xfffc36a0
+jb near loc_fffc36a0  ; jb 0xfffc36a0
 mov eax, dword [ebp - 0x88]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -46588,10 +46587,10 @@ mov eax, dword [eax]
 cmp eax, 0xfffffff
 mov esi, ecx
 mov edi, eax
-ja loc_fffc38a3  ; ja 0xfffc38a3
+ja near loc_fffc38a3  ; ja 0xfffc38a3
 jb short loc_fffc37e1  ; jb 0xfffc37e1
 cmp ecx, 0xfffffffe
-ja loc_fffc38a3  ; ja 0xfffc38a3
+ja near loc_fffc38a3  ; ja 0xfffc38a3
 
 loc_fffc37e1:
 mov eax, esi
@@ -46600,21 +46599,21 @@ add eax, 1
 mov ecx, 1
 adc edx, 0xfff00000
 cmp edx, 0xfefffff
-jbe loc_fffc38b3  ; jbe 0xfffc38b3
+jbe near loc_fffc38b3  ; jbe 0xfffc38b3
 mov eax, esi
 mov edx, edi
 add eax, 1
 mov cl, 2
 adc edx, 0xfffff000
 cmp edx, 0xfefff
-jbe loc_fffc38b3  ; jbe 0xfffc38b3
+jbe near loc_fffc38b3  ; jbe 0xfffc38b3
 mov eax, esi
 mov edx, edi
 add eax, 1
 mov cl, 3
 adc edx, 0xfffffff0
 cmp edx, 0xfef
-jbe loc_fffc38b3  ; jbe 0xfffc38b3
+jbe near loc_fffc38b3  ; jbe 0xfffc38b3
 mov eax, esi
 mov edx, edi
 add eax, 0xf0000001
@@ -46725,7 +46724,7 @@ mov dword [ebp - 0x24], eax
 
 loc_fffc392b:
 cmp byte [ebp - 0x20], bl
-ja loc_fffc379e  ; ja 0xfffc379e
+ja near loc_fffc379e  ; ja 0xfffc379e
 movzx eax, byte [ebp - 0x2a]
 xor ebx, ebx
 mov dword [ebp - 0x20], eax
@@ -46823,11 +46822,11 @@ pop edi
 pop ebp
 ret
 
-loc_fffc3a0a:
+endloc_fffc3a0a:
 db 0x00
 db 0x00
 
-fcn_fffc3a0c:  ; not directly referenced
+fcn_fffc3a0c:
 push ebp
 mov ebp, esp
 push edi
@@ -46839,7 +46838,7 @@ mov eax, ebx
 call fcn_fffb585a  ; call 0xfffb585a
 test eax, eax
 mov dword [ebp - 0x38], 0x10
-je loc_fffc3e48  ; je 0xfffc3e48
+je near loc_fffc3e48  ; je 0xfffc3e48
 sub esp, 0xc
 lea edi, [ebp - 0x24]
 push ebx
@@ -46864,13 +46863,13 @@ mov eax, dword [edx + 0x46b0]
 and ah, 0xfc
 mov dword [edx + 0x46b0], eax
 
-loc_fffc3a87:  ; not directly referenced
+loc_fffc3a87:
 imul eax, esi, 0x1055
 cmp byte [ebx + eax + 0x3a], 0
-jne loc_fffc3e00  ; jne 0xfffc3e00
+jne near loc_fffc3e00  ; jne 0xfffc3e00
 jmp near loc_fffc3dbc  ; jmp 0xfffc3dbc
 
-loc_fffc3a9d:  ; not directly referenced
+loc_fffc3a9d:
 mov eax, dword [ebx + 0x2223]
 lea edx, [eax + esi*4 + 0x5004]
 mov eax, dword [edx]
@@ -46878,7 +46877,7 @@ and eax, 0xfcffffff
 or eax, 0x1000000
 mov dword [edx], eax
 
-loc_fffc3ab8:  ; not directly referenced
+loc_fffc3ab8:
 mov eax, esi
 mov byte [ebp - 0x2e], 0x20
 cmp al, 1
@@ -46909,20 +46908,20 @@ add eax, 0x443c
 add eax, dword [ebx + 0x2223]
 mov dword [eax], 0
 
-loc_fffc3b33:  ; not directly referenced
+loc_fffc3b33:
 mov ecx, esi
 lea edx, [ebp - 0x24]
 mov eax, ebx
 call fcn_ffface48  ; call 0xffface48
 mov dword [ebp - 0x2c], 0
 
-loc_fffc3b46:  ; not directly referenced
+loc_fffc3b46:
 mov ecx, esi
 mov edx, dword [ebp - 0x2c]
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc3da6  ; je 0xfffc3da6
+je near loc_fffc3da6  ; je 0xfffc3da6
 push eax
 mov edx, 2
 mov ecx, 0xfffffff9
@@ -46936,7 +46935,7 @@ mov eax, 0x4340
 xor edx, edx
 jmp short loc_fffc3b9a  ; jmp 0xfffc3b9a
 
-loc_fffc3b7d:  ; not directly referenced
+loc_fffc3b7d:
 cmp byte [ebp - 0x2d], 0
 lea ecx, [eax + 0x400]
 cmove ecx, eax
@@ -46945,7 +46944,7 @@ inc edx
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffc3b9a:  ; not directly referenced
+loc_fffc3b9a:
 cmp dl, byte [ebx + 0x20b5]
 jb short loc_fffc3b7d  ; jb 0xfffc3b7d
 mov ecx, dword [ebp - 0x2c]
@@ -46953,13 +46952,13 @@ mov edx, esi
 mov eax, ebx
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffc3df7  ; jne 0xfffc3df7
+jne near loc_fffc3df7  ; jne 0xfffc3df7
 mov cl, byte [ebx + 0x20b5]
 mov ax, 0x4340
 xor edx, edx
 jmp short loc_fffc3be4  ; jmp 0xfffc3be4
 
-loc_fffc3bc4:  ; not directly referenced
+loc_fffc3bc4:
 cmp byte [ebp - 0x2d], 0
 lea edi, [eax + 0x400]
 cmove edi, eax
@@ -46970,7 +46969,7 @@ adc dword [ebp - 0x34], 0
 inc edx
 add eax, 4
 
-loc_fffc3be4:  ; not directly referenced
+loc_fffc3be4:
 cmp dl, cl
 jne short loc_fffc3bc4  ; jne 0xfffc3bc4
 push edi
@@ -46986,7 +46985,7 @@ mov eax, 0x4340
 xor edx, edx
 jmp short loc_fffc3c28  ; jmp 0xfffc3c28
 
-loc_fffc3c0b:  ; not directly referenced
+loc_fffc3c0b:
 cmp byte [ebp - 0x2d], 0
 lea ecx, [eax + 0x400]
 cmove ecx, eax
@@ -46995,7 +46994,7 @@ inc edx
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffc3c28:  ; not directly referenced
+loc_fffc3c28:
 cmp dl, byte [ebx + 0x20b5]
 jb short loc_fffc3c0b  ; jb 0xfffc3c0b
 mov ecx, dword [ebp - 0x2c]
@@ -47003,13 +47002,13 @@ mov edx, esi
 mov eax, ebx
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffc3df7  ; jne 0xfffc3df7
+jne near loc_fffc3df7  ; jne 0xfffc3df7
 mov cl, byte [ebx + 0x20b5]
 mov ax, 0x4340
 xor edx, edx
 jmp short loc_fffc3c72  ; jmp 0xfffc3c72
 
-loc_fffc3c52:  ; not directly referenced
+loc_fffc3c52:
 cmp byte [ebp - 0x2d], 0
 lea edi, [eax + 0x400]
 cmove edi, eax
@@ -47020,7 +47019,7 @@ sbb dword [ebp - 0x34], 0xffffffff
 inc edx
 add eax, 4
 
-loc_fffc3c72:  ; not directly referenced
+loc_fffc3c72:
 cmp dl, cl
 jne short loc_fffc3c52  ; jne 0xfffc3c52
 push ecx
@@ -47036,7 +47035,7 @@ mov eax, 0x4340
 xor edx, edx
 jmp short loc_fffc3cb6  ; jmp 0xfffc3cb6
 
-loc_fffc3c99:  ; not directly referenced
+loc_fffc3c99:
 cmp byte [ebp - 0x2d], 0
 lea ecx, [eax + 0x400]
 cmove ecx, eax
@@ -47045,7 +47044,7 @@ inc edx
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffc3cb6:  ; not directly referenced
+loc_fffc3cb6:
 cmp dl, byte [ebx + 0x20b5]
 jb short loc_fffc3c99  ; jb 0xfffc3c99
 mov ecx, dword [ebp - 0x2c]
@@ -47053,13 +47052,13 @@ mov edx, esi
 mov eax, ebx
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffc3df7  ; jne 0xfffc3df7
+jne near loc_fffc3df7  ; jne 0xfffc3df7
 mov cl, byte [ebx + 0x20b5]
 mov ax, 0x4340
 xor edx, edx
 jmp short loc_fffc3d00  ; jmp 0xfffc3d00
 
-loc_fffc3ce0:  ; not directly referenced
+loc_fffc3ce0:
 cmp byte [ebp - 0x2d], 0
 lea edi, [eax + 0x400]
 cmove edi, eax
@@ -47070,7 +47069,7 @@ sbb dword [ebp - 0x34], 0xffffffff
 inc edx
 add eax, 4
 
-loc_fffc3d00:  ; not directly referenced
+loc_fffc3d00:
 cmp dl, cl
 jne short loc_fffc3ce0  ; jne 0xfffc3ce0
 push edx
@@ -47086,7 +47085,7 @@ mov eax, 0x4340
 xor edx, edx
 jmp short loc_fffc3d44  ; jmp 0xfffc3d44
 
-loc_fffc3d27:  ; not directly referenced
+loc_fffc3d27:
 cmp byte [ebp - 0x2d], 0
 lea ecx, [eax + 0x400]
 cmove ecx, eax
@@ -47095,7 +47094,7 @@ inc edx
 add eax, 4
 mov dword [ecx], 0
 
-loc_fffc3d44:  ; not directly referenced
+loc_fffc3d44:
 cmp dl, byte [ebx + 0x20b5]
 jb short loc_fffc3d27  ; jb 0xfffc3d27
 mov ecx, dword [ebp - 0x2c]
@@ -47103,13 +47102,13 @@ mov edx, esi
 mov eax, ebx
 call fcn_fffaf9ac  ; call 0xfffaf9ac
 test eax, eax
-jne loc_fffc3df7  ; jne 0xfffc3df7
+jne near loc_fffc3df7  ; jne 0xfffc3df7
 mov cl, byte [ebx + 0x20b5]
 mov ax, 0x4340
 xor edx, edx
 jmp short loc_fffc3d8e  ; jmp 0xfffc3d8e
 
-loc_fffc3d6e:  ; not directly referenced
+loc_fffc3d6e:
 cmp byte [ebp - 0x2d], 0
 lea edi, [eax + 0x400]
 cmove edi, eax
@@ -47120,7 +47119,7 @@ adc dword [ebp - 0x34], 0
 inc edx
 add eax, 4
 
-loc_fffc3d8e:  ; not directly referenced
+loc_fffc3d8e:
 cmp dl, cl
 jne short loc_fffc3d6e  ; jne 0xfffc3d6e
 push eax
@@ -47133,46 +47132,46 @@ push esi
 call fcn_fffb5664  ; call 0xfffb5664
 add esp, 0x10
 
-loc_fffc3da6:  ; not directly referenced
+loc_fffc3da6:
 inc dword [ebp - 0x2c]
 cmp dword [ebp - 0x2c], 4
-jne loc_fffc3b46  ; jne 0xfffc3b46
+jne near loc_fffc3b46  ; jne 0xfffc3b46
 dec byte [ebp - 0x2e]
-jne loc_fffc3b33  ; jne 0xfffc3b33
+jne near loc_fffc3b33  ; jne 0xfffc3b33
 
-loc_fffc3dbc:  ; not directly referenced
+loc_fffc3dbc:
 inc esi
 cmp esi, 2
-jne loc_fffc3a87  ; jne 0xfffc3a87
+jne near loc_fffc3a87  ; jne 0xfffc3a87
 cmp dword [ebp - 0x34], 0
 je short loc_fffc3dde  ; je 0xfffc3dde
 mov eax, dword [ebx + 0x2223]
 mov dword [eax + 0x5024], 0
 jmp short loc_fffc3df7  ; jmp 0xfffc3df7
 
-loc_fffc3dde:  ; not directly referenced
+loc_fffc3dde:
 cmp byte [ebx + 0x3a], 0
 jne short loc_fffc3e12  ; jne 0xfffc3e12
 xor eax, eax
 
-loc_fffc3de6:  ; not directly referenced
+loc_fffc3de6:
 cmp byte [ebx + 0x108f], 0
 jne short loc_fffc3e2d  ; jne 0xfffc3e2d
 
-loc_fffc3def:  ; not directly referenced
+loc_fffc3def:
 mov byte [ebx + 0x20fe], al
 jmp short loc_fffc3e48  ; jmp 0xfffc3e48
 
-loc_fffc3df7:  ; not directly referenced
+loc_fffc3df7:
 mov dword [ebp - 0x38], 0x10
 jmp short loc_fffc3e48  ; jmp 0xfffc3e48
 
-loc_fffc3e00:  ; not directly referenced
+loc_fffc3e00:
 cmp dword [ebx + 0x20b1], 1
-jne loc_fffc3ab8  ; jne 0xfffc3ab8
+jne near loc_fffc3ab8  ; jne 0xfffc3ab8
 jmp near loc_fffc3a9d  ; jmp 0xfffc3a9d
 
-loc_fffc3e12:  ; not directly referenced
+loc_fffc3e12:
 mov eax, dword [ebx + 0x2223]
 mov eax, dword [eax + 0xc00]
 and eax, 0x40
@@ -47182,7 +47181,7 @@ not eax
 and eax, 2
 jmp short loc_fffc3de6  ; jmp 0xfffc3de6
 
-loc_fffc3e2d:  ; not directly referenced
+loc_fffc3e2d:
 mov eax, dword [ebx + 0x2223]
 mov eax, dword [eax + 0xd00]
 and eax, 0x40
@@ -47192,7 +47191,7 @@ not eax
 and eax, 2
 jmp short loc_fffc3def  ; jmp 0xfffc3def
 
-loc_fffc3e48:  ; not directly referenced
+loc_fffc3e48:
 mov eax, dword [ebp - 0x38]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -47201,7 +47200,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc3e53:  ; not directly referenced
+fcn_fffc3e53:
 push ebp
 mov edx, 0xdd52
 mov ebp, esp
@@ -47214,7 +47213,7 @@ mov eax, ebx
 call fcn_fffad891  ; call 0xfffad891
 mov eax, dword [ebx + 0x225c]
 cmp eax, 2
-jne loc_fffc449e  ; jne 0xfffc449e
+jne near loc_fffc449e  ; jne 0xfffc449e
 mov eax, dword [ebx + 0x49]
 mov dword [ebx + 0x2e16], 0
 mov dword [ebx + 0x2a9c], eax
@@ -47290,9 +47289,9 @@ xor edx, edx
 mov eax, dword [ebp - 0x1c]
 call fcn_fffb4fc8  ; call 0xfffb4fc8
 test eax, eax
-jne loc_fffc452d  ; jne 0xfffc452d
+jne near loc_fffc452d  ; jne 0xfffc452d
 test edi, edi
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x297c]
 mov ecx, ref_fffcf56c  ; mov ecx, 0xfffcf56c
@@ -47304,7 +47303,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x299a]
 mov ecx, ref_fffcf56c  ; mov ecx, 0xfffcf56c
@@ -47316,7 +47315,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x29b8]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -47328,7 +47327,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x29d6]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -47340,7 +47339,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x29f4]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -47352,7 +47351,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x2a12]
 mov ecx, ref_fffcf564  ; mov ecx, 0xfffcf564
@@ -47364,7 +47363,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x2a30]
 mov ecx, ref_fffcf560  ; mov ecx, 0xfffcf560
@@ -47376,7 +47375,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 push 0
 lea eax, [ebx + 0x2a4c]
 mov ecx, ref_fffcf560  ; mov ecx, 0xfffcf560
@@ -47388,7 +47387,7 @@ call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
 mov edi, eax
-jne loc_fffc452f  ; jne 0xfffc452f
+jne near loc_fffc452f  ; jne 0xfffc452f
 mov edx, esi
 lea eax, [ebx + 0x2a68]
 call fcn_fffcf92f  ; call 0xfffcf92f
@@ -47415,7 +47414,7 @@ mov eax, dword [eax + 0xe4]
 mov dword [ebx + 0x2ab3], eax
 jmp near loc_fffc4356  ; jmp 0xfffc4356
 
-loc_fffc41c1:  ; not directly referenced
+loc_fffc41c1:
 imul eax, dword [ebp - 0x20], 0x46
 mov edx, dword [ebp - 0x2c]
 mov ecx, 0xb
@@ -47429,10 +47428,10 @@ call fcn_fffa2408  ; call 0xfffa2408
 imul eax, dword [ebp - 0x20], 0x1d
 mov ecx, dword [ebp - 0x24]
 cmp dword [ecx + eax + 0xa], 0
-je loc_fffc4335  ; je 0xfffc4335
+je near loc_fffc4335  ; je 0xfffc4335
 mov eax, esi
 test al, al
-jne loc_fffc4335  ; jne 0xfffc4335
+jne near loc_fffc4335  ; jne 0xfffc4335
 mov dl, byte [ebp - 0x1c]
 mov ecx, dword [ebx + 0x2223]
 cmp dl, 1
@@ -47502,24 +47501,24 @@ je short loc_fffc431f  ; je 0xfffc431f
 shr eax, 0x1e
 jmp short loc_fffc4321  ; jmp 0xfffc4321
 
-loc_fffc431f:  ; not directly referenced
+loc_fffc431f:
 mov al, 0x10
 
-loc_fffc4321:  ; not directly referenced
+loc_fffc4321:
 mov byte [ebx + 0x2e49], al
 mov word [ebx + 0x2e51], 0
 mov esi, 1
 
-loc_fffc4335:  ; not directly referenced
+loc_fffc4335:
 inc dword [ebp - 0x20]
 cmp dword [ebp - 0x20], 2
-jne loc_fffc41c1  ; jne 0xfffc41c1
+jne near loc_fffc41c1  ; jne 0xfffc41c1
 inc dword [ebp - 0x1c]
 add dword [ebp - 0x24], 0x1055
 cmp dword [ebp - 0x1c], 2
-je loc_fffc43ec  ; je 0xfffc43ec
+je near loc_fffc43ec  ; je 0xfffc43ec
 
-loc_fffc4356:  ; not directly referenced
+loc_fffc4356:
 imul edx, dword [ebp - 0x1c], 0x8c
 mov eax, dword [ebp - 0x1c]
 add eax, eax
@@ -47528,7 +47527,7 @@ mov dword [ebp - 0x28], eax
 mov dword [ebp - 0x2c], edx
 jmp near loc_fffc41c1  ; jmp 0xfffc41c1
 
-loc_fffc4374:  ; not directly referenced
+loc_fffc4374:
 mov ecx, esi
 mov edx, dword [ebp - 0x1c]
 mov eax, ebx
@@ -47554,7 +47553,7 @@ mov ecx, 0x24
 lea eax, [ebx + eax + 0x17]
 call fcn_fffa2408  ; call 0xfffa2408
 
-loc_fffc43db:  ; not directly referenced
+loc_fffc43db:
 inc dword [ebp - 0x1c]
 cmp dword [ebp - 0x1c], 4
 jne short loc_fffc4374  ; jne 0xfffc4374
@@ -47563,10 +47562,10 @@ cmp esi, 2
 jne short loc_fffc43ee  ; jne 0xfffc43ee
 jmp short loc_fffc440c  ; jmp 0xfffc440c
 
-loc_fffc43ec:  ; not directly referenced
+loc_fffc43ec:
 xor esi, esi
 
-loc_fffc43ee:  ; not directly referenced
+loc_fffc43ee:
 imul eax, esi, 0x1055
 imul edx, esi, 0xd8
 mov dword [ebp - 0x1c], 0
@@ -47574,7 +47573,7 @@ mov dword [ebp - 0x20], eax
 mov dword [ebp - 0x24], edx
 jmp near loc_fffc4374  ; jmp 0xfffc4374
 
-loc_fffc440c:  ; not directly referenced
+loc_fffc440c:
 mov al, byte [ebx + 0x212a]
 mov byte [ebx + 0x2aaf], al
 mov al, byte [ebx + 0x2170]
@@ -47603,7 +47602,7 @@ mov al, byte [ebx + 0x20b5]
 mov byte [ebx + 0x2aaa], al
 jmp short loc_fffc4509  ; jmp 0xfffc4509
 
-loc_fffc449e:  ; not directly referenced
+loc_fffc449e:
 xor edi, edi
 cmp eax, 3
 jne short loc_fffc4509  ; jne 0xfffc4509
@@ -47612,7 +47611,7 @@ mov byte [ebp - 0x1c], 0
 lea esi, [ebx + 0x2e0a]
 mov dword [ebp - 0x20], ecx
 
-loc_fffc44b8:  ; not directly referenced
+loc_fffc44b8:
 cmp byte [ebp - 0x1c], 0
 jne short loc_fffc44db  ; jne 0xfffc44db
 push 0
@@ -47624,7 +47623,7 @@ push 0x14a
 push 0x1d
 jmp short loc_fffc44f3  ; jmp 0xfffc44f3
 
-loc_fffc44db:  ; not directly referenced
+loc_fffc44db:
 push 0
 mov ecx, ref_fffcf4ec  ; mov ecx, 0xfffcf4ec
 mov edx, esi
@@ -47633,7 +47632,7 @@ mov eax, dword [ebp - 0x20]
 push 0x14a
 push 0x1d
 
-loc_fffc44f3:  ; not directly referenced
+loc_fffc44f3:
 call fcn_fffb4cc1  ; call 0xfffb4cc1
 add esp, 0x10
 test eax, eax
@@ -47642,7 +47641,7 @@ inc byte [ebp - 0x1c]
 cmp byte [ebp - 0x1c], 2
 jne short loc_fffc44b8  ; jne 0xfffc44b8
 
-loc_fffc4509:  ; not directly referenced
+loc_fffc4509:
 lea edx, [ebx + 0x2ea9]
 lea eax, [ebx + 0x2305]
 call fcn_fffc76c6  ; call 0xfffc76c6
@@ -47653,10 +47652,10 @@ mov eax, ebx
 call fcn_fffad891  ; call 0xfffad891
 jmp short loc_fffc452f  ; jmp 0xfffc452f
 
-loc_fffc452d:  ; not directly referenced
+loc_fffc452d:
 mov edi, eax
 
-loc_fffc452f:  ; not directly referenced
+loc_fffc452f:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -47748,10 +47747,10 @@ pop ebx
 pop ebp
 ret
 
-loc_fffc4613:
+endloc_fffc4613:
 db 0x00
 
-fcn_fffc4614:  ; not directly referenced
+fcn_fffc4614:
 push ebp
 mov cl, dl
 mov ebp, esp
@@ -47783,7 +47782,7 @@ mov ecx, dword [0xf00f8048]
 and ecx, 0xfffffffe
 jmp short loc_fffc4696  ; jmp 0xfffc4696
 
-loc_fffc466c:  ; not directly referenced
+loc_fffc466c:
 cmp cl, 2
 je short loc_fffc4682  ; je 0xfffc4682
 cmp cl, 6
@@ -47794,7 +47793,7 @@ dec cl
 cmove ebx, eax
 jmp short loc_fffc46c2  ; jmp 0xfffc46c2
 
-loc_fffc4682:  ; not directly referenced
+loc_fffc4682:
 sub esp, 0xc
 mov eax, dword [ebp - 0xc]
 push 2
@@ -47803,10 +47802,10 @@ call dword [eax]  ; ucall
 add esp, 0x10
 jmp short loc_fffc46c2  ; jmp 0xfffc46c2
 
-loc_fffc4694:  ; not directly referenced
+loc_fffc4694:
 xor ecx, ecx
 
-loc_fffc4696:  ; not directly referenced
+loc_fffc4696:
 mov esi, ecx
 lea edx, [esi + 0x60]
 in eax, dx
@@ -47826,7 +47825,7 @@ and eax, 0xbfffffff
 out dx, eax
 or ebx, 0xe
 
-loc_fffc46c2:  ; not directly referenced
+loc_fffc46c2:
 mov eax, dword [ebp - 0xc]
 call dword [eax + 0xc]  ; ucall
 mov edx, 0xcf9
@@ -47839,7 +47838,7 @@ pop esi
 pop ebp
 ret
 
-fcn_fffc46d9:  ; not directly referenced
+fcn_fffc46d9:
 push ebp
 mov ebp, esp
 push edi
@@ -47861,7 +47860,7 @@ mov edx, eax
 add esp, 0x20
 jmp short loc_fffc4726  ; jmp 0xfffc4726
 
-loc_fffc4708:  ; not directly referenced
+loc_fffc4708:
 push ecx
 mov eax, dword [ebp - 0x1c]
 mov dword [ebp - 0x2c], edx
@@ -47874,16 +47873,14 @@ mov esi, dword [0xf00b0048]
 add esp, 0x10
 mov edx, dword [ebp - 0x2c]
 
-loc_fffc4726:  ; not directly referenced
+loc_fffc4726:
 test esi, 0x100
 jne short loc_fffc476b  ; jne 0xfffc476b
-; FIXME: nasm assembles "cmp edi,0x32" as 83ff32
-; but the original file is 81ff32000000
-db 0x81,0xff,0x32,0,0,0
+db 0x81, 0xff, 0x32, 0x00, 0x00, 0x00  ; cmp edi, 0x32
 jne short loc_fffc4708  ; jne 0xfffc4708
 jmp short loc_fffc4773  ; jmp 0xfffc4773
 
-loc_fffc4738:  ; not directly referenced
+loc_fffc4738:
 mov eax, esi
 test al, al
 jns short loc_fffc475a  ; jns 0xfffc475a
@@ -47895,7 +47892,7 @@ mov eax, ebx
 call fcn_fffc4614  ; call 0xfffc4614
 mov edx, eax
 
-loc_fffc475a:  ; not directly referenced
+loc_fffc475a:
 mov eax, esi
 and eax, 0xffffff90
 cmp al, 0x10
@@ -47904,11 +47901,11 @@ mov eax, dword [ebp + 0x10]
 mov byte [eax], 1
 jmp short loc_fffc4773  ; jmp 0xfffc4773
 
-loc_fffc476b:  ; not directly referenced
+loc_fffc476b:
 cmp edi, 0x1388
 jne short loc_fffc4738  ; jne 0xfffc4738
 
-loc_fffc4773:  ; not directly referenced
+loc_fffc4773:
 lea esp, [ebp - 0xc]
 mov eax, edx
 pop ebx
@@ -47917,7 +47914,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc477d:  ; not directly referenced
+fcn_fffc477d:
 push ebp
 mov ebp, esp
 lea esp, [esp - 8]
@@ -47933,22 +47930,22 @@ jne short loc_fffc47b6  ; jne 0xfffc47b6
 mov edx, 1
 jmp short loc_fffc47b1  ; jmp 0xfffc47b1
 
-loc_fffc47a5:  ; not directly referenced
+loc_fffc47a5:
 mov edx, 2
 jmp short loc_fffc47b1  ; jmp 0xfffc47b1
 
-loc_fffc47ac:  ; not directly referenced
+loc_fffc47ac:
 mov edx, 6
 
-loc_fffc47b1:  ; not directly referenced
+loc_fffc47b1:
 call fcn_fffc4614  ; call 0xfffc4614
 
-loc_fffc47b6:  ; not directly referenced
+loc_fffc47b6:
 xor eax, eax
 leave
 ret
 
-fcn_fffc47ba:  ; not directly referenced
+fcn_fffc47ba:
 push ebp
 mov ebp, esp
 push esi
@@ -47972,11 +47969,11 @@ mov cl, byte [ebp - 0x1c]
 shr edx, 0x10
 and edx, 0xf
 cmp dl, 2
-je loc_fffc489c  ; je 0xfffc489c
+je near loc_fffc489c  ; je 0xfffc489c
 movzx edx, ah
 xor eax, eax
 and dl, 0xf0
-jne loc_fffc489e  ; jne 0xfffc489e
+jne near loc_fffc489e  ; jne 0xfffc489e
 mov edx, dword [0xf0000070]
 mov eax, dword [0xf0000074]
 shl eax, 0x1c
@@ -48005,7 +48002,7 @@ mov eax, dword [0xf00b0040]
 add esp, 0x10
 jmp short loc_fffc4879  ; jmp 0xfffc4879
 
-loc_fffc4863:  ; not directly referenced
+loc_fffc4863:
 push ecx
 mov eax, dword [ebp - 0xc]
 push 0x3e8
@@ -48015,7 +48012,7 @@ call dword [eax + 4]  ; ucall
 mov eax, dword [0xf00b0040]
 add esp, 0x10
 
-loc_fffc4879:  ; not directly referenced
+loc_fffc4879:
 mov edx, eax
 shr edx, 0x18
 and dl, 0xf0
@@ -48023,7 +48020,7 @@ jne short loc_fffc4886  ; jne 0xfffc4886
 dec esi
 jne short loc_fffc4863  ; jne 0xfffc4863
 
-loc_fffc4886:  ; not directly referenced
+loc_fffc4886:
 shr eax, 0x19
 push edx
 and eax, 7
@@ -48034,17 +48031,17 @@ call fcn_fffc477d  ; call 0xfffc477d
 add esp, 0x10
 jmp short loc_fffc489e  ; jmp 0xfffc489e
 
-loc_fffc489c:  ; not directly referenced
+loc_fffc489c:
 xor eax, eax
 
-loc_fffc489e:  ; not directly referenced
+loc_fffc489e:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_fffc48a5:  ; not directly referenced
+fcn_fffc48a5:
 push ebp
 mov ebp, esp
 push edi
@@ -48060,11 +48057,11 @@ and edx, 0xf
 cmp dl, 2
 jne short loc_fffc48ce  ; jne 0xfffc48ce
 
-loc_fffc48ca:  ; not directly referenced
+loc_fffc48ca:
 xor eax, eax
 jmp short loc_fffc4929  ; jmp 0xfffc4929
 
-loc_fffc48ce:  ; not directly referenced
+loc_fffc48ce:
 movzx eax, ah
 test al, 0xf0
 jne short loc_fffc48ca  ; jne 0xfffc48ca
@@ -48081,7 +48078,7 @@ call dword [eax + 0x20]  ; ucall
 add esp, 0x20
 jmp short loc_fffc490a  ; jmp 0xfffc490a
 
-loc_fffc48f2:  ; not directly referenced
+loc_fffc48f2:
 push edi
 mov eax, dword [ebp - 0x1c]
 inc ebx
@@ -48092,20 +48089,20 @@ call dword [eax + 4]  ; ucall
 mov edi, dword [0xf00b0044]
 add esp, 0x10
 
-loc_fffc490a:  ; not directly referenced
+loc_fffc490a:
 test edi, 0x10000
 jne short loc_fffc491c  ; jne 0xfffc491c
 cmp ebx, 0x1388
 jne short loc_fffc48f2  ; jne 0xfffc48f2
 jmp short loc_fffc48ca  ; jmp 0xfffc48ca
 
-loc_fffc491c:  ; not directly referenced
+loc_fffc491c:
 cmp ebx, 0x1388
 je short loc_fffc48ca  ; je 0xfffc48ca
 mov eax, edi
 and eax, 0x3f
 
-loc_fffc4929:  ; not directly referenced
+loc_fffc4929:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -48402,7 +48399,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc4cf3:  ; not directly referenced
+fcn_fffc4cf3:
 push ebp
 mov ebp, esp
 push edi
@@ -48484,7 +48481,7 @@ mov dword [ebp - 0x29], edi
 mov dword [ebp - 0x90], eax
 mov byte [ebp - 0x7d], 0
 
-loc_fffc4e50:  ; not directly referenced
+loc_fffc4e50:
 push 9
 movzx edi, byte [ebp - 0x7d]
 mov ecx, dword [ebp - 0x8c]
@@ -48507,7 +48504,7 @@ mov eax, 0x4140
 xor ecx, ecx
 jmp short loc_fffc4ed2  ; jmp 0xfffc4ed2
 
-loc_fffc4e94:  ; not directly referenced
+loc_fffc4e94:
 cmp byte [ebp - 0x88], 0
 lea edx, [eax + 0x200]
 lea esi, [eax + 0x600]
@@ -48522,7 +48519,7 @@ inc ecx
 add eax, 4
 mov edx, dword [edx]
 
-loc_fffc4ed2:  ; not directly referenced
+loc_fffc4ed2:
 movzx edx, byte [ebx + 0x20b5]
 cmp ecx, edx
 jb short loc_fffc4e94  ; jb 0xfffc4e94
@@ -48542,7 +48539,7 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov dword [ebp - 0x7c], eax
-jne loc_fffc4f97  ; jne 0xfffc4f97
+jne near loc_fffc4f97  ; jne 0xfffc4f97
 xor ecx, ecx
 mov edx, dword [ebp - 0x84]
 mov eax, ebx
@@ -48554,7 +48551,7 @@ lea ecx, [edx + edi*2]
 mov edx, 0x4340
 jmp short loc_fffc4f64  ; jmp 0xfffc4f64
 
-loc_fffc4f31:  ; not directly referenced
+loc_fffc4f31:
 cmp byte [ebp - 0x88], 0
 lea esi, [edx + 0x400]
 cmove esi, edx
@@ -48567,11 +48564,11 @@ cmp dword [ebx + 0x2240], 0
 je short loc_fffc4f60  ; je 0xfffc4f60
 mov word [ecx + esi + 2], di
 
-loc_fffc4f60:  ; not directly referenced
+loc_fffc4f60:
 inc eax
 add edx, 4
 
-loc_fffc4f64:  ; not directly referenced
+loc_fffc4f64:
 movzx esi, byte [ebx + 0x20b5]
 cmp eax, esi
 jb short loc_fffc4f31  ; jb 0xfffc4f31
@@ -48583,13 +48580,13 @@ cmp dword [ebx + 0x2240], 0
 cmove eax, edx
 cmp al, 0x47
 mov byte [ebp - 0x7d], al
-jbe loc_fffc4e50  ; jbe 0xfffc4e50
+jbe near loc_fffc4e50  ; jbe 0xfffc4e50
 jmp short loc_fffc4f97  ; jmp 0xfffc4f97
 
-loc_fffc4f90:  ; not directly referenced
+loc_fffc4f90:
 mov dword [ebp - 0x7c], 0xc
 
-loc_fffc4f97:  ; not directly referenced
+loc_fffc4f97:
 imul eax, dword [ebp - 0x84], 9
 imul edx, dword [ebp - 0x8c], 0x36
 mov byte [ebp - 0x7d], 0
@@ -48597,7 +48594,7 @@ mov dword [ebp - 0x90], eax
 mov dword [ebp - 0x88], edx
 jmp near loc_fffc505d  ; jmp 0xfffc505d
 
-loc_fffc4fba:  ; not directly referenced
+loc_fffc4fba:
 movzx edi, byte [ebp - 0x7d]
 mov eax, dword [ebp - 0x90]
 add eax, edi
@@ -48623,14 +48620,14 @@ lea eax, [edi + eax + 0x1b0]
 lea eax, [ebx + eax + 0xd]
 jmp short loc_fffc504e  ; jmp 0xfffc504e
 
-loc_fffc501c:  ; not directly referenced
+loc_fffc501c:
 cmp dword [ebp - 0x94], 1
 jne short loc_fffc5032  ; jne 0xfffc5032
 lea eax, [edi + eax + 0x1c0]
 lea eax, [ebx + eax + 0x18]
 jmp short loc_fffc504e  ; jmp 0xfffc504e
 
-loc_fffc5032:  ; not directly referenced
+loc_fffc5032:
 add edi, eax
 mov ecx, 3
 mov edx, esi
@@ -48638,16 +48635,16 @@ lea eax, [ebx + edi + 0x1bd]
 call fcn_fffa2408  ; call 0xfffa2408
 lea eax, [ebx + edi + 0x1d8]
 
-loc_fffc504e:  ; not directly referenced
+loc_fffc504e:
 mov ecx, 3
 mov edx, esi
 call fcn_fffa2408  ; call 0xfffa2408
 inc byte [ebp - 0x7d]
 
-loc_fffc505d:  ; not directly referenced
+loc_fffc505d:
 mov al, byte [ebp - 0x7d]
 cmp al, byte [ebx + 0x20b5]
-jb loc_fffc4fba  ; jb 0xfffc4fba
+jb near loc_fffc4fba  ; jb 0xfffc4fba
 mov eax, dword [ebp - 0x7c]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -48813,7 +48810,7 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov esi, eax
-jne loc_fffc53bc  ; jne 0xfffc53bc
+jne near loc_fffc53bc  ; jne 0xfffc53bc
 xor ecx, ecx
 mov edx, edi
 mov eax, ebx
@@ -48858,7 +48855,7 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov esi, eax
-jne loc_fffc53bc  ; jne 0xfffc53bc
+jne near loc_fffc53bc  ; jne 0xfffc53bc
 xor ecx, ecx
 mov edx, edi
 mov eax, ebx
@@ -48977,7 +48974,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc5439:
+endloc_fffc5439:
 db 0x00
 db 0x00
 db 0x00
@@ -49014,7 +49011,7 @@ loc_fffc5492:
 mov ecx, dword [ebx + 0x221f]
 mov eax, dword [ecx + 0xe4]
 test al, 8
-jne loc_fffc5535  ; jne 0xfffc5535
+jne near loc_fffc5535  ; jne 0xfffc5535
 mov edx, eax
 and edx, 7
 cmp edx, 3
@@ -49112,10 +49109,10 @@ mov byte [ebx + 0x20b5], 8
 
 loc_fffc55f8:
 test eax, 0x1000000
-je loc_fffc59c3  ; je 0xfffc59c3
+je near loc_fffc59c3  ; je 0xfffc59c3
 cmp dword [ebx + 0x2244], 0
 mov eax, 1
-je loc_fffc59d8  ; je 0xfffc59d8
+je near loc_fffc59d8  ; je 0xfffc59d8
 mov dword [ebx + 0x22a8], 1
 mov dword [ebx + 0x20b1], 1
 mov byte [ebx + 0x20b5], 9
@@ -49133,14 +49130,14 @@ cmp dword [eax + 7], 1
 lea ecx, [eax + 7]
 mov dword [ebp - 0x40], edx
 mov dword [ebp - 0x44], ecx
-jne loc_fffc581a  ; jne 0xfffc581a
+jne near loc_fffc581a  ; jne 0xfffc581a
 cmp byte [eax + 0xd], 0xb
-jne loc_fffc581a  ; jne 0xfffc581a
+jne near loc_fffc581a  ; jne 0xfffc581a
 mov al, byte [eax + 0xe]
 mov byte [ebp - 0x46], al
 sub eax, 2
 cmp al, 1
-ja loc_fffc581a  ; ja 0xfffc581a
+ja near loc_fffc581a  ; ja 0xfffc581a
 jmp near loc_fffc5928  ; jmp 0xfffc5928
 
 loc_fffc5681:
@@ -49150,7 +49147,7 @@ jmp near loc_fffc593e  ; jmp 0xfffc593e
 
 loc_fffc568d:
 cmp al, 2
-jne loc_fffc581a  ; jne 0xfffc581a
+jne near loc_fffc581a  ; jne 0xfffc581a
 mov ecx, dword [ebp - 0x40]
 mov byte [ecx + 0x14], 0x10
 jmp near loc_fffc593e  ; jmp 0xfffc593e
@@ -49164,7 +49161,7 @@ shr al, 3
 inc eax
 cmp al, 2
 mov byte [ebp - 0x45], al
-ja loc_fffc581a  ; ja 0xfffc581a
+ja near loc_fffc581a  ; ja 0xfffc581a
 mov ecx, dword [ebp - 0x40]
 mov byte [ecx + 0x12], al
 movzx eax, byte [edx + 0xe]
@@ -49204,7 +49201,7 @@ jmp near loc_fffc5954  ; jmp 0xfffc5954
 
 loc_fffc5736:
 cmp eax, 0x1c9c38
-jg loc_fffc581a  ; jg 0xfffc581a
+jg near loc_fffc581a  ; jg 0xfffc581a
 mov edx, dword [ebp - 0x40]
 mov dword [edx + 0xe], 0x42b
 jmp near loc_fffc5954  ; jmp 0xfffc5954
@@ -49232,7 +49229,7 @@ and eax, 0x38
 sar eax, 3
 cmp eax, 4
 mov dword [ecx + 4], eax
-ja loc_fffc581a  ; ja 0xfffc581a
+ja near loc_fffc581a  ; ja 0xfffc581a
 jmp dword [eax*4 + ref_fffcf590]  ; ujmp: jmp dword [eax*4 - 0x30a70]
 
 loc_fffc579b:
@@ -49267,7 +49264,7 @@ mov edx, dword [ebp - 0x58]
 lea eax, [eax + edx + 0x2100]
 lea eax, [ebx + eax + 0xb]
 test byte [eax + 8], 8
-je loc_fffc599f  ; je 0xfffc599f
+je near loc_fffc599f  ; je 0xfffc599f
 
 loc_fffc57f4:
 mov ecx, dword [ebp - 0x40]
@@ -49278,7 +49275,7 @@ sete dl
 movzx edx, dl
 mov dword [ecx + 0x15], edx
 test byte [eax + 8], 8
-jne loc_fffc59b1  ; jne 0xfffc59b1
+jne near loc_fffc59b1  ; jne 0xfffc59b1
 jmp short loc_fffc5842  ; jmp 0xfffc5842
 
 loc_fffc581a:
@@ -49307,7 +49304,7 @@ mov dword [ebx + 0x20b6], edx
 loc_fffc586e:
 inc dword [ebp - 0x4c]
 cmp dword [ebp - 0x4c], 2
-jne loc_fffc5635  ; jne 0xfffc5635
+jne near loc_fffc5635  ; jne 0xfffc5635
 inc dword [ebp - 0x50]
 add dword [ebp - 0x54], 0x1055
 cmp dword [ebp - 0x50], 2
@@ -49357,7 +49354,7 @@ cmp cl, 1
 jbe short loc_fffc58ad  ; jbe 0xfffc58ad
 xor eax, eax
 cmp byte [ebx + 0x3a], 0
-jne loc_fffc59d8  ; jne 0xfffc59d8
+jne near loc_fffc59d8  ; jne 0xfffc59d8
 cmp byte [ebx + 0x108f], 1
 sbb eax, eax
 and eax, 0xf
@@ -49372,7 +49369,7 @@ mov ecx, dword [ebp - 0x44]
 mov al, byte [ecx + 0xb]
 and eax, 7
 cmp al, 1
-jne loc_fffc568d  ; jne 0xfffc568d
+jne near loc_fffc568d  ; jne 0xfffc568d
 jmp near loc_fffc5681  ; jmp 0xfffc5681
 
 loc_fffc593e:
@@ -49380,7 +49377,7 @@ mov edx, dword [ebp - 0x44]
 mov al, byte [edx + 0xc]
 and eax, 7
 cmp al, 3
-jne loc_fffc581a  ; jne 0xfffc581a
+jne near loc_fffc581a  ; jne 0xfffc581a
 jmp near loc_fffc56a1  ; jmp 0xfffc56a1
 
 loc_fffc5954:
@@ -49404,17 +49401,17 @@ mov ecx, dword [ebp - 0x40]
 imul eax, edx
 cmp eax, 0x2000
 mov dword [ecx], eax
-ja loc_fffc581a  ; ja 0xfffc581a
+ja near loc_fffc581a  ; ja 0xfffc581a
 jmp near loc_fffc5750  ; jmp 0xfffc5750
 
 loc_fffc599f:
 cmp dword [ebx + 0x22a8], 1
-jne loc_fffc57f4  ; jne 0xfffc57f4
+jne near loc_fffc57f4  ; jne 0xfffc57f4
 jmp near loc_fffc591e  ; jmp 0xfffc591e
 
 loc_fffc59b1:
 cmp dword [ebx + 0x2244], 0
-je loc_fffc5842  ; je 0xfffc5842
+je near loc_fffc5842  ; je 0xfffc5842
 jmp near loc_fffc5853  ; jmp 0xfffc5853
 
 loc_fffc59c3:
@@ -49450,7 +49447,7 @@ mov al, byte [ecx + 0x2f]
 add al, byte [ecx + 0x12]
 test al, al
 mov byte [ecx + 0x3a], al
-je loc_fffc5aeb  ; je 0xfffc5aeb
+je near loc_fffc5aeb  ; je 0xfffc5aeb
 imul eax, edi, 0x8c
 mov dword [ebp + edi*4 - 0x24], 0
 mov word [ebp + edi*2 - 0x2a], 0x7fff
@@ -49500,7 +49497,7 @@ mov dword [ebp + edi*4 - 0x24], eax
 loc_fffc5ab3:
 inc dword [ebp - 0x3c]
 cmp dword [ebp - 0x3c], 2
-jne loc_fffc5a31  ; jne 0xfffc5a31
+jne near loc_fffc5a31  ; jne 0xfffc5a31
 mov si, word [ebp + edi*2 - 0x2a]
 test si, si
 sete dl
@@ -49529,11 +49526,11 @@ loc_fffc5b05:
 inc edi
 add ecx, 0x1055
 cmp edi, 2
-jne loc_fffc5a01  ; jne 0xfffc5a01
+jne near loc_fffc5a01  ; jne 0xfffc5a01
 movzx edi, word [ebp - 0x26]
 mov esi, 0xf
 cmp di, 0x7fff
-je loc_fffc5d88  ; je 0xfffc5d88
+je near loc_fffc5d88  ; je 0xfffc5d88
 test di, di
 jne short loc_fffc5b38  ; jne 0xfffc5b38
 
@@ -49574,7 +49571,7 @@ mov byte [ebx + 0x3b], dl
 
 loc_fffc5b7f:
 cmp byte [ebx + 0x108f], 0
-je loc_fffc5d88  ; je 0xfffc5d88
+je near loc_fffc5d88  ; je 0xfffc5d88
 add eax, 4
 mov byte [ebx + 0x1090], al
 jmp near loc_fffc5d88  ; jmp 0xfffc5d88
@@ -49596,46 +49593,46 @@ jne short loc_fffc5c1b  ; jne 0xfffc5c1b
 loc_fffc5bb8:
 cmp eax, 0x74b
 mov dword [ebx + 0x20ba], 0
-je loc_fffc5d1e  ; je 0xfffc5d1e
+je near loc_fffc5d1e  ; je 0xfffc5d1e
 ja short loc_fffc5bf5  ; ja 0xfffc5bf5
 cmp eax, 0x535
-je loc_fffc5d4c  ; je 0xfffc5d4c
+je near loc_fffc5d4c  ; je 0xfffc5d4c
 cmp eax, 0x640
-je loc_fffc5d40  ; je 0xfffc5d40
+je near loc_fffc5d40  ; je 0xfffc5d40
 cmp eax, 0x42b
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp near loc_fffc5d58  ; jmp 0xfffc5d58
 
 loc_fffc5bf5:
 cmp eax, 0x960
-je loc_fffc5cee  ; je 0xfffc5cee
+je near loc_fffc5cee  ; je 0xfffc5cee
 cmp eax, 0xa6b
-je loc_fffc5cd3  ; je 0xfffc5cd3
+je near loc_fffc5cd3  ; je 0xfffc5cd3
 cmp eax, 0x855
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp near loc_fffc5d06  ; jmp 0xfffc5d06
 
 loc_fffc5c1b:
 cmp eax, 0x7d0
 mov dword [ebx + 0x20ba], 0
-je loc_fffc5d06  ; je 0xfffc5d06
+je near loc_fffc5d06  ; je 0xfffc5d06
 ja short loc_fffc5c80  ; ja 0xfffc5c80
 cmp eax, 0x578
-je loc_fffc5d40  ; je 0xfffc5d40
+je near loc_fffc5d40  ; je 0xfffc5d40
 ja short loc_fffc5c5a  ; ja 0xfffc5c5a
 cmp eax, 0x42b
-je loc_fffc5d58  ; je 0xfffc5d58
+je near loc_fffc5d58  ; je 0xfffc5d58
 cmp eax, 0x535
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp near loc_fffc5d4c  ; jmp 0xfffc5d4c
 
 loc_fffc5c5a:
 cmp eax, 0x708
-je loc_fffc5d1e  ; je 0xfffc5d1e
+je near loc_fffc5d1e  ; je 0xfffc5d1e
 cmp eax, 0x74b
-je loc_fffc5d12  ; je 0xfffc5d12
+je near loc_fffc5d12  ; je 0xfffc5d12
 cmp eax, 0x640
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp near loc_fffc5d2a  ; jmp 0xfffc5d2a
 
 loc_fffc5c80:
@@ -49645,7 +49642,7 @@ ja short loc_fffc5c9d  ; ja 0xfffc5c9d
 cmp eax, 0x855
 je short loc_fffc5cfa  ; je 0xfffc5cfa
 cmp eax, 0x898
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp short loc_fffc5cee  ; jmp 0xfffc5cee
 
 loc_fffc5c9d:
@@ -49654,7 +49651,7 @@ je short loc_fffc5cc7  ; je 0xfffc5cc7
 cmp eax, 0xaf0
 je short loc_fffc5cb8  ; je 0xfffc5cb8
 cmp eax, 0xa28
-jne loc_fffc5d64  ; jne 0xfffc5d64
+jne near loc_fffc5d64  ; jne 0xfffc5d64
 jmp short loc_fffc5cd3  ; jmp 0xfffc5cd3
 
 loc_fffc5cb8:
@@ -49718,7 +49715,7 @@ mov dword [ebx + 0x20b6], 0xaf1
 loc_fffc5d6e:
 cmp dword [ebx + 0x20b6], 0xaf1
 mov esi, 0xb
-jne loc_fffc5b41  ; jne 0xfffc5b41
+jne near loc_fffc5b41  ; jne 0xfffc5b41
 jmp near loc_fffc5b2e  ; jmp 0xfffc5b2e
 
 loc_fffc5d88:
@@ -49740,7 +49737,7 @@ mov ebx, eax
 lea esp, [esp - 0x1c]
 movzx ecx, word [eax + 0x22dd]
 test cx, cx
-jne loc_fffc5e42  ; jne 0xfffc5e42
+jne near loc_fffc5e42  ; jne 0xfffc5e42
 call fcn_fffbff43  ; call 0xfffbff43
 mov dword [ebp - 0x24], eax
 mov esi, ebx
@@ -49819,7 +49816,7 @@ mov ebx, eax
 lea esp, [esp - 0x3c]
 movzx ecx, byte [eax + 0x22dc]
 test cl, cl
-jne loc_fffc5f45  ; jne 0xfffc5f45
+jne near loc_fffc5f45  ; jne 0xfffc5f45
 call fcn_fffbff43  ; call 0xfffbff43
 imul eax, eax, 0x3e8
 mov edi, ebx
@@ -49829,7 +49826,7 @@ xor ecx, ecx
 
 loc_fffc5e97:
 cmp byte [edi + 0x3a], 0
-je loc_fffc5f32  ; je 0xfffc5f32
+je near loc_fffc5f32  ; je 0xfffc5f32
 imul eax, dword [ebp - 0x20], 0x8c
 mov dword [ebp - 0x1c], 0
 mov dword [ebp - 0x3c], eax
@@ -49881,7 +49878,7 @@ loc_fffc5f32:
 inc dword [ebp - 0x20]
 add edi, 0x1055
 cmp dword [ebp - 0x20], 2
-jne loc_fffc5e97  ; jne 0xfffc5e97
+jne near loc_fffc5e97  ; jne 0xfffc5e97
 
 loc_fffc5f45:
 cmp byte [ebx + 0x3a], 0
@@ -49911,7 +49908,7 @@ mov ebx, eax
 lea esp, [esp - 0x3c]
 movzx ecx, byte [eax + 0x22db]
 test cl, cl
-jne loc_fffc6048  ; jne 0xfffc6048
+jne near loc_fffc6048  ; jne 0xfffc6048
 call fcn_fffbff43  ; call 0xfffbff43
 imul eax, eax, 0x3e8
 mov edi, ebx
@@ -49921,7 +49918,7 @@ xor ecx, ecx
 
 loc_fffc5f9a:
 cmp byte [edi + 0x3a], 0
-je loc_fffc6035  ; je 0xfffc6035
+je near loc_fffc6035  ; je 0xfffc6035
 imul eax, dword [ebp - 0x20], 0x8c
 mov dword [ebp - 0x1c], 0
 mov dword [ebp - 0x3c], eax
@@ -49973,7 +49970,7 @@ loc_fffc6035:
 inc dword [ebp - 0x20]
 add edi, 0x1055
 cmp dword [ebp - 0x20], 2
-jne loc_fffc5f9a  ; jne 0xfffc5f9a
+jne near loc_fffc5f9a  ; jne 0xfffc5f9a
 
 loc_fffc6048:
 cmp byte [ebx + 0x3a], 0
@@ -50003,24 +50000,24 @@ push ebx
 lea esp, [esp - 0x2c]
 mov bl, byte [eax + 0x22d9]
 test bl, bl
-jne loc_fffc6257  ; jne 0xfffc6257
+jne near loc_fffc6257  ; jne 0xfffc6257
 cmp byte [eax + 0x2274], 0
-jne loc_fffc6171  ; jne 0xfffc6171
+jne near loc_fffc6171  ; jne 0xfffc6171
 cmp byte [eax + 0x2275], 0
-jne loc_fffc6171  ; jne 0xfffc6171
+jne near loc_fffc6171  ; jne 0xfffc6171
 cmp byte [eax + 0x2276], 0
-jne loc_fffc6171  ; jne 0xfffc6171
+jne near loc_fffc6171  ; jne 0xfffc6171
 cmp byte [eax + 0x2277], 0
-jne loc_fffc6171  ; jne 0xfffc6171
+jne near loc_fffc6171  ; jne 0xfffc6171
 mov eax, dword [eax + 0x20b6]
 cmp eax, 0x74b
-je loc_fffc6155  ; je 0xfffc6155
+je near loc_fffc6155  ; je 0xfffc6155
 ja short loc_fffc610f  ; ja 0xfffc610f
 cmp eax, 0x535
 je short loc_fffc614e  ; je 0xfffc614e
 ja short loc_fffc60ed  ; ja 0xfffc60ed
 cmp eax, 0x320
-je loc_fffc6251  ; je 0xfffc6251
+je near loc_fffc6251  ; je 0xfffc6251
 cmp eax, 0x42b
 mov al, 6
 cmove ebx, eax
@@ -50028,11 +50025,11 @@ jmp near loc_fffc6257  ; jmp 0xfffc6257
 
 loc_fffc60ed:
 cmp eax, 0x640
-je loc_fffc6255  ; je 0xfffc6255
+je near loc_fffc6255  ; je 0xfffc6255
 cmp eax, 0x708
 je short loc_fffc6155  ; je 0xfffc6155
 cmp eax, 0x578
-jne loc_fffc6257  ; jne 0xfffc6257
+jne near loc_fffc6257  ; jne 0xfffc6257
 jmp near loc_fffc6255  ; jmp 0xfffc6255
 
 loc_fffc610f:
@@ -50044,7 +50041,7 @@ je short loc_fffc615c  ; je 0xfffc615c
 cmp eax, 0x898
 je short loc_fffc6163  ; je 0xfffc6163
 cmp eax, 0x7d0
-jne loc_fffc6257  ; jne 0xfffc6257
+jne near loc_fffc6257  ; jne 0xfffc6257
 jmp short loc_fffc615c  ; jmp 0xfffc615c
 
 loc_fffc6133:
@@ -50053,7 +50050,7 @@ je short loc_fffc616a  ; je 0xfffc616a
 cmp eax, 0xaf0
 je short loc_fffc616a  ; je 0xfffc616a
 cmp eax, 0xa28
-jne loc_fffc6257  ; jne 0xfffc6257
+jne near loc_fffc6257  ; jne 0xfffc6257
 jmp short loc_fffc616a  ; jmp 0xfffc616a
 
 loc_fffc614e:
@@ -50140,7 +50137,7 @@ cmovb ebx, eax
 
 loc_fffc6229:
 cmp dword [edi + 0x27], 0
-jne loc_fffc6190  ; jne 0xfffc6190
+jne near loc_fffc6190  ; jne 0xfffc6190
 jmp short loc_fffc61c9  ; jmp 0xfffc61c9
 
 loc_fffc6235:
@@ -50190,7 +50187,7 @@ mov ebx, eax
 lea esp, [esp - 0x2c]
 movzx ecx, byte [eax + 0x22da]
 test cl, cl
-jne loc_fffc6362  ; jne 0xfffc6362
+jne near loc_fffc6362  ; jne 0xfffc6362
 call fcn_fffbff43  ; call 0xfffbff43
 mov dword [ebp - 0x1c], eax
 dec eax
@@ -50241,7 +50238,7 @@ inc byte [ebp - 0x1d]
 add edi, 0x1055
 add esi, 0x8c
 cmp byte [ebp - 0x1d], 2
-jne loc_fffc62a9  ; jne 0xfffc62a9
+jne near loc_fffc62a9  ; jne 0xfffc62a9
 cmp ecx, 0xf
 ja short loc_fffc634c  ; ja 0xfffc634c
 mov eax, 1
@@ -50281,7 +50278,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc6385:
+endloc_fffc6385:
 db 0x00
 db 0x00
 db 0x00
@@ -50415,7 +50412,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc64bb:  ; not directly referenced
+fcn_fffc64bb:
 push ebp
 mov ebp, esp
 push edi
@@ -50446,7 +50443,7 @@ not esi
 xor ecx, ecx
 jmp short loc_fffc656d  ; jmp 0xfffc656d
 
-loc_fffc6506:  ; not directly referenced
+loc_fffc6506:
 mov edi, dword [edx*4 + ref_fffcf5b0]  ; mov edi, dword [edx*4 - 0x30a50]
 cmp bl, 1
 mov dword [ebp - 0x24], edi
@@ -50458,25 +50455,25 @@ cmp bl, 3
 jne short loc_fffc6538  ; jne 0xfffc6538
 jmp short loc_fffc6532  ; jmp 0xfffc6532
 
-loc_fffc6523:  ; not directly referenced
+loc_fffc6523:
 mov edi, dword [ebp - 0x10]
 jmp short loc_fffc6535  ; jmp 0xfffc6535
 
-loc_fffc6528:  ; not directly referenced
+loc_fffc6528:
 mov edi, dword [ebp - 0x14]
 jmp short loc_fffc6535  ; jmp 0xfffc6535
 
-loc_fffc652d:  ; not directly referenced
+loc_fffc652d:
 mov edi, dword [ebp - 0x18]
 jmp short loc_fffc6535  ; jmp 0xfffc6535
 
-loc_fffc6532:  ; not directly referenced
+loc_fffc6532:
 mov edi, dword [ebp - 0x1c]
 
-loc_fffc6535:  ; not directly referenced
+loc_fffc6535:
 mov ecx, dword [edi + edx*4]
 
-loc_fffc6538:  ; not directly referenced
+loc_fffc6538:
 mov edi, dword [ebp - 0x24]
 and ecx, esi
 add edi, eax
@@ -50491,28 +50488,28 @@ cmp bl, 3
 jne short loc_fffc656c  ; jne 0xfffc656c
 jmp short loc_fffc6566  ; jmp 0xfffc6566
 
-loc_fffc6557:  ; not directly referenced
+loc_fffc6557:
 mov edi, dword [ebp - 0x10]
 jmp short loc_fffc6569  ; jmp 0xfffc6569
 
-loc_fffc655c:  ; not directly referenced
+loc_fffc655c:
 mov edi, dword [ebp - 0x14]
 jmp short loc_fffc6569  ; jmp 0xfffc6569
 
-loc_fffc6561:  ; not directly referenced
+loc_fffc6561:
 mov edi, dword [ebp - 0x18]
 jmp short loc_fffc6569  ; jmp 0xfffc6569
 
-loc_fffc6566:  ; not directly referenced
+loc_fffc6566:
 mov edi, dword [ebp - 0x1c]
 
-loc_fffc6569:  ; not directly referenced
+loc_fffc6569:
 mov dword [edi + edx*4], ecx
 
-loc_fffc656c:  ; not directly referenced
+loc_fffc656c:
 inc edx
 
-loc_fffc656d:  ; not directly referenced
+loc_fffc656d:
 cmp edx, dword [ebp - 0x20]
 jb short loc_fffc6506  ; jb 0xfffc6506
 lea esp, [esp + 0x18]
@@ -50522,7 +50519,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc657b:  ; not directly referenced
+fcn_fffc657b:
 push ebp
 mov ebp, esp
 push edi
@@ -50610,7 +50607,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc66a8:  ; not directly referenced
+fcn_fffc66a8:
 push ebp
 mov ebp, esp
 push edi
@@ -50628,7 +50625,7 @@ mov esi, dword [ecx]
 xor ecx, ecx
 jmp short loc_fffc66f5  ; jmp 0xfffc66f5
 
-loc_fffc66d6:  ; not directly referenced
+loc_fffc66d6:
 movzx ebx, cl
 bt esi, ecx
 jae short loc_fffc66f4  ; jae 0xfffc66f4
@@ -50640,10 +50637,10 @@ add edi, dword [ebp - 0x10]
 add ebx, edi
 inc word [edx + ebx*2]
 
-loc_fffc66f4:  ; not directly referenced
+loc_fffc66f4:
 inc ecx
 
-loc_fffc66f5:  ; not directly referenced
+loc_fffc66f5:
 cmp cl, byte [eax + 0x20b5]
 jb short loc_fffc66d6  ; jb 0xfffc66d6
 pop ebx
@@ -50654,7 +50651,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc6704:  ; not directly referenced
+fcn_fffc6704:
 push ebp
 mov ebp, esp
 push edi
@@ -50713,23 +50710,23 @@ mov dword [ebp - 0x1318], 0
 mov dword [ebp - 0x1354], esi
 mov dword [ebp - 0x1378], eax
 
-loc_fffc681a:  ; not directly referenced
+loc_fffc681a:
 mov ecx, dword [ebp - 0x1348]
 mov ebx, dword [ebp - 0x1318]
 test byte [ecx + ebx], 0xdf
-jne loc_fffc6923  ; jne 0xfffc6923
+jne near loc_fffc6923  ; jne 0xfffc6923
 xor ecx, ecx
 mov edx, 0x20
 lea eax, [ebp - 0x12c8]
 call fcn_fffa24c1  ; call 0xfffa24c1
 mov ecx, dword [ebp - 0x1348]
 cmp byte [ecx + ebx], 0x20
-jne loc_fffc6923  ; jne 0xfffc6923
+jne near loc_fffc6923  ; jne 0xfffc6923
 imul esi, dword [ebp - 0x1318], 0x12
 xor ebx, ebx
 mov dword [ebp - 0x12fc], esi
 
-loc_fffc6861:  ; not directly referenced
+loc_fffc6861:
 mov ecx, dword [ebp - 0x1304]
 mov edx, ebx
 mov eax, dword [ebp - 0x1300]
@@ -50737,13 +50734,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffc6883  ; jne 0xfffc6883
 
-loc_fffc6878:  ; not directly referenced
+loc_fffc6878:
 inc ebx
 cmp ebx, 4
 jne short loc_fffc6861  ; jne 0xfffc6861
 jmp near loc_fffc6904  ; jmp 0xfffc6904
 
-loc_fffc6883:  ; not directly referenced
+loc_fffc6883:
 imul esi, ebx, 0x240
 mov edi, dword [ebp - 0x12fc]
 add edi, esi
@@ -50775,20 +50772,20 @@ mov ecx, 9
 call fcn_fffa2408  ; call 0xfffa2408
 jmp near loc_fffc6878  ; jmp 0xfffc6878
 
-loc_fffc6904:  ; not directly referenced
+loc_fffc6904:
 inc dword [ebp - 0x1318]
 add dword [ebp - 0x133c], 0x12
 cmp dword [ebp - 0x1318], 0x20
-jne loc_fffc681a  ; jne 0xfffc681a
+jne near loc_fffc681a  ; jne 0xfffc681a
 jmp near loc_fffc71e0  ; jmp 0xfffc71e0
 
-loc_fffc6923:  ; not directly referenced
+loc_fffc6923:
 mov esi, dword [ebp - 0x1338]
 mov byte [ebp - 0x1310], 0
 mov byte [ebp - 0x12fc], 0
 jmp short loc_fffc6971  ; jmp 0xfffc6971
 
-loc_fffc6939:  ; not directly referenced
+loc_fffc6939:
 mov ecx, dword [ebp - 0x1304]
 mov edx, ebx
 mov eax, dword [ebp - 0x1300]
@@ -50801,13 +50798,13 @@ cmp word [edi + ebx*4], ax
 sete al
 add byte [ebp - 0x1310], al
 
-loc_fffc696a:  ; not directly referenced
+loc_fffc696a:
 inc ebx
 cmp ebx, 4
 jne short loc_fffc6939  ; jne 0xfffc6939
 inc esi
 
-loc_fffc6971:  ; not directly referenced
+loc_fffc6971:
 cmp esi, dword [ebp - 0x132c]
 ja short loc_fffc698c  ; ja 0xfffc698c
 mov eax, dword [ebp - 0x135c]
@@ -50816,15 +50813,15 @@ add eax, esi
 lea edi, [ebp + eax*2 - 0x12c8]
 jmp short loc_fffc6939  ; jmp 0xfffc6939
 
-loc_fffc698c:  ; not directly referenced
+loc_fffc698c:
 mov bl, byte [ebp - 0x1310]
 cmp byte [ebp - 0x12fc], bl
-je loc_fffc6904  ; je 0xfffc6904
+je near loc_fffc6904  ; je 0xfffc6904
 mov esi, dword [ebp - 0x1378]
 cmp byte [esi + 0x3a], 0
-jne loc_fffc7201  ; jne 0xfffc7201
+jne near loc_fffc7201  ; jne 0xfffc7201
 
-loc_fffc69ae:  ; not directly referenced
+loc_fffc69ae:
 lea edx, [ebp - 0x12d4]
 mov eax, dword [ebp - 0x1300]
 call fcn_fffacf73  ; call 0xfffacf73
@@ -50842,17 +50839,17 @@ mov dword [ebp - 0x1310], ebx
 mov dword [ebp - 0x1374], esi
 jmp near loc_fffc71c9  ; jmp 0xfffc71c9
 
-loc_fffc6a0c:  ; not directly referenced
+loc_fffc6a0c:
 cmp dword [ebp - 0x1310], 1
 je short loc_fffc6a1e  ; je 0xfffc6a1e
 sbb eax, eax
 and eax, 0x300
 jmp short loc_fffc6a23  ; jmp 0xfffc6a23
 
-loc_fffc6a1e:  ; not directly referenced
+loc_fffc6a1e:
 mov eax, 0x200
 
-loc_fffc6a23:  ; not directly referenced
+loc_fffc6a23:
 mov ecx, dword [ebp - 0x1300]
 mov ebx, dword [ebp - 0x1324]
 mov esi, dword [ebp - 0x1324]
@@ -50869,7 +50866,7 @@ lea eax, [esi + ebx*8]
 lea eax, [ebp + eax*2 - 0x12c8]
 mov dword [ebp - 0x1370], eax
 
-loc_fffc6a7c:  ; not directly referenced
+loc_fffc6a7c:
 mov ecx, dword [ebp - 0x1304]
 lea edx, [ebp - 0x12d4]
 mov eax, dword [ebp - 0x1300]
@@ -50882,7 +50879,7 @@ mov dword [ebp - 0x131c], 0
 mov dword [ebp - 0x12fc], 0
 mov dword [ebp - 0x136c], esi
 
-loc_fffc6ac5:  ; not directly referenced
+loc_fffc6ac5:
 mov ecx, dword [ebp - 0x1304]
 mov edx, dword [ebp - 0x12fc]
 mov eax, dword [ebp - 0x1300]
@@ -50890,7 +50887,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffc6b05  ; jne 0xfffc6b05
 
-loc_fffc6ae0:  ; not directly referenced
+loc_fffc6ae0:
 inc dword [ebp - 0x12fc]
 add dword [ebp - 0x1320], 4
 add dword [ebp - 0x131c], 0x240
@@ -50898,7 +50895,7 @@ cmp dword [ebp - 0x12fc], 4
 jne short loc_fffc6ac5  ; jne 0xfffc6ac5
 jmp near loc_fffc708e  ; jmp 0xfffc708e
 
-loc_fffc6b05:  ; not directly referenced
+loc_fffc6b05:
 mov ebx, dword [ebp - 0x1320]
 mov ax, word [ebx]
 cmp ax, word [ebp - 0x1332]
@@ -50911,7 +50908,7 @@ mov word [ebp - 0x12ea], ax
 mov dword [ebp - 0x1308], esi
 jmp short loc_fffc6bb4  ; jmp 0xfffc6bb4
 
-loc_fffc6b38:  ; not directly referenced
+loc_fffc6b38:
 movzx esi, bl
 mov ecx, dword [ebp - 0x12fc]
 push edi
@@ -50946,17 +50943,17 @@ mov eax, dword [ebp - 0x1300]
 call fcn_fffac5bc  ; call 0xfffac5bc
 add esp, 0x20
 
-loc_fffc6bb4:  ; not directly referenced
+loc_fffc6bb4:
 mov eax, dword [ebp - 0x1300]
 cmp bl, byte [eax + 0x20b5]
-jb loc_fffc6b38  ; jb 0xfffc6b38
+jb near loc_fffc6b38  ; jb 0xfffc6b38
 mov ecx, dword [ebp - 0x12fc]
 mov edx, dword [ebp - 0x1304]
 call fcn_fffc900b  ; call 0xfffc900b
 test eax, eax
-jne loc_fffc7236  ; jne 0xfffc7236
+jne near loc_fffc7236  ; jne 0xfffc7236
 cmp byte [ebp - 0x1330], 0
-jne loc_fffc6dec  ; jne 0xfffc6dec
+jne near loc_fffc6dec  ; jne 0xfffc6dec
 xor ecx, ecx
 mov edx, 9
 lea ebx, [ebp - 0x12e6]
@@ -50983,7 +50980,7 @@ mov edx, dword [ebp - 0x131c]
 add edx, dword [ebp - 0x134c]
 jmp near loc_fffc6d50  ; jmp 0xfffc6d50
 
-loc_fffc6c69:  ; not directly referenced
+loc_fffc6c69:
 push ecx
 push dword [ebp + 0x1c]
 push dword [ebp + 0x18]
@@ -51018,9 +51015,9 @@ mov byte [ebp - 0x1308], cl
 movzx ecx, word [ebp - 0x12e8]
 jmp short loc_fffc6d21  ; jmp 0xfffc6d21
 
-loc_fffc6cee:  ; not directly referenced
+loc_fffc6cee:
 bt ecx, eax
-jae loc_fffc71fa  ; jae 0xfffc71fa
+jae near loc_fffc71fa  ; jae 0xfffc71fa
 mov esi, dword [ebp - 0x131c]
 add esi, dword [ebp - 0x1324]
 movzx edi, byte [esi + eax]
@@ -51033,12 +51030,12 @@ mov edx, esi
 mov byte [ebx + eax], dl
 inc eax
 
-loc_fffc6d21:  ; not directly referenced
+loc_fffc6d21:
 cmp byte [ebp - 0x1308], al
 ja short loc_fffc6cee  ; ja 0xfffc6cee
 jmp near loc_fffc6ae0  ; jmp 0xfffc6ae0
 
-loc_fffc6d2e:  ; not directly referenced
+loc_fffc6d2e:
 mov esi, dword [ebp - 0x131c]
 mov ecx, dword [ebp - 0x1328]
 add esi, ebx
@@ -51050,11 +51047,11 @@ mov ecx, esi
 mov byte [edx + eax], cl
 inc eax
 
-loc_fffc6d50:  ; not directly referenced
+loc_fffc6d50:
 cmp byte [ebp - 0x1308], al
 ja short loc_fffc6d2e  ; ja 0xfffc6d2e
 
-loc_fffc6d58:  ; not directly referenced
+loc_fffc6d58:
 imul edx, dword [ebp - 0x1310], 9
 imul eax, dword [ebp - 0x1318], 0x12
 imul ecx, dword [ebp - 0x1304], 0x900
@@ -51088,10 +51085,10 @@ push edi
 call fcn_fffac6bd  ; call 0xfffac6bd
 add esp, 0x30
 test eax, eax
-je loc_fffc6e75  ; je 0xfffc6e75
+je near loc_fffc6e75  ; je 0xfffc6e75
 jmp near loc_fffc7236  ; jmp 0xfffc7236
 
-loc_fffc6dec:  ; not directly referenced
+loc_fffc6dec:
 imul eax, dword [ebp - 0x1318], 0x12
 imul ebx, dword [ebp - 0x1310], 9
 mov edx, dword [ebp - 0x130c]
@@ -51114,7 +51111,7 @@ mov dl, byte [eax + 0x20b5]
 xor eax, eax
 jmp short loc_fffc6e6c  ; jmp 0xfffc6e6c
 
-loc_fffc6e54:  ; not directly referenced
+loc_fffc6e54:
 movzx esi, byte [ebp + eax - 0x12e6]
 movzx ebx, byte [ebp + eax - 0x12dd]
 add ebx, esi
@@ -51122,12 +51119,12 @@ sar ebx, 1
 mov byte [ecx + eax], bl
 inc eax
 
-loc_fffc6e6c:  ; not directly referenced
+loc_fffc6e6c:
 cmp dl, al
 ja short loc_fffc6e54  ; ja 0xfffc6e54
 jmp near loc_fffc6d58  ; jmp 0xfffc6d58
 
-loc_fffc6e75:  ; not directly referenced
+loc_fffc6e75:
 mov dx, word [ebp - 0x12ea]
 cmp word [ebp - 0x12e8], dx
 je short loc_fffc6eb5  ; je 0xfffc6eb5
@@ -51147,7 +51144,7 @@ push dword [ebp - 0x1308]
 push eax
 jmp near loc_fffc6f38  ; jmp 0xfffc6f38
 
-loc_fffc6eb5:  ; not directly referenced
+loc_fffc6eb5:
 push eax
 add esi, dword [ebp - 0x1314]
 mov ecx, dword [ebp - 0x12fc]
@@ -51169,7 +51166,7 @@ push dword [ebp - 0x1328]
 call fcn_fffac6bd  ; call 0xfffac6bd
 add esp, 0x30
 test eax, eax
-jne loc_fffc7236  ; jne 0xfffc7236
+jne near loc_fffc7236  ; jne 0xfffc7236
 mov cx, word [ebp - 0x12ea]
 cmp word [ebp - 0x12e8], cx
 je short loc_fffc6f53  ; je 0xfffc6f53
@@ -51186,7 +51183,7 @@ push dword [ebp - 0x1344]
 push dword [ebp - 0x1308]
 push esi
 
-loc_fffc6f38:  ; not directly referenced
+loc_fffc6f38:
 push edi
 mov ecx, dword [ebp - 0x12fc]
 mov edx, dword [ebp - 0x1304]
@@ -51194,7 +51191,7 @@ mov eax, dword [ebp - 0x1300]
 call fcn_fffac9ab  ; call 0xfffac9ab
 add esp, 0x30
 
-loc_fffc6f53:  ; not directly referenced
+loc_fffc6f53:
 imul esi, dword [ebp - 0x1310], 9
 imul edx, dword [ebp - 0x1318], 0x12
 imul eax, dword [ebp - 0x12fc], 0x240
@@ -51206,7 +51203,7 @@ mov dword [ebp - 0x1328], esi
 lea edi, [edx + eax]
 jmp near loc_fffc7071  ; jmp 0xfffc7071
 
-loc_fffc6f8f:  ; not directly referenced
+loc_fffc6f8f:
 mov ebx, dword [ebp - 0x1344]
 mov cl, byte [ebp - 0x1308]
 movzx eax, byte [ebp - 0x1308]
@@ -51223,7 +51220,7 @@ mov edx, dword [ebp - 0x130c]
 add edx, edi
 mov byte [edx + eax], 0
 
-loc_fffc6fcf:  ; not directly referenced
+loc_fffc6fcf:
 mov ebx, dword [ebp - 0x1314]
 mov ecx, dword [ebp - 0x130c]
 add ebx, edi
@@ -51252,7 +51249,7 @@ mov ebx, 1
 shl ebx, cl
 or word [esi], bx
 
-loc_fffc703d:  ; not directly referenced
+loc_fffc703d:
 imul ecx, dword [ebp - 0x1304], 0x48
 imul ebx, dword [ebp - 0x12fc], 0x12
 add ebx, dword [ebp - 0x1328]
@@ -51266,17 +51263,17 @@ cmovb edx, ecx
 inc byte [ebp - 0x1308]
 mov byte [eax - 0x1290], dl
 
-loc_fffc7071:  ; not directly referenced
+loc_fffc7071:
 mov eax, dword [ebp - 0x1300]
 mov cl, byte [ebp - 0x1308]
 cmp cl, byte [eax + 0x20b5]
-jb loc_fffc6f8f  ; jb 0xfffc6f8f
+jb near loc_fffc6f8f  ; jb 0xfffc6f8f
 jmp near loc_fffc6ae0  ; jmp 0xfffc6ae0
 
-loc_fffc708e:  ; not directly referenced
+loc_fffc708e:
 inc byte [ebp - 0x1330]
 cmp byte [ebp - 0x1330], 0x20
-jne loc_fffc6a7c  ; jne 0xfffc6a7c
+jne near loc_fffc6a7c  ; jne 0xfffc6a7c
 imul ebx, dword [ebp - 0x1318], 0x12
 imul eax, dword [ebp - 0x1310], 9
 imul esi, dword [ebp - 0x1304], 0x900
@@ -51286,7 +51283,7 @@ mov dword [ebp - 0x12fc], ebx
 mov dword [ebp - 0x1330], eax
 mov dword [ebp - 0x1328], esi
 
-loc_fffc70cf:  ; not directly referenced
+loc_fffc70cf:
 mov ecx, dword [ebp - 0x1304]
 mov edx, edi
 mov eax, dword [ebp - 0x1300]
@@ -51294,24 +51291,24 @@ call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
 jne short loc_fffc70f1  ; jne 0xfffc70f1
 
-loc_fffc70e6:  ; not directly referenced
+loc_fffc70e6:
 inc edi
 cmp edi, 4
 jne short loc_fffc70cf  ; jne 0xfffc70cf
 jmp near loc_fffc71bc  ; jmp 0xfffc71bc
 
-loc_fffc70f1:  ; not directly referenced
+loc_fffc70f1:
 imul eax, edi, 0x240
 cmp dword [ebp - 0x1310], 0
 jne short loc_fffc7108  ; jne 0xfffc7108
 add eax, dword [ebp - 0x12fc]
 jmp short loc_fffc7112  ; jmp 0xfffc7112
 
-loc_fffc7108:  ; not directly referenced
+loc_fffc7108:
 mov esi, dword [ebp - 0x12fc]
 lea eax, [eax + esi + 9]
 
-loc_fffc7112:  ; not directly referenced
+loc_fffc7112:
 mov ebx, dword [ebp - 0x130c]
 xor edx, edx
 imul ecx, edi, 0x240
@@ -51322,7 +51319,7 @@ mov dword [ebp - 0x1320], eax
 add ecx, dword [ebp - 0x1330]
 jmp short loc_fffc71a9  ; jmp 0xfffc71a9
 
-loc_fffc713c:  ; not directly referenced
+loc_fffc713c:
 mov ebx, dword [ebp - 0x130c]
 mov esi, dword [ebp - 0x131c]
 movzx eax, dl
@@ -51351,34 +51348,34 @@ mov esi, dword [ebp - 0x1308]
 sar ebx, 1
 mov byte [eax + esi - 0x1200], bl
 
-loc_fffc71a9:  ; not directly referenced
+loc_fffc71a9:
 mov eax, dword [ebp - 0x1300]
 cmp dl, byte [eax + 0x20b5]
 jb short loc_fffc713c  ; jb 0xfffc713c
 jmp near loc_fffc70e6  ; jmp 0xfffc70e6
 
-loc_fffc71bc:  ; not directly referenced
+loc_fffc71bc:
 inc dword [ebp - 0x1310]
 add dword [ebp - 0x1324], 9
 
-loc_fffc71c9:  ; not directly referenced
+loc_fffc71c9:
 mov ebx, dword [ebp - 0x132c]
 cmp dword [ebp - 0x1310], ebx
-jbe loc_fffc6a0c  ; jbe 0xfffc6a0c
+jbe near loc_fffc6a0c  ; jbe 0xfffc6a0c
 jmp near loc_fffc6904  ; jmp 0xfffc6904
 
-loc_fffc71e0:  ; not directly referenced
+loc_fffc71e0:
 mov esi, dword [ebp - 0x1300]
 mov eax, dword [esi + 0x2223]
 mov dword [eax + 0x4eb0], 0
 xor eax, eax
 jmp short loc_fffc7236  ; jmp 0xfffc7236
 
-loc_fffc71fa:  ; not directly referenced
+loc_fffc71fa:
 mov eax, 1
 jmp short loc_fffc7236  ; jmp 0xfffc7236
 
-loc_fffc7201:  ; not directly referenced
+loc_fffc7201:
 mov ecx, dword [ebp - 0x1348]
 mov esi, dword [ebp - 0x1318]
 mov edx, 9
@@ -51391,7 +51388,7 @@ add eax, dword [esi + 0x2223]
 mov dword [eax], ebx
 jmp near loc_fffc69ae  ; jmp 0xfffc69ae
 
-loc_fffc7236:  ; not directly referenced
+loc_fffc7236:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -51399,7 +51396,7 @@ pop edi
 pop ebp
 ret
 
-fcn_fffc723e:  ; not directly referenced
+fcn_fffc723e:
 push ebp
 mov ebp, esp
 push edi
@@ -51424,7 +51421,7 @@ mov dword [ebp - 0x60], ecx
 mov dword [ebp - 0x68], edx
 jmp near loc_fffc739b  ; jmp 0xfffc739b
 
-loc_fffc727f:  ; not directly referenced
+loc_fffc727f:
 movzx esi, byte [ebp - 0x59]
 mov edx, edi
 mov ecx, esi
@@ -51433,13 +51430,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 mov edx, eax
 xor eax, eax
 test edx, edx
-je loc_fffc7398  ; je 0xfffc7398
+je near loc_fffc7398  ; je 0xfffc7398
 mov ecx, edi
 mov edx, esi
 mov eax, ebx
 call fcn_fffc005b  ; call 0xfffc005b
 test eax, eax
-je loc_fffc73b1  ; je 0xfffc73b1
+je near loc_fffc73b1  ; je 0xfffc73b1
 cmp byte [ebp - 0x78], 0
 sete cl
 cmp byte [ebp - 0x61], 1
@@ -51449,10 +51446,10 @@ je short loc_fffc72c4  ; je 0xfffc72c4
 movzx edx, byte [eax]
 jmp short loc_fffc72c8  ; jmp 0xfffc72c8
 
-loc_fffc72c4:  ; not directly referenced
+loc_fffc72c4:
 movzx edx, byte [eax + 1]
 
-loc_fffc72c8:  ; not directly referenced
+loc_fffc72c8:
 mov ecx, dword [ebp - 0x60]
 mov eax, ebx
 call fcn_fffc02b4  ; call 0xfffc02b4
@@ -51506,22 +51503,22 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 
-loc_fffc7398:  ; not directly referenced
+loc_fffc7398:
 inc byte [ebp - 0x59]
 
-loc_fffc739b:  ; not directly referenced
+loc_fffc739b:
 test eax, eax
 sete cl
 cmp byte [ebp - 0x59], 1
 setbe dl
 test cl, dl
-jne loc_fffc727f  ; jne 0xfffc727f
+jne near loc_fffc727f  ; jne 0xfffc727f
 jmp short loc_fffc73b6  ; jmp 0xfffc73b6
 
-loc_fffc73b1:  ; not directly referenced
+loc_fffc73b1:
 mov eax, 1
 
-loc_fffc73b6:  ; not directly referenced
+loc_fffc73b6:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -51529,7 +51526,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc73be:
+endloc_fffc73be:
 db 0x00
 db 0x00
 
@@ -51610,7 +51607,7 @@ mov dword [ebp - 0x98], eax
 cmp ecx, 0x22
 mov dword [ebp - 0x94], edx
 mov ebx, dword [ebp + 8]
-ja loc_fffc76bc  ; ja 0xfffc76bc
+ja near loc_fffc76bc  ; ja 0xfffc76bc
 mov ecx, dword [ebp + 0x10]
 and ecx, 1
 cmp ecx, 1
@@ -51938,14 +51935,14 @@ mov dl, byte [ebp + 8]
 mov byte [ebp - 0xe], dl
 imul edx, edi, 0x1055
 cmp byte [eax + edx + 0x3a], 0
-jne loc_fffc7824  ; jne 0xfffc7824
+jne near loc_fffc7824  ; jne 0xfffc7824
 jmp near loc_fffc7846  ; jmp 0xfffc7846
 
 loc_fffc778d:
 movzx ebx, byte [ebp - 0xe]
 cmp byte [eax + 0x3a], 0
 mov dword [ebp - 0x18], ebx
-jne loc_fffc782f  ; jne 0xfffc782f
+jne near loc_fffc782f  ; jne 0xfffc782f
 
 loc_fffc779e:
 mov ebx, 0x40
@@ -52006,7 +52003,7 @@ jmp near loc_fffc778d  ; jmp 0xfffc778d
 loc_fffc782f:
 cmp byte [eax + 0x108f], 0
 mov ebx, 0x80
-jne loc_fffc77a3  ; jne 0xfffc77a3
+jne near loc_fffc77a3  ; jne 0xfffc77a3
 jmp near loc_fffc779e  ; jmp 0xfffc779e
 
 loc_fffc7846:
@@ -52051,13 +52048,13 @@ call fcn_fffbb638  ; call 0xfffbb638
 mov edx, eax
 xor eax, eax
 test edx, edx
-je loc_fffc79a9  ; je 0xfffc79a9
+je near loc_fffc79a9  ; je 0xfffc79a9
 mov ecx, edi
 mov edx, esi
 mov eax, ebx
 call fcn_fffc0201  ; call 0xfffc0201
 test eax, eax
-je loc_fffc79c2  ; je 0xfffc79c2
+je near loc_fffc79c2  ; je 0xfffc79c2
 cmp byte [ebp - 0x78], 0
 sete cl
 cmp byte [ebp - 0x61], 1
@@ -52133,7 +52130,7 @@ sete cl
 cmp byte [ebp - 0x59], 1
 setbe dl
 test cl, dl
-jne loc_fffc7890  ; jne 0xfffc7890
+jne near loc_fffc7890  ; jne 0xfffc7890
 jmp short loc_fffc79c7  ; jmp 0xfffc79c7
 
 loc_fffc79c2:
@@ -52173,7 +52170,7 @@ call fcn_fffbb638  ; call 0xfffbb638
 mov edx, eax
 xor eax, eax
 test edx, edx
-je loc_fffc7abf  ; je 0xfffc7abf
+je near loc_fffc7abf  ; je 0xfffc7abf
 mov al, byte [ebp - 0x5d]
 mov ecx, 0x15
 mov byte [ebp - 0x37], al
@@ -52227,7 +52224,7 @@ sete cl
 cmp bl, 1
 setbe dl
 test cl, dl
-jne loc_fffc79f1  ; jne 0xfffc79f1
+jne near loc_fffc79f1  ; jne 0xfffc79f1
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -52418,7 +52415,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-jne loc_fffc7ef2  ; jne 0xfffc7ef2
+jne near loc_fffc7ef2  ; jne 0xfffc7ef2
 cmp dword [ebp + 0x14], 0
 jne short loc_fffc7cca  ; jne 0xfffc7cca
 
@@ -52431,7 +52428,7 @@ mov dword [eax + 0x5030], ebx
 mov eax, edi
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
-jne loc_fffc7ec1  ; jne 0xfffc7ec1
+jne near loc_fffc7ec1  ; jne 0xfffc7ec1
 movzx edx, byte [ebp - 0x38]
 mov dword [ebp - 0x3c], edx
 jmp near loc_fffc7d5b  ; jmp 0xfffc7d5b
@@ -52439,7 +52436,7 @@ jmp near loc_fffc7d5b  ; jmp 0xfffc7d5b
 loc_fffc7cca:
 mov ecx, dword [ebp - 0x48]
 cmp byte [ecx + 0x3a], 0
-jne loc_fffc7ec8  ; jne 0xfffc7ec8
+jne near loc_fffc7ec8  ; jne 0xfffc7ec8
 jmp short loc_fffc7c99  ; jmp 0xfffc7c99
 
 loc_fffc7cd9:
@@ -52498,13 +52495,13 @@ inc eax
 
 loc_fffc7d5b:
 cmp al, byte [edi + 0x20b5]
-jb loc_fffc7cd9  ; jb 0xfffc7cd9
+jb near loc_fffc7cd9  ; jb 0xfffc7cd9
 inc byte [ebp - 0x38]
 
 loc_fffc7d6a:
 movzx ebx, byte [ebp - 0x38]
 cmp ebx, dword [ebp - 0x44]
-jb loc_fffc7b5d  ; jb 0xfffc7b5d
+jb near loc_fffc7b5d  ; jb 0xfffc7b5d
 movzx eax, byte [ebp - 0x24]
 mov byte [ebp - 0x1d], 0
 imul edx, eax, 0x36
@@ -52514,12 +52511,12 @@ jmp near loc_fffc7eae  ; jmp 0xfffc7eae
 
 loc_fffc7d8d:
 cmp dword [ebp + 0xc], 1
-je loc_fffc7e2c  ; je 0xfffc7e2c
+je near loc_fffc7e2c  ; je 0xfffc7e2c
 jb short loc_fffc7e0a  ; jb 0xfffc7e0a
 cmp dword [ebp + 0xc], 2
-je loc_fffc7e5f  ; je 0xfffc7e5f
+je near loc_fffc7e5f  ; je 0xfffc7e5f
 cmp dword [ebp + 0xc], 3
-jne loc_fffc7eab  ; jne 0xfffc7eab
+jne near loc_fffc7eab  ; jne 0xfffc7eab
 imul ecx, dword [ebp - 0x38], 0x24
 imul esi, dword [ebp - 0x1c], 0x1055
 mov eax, ecx
@@ -52618,7 +52615,7 @@ inc byte [ebp - 0x1d]
 loc_fffc7eae:
 mov al, byte [ebp - 0x1d]
 cmp al, byte [edi + 0x20b5]
-jb loc_fffc7d8d  ; jb 0xfffc7d8d
+jb near loc_fffc7d8d  ; jb 0xfffc7d8d
 xor eax, eax
 jmp short loc_fffc7ef2  ; jmp 0xfffc7ef2
 
@@ -52641,7 +52638,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc7c99  ; je 0xfffc7c99
+je near loc_fffc7c99  ; je 0xfffc7c99
 
 loc_fffc7ef2:
 lea esp, [ebp - 0xc]
@@ -52651,11 +52648,11 @@ pop edi
 pop ebp
 ret
 
-loc_fffc7efa:
+endloc_fffc7efa:
 db 0x00
 db 0x00
 
-fcn_fffc7efc:  ; not directly referenced
+fcn_fffc7efc:
 push ebp
 mov ebp, esp
 push edi
@@ -52679,7 +52676,7 @@ xor edx, edx
 mov eax, ebx
 call fcn_fffc7adb  ; call 0xfffc7adb
 
-loc_fffc7f5c:  ; not directly referenced
+loc_fffc7f5c:
 cmp byte [ebx + 0x20fe], 0
 je short loc_fffc7f98  ; je 0xfffc7f98
 cmp dword [ebx + 0x225c], 3
@@ -52693,7 +52690,7 @@ mov eax, dword [edx + 0xd00]
 or eax, 0x40
 mov dword [edx + 0xd00], eax
 
-loc_fffc7f98:  ; not directly referenced
+loc_fffc7f98:
 mov edx, 0x30d40
 mov eax, ebx
 call fcn_fffc7adb  ; call 0xfffc7adb
@@ -52715,11 +52712,11 @@ call fcn_fffc7adb  ; call 0xfffc7adb
 mov dword [ebp - 0x80], ebx
 mov dword [ebp - 0x6c], 0
 
-loc_fffc7ff2:  ; not directly referenced
+loc_fffc7ff2:
 cmp byte [edi + 0x3a], 0
-jne loc_fffc8635  ; jne 0xfffc8635
+jne near loc_fffc8635  ; jne 0xfffc8635
 
-loc_fffc7ffc:  ; not directly referenced
+loc_fffc7ffc:
 inc dword [ebp - 0x6c]
 add edi, 0x1055
 cmp dword [ebp - 0x6c], 2
@@ -52727,7 +52724,7 @@ jne short loc_fffc7ff2  ; jne 0xfffc7ff2
 mov dword [ebp - 0x70], 0
 mov dword [ebp - 0x6c], 0
 
-loc_fffc8019:  ; not directly referenced
+loc_fffc8019:
 mov ecx, dword [ebp - 0x70]
 mov al, byte [ebp - 0x70]
 mov byte [ebp - 0x72], al
@@ -52741,14 +52738,14 @@ xor eax, eax
 mov dword [ebp - 0x88], ecx
 jmp near loc_fffc8251  ; jmp 0xfffc8251
 
-loc_fffc8045:  ; not directly referenced
+loc_fffc8045:
 movzx edi, byte [ebp - 0x71]
 mov edx, dword [ebp - 0x70]
 mov ecx, edi
 mov eax, ebx
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc824c  ; je 0xfffc824c
+je near loc_fffc824c  ; je 0xfffc824c
 imul ecx, dword [ebp - 0x78], 0x46
 imul edx, edi, 0x8c
 imul eax, edi, 0x1055
@@ -52762,19 +52759,19 @@ je short loc_fffc808e  ; je 0xfffc808e
 or esi, 0x40
 jmp short loc_fffc809a  ; jmp 0xfffc809a
 
-loc_fffc808e:  ; not directly referenced
+loc_fffc808e:
 or si, 0x80
 and dl, 1
 jne short loc_fffc809a  ; jne 0xfffc809a
 mov esi, eax
 
-loc_fffc809a:  ; not directly referenced
+loc_fffc809a:
 mov ecx, dword [ebp - 0x70]
 mov edx, edi
 mov eax, ebx
 call fcn_fffc005b  ; call 0xfffc005b
 test eax, eax
-je loc_fffc8267  ; je 0xfffc8267
+je near loc_fffc8267  ; je 0xfffc8267
 mov al, byte [eax]
 cmp al, 0x3c
 jne short loc_fffc80c0  ; jne 0xfffc80c0
@@ -52782,20 +52779,20 @@ and si, 0xf9ff
 or si, 0x200
 jmp short loc_fffc80da  ; jmp 0xfffc80da
 
-loc_fffc80c0:  ; not directly referenced
+loc_fffc80c0:
 cmp al, 0x78
 jne short loc_fffc80d0  ; jne 0xfffc80d0
 and si, 0xf9ff
 or si, 0x400
 jmp short loc_fffc80da  ; jmp 0xfffc80da
 
-loc_fffc80d0:  ; not directly referenced
+loc_fffc80d0:
 mov edx, esi
 and dh, 0xf9
 test al, al
 cmove esi, edx
 
-loc_fffc80da:  ; not directly referenced
+loc_fffc80da:
 mov al, byte [ebp - 0x72]
 mov ecx, 0x15
 mov byte [ebp - 0x37], al
@@ -52852,14 +52849,14 @@ jne short loc_fffc81d5  ; jne 0xfffc81d5
 or esi, 0x40
 jmp short loc_fffc81db  ; jmp 0xfffc81db
 
-loc_fffc81d5:  ; not directly referenced
+loc_fffc81d5:
 or esi, 0x80
 
-loc_fffc81db:  ; not directly referenced
+loc_fffc81db:
 dec dl
 cmove eax, esi
 
-loc_fffc81e0:  ; not directly referenced
+loc_fffc81e0:
 mov esi, dword [ebp - 0x84]
 and esi, 0xffffff3f
 or esi, eax
@@ -52876,7 +52873,7 @@ mov esi, eax
 cmp byte [ebp - 0x7c], 0
 cmovne esi, edx
 
-loc_fffc8214:  ; not directly referenced
+loc_fffc8214:
 cmp byte [ebp - 0x71], 1
 lea edx, [ebp - 0x57]
 sbb eax, eax
@@ -52898,33 +52895,33 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 jmp short loc_fffc824e  ; jmp 0xfffc824e
 
-loc_fffc824c:  ; not directly referenced
+loc_fffc824c:
 xor eax, eax
 
-loc_fffc824e:  ; not directly referenced
+loc_fffc824e:
 inc byte [ebp - 0x71]
 
-loc_fffc8251:  ; not directly referenced
+loc_fffc8251:
 test eax, eax
 sete cl
 cmp byte [ebp - 0x71], 1
 setbe dl
 test cl, dl
-jne loc_fffc8045  ; jne 0xfffc8045
+jne near loc_fffc8045  ; jne 0xfffc8045
 jmp short loc_fffc826e  ; jmp 0xfffc826e
 
-loc_fffc8267:  ; not directly referenced
+loc_fffc8267:
 mov eax, 1
 jmp short loc_fffc8272  ; jmp 0xfffc8272
 
-loc_fffc826e:  ; not directly referenced
+loc_fffc826e:
 test eax, eax
 je short loc_fffc8275  ; je 0xfffc8275
 
-loc_fffc8272:  ; not directly referenced
+loc_fffc8272:
 mov dword [ebp - 0x6c], eax
 
-loc_fffc8275:  ; not directly referenced
+loc_fffc8275:
 mov edx, ebx
 mov eax, dword [ebp - 0x70]
 call fcn_fffc79cf  ; call 0xfffc79cf
@@ -52953,7 +52950,7 @@ lea ecx, [ecx + ecx + 0x380]
 mov dword [ebp - 0x88], ecx
 jmp near loc_fffc84a8  ; jmp 0xfffc84a8
 
-loc_fffc82d4:  ; not directly referenced
+loc_fffc82d4:
 movzx edx, byte [ebp - 0x71]
 mov eax, ebx
 mov dword [ebp - 0x78], edx
@@ -52961,7 +52958,7 @@ mov ecx, edx
 mov edx, dword [ebp - 0x70]
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc84a3  ; je 0xfffc84a3
+je near loc_fffc84a3  ; je 0xfffc84a3
 imul edx, dword [ebp - 0x78], 0x1055
 add edx, ebx
 movzx eax, byte [edx + 0x3b]
@@ -52974,7 +52971,7 @@ sbb esi, esi
 not esi
 and esi, 3
 cmp cx, 4
-jbe loc_fffc84be  ; jbe 0xfffc84be
+jbe near loc_fffc84be  ; jbe 0xfffc84be
 cmp cx, 0xa
 setne byte [ebp - 0x84]
 cmp cx, 8
@@ -52986,19 +52983,19 @@ and edx, 0xfffffffd
 cmp dl, 0xc
 je short loc_fffc834c  ; je 0xfffc834c
 cmp cx, 0x10
-jne loc_fffc84be  ; jne 0xfffc84be
+jne near loc_fffc84be  ; jne 0xfffc84be
 
-loc_fffc834c:  ; not directly referenced
+loc_fffc834c:
 cmp ax, 0xb
 ja short loc_fffc8358  ; ja 0xfffc8358
 lea eax, [eax + eax - 8]
 jmp short loc_fffc835f  ; jmp 0xfffc835f
 
-loc_fffc8358:  ; not directly referenced
+loc_fffc8358:
 sub eax, 0xc
 lea eax, [eax + eax + 1]
 
-loc_fffc835f:  ; not directly referenced
+loc_fffc835f:
 movzx ecx, byte [ebp - 0x7c]
 mov edx, edi
 mov dword [ebp - 0x7c], ecx
@@ -53019,7 +53016,7 @@ cmp eax, 3
 ja short loc_fffc8399  ; ja 0xfffc8399
 jmp short loc_fffc83d1  ; jmp 0xfffc83d1
 
-loc_fffc8399:  ; not directly referenced
+loc_fffc8399:
 sub eax, 6
 mov edi, edx
 cmp eax, 1
@@ -53027,7 +53024,7 @@ ja short loc_fffc83aa  ; ja 0xfffc83aa
 and di, 0xefff
 jmp short loc_fffc83d8  ; jmp 0xfffc83d8
 
-loc_fffc83aa:  ; not directly referenced
+loc_fffc83aa:
 or di, 0x1000
 cmp dword [ebx + 0x2234], 1
 jne short loc_fffc83d8  ; jne 0xfffc83d8
@@ -53038,11 +53035,11 @@ and di, 0xefff
 cmp byte [ebx + 0x20af], 8
 jbe short loc_fffc83d8  ; jbe 0xfffc83d8
 
-loc_fffc83d1:  ; not directly referenced
+loc_fffc83d1:
 mov edi, edx
 or di, 0x1000
 
-loc_fffc83d8:  ; not directly referenced
+loc_fffc83d8:
 mov al, byte [ebp - 0x72]
 mov ecx, 0x15
 mov byte [ebp - 0x37], al
@@ -53094,31 +53091,31 @@ test eax, eax
 cmove eax, esi
 jmp short loc_fffc84a5  ; jmp 0xfffc84a5
 
-loc_fffc84a3:  ; not directly referenced
+loc_fffc84a3:
 xor eax, eax
 
-loc_fffc84a5:  ; not directly referenced
+loc_fffc84a5:
 inc byte [ebp - 0x71]
 
-loc_fffc84a8:  ; not directly referenced
+loc_fffc84a8:
 test eax, eax
 sete cl
 cmp byte [ebp - 0x71], 1
 setbe dl
 test cl, dl
-jne loc_fffc82d4  ; jne 0xfffc82d4
+jne near loc_fffc82d4  ; jne 0xfffc82d4
 jmp short loc_fffc84c8  ; jmp 0xfffc84c8
 
-loc_fffc84be:  ; not directly referenced
+loc_fffc84be:
 mov eax, 5
 jmp near loc_fffc8748  ; jmp 0xfffc8748
 
-loc_fffc84c8:  ; not directly referenced
+loc_fffc84c8:
 test eax, eax
-jne loc_fffc8748  ; jne 0xfffc8748
+jne near loc_fffc8748  ; jne 0xfffc8748
 inc dword [ebp - 0x70]
 cmp dword [ebp - 0x70], 4
-jne loc_fffc8019  ; jne 0xfffc8019
+jne near loc_fffc8019  ; jne 0xfffc8019
 mov byte [ebp - 0x4c], 0
 mov dword [ebp - 0x57], 7
 mov word [ebp - 0x4f], 0
@@ -53179,13 +53176,13 @@ mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-jne loc_fffc86d8  ; jne 0xfffc86d8
+jne near loc_fffc86d8  ; jne 0xfffc86d8
 
-loc_fffc85d7:  ; not directly referenced
+loc_fffc85d7:
 cmp byte [ebx + 0x108f], 0
-jne loc_fffc86bf  ; jne 0xfffc86bf
+jne near loc_fffc86bf  ; jne 0xfffc86bf
 
-loc_fffc85e4:  ; not directly referenced
+loc_fffc85e4:
 mov edx, dword [ebx + 0x2223]
 xor edi, edi
 lea esi, [ebp - 0x2d]
@@ -53193,29 +53190,29 @@ mov eax, dword [edx + 0x5030]
 or eax, 8
 mov dword [edx + 0x5030], eax
 
-loc_fffc85fe:  ; not directly referenced
+loc_fffc85fe:
 mov ecx, dword [ebp - 0x80]
 cmp byte [ecx + 0x3a], 0
-jne loc_fffc86dd  ; jne 0xfffc86dd
+jne near loc_fffc86dd  ; jne 0xfffc86dd
 jmp short loc_fffc8623  ; jmp 0xfffc8623
 
-loc_fffc860d:  ; not directly referenced
+loc_fffc860d:
 xor ecx, ecx
 mov edx, edi
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-jne loc_fffc86d8  ; jne 0xfffc86d8
+jne near loc_fffc86d8  ; jne 0xfffc86d8
 
-loc_fffc8623:  ; not directly referenced
+loc_fffc8623:
 inc edi
 add dword [ebp - 0x80], 0x1055
 cmp edi, 2
 jne short loc_fffc85fe  ; jne 0xfffc85fe
 jmp near loc_fffc86d8  ; jmp 0xfffc86d8
 
-loc_fffc8635:  ; not directly referenced
+loc_fffc8635:
 imul eax, dword [ebp - 0x6c], 0x1055
 add eax, ebx
 call fcn_fffbbf31  ; call 0xfffbbf31
@@ -53254,20 +53251,20 @@ mov eax, ebx
 call fcn_fffc16ce  ; call 0xfffc16ce
 jmp near loc_fffc7ffc  ; jmp 0xfffc7ffc
 
-loc_fffc86bf:  ; not directly referenced
+loc_fffc86bf:
 xor ecx, ecx
 mov edx, 1
 mov eax, ebx
 call fcn_fffbb669  ; call 0xfffbb669
 test eax, eax
 mov dword [ebp - 0x6c], eax
-je loc_fffc85e4  ; je 0xfffc85e4
+je near loc_fffc85e4  ; je 0xfffc85e4
 
-loc_fffc86d8:  ; not directly referenced
+loc_fffc86d8:
 mov eax, dword [ebp - 0x6c]
 jmp short loc_fffc8748  ; jmp 0xfffc8748
 
-loc_fffc86dd:  ; not directly referenced
+loc_fffc86dd:
 mov ecx, edi
 cmp cl, 1
 sbb eax, eax
@@ -53302,9 +53299,9 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc860d  ; je 0xfffc860d
+je near loc_fffc860d  ; je 0xfffc860d
 
-loc_fffc8748:  ; not directly referenced
+loc_fffc8748:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -53467,7 +53464,7 @@ mov dword [ebp - 0x12c], eax
 loc_fffc8a77:
 mov esi, dword [ebp - 0xf4]
 cmp byte [esi + 0x3a], 0
-jne loc_fffc8f7b  ; jne 0xfffc8f7b
+jne near loc_fffc8f7b  ; jne 0xfffc8f7b
 jmp near loc_fffc8d50  ; jmp 0xfffc8d50
 
 loc_fffc8a8c:
@@ -53479,7 +53476,7 @@ mov edx, dword [ebp - 0xec]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc8d3d  ; je 0xfffc8d3d
+je near loc_fffc8d3d  ; je 0xfffc8d3d
 mov al, byte [ebp - 0xec]
 mov bl, byte [ebp - 0x108]
 cmp dword [ebp - 0x134], 1
@@ -53491,7 +53488,7 @@ mov byte [ebp - 0xb5], bl
 mov byte [ebp - 0xa0], bl
 mov byte [ebp - 0x8b], bl
 mov byte [ebp - 0x76], bl
-jne loc_fffc8d00  ; jne 0xfffc8d00
+jne near loc_fffc8d00  ; jne 0xfffc8d00
 imul eax, dword [ebp - 0xec], 0x900
 lea eax, [edi + eax + 0x3c31]
 mov dword [ebp - 0x120], eax
@@ -53564,7 +53561,7 @@ call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
 mov dword [ebp - 0xf0], eax
-jne loc_fffc8d3d  ; jne 0xfffc8d3d
+jne near loc_fffc8d3d  ; jne 0xfffc8d3d
 test esi, esi
 jne short loc_fffc8c1a  ; jne 0xfffc8c1a
 
@@ -53583,7 +53580,7 @@ jmp near loc_fffc8cec  ; jmp 0xfffc8cec
 loc_fffc8c1a:
 mov eax, dword [ebp - 0x12c]
 cmp byte [eax + 0x3a], 0
-jne loc_fffc8fcd  ; jne 0xfffc8fcd
+jne near loc_fffc8fcd  ; jne 0xfffc8fcd
 jmp short loc_fffc8bf4  ; jmp 0xfffc8bf4
 
 loc_fffc8c2c:
@@ -53639,7 +53636,7 @@ mov edx, dword [edi + 0x2223]
 jb short loc_fffc8c51  ; jb 0xfffc8c51
 inc dword [ebp - 0x110]
 cmp dword [ebp - 0x110], 0x40
-jne loc_fffc8b42  ; jne 0xfffc8b42
+jne near loc_fffc8b42  ; jne 0xfffc8b42
 mov dword [edx + 0x3400], 0
 jmp short loc_fffc8d3d  ; jmp 0xfffc8d3d
 
@@ -53670,11 +53667,11 @@ add esp, 0x20
 loc_fffc8d3d:
 inc dword [ebp - 0xec]
 cmp dword [ebp - 0xec], 4
-jne loc_fffc8a96  ; jne 0xfffc8a96
+jne near loc_fffc8a96  ; jne 0xfffc8a96
 
 loc_fffc8d50:
 dec word [ebp - 0x126]
-jne loc_fffc8a77  ; jne 0xfffc8a77
+jne near loc_fffc8a77  ; jne 0xfffc8a77
 cmp dword [ebp - 0x134], 1
 mov dword [ebp - 0xec], 0
 jne short loc_fffc8dee  ; jne 0xfffc8dee
@@ -53727,14 +53724,14 @@ mov edx, dword [ebp - 0xec]
 mov eax, edi
 call fcn_fffbb638  ; call 0xfffbb638
 test eax, eax
-je loc_fffc8f4c  ; je 0xfffc8f4c
+je near loc_fffc8f4c  ; je 0xfffc8f4c
 cmp dword [ebp - 0x118], 1
-je loc_fffc8ef7  ; je 0xfffc8ef7
-jb loc_fffc8eb0  ; jb 0xfffc8eb0
+je near loc_fffc8ef7  ; je 0xfffc8ef7
+jb near loc_fffc8eb0  ; jb 0xfffc8eb0
 cmp dword [ebp - 0x118], 2
-je loc_fffc8f3b  ; je 0xfffc8f3b
+je near loc_fffc8f3b  ; je 0xfffc8f3b
 cmp dword [ebp - 0x118], 3
-jne loc_fffc8f4c  ; jne 0xfffc8f4c
+jne near loc_fffc8f4c  ; jne 0xfffc8f4c
 jmp short loc_fffc8e69  ; jmp 0xfffc8e69
 
 loc_fffc8e38:
@@ -53839,12 +53836,12 @@ jb short loc_fffc8f0a  ; jb 0xfffc8f0a
 loc_fffc8f4c:
 inc dword [ebp - 0xec]
 cmp dword [ebp - 0xec], 4
-jne loc_fffc8dee  ; jne 0xfffc8dee
+jne near loc_fffc8dee  ; jne 0xfffc8dee
 
 loc_fffc8f5f:
 add dword [ebp - 0xf4], 0x1055
 cmp dword [ebp - 0x124], 2
-jne loc_fffc87b4  ; jne 0xfffc87b4
+jne near loc_fffc87b4  ; jne 0xfffc87b4
 jmp near loc_fffc8ffd  ; jmp 0xfffc8ffd
 
 loc_fffc8f7b:
@@ -53855,7 +53852,7 @@ xor esi, esi
 call fcn_ffface48  ; call 0xffface48
 mov ebx, dword [ebp - 0x12c]
 cmp byte [ebx + 0x3a], 0
-je loc_fffc8a8c  ; je 0xfffc8a8c
+je near loc_fffc8a8c  ; je 0xfffc8a8c
 mov ecx, dword [ebp - 0x11c]
 lea edx, [ebp - 0xcc]
 mov eax, edi
@@ -53882,7 +53879,7 @@ push 1
 call fcn_fffbb6de  ; call 0xfffbb6de
 add esp, 0x20
 test eax, eax
-je loc_fffc8bf4  ; je 0xfffc8bf4
+je near loc_fffc8bf4  ; je 0xfffc8bf4
 jmp near loc_fffc8cf8  ; jmp 0xfffc8cf8
 
 loc_fffc8ffd:
@@ -54047,7 +54044,7 @@ and edx, 1
 cmp edi, 9
 setbe al
 test dl, al
-jne loc_fffc9171  ; jne 0xfffc9171
+jne near loc_fffc9171  ; jne 0xfffc9171
 xor eax, eax
 cmp edi, 9
 seta al
@@ -54065,7 +54062,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc922a:
+endloc_fffc922a:
 db 0x00
 db 0x00
 
@@ -54094,7 +54091,7 @@ jmp near loc_fffc98fe  ; jmp 0xfffc98fe
 loc_fffc9260:
 mov al, byte [ebx + 0x22d8]
 test al, al
-jne loc_fffc93f8  ; jne 0xfffc93f8
+jne near loc_fffc93f8  ; jne 0xfffc93f8
 imul eax, edi, 0x8c
 mov dword [ebp - 0x24], 0
 mov dword [ebp - 0x20], 0
@@ -54145,7 +54142,7 @@ sete dl
 cmp word [ebp - 0x1c], 0x7fff
 sete al
 or dl, al
-jne loc_fffc9254  ; jne 0xfffc9254
+jne near loc_fffc9254  ; jne 0xfffc9254
 mov eax, dword [ebp - 0x20]
 mov dword [ebp - 0x24], 0
 movzx esi, word [ebp - 0x1c]
@@ -54157,7 +54154,7 @@ mov eax, ebx
 call fcn_fffc019c  ; call 0xfffc019c
 test eax, eax
 mov ecx, eax
-je loc_fffc9254  ; je 0xfffc9254
+je near loc_fffc9254  ; je 0xfffc9254
 mov eax, dword [ebp - 0x20]
 xor edx, edx
 add eax, ecx
@@ -54176,7 +54173,7 @@ imul edx, edi, 0x1055
 add eax, 4
 cmp dword [ebp - 0x24], 7
 mov byte [ebx + edx + 0x3b], al
-jne loc_fffc9404  ; jne 0xfffc9404
+jne near loc_fffc9404  ; jne 0xfffc9404
 jmp near loc_fffc9254  ; jmp 0xfffc9254
 
 loc_fffc9380:
@@ -54221,7 +54218,7 @@ loc_fffc93db:
 cmp eax, 0xaf1
 mov dword [ebx + 0x20b6], eax
 mov dword [ebp - 0x24], 0xb
-jne loc_fffc9332  ; jne 0xfffc9332
+jne near loc_fffc9332  ; jne 0xfffc9332
 jmp near loc_fffc9254  ; jmp 0xfffc9254
 
 loc_fffc93f8:
@@ -54231,7 +54228,7 @@ jmp short loc_fffc940e  ; jmp 0xfffc940e
 
 loc_fffc9404:
 cmp dword [ebp - 0x24], 0xb
-je loc_fffc98fe  ; je 0xfffc98fe
+je near loc_fffc98fe  ; je 0xfffc98fe
 
 loc_fffc940e:
 mov al, byte [ebx + 0x22da]
@@ -54346,9 +54343,9 @@ jmp near loc_fffc96be  ; jmp 0xfffc96be
 
 loc_fffc954a:
 cmp byte [ebx + edi*2 + 0x2274], 0
-jne loc_fffc9604  ; jne 0xfffc9604
+jne near loc_fffc9604  ; jne 0xfffc9604
 cmp byte [ebx + edi*2 + 0x2275], 0
-jne loc_fffc9604  ; jne 0xfffc9604
+jne near loc_fffc9604  ; jne 0xfffc9604
 mov eax, dword [ebx + 0x20b6]
 cmp eax, 0x535
 je short loc_fffc95c4  ; je 0xfffc95c4
@@ -54356,7 +54353,7 @@ ja short loc_fffc9589  ; ja 0xfffc9589
 cmp eax, 0x320
 je short loc_fffc95a4  ; je 0xfffc95a4
 cmp eax, 0x42b
-jne loc_fffc96be  ; jne 0xfffc96be
+jne near loc_fffc96be  ; jne 0xfffc96be
 jmp short loc_fffc95b4  ; jmp 0xfffc95b4
 
 loc_fffc9589:
@@ -54365,7 +54362,7 @@ je short loc_fffc95e4  ; je 0xfffc95e4
 cmp eax, 0x855
 je short loc_fffc95f4  ; je 0xfffc95f4
 cmp eax, 0x640
-jne loc_fffc96be  ; jne 0xfffc96be
+jne near loc_fffc96be  ; jne 0xfffc96be
 jmp short loc_fffc95d4  ; jmp 0xfffc95d4
 
 loc_fffc95a4:
@@ -54647,7 +54644,7 @@ pop edi
 pop ebp
 ret
 
-loc_fffc990a:
+endloc_fffc990a:
 db 0x00
 db 0x00
 
@@ -60238,21 +60235,7 @@ dd 0x10100e0e
 dd 0x10101010
 
 ref_fffceebc:
-dd 0x6f6f766f
-dd 0x73666f6f
-dd 0x6b6b6b6b
-dd 0x66667161
-dd 0x6e5c6666
-dd 0x62626262
-dd 0x5e5e6c57
-dd 0x766f5e5e
-dd 0x6f6f6f6f
-dd 0x6b6b7366
-dd 0x71616b6b
-dd 0x66666666
-dd 0x62626e5c
-dd 0x6c576262
-dd 0x5e5e5e5e
+db 'ovoooofskkkkaqffff\nbbbbWl^^^^ovoooofskkkkaqffff\nbbbbWl^^^^'
 
 ref_fffceef8:
 dd 0x08080808
@@ -60378,86 +60361,10 @@ dd 0x15151414
 dd 0x15151515
 
 ref_fffcf0bc:
-dd 0x6f6f7669
-dd 0x74636f6f
-dd 0x6b6b6b6b
-dd 0x6a6a7361
-dd 0x715d6a6a
-dd 0x67676767
-dd 0x63636f58
-dd 0x6f576363
-dd 0x62626262
-dd 0x60606d54
-dd 0x6c516060
-dd 0x5e5e5e5e
-dd 0x5d5d6b50
-dd 0x6a4b5d5d
-dd 0x5a5a5a5a
-dd 0x57576847
-dd 0x67455757
-dd 0x56565656
-dd 0x53536642
-dd 0x76695353
-dd 0x6f6f6f6f
-dd 0x6b6b7463
-dd 0x73616b6b
-dd 0x6a6a6a6a
-dd 0x6767715d
-dd 0x6f586767
-dd 0x63636363
-dd 0x62626f57
-dd 0x6d546262
-dd 0x60606060
-dd 0x5e5e6c51
-dd 0x6b505e5e
-dd 0x5d5d5d5d
-dd 0x5a5a6a4b
-dd 0x68475a5a
-dd 0x57575757
-dd 0x56566745
-dd 0x66425656
-dd 0x53535353
+db 'ivooooctkkkkasjjjj]qggggXoccccWobbbbTm````Ql^^^^Pk]]]]KjZZZZGhWWWWEgVVVVBfSSSSivooooctkkkkasjjjj]qggggXoccccWobbbbTm````Ql^^^^Pk]]]]KjZZZZGhWWWWEgVVVVBfSSSS'
 
 ref_fffcf158:
-dd 0x6c706c6c
-dd 0x68686c6c
-dd 0x6868686c
-dd 0x666b6666
-dd 0x63636666
-dd 0x63636368
-dd 0x5f655f5f
-dd 0x5e5e5f5f
-dd 0x5e5e5e64
-dd 0x5b625b5b
-dd 0x59595b5b
-dd 0x59595960
-dd 0x585f5858
-dd 0x54545858
-dd 0x5454545c
-dd 0x50595050
-dd 0x4f4f5050
-dd 0x4f4f4f58
-dd 0x4d564d4d
-dd 0x75754d4d
-dd 0x75757578
-dd 0x72767272
-dd 0x71717272
-dd 0x71717176
-dd 0x6f746f6f
-dd 0x6d6d6f6f
-dd 0x6d6d6d73
-dd 0x6c726c6c
-dd 0x6a6a6c6c
-dd 0x6a6a6a71
-dd 0x69706969
-dd 0x68686969
-dd 0x68686870
-dd 0x666e6666
-dd 0x64646666
-dd 0x6464646d
-dd 0x636c6363
-dd 0x62626363
-dd 0x6262626b
+db 'llplllhhlhhhffkfffcchccc__e___^^d^^^[[b[[[YY`YYYXX_XXXTT\TTTPPYPPPOOXOOOMMVMMMuuxuuurrvrrrqqvqqqootooommsmmmllrllljjqjjjiipiiihhphhhffnfffddmdddcclcccbbkbbb'
 
 ref_fffcf1f4:
 dd loc_fffbb758
@@ -60528,16 +60435,16 @@ dd loc_fffbfbb5
 dd loc_fffbfbc6
 
 ref_fffcf298:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf29c:
 dd 0x1c181410
 
 ref_fffcf2a0:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf2a4:
-dd 0x2c282420
+db ' $(,'
 
 ref_fffcf2a8:
 dd 0x1c181410
@@ -60816,24 +60723,10 @@ ref_fffcf633:
 db '%s: no room for a new PPI',0x0a,0x00
 
 ref_fffcf64e:
-db 0x25
-db 0x73
-dd 0x2064253a
-dd 0x6c6f6f70
-dd 0x6f6f6320
-dd 0x2065696b
-dd 0x72726f63
-dd 0x65747075
-dd 0x2e2e2e64
-dd 0x7325000a
-dd 0x2064253a
-dd 0x746c6564
-dd 0x73692061
-dd 0x2c642520
-dd 0x69796420
-dd 0x6820676e
-dd 0x2e657265
-dd 0x000a2e2e
+db '%s:%d pool cookie corrupted...',0x0a,0x00
+
+ref_fffcf66e:
+db '%s:%d delta is %d, dying here...',0x0a,0x00
 
 ref_fffcf690:
 db '%s:%d failed to allocate %d bytes...',0x0a,0x00
@@ -60991,7 +60884,7 @@ mov edx, dword [edx + 0x50]
 mov dword [eax + 0x10], edx
 ret
 
-loc_fffcfa3d:
+endloc_fffcfa3d:
 db 0x00
 db 0x00
 db 0x00
