@@ -1,18 +1,10 @@
 ;; Generated with r2dumpbin (https://github.com/mytbk/r2dumpbin)
-;;
-;; objcopy -O binary broadwell_refcode_librem.elf refcode.bin
-;; fallocate -l 201464 refcode.bin
-;; readelf -r broadwell_refcode_librem.elf | cut -d' ' -f1 \
-;;     | grep '^[0-9]' | sed -e 's/^/0x/g' -e 's/$/,/g' \
-;;     > refcode_reloc.txt
-;;
-;; [0x00000000]> f va @ 0
-;; [0x00000000]> f reloc:refcode_reloc.txt
+;; label comments removed
 
 bits 32
 org 0x00000000
 
-loc_00000000:
+fcn_00000000:
 pushad
 mov eax, dword [esp + 0x24]
 push eax
@@ -34,7 +26,7 @@ call fcn_00016434  ; call 0x16434
 add esp, 0x10
 mov ebx, eax
 test eax, eax
-je loc_000000c4  ; je 0xc4
+je near loc_000000c4  ; je 0xc4
 sub esp, 0xc
 push ref_00020688  ; push 0x20688
 call fcn_0001545e  ; call 0x1545e
@@ -94,7 +86,7 @@ pop esi
 pop ebp
 ret
 
-fcn_000000ce:  ; not directly referenced
+fcn_000000ce:
 push ebp
 mov ebp, esp
 push esi
@@ -132,7 +124,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00000132:  ; not directly referenced
+loc_00000132:
 push esi
 push ref_000206f4  ; push 0x206f4
 push 0x126
@@ -140,7 +132,7 @@ push ref_00020708  ; push 0x20708
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000014a:  ; not directly referenced
+loc_0000014a:
 push ecx
 push 0x600
 push 0xfffff9ff
@@ -158,7 +150,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000017e:  ; not directly referenced
+loc_0000017e:
 push eax
 add ebx, 0x5da8
 push eax
@@ -172,7 +164,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00000197:  ; not directly referenced
+fcn_00000197:
 push ebp
 mov ebp, esp
 push esi
@@ -190,7 +182,7 @@ je short loc_000001c4  ; je 0x1c4
 cmp byte [eax + 0x4a], 0
 jne short loc_00000228  ; jne 0x228
 
-loc_000001c4:  ; not directly referenced
+loc_000001c4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000001de  ; je 0x1de
@@ -201,13 +193,13 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000001de:  ; not directly referenced
+loc_000001de:
 test esi, esi
 jne short loc_000001ea  ; jne 0x1ea
 cmp ebx, 0x40670
 je short loc_000001fc  ; je 0x1fc
 
-loc_000001ea:  ; not directly referenced
+loc_000001ea:
 push esi
 push 0
 push 1
@@ -215,13 +207,13 @@ push 0x2e7
 call fcn_0001790f  ; call 0x1790f
 add esp, 0x10
 
-loc_000001fc:  ; not directly referenced
+loc_000001fc:
 cmp ebx, 0x40670
 je short loc_0000020c  ; je 0x20c
 cmp ebx, 0x306d0
 jne short loc_00000228  ; jne 0x228
 
-loc_0000020c:  ; not directly referenced
+loc_0000020c:
 push eax
 push 0
 push 0
@@ -235,7 +227,7 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00000228:  ; not directly referenced
+loc_00000228:
 lea esp, [ebp - 8]
 xor eax, eax
 pop ebx
@@ -697,7 +689,7 @@ jmp short loc_000006b0  ; jmp 0x6b0
 
 loc_00000684:
 cmp edi, 0x40670
-jne loc_00000714  ; jne 0x714
+jne near loc_00000714  ; jne 0x714
 push eax
 push 0
 push 0
@@ -892,9 +884,9 @@ mov ebx, eax
 call fcn_00015480  ; call 0x15480
 add esp, 0x10
 test al, al
-je loc_00000949  ; je 0x949
+je near loc_00000949  ; je 0x949
 test ebx, ebx
-jns loc_00000949  ; jns 0x949
+jns near loc_00000949  ; jns 0x949
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00000899  ; je 0x899
@@ -1007,7 +999,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000009a7:  ; not directly referenced
+fcn_000009a7:
 push ebp
 mov ebp, esp
 pop ebp
@@ -1030,7 +1022,7 @@ jne short loc_000009f7  ; jne 0x9f7
 call fcn_00015479  ; call 0x15479
 xor ebx, ebx
 test al, al
-je loc_00000d16  ; je 0xd16
+je near loc_00000d16  ; je 0xd16
 push ecx
 push ecx
 push ref_00020a83  ; push 0x20a83
@@ -1095,10 +1087,10 @@ mov dword [esp], eax
 call fcn_00017ed8  ; call 0x17ed8
 add esp, 0x10
 cmp edi, 0x40670
-jne loc_00000b4a  ; jne 0xb4a
+jne near loc_00000b4a  ; jne 0xb4a
 mov edx, dword [ebx + 0x11]
 cmp byte [edx + 0x10], 0
-je loc_00000b4a  ; je 0xb4a
+je near loc_00000b4a  ; je 0xb4a
 and eax, 0xfffffffe
 mov esi, eax
 mov eax, dword [ebx + 9]
@@ -1188,7 +1180,7 @@ mov byte [ebp - 0x43], cl
 setbe byte [ebp - 0x42]
 jbe short loc_00000b75  ; jbe 0xb75
 test cl, cl
-je loc_00000d06  ; je 0xd06
+je near loc_00000d06  ; je 0xd06
 
 loc_00000b75:
 push ecx
@@ -1209,13 +1201,13 @@ call fcn_0001d3a2  ; call 0x1d3a2
 add esp, 0x10
 cmp dword [ebp - 0x34], 0
 mov dword [ebp - 0x3c], eax
-jne loc_00000ce5  ; jne 0xce5
+jne near loc_00000ce5  ; jne 0xce5
 cmp byte [ebp - 0x2a], 0
 jne short loc_00000bbd  ; jne 0xbbd
 cmp byte [ebp - 0x29], 0
 jne short loc_00000bbd  ; jne 0xbbd
 cmp byte [ebp - 0x28], 0
-je loc_00000ccf  ; je 0xccf
+je near loc_00000ccf  ; je 0xccf
 
 loc_00000bbd:
 push edi
@@ -1235,9 +1227,9 @@ call fcn_0001d1f5  ; call 0x1d1f5
 add esp, 0x10
 mov dword [ebp - 0x3c], eax
 test eax, eax
-jne loc_00000d06  ; jne 0xd06
+jne near loc_00000d06  ; jne 0xd06
 cmp dword [ebp - 0x34], 0
-jne loc_00000d06  ; jne 0xd06
+jne near loc_00000d06  ; jne 0xd06
 push esi
 push esi
 push 7
@@ -1275,7 +1267,7 @@ add esp, 0x10
 test al, al
 
 loc_00000c48:
-je loc_00000d06  ; je 0xd06
+je near loc_00000d06  ; je 0xd06
 mov eax, dword [ebp - 0x30]
 sub esp, 0xc
 push 0x3c
@@ -1297,7 +1289,7 @@ jmp short loc_00000cb8  ; jmp 0xcb8
 
 loc_00000c7a:
 cmp byte [ebp - 0x42], 0
-je loc_00000d06  ; je 0xd06
+je near loc_00000d06  ; je 0xd06
 mov cl, byte [ebp - 0x41]
 mov eax, dword [ebx + 0x11]
 cmp cl, 4
@@ -1362,7 +1354,7 @@ add esp, 0x10
 loc_00000d06:
 inc dword [ebp - 0x40]
 cmp dword [ebp - 0x40], 6
-jne loc_00000b51  ; jne 0xb51
+jne near loc_00000b51  ; jne 0xb51
 mov ebx, dword [ebp - 0x3c]
 
 loc_00000d16:
@@ -1487,7 +1479,7 @@ mov ebx, eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_00000e9b  ; je 0xe9b
+je near loc_00000e9b  ; je 0xe9b
 sub esp, 0xc
 lea eax, [ebx + 0xa]
 push eax
@@ -1544,7 +1536,7 @@ mov byte [ebp - 0x19], al
 loc_00000e9b:
 inc esi
 cmp esi, 0x20
-jne loc_00000df9  ; jne 0xdf9
+jne near loc_00000df9  ; jne 0xdf9
 mov eax, edi
 test al, al
 mov al, byte [ebp - 0x24]
@@ -1603,7 +1595,7 @@ xor ebx, ebx
 loc_00000f2b:
 call fcn_0001c1bf  ; call 0x1c1bf
 cmp bl, al
-jae loc_00000fc0  ; jae 0xfc0
+jae near loc_00000fc0  ; jae 0xfc0
 movzx eax, bl
 push ecx
 push eax
@@ -1669,7 +1661,7 @@ loc_00000fc8:
 mov al, byte [ebp - 0x29]
 mov dl, byte [ebp - 0x2d]
 cmp dl, al
-ja loc_000010df  ; ja 0x10df
+ja near loc_000010df  ; ja 0x10df
 xor ebx, ebx
 movzx esi, dl
 
@@ -1684,7 +1676,7 @@ mov edi, eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_000010a3  ; je 0x10a3
+je near loc_000010a3  ; je 0x10a3
 sub esp, 0xc
 add edi, 0xe
 push edi
@@ -1748,12 +1740,12 @@ loc_00001094:
 inc byte [ebp - 0x2c]
 mov al, byte [ebp - 0x2a]
 cmp byte [ebp - 0x2c], al
-jbe loc_00001018  ; jbe 0x1018
+jbe near loc_00001018  ; jbe 0x1018
 
 loc_000010a3:
 inc ebx
 cmp ebx, 0x20
-jne loc_00000fdb  ; jne 0xfdb
+jne near loc_00000fdb  ; jne 0xfdb
 inc byte [ebp - 0x2d]
 jmp near loc_00000fc8  ; jmp 0xfc8
 
@@ -1883,7 +1875,7 @@ loc_000011bc:
 mov al, byte [ebp - 0x29]
 mov dl, byte [ebp - 0x2a]
 cmp dl, al
-ja loc_00001251  ; ja 0x1251
+ja near loc_00001251  ; ja 0x1251
 xor ebx, ebx
 movzx edi, dl
 
@@ -2062,14 +2054,14 @@ call fcn_00016c9a  ; call 0x16c9a
 add esp, 0x10
 mov esi, eax
 test word [ebp - 0x3c], bx
-je loc_00001534  ; je 0x1534
+je near loc_00001534  ; je 0x1534
 sub esp, 0xc
 lea eax, [eax + 0xba]
 push eax
 call fcn_00017d8b  ; call 0x17d8b
 add esp, 0x10
 test al, 0x40
-je loc_00001534  ; je 0x1534
+je near loc_00001534  ; je 0x1534
 push edx
 push 0x10100
 push 0xff0000ff
@@ -2087,7 +2079,7 @@ mov dword [esp], ebx
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_00001534  ; je 0x1534
+je near loc_00001534  ; je 0x1534
 sub esp, 0xc
 push dword [ebp - 0x54]
 call fcn_00017d8b  ; call 0x17d8b
@@ -2139,17 +2131,17 @@ jne short loc_00001458  ; jne 0x1458
 cmp byte [ebp - 0x4e], 0
 je short loc_0000144c  ; je 0x144c
 cmp byte [ebp - 0x50], 0
-je loc_00001522  ; je 0x1522
+je near loc_00001522  ; je 0x1522
 
 loc_0000144c:
 mov eax, dword [ebp + 0x10]
 cmp dword [eax], 2
-je loc_00001522  ; je 0x1522
+je near loc_00001522  ; je 0x1522
 
 loc_00001458:
 mov eax, dword [ebp + 0x10]
 cmp dword [eax], 1
-je loc_000015ad  ; je 0x15ad
+je near loc_000015ad  ; je 0x15ad
 push ebx
 add esi, 0x3e
 push ebx
@@ -2161,7 +2153,7 @@ mov dword [eax], 1
 call fcn_00015479  ; call 0x15479
 add esp, 0x10
 test al, al
-je loc_000015b3  ; je 0x15b3
+je near loc_000015b3  ; je 0x15b3
 movzx edx, byte [ebp - 0x3a]
 movzx eax, byte [ebp - 0x4d]
 movzx ebx, byte [ebp - 0x4c]
@@ -2234,7 +2226,7 @@ loc_00001534:
 add edi, 5
 lea eax, [ebp - 0x18]
 cmp edi, eax
-jne loc_00001338  ; jne 0x1338
+jne near loc_00001338  ; jne 0x1338
 cmp byte [ebp - 0x39], 0xff
 je short loc_000015be  ; je 0x15be
 lea ebx, [ebp - 0x27]
@@ -2514,7 +2506,7 @@ add esp, 0x10
 loc_000017ee:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_00001d2e  ; je 0x1d2e
+je near loc_00001d2e  ; je 0x1d2e
 push ebx
 push ref_00020cde  ; push 0x20cde
 push 0x83
@@ -2568,7 +2560,7 @@ mov dword [ebp - 0x50], eax
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 cmp byte [ebp - 0x46], 0
-je loc_00001afa  ; je 0x1afa
+je near loc_00001afa  ; je 0x1afa
 cmp dword [ebp - 0x34], 0
 mov eax, dword [edi + 5]
 je short loc_000018aa  ; je 0x18aa
@@ -2581,7 +2573,7 @@ jne short loc_000018ba  ; jne 0x18ba
 
 loc_000018b0:
 cmp byte [eax + 5], 1
-jne loc_00001afa  ; jne 0x1afa
+jne near loc_00001afa  ; jne 0x1afa
 
 loc_000018ba:
 call fcn_00015479  ; call 0x15479
@@ -2886,7 +2878,7 @@ loc_00001ba9:
 cmp dword [ebp - 0x3c], 0x306d0
 je short loc_00001bbc  ; je 0x1bbc
 cmp byte [ebp - 0x47], 0
-je loc_00001c4b  ; je 0x1c4b
+je near loc_00001c4b  ; je 0x1c4b
 
 loc_00001bbc:
 push eax
@@ -3517,7 +3509,7 @@ test esi, esi
 jns short loc_000021ca  ; jns 0x21ca
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00002411  ; je 0x2411
+je near loc_00002411  ; je 0x2411
 push edi
 push edi
 push ref_00020daa  ; push 0x20daa
@@ -3578,7 +3570,7 @@ jne short loc_0000226e  ; jne 0x226e
 loc_0000224b:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_0000240a  ; je 0x240a
+je near loc_0000240a  ; je 0x240a
 push eax
 push eax
 push ref_00020e08  ; push 0x20e08
@@ -3621,7 +3613,7 @@ add esp, 0x10
 test al, al
 je short loc_000022d7  ; je 0x22d7
 test ebx, ebx
-js loc_00002369  ; js 0x2369
+js near loc_00002369  ; js 0x2369
 
 loc_000022d7:
 mov eax, dword [ebp - 0x20]
@@ -3666,7 +3658,7 @@ mov ebx, eax
 call fcn_00015479  ; call 0x15479
 add esp, 0x10
 test al, al
-je loc_00002411  ; je 0x2411
+je near loc_00002411  ; je 0x2411
 mov eax, ebx
 and eax, 0xf
 shr bx, 4
@@ -3805,7 +3797,7 @@ movzx edx, byte [ebp - 0x1c]
 mov eax, 2
 sub eax, edx
 bt ebx, eax
-jae loc_00002524  ; jae 0x2524
+jae near loc_00002524  ; jae 0x2524
 mov eax, edi
 push ecx
 movzx eax, al
@@ -3916,7 +3908,7 @@ sub edx, ebx
 shr eax, 1
 and eax, 7
 bt eax, edx
-jae loc_0000262c  ; jae 0x262c
+jae near loc_0000262c  ; jae 0x262c
 sub esp, 0xc
 add edi, 0x11a
 push edi
@@ -4095,10 +4087,10 @@ and eax, edi
 cmp dl, al
 jne short loc_0000276a  ; jne 0x276a
 cmp byte [ebp - 0x2b], 0
-jne loc_000027d9  ; jne 0x27d9
+jne near loc_000027d9  ; jne 0x27d9
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_000027d9  ; je 0x27d9
+je near loc_000027d9  ; je 0x27d9
 push eax
 push ebx
 push 1
@@ -4162,7 +4154,7 @@ loc_000027d9:
 inc ebx
 shl byte [ebp - 0x2c], 1
 cmp ebx, 3
-jne loc_0000272e  ; jne 0x272e
+jne near loc_0000272e  ; jne 0x272e
 mov al, byte [ebp - 0x2d]
 or al, byte [ebp - 0x29]
 inc al
@@ -4176,7 +4168,7 @@ call dword [eax + 4]  ; ucall
 inc byte [ebp - 0x2b]
 add esp, 0x10
 cmp byte [ebp - 0x2b], 0x64
-jne loc_00002728  ; jne 0x2728
+jne near loc_00002728  ; jne 0x2728
 
 loc_00002812:
 call fcn_00015479  ; call 0x15479
@@ -4294,7 +4286,7 @@ push 0
 call fcn_00016c9a  ; call 0x16c9a
 add esp, 0x10
 test bl, bl
-je loc_000029da  ; je 0x29da
+je near loc_000029da  ; je 0x29da
 mov esi, eax
 lea eax, [ebp - 0x1c]
 push eax
@@ -4543,7 +4535,7 @@ cmp bl, 7
 ja short loc_00002ba4  ; ja 0x2ba4
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00002c2f  ; je 0x2c2f
+je near loc_00002c2f  ; je 0x2c2f
 movzx ebx, bl
 mov dword [ebp + 0x14], ebx
 mov dword [ebp + 0x10], 1
@@ -4555,7 +4547,7 @@ cmp bl, 0xb
 ja short loc_00002ba4  ; ja 0x2ba4
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00002c2f  ; je 0x2c2f
+je near loc_00002c2f  ; je 0x2c2f
 movzx ebx, bl
 mov dword [ebp + 0x14], ebx
 mov dword [ebp + 0x10], 2
@@ -4700,11 +4692,11 @@ add esp, 0x10
 cmp esi, 2
 mov ecx, dword [ebp - 0x28]
 mov dword [ebp - 0x24], eax
-je loc_00002e17  ; je 0x2e17
+je near loc_00002e17  ; je 0x2e17
 cmp esi, 3
 je short loc_00002cdb  ; je 0x2cdb
 test esi, esi
-jne loc_000031b8  ; jne 0x31b8
+jne near loc_000031b8  ; jne 0x31b8
 add edi, 0xda0
 xor esi, esi
 jmp near loc_00002fba  ; jmp 0x2fba
@@ -4828,9 +4820,9 @@ xor esi, esi
 cmp dword [ebp - 0x20], 0
 lea edx, [edi + 0xda0]
 mov edi, ecx
-je loc_00002efa  ; je 0x2efa
+je near loc_00002efa  ; je 0x2efa
 cmp dword [ebp - 0x1c], 0x40670
-jne loc_00002efa  ; jne 0x2efa
+jne near loc_00002efa  ; jne 0x2efa
 
 loc_00002e3a:
 mov ecx, dword [ebp + 0x10]
@@ -4891,7 +4883,7 @@ mov edx, dword [ebp - 0x1c]
 add esp, 0x10
 add edx, 4
 cmp esi, 4
-jne loc_00002e3a  ; jne 0x2e3a
+jne near loc_00002e3a  ; jne 0x2e3a
 jmp near loc_000031b8  ; jmp 0x31b8
 
 loc_00002efa:
@@ -4953,7 +4945,7 @@ mov edx, dword [ebp - 0x1c]
 add esp, 0x10
 add edx, 4
 cmp esi, 4
-jne loc_00002efa  ; jne 0x2efa
+jne near loc_00002efa  ; jne 0x2efa
 jmp near loc_000031b8  ; jmp 0x31b8
 
 loc_00002fba:
@@ -4991,9 +4983,9 @@ mov ecx, dword [ebp - 0x28]
 jne short loc_00002fba  ; jne 0x2fba
 cmp dword [ebp - 0x20], 0
 lea edi, [ecx + 0xda0]
-je loc_000030fa  ; je 0x30fa
+je near loc_000030fa  ; je 0x30fa
 cmp dword [ebp - 0x1c], 0x40670
-jne loc_000030fa  ; jne 0x30fa
+jne near loc_000030fa  ; jne 0x30fa
 mov eax, dword [ebp - 0x24]
 xor si, si
 sub eax, ecx
@@ -5055,7 +5047,7 @@ push eax
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 cmp esi, 2
-je loc_000031b8  ; je 0x31b8
+je near loc_000031b8  ; je 0x31b8
 jmp near loc_00003041  ; jmp 0x3041
 
 loc_000030fa:
@@ -5120,7 +5112,7 @@ push eax
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 cmp esi, 2
-jne loc_00003104  ; jne 0x3104
+jne near loc_00003104  ; jne 0x3104
 
 loc_000031b8:
 lea esp, [ebp - 0xc]
@@ -5392,7 +5384,7 @@ add esp, 0x10
 loc_00003464:
 mov eax, dword [ebp - 0xc84]
 cmp eax, dword [ebp + 0x18]
-je loc_00003577  ; je 0x3577
+je near loc_00003577  ; je 0x3577
 imul eax, eax, 0xc6
 mov edi, dword [ebp - 0xc90]
 xor ebx, ebx
@@ -5447,7 +5439,7 @@ add esp, 0x20
 
 loc_0000350d:
 cmp dword [ebp + 0x18], 0x10
-jne loc_000036ff  ; jne 0x36ff
+jne near loc_000036ff  ; jne 0x36ff
 sub esp, 0xc
 push 0xee
 
@@ -5470,7 +5462,7 @@ loc_00003555:
 inc ebx
 add edi, 0x21
 cmp ebx, 6
-jne loc_00003487  ; jne 0x3487
+jne near loc_00003487  ; jne 0x3487
 inc dword [ebp - 0xc84]
 add dword [ebp - 0xc90], 0xc6
 jmp near loc_00003464  ; jmp 0x3464
@@ -5507,7 +5499,7 @@ jmp short loc_00003588  ; jmp 0x3588
 loc_000035b4:
 inc dword [ebp - 0xc80]
 cmp dword [ebp - 0xc80], 0x1f4
-jne loc_000033ec  ; jne 0x33ec
+jne near loc_000033ec  ; jne 0x33ec
 jmp short loc_0000358d  ; jmp 0x358d
 
 loc_000035cc:
@@ -5731,7 +5723,7 @@ mov dword [ebp - 0x30], eax
 
 loc_000037fa:
 cmp ebx, dword [ebp - 0x30]
-je loc_000038a5  ; je 0x38a5
+je near loc_000038a5  ; je 0x38a5
 movzx eax, byte [ebx + 2]
 push edx
 push eax
@@ -5792,7 +5784,7 @@ jmp near loc_000037fa  ; jmp 0x37fa
 
 loc_000038a5:
 cmp byte [ebp - 0x29], 0
-je loc_000039cb  ; je 0x39cb
+je near loc_000039cb  ; je 0x39cb
 cmp dword [ebp - 0x1c], 0x11
 jne short loc_000038bb  ; jne 0x38bb
 
@@ -5962,7 +5954,7 @@ mov esi, eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_00003b0b  ; je 0x3b0b
+je near loc_00003b0b  ; je 0x3b0b
 mov eax, dword [ebx + 0xd]
 movzx ebx, byte [ebp - 0x20]
 mov dl, byte [eax + ebx + 5]
@@ -6412,9 +6404,9 @@ or ebx, eax
 
 loc_00003ed2:
 cmp word [ebp - 0x58], 4
-jne loc_00003f69  ; jne 0x3f69
+jne near loc_00003f69  ; jne 0x3f69
 cmp byte [ebp - 0x44], 0
-jne loc_00003f69  ; jne 0x3f69
+jne near loc_00003f69  ; jne 0x3f69
 cmp word [ebp - 0x28], 4
 jne short loc_00003f2a  ; jne 0x3f2a
 cmp byte [ebp - 0x3c], 0
@@ -6819,7 +6811,7 @@ add esp, 0x10
 cmp esi, edi
 jb short loc_00004294  ; jb 0x4294
 test ebx, ebx
-jne loc_00004365  ; jne 0x4365
+jne near loc_00004365  ; jne 0x4365
 cmp byte [ebp - 0x28], 1
 mov edi, 2
 mov eax, 0xc
@@ -6906,7 +6898,7 @@ add esp, 0x10
 cmp esi, dword [ebp - 0x1c]
 jb short loc_0000436d  ; jb 0x436d
 test ebx, ebx
-jne loc_00004444  ; jne 0x4444
+jne near loc_00004444  ; jne 0x4444
 xor esi, esi
 
 loc_000043c4:
@@ -7041,7 +7033,7 @@ jmp near loc_000045df  ; jmp 0x45df
 
 loc_00004503:
 cmp dword [ebp - 0x20], 0x40670
-jne loc_000045ec  ; jne 0x45ec
+jne near loc_000045ec  ; jne 0x45ec
 push ecx
 push 0
 push 0
@@ -7056,7 +7048,7 @@ je short loc_00004565  ; je 0x4565
 
 loc_0000452e:
 test ebx, ebx
-je loc_0000461d  ; je 0x461d
+je near loc_0000461d  ; je 0x461d
 cmp byte [ebp - 0x28], 1
 mov edx, 0x1c000000
 mov eax, 0x6000000
@@ -7074,7 +7066,7 @@ jmp short loc_0000458b  ; jmp 0x458b
 
 loc_00004565:
 test ebx, ebx
-je loc_000048c0  ; je 0x48c0
+je near loc_000048c0  ; je 0x48c0
 
 loc_0000456d:
 push eax
@@ -7127,11 +7119,11 @@ jmp short loc_0000461d  ; jmp 0x461d
 
 loc_000045df:
 cmp dword [ebp - 0x20], 0x40670
-je loc_0000452e  ; je 0x452e
+je near loc_0000452e  ; je 0x452e
 
 loc_000045ec:
 test ebx, ebx
-je loc_000048c0  ; je 0x48c0
+je near loc_000048c0  ; je 0x48c0
 
 loc_000045f4:
 push 0
@@ -7178,7 +7170,7 @@ jmp short loc_0000466c  ; jmp 0x466c
 
 loc_00004664:
 test ebx, ebx
-jne loc_0000473e  ; jne 0x473e
+jne near loc_0000473e  ; jne 0x473e
 
 loc_0000466c:
 push eax
@@ -7335,7 +7327,7 @@ add esp, 0x10
 cmp esi, dword [ebp - 0x1c]
 jb short loc_000047b9  ; jb 0x47b9
 test ebx, ebx
-jne loc_00004902  ; jne 0x4902
+jne near loc_00004902  ; jne 0x4902
 
 loc_0000480e:
 push esi
@@ -7534,7 +7526,7 @@ test bl, bl
 jne short loc_00004a02  ; jne 0x4a02
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00004b00  ; je 0x4b00
+je near loc_00004b00  ; je 0x4b00
 mov dword [ebp + 0xc], ref_00021472  ; mov dword [ebp + 0xc], 0x21472
 mov dword [ebp + 8], 0x40
 lea esp, [ebp - 0xc]
@@ -7733,7 +7725,7 @@ inc ax
 jne short loc_00004bcd  ; jne 0x4bcd
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00005d48  ; je 0x5d48
+je near loc_00005d48  ; je 0x5d48
 push eax
 push eax
 push ref_000214c7  ; push 0x214c7
@@ -8010,7 +8002,7 @@ loc_00004e70:
 mov eax, dword [ebp + 0xc]
 mov eax, dword [eax + 0xd]
 cmp byte [eax + 0x39], 1
-jne loc_00004f0a  ; jne 0x4f0a
+jne near loc_00004f0a  ; jne 0x4f0a
 mov eax, dword [ebp - 0x40]
 sub esp, 0xc
 lea edx, [eax + 0xd0]
@@ -8077,7 +8069,7 @@ cmp esi, 3
 jne short loc_00004f25  ; jne 0x4f25
 mov eax, dword [ebp + 0xc]
 cmp byte [eax], 2
-ja loc_00005003  ; ja 0x5003
+ja near loc_00005003  ; ja 0x5003
 
 loc_00004f52:
 mov esi, dword [ebp - 0x40]
@@ -8147,7 +8139,7 @@ loc_00005003:
 mov eax, dword [ebp + 0xc]
 mov eax, dword [eax + 0xd]
 cmp byte [eax + 0x52], 1
-jne loc_00004f52  ; jne 0x4f52
+jne near loc_00004f52  ; jne 0x4f52
 push edx
 mov al, byte [eax + 0x53]
 xor ebx, ebx
@@ -8203,7 +8195,7 @@ loc_0000508c:
 add ebx, 7
 lea eax, [ebp - 0x18]
 cmp ebx, eax
-je loc_0000512a  ; je 0x512a
+je near loc_0000512a  ; je 0x512a
 
 loc_0000509a:
 push ecx
@@ -8309,7 +8301,7 @@ loc_00005185:
 mov eax, dword [ebp + 0xc]
 mov eax, dword [eax + 0xd]
 cmp byte [eax + 0x39], 1
-jne loc_0000538f  ; jne 0x538f
+jne near loc_0000538f  ; jne 0x538f
 jmp near loc_000052f8  ; jmp 0x52f8
 
 loc_0000519a:
@@ -8626,7 +8618,7 @@ jne short loc_00005499  ; jne 0x5499
 
 loc_0000548a:
 cmp byte [eax + 4], 0
-je loc_0000578e  ; je 0x578e
+je near loc_0000578e  ; je 0x578e
 jmp near loc_00005768  ; jmp 0x5768
 
 loc_00005499:
@@ -8648,7 +8640,7 @@ mov dword [esp], eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 test al, 2
-jne loc_0000578e  ; jne 0x578e
+jne near loc_0000578e  ; jne 0x578e
 push eax
 push eax
 push 0xff0000ff
@@ -8693,7 +8685,7 @@ mov edx, dword [eax + 0xd]
 movzx eax, byte [ebp - 0x4c]
 mov bl, byte [edx + eax + 0x5c]
 cmp bl, 0xff
-jne loc_0000567d  ; jne 0x567d
+jne near loc_0000567d  ; jne 0x567d
 
 loc_00005559:
 sub esp, 0xc
@@ -8950,7 +8942,7 @@ loc_000057c1:
 add edi, 7
 lea eax, [ebp - 0x18]
 cmp edi, eax
-jne loc_0000542b  ; jne 0x542b
+jne near loc_0000542b  ; jne 0x542b
 jmp short loc_000057ed  ; jmp 0x57ed
 
 loc_000057d1:
@@ -9001,10 +8993,10 @@ add esp, 0x10
 
 loc_00005839:
 or bl, byte [ebp - 0x4a]
-je loc_00005968  ; je 0x5968
+je near loc_00005968  ; je 0x5968
 mov eax, esi
 test al, al
-je loc_00005968  ; je 0x5968
+je near loc_00005968  ; je 0x5968
 mov edi, dword [ebp - 0x40]
 mov ebx, 0x3e9
 push eax
@@ -9138,7 +9130,7 @@ add esp, 0x10
 
 loc_00005998:
 test byte [ebp - 0x5a], bl
-je loc_00005abd  ; je 0x5abd
+je near loc_00005abd  ; je 0x5abd
 mov edi, dword [ebp - 0x50]
 push ecx
 push ecx
@@ -9272,7 +9264,7 @@ add esp, 0x10
 
 loc_00005aed:
 test byte [ebp - 0x44], bl
-je loc_00005c12  ; je 0x5c12
+je near loc_00005c12  ; je 0x5c12
 mov edi, dword [ebp - 0x54]
 mov ebx, 0x3e9
 push eax
@@ -9413,7 +9405,7 @@ cmp ebx, eax
 jne short loc_00005c15  ; jne 0x5c15
 mov edi, dword [ebp - 0x3c]
 test edi, edi
-je loc_00005cdf  ; je 0x5cdf
+je near loc_00005cdf  ; je 0x5cdf
 mov eax, dword [ebp - 0x40]
 sub esp, 0xc
 add eax, 0x11a
@@ -9736,7 +9728,7 @@ jmp short loc_00005f89  ; jmp 0x5f89
 loc_00005f55:
 mov eax, 0x80000002
 cmp bl, 0x5f
-ja loc_0000600e  ; ja 0x600e
+ja near loc_0000600e  ; ja 0x600e
 lea ecx, [ebx - 0x40]
 mov esi, 0x40
 mov word [ebp - 0x1c], 0x48
@@ -10007,7 +9999,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000061a9:  ; not directly referenced
+fcn_000061a9:
 push ebp
 mov ebp, esp
 push esi
@@ -10023,7 +10015,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000061cb:  ; not directly referenced
+loc_000061cb:
 push edx
 movzx eax, byte [ebx + 2]
 push eax
@@ -10060,7 +10052,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00006226:  ; not directly referenced
+loc_00006226:
 lea esp, [ebp - 8]
 mov eax, ebx
 pop ebx
@@ -10068,7 +10060,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0000622f:  ; not directly referenced
+fcn_0000622f:
 push ebp
 mov ebp, esp
 push edi
@@ -10103,7 +10095,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000628e:  ; not directly referenced
+loc_0000628e:
 cmp edi, 0x40670
 jne short loc_000062bc  ; jne 0x62bc
 push eax
@@ -10122,9 +10114,9 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_000062bc:  ; not directly referenced
+loc_000062bc:
 cmp byte [ebp - 0x19], 0
-je loc_00006357  ; je 0x6357
+je near loc_00006357  ; je 0x6357
 push 0
 and ebx, 0xfffffffe
 push 0x13
@@ -10176,7 +10168,7 @@ call fcn_000041ca  ; call 0x41ca
 add esp, 0x20
 jmp short loc_000063cf  ; jmp 0x63cf
 
-loc_00006357:  ; not directly referenced
+loc_00006357:
 push eax
 push 0
 push 1
@@ -10223,7 +10215,7 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_000063cf:  ; not directly referenced
+loc_000063cf:
 movzx eax, byte [ebp - 0x19]
 push eax
 push esi
@@ -10250,7 +10242,7 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_00006413:  ; not directly referenced
+loc_00006413:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000642d  ; je 0x642d
@@ -10261,7 +10253,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000642d:  ; not directly referenced
+loc_0000642d:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -10356,7 +10348,7 @@ call fcn_0000649b  ; call 0x649b
 add esp, 0x10
 mov dl, al
 cmp al, bl
-jae loc_000065bf  ; jae 0x65bf
+jae near loc_000065bf  ; jae 0x65bf
 mov dword [ebp - 0x1c], edx
 call fcn_00015479  ; call 0x15479
 mov edx, dword [ebp - 0x1c]
@@ -10705,7 +10697,7 @@ call fcn_000065f0  ; call 0x65f0
 add esp, 0x10
 mov dl, al
 cmp al, bl
-jae loc_000068c7  ; jae 0x68c7
+jae near loc_000068c7  ; jae 0x68c7
 mov dword [ebp - 0x1c], edx
 call fcn_00015479  ; call 0x15479
 mov edx, dword [ebp - 0x1c]
@@ -10896,7 +10888,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000069d4:  ; not directly referenced
+fcn_000069d4:
 push ebp
 mov ebp, esp
 push ebx
@@ -10924,7 +10916,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00006a1c:  ; not directly referenced
+loc_00006a1c:
 push ecx
 push ref_000206f4  ; push 0x206f4
 push 0x2de
@@ -10932,7 +10924,7 @@ push ref_000219ce  ; push 0x219ce
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00006a34:  ; not directly referenced
+loc_00006a34:
 mov eax, dword [ebp - 0xc]
 push edx
 push edx
@@ -11109,7 +11101,7 @@ loc_00006bc9:
 mov edi, dword [ebp + 0xc]
 mov al, byte [ebp - 0x2a]
 cmp al, byte [edi]
-jae loc_00006e4c  ; jae 0x6e4c
+jae near loc_00006e4c  ; jae 0x6e4c
 movzx ebx, byte [ebp - 0x2a]
 movzx eax, byte [ebp + ebx - 0x1b]
 shl ebx, 5
@@ -11436,7 +11428,7 @@ mov esi, eax
 call fcn_0000968c  ; call 0x968c
 add esp, 0x10
 test eax, eax
-js loc_000070f3  ; js 0x70f3
+js near loc_000070f3  ; js 0x70f3
 mov eax, dword [ebp + 0x20]
 mov dword [ebp - 0x4c], eax
 movzx eax, si
@@ -11448,7 +11440,7 @@ loc_00006edd:
 mov al, byte [ebp - 0x4c]
 sub eax, dword [ebp + 0x20]
 cmp al, byte [ebp - 0x53]
-jae loc_000070e6  ; jae 0x70e6
+jae near loc_000070e6  ; jae 0x70e6
 push ecx
 push ecx
 lea eax, [ebp - 0x39]
@@ -11466,9 +11458,9 @@ mov dword [ebp - 0x60], eax
 
 loc_00006f10:
 test bl, bl
-jne loc_000070de  ; jne 0x70de
+jne near loc_000070de  ; jne 0x70de
 cmp byte [ebp - 0x51], 2
-ja loc_000070de  ; ja 0x70de
+ja near loc_000070de  ; ja 0x70de
 push eax
 push eax
 movzx eax, byte [edi + 2]
@@ -11585,7 +11577,7 @@ push dword [ebp + 8]
 call fcn_00006e68  ; call 0x6e68
 add esp, 0x20
 cmp eax, dword [ebp - 0x58]
-jae loc_00006fa6  ; jae 0x6fa6
+jae near loc_00006fa6  ; jae 0x6fa6
 push ecx
 push dword [ebp - 0x50]
 push ebx
@@ -11593,7 +11585,7 @@ push edi
 call fcn_000067a6  ; call 0x67a6
 add esp, 0x10
 test al, al
-jne loc_00006fa6  ; jne 0x6fa6
+jne near loc_00006fa6  ; jne 0x6fa6
 mov eax, dword [ebp - 0x60]
 mov bl, 1
 mov dword [eax], 0xbb8
@@ -11660,7 +11652,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000070fb:  ; not directly referenced
+fcn_000070fb:
 push ebp
 mov ebp, esp
 mov ecx, dword [ebp + 8]
@@ -11823,7 +11815,7 @@ loc_0000724d:
 mov bl, byte [ebp - 0x38]
 sub ebx, dword [ebp + 0x20]
 cmp bl, byte [ebp - 0x42]
-jae loc_00007694  ; jae 0x7694
+jae near loc_00007694  ; jae 0x7694
 mov eax, dword [ebp - 0x38]
 mov ecx, dword [ebp + 0x38]
 cmp byte [ebp - 0x41], 0
@@ -11872,9 +11864,9 @@ mov byte [ebp - 0x2a], 0
 
 loc_000072cd:
 cmp byte [ebp - 0x2b], 0x1d
-ja loc_00007620  ; ja 0x7620
+ja near loc_00007620  ; ja 0x7620
 cmp byte [ebp - 0x2a], 1
-ja loc_00007620  ; ja 0x7620
+ja near loc_00007620  ; ja 0x7620
 push eax
 push eax
 mov eax, dword [ebp + 0x28]
@@ -11958,9 +11950,9 @@ mov dword [ebp - 0x4c], eax
 
 loc_000073a7:
 test bl, 1
-jne loc_000074fc  ; jne 0x74fc
+jne near loc_000074fc  ; jne 0x74fc
 cmp byte [ebp - 0x30], 0x18
-ja loc_000074fc  ; ja 0x74fc
+ja near loc_000074fc  ; ja 0x74fc
 push ebx
 push dword [ebp - 0x40]
 push dword [ebp - 0x4c]
@@ -11971,7 +11963,7 @@ mov bl, al
 test al, al
 je short loc_00007408  ; je 0x7408
 cmp byte [ebp - 0x29], 0xff
-je loc_0000751b  ; je 0x751b
+je near loc_0000751b  ; je 0x751b
 cmp byte [ebp - 0x30], 0
 movzx eax, byte [ebp - 0x19]
 jne short loc_000073f5  ; jne 0x73f5
@@ -12190,7 +12182,7 @@ push dword [ebp + 8]
 call fcn_000068d1  ; call 0x68d1
 add esp, 0x20
 test eax, eax
-js loc_00007696  ; js 0x7696
+js near loc_00007696  ; js 0x7696
 mov eax, dword [ebp - 0x30]
 mov dword [ebp - 0x3c], eax
 jmp near loc_000072cd  ; jmp 0x72cd
@@ -12283,9 +12275,9 @@ mov dword [ebp - 0x24], eax
 
 loc_000076ed:
 cmp byte [ebp - 0x1b], 0x1d
-ja loc_00007a4d  ; ja 0x7a4d
+ja near loc_00007a4d  ; ja 0x7a4d
 cmp byte [ebp - 0x1a], 1
-ja loc_00007a4d  ; ja 0x7a4d
+ja near loc_00007a4d  ; ja 0x7a4d
 push eax
 push eax
 movzx eax, byte [edi + 2]
@@ -12369,9 +12361,9 @@ mov dword [ebp - 0x44], eax
 
 loc_000077ce:
 test bl, 1
-jne loc_00007921  ; jne 0x7921
+jne near loc_00007921  ; jne 0x7921
 cmp byte [ebp - 0x20], 0x18
-ja loc_00007921  ; ja 0x7921
+ja near loc_00007921  ; ja 0x7921
 push eax
 push dword [ebp - 0x40]
 push dword [ebp - 0x44]
@@ -12383,7 +12375,7 @@ mov bl, al
 movzx eax, byte [edi + 2]
 je short loc_0000782d  ; je 0x782d
 cmp byte [ebp - 0x19], 0
-js loc_00007943  ; js 0x7943
+js near loc_00007943  ; js 0x7943
 cmp byte [ebp - 0x20], 0
 jne short loc_0000781a  ; jne 0x781a
 mov ecx, dword [ebp + 0x34]
@@ -12680,13 +12672,13 @@ mov dword [ebp - 0x20], eax
 
 loc_00007aeb:
 cmp esi, dword [ebp - 0x20]
-je loc_00007bfd  ; je 0x7bfd
+je near loc_00007bfd  ; je 0x7bfd
 mov al, byte [esi + 0x10]
 cmp byte [esi + 0x11], 0
 mov byte [ebp - 0x19], al
-je loc_00007bf5  ; je 0x7bf5
+je near loc_00007bf5  ; je 0x7bf5
 cmp byte [esi + 0x12], 1
-je loc_00007bf5  ; je 0x7bf5
+je near loc_00007bf5  ; je 0x7bf5
 cmp byte [esi - 1], 0
 mov cl, 3
 lea ebx, [esi - 0xc]
@@ -12708,7 +12700,7 @@ cmp dword [ebp + 0x28], 1
 je short loc_00007bab  ; je 0x7bab
 jb short loc_00007b76  ; jb 0x7b76
 cmp dword [ebp + 0x28], 2
-jne loc_00007bdb  ; jne 0x7bdb
+jne near loc_00007bdb  ; jne 0x7bdb
 push dword [ebp + 0x2c]
 movzx eax, al
 movzx ecx, cl
@@ -13267,7 +13259,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000080c4:  ; not directly referenced
+fcn_000080c4:
 push ebp
 mov ebp, esp
 push edi
@@ -13302,7 +13294,7 @@ mov ebx, dword [ebp + 0xc]
 mov edi, dword [ebp + 0x14]
 mov dword [ebp - 0x1c], eax
 cmp bl, 0xf
-ja loc_00008247  ; ja 0x8247
+ja near loc_00008247  ; ja 0x8247
 mov esi, eax
 call fcn_00015479  ; call 0x15479
 test al, al
@@ -13319,7 +13311,7 @@ loc_00008131:
 mov eax, dword [ebp + 8]
 mov al, byte [eax + 0x1d]
 test al, al
-je loc_000081c9  ; je 0x81c9
+je near loc_000081c9  ; je 0x81c9
 mov edx, dword [ebp + 8]
 cmp byte [edx + 0x1f], 0
 je short loc_00008190  ; je 0x8190
@@ -13336,7 +13328,7 @@ add esp, 0x10
 
 loc_00008166:
 test edi, edi
-je loc_00008233  ; je 0x8233
+je near loc_00008233  ; je 0x8233
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00008188  ; je 0x8188
@@ -13383,7 +13375,7 @@ mov ecx, dword [ebp + 8]
 cmp byte [ecx + 0x1f], 0
 jne short loc_000081ff  ; jne 0x81ff
 test edi, edi
-jne loc_0000826e  ; jne 0x826e
+jne near loc_0000826e  ; jne 0x826e
 mov eax, dword [ebp + 0x10]
 movzx ebx, bl
 mov eax, dword [eax + 0xd]
@@ -13597,7 +13589,7 @@ test al, al
 jne short loc_000083ff  ; jne 0x83ff
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00009375  ; je 0x9375
+je near loc_00009375  ; je 0x9375
 push edx
 push edx
 push ref_00021d2a  ; push 0x21d2a
@@ -13644,10 +13636,10 @@ add esp, 0x10
 loc_00008465:
 cmp dword [ebp + 0x14], 0
 mov byte [ebp - 0x3d9], 0
-je loc_00008577  ; je 0x8577
+je near loc_00008577  ; je 0x8577
 mov eax, dword [ebp + 0x14]
 cmp byte [eax + 0x28], 0
-je loc_00008577  ; je 0x8577
+je near loc_00008577  ; je 0x8577
 lea eax, [ebp - 0x3d8]
 push eax
 push 0
@@ -13749,7 +13741,7 @@ add esp, 0x10
 
 loc_00008597:
 cmp bl, byte [ebp - 0x3de]
-jae loc_0000862d  ; jae 0x862d
+jae near loc_0000862d  ; jae 0x862d
 movzx eax, bl
 shl eax, 5
 lea esi, [ebp + eax - 0x302]
@@ -13790,11 +13782,11 @@ push dword [ebp + 8]
 call fcn_000060c6  ; call 0x60c6
 add esp, 0x10
 test eax, eax
-jns loc_00008e80  ; jns 0x8e80
+jns near loc_00008e80  ; jns 0x8e80
 
 loc_00008620:
 cmp dword [ebp - 0x3f4], 0
-jne loc_00008e5b  ; jne 0x8e5b
+jne near loc_00008e5b  ; jne 0x8e5b
 
 loc_0000862d:
 mov byte [ebp - 0x3f4], 0
@@ -13803,7 +13795,7 @@ mov byte [ebp - 0x3ec], 0
 loc_0000863b:
 mov cl, byte [ebp - 0x3de]
 cmp byte [ebp - 0x3ec], cl
-jae loc_00008786  ; jae 0x8786
+jae near loc_00008786  ; jae 0x8786
 movzx ebx, byte [ebp - 0x3ec]
 mov edx, ebx
 shl edx, 5
@@ -13819,11 +13811,11 @@ movzx edx, cl
 je short loc_000086ab  ; je 0x86ab
 mov esi, dword [ebp + 0x14]
 cmp byte [esi + 0x28], 0
-je loc_00008f06  ; je 0x8f06
+je near loc_00008f06  ; je 0x8f06
 mov eax, dword [eax + 7]
 mov edi, 1
 cmp dword [esi + edx*4 + 0x29], eax
-jne loc_00008f08  ; jne 0x8f08
+jne near loc_00008f08  ; jne 0x8f08
 xor esi, esi
 jmp short loc_000086b2  ; jmp 0x86b2
 
@@ -13917,7 +13909,7 @@ jmp short loc_000087bc  ; jmp 0x87bc
 loc_00008799:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00009375  ; je 0x9375
+je near loc_00009375  ; je 0x9375
 push ecx
 push ecx
 push ref_00021e44  ; push 0x21e44
@@ -13973,7 +13965,7 @@ mov byte [ebp - 0x3fc], 0
 loc_0000884e:
 movzx eax, byte [ebp - 0x3de]
 cmp byte [ebp - 0x3fc], al
-jb loc_00008f25  ; jb 0x8f25
+jb near loc_00008f25  ; jb 0x8f25
 mov esi, dword [ebp - 0x3ec]
 push ebx
 push ebx
@@ -13992,7 +13984,7 @@ push dword [ebp + 8]
 call fcn_00007ab6  ; call 0x7ab6
 add esp, 0x30
 test eax, eax
-js loc_000091e4  ; js 0x91e4
+js near loc_000091e4  ; js 0x91e4
 
 loc_0000889f:
 sub esp, 0xc
@@ -14000,14 +13992,14 @@ push dword [ebp + 0xc]
 call fcn_000082aa  ; call 0x82aa
 add esp, 0x10
 test al, al
-jne loc_00009201  ; jne 0x9201
+jne near loc_00009201  ; jne 0x9201
 
 loc_000088b5:
 inc byte [ebp - 0x408]
 mov al, byte [ebp - 0x3ee]
 add dword [ebp - 0x3ec], 0x41
 cmp byte [ebp - 0x408], al
-jb loc_0000882f  ; jb 0x882f
+jb near loc_0000882f  ; jb 0x882f
 push eax
 xor edi, edi
 push eax
@@ -14057,7 +14049,7 @@ mov eax, edi
 cmp al, byte [ebp - 0x3ee]
 jb short loc_00008907  ; jb 0x8907
 cmp byte [ebp - 0x3df], 0
-jne loc_00009278  ; jne 0x9278
+jne near loc_00009278  ; jne 0x9278
 
 loc_00008965:
 mov byte [ebp - 0x3ee], 1
@@ -14068,14 +14060,14 @@ mov byte [ebp - 0x3ec], 0
 loc_00008973:
 mov al, byte [ebp - 0x3ec]
 cmp al, byte [ebp - 0x3de]
-jae loc_00008ac0  ; jae 0x8ac0
+jae near loc_00008ac0  ; jae 0x8ac0
 movzx edi, byte [ebp - 0x3ec]
 mov eax, edi
 shl eax, 5
 lea ecx, [ebp + eax - 0x302]
 cmp byte [ecx + 0xb], 0
 mov al, byte [ecx + 2]
-je loc_00008ab5  ; je 0x8ab5
+je near loc_00008ab5  ; je 0x8ab5
 cmp byte [ebp - 0x3df], 0
 jne short loc_000089c0  ; jne 0x89c0
 
@@ -14211,7 +14203,7 @@ mov dword [ebp - 0x3f8], eax
 loc_00008b10:
 mov al, byte [ebp - 0x3ec]
 cmp al, byte [ebp - 0x3de]
-jae loc_00008d8d  ; jae 0x8d8d
+jae near loc_00008d8d  ; jae 0x8d8d
 movzx eax, byte [ebp - 0x3ec]
 mov dword [ebp - 0x3fc], eax
 shl eax, 5
@@ -14232,7 +14224,7 @@ mov dword [ebp - 0x400], eax
 jne short loc_00008b89  ; jne 0x8b89
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00008d82  ; je 0x8d82
+je near loc_00008d82  ; je 0x8d82
 push esi
 push ebx
 push ref_00021eca  ; push 0x21eca
@@ -14329,7 +14321,7 @@ jmp near loc_00008bff  ; jmp 0x8bff
 loc_00008c93:
 mov eax, dword [ebp - 0x3f4]
 cmp dl, byte [eax - 0x2ce]
-jae loc_00008d57  ; jae 0x8d57
+jae near loc_00008d57  ; jae 0x8d57
 mov edi, dword [ebp - 0x3f4]
 movzx eax, dl
 push ecx
@@ -14467,7 +14459,7 @@ jmp short loc_00008de0  ; jmp 0x8de0
 loc_00008e38:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00009375  ; je 0x9375
+je near loc_00009375  ; je 0x9375
 push esi
 push esi
 push ref_00021f05  ; push 0x21f05
@@ -14480,7 +14472,7 @@ jmp near loc_00009375  ; jmp 0x9375
 
 loc_00008e5b:
 cmp dword [ebp - 0x3ec], 0x40670
-jne loc_0000862d  ; jne 0x862d
+jne near loc_0000862d  ; jne 0x862d
 push eax
 push eax
 push 0xffff7fff
@@ -14494,7 +14486,7 @@ xor ebx, ebx
 
 loc_00008e82:
 cmp bl, byte [ebp - 0x3de]
-jae loc_00008620  ; jae 0x8620
+jae near loc_00008620  ; jae 0x8620
 movzx eax, bl
 shl eax, 5
 lea edx, [ebp + eax - 0x302]
@@ -14567,7 +14559,7 @@ mov dword [ebp - 0x404], eax
 jne short loc_00008f9a  ; jne 0x8f9a
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_000091d9  ; je 0x91d9
+je near loc_000091d9  ; je 0x91d9
 push esi
 push ebx
 push ref_00021e74  ; push 0x21e74
@@ -14805,7 +14797,7 @@ push dword [ebp + 8]
 call fcn_00007ab6  ; call 0x7ab6
 add esp, 0x30
 test eax, eax
-js loc_000088b5  ; js 0x88b5
+js near loc_000088b5  ; js 0x88b5
 xor eax, eax
 
 loc_00009247:
@@ -14831,7 +14823,7 @@ mov byte [ebp - 0x3ec], 0
 loc_0000927f:
 mov al, byte [ebp - 0x3ec]
 cmp al, byte [ebp - 0x3de]
-jae loc_00008965  ; jae 0x8965
+jae near loc_00008965  ; jae 0x8965
 movzx eax, byte [ebp - 0x3ec]
 shl eax, 5
 mov al, byte [ebp + eax - 0x300]
@@ -15183,7 +15175,7 @@ je short loc_000095c2  ; je 0x95c2
 loc_000095a9:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00009685  ; je 0x9685
+je near loc_00009685  ; je 0x9685
 mov dword [ebp + 0xc], ref_00021f6e  ; mov dword [ebp + 0xc], 0x21f6e
 jmp near loc_00009673  ; jmp 0x9673
 
@@ -15537,9 +15529,9 @@ push esi
 push ebx
 lea ecx, [edx + 0x53]
 cmp ecx, 0xa2
-ja loc_00009964  ; ja 0x9964
+ja near loc_00009964  ; ja 0x9964
 cmp edx, 0
-je loc_00009951  ; je 0x9951
+je near loc_00009951  ; je 0x9951
 lea eax, [edx + 0x20]
 mov ebx, 0
 mov edx, eax
@@ -16161,7 +16153,7 @@ loc_00009e0a:
 call fcn_00015480  ; call 0x15480
 mov edx, ebx
 test al, al
-je loc_00009ec3  ; je 0x9ec3
+je near loc_00009ec3  ; je 0x9ec3
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00009e36  ; je 0x9e36
@@ -16240,7 +16232,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00009ecd:  ; not directly referenced
+fcn_00009ecd:
 push ebp
 mov ebp, esp
 push edi
@@ -16251,7 +16243,7 @@ mov ebx, dword [ebp + 8]
 mov edi, dword [ebp + 0x14]
 lea esi, [ebx + 0x2338]
 
-loc_00009ee2:  ; not directly referenced
+loc_00009ee2:
 sub esp, 0xc
 push esi
 call fcn_00017d8b  ; call 0x17d8b
@@ -16299,7 +16291,7 @@ push eax
 call fcn_00017e8f  ; call 0x17e8f
 add esp, 0x10
 
-loc_00009f64:  ; not directly referenced
+loc_00009f64:
 push eax
 push eax
 push 1
@@ -16307,7 +16299,7 @@ push esi
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_00009f71:  ; not directly referenced
+loc_00009f71:
 sub esp, 0xc
 push esi
 call fcn_00017d8b  ; call 0x17d8b
@@ -16340,7 +16332,7 @@ mov edx, dword [ebp + 0x18]
 add esp, 0x10
 mov dword [edx], eax
 
-loc_00009fcb:  ; not directly referenced
+loc_00009fcb:
 lea esp, [ebp - 0xc]
 mov eax, esi
 pop ebx
@@ -16349,7 +16341,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00009fd5:  ; not directly referenced
+fcn_00009fd5:
 push ebp
 mov ebp, esp
 push edi
@@ -16382,7 +16374,7 @@ xor ecx, ecx
 mov bl, al
 and ebx, 0xfffffffc
 
-loc_0000a02b:  ; not directly referenced
+loc_0000a02b:
 test bl, bl
 je short loc_0000a065  ; je 0xa065
 inc cl
@@ -16407,14 +16399,14 @@ mov bl, al
 and ebx, 0xfffffffc
 jmp short loc_0000a02b  ; jmp 0xa02b
 
-loc_0000a065:  ; not directly referenced
+loc_0000a065:
 xor eax, eax
 jmp short loc_0000a06b  ; jmp 0xa06b
 
-loc_0000a069:  ; not directly referenced
+loc_0000a069:
 mov al, bl
 
-loc_0000a06b:  ; not directly referenced
+loc_0000a06b:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -16422,7 +16414,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a073:  ; not directly referenced
+fcn_0000a073:
 push ebp
 mov ebp, esp
 push edi
@@ -16443,7 +16435,7 @@ call fcn_00016c9a  ; call 0x16c9a
 add esp, 0x10
 mov dword [ebp - 0x1c], eax
 
-loc_0000a0a4:  ; not directly referenced
+loc_0000a0a4:
 test bx, bx
 je short loc_0000a0e4  ; je 0xa0e4
 inc si
@@ -16468,14 +16460,14 @@ shr bx, 4
 and ebx, 0xfffffffc
 jmp short loc_0000a0a4  ; jmp 0xa0a4
 
-loc_0000a0e4:  ; not directly referenced
+loc_0000a0e4:
 xor eax, eax
 jmp short loc_0000a0ea  ; jmp 0xa0ea
 
-loc_0000a0e8:  ; not directly referenced
+loc_0000a0e8:
 mov eax, ebx
 
-loc_0000a0ea:  ; not directly referenced
+loc_0000a0ea:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -16483,7 +16475,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a0f2:  ; not directly referenced
+fcn_0000a0f2:
 push ebp
 mov ebp, esp
 push edi
@@ -16516,7 +16508,7 @@ add esp, 0x20
 mov edx, 0x80000003
 mov ecx, dword [ebp - 0x2c]
 test ax, ax
-je loc_0000a216  ; je 0xa216
+je near loc_0000a216  ; je 0xa216
 movzx eax, ax
 lea esi, [ecx + eax + 0x14]
 push eax
@@ -16554,7 +16546,7 @@ mov dword [ebp - 0x28], eax
 movzx eax, byte [ebp - 0x24]
 mov dword [ebp - 0x24], eax
 
-loc_0000a1b4:  ; not directly referenced
+loc_0000a1b4:
 movzx edx, byte [ebp - 0x1c]
 push eax
 push edx
@@ -16589,13 +16581,13 @@ push edx
 call fcn_00017da5  ; call 0x17da5
 add esp, 0x10
 
-loc_0000a20c:  ; not directly referenced
+loc_0000a20c:
 inc byte [ebp - 0x1c]
 cmp byte [ebp - 0x1c], bl
 jbe short loc_0000a1b4  ; jbe 0xa1b4
 xor edx, edx
 
-loc_0000a216:  ; not directly referenced
+loc_0000a216:
 lea esp, [ebp - 0xc]
 mov eax, edx
 pop ebx
@@ -16604,7 +16596,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a220:  ; not directly referenced
+fcn_0000a220:
 push ebp
 mov ebp, esp
 push edi
@@ -16638,11 +16630,11 @@ add esp, 0x20
 test al, al
 jne short loc_0000a277  ; jne 0xa277
 
-loc_0000a26d:  ; not directly referenced
+loc_0000a26d:
 mov eax, 0x80000003
 jmp near loc_0000a3e2  ; jmp 0xa3e2
 
-loc_0000a277:  ; not directly referenced
+loc_0000a277:
 movzx eax, al
 sub esp, 0xc
 add eax, dword [ebp - 0x20]
@@ -16694,7 +16686,7 @@ push eax
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_0000a306:  ; not directly referenced
+loc_0000a306:
 movzx eax, byte [ebp - 0x3c]
 xor ebx, ebx
 mov byte [ebp - 0x24], 0
@@ -16702,7 +16694,7 @@ mov dword [ebp - 0x3c], eax
 movzx eax, byte [ebp - 0x38]
 mov dword [ebp - 0x40], eax
 
-loc_0000a31a:  ; not directly referenced
+loc_0000a31a:
 push edi
 movzx edi, byte [ebp - 0x24]
 push edi
@@ -16739,7 +16731,7 @@ push eax
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0000a376:  ; not directly referenced
+loc_0000a376:
 push ecx
 add edi, 0x10
 push ecx
@@ -16749,7 +16741,7 @@ push edi
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0000a388:  ; not directly referenced
+loc_0000a388:
 inc byte [ebp - 0x24]
 mov al, byte [ebp - 0x1c]
 cmp byte [ebp - 0x24], al
@@ -16768,7 +16760,7 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_0000a3bc:  ; not directly referenced
+loc_0000a3bc:
 push eax
 push eax
 mov eax, dword [ebp - 0x28]
@@ -16778,7 +16770,7 @@ push eax
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0000a3cf:  ; not directly referenced
+loc_0000a3cf:
 sub esp, 0xc
 push esi
 call fcn_00017dc2  ; call 0x17dc2
@@ -16787,7 +16779,7 @@ test ah, 8
 jne short loc_0000a3cf  ; jne 0xa3cf
 mov eax, ebx
 
-loc_0000a3e2:  ; not directly referenced
+loc_0000a3e2:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -16795,7 +16787,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a3ea:  ; not directly referenced
+fcn_0000a3ea:
 push ebp
 mov ebp, esp
 push edi
@@ -16813,7 +16805,7 @@ call fcn_0001bfbb  ; call 0x1bfbb
 cmp eax, 2
 je short loc_0000a44e  ; je 0xa44e
 
-loc_0000a412:  ; not directly referenced
+loc_0000a412:
 movzx edi, byte [ebp - 0x1c]
 movzx esi, bl
 xor ebx, ebx
@@ -16835,7 +16827,7 @@ movzx eax, byte [ebp - 0x24]
 mov dword [ebp - 0x24], eax
 jmp short loc_0000a4b5  ; jmp 0xa4b5
 
-loc_0000a44e:  ; not directly referenced
+loc_0000a44e:
 push eax
 push 0
 push 0x1f
@@ -16865,10 +16857,10 @@ mov dword [esp], eax
 call fcn_00018f64  ; call 0x18f64
 add esp, 0x10
 test al, 1
-je loc_0000a412  ; je 0xa412
+je near loc_0000a412  ; je 0xa412
 jmp near loc_0000a557  ; jmp 0xa557
 
-loc_0000a4b5:  ; not directly referenced
+loc_0000a4b5:
 push 0x10
 movzx ecx, bl
 push ecx
@@ -16882,14 +16874,14 @@ test al, al
 mov dl, al
 jne short loc_0000a4df  ; jne 0xa4df
 
-loc_0000a4d5:  ; not directly referenced
+loc_0000a4d5:
 inc ebx
 cmp bl, byte [ebp - 0x1c]
 jbe short loc_0000a4b5  ; jbe 0xa4b5
 xor ebx, ebx
 jmp short loc_0000a50f  ; jmp 0xa50f
 
-loc_0000a4df:  ; not directly referenced
+loc_0000a4df:
 push eax
 push ecx
 push edi
@@ -16906,12 +16898,12 @@ test eax, 0x40000
 jne short loc_0000a4d5  ; jne 0xa4d5
 jmp short loc_0000a557  ; jmp 0xa557
 
-loc_0000a509:  ; not directly referenced
+loc_0000a509:
 inc ebx
 cmp bl, byte [ebp - 0x1c]
 ja short loc_0000a557  ; ja 0xa557
 
-loc_0000a50f:  ; not directly referenced
+loc_0000a50f:
 push 0x10
 movzx ecx, bl
 push ecx
@@ -16941,7 +16933,7 @@ call fcn_00018927  ; call 0x18927
 add esp, 0x10
 jmp short loc_0000a509  ; jmp 0xa509
 
-loc_0000a557:  ; not directly referenced
+loc_0000a557:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -16949,7 +16941,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a55f:  ; not directly referenced
+fcn_0000a55f:
 push ebp
 mov ebp, esp
 push edi
@@ -16980,7 +16972,7 @@ sar bl, 7
 and ebx, 7
 mov dword [ebp - 0x24], eax
 
-loc_0000a5ad:  ; not directly referenced
+loc_0000a5ad:
 push ecx
 movzx ecx, byte [ebp - 0x19]
 push ecx
@@ -17019,7 +17011,7 @@ call fcn_00018981  ; call 0x18981
 add esp, 0x10
 jmp short loc_0000a631  ; jmp 0xa631
 
-loc_0000a613:  ; not directly referenced
+loc_0000a613:
 sub esp, 0xc
 lea eax, [esi + eax + 4]
 push eax
@@ -17031,10 +17023,10 @@ cmp word [esi], ax
 jbe short loc_0000a631  ; jbe 0xa631
 mov word [esi], ax
 
-loc_0000a631:  ; not directly referenced
+loc_0000a631:
 inc byte [ebp - 0x19]
 cmp byte [ebp - 0x19], bl
-jbe loc_0000a5ad  ; jbe 0xa5ad
+jbe near loc_0000a5ad  ; jbe 0xa5ad
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -17043,7 +17035,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a647:  ; not directly referenced
+fcn_0000a647:
 push ebp
 mov ebp, esp
 push edi
@@ -17078,7 +17070,7 @@ mov dl, al
 sar dl, 7
 and edx, 7
 
-loc_0000a69d:  ; not directly referenced
+loc_0000a69d:
 movzx eax, byte [ebp - 0x19]
 mov dword [ebp - 0x28], edx
 push edx
@@ -17111,10 +17103,10 @@ je short loc_0000a6f6  ; je 0xa6f6
 cmp al, 0x10
 jne short loc_0000a6f8  ; jne 0xa6f8
 
-loc_0000a6f6:  ; not directly referenced
+loc_0000a6f6:
 mov cl, 1
 
-loc_0000a6f8:  ; not directly referenced
+loc_0000a6f8:
 inc byte [ebp - 0x19]
 cmp byte [ebp - 0x19], dl
 jbe short loc_0000a69d  ; jbe 0xa69d
@@ -17129,7 +17121,7 @@ push eax
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0000a719:  ; not directly referenced
+loc_0000a719:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -17138,7 +17130,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000a723:  ; not directly referenced
+fcn_0000a723:
 push ebp
 mov ebp, esp
 push esi
@@ -17159,7 +17151,7 @@ push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000a75e:  ; not directly referenced
+loc_0000a75e:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0000a78d  ; je 0xa78d
@@ -17174,7 +17166,7 @@ push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000a78d:  ; not directly referenced
+loc_0000a78d:
 mov cx, word [esi]
 mov eax, ecx
 and ecx, 0x1c00
@@ -17194,17 +17186,17 @@ shl edx, cl
 cmp eax, edx
 jle short loc_0000a7c8  ; jle 0xa7c8
 
-loc_0000a7c5:  ; not directly referenced
+loc_0000a7c5:
 mov word [esi], bx
 
-loc_0000a7c8:  ; not directly referenced
+loc_0000a7c8:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0000a7cf:  ; not directly referenced
+fcn_0000a7cf:
 push ebp
 mov ecx, 4
 mov ebp, esp
@@ -17235,7 +17227,7 @@ mov dword [ebp - 0x70], eax
 add eax, 4
 mov dword [ebp - 0x74], eax
 
-loc_0000a829:  ; not directly referenced
+loc_0000a829:
 push eax
 push 0
 push dword [ebp - 0x3c]
@@ -17248,14 +17240,14 @@ add esp, 0x10
 inc ax
 jne short loc_0000a858  ; jne 0xa858
 
-loc_0000a848:  ; not directly referenced
+loc_0000a848:
 inc dword [ebp - 0x3c]
 cmp dword [ebp - 0x3c], 0x20
 jne short loc_0000a829  ; jne 0xa829
 xor eax, eax
 jmp near loc_0000b012  ; jmp 0xb012
 
-loc_0000a858:  ; not directly referenced
+loc_0000a858:
 sub esp, 0xc
 add ebx, 0xe
 push ebx
@@ -17266,7 +17258,7 @@ mov byte [ebp - 0x55], al
 sar byte [ebp - 0x55], 7
 and byte [ebp - 0x55], 7
 
-loc_0000a876:  ; not directly referenced
+loc_0000a876:
 movzx ebx, byte [ebp - 0x57]
 push edi
 mov esi, dword [ebp - 0x54]
@@ -17279,7 +17271,7 @@ mov edi, eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_0000aff2  ; je 0xaff2
+je near loc_0000aff2  ; je 0xaff2
 push 0x10
 push ebx
 push dword [ebp - 0x3c]
@@ -17288,7 +17280,7 @@ call fcn_00009fd5  ; call 0x9fd5
 add esp, 0x10
 mov byte [ebp - 0x60], al
 test al, al
-je loc_0000b006  ; je 0xb006
+je near loc_0000b006  ; je 0xb006
 sub esp, 0xc
 push edi
 call fcn_00017dc2  ; call 0x17dc2
@@ -17303,7 +17295,7 @@ call fcn_00017d8b  ; call 0x17d8b
 add esp, 0x10
 cmp dword [ebp - 0x5c], 2
 mov byte [ebp - 0x56], al
-jne loc_0000aa0c  ; jne 0xaa0c
+jne near loc_0000aa0c  ; jne 0xaa0c
 call fcn_0001c0bd  ; call 0x1c0bd
 cmp eax, 2
 jne short loc_0000a92d  ; jne 0xa92d
@@ -17325,13 +17317,13 @@ push eax
 call fcn_0001875d  ; call 0x1875d
 add esp, 0x10
 
-loc_0000a92d:  ; not directly referenced
+loc_0000a92d:
 mov eax, dword [ebp - 0x48]
 xor ecx, ecx
 sub ax, 0x8b1
 mov word [ebp - 0x40], ax
 
-loc_0000a93a:  ; not directly referenced
+loc_0000a93a:
 movzx edx, cl
 cmp edx, dword [ebp + 0x14]
 jae short loc_0000a9b3  ; jae 0xa9b3
@@ -17352,11 +17344,11 @@ je short loc_0000a96e  ; je 0xa96e
 inc al
 jne short loc_0000a9b0  ; jne 0xa9b0
 
-loc_0000a96e:  ; not directly referenced
+loc_0000a96e:
 cmp word [ebp - 0x46], 0x8086
 je short loc_0000a98b  ; je 0xa98b
 
-loc_0000a976:  ; not directly referenced
+loc_0000a976:
 mov ax, word [esi + 0xa]
 mov ecx, dword [esi + 0xc]
 mov word [ebp - 0x40], ax
@@ -17365,7 +17357,7 @@ test ax, ax
 jne short loc_0000a9e2  ; jne 0xa9e2
 jmp short loc_0000a9ba  ; jmp 0xa9ba
 
-loc_0000a98b:  ; not directly referenced
+loc_0000a98b:
 cmp word [ebp - 0x40], 3
 mov dword [ebp - 0x44], ecx
 ja short loc_0000a976  ; ja 0xa976
@@ -17379,14 +17371,14 @@ mov ecx, dword [ebp - 0x44]
 cmp ax, 0xcafe
 je short loc_0000a976  ; je 0xa976
 
-loc_0000a9b0:  ; not directly referenced
+loc_0000a9b0:
 inc ecx
 jmp short loc_0000a93a  ; jmp 0xa93a
 
-loc_0000a9b3:  ; not directly referenced
+loc_0000a9b3:
 mov dword [ebp - 0x50], 0x1f
 
-loc_0000a9ba:  ; not directly referenced
+loc_0000a9ba:
 push 0x1e
 push ebx
 push dword [ebp - 0x3c]
@@ -17399,7 +17391,7 @@ mov word [ebp - 0x40], ax
 test ax, ax
 je short loc_0000aa27  ; je 0xaa27
 
-loc_0000a9e2:  ; not directly referenced
+loc_0000a9e2:
 mov eax, dword [ebp - 0x74]
 sub esp, 0xc
 add eax, dword [ebp + 8]
@@ -17414,13 +17406,13 @@ add esp, 0x10
 mov dword [ebp - 0x44], eax
 jmp short loc_0000aa27  ; jmp 0xaa27
 
-loc_0000aa0c:  ; not directly referenced
+loc_0000aa0c:
 mov dword [ebp - 0x50], 0x1f
 mov dword [ebp - 0x44], 0
 mov dword [ebp - 0x4c], 0
 mov word [ebp - 0x40], 0
 
-loc_0000aa27:  ; not directly referenced
+loc_0000aa27:
 movzx esi, byte [ebp - 0x60]
 sub esp, 0xc
 add esi, edi
@@ -17435,13 +17427,13 @@ mov eax, dword [ebp + 0x3c]
 cmp byte [eax + 0x12], 1
 je short loc_0000aa55  ; je 0xaa55
 
-loc_0000aa4f:  ; not directly referenced
+loc_0000aa4f:
 mov eax, dword [ebp + 0x48]
 mov byte [eax], 0
 
-loc_0000aa55:  ; not directly referenced
+loc_0000aa55:
 cmp dword [ebp + 0x20], 1
-ja loc_0000ad5b  ; ja 0xad5b
+ja near loc_0000ad5b  ; ja 0xad5b
 lea eax, [esi + 0xc]
 sub esp, 0xc
 push eax
@@ -17453,7 +17445,7 @@ jne short loc_0000aa7e  ; jne 0xaa7e
 mov eax, dword [ebp + 0x44]
 mov byte [eax], 0
 
-loc_0000aa7e:  ; not directly referenced
+loc_0000aa7e:
 sub esp, 0xc
 push dword [ebp - 0x60]
 call fcn_00017dc2  ; call 0x17dc2
@@ -17472,9 +17464,9 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000aab4:  ; not directly referenced
+loc_0000aab4:
 cmp dword [ebp + 0x20], 0
-jne loc_0000ac13  ; jne 0xac13
+jne near loc_0000ac13  ; jne 0xac13
 lea eax, [esi + 4]
 sub esp, 0xc
 push eax
@@ -17493,11 +17485,11 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000aaef:  ; not directly referenced
+loc_0000aaef:
 mov eax, dword [ebp + 0x40]
 mov byte [eax], 1
 
-loc_0000aaf5:  ; not directly referenced
+loc_0000aaf5:
 sub esp, 0xc
 xor esi, esi
 lea eax, [edi + 0xb]
@@ -17509,7 +17501,7 @@ mov dword [esp], eax
 call fcn_00017d8b  ; call 0x17d8b
 add esp, 0x10
 
-loc_0000ab14:  ; not directly referenced
+loc_0000ab14:
 mov ecx, esi
 movzx edx, cl
 cmp edx, dword [ebp + 0x14]
@@ -17524,45 +17516,45 @@ je short loc_0000ab37  ; je 0xab37
 inc cx
 jne short loc_0000ab6e  ; jne 0xab6e
 
-loc_0000ab37:  ; not directly referenced
+loc_0000ab37:
 mov cx, word [edx + 2]
 cmp cx, word [ebp - 0x48]
 je short loc_0000ab45  ; je 0xab45
 inc cx
 jne short loc_0000ab6e  ; jne 0xab6e
 
-loc_0000ab45:  ; not directly referenced
+loc_0000ab45:
 mov cl, byte [edx + 4]
 cmp cl, byte [ebp - 0x56]
 je short loc_0000ab51  ; je 0xab51
 inc cl
 jne short loc_0000ab6e  ; jne 0xab6e
 
-loc_0000ab51:  ; not directly referenced
+loc_0000ab51:
 mov cl, byte [edx + 5]
 cmp cl, byte [ebp - 0x6b]
 je short loc_0000ab5d  ; je 0xab5d
 inc cl
 jne short loc_0000ab6e  ; jne 0xab6e
 
-loc_0000ab5d:  ; not directly referenced
+loc_0000ab5d:
 mov cl, byte [edx + 6]
 cmp cl, al
 jne short loc_0000ab6a  ; jne 0xab6a
 
-loc_0000ab64:  ; not directly referenced
+loc_0000ab64:
 movzx ebx, byte [edx + 7]
 jmp short loc_0000ab71  ; jmp 0xab71
 
-loc_0000ab6a:  ; not directly referenced
+loc_0000ab6a:
 inc cl
 je short loc_0000ab64  ; je 0xab64
 
-loc_0000ab6e:  ; not directly referenced
+loc_0000ab6e:
 inc esi
 jmp short loc_0000ab14  ; jmp 0xab14
 
-loc_0000ab71:  ; not directly referenced
+loc_0000ab71:
 test bl, 2
 je short loc_0000abc2  ; je 0xabc2
 mov ecx, dword [ebp + 0xc]
@@ -17590,7 +17582,7 @@ and eax, 0xe00
 cmp esi, eax
 cmova ebx, edx
 
-loc_0000abc2:  ; not directly referenced
+loc_0000abc2:
 test bl, 1
 je short loc_0000ac13  ; je 0xac13
 mov ecx, dword [ebp + 0xc]
@@ -17618,7 +17610,7 @@ and eax, 0x1c0
 cmp esi, eax
 cmova ebx, edx
 
-loc_0000ac13:  ; not directly referenced
+loc_0000ac13:
 mov eax, dword [ebp + 0x1c]
 and word [eax], bx
 call fcn_00015479  ; call 0x15479
@@ -17632,7 +17624,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ac38:  ; not directly referenced
+loc_0000ac38:
 cmp dword [ebp - 0x5c], 2
 jne short loc_0000acb8  ; jne 0xacb8
 cmp word [ebp - 0x40], 0
@@ -17666,7 +17658,7 @@ cmp eax, dword [ebx]
 jbe short loc_0000ac91  ; jbe 0xac91
 mov dword [ebx], eax
 
-loc_0000ac91:  ; not directly referenced
+loc_0000ac91:
 mov eax, dword [ebp + 0x38]
 movzx edx, dl
 movzx ecx, cl
@@ -17682,15 +17674,15 @@ mov eax, dword [ebp + 0x38]
 mov dword [esi], ecx
 mov dword [eax], edx
 
-loc_0000acb8:  ; not directly referenced
+loc_0000acb8:
 mov eax, dword [ebp + 0x24]
 xor edx, edx
 mov ebx, dword [eax]
 
-loc_0000acbf:  ; not directly referenced
+loc_0000acbf:
 movzx esi, dl
 cmp esi, dword [ebp + 0x14]
-jae loc_0000af08  ; jae 0xaf08
+jae near loc_0000af08  ; jae 0xaf08
 imul esi, esi, 0x18
 add esi, dword [ebp + 0x18]
 test byte [esi + 8], 4
@@ -17704,12 +17696,12 @@ je short loc_0000acee  ; je 0xacee
 inc ax
 jne short loc_0000ad55  ; jne 0xad55
 
-loc_0000acee:  ; not directly referenced
+loc_0000acee:
 mov al, byte [esi + 4]
 cmp al, byte [ebp - 0x56]
 jne short loc_0000ad25  ; jne 0xad25
 
-loc_0000acf6:  ; not directly referenced
+loc_0000acf6:
 movzx eax, word [esi + 0x12]
 test ax, ax
 jns short loc_0000ad2b  ; jns 0xad2b
@@ -17729,12 +17721,12 @@ shl eax, 0x10
 or ebx, eax
 jmp short loc_0000ad2b  ; jmp 0xad2b
 
-loc_0000ad25:  ; not directly referenced
+loc_0000ad25:
 inc al
 jne short loc_0000ad55  ; jne 0xad55
 jmp short loc_0000acf6  ; jmp 0xacf6
 
-loc_0000ad2b:  ; not directly referenced
+loc_0000ad2b:
 movzx eax, word [esi + 0x10]
 test ax, ax
 jns short loc_0000ad4b  ; jns 0xad4b
@@ -17748,34 +17740,34 @@ call fcn_0000a723  ; call 0xa723
 mov bx, word [ebp - 0x2a]
 add esp, 0x10
 
-loc_0000ad4b:  ; not directly referenced
+loc_0000ad4b:
 mov eax, dword [ebp + 0x24]
 mov dword [eax], ebx
 jmp near loc_0000af08  ; jmp 0xaf08
 
-loc_0000ad55:  ; not directly referenced
+loc_0000ad55:
 inc edx
 jmp near loc_0000acbf  ; jmp 0xacbf
 
-loc_0000ad5b:  ; not directly referenced
+loc_0000ad5b:
 cmp dword [ebp + 0x20], 2
-jne loc_0000af08  ; jne 0xaf08
+jne near loc_0000af08  ; jne 0xaf08
 cmp dword [ebp - 0x5c], 2
-jne loc_0000ae28  ; jne 0xae28
+jne near loc_0000ae28  ; jne 0xae28
 cmp word [ebp - 0x40], 0
-je loc_0000ae28  ; je 0xae28
+je near loc_0000ae28  ; je 0xae28
 mov eax, dword [ebp + 0x2c]
 cmp byte [eax], 0
-je loc_0000ae28  ; je 0xae28
+je near loc_0000ae28  ; je 0xae28
 mov eax, dword [ebp - 0x4c]
 and eax, 0x1f
 cmp eax, 0x1f
-jne loc_0000ae28  ; jne 0xae28
+jne near loc_0000ae28  ; jne 0xae28
 mov eax, dword [ebp - 0x44]
 mov ecx, dword [ebp - 0x50]
 and eax, ecx
 cmp eax, ecx
-jne loc_0000ae28  ; jne 0xae28
+jne near loc_0000ae28  ; jne 0xae28
 push eax
 mov eax, dword [ebp + 0x34]
 movzx edx, word [ebp - 0x40]
@@ -17816,10 +17808,10 @@ movzx eax, al
 lea eax, [eax + eax + 0xd]
 jmp short loc_0000ae1b  ; jmp 0xae1b
 
-loc_0000ae16:  ; not directly referenced
+loc_0000ae16:
 mov eax, 0xe
 
-loc_0000ae1b:  ; not directly referenced
+loc_0000ae1b:
 push ecx
 push eax
 push 0xffffffffffffffe0
@@ -17827,7 +17819,7 @@ push edx
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 
-loc_0000ae28:  ; not directly referenced
+loc_0000ae28:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ae4a  ; je 0xae4a
@@ -17840,7 +17832,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ae4a:  ; not directly referenced
+loc_0000ae4a:
 push eax
 mov eax, dword [ebp + 0x1c]
 movzx eax, word [eax]
@@ -17863,7 +17855,7 @@ push esi
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_0000ae85:  ; not directly referenced
+loc_0000ae85:
 push 0x18
 push ebx
 push dword [ebp - 0x3c]
@@ -17912,14 +17904,14 @@ push ebx
 call fcn_00018981  ; call 0x18981
 add esp, 0x10
 
-loc_0000af08:  ; not directly referenced
+loc_0000af08:
 sub esp, 0xc
 lea eax, [edi + 0xb]
 push eax
 call fcn_00017d8b  ; call 0x17d8b
 add esp, 0x10
 cmp al, 6
-jne loc_0000aff2  ; jne 0xaff2
+jne near loc_0000aff2  ; jne 0xaff2
 sub esp, 0xc
 mov bl, 1
 lea eax, [edi + 0x19]
@@ -17936,7 +17928,7 @@ call fcn_00017d8b  ; call 0x17d8b
 mov bl, byte [ebp - 0x58]
 add esp, 0x10
 cmp al, bl
-jbe loc_0000b00d  ; jbe 0xb00d
+jbe near loc_0000b00d  ; jbe 0xb00d
 movzx eax, al
 shl eax, 0x10
 or eax, dword [ebp - 0x64]
@@ -17951,7 +17943,7 @@ add esp, 0x10
 inc eax
 xor ebx, ebx
 
-loc_0000af72:  ; not directly referenced
+loc_0000af72:
 cmp al, byte [ebp - 0x58]
 jbe short loc_0000aff2  ; jbe 0xaff2
 movzx esi, al
@@ -17990,7 +17982,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000afdb:  ; not directly referenced
+loc_0000afdb:
 test bl, bl
 jne short loc_0000aff2  ; jne 0xaff2
 push eax
@@ -18001,21 +17993,21 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_0000aff2:  ; not directly referenced
+loc_0000aff2:
 inc byte [ebp - 0x57]
 mov al, byte [ebp - 0x55]
 cmp byte [ebp - 0x57], al
-jbe loc_0000a876  ; jbe 0xa876
+jbe near loc_0000a876  ; jbe 0xa876
 jmp near loc_0000a848  ; jmp 0xa848
 
-loc_0000b006:  ; not directly referenced
+loc_0000b006:
 mov eax, 0x8000000e
 jmp short loc_0000b012  ; jmp 0xb012
 
-loc_0000b00d:  ; not directly referenced
+loc_0000b00d:
 mov eax, 0x80000009
 
-loc_0000b012:  ; not directly referenced
+loc_0000b012:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -18023,7 +18015,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000b01a:  ; not directly referenced
+fcn_0000b01a:
 push ebp
 mov ebp, esp
 push edi
@@ -18077,7 +18069,7 @@ mov byte [ebp - 0x29], 0
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-je loc_0000b2d9  ; je 0xb2d9
+je near loc_0000b2d9  ; je 0xb2d9
 cmp dword [ebp - 0x48], 2
 jne short loc_0000b113  ; jne 0xb113
 sub esp, 0xc
@@ -18103,7 +18095,7 @@ jne short loc_0000b113  ; jne 0xb113
 mov eax, dword [ebp + 0x34]
 mov byte [eax], 1
 
-loc_0000b113:  ; not directly referenced
+loc_0000b113:
 push 0x10
 push dword [ebp - 0x3c]
 push dword [ebp - 0x50]
@@ -18117,7 +18109,7 @@ jne short loc_0000b15c  ; jne 0xb15c
 call fcn_00015480  ; call 0x15480
 mov ebx, 0x80000003
 test al, al
-je loc_0000b2d9  ; je 0xb2d9
+je near loc_0000b2d9  ; je 0xb2d9
 push esi
 push ref_00022281  ; push 0x22281
 push 0x4f7
@@ -18125,7 +18117,7 @@ push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 jmp near loc_0000b2d6  ; jmp 0xb2d6
 
-loc_0000b15c:  ; not directly referenced
+loc_0000b15c:
 mov eax, dword [ebp - 0x4c]
 sub esp, 0xc
 lea esi, [eax + edi]
@@ -18149,10 +18141,10 @@ mov word [ecx], ax
 mov dword [ebp - 0x40], 1
 jmp short loc_0000b1a9  ; jmp 0xb1a9
 
-loc_0000b1a2:  ; not directly referenced
+loc_0000b1a2:
 mov dword [ebp - 0x40], 0
 
-loc_0000b1a9:  ; not directly referenced
+loc_0000b1a9:
 sub esp, 0xc
 lea eax, [edi + 0x19]
 push eax
@@ -18177,7 +18169,7 @@ call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 mov byte [ebp - 0x41], 0
 
-loc_0000b1eb:  ; not directly referenced
+loc_0000b1eb:
 sub esp, 0xc
 add esi, 0x1a
 push esi
@@ -18219,7 +18211,7 @@ shr eax, 0x13
 and eax, 0x1f
 mov dword [ebp - 0x20], eax
 
-loc_0000b26b:  ; not directly referenced
+loc_0000b26b:
 xor eax, eax
 test bl, bl
 je short loc_0000b2be  ; je 0xb2be
@@ -18256,7 +18248,7 @@ push edi
 call fcn_0000a7cf  ; call 0xa7cf
 add esp, 0x50
 
-loc_0000b2be:  ; not directly referenced
+loc_0000b2be:
 cmp byte [ebp - 0x41], 0
 mov ebx, eax
 jne short loc_0000b2d9  ; jne 0xb2d9
@@ -18267,10 +18259,10 @@ push 0xff0000ff
 push edi
 call fcn_00018b3e  ; call 0x18b3e
 
-loc_0000b2d6:  ; not directly referenced
+loc_0000b2d6:
 add esp, 0x10
 
-loc_0000b2d9:  ; not directly referenced
+loc_0000b2d9:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -18279,7 +18271,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000b2e3:  ; not directly referenced
+fcn_0000b2e3:
 push ebp
 mov ebp, esp
 push edi
@@ -18342,13 +18334,13 @@ jne short loc_0000b3bb  ; jne 0xb3bb
 call fcn_00015480  ; call 0x15480
 mov ebx, 0x8000000e
 test al, al
-je loc_0000b969  ; je 0xb969
+je near loc_0000b969  ; je 0xb969
 push ecx
 push ref_00022281  ; push 0x22281
 push 0x5ca
 jmp short loc_0000b435  ; jmp 0xb435
 
-loc_0000b3bb:  ; not directly referenced
+loc_0000b3bb:
 cmp dword [ebp - 0x44], 2
 jne short loc_0000b3fd  ; jne 0xb3fd
 sub esp, 0xc
@@ -18371,7 +18363,7 @@ test al, 1
 jne short loc_0000b3fd  ; jne 0xb3fd
 mov byte [ebp - 0x31], 1
 
-loc_0000b3fd:  ; not directly referenced
+loc_0000b3fd:
 push 0x10
 push edi
 push dword [ebp - 0x60]
@@ -18385,18 +18377,18 @@ jne short loc_0000b447  ; jne 0xb447
 call fcn_00015480  ; call 0x15480
 mov ebx, 0x80000003
 test al, al
-je loc_0000b969  ; je 0xb969
+je near loc_0000b969  ; je 0xb969
 push eax
 push ref_00022281  ; push 0x22281
 push 0x5dc
 
-loc_0000b435:  ; not directly referenced
+loc_0000b435:
 push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp near loc_0000b969  ; jmp 0xb969
 
-loc_0000b447:  ; not directly referenced
+loc_0000b447:
 mov eax, dword [ebp - 0x50]
 sub esp, 0xc
 add eax, esi
@@ -18419,7 +18411,7 @@ push eax
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_0000b482:  ; not directly referenced
+loc_0000b482:
 mov eax, dword [ebp - 0x4c]
 sub esp, 0xc
 add eax, 0xc
@@ -18438,10 +18430,10 @@ mov ebx, 1
 mov word [ebp - 0x2e], ax
 jmp short loc_0000b4b9  ; jmp 0xb4b9
 
-loc_0000b4b7:  ; not directly referenced
+loc_0000b4b7:
 xor ebx, ebx
 
-loc_0000b4b9:  ; not directly referenced
+loc_0000b4b9:
 sub esp, 0xc
 lea eax, [esi + 0x19]
 push eax
@@ -18467,7 +18459,7 @@ add esp, 0x10
 mov byte [ebp - 0x51], 0
 mov byte [ebp - 0x3c], al
 
-loc_0000b500:  ; not directly referenced
+loc_0000b500:
 mov eax, dword [ebp - 0x4c]
 sub esp, 0xc
 add eax, 0x1a
@@ -18507,12 +18499,12 @@ shr eax, 0x13
 and eax, 0x1f
 mov dword [ebp - 0x24], eax
 
-loc_0000b57e:  ; not directly referenced
+loc_0000b57e:
 xor edi, edi
 cmp byte [ebp - 0x3c], 0
-je loc_0000b689  ; je 0xb689
+je near loc_0000b689  ; je 0xb689
 test byte [ebp - 0x58], 0x40
-je loc_0000b689  ; je 0xb689
+je near loc_0000b689  ; je 0xb689
 movzx eax, byte [ebp - 0x5c]
 push edi
 push edi
@@ -18548,7 +18540,7 @@ add esp, 0x50
 mov edi, eax
 mov eax, dword [ebp + 0x24]
 cmp byte [eax + 0x12], 1
-jne loc_0000b689  ; jne 0xb689
+jne near loc_0000b689  ; jne 0xb689
 cmp byte [eax + 0x18], 1
 jne short loc_0000b610  ; jne 0xb610
 mov ecx, dword [ebp + 0x24]
@@ -18562,7 +18554,7 @@ shl edx, 0xa
 or eax, edx
 mov dword [ebp - 0x2c], eax
 
-loc_0000b610:  ; not directly referenced
+loc_0000b610:
 mov eax, dword [ebp + 0x24]
 cmp byte [eax + 0x1c], 1
 jne short loc_0000b63a  ; jne 0xb63a
@@ -18577,7 +18569,7 @@ shl edx, 0x10
 or eax, edx
 mov dword [ebp - 0x2c], eax
 
-loc_0000b63a:  ; not directly referenced
+loc_0000b63a:
 mov eax, dword [ebp - 0x2c]
 test eax, eax
 je short loc_0000b689  ; je 0xb689
@@ -18608,12 +18600,12 @@ push eax
 call fcn_00017e8f  ; call 0x17e8f
 add esp, 0x10
 
-loc_0000b689:  ; not directly referenced
+loc_0000b689:
 cmp dword [ebp - 0x44], 2
-jne loc_0000b882  ; jne 0xb882
+jne near loc_0000b882  ; jne 0xb882
 mov eax, dword [ebp + 0x28]
 cmp byte [eax], 0
-je loc_0000b73b  ; je 0xb73b
+je near loc_0000b73b  ; je 0xb73b
 push eax
 mov eax, dword [ebp - 0x28]
 movzx edx, word [ebp - 0x40]
@@ -18653,7 +18645,7 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_0000b711:  ; not directly referenced
+loc_0000b711:
 mov eax, dword [ebp + 0x24]
 mov al, byte [eax + 0x11]
 cmp al, 1
@@ -18664,10 +18656,10 @@ movzx eax, al
 lea eax, [eax + eax + 0xd]
 jmp short loc_0000b72e  ; jmp 0xb72e
 
-loc_0000b729:  ; not directly referenced
+loc_0000b729:
 mov eax, 0xe
 
-loc_0000b72e:  ; not directly referenced
+loc_0000b72e:
 push edx
 push eax
 push 0xffffffffffffffe0
@@ -18675,11 +18667,11 @@ push ebx
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 
-loc_0000b73b:  ; not directly referenced
+loc_0000b73b:
 test byte [ebp - 0x2e], 2
-je loc_0000b882  ; je 0xb882
+je near loc_0000b882  ; je 0xb882
 cmp byte [ebp - 0x31], 0
-je loc_0000b882  ; je 0xb882
+je near loc_0000b882  ; je 0xb882
 mov eax, dword [ebp + 0x28]
 cmp byte [eax], 0
 je short loc_0000b76d  ; je 0xb76d
@@ -18691,7 +18683,7 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_0000b76d:  ; not directly referenced
+loc_0000b76d:
 push ebx
 push ebx
 push 0x20000000
@@ -18700,9 +18692,9 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 cmp byte [ebp - 0x68], 0
-je loc_0000b882  ; je 0xb882
+je near loc_0000b882  ; je 0xb882
 cmp byte [ebp - 0x6c], 0
-je loc_0000b882  ; je 0xb882
+je near loc_0000b882  ; je 0xb882
 mov edi, dword [ebp - 0x48]
 push eax
 push eax
@@ -18739,7 +18731,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000b7f1:  ; not directly referenced
+loc_0000b7f1:
 push ebx
 push ref_000206f4  ; push 0x206f4
 push 0x6b4
@@ -18747,7 +18739,7 @@ push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000b809:  ; not directly referenced
+loc_0000b809:
 mov edi, dword [ebp - 0x48]
 push eax
 push eax
@@ -18785,7 +18777,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000b86a:  ; not directly referenced
+loc_0000b86a:
 push eax
 push ref_000206f4  ; push 0x206f4
 push 0x6be
@@ -18793,7 +18785,7 @@ push ref_00022106  ; push 0x22106
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000b882:  ; not directly referenced
+loc_0000b882:
 cmp byte [ebp - 0x70], 1
 jne short loc_0000b8a2  ; jne 0xb8a2
 push eax
@@ -18806,7 +18798,7 @@ push eax
 call fcn_00018981  ; call 0x18981
 add esp, 0x10
 
-loc_0000b8a2:  ; not directly referenced
+loc_0000b8a2:
 cmp byte [ebp - 0x30], 0
 je short loc_0000b8bf  ; je 0xb8bf
 push eax
@@ -18817,7 +18809,7 @@ push eax
 call fcn_0001878a  ; call 0x1878a
 add esp, 0x10
 
-loc_0000b8bf:  ; not directly referenced
+loc_0000b8bf:
 cmp byte [ebp - 0x3c], 0
 je short loc_0000b917  ; je 0xb917
 test byte [ebp - 0x58], 0x40
@@ -18856,7 +18848,7 @@ call fcn_0000a7cf  ; call 0xa7cf
 add esp, 0x50
 mov edi, eax
 
-loc_0000b917:  ; not directly referenced
+loc_0000b917:
 cmp byte [ebp - 0x51], 0
 jne short loc_0000b930  ; jne 0xb930
 push ecx
@@ -18867,7 +18859,7 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_0000b930:  ; not directly referenced
+loc_0000b930:
 mov ebx, edi
 test edi, edi
 js short loc_0000b969  ; js 0xb969
@@ -18883,7 +18875,7 @@ push ebx
 call fcn_0001878a  ; call 0x1878a
 add esp, 0x10
 
-loc_0000b95a:  ; not directly referenced
+loc_0000b95a:
 push eax
 push eax
 push 2
@@ -18892,7 +18884,7 @@ mov ebx, edi
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0000b969:  ; not directly referenced
+loc_0000b969:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -18901,7 +18893,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000b973:  ; not directly referenced
+fcn_0000b973:
 push ebp
 mov ebp, esp
 push edi
@@ -18949,7 +18941,7 @@ call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 jmp short loc_0000ba03  ; jmp 0xba03
 
-loc_0000b9eb:  ; not directly referenced
+loc_0000b9eb:
 sub esp, 0xc
 lea eax, [edi + 0x1a]
 push eax
@@ -18959,7 +18951,7 @@ mov byte [ebp - 0x1f], al
 mov al, byte [ebp - 0x1e]
 mov byte [ebp - 0x1d], al
 
-loc_0000ba03:  ; not directly referenced
+loc_0000ba03:
 push 0x10
 push dword [ebp - 0x24]
 push dword [ebp - 0x28]
@@ -18982,7 +18974,7 @@ add esp, 0x10
 test al, 0x7f
 je short loc_0000ba55  ; je 0xba55
 
-loc_0000ba44:  ; not directly referenced
+loc_0000ba44:
 mov al, byte [ebp - 0x1d]
 xor ebx, ebx
 inc eax
@@ -18990,7 +18982,7 @@ movzx eax, al
 mov dword [ebp - 0x34], eax
 jmp near loc_0000bb58  ; jmp 0xbb58
 
-loc_0000ba55:  ; not directly referenced
+loc_0000ba55:
 push eax
 movzx eax, byte [ebp - 0x1d]
 mov ebx, 0x186a0
@@ -19006,7 +18998,7 @@ push esi
 call fcn_00017da5  ; call 0x17da5
 add esp, 0x10
 
-loc_0000ba78:  ; not directly referenced
+loc_0000ba78:
 sub esp, 0xc
 push esi
 call fcn_00017dc2  ; call 0x17dc2
@@ -19021,7 +19013,7 @@ dec ebx
 jne short loc_0000ba78  ; jne 0xba78
 jmp near loc_0000bc26  ; jmp 0xbc26
 
-loc_0000ba9d:  ; not directly referenced
+loc_0000ba9d:
 push 0
 push dword [ebp + 0x1c]
 push ebx
@@ -19039,7 +19031,7 @@ push dword [ebp - 0x1c]
 call fcn_0000a647  ; call 0xa647
 add esp, 0x20
 
-loc_0000bac8:  ; not directly referenced
+loc_0000bac8:
 push 0x10
 push 0
 push ebx
@@ -19064,7 +19056,7 @@ mov ecx, dword [ebp - 0x4c]
 cmp al, 6
 je short loc_0000bb7e  ; je 0xbb7e
 
-loc_0000bb0b:  ; not directly referenced
+loc_0000bb0b:
 push edx
 push edx
 push 0
@@ -19093,12 +19085,12 @@ push esi
 call fcn_0000a55f  ; call 0xa55f
 add esp, 0x20
 
-loc_0000bb4e:  ; not directly referenced
+loc_0000bb4e:
 inc ebx
 cmp ebx, 0x20
-je loc_0000bc09  ; je 0xbc09
+je near loc_0000bc09  ; je 0xbc09
 
-loc_0000bb58:  ; not directly referenced
+loc_0000bb58:
 movzx esi, byte [ebp - 0x1d]
 push eax
 push 0
@@ -19110,10 +19102,10 @@ mov dword [ebp - 0x2c], eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 inc ax
-jne loc_0000ba9d  ; jne 0xba9d
+jne near loc_0000ba9d  ; jne 0xba9d
 jmp short loc_0000bb4e  ; jmp 0xbb4e
 
-loc_0000bb7e:  ; not directly referenced
+loc_0000bb7e:
 test cl, cl
 je short loc_0000bb0b  ; je 0xbb0b
 mov ecx, dword [ebp - 0x48]
@@ -19129,11 +19121,11 @@ add esp, 0x10
 cmp cl, 5
 je short loc_0000bbb9  ; je 0xbbb9
 cmp cl, 6
-jne loc_0000bb0b  ; jne 0xbb0b
+jne near loc_0000bb0b  ; jne 0xbb0b
 test al, 0x40
-je loc_0000bb0b  ; je 0xbb0b
+je near loc_0000bb0b  ; je 0xbb0b
 
-loc_0000bbb9:  ; not directly referenced
+loc_0000bbb9:
 mov al, byte [ebp - 0x1d]
 cmp byte [ebp - 0x1f], al
 jbe short loc_0000bbdf  ; jbe 0xbbdf
@@ -19150,10 +19142,10 @@ call fcn_0000b973  ; call 0xb973
 add esp, 0x20
 jmp near loc_0000bb0b  ; jmp 0xbb0b
 
-loc_0000bbdf:  ; not directly referenced
+loc_0000bbdf:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0000bb0b  ; je 0xbb0b
+je near loc_0000bb0b  ; je 0xbb0b
 push ecx
 push ref_00022281  ; push 0x22281
 push 0x7aa
@@ -19162,7 +19154,7 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp near loc_0000bb0b  ; jmp 0xbb0b
 
-loc_0000bc09:  ; not directly referenced
+loc_0000bc09:
 xor bl, bl
 cmp byte [ebp - 0x1e], 0
 jne short loc_0000bc44  ; jne 0xbc44
@@ -19175,7 +19167,7 @@ call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 jmp short loc_0000bc44  ; jmp 0xbc44
 
-loc_0000bc26:  ; not directly referenced
+loc_0000bc26:
 cmp byte [ebp - 0x1e], 0
 jne short loc_0000bc3f  ; jne 0xbc3f
 push eax
@@ -19186,10 +19178,10 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_0000bc3f:  ; not directly referenced
+loc_0000bc3f:
 mov ebx, 0x8000000e
 
-loc_0000bc44:  ; not directly referenced
+loc_0000bc44:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -19198,7 +19190,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000bc4e:  ; not directly referenced
+fcn_0000bc4e:
 push ebp
 mov ebp, esp
 push edi
@@ -19223,7 +19215,7 @@ call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 mov edx, 0x8000000e
 test al, 0x40
-je loc_0000bd2e  ; je 0xbd2e
+je near loc_0000bd2e  ; je 0xbd2e
 push 0x10
 push edi
 push esi
@@ -19246,7 +19238,7 @@ add esp, 0x10
 mov edx, dword [ebp - 0x2c]
 jmp short loc_0000bd2e  ; jmp 0xbd2e
 
-loc_0000bcd4:  ; not directly referenced
+loc_0000bcd4:
 movzx eax, al
 sub esp, 0xc
 add eax, dword [ebp - 0x2c]
@@ -19282,7 +19274,7 @@ call fcn_00018981  ; call 0x18981
 add esp, 0x10
 mov edx, ebx
 
-loc_0000bd2e:  ; not directly referenced
+loc_0000bd2e:
 lea esp, [ebp - 0xc]
 mov eax, edx
 pop ebx
@@ -19291,7 +19283,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000bd38:  ; not directly referenced
+fcn_0000bd38:
 push ebp
 mov ebp, esp
 push esi
@@ -19307,7 +19299,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000bd5a:  ; not directly referenced
+loc_0000bd5a:
 push ecx
 push 0
 push 0x1f
@@ -19328,7 +19320,7 @@ push edx
 push edx
 jmp short loc_0000bde5  ; jmp 0xbde5
 
-loc_0000bd90:  ; not directly referenced
+loc_0000bd90:
 sub esp, 0xc
 lea eax, [ebx + 0x38f4]
 push eax
@@ -19339,7 +19331,7 @@ jne short loc_0000bdad  ; jne 0xbdad
 mov word [esi], 0
 jmp short loc_0000be10  ; jmp 0xbe10
 
-loc_0000bdad:  ; not directly referenced
+loc_0000bdad:
 sub esp, 0xc
 add ebx, 0x38f8
 push ebx
@@ -19347,7 +19339,7 @@ call fcn_00017dc2  ; call 0x17dc2
 mov word [esi], ax
 jmp short loc_0000bdf3  ; jmp 0xbdf3
 
-loc_0000bdc1:  ; not directly referenced
+loc_0000bdc1:
 push ecx
 push ecx
 movzx eax, word [esi]
@@ -19364,16 +19356,16 @@ call fcn_00018730  ; call 0x18730
 pop eax
 pop edx
 
-loc_0000bde5:  ; not directly referenced
+loc_0000bde5:
 push 1
 add ebx, 0x38f0
 push ebx
 call fcn_00018730  ; call 0x18730
 
-loc_0000bdf3:  ; not directly referenced
+loc_0000bdf3:
 add esp, 0x10
 
-loc_0000bdf6:  ; not directly referenced
+loc_0000bdf6:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000be10  ; je 0xbe10
@@ -19384,7 +19376,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000be10:  ; not directly referenced
+loc_0000be10:
 lea esp, [ebp - 8]
 xor eax, eax
 pop ebx
@@ -19392,7 +19384,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0000be19:  ; not directly referenced
+fcn_0000be19:
 push ebp
 mov ebp, esp
 push ebx
@@ -19408,7 +19400,7 @@ mov ebx, dword [ebp - 4]
 leave
 jmp near fcn_00017e4e  ; jmp 0x17e4e
 
-fcn_0000be41:  ; not directly referenced
+fcn_0000be41:
 push ebp
 mov ebp, esp
 push edi
@@ -19425,7 +19417,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000be67:  ; not directly referenced
+loc_0000be67:
 lea eax, [ebp - 0x1c]
 push eax
 push 0
@@ -19439,7 +19431,7 @@ mov edx, dword [ebp - 0x1c]
 xor ebx, ebx
 xor esi, esi
 
-loc_0000be87:  ; not directly referenced
+loc_0000be87:
 lea eax, [ebx + 0x18]
 cmp word [edx + eax - 0x16], 0
 je short loc_0000be97  ; je 0xbe97
@@ -19447,7 +19439,7 @@ inc esi
 mov ebx, eax
 jmp short loc_0000be87  ; jmp 0xbe87
 
-loc_0000be97:  ; not directly referenced
+loc_0000be97:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000beb1  ; je 0xbeb1
@@ -19458,7 +19450,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000beb1:  ; not directly referenced
+loc_0000beb1:
 push eax
 push ebx
 push dword [ebp - 0x1c]
@@ -19478,10 +19470,10 @@ push ref_00022320  ; push 0x22320
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000beea:  ; not directly referenced
+loc_0000beea:
 xor ebx, ebx
 
-loc_0000beec:  ; not directly referenced
+loc_0000beec:
 lea eax, [ebp - 0x20]
 push eax
 push 0
@@ -19493,9 +19485,9 @@ test eax, eax
 je short loc_0000bf36  ; je 0xbf36
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0000c0a1  ; je 0xc0a1
+je near loc_0000c0a1  ; je 0xc0a1
 test ebx, ebx
-jne loc_0000c0a1  ; jne 0xc0a1
+jne near loc_0000c0a1  ; jne 0xc0a1
 push eax
 push ref_0002234a  ; push 0x2234a
 push 0x908
@@ -19504,7 +19496,7 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp near loc_0000c0a1  ; jmp 0xc0a1
 
-loc_0000bf36:  ; not directly referenced
+loc_0000bf36:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000bf57  ; je 0xbf57
@@ -19517,7 +19509,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000bf57:  ; not directly referenced
+loc_0000bf57:
 push esi
 push 0x5ac
 push dword [ebp - 0x20]
@@ -19537,7 +19529,7 @@ push ref_00022320  ; push 0x22320
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000bf94:  ; not directly referenced
+loc_0000bf94:
 push eax
 mov eax, dword [ebp - 0x20]
 push 0
@@ -19577,7 +19569,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000c009:  ; not directly referenced
+loc_0000c009:
 push edi
 push ref_000206f4  ; push 0x206f4
 push 0x91d
@@ -19585,7 +19577,7 @@ push ref_00022320  ; push 0x22320
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0000c021:  ; not directly referenced
+loc_0000c021:
 mov eax, dword [ebp - 0x20]
 cmp byte [eax + 0x370], 0
 je short loc_0000c079  ; je 0xc079
@@ -19613,25 +19605,25 @@ push 2
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000c06d:  ; not directly referenced
+loc_0000c06d:
 push edi
 push edi
 push 0xc0
 push dword [ebp - 0x20]
 jmp short loc_0000c081  ; jmp 0xc081
 
-loc_0000c079:  ; not directly referenced
+loc_0000c079:
 push ecx
 push ecx
 push 0xc0
 push eax
 
-loc_0000c081:  ; not directly referenced
+loc_0000c081:
 call fcn_00012e28  ; call 0x12e28
 add esp, 0x10
 or dword [ebp - 0x24], 0x10
 
-loc_0000c08d:  ; not directly referenced
+loc_0000c08d:
 push edx
 inc ebx
 push edx
@@ -19641,7 +19633,7 @@ call fcn_0000be19  ; call 0xbe19
 add esp, 0x10
 jmp near loc_0000beec  ; jmp 0xbeec
 
-loc_0000c0a1:  ; not directly referenced
+loc_0000c0a1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000c0be  ; je 0xc0be
@@ -19652,7 +19644,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000c0be:  ; not directly referenced
+loc_0000c0be:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -19797,7 +19789,7 @@ mov byte [ebp - 0x2c], al
 
 loc_0000c206:
 cmp esi, dword [ebp - 0x30]
-je loc_0000c2ca  ; je 0xc2ca
+je near loc_0000c2ca  ; je 0xc2ca
 cmp dword [ebp + 0xc], 2
 jne short loc_0000c246  ; jne 0xc246
 mov eax, dword [esi]
@@ -19898,7 +19890,7 @@ je short loc_0000c312  ; je 0xc312
 mov eax, ecx
 add ax, 0x633f
 cmp ax, 0xa
-ja loc_0000c4df  ; ja 0xc4df
+ja near loc_0000c4df  ; ja 0xc4df
 
 loc_0000c312:
 cmp dword [ebp - 0x24], 0xf
@@ -20015,7 +20007,7 @@ mov byte [ebp - 0x28], al
 
 loc_0000c41b:
 cmp esi, dword [ebp - 0x2c]
-je loc_0000c569  ; je 0xc569
+je near loc_0000c569  ; je 0xc569
 cmp dword [ebp + 0xc], 2
 jne short loc_0000c45b  ; jne 0xc45b
 mov eax, dword [esi]
@@ -20095,7 +20087,7 @@ jmp near loc_0000c41b  ; jmp 0xc41b
 
 loc_0000c4df:
 cmp dword [ebp - 0x24], 0xf
-ja loc_0000c59b  ; ja 0xc59b
+ja near loc_0000c59b  ; ja 0xc59b
 mov cl, byte [ebp - 0x24]
 mov eax, 1
 xor esi, esi
@@ -20114,14 +20106,14 @@ mov word [ebp - 0x28], 0
 
 loc_0000c515:
 cmp word [ebp - 0x28], bx
-jne loc_0000c5a4  ; jne 0xc5a4
+jne near loc_0000c5a4  ; jne 0xc5a4
 cmp dword [ebp - 0x20], 0x10
-je loc_0000c616  ; je 0xc616
+je near loc_0000c616  ; je 0xc616
 mov eax, dword [ebp - 0x20]
-jbe loc_0000c607  ; jbe 0xc607
+jbe near loc_0000c607  ; jbe 0xc607
 sub eax, 0x20
 cmp eax, 2
-ja loc_0000c60d  ; ja 0xc60d
+ja near loc_0000c60d  ; ja 0xc60d
 mov edx, ref_0002806c  ; mov edx, 0x2806c
 mov eax, 4
 
@@ -20138,11 +20130,11 @@ mov byte [ebp - 0x28], al
 
 loc_0000c560:
 cmp esi, dword [ebp - 0x2c]
-jne loc_0000c625  ; jne 0xc625
+jne near loc_0000c625  ; jne 0xc625
 
 loc_0000c569:
 cmp dword [ebp - 0x24], 0xf
-ja loc_0000c6e0  ; ja 0xc6e0
+ja near loc_0000c6e0  ; ja 0xc6e0
 mov cl, byte [ebp - 0x24]
 mov eax, 1
 xor edi, edi
@@ -20306,7 +20298,7 @@ call fcn_0001c1e1  ; call 0x1c1e1
 mov edx, dword [ebp - 0x24]
 movzx eax, al
 cmp dx, ax
-jae loc_0000c7ca  ; jae 0xc7ca
+jae near loc_0000c7ca  ; jae 0xc7ca
 movzx eax, dx
 xor esi, esi
 imul eax, eax, 0x12
@@ -20436,7 +20428,7 @@ call fcn_0001c1e1  ; call 0x1c1e1
 mov ecx, dword [ebp - 0x24]
 movzx eax, al
 cmp cx, ax
-jae loc_0000c980  ; jae 0xc980
+jae near loc_0000c980  ; jae 0xc980
 movzx eax, cx
 imul eax, eax, 0x12
 add eax, dword [ebp + 8]
@@ -20465,10 +20457,10 @@ cmp ebx, dword [ebp - 0x34]
 je short loc_0000c876  ; je 0xc876
 mov eax, dword [ebp - 0x24]
 cmp word [ebx - 4], ax
-jne loc_0000c978  ; jne 0xc978
+jne near loc_0000c978  ; jne 0xc978
 mov eax, dword [ebp - 0x1c]
 cmp word [ebx - 2], ax
-jne loc_0000c978  ; jne 0xc978
+jne near loc_0000c978  ; jne 0xc978
 cmp dword [ebp + 0xc], 2
 jne short loc_0000c8e1  ; jne 0xc8e1
 mov eax, dword [ebx]
@@ -20591,7 +20583,7 @@ jne short loc_0000c9d3  ; jne 0xc9d3
 test byte [ebp - 0x19], 0x20
 
 loc_0000c9cd:
-jne loc_0000cbee  ; jne 0xcbee
+jne near loc_0000cbee  ; jne 0xcbee
 
 loc_0000c9d3:
 movzx eax, bx
@@ -20602,7 +20594,7 @@ loc_0000c9df:
 test bx, bx
 jne short loc_0000c9ee  ; jne 0xc9ee
 cmp byte [ebp - 0x28], 0
-jne loc_0000cbee  ; jne 0xcbee
+jne near loc_0000cbee  ; jne 0xcbee
 
 loc_0000c9ee:
 cmp bx, 1
@@ -20622,7 +20614,7 @@ jne short loc_0000ca16  ; jne 0xca16
 cmp byte [ebp - 0x20], 0
 
 loc_0000ca10:
-jne loc_0000cbee  ; jne 0xcbee
+jne near loc_0000cbee  ; jne 0xcbee
 
 loc_0000ca16:
 movzx eax, bx
@@ -20733,7 +20725,7 @@ add esp, 0x10
 loc_0000cb43:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0000ca7b  ; je 0xca7b
+je near loc_0000ca7b  ; je 0xca7b
 push ecx
 push ref_00022281  ; push 0x22281
 push 0x2b9
@@ -20772,7 +20764,7 @@ add esp, 0x10
 loc_0000cbae:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0000ca7b  ; je 0xca7b
+je near loc_0000ca7b  ; je 0xca7b
 push eax
 push ref_00022281  ; push 0x22281
 push 0x2c6
@@ -20863,7 +20855,7 @@ add esp, 0x10
 test al, 0xf
 setne byte [ebp - 0x35]
 cmp dword [ebp - 0x2c], 1
-jne loc_0000cedf  ; jne 0xcedf
+jne near loc_0000cedf  ; jne 0xcedf
 sub esp, 0xc
 push edi
 call fcn_00017d8b  ; call 0x17d8b
@@ -20882,7 +20874,7 @@ mov eax, dword [ebp - 0x1c]
 add esp, 0x10
 and eax, 0x30
 cmp eax, 0x20
-je loc_0000ce82  ; je 0xce82
+je near loc_0000ce82  ; je 0xce82
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000cced  ; je 0xcced
@@ -20896,7 +20888,7 @@ add esp, 0x10
 loc_0000cced:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0000ce82  ; je 0xce82
+je near loc_0000ce82  ; je 0xce82
 push eax
 push ref_00024be5  ; push 0x24be5
 push 0x32e
@@ -20942,27 +20934,27 @@ mov eax, ebx
 add esp, 0x20
 and eax, 0xfffffffd
 cmp ax, 0x8c44
-je loc_0000ce9e  ; je 0xce9e
+je near loc_0000ce9e  ; je 0xce9e
 lea eax, [ebx + 0x73b2]
 cmp ax, 2
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 cmp bx, 0x8c5c
-je loc_0000ce9e  ; je 0xce9e
+je near loc_0000ce9e  ; je 0xce9e
 lea eax, [ebx + 0x73b7]
 cmp ax, 3
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 lea eax, [ebx + 0x73bf]
 cmp ax, 1
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 lea eax, [ebx + 0x63bf]
 cmp ax, 6
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 lea eax, [ebx + 0x733f]
 cmp ax, 5
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 add bx, 0x633f
 cmp bx, 0xa
-jbe loc_0000ce9e  ; jbe 0xce9e
+jbe near loc_0000ce9e  ; jbe 0xce9e
 
 loc_0000cdf2:
 push ebx
@@ -21067,7 +21059,7 @@ loc_0000cedf:
 cmp byte [ebp - 0x35], 1
 je short loc_0000ce82  ; je 0xce82
 cmp dword [ebp - 0x2c], 2
-jne loc_0000cd2e  ; jne 0xcd2e
+jne near loc_0000cd2e  ; jne 0xcd2e
 push ecx
 push 0x40
 jmp near loc_0000cd1d  ; jmp 0xcd1d
@@ -21105,7 +21097,7 @@ shr al, 5
 xor eax, 1
 and eax, 1
 cmp edx, eax
-je loc_0000d125  ; je 0xd125
+je near loc_0000d125  ; je 0xd125
 lea eax, [ebp - 0x1c]
 push eax
 push 0
@@ -21169,7 +21161,7 @@ mov eax, edi
 cmp byte [ebx + 0x37e], 0
 je short loc_0000d016  ; je 0xd016
 dec al
-jne loc_0000d0bc  ; jne 0xd0bc
+jne near loc_0000d0bc  ; jne 0xd0bc
 push eax
 mov esi, 1
 push eax
@@ -21183,7 +21175,7 @@ jmp near loc_0000d0bc  ; jmp 0xd0bc
 
 loc_0000d016:
 dec al
-jne loc_0000d0a7  ; jne 0xd0a7
+jne near loc_0000d0a7  ; jne 0xd0a7
 push eax
 push 0
 push 0x19
@@ -21514,9 +21506,9 @@ push eax
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 cmp dword [ebp - 0x34], 1
-jne loc_0000d445  ; jne 0xd445
+jne near loc_0000d445  ; jne 0xd445
 cmp dword [ebx + 0x1db], 0
-jne loc_0000d41e  ; jne 0xd41e
+jne near loc_0000d41e  ; jne 0xd41e
 push eax
 add esi, 0x410
 push 0x70
@@ -21563,7 +21555,7 @@ push esi
 call fcn_00017d8b  ; call 0x17d8b
 add esp, 0x10
 test al, 0x20
-jne loc_0000d490  ; jne 0xd490
+jne near loc_0000d490  ; jne 0xd490
 mov eax, dword [ebp - 0x30]
 push esi
 push esi
@@ -21632,7 +21624,7 @@ add esp, 0x10
 
 loc_0000d4c1:
 cmp dword [ebp - 0x34], 2
-jne loc_0000d5bf  ; jne 0xd5bf
+jne near loc_0000d5bf  ; jne 0xd5bf
 mov ebx, dword [ebp - 0x40]
 push esi
 lea esi, [ebp - 0x20]
@@ -21861,7 +21853,7 @@ push edi
 call fcn_00017e8f  ; call 0x17e8f
 add esp, 0x10
 test byte [ebx + 0x426], 1
-je loc_0000d77b  ; je 0xd77b
+je near loc_0000d77b  ; je 0xd77b
 mov cl, byte [ebx + 0x432]
 mov dl, byte [ebx + 0x436]
 mov eax, ecx
@@ -22481,7 +22473,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000dd7e:  ; not directly referenced
+fcn_0000dd7e:
 push ebp
 mov ebp, esp
 push edi
@@ -22499,12 +22491,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000dda4:  ; not directly referenced
+loc_0000dda4:
 cmp byte [ebx], 5
-jbe loc_0000de39  ; jbe 0xde39
+jbe near loc_0000de39  ; jbe 0xde39
 xor edx, edx
 
-loc_0000ddaf:  ; not directly referenced
+loc_0000ddaf:
 cmp dl, byte [ebx + 0x526]
 jae short loc_0000dde0  ; jae 0xdde0
 movzx eax, dl
@@ -22522,10 +22514,10 @@ add esp, 0x10
 inc edx
 jmp short loc_0000ddaf  ; jmp 0xddaf
 
-loc_0000dde0:  ; not directly referenced
+loc_0000dde0:
 xor edx, edx
 
-loc_0000dde2:  ; not directly referenced
+loc_0000dde2:
 cmp dl, byte [ebx + 0x553]
 jae short loc_0000de16  ; jae 0xde16
 movzx eax, dl
@@ -22544,10 +22536,10 @@ add esp, 0x10
 inc edx
 jmp short loc_0000dde2  ; jmp 0xdde2
 
-loc_0000de16:  ; not directly referenced
+loc_0000de16:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_0000dec7  ; je 0xdec7
+je near loc_0000dec7  ; je 0xdec7
 push eax
 push eax
 push ref_00022718  ; push 0x22718
@@ -22556,7 +22548,7 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp near loc_0000dec7  ; jmp 0xdec7
 
-loc_0000de39:  ; not directly referenced
+loc_0000de39:
 call fcn_0001bfbb  ; call 0x1bfbb
 mov esi, ref_00026f9c  ; mov esi, 0x26f9c
 mov edx, ref_00026fc0  ; mov edx, 0x26fc0
@@ -22573,7 +22565,7 @@ add ecx, 5
 lea ebx, [ebx + ebx*2 + 6]
 xor edx, edx
 
-loc_0000de70:  ; not directly referenced
+loc_0000de70:
 movzx eax, dl
 cmp eax, ecx
 jae short loc_0000de9c  ; jae 0xde9c
@@ -22593,14 +22585,14 @@ mov ecx, dword [ebp - 0x20]
 inc edx
 jmp short loc_0000de70  ; jmp 0xde70
 
-loc_0000de9c:  ; not directly referenced
+loc_0000de9c:
 xor edi, edi
 
-loc_0000de9e:  ; not directly referenced
+loc_0000de9e:
 mov eax, edi
 movzx eax, al
 cmp eax, ebx
-jae loc_0000de16  ; jae 0xde16
+jae near loc_0000de16  ; jae 0xde16
 lea eax, [esi + eax*4]
 inc edi
 push edx
@@ -22614,7 +22606,7 @@ call fcn_00017e04  ; call 0x17e04
 add esp, 0x10
 jmp short loc_0000de9e  ; jmp 0xde9e
 
-loc_0000dec7:  ; not directly referenced
+loc_0000dec7:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -22652,7 +22644,7 @@ mov dword [esp], eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 test al, 4
-je loc_0000dfd2  ; je 0xdfd2
+je near loc_0000dfd2  ; je 0xdfd2
 push ecx
 push ecx
 push 1
@@ -22973,7 +22965,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0000e26b:  ; not directly referenced
+fcn_0000e26b:
 push ebp
 mov ebp, esp
 push esi
@@ -22989,7 +22981,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e28d:  ; not directly referenced
+loc_0000e28d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e2ae  ; je 0xe2ae
@@ -23001,7 +22993,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e2ae:  ; not directly referenced
+loc_0000e2ae:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e2cf  ; je 0xe2cf
@@ -23013,7 +23005,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e2cf:  ; not directly referenced
+loc_0000e2cf:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e2ed  ; je 0xe2ed
@@ -23025,7 +23017,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e2ed:  ; not directly referenced
+loc_0000e2ed:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e30b  ; je 0xe30b
@@ -23037,10 +23029,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e30b:  ; not directly referenced
+loc_0000e30b:
 xor esi, esi
 
-loc_0000e30d:  ; not directly referenced
+loc_0000e30d:
 call fcn_0001c261  ; call 0x1c261
 movzx eax, al
 cmp esi, eax
@@ -23056,7 +23048,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e338:  ; not directly referenced
+loc_0000e338:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e357  ; je 0xe357
@@ -23068,14 +23060,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e357:  ; not directly referenced
+loc_0000e357:
 inc esi
 jmp short loc_0000e30d  ; jmp 0xe30d
 
-loc_0000e35a:  ; not directly referenced
+loc_0000e35a:
 xor esi, esi
 
-loc_0000e35c:  ; not directly referenced
+loc_0000e35c:
 call fcn_0001c2f8  ; call 0x1c2f8
 movzx eax, al
 cmp esi, eax
@@ -23091,14 +23083,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e38a:  ; not directly referenced
+loc_0000e38a:
 inc esi
 jmp short loc_0000e35c  ; jmp 0xe35c
 
-loc_0000e38d:  ; not directly referenced
+loc_0000e38d:
 xor esi, esi
 
-loc_0000e38f:  ; not directly referenced
+loc_0000e38f:
 call fcn_0001c245  ; call 0x1c245
 movzx eax, al
 cmp esi, eax
@@ -23114,11 +23106,11 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e3b9:  ; not directly referenced
+loc_0000e3b9:
 inc esi
 jmp short loc_0000e38f  ; jmp 0xe38f
 
-loc_0000e3bc:  ; not directly referenced
+loc_0000e3bc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e3da  ; je 0xe3da
@@ -23130,7 +23122,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e3da:  ; not directly referenced
+loc_0000e3da:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e3f8  ; je 0xe3f8
@@ -23142,7 +23134,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e3f8:  ; not directly referenced
+loc_0000e3f8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e416  ; je 0xe416
@@ -23154,7 +23146,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e416:  ; not directly referenced
+loc_0000e416:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e434  ; je 0xe434
@@ -23166,10 +23158,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e434:  ; not directly referenced
+loc_0000e434:
 xor esi, esi
 
-loc_0000e436:  ; not directly referenced
+loc_0000e436:
 call fcn_0001c298  ; call 0x1c298
 movzx eax, al
 cmp esi, eax
@@ -23184,7 +23176,7 @@ push esi
 push ref_000229cd  ; push 0x229cd
 jmp short loc_0000e46b  ; jmp 0xe46b
 
-loc_0000e45b:  ; not directly referenced
+loc_0000e45b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e475  ; je 0xe475
@@ -23192,19 +23184,19 @@ push eax
 push esi
 push ref_00022a02  ; push 0x22a02
 
-loc_0000e46b:  ; not directly referenced
+loc_0000e46b:
 push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e475:  ; not directly referenced
+loc_0000e475:
 inc esi
 jmp short loc_0000e436  ; jmp 0xe436
 
-loc_0000e478:  ; not directly referenced
+loc_0000e478:
 xor esi, esi
 
-loc_0000e47a:  ; not directly referenced
+loc_0000e47a:
 call fcn_0001c2f8  ; call 0x1c2f8
 movzx eax, al
 cmp esi, eax
@@ -23220,14 +23212,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e4a5:  ; not directly referenced
+loc_0000e4a5:
 inc esi
 jmp short loc_0000e47a  ; jmp 0xe47a
 
-loc_0000e4a8:  ; not directly referenced
+loc_0000e4a8:
 xor esi, esi
 
-loc_0000e4aa:  ; not directly referenced
+loc_0000e4aa:
 call fcn_0001c261  ; call 0x1c261
 movzx eax, al
 cmp esi, eax
@@ -23243,7 +23235,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e4d5:  ; not directly referenced
+loc_0000e4d5:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e4f4  ; je 0xe4f4
@@ -23255,7 +23247,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e4f4:  ; not directly referenced
+loc_0000e4f4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e513  ; je 0xe513
@@ -23267,14 +23259,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e513:  ; not directly referenced
+loc_0000e513:
 inc esi
 jmp short loc_0000e4aa  ; jmp 0xe4aa
 
-loc_0000e516:  ; not directly referenced
+loc_0000e516:
 xor esi, esi
 
-loc_0000e518:  ; not directly referenced
+loc_0000e518:
 call fcn_0001c2f8  ; call 0x1c2f8
 movzx eax, al
 cmp esi, eax
@@ -23290,7 +23282,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e546:  ; not directly referenced
+loc_0000e546:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e568  ; je 0xe568
@@ -23302,14 +23294,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e568:  ; not directly referenced
+loc_0000e568:
 inc esi
 jmp short loc_0000e518  ; jmp 0xe518
 
-loc_0000e56b:  ; not directly referenced
+loc_0000e56b:
 xor esi, esi
 
-loc_0000e56d:  ; not directly referenced
+loc_0000e56d:
 call fcn_0001c21c  ; call 0x1c21c
 movzx eax, al
 cmp esi, eax
@@ -23331,18 +23323,18 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x20
 
-loc_0000e5a8:  ; not directly referenced
+loc_0000e5a8:
 inc esi
 jmp short loc_0000e56d  ; jmp 0xe56d
 
-loc_0000e5ab:  ; not directly referenced
+loc_0000e5ab:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0000e5b2:  ; not directly referenced
+fcn_0000e5b2:
 push ebp
 mov ebp, esp
 push esi
@@ -23358,14 +23350,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e5d4:  ; not directly referenced
+loc_0000e5d4:
 xor ebx, ebx
 
-loc_0000e5d6:  ; not directly referenced
+loc_0000e5d6:
 call fcn_0001c2f8  ; call 0x1c2f8
 movzx eax, al
 cmp ebx, eax
-jae loc_0000e718  ; jae 0xe718
+jae near loc_0000e718  ; jae 0xe718
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e604  ; je 0xe604
@@ -23377,7 +23369,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e604:  ; not directly referenced
+loc_0000e604:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e623  ; je 0xe623
@@ -23389,7 +23381,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e623:  ; not directly referenced
+loc_0000e623:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e642  ; je 0xe642
@@ -23401,7 +23393,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e642:  ; not directly referenced
+loc_0000e642:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e663  ; je 0xe663
@@ -23414,7 +23406,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e663:  ; not directly referenced
+loc_0000e663:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e686  ; je 0xe686
@@ -23428,7 +23420,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e686:  ; not directly referenced
+loc_0000e686:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e6a7  ; je 0xe6a7
@@ -23441,7 +23433,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e6a7:  ; not directly referenced
+loc_0000e6a7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e6ca  ; je 0xe6ca
@@ -23455,7 +23447,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e6ca:  ; not directly referenced
+loc_0000e6ca:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e6ee  ; je 0xe6ee
@@ -23469,7 +23461,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e6ee:  ; not directly referenced
+loc_0000e6ee:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e712  ; je 0xe712
@@ -23483,18 +23475,18 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e712:  ; not directly referenced
+loc_0000e712:
 inc ebx
 jmp near loc_0000e5d6  ; jmp 0xe5d6
 
-loc_0000e718:  ; not directly referenced
+loc_0000e718:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0000e71f:  ; not directly referenced
+fcn_0000e71f:
 push ebp
 mov ebp, esp
 push edi
@@ -23512,15 +23504,15 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e745:  ; not directly referenced
+loc_0000e745:
 lea edi, [esi + 0x1e]
 xor ebx, ebx
 
-loc_0000e74a:  ; not directly referenced
+loc_0000e74a:
 call fcn_0001c1bf  ; call 0x1c1bf
 movzx eax, al
 cmp ebx, eax
-jae loc_0000eba0  ; jae 0xeba0
+jae near loc_0000eba0  ; jae 0xeba0
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e77d  ; je 0xe77d
@@ -23534,7 +23526,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e77d:  ; not directly referenced
+loc_0000e77d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e7a2  ; je 0xe7a2
@@ -23549,7 +23541,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e7a2:  ; not directly referenced
+loc_0000e7a2:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e7c8  ; je 0xe7c8
@@ -23564,7 +23556,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e7c8:  ; not directly referenced
+loc_0000e7c8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e7ee  ; je 0xe7ee
@@ -23579,7 +23571,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e7ee:  ; not directly referenced
+loc_0000e7ee:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e814  ; je 0xe814
@@ -23594,7 +23586,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e814:  ; not directly referenced
+loc_0000e814:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e83a  ; je 0xe83a
@@ -23609,7 +23601,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e83a:  ; not directly referenced
+loc_0000e83a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e860  ; je 0xe860
@@ -23624,7 +23616,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e860:  ; not directly referenced
+loc_0000e860:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e887  ; je 0xe887
@@ -23639,7 +23631,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e887:  ; not directly referenced
+loc_0000e887:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e8ae  ; je 0xe8ae
@@ -23654,7 +23646,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e8ae:  ; not directly referenced
+loc_0000e8ae:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e8d5  ; je 0xe8d5
@@ -23669,7 +23661,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e8d5:  ; not directly referenced
+loc_0000e8d5:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e8fc  ; je 0xe8fc
@@ -23684,7 +23676,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e8fc:  ; not directly referenced
+loc_0000e8fc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e923  ; je 0xe923
@@ -23699,7 +23691,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e923:  ; not directly referenced
+loc_0000e923:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e94a  ; je 0xe94a
@@ -23714,7 +23706,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e94a:  ; not directly referenced
+loc_0000e94a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e96e  ; je 0xe96e
@@ -23728,7 +23720,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e96e:  ; not directly referenced
+loc_0000e96e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e992  ; je 0xe992
@@ -23742,7 +23734,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e992:  ; not directly referenced
+loc_0000e992:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e9b8  ; je 0xe9b8
@@ -23757,7 +23749,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e9b8:  ; not directly referenced
+loc_0000e9b8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e9d6  ; je 0xe9d6
@@ -23769,7 +23761,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e9d6:  ; not directly referenced
+loc_0000e9d6:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000e9f4  ; je 0xe9f4
@@ -23781,7 +23773,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000e9f4:  ; not directly referenced
+loc_0000e9f4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ea12  ; je 0xea12
@@ -23793,7 +23785,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ea12:  ; not directly referenced
+loc_0000ea12:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ea30  ; je 0xea30
@@ -23805,7 +23797,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ea30:  ; not directly referenced
+loc_0000ea30:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ea4e  ; je 0xea4e
@@ -23817,7 +23809,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ea4e:  ; not directly referenced
+loc_0000ea4e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ea6c  ; je 0xea6c
@@ -23829,7 +23821,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ea6c:  ; not directly referenced
+loc_0000ea6c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ea8a  ; je 0xea8a
@@ -23841,7 +23833,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ea8a:  ; not directly referenced
+loc_0000ea8a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eaa8  ; je 0xeaa8
@@ -23853,7 +23845,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eaa8:  ; not directly referenced
+loc_0000eaa8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eac6  ; je 0xeac6
@@ -23865,7 +23857,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eac6:  ; not directly referenced
+loc_0000eac6:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eae4  ; je 0xeae4
@@ -23877,7 +23869,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eae4:  ; not directly referenced
+loc_0000eae4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb02  ; je 0xeb02
@@ -23889,7 +23881,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb02:  ; not directly referenced
+loc_0000eb02:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb20  ; je 0xeb20
@@ -23901,7 +23893,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb20:  ; not directly referenced
+loc_0000eb20:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb3e  ; je 0xeb3e
@@ -23913,7 +23905,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb3e:  ; not directly referenced
+loc_0000eb3e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb5c  ; je 0xeb5c
@@ -23925,7 +23917,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb5c:  ; not directly referenced
+loc_0000eb5c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb7a  ; je 0xeb7a
@@ -23937,7 +23929,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb7a:  ; not directly referenced
+loc_0000eb7a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eb97  ; je 0xeb97
@@ -23949,12 +23941,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eb97:  ; not directly referenced
+loc_0000eb97:
 inc ebx
 add edi, 0x2c
 jmp near loc_0000e74a  ; jmp 0xe74a
 
-loc_0000eba0:  ; not directly referenced
+loc_0000eba0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ebc1  ; je 0xebc1
@@ -23966,7 +23958,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ebc1:  ; not directly referenced
+loc_0000ebc1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ebe2  ; je 0xebe2
@@ -23978,7 +23970,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ebe2:  ; not directly referenced
+loc_0000ebe2:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ec03  ; je 0xec03
@@ -23990,7 +23982,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ec03:  ; not directly referenced
+loc_0000ec03:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ec24  ; je 0xec24
@@ -24002,7 +23994,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ec24:  ; not directly referenced
+loc_0000ec24:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ec47  ; je 0xec47
@@ -24015,7 +24007,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ec47:  ; not directly referenced
+loc_0000ec47:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -24023,7 +24015,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000ec4f:  ; not directly referenced
+fcn_0000ec4f:
 push ebp
 mov ebp, esp
 push edi
@@ -24041,7 +24033,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ec75:  ; not directly referenced
+loc_0000ec75:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ec92  ; je 0xec92
@@ -24053,7 +24045,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ec92:  ; not directly referenced
+loc_0000ec92:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ecae  ; je 0xecae
@@ -24064,15 +24056,15 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ecae:  ; not directly referenced
+loc_0000ecae:
 lea edi, [esi + 0xd]
 xor ebx, ebx
 
-loc_0000ecb3:  ; not directly referenced
+loc_0000ecb3:
 call fcn_0001c1e1  ; call 0x1c1e1
 movzx eax, al
 cmp ebx, eax
-jae loc_0000f052  ; jae 0xf052
+jae near loc_0000f052  ; jae 0xf052
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ece7  ; je 0xece7
@@ -24086,7 +24078,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ece7:  ; not directly referenced
+loc_0000ece7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ed0d  ; je 0xed0d
@@ -24101,7 +24093,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ed0d:  ; not directly referenced
+loc_0000ed0d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ed34  ; je 0xed34
@@ -24116,7 +24108,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ed34:  ; not directly referenced
+loc_0000ed34:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ed5b  ; je 0xed5b
@@ -24131,7 +24123,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ed5b:  ; not directly referenced
+loc_0000ed5b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ed82  ; je 0xed82
@@ -24146,7 +24138,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ed82:  ; not directly referenced
+loc_0000ed82:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eda9  ; je 0xeda9
@@ -24161,7 +24153,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eda9:  ; not directly referenced
+loc_0000eda9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000edd0  ; je 0xedd0
@@ -24176,7 +24168,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000edd0:  ; not directly referenced
+loc_0000edd0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000edf7  ; je 0xedf7
@@ -24191,7 +24183,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000edf7:  ; not directly referenced
+loc_0000edf7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ee1b  ; je 0xee1b
@@ -24205,7 +24197,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ee1b:  ; not directly referenced
+loc_0000ee1b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ee4f  ; je 0xee4f
@@ -24225,7 +24217,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ee4f:  ; not directly referenced
+loc_0000ee4f:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ee6d  ; je 0xee6d
@@ -24237,7 +24229,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ee6d:  ; not directly referenced
+loc_0000ee6d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ee8b  ; je 0xee8b
@@ -24249,7 +24241,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ee8b:  ; not directly referenced
+loc_0000ee8b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eea9  ; je 0xeea9
@@ -24261,7 +24253,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eea9:  ; not directly referenced
+loc_0000eea9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eec7  ; je 0xeec7
@@ -24273,7 +24265,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eec7:  ; not directly referenced
+loc_0000eec7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000eee5  ; je 0xeee5
@@ -24285,7 +24277,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000eee5:  ; not directly referenced
+loc_0000eee5:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ef02  ; je 0xef02
@@ -24297,7 +24289,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ef02:  ; not directly referenced
+loc_0000ef02:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ef24  ; je 0xef24
@@ -24310,7 +24302,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ef24:  ; not directly referenced
+loc_0000ef24:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ef46  ; je 0xef46
@@ -24323,7 +24315,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ef46:  ; not directly referenced
+loc_0000ef46:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ef68  ; je 0xef68
@@ -24336,7 +24328,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ef68:  ; not directly referenced
+loc_0000ef68:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ef8a  ; je 0xef8a
@@ -24349,7 +24341,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ef8a:  ; not directly referenced
+loc_0000ef8a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000efae  ; je 0xefae
@@ -24363,7 +24355,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000efae:  ; not directly referenced
+loc_0000efae:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000efd4  ; je 0xefd4
@@ -24378,7 +24370,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000efd4:  ; not directly referenced
+loc_0000efd4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000effb  ; je 0xeffb
@@ -24393,7 +24385,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000effb:  ; not directly referenced
+loc_0000effb:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f022  ; je 0xf022
@@ -24408,7 +24400,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f022:  ; not directly referenced
+loc_0000f022:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f049  ; je 0xf049
@@ -24423,12 +24415,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f049:  ; not directly referenced
+loc_0000f049:
 inc ebx
 add edi, 0x12
 jmp near loc_0000ecb3  ; jmp 0xecb3
 
-loc_0000f052:  ; not directly referenced
+loc_0000f052:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f072  ; je 0xf072
@@ -24441,7 +24433,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f072:  ; not directly referenced
+loc_0000f072:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f094  ; je 0xf094
@@ -24455,7 +24447,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f094:  ; not directly referenced
+loc_0000f094:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f0b7  ; je 0xf0b7
@@ -24469,7 +24461,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f0b7:  ; not directly referenced
+loc_0000f0b7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f0da  ; je 0xf0da
@@ -24483,7 +24475,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f0da:  ; not directly referenced
+loc_0000f0da:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f0fd  ; je 0xf0fd
@@ -24497,7 +24489,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f0fd:  ; not directly referenced
+loc_0000f0fd:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f120  ; je 0xf120
@@ -24511,7 +24503,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f120:  ; not directly referenced
+loc_0000f120:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f143  ; je 0xf143
@@ -24525,7 +24517,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f143:  ; not directly referenced
+loc_0000f143:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f171  ; je 0xf171
@@ -24543,7 +24535,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f171:  ; not directly referenced
+loc_0000f171:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f193  ; je 0xf193
@@ -24557,7 +24549,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f193:  ; not directly referenced
+loc_0000f193:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f1b6  ; je 0xf1b6
@@ -24571,7 +24563,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f1b6:  ; not directly referenced
+loc_0000f1b6:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f1d9  ; je 0xf1d9
@@ -24585,7 +24577,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f1d9:  ; not directly referenced
+loc_0000f1d9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f1fc  ; je 0xf1fc
@@ -24599,7 +24591,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f1fc:  ; not directly referenced
+loc_0000f1fc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f218  ; je 0xf218
@@ -24610,7 +24602,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f218:  ; not directly referenced
+loc_0000f218:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f236  ; je 0xf236
@@ -24622,7 +24614,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f236:  ; not directly referenced
+loc_0000f236:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f254  ; je 0xf254
@@ -24634,7 +24626,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f254:  ; not directly referenced
+loc_0000f254:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f272  ; je 0xf272
@@ -24646,7 +24638,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f272:  ; not directly referenced
+loc_0000f272:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f290  ; je 0xf290
@@ -24658,7 +24650,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f290:  ; not directly referenced
+loc_0000f290:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f2ae  ; je 0xf2ae
@@ -24670,7 +24662,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f2ae:  ; not directly referenced
+loc_0000f2ae:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f2cc  ; je 0xf2cc
@@ -24682,7 +24674,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f2cc:  ; not directly referenced
+loc_0000f2cc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f2ea  ; je 0xf2ea
@@ -24694,7 +24686,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f2ea:  ; not directly referenced
+loc_0000f2ea:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f30b  ; je 0xf30b
@@ -24706,7 +24698,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f30b:  ; not directly referenced
+loc_0000f30b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f32c  ; je 0xf32c
@@ -24718,7 +24710,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f32c:  ; not directly referenced
+loc_0000f32c:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -24726,7 +24718,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0000f334:  ; not directly referenced
+fcn_0000f334:
 push ebp
 mov ebp, esp
 push ebx
@@ -24742,7 +24734,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f356:  ; not directly referenced
+loc_0000f356:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f373  ; je 0xf373
@@ -24754,7 +24746,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f373:  ; not directly referenced
+loc_0000f373:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f391  ; je 0xf391
@@ -24766,7 +24758,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f391:  ; not directly referenced
+loc_0000f391:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f3af  ; je 0xf3af
@@ -24778,7 +24770,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f3af:  ; not directly referenced
+loc_0000f3af:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f3cd  ; je 0xf3cd
@@ -24790,7 +24782,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f3cd:  ; not directly referenced
+loc_0000f3cd:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f3eb  ; je 0xf3eb
@@ -24802,7 +24794,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f3eb:  ; not directly referenced
+loc_0000f3eb:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f409  ; je 0xf409
@@ -24814,7 +24806,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f409:  ; not directly referenced
+loc_0000f409:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f427  ; je 0xf427
@@ -24826,12 +24818,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f427:  ; not directly referenced
+loc_0000f427:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000f42c:  ; not directly referenced
+fcn_0000f42c:
 push ebp
 mov ebp, esp
 push ebx
@@ -24847,7 +24839,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f44e:  ; not directly referenced
+loc_0000f44e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f46b  ; je 0xf46b
@@ -24859,7 +24851,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f46b:  ; not directly referenced
+loc_0000f46b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f489  ; je 0xf489
@@ -24871,7 +24863,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f489:  ; not directly referenced
+loc_0000f489:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f4a7  ; je 0xf4a7
@@ -24883,7 +24875,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f4a7:  ; not directly referenced
+loc_0000f4a7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f4c5  ; je 0xf4c5
@@ -24895,7 +24887,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f4c5:  ; not directly referenced
+loc_0000f4c5:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f4e3  ; je 0xf4e3
@@ -24907,7 +24899,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f4e3:  ; not directly referenced
+loc_0000f4e3:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f4ff  ; je 0xf4ff
@@ -24918,12 +24910,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f4ff:  ; not directly referenced
+loc_0000f4ff:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000f504:  ; not directly referenced
+fcn_0000f504:
 push ebp
 mov ebp, esp
 push ebx
@@ -24939,7 +24931,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f526:  ; not directly referenced
+loc_0000f526:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f545  ; je 0xf545
@@ -24952,7 +24944,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f545:  ; not directly referenced
+loc_0000f545:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f566  ; je 0xf566
@@ -24966,7 +24958,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f566:  ; not directly referenced
+loc_0000f566:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f588  ; je 0xf588
@@ -24980,7 +24972,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f588:  ; not directly referenced
+loc_0000f588:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f5aa  ; je 0xf5aa
@@ -24994,7 +24986,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f5aa:  ; not directly referenced
+loc_0000f5aa:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f5cc  ; je 0xf5cc
@@ -25008,7 +25000,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f5cc:  ; not directly referenced
+loc_0000f5cc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f5ee  ; je 0xf5ee
@@ -25022,12 +25014,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f5ee:  ; not directly referenced
+loc_0000f5ee:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000f5f3:  ; not directly referenced
+fcn_0000f5f3:
 push ebp
 mov ebp, esp
 push esi
@@ -25043,10 +25035,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f615:  ; not directly referenced
+loc_0000f615:
 xor ebx, ebx
 
-loc_0000f617:  ; not directly referenced
+loc_0000f617:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f637  ; je 0xf637
@@ -25059,7 +25051,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f637:  ; not directly referenced
+loc_0000f637:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f659  ; je 0xf659
@@ -25073,7 +25065,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f659:  ; not directly referenced
+loc_0000f659:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f678  ; je 0xf678
@@ -25085,7 +25077,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f678:  ; not directly referenced
+loc_0000f678:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f697  ; je 0xf697
@@ -25097,17 +25089,17 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f697:  ; not directly referenced
+loc_0000f697:
 inc ebx
 cmp ebx, 5
-jne loc_0000f617  ; jne 0xf617
+jne near loc_0000f617  ; jne 0xf617
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0000f6a8:  ; not directly referenced
+fcn_0000f6a8:
 push ebp
 mov ebp, esp
 push esi
@@ -25123,7 +25115,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f6ca:  ; not directly referenced
+loc_0000f6ca:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f6e7  ; je 0xf6e7
@@ -25135,7 +25127,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f6e7:  ; not directly referenced
+loc_0000f6e7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f705  ; je 0xf705
@@ -25147,7 +25139,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f705:  ; not directly referenced
+loc_0000f705:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f723  ; je 0xf723
@@ -25159,7 +25151,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f723:  ; not directly referenced
+loc_0000f723:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f73d  ; je 0xf73d
@@ -25170,10 +25162,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f73d:  ; not directly referenced
+loc_0000f73d:
 xor esi, esi
 
-loc_0000f73f:  ; not directly referenced
+loc_0000f73f:
 movzx eax, byte [ebx + 7]
 cmp esi, eax
 jae short loc_0000f769  ; jae 0xf769
@@ -25188,11 +25180,11 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f766:  ; not directly referenced
+loc_0000f766:
 inc esi
 jmp short loc_0000f73f  ; jmp 0xf73f
 
-loc_0000f769:  ; not directly referenced
+loc_0000f769:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f783  ; je 0xf783
@@ -25203,14 +25195,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f783:  ; not directly referenced
+loc_0000f783:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0000f78a:  ; not directly referenced
+fcn_0000f78a:
 push ebp
 mov ebp, esp
 push ebx
@@ -25226,7 +25218,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f7ac:  ; not directly referenced
+loc_0000f7ac:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f7c9  ; je 0xf7c9
@@ -25238,7 +25230,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f7c9:  ; not directly referenced
+loc_0000f7c9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f7e7  ; je 0xf7e7
@@ -25250,7 +25242,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f7e7:  ; not directly referenced
+loc_0000f7e7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f805  ; je 0xf805
@@ -25262,7 +25254,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f805:  ; not directly referenced
+loc_0000f805:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f823  ; je 0xf823
@@ -25274,7 +25266,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f823:  ; not directly referenced
+loc_0000f823:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f841  ; je 0xf841
@@ -25286,12 +25278,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f841:  ; not directly referenced
+loc_0000f841:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000f846:  ; not directly referenced
+fcn_0000f846:
 push ebp
 mov ebp, esp
 push ebx
@@ -25307,7 +25299,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f868:  ; not directly referenced
+loc_0000f868:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f887  ; je 0xf887
@@ -25320,7 +25312,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f887:  ; not directly referenced
+loc_0000f887:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f8a8  ; je 0xf8a8
@@ -25334,7 +25326,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f8a8:  ; not directly referenced
+loc_0000f8a8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f8ca  ; je 0xf8ca
@@ -25348,7 +25340,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f8ca:  ; not directly referenced
+loc_0000f8ca:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f8ec  ; je 0xf8ec
@@ -25362,7 +25354,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f8ec:  ; not directly referenced
+loc_0000f8ec:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f90e  ; je 0xf90e
@@ -25376,7 +25368,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f90e:  ; not directly referenced
+loc_0000f90e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f92e  ; je 0xf92e
@@ -25389,7 +25381,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f92e:  ; not directly referenced
+loc_0000f92e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f950  ; je 0xf950
@@ -25403,7 +25395,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f950:  ; not directly referenced
+loc_0000f950:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f973  ; je 0xf973
@@ -25417,7 +25409,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f973:  ; not directly referenced
+loc_0000f973:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f996  ; je 0xf996
@@ -25431,7 +25423,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f996:  ; not directly referenced
+loc_0000f996:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f9b9  ; je 0xf9b9
@@ -25445,7 +25437,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f9b9:  ; not directly referenced
+loc_0000f9b9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f9dc  ; je 0xf9dc
@@ -25459,7 +25451,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f9dc:  ; not directly referenced
+loc_0000f9dc:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000f9f8  ; je 0xf9f8
@@ -25470,7 +25462,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000f9f8:  ; not directly referenced
+loc_0000f9f8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fa14  ; je 0xfa14
@@ -25481,7 +25473,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fa14:  ; not directly referenced
+loc_0000fa14:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fa30  ; je 0xfa30
@@ -25492,7 +25484,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fa30:  ; not directly referenced
+loc_0000fa30:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fa4c  ; je 0xfa4c
@@ -25503,7 +25495,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fa4c:  ; not directly referenced
+loc_0000fa4c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fa68  ; je 0xfa68
@@ -25514,7 +25506,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fa68:  ; not directly referenced
+loc_0000fa68:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fa88  ; je 0xfa88
@@ -25527,7 +25519,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fa88:  ; not directly referenced
+loc_0000fa88:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000faaa  ; je 0xfaaa
@@ -25541,7 +25533,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000faaa:  ; not directly referenced
+loc_0000faaa:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000facd  ; je 0xfacd
@@ -25555,7 +25547,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000facd:  ; not directly referenced
+loc_0000facd:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000faf0  ; je 0xfaf0
@@ -25569,7 +25561,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000faf0:  ; not directly referenced
+loc_0000faf0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fb0e  ; je 0xfb0e
@@ -25581,12 +25573,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fb0e:  ; not directly referenced
+loc_0000fb0e:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000fb13:  ; not directly referenced
+fcn_0000fb13:
 push ebp
 mov ebp, esp
 push ebx
@@ -25602,7 +25594,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fb35:  ; not directly referenced
+loc_0000fb35:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fb54  ; je 0xfb54
@@ -25615,7 +25607,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fb54:  ; not directly referenced
+loc_0000fb54:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fb75  ; je 0xfb75
@@ -25629,7 +25621,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fb75:  ; not directly referenced
+loc_0000fb75:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fb97  ; je 0xfb97
@@ -25643,7 +25635,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fb97:  ; not directly referenced
+loc_0000fb97:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fbb9  ; je 0xfbb9
@@ -25657,7 +25649,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fbb9:  ; not directly referenced
+loc_0000fbb9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fbdb  ; je 0xfbdb
@@ -25671,7 +25663,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fbdb:  ; not directly referenced
+loc_0000fbdb:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fbfd  ; je 0xfbfd
@@ -25685,12 +25677,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fbfd:  ; not directly referenced
+loc_0000fbfd:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000fc02:  ; not directly referenced
+fcn_0000fc02:
 push ebp
 mov ebp, esp
 push ebx
@@ -25706,7 +25698,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fc24:  ; not directly referenced
+loc_0000fc24:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fc41  ; je 0xfc41
@@ -25718,7 +25710,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fc41:  ; not directly referenced
+loc_0000fc41:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fc5d  ; je 0xfc5d
@@ -25729,7 +25721,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fc5d:  ; not directly referenced
+loc_0000fc5d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fc79  ; je 0xfc79
@@ -25740,12 +25732,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fc79:  ; not directly referenced
+loc_0000fc79:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0000fc7e:  ; not directly referenced
+fcn_0000fc7e:
 push ebp
 mov ebp, esp
 push esi
@@ -25761,7 +25753,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fca0:  ; not directly referenced
+loc_0000fca0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fcbf  ; je 0xfcbf
@@ -25774,7 +25766,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fcbf:  ; not directly referenced
+loc_0000fcbf:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fce0  ; je 0xfce0
@@ -25788,7 +25780,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fce0:  ; not directly referenced
+loc_0000fce0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fd02  ; je 0xfd02
@@ -25802,7 +25794,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fd02:  ; not directly referenced
+loc_0000fd02:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fd24  ; je 0xfd24
@@ -25816,7 +25808,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fd24:  ; not directly referenced
+loc_0000fd24:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fd4e  ; je 0xfd4e
@@ -25832,7 +25824,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fd4e:  ; not directly referenced
+loc_0000fd4e:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fd7c  ; je 0xfd7c
@@ -25850,7 +25842,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fd7c:  ; not directly referenced
+loc_0000fd7c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fdab  ; je 0xfdab
@@ -25868,7 +25860,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fdab:  ; not directly referenced
+loc_0000fdab:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fdce  ; je 0xfdce
@@ -25882,7 +25874,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fdce:  ; not directly referenced
+loc_0000fdce:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fdf1  ; je 0xfdf1
@@ -25896,7 +25888,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fdf1:  ; not directly referenced
+loc_0000fdf1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fe14  ; je 0xfe14
@@ -25910,7 +25902,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fe14:  ; not directly referenced
+loc_0000fe14:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fe37  ; je 0xfe37
@@ -25924,7 +25916,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fe37:  ; not directly referenced
+loc_0000fe37:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fe5a  ; je 0xfe5a
@@ -25938,7 +25930,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fe5a:  ; not directly referenced
+loc_0000fe5a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fe7a  ; je 0xfe7a
@@ -25951,7 +25943,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fe7a:  ; not directly referenced
+loc_0000fe7a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fe9a  ; je 0xfe9a
@@ -25964,7 +25956,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fe9a:  ; not directly referenced
+loc_0000fe9a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000febd  ; je 0xfebd
@@ -25978,7 +25970,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000febd:  ; not directly referenced
+loc_0000febd:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fee0  ; je 0xfee0
@@ -25992,7 +25984,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fee0:  ; not directly referenced
+loc_0000fee0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ff03  ; je 0xff03
@@ -26006,7 +25998,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ff03:  ; not directly referenced
+loc_0000ff03:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ff25  ; je 0xff25
@@ -26020,7 +26012,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ff25:  ; not directly referenced
+loc_0000ff25:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ff45  ; je 0xff45
@@ -26033,7 +26025,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ff45:  ; not directly referenced
+loc_0000ff45:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ff68  ; je 0xff68
@@ -26047,7 +26039,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ff68:  ; not directly referenced
+loc_0000ff68:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ff8b  ; je 0xff8b
@@ -26061,7 +26053,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ff8b:  ; not directly referenced
+loc_0000ff8b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ffae  ; je 0xffae
@@ -26075,7 +26067,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ffae:  ; not directly referenced
+loc_0000ffae:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000ffce  ; je 0xffce
@@ -26088,7 +26080,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000ffce:  ; not directly referenced
+loc_0000ffce:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0000fff1  ; je 0xfff1
@@ -26102,7 +26094,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0000fff1:  ; not directly referenced
+loc_0000fff1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010011  ; je 0x10011
@@ -26115,7 +26107,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010011:  ; not directly referenced
+loc_00010011:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010034  ; je 0x10034
@@ -26129,7 +26121,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010034:  ; not directly referenced
+loc_00010034:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010057  ; je 0x10057
@@ -26143,7 +26135,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010057:  ; not directly referenced
+loc_00010057:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001007a  ; je 0x1007a
@@ -26157,7 +26149,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001007a:  ; not directly referenced
+loc_0001007a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001009d  ; je 0x1009d
@@ -26171,7 +26163,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001009d:  ; not directly referenced
+loc_0001009d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000100c0  ; je 0x100c0
@@ -26185,7 +26177,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000100c0:  ; not directly referenced
+loc_000100c0:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000100e3  ; je 0x100e3
@@ -26199,7 +26191,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000100e3:  ; not directly referenced
+loc_000100e3:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010103  ; je 0x10103
@@ -26212,10 +26204,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010103:  ; not directly referenced
+loc_00010103:
 mov esi, 2
 
-loc_00010108:  ; not directly referenced
+loc_00010108:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010129  ; je 0x10129
@@ -26228,7 +26220,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010129:  ; not directly referenced
+loc_00010129:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001014c  ; je 0x1014c
@@ -26242,7 +26234,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001014c:  ; not directly referenced
+loc_0001014c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010170  ; je 0x10170
@@ -26256,7 +26248,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010170:  ; not directly referenced
+loc_00010170:
 inc esi
 cmp esi, 4
 jne short loc_00010108  ; jne 0x10108
@@ -26271,7 +26263,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010194:  ; not directly referenced
+loc_00010194:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000101b2  ; je 0x101b2
@@ -26283,14 +26275,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000101b2:  ; not directly referenced
+loc_000101b2:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_000101b9:  ; not directly referenced
+fcn_000101b9:
 push ebp
 mov ebp, esp
 push ebx
@@ -26306,7 +26298,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000101db:  ; not directly referenced
+loc_000101db:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000101f8  ; je 0x101f8
@@ -26318,7 +26310,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000101f8:  ; not directly referenced
+loc_000101f8:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010216  ; je 0x10216
@@ -26330,7 +26322,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010216:  ; not directly referenced
+loc_00010216:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010234  ; je 0x10234
@@ -26342,7 +26334,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010234:  ; not directly referenced
+loc_00010234:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010252  ; je 0x10252
@@ -26354,12 +26346,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010252:  ; not directly referenced
+loc_00010252:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00010257:  ; not directly referenced
+fcn_00010257:
 push ebp
 mov ebp, esp
 push ebx
@@ -26375,7 +26367,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010279:  ; not directly referenced
+loc_00010279:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010296  ; je 0x10296
@@ -26387,7 +26379,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010296:  ; not directly referenced
+loc_00010296:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000102b4  ; je 0x102b4
@@ -26399,12 +26391,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000102b4:  ; not directly referenced
+loc_000102b4:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000102b9:  ; not directly referenced
+fcn_000102b9:
 push ebp
 mov ebp, esp
 push ebx
@@ -26420,7 +26412,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000102db:  ; not directly referenced
+loc_000102db:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000102fe  ; je 0x102fe
@@ -26434,7 +26426,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000102fe:  ; not directly referenced
+loc_000102fe:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001031b  ; je 0x1031b
@@ -26446,7 +26438,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001031b:  ; not directly referenced
+loc_0001031b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010339  ; je 0x10339
@@ -26458,7 +26450,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010339:  ; not directly referenced
+loc_00010339:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010357  ; je 0x10357
@@ -26470,7 +26462,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010357:  ; not directly referenced
+loc_00010357:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010375  ; je 0x10375
@@ -26482,7 +26474,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010375:  ; not directly referenced
+loc_00010375:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010393  ; je 0x10393
@@ -26494,7 +26486,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010393:  ; not directly referenced
+loc_00010393:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000103b1  ; je 0x103b1
@@ -26506,7 +26498,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000103b1:  ; not directly referenced
+loc_000103b1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000103cf  ; je 0x103cf
@@ -26518,7 +26510,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000103cf:  ; not directly referenced
+loc_000103cf:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000103ed  ; je 0x103ed
@@ -26530,7 +26522,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000103ed:  ; not directly referenced
+loc_000103ed:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001040d  ; je 0x1040d
@@ -26543,7 +26535,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001040d:  ; not directly referenced
+loc_0001040d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001042f  ; je 0x1042f
@@ -26557,7 +26549,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001042f:  ; not directly referenced
+loc_0001042f:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010452  ; je 0x10452
@@ -26571,7 +26563,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010452:  ; not directly referenced
+loc_00010452:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010475  ; je 0x10475
@@ -26585,7 +26577,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010475:  ; not directly referenced
+loc_00010475:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010498  ; je 0x10498
@@ -26599,7 +26591,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010498:  ; not directly referenced
+loc_00010498:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000104bb  ; je 0x104bb
@@ -26613,7 +26605,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000104bb:  ; not directly referenced
+loc_000104bb:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000104de  ; je 0x104de
@@ -26627,12 +26619,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000104de:  ; not directly referenced
+loc_000104de:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000104e3:  ; not directly referenced
+fcn_000104e3:
 push ebp
 mov ebp, esp
 push ebx
@@ -26648,7 +26640,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010505:  ; not directly referenced
+loc_00010505:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010524  ; je 0x10524
@@ -26661,7 +26653,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010524:  ; not directly referenced
+loc_00010524:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010545  ; je 0x10545
@@ -26675,7 +26667,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010545:  ; not directly referenced
+loc_00010545:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010567  ; je 0x10567
@@ -26689,7 +26681,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010567:  ; not directly referenced
+loc_00010567:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010589  ; je 0x10589
@@ -26703,7 +26695,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010589:  ; not directly referenced
+loc_00010589:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000105ab  ; je 0x105ab
@@ -26717,7 +26709,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000105ab:  ; not directly referenced
+loc_000105ab:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000105cd  ; je 0x105cd
@@ -26731,7 +26723,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000105cd:  ; not directly referenced
+loc_000105cd:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000105ef  ; je 0x105ef
@@ -26745,7 +26737,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000105ef:  ; not directly referenced
+loc_000105ef:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001060b  ; je 0x1060b
@@ -26756,12 +26748,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001060b:  ; not directly referenced
+loc_0001060b:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00010610:  ; not directly referenced
+fcn_00010610:
 push ebp
 mov ebp, esp
 push ebx
@@ -26777,7 +26769,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010632:  ; not directly referenced
+loc_00010632:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001064f  ; je 0x1064f
@@ -26789,7 +26781,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001064f:  ; not directly referenced
+loc_0001064f:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001066d  ; je 0x1066d
@@ -26801,7 +26793,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001066d:  ; not directly referenced
+loc_0001066d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001068b  ; je 0x1068b
@@ -26813,7 +26805,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001068b:  ; not directly referenced
+loc_0001068b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000106a9  ; je 0x106a9
@@ -26825,7 +26817,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000106a9:  ; not directly referenced
+loc_000106a9:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000106c5  ; je 0x106c5
@@ -26836,7 +26828,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000106c5:  ; not directly referenced
+loc_000106c5:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000106e1  ; je 0x106e1
@@ -26847,12 +26839,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000106e1:  ; not directly referenced
+loc_000106e1:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000106e6:  ; not directly referenced
+fcn_000106e6:
 push ebp
 mov ebp, esp
 push esi
@@ -26868,10 +26860,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010708:  ; not directly referenced
+loc_00010708:
 xor esi, esi
 
-loc_0001070a:  ; not directly referenced
+loc_0001070a:
 mov eax, esi
 cmp al, byte [ebx + 0x48]
 jae short loc_00010757  ; jae 0x10757
@@ -26887,7 +26879,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010732:  ; not directly referenced
+loc_00010732:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010754  ; je 0x10754
@@ -26900,14 +26892,14 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010754:  ; not directly referenced
+loc_00010754:
 inc esi
 jmp short loc_0001070a  ; jmp 0x1070a
 
-loc_00010757:  ; not directly referenced
+loc_00010757:
 xor esi, esi
 
-loc_00010759:  ; not directly referenced
+loc_00010759:
 mov eax, esi
 cmp al, byte [ebx + 0x75]
 jae short loc_000107ab  ; jae 0x107ab
@@ -26924,7 +26916,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010784:  ; not directly referenced
+loc_00010784:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000107a8  ; je 0x107a8
@@ -26938,18 +26930,18 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000107a8:  ; not directly referenced
+loc_000107a8:
 inc esi
 jmp short loc_00010759  ; jmp 0x10759
 
-loc_000107ab:  ; not directly referenced
+loc_000107ab:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_000107b2:  ; not directly referenced
+fcn_000107b2:
 push ebp
 mov ebp, esp
 push ebx
@@ -26965,7 +26957,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000107d4:  ; not directly referenced
+loc_000107d4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000107f1  ; je 0x107f1
@@ -26977,7 +26969,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000107f1:  ; not directly referenced
+loc_000107f1:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001080f  ; je 0x1080f
@@ -26989,7 +26981,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001080f:  ; not directly referenced
+loc_0001080f:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001082b  ; je 0x1082b
@@ -27000,7 +26992,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001082b:  ; not directly referenced
+loc_0001082b:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010849  ; je 0x10849
@@ -27012,7 +27004,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010849:  ; not directly referenced
+loc_00010849:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010867  ; je 0x10867
@@ -27024,7 +27016,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010867:  ; not directly referenced
+loc_00010867:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010885  ; je 0x10885
@@ -27036,7 +27028,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010885:  ; not directly referenced
+loc_00010885:
 sub esp, 0xc
 lea eax, [ebx + 0x10]
 push eax
@@ -27109,12 +27101,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000109b2:  ; not directly referenced
+loc_000109b2:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000109b7:  ; not directly referenced
+fcn_000109b7:
 push ebp
 mov ebp, esp
 push ebx
@@ -27132,7 +27124,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000109e6:  ; not directly referenced
+loc_000109e6:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010a0e  ; je 0x10a0e
@@ -27145,7 +27137,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010a0e:  ; not directly referenced
+loc_00010a0e:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010a36  ; je 0x10a36
@@ -27158,7 +27150,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010a36:  ; not directly referenced
+loc_00010a36:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010a5d  ; je 0x10a5d
@@ -27171,7 +27163,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010a5d:  ; not directly referenced
+loc_00010a5d:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010a87  ; je 0x10a87
@@ -27184,7 +27176,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010a87:  ; not directly referenced
+loc_00010a87:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010aaf  ; je 0x10aaf
@@ -27197,7 +27189,7 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010aaf:  ; not directly referenced
+loc_00010aaf:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00010ad7  ; je 0x10ad7
@@ -27210,12 +27202,12 @@ push ref_00024be7  ; push 0x24be7
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010ad7:  ; not directly referenced
+loc_00010ad7:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00010adc:  ; not directly referenced
+fcn_00010adc:
 push ebp
 mov ebp, esp
 push esi
@@ -27239,18 +27231,18 @@ jne short loc_00010b5d  ; jne 0x10b5d
 add ebx, 0x2040
 jmp short loc_00010b31  ; jmp 0x10b31
 
-loc_00010b1b:  ; not directly referenced
+loc_00010b1b:
 add ebx, 0x2014
 jmp short loc_00010b31  ; jmp 0x10b31
 
-loc_00010b23:  ; not directly referenced
+loc_00010b23:
 add ebx, 0x2020
 jmp short loc_00010b31  ; jmp 0x10b31
 
-loc_00010b2b:  ; not directly referenced
+loc_00010b2b:
 add ebx, 0x2030
 
-loc_00010b31:  ; not directly referenced
+loc_00010b31:
 push edx
 xor esi, esi
 push eax
@@ -27269,10 +27261,10 @@ call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 jmp short loc_00010b62  ; jmp 0x10b62
 
-loc_00010b5d:  ; not directly referenced
+loc_00010b5d:
 mov esi, 0x80000002
 
-loc_00010b62:  ; not directly referenced
+loc_00010b62:
 lea esp, [ebp - 8]
 mov eax, esi
 pop ebx
@@ -27280,7 +27272,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00010b6b:  ; not directly referenced
+fcn_00010b6b:
 push ebp
 mov ebp, esp
 push ebx
@@ -27297,18 +27289,18 @@ jne short loc_00010bb4  ; jne 0x10bb4
 add ebx, 0x2046
 jmp short loc_00010ba2  ; jmp 0x10ba2
 
-loc_00010b8c:  ; not directly referenced
+loc_00010b8c:
 add ebx, 0x201a
 jmp short loc_00010ba2  ; jmp 0x10ba2
 
-loc_00010b94:  ; not directly referenced
+loc_00010b94:
 add ebx, 0x2026
 jmp short loc_00010ba2  ; jmp 0x10ba2
 
-loc_00010b9c:  ; not directly referenced
+loc_00010b9c:
 add ebx, 0x2036
 
-loc_00010ba2:  ; not directly referenced
+loc_00010ba2:
 sub esp, 0xc
 push ebx
 call fcn_00017dc2  ; call 0x17dc2
@@ -27317,19 +27309,19 @@ test al, 2
 jne short loc_00010ba2  ; jne 0x10ba2
 jmp short loc_00010bbb  ; jmp 0x10bbb
 
-loc_00010bb4:  ; not directly referenced
+loc_00010bb4:
 mov eax, 0x80000002
 jmp short loc_00010bbd  ; jmp 0x10bbd
 
-loc_00010bbb:  ; not directly referenced
+loc_00010bbb:
 xor eax, eax
 
-loc_00010bbd:  ; not directly referenced
+loc_00010bbd:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00010bc2:  ; not directly referenced
+fcn_00010bc2:
 push ebp
 mov ebp, esp
 push edi
@@ -27360,7 +27352,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010c13:  ; not directly referenced
+loc_00010c13:
 push esi
 push ref_000206f4  ; push 0x206f4
 push 0xa7
@@ -27368,7 +27360,7 @@ push ref_00024d25  ; push 0x24d25
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00010c2b:  ; not directly referenced
+loc_00010c2b:
 push ebx
 push 0
 push 0x1f
@@ -27396,14 +27388,14 @@ push edi
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00010c7e:  ; not directly referenced
+loc_00010c7e:
 sub esp, 0xc
 xor ebx, ebx
 push edi
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 
-loc_00010c8c:  ; not directly referenced
+loc_00010c8c:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010cab  ; je 0x10cab
@@ -27415,7 +27407,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010cab:  ; not directly referenced
+loc_00010cab:
 mov eax, dword [ebp - 0x20]
 mov cl, bl
 mov edx, dword [eax + ebx*4]
@@ -27427,7 +27419,7 @@ cmp ebx, 8
 jne short loc_00010c8c  ; jne 0x10c8c
 xor bl, bl
 
-loc_00010cc6:  ; not directly referenced
+loc_00010cc6:
 call fcn_00015479  ; call 0x15479
 test al, al
 lea eax, [ebx + ebx]
@@ -27447,7 +27439,7 @@ call fcn_00015487  ; call 0x15487
 mov eax, dword [ebp - 0x2c]
 add esp, 0x20
 
-loc_00010cfa:  ; not directly referenced
+loc_00010cfa:
 add eax, dword [ebp - 0x20]
 cmp byte [eax + 0x20], 1
 jne short loc_00010d18  ; jne 0x10d18
@@ -27460,7 +27452,7 @@ push esi
 call fcn_00010adc  ; call 0x10adc
 add esp, 0x10
 
-loc_00010d18:  ; not directly referenced
+loc_00010d18:
 inc ebx
 cmp ebx, 4
 jne short loc_00010cc6  ; jne 0x10cc6
@@ -27474,7 +27466,7 @@ mov dword [esp], edi
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 
-loc_00010d38:  ; not directly referenced
+loc_00010d38:
 mov eax, dword [ebp - 0x20]
 cmp byte [eax + ebx*2 + 0x20], 1
 jne short loc_00010d4e  ; jne 0x10d4e
@@ -27485,7 +27477,7 @@ push esi
 call fcn_00010b6b  ; call 0x10b6b
 add esp, 0x10
 
-loc_00010d4e:  ; not directly referenced
+loc_00010d4e:
 inc ebx
 cmp ebx, 4
 jne short loc_00010d38  ; jne 0x10d38
@@ -27497,14 +27489,14 @@ pop edi
 pop ebp
 ret
 
-fcn_00010d5e:  ; not directly referenced
+fcn_00010d5e:
 push ebp
 mov ebp, esp
 push ebx
 push eax
 call fcn_0001bfbb  ; call 0x1bfbb
 dec eax
-jne loc_00010df4  ; jne 0x10df4
+jne near loc_00010df4  ; jne 0x10df4
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010d89  ; je 0x10d89
@@ -27515,7 +27507,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010d89:  ; not directly referenced
+loc_00010d89:
 push ecx
 push 0
 push 0x1f
@@ -27541,7 +27533,7 @@ push ebx
 call fcn_0001878a  ; call 0x1878a
 add esp, 0x10
 
-loc_00010dda:  ; not directly referenced
+loc_00010dda:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00010df4  ; je 0x10df4
@@ -27552,7 +27544,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00010df4:  ; not directly referenced
+loc_00010df4:
 mov ebx, dword [ebp - 4]
 leave
 ret
@@ -27701,7 +27693,7 @@ mov byte [ebp - 0x20], al
 
 loc_00010f3f:
 cmp edi, esi
-je loc_00010fea  ; je 0x10fea
+je near loc_00010fea  ; je 0x10fea
 cmp dword [ebp + 0xc], 2
 jne short loc_00010f64  ; jne 0x10f64
 mov eax, dword [edi]
@@ -27804,7 +27796,7 @@ jne short loc_00011034  ; jne 0x11034
 cmp byte [ebp - 0x1b], 8
 
 loc_0001102e:
-jne loc_00011229  ; jne 0x11229
+jne near loc_00011229  ; jne 0x11229
 
 loc_00011034:
 cmp dword [ebp + 0xc], 1
@@ -27932,7 +27924,7 @@ add esp, 0x10
 loc_00011172:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_000110a5  ; je 0x110a5
+je near loc_000110a5  ; je 0x110a5
 push ecx
 push ref_00022281  ; push 0x22281
 push 0x1e2
@@ -27973,7 +27965,7 @@ add esp, 0x10
 loc_000111e9:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_000110a5  ; je 0x110a5
+je near loc_000110a5  ; je 0x110a5
 push eax
 push ref_00022281  ; push 0x22281
 push 0x1f3
@@ -28029,7 +28021,7 @@ ja short loc_00011290  ; ja 0x11290
 cmp ecx, 0x20
 jae short loc_000112aa  ; jae 0x112aa
 cmp ecx, 1
-jb loc_00011465  ; jb 0x11465
+jb near loc_00011465  ; jb 0x11465
 cmp ecx, 3
 jbe short loc_000112a3  ; jbe 0x112a3
 cmp ecx, 0x10
@@ -28039,7 +28031,7 @@ jmp near loc_00011465  ; jmp 0x11465
 loc_00011290:
 sub ecx, 0x41
 cmp ecx, 2
-ja loc_00011465  ; ja 0x11465
+ja near loc_00011465  ; ja 0x11465
 mov ecx, ref_00028850  ; mov ecx, 0x28850
 jmp short loc_000112af  ; jmp 0x112af
 
@@ -28052,14 +28044,14 @@ mov ecx, ref_000280cc  ; mov ecx, 0x280cc
 
 loc_000112af:
 test eax, 0x80000
-je loc_00011465  ; je 0x11465
+je near loc_00011465  ; je 0x11465
 and eax, 0x70000
 mov edx, eax
 shr edx, 0x10
 cmp dword [ebp + 0xc], 2
 jne short loc_0001132d  ; jne 0x1132d
 cmp dl, 5
-ja loc_00011465  ; ja 0x11465
+ja near loc_00011465  ; ja 0x11465
 imul edx, edx, 0xc
 add ecx, edx
 push dword [ecx + 8]
@@ -28071,9 +28063,9 @@ mov ebx, eax
 call fcn_00015480  ; call 0x15480
 add esp, 0x10
 test al, al
-je loc_00011465  ; je 0x11465
+je near loc_00011465  ; je 0x11465
 test ebx, ebx
-jns loc_00011465  ; jns 0x11465
+jns near loc_00011465  ; jns 0x11465
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001131d  ; je 0x1131d
@@ -28092,13 +28084,13 @@ jmp near loc_00011458  ; jmp 0x11458
 
 loc_0001132d:
 cmp dword [ebp + 0xc], 1
-jne loc_00011465  ; jne 0x11465
+jne near loc_00011465  ; jne 0x11465
 test dl, dl
 jne short loc_000113a2  ; jne 0x113a2
 mov eax, edi
 and eax, 3
 dec al
-jne loc_00011465  ; jne 0x11465
+jne near loc_00011465  ; jne 0x11465
 imul edx, edx, 0xc
 add ecx, edx
 push dword [ecx + 8]
@@ -28110,9 +28102,9 @@ mov ebx, eax
 call fcn_00015480  ; call 0x15480
 add esp, 0x10
 test al, al
-je loc_00011465  ; je 0x11465
+je near loc_00011465  ; je 0x11465
 test ebx, ebx
-jns loc_00011465  ; jns 0x11465
+jns near loc_00011465  ; jns 0x11465
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00011392  ; je 0x11392
@@ -28135,7 +28127,7 @@ jne short loc_0001140b  ; jne 0x1140b
 mov eax, edi
 and eax, 0xc
 cmp al, 4
-jne loc_00011465  ; jne 0x11465
+jne near loc_00011465  ; jne 0x11465
 imul edx, edx, 0xc
 add ecx, edx
 push dword [ecx + 8]
@@ -28147,9 +28139,9 @@ mov ebx, eax
 call fcn_00015480  ; call 0x15480
 add esp, 0x10
 test al, al
-je loc_00011465  ; je 0x11465
+je near loc_00011465  ; je 0x11465
 test ebx, ebx
-jns loc_00011465  ; jns 0x11465
+jns near loc_00011465  ; jns 0x11465
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_000113fe  ; je 0x113fe
@@ -28353,7 +28345,7 @@ je short loc_000115fe  ; je 0x115fe
 loc_000115f0:
 call fcn_0001bfbb  ; call 0x1bfbb
 dec eax
-jne loc_000116a3  ; jne 0x116a3
+jne near loc_000116a3  ; jne 0x116a3
 jmp short loc_0001164b  ; jmp 0x1164b
 
 loc_000115fe:
@@ -28501,7 +28493,7 @@ add esp, 0x10
 loc_00011777:
 cmp dword [ebp + 8], 0
 mov ebx, 0x80000002
-je loc_0001189f  ; je 0x1189f
+je near loc_0001189f  ; je 0x1189f
 call fcn_00015479  ; call 0x15479
 test al, al
 mov eax, esi
@@ -28627,7 +28619,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000118c3:  ; not directly referenced
+fcn_000118c3:
 push ebp
 mov ebp, esp
 push ebx
@@ -28642,7 +28634,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000118e4:  ; not directly referenced
+loc_000118e4:
 lea eax, [ebp - 0xc]
 push eax
 push 0
@@ -28663,7 +28655,7 @@ call fcn_00011751  ; call 0x11751
 add esp, 0x10
 mov ebx, eax
 
-loc_00011919:  ; not directly referenced
+loc_00011919:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00011933  ; je 0x11933
@@ -28674,13 +28666,13 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00011933:  ; not directly referenced
+loc_00011933:
 mov eax, ebx
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001193a:  ; not directly referenced
+fcn_0001193a:
 push ebp
 mov ebp, esp
 push edi
@@ -28735,7 +28727,7 @@ mov ecx, eax
 mov dword [ebp - 0x3c], eax
 mov eax, 0x80000003
 test ecx, ecx
-je loc_00011e6c  ; je 0x11e6c
+je near loc_00011e6c  ; je 0x11e6c
 sub esp, 0xc
 mov eax, esi
 lea edx, [ebx + 0x64]
@@ -28876,7 +28868,7 @@ push eax
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 
-loc_00011b8f:  ; not directly referenced
+loc_00011b8f:
 mov dl, byte [esi + 0xb]
 cmp dl, 9
 je short loc_00011bad  ; je 0x11bad
@@ -28888,10 +28880,10 @@ movzx edx, dl
 movzx eax, byte [edx + ref_00020468]  ; movzx eax, byte [edx + 0x20468]
 jmp short loc_00011bb2  ; jmp 0x11bb2
 
-loc_00011bad:  ; not directly referenced
+loc_00011bad:
 mov eax, 0x10
 
-loc_00011bb2:  ; not directly referenced
+loc_00011bb2:
 push edx
 push eax
 push 0xffe0
@@ -28916,7 +28908,7 @@ jne short loc_00011bf8  ; jne 0x11bf8
 or dh, 0xb2
 jmp short loc_00011c1c  ; jmp 0x11c1c
 
-loc_00011bf8:  ; not directly referenced
+loc_00011bf8:
 sub esp, 0xc
 push dword [ebp - 0x30]
 mov dword [ebp - 0x24], edx
@@ -28929,7 +28921,7 @@ and eax, 0x3f0
 cmp eax, 0x10
 cmova edx, ecx
 
-loc_00011c1c:  ; not directly referenced
+loc_00011c1c:
 push eax
 movzx eax, byte [esi + 0xa]
 shl eax, 0x13
@@ -28941,7 +28933,7 @@ push eax
 call fcn_00018b68  ; call 0x18b68
 add esp, 0x10
 
-loc_00011c38:  ; not directly referenced
+loc_00011c38:
 mov eax, dword [ebp + 0x10]
 sub esp, 0xc
 movzx eax, byte [eax + 0x19]
@@ -28966,7 +28958,7 @@ call fcn_00018730  ; call 0x18730
 add esp, 0x10
 mov byte [ebp - 0x24], 0
 
-loc_00011c7a:  ; not directly referenced
+loc_00011c7a:
 test byte [edi + 6], 8
 jne short loc_00011c8e  ; jne 0x11c8e
 mov cl, byte [ebp - 0x24]
@@ -28975,11 +28967,11 @@ lea eax, [eax + eax - 3]
 lea edx, [ecx + ecx]
 jmp short loc_00011c92  ; jmp 0x11c92
 
-loc_00011c8e:  ; not directly referenced
+loc_00011c8e:
 mov al, 0xfd
 xor edx, edx
 
-loc_00011c92:  ; not directly referenced
+loc_00011c92:
 movzx edx, dl
 movzx eax, al
 push ecx
@@ -29042,7 +29034,7 @@ push esi
 call fcn_00018981  ; call 0x18981
 add esp, 0x10
 test byte [edi + 6], 0x10
-je loc_00011dce  ; je 0x11dce
+je near loc_00011dce  ; je 0x11dce
 push eax
 push eax
 push 0xfff7
@@ -29060,13 +29052,13 @@ movzx esi, word [ebp - 0x28]
 add esi, 0x8c
 jmp short loc_00011d83  ; jmp 0x11d83
 
-loc_00011d76:  ; not directly referenced
+loc_00011d76:
 cmp dword [ebp - 0x1c], 1
 jne short loc_00011da4  ; jne 0x11da4
 movzx esi, word [ebp - 0x28]
 add esi, 0x20
 
-loc_00011d83:  ; not directly referenced
+loc_00011d83:
 sub esp, 0xc
 push esi
 call fcn_00018f64  ; call 0x18f64
@@ -29080,7 +29072,7 @@ push esi
 call fcn_00018f97  ; call 0x18f97
 add esp, 0x10
 
-loc_00011da4:  ; not directly referenced
+loc_00011da4:
 mov esi, dword [ebp - 0x38]
 sub esp, 0xc
 add esi, 0xa0
@@ -29096,7 +29088,7 @@ push esi
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_00011dce:  ; not directly referenced
+loc_00011dce:
 test byte [edi + 6], 8
 je short loc_00011e53  ; je 0x11e53
 mov esi, dword [ebp - 0x3c]
@@ -29128,7 +29120,7 @@ push 2
 add eax, 0x8c
 jmp short loc_00011e34  ; jmp 0x11e34
 
-loc_00011e23:  ; not directly referenced
+loc_00011e23:
 cmp dword [ebp - 0x1c], 1
 jne short loc_00011e3d  ; jne 0x11e3d
 movzx eax, word [ebp - 0x28]
@@ -29137,12 +29129,12 @@ push edx
 push 2
 add eax, 0x20
 
-loc_00011e34:  ; not directly referenced
+loc_00011e34:
 push eax
 call fcn_00018f97  ; call 0x18f97
 add esp, 0x10
 
-loc_00011e3d:  ; not directly referenced
+loc_00011e3d:
 push eax
 add ebx, 0x108
 push eax
@@ -29151,7 +29143,7 @@ push ebx
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00011e53:  ; not directly referenced
+loc_00011e53:
 cmp byte [ebp - 0x24], 1
 je short loc_00011e6a  ; je 0x11e6a
 mov al, byte [edi + 6]
@@ -29161,10 +29153,10 @@ sbb eax, eax
 and eax, 0x8000000e
 jmp short loc_00011e6c  ; jmp 0x11e6c
 
-loc_00011e6a:  ; not directly referenced
+loc_00011e6a:
 xor eax, eax
 
-loc_00011e6c:  ; not directly referenced
+loc_00011e6c:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -29172,7 +29164,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00011e74:  ; not directly referenced
+fcn_00011e74:
 push ebp
 mov ebp, esp
 push edi
@@ -29189,11 +29181,11 @@ call fcn_0001c0bd  ; call 0x1c0bd
 movzx edi, byte [ebp - 0x20]
 mov dword [ebp - 0x28], eax
 
-loc_00011e9c:  ; not directly referenced
+loc_00011e9c:
 call fcn_0001c1bf  ; call 0x1c1bf
 movzx eax, al
 cmp ebx, eax
-jae loc_00011fa1  ; jae 0x11fa1
+jae near loc_00011fa1  ; jae 0x11fa1
 cmp dword [ebp - 0x1c], 2
 mov byte [ebp - 0x21], 0
 jne short loc_00011ef0  ; jne 0x11ef0
@@ -29215,14 +29207,14 @@ xor eax, 1
 and eax, 1
 mov byte [ebp - 0x21], al
 
-loc_00011ef0:  ; not directly referenced
+loc_00011ef0:
 mov eax, 1
 mov cl, bl
 shl eax, cl
 test dword [ebp + 0x10], eax
-je loc_00012110  ; je 0x12110
+je near loc_00012110  ; je 0x12110
 test dword [ebp + 0x14], eax
-jne loc_00012193  ; jne 0x12193
+jne near loc_00012193  ; jne 0x12193
 push esi
 push esi
 push ebx
@@ -29258,7 +29250,7 @@ push eax
 call fcn_0001878a  ; call 0x1878a
 add esp, 0x10
 
-loc_00011f69:  ; not directly referenced
+loc_00011f69:
 push eax
 push eax
 push 3
@@ -29278,16 +29270,16 @@ call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 jmp near loc_00012193  ; jmp 0x12193
 
-loc_00011fa1:  ; not directly referenced
+loc_00011fa1:
 xor ebx, ebx
 cmp dword [ebp - 0x1c], 2
-jne loc_00012084  ; jne 0x12084
+jne near loc_00012084  ; jne 0x12084
 mov eax, dword [ebp + 0x10]
 movzx edi, byte [ebp - 0x20]
 and eax, 0xf
 mov dword [ebp - 0x1c], eax
 
-loc_00011fba:  ; not directly referenced
+loc_00011fba:
 call fcn_0001c1bf  ; call 0x1c1bf
 movzx eax, al
 cmp ebx, eax
@@ -29311,7 +29303,7 @@ jbe short loc_00011ff1  ; jbe 0x11ff1
 test ebx, ebx
 jne short loc_0001203e  ; jne 0x1203e
 
-loc_00011ff1:  ; not directly referenced
+loc_00011ff1:
 push ecx
 push ecx
 lea esi, [edx + 0xe1]
@@ -29330,7 +29322,7 @@ jb short loc_0001203e  ; jb 0x1203e
 cmp ebx, 3
 jbe short loc_0001203e  ; jbe 0x1203e
 
-loc_0001201e:  ; not directly referenced
+loc_0001201e:
 push eax
 add edx, 0xe2
 push eax
@@ -29344,13 +29336,13 @@ push esi
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0001203e:  ; not directly referenced
+loc_0001203e:
 inc ebx
 jmp near loc_00011fba  ; jmp 0x11fba
 
-loc_00012044:  ; not directly referenced
+loc_00012044:
 test byte [ebp + 0x10], 0x3f
-jne loc_0001219b  ; jne 0x1219b
+jne near loc_0001219b  ; jne 0x1219b
 push ecx
 push ecx
 push 0
@@ -29372,16 +29364,16 @@ call fcn_00018730  ; call 0x18730
 add esp, 0x10
 jmp near loc_0001219b  ; jmp 0x1219b
 
-loc_00012084:  ; not directly referenced
+loc_00012084:
 cmp dword [ebp - 0x1c], 1
-jne loc_0001219b  ; jne 0x1219b
+jne near loc_0001219b  ; jne 0x1219b
 movzx edi, byte [ebp - 0x20]
 
-loc_00012092:  ; not directly referenced
+loc_00012092:
 call fcn_0001c1bf  ; call 0x1c1bf
 movzx eax, al
 cmp ebx, eax
-jae loc_0001219b  ; jae 0x1219b
+jae near loc_0001219b  ; jae 0x1219b
 mov eax, dword [ebp + 0x14]
 bt eax, ebx
 jb short loc_0001210b  ; jb 0x1210b
@@ -29423,11 +29415,11 @@ push esi
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_0001210b:  ; not directly referenced
+loc_0001210b:
 add ebx, 4
 jmp short loc_00012092  ; jmp 0x12092
 
-loc_00012110:  ; not directly referenced
+loc_00012110:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001218d  ; jne 0x1218d
 push esi
@@ -29456,7 +29448,7 @@ push esi
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00012158:  ; not directly referenced
+loc_00012158:
 cmp byte [ebp - 0x21], 0
 je short loc_0001218d  ; je 0x1218d
 push eax
@@ -29478,16 +29470,16 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_0001218d:  ; not directly referenced
+loc_0001218d:
 inc ebx
 jmp near loc_00011e9c  ; jmp 0x11e9c
 
-loc_00012193:  ; not directly referenced
+loc_00012193:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001218d  ; jne 0x1218d
 jmp short loc_00012158  ; jmp 0x12158
 
-loc_0001219b:  ; not directly referenced
+loc_0001219b:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -29496,7 +29488,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000121a5:  ; not directly referenced
+fcn_000121a5:
 push ebp
 mov ebp, esp
 push edi
@@ -29521,7 +29513,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000121e1:  ; not directly referenced
+loc_000121e1:
 sub esp, 0xc
 add ebx, 0xfc
 push ebx
@@ -29536,14 +29528,14 @@ xor ebx, ebx
 cmp ax, 0x4000
 jne short loc_00012217  ; jne 0x12217
 
-loc_0001220b:  ; not directly referenced
+loc_0001220b:
 mov ebx, 2
 jmp short loc_00012217  ; jmp 0x12217
 
-loc_00012212:  ; not directly referenced
+loc_00012212:
 mov ebx, 0x22
 
-loc_00012217:  ; not directly referenced
+loc_00012217:
 call fcn_0001bfbb  ; call 0x1bfbb
 dec eax
 jne short loc_00012264  ; jne 0x12264
@@ -29568,14 +29560,14 @@ cmp ax, 0x4000
 cmove ebx, edx
 jmp short loc_00012264  ; jmp 0x12264
 
-loc_0001225c:  ; not directly referenced
+loc_0001225c:
 or bh, 0x22
 jmp short loc_00012264  ; jmp 0x12264
 
-loc_00012261:  ; not directly referenced
+loc_00012261:
 or bh, 2
 
-loc_00012264:  ; not directly referenced
+loc_00012264:
 movzx ebx, bx
 add esi, 0x103c
 mov dword [ebp + 0xc], ebx
@@ -29587,7 +29579,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_0001227f:  ; not directly referenced
+fcn_0001227f:
 push ebp
 mov ebp, esp
 push edi
@@ -29604,7 +29596,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000122a2:  ; not directly referenced
+loc_000122a2:
 call fcn_0001bfbb  ; call 0x1bfbb
 mov dword [ebp - 0x2c], eax
 push eax
@@ -29687,14 +29679,14 @@ mov edi, eax
 add edi, eax
 jmp short loc_000123a4  ; jmp 0x123a4
 
-loc_00012398:  ; not directly referenced
+loc_00012398:
 mov edi, 0xa
 jmp short loc_000123a4  ; jmp 0x123a4
 
-loc_0001239f:  ; not directly referenced
+loc_0001239f:
 mov edi, 0xe
 
-loc_000123a4:  ; not directly referenced
+loc_000123a4:
 cmp dword [ebp - 0x2c], 1
 jne short loc_000123ec  ; jne 0x123ec
 sub esp, 0xc
@@ -29713,14 +29705,14 @@ cmp eax, 0x4000
 cmove edi, edx
 jmp short loc_000123ec  ; jmp 0x123ec
 
-loc_000123de:  ; not directly referenced
+loc_000123de:
 or edi, 0xa0
 jmp short loc_000123ec  ; jmp 0x123ec
 
-loc_000123e6:  ; not directly referenced
+loc_000123e6:
 or edi, 0xe0
 
-loc_000123ec:  ; not directly referenced
+loc_000123ec:
 mov eax, dword [ebp - 0x30]
 sub esp, 0xc
 mov bl, 0xff
@@ -29736,7 +29728,7 @@ and esi, 0x70000
 mov ebx, esi
 shr ebx, 0x10
 
-loc_00012419:  ; not directly referenced
+loc_00012419:
 cmp dword [ebp - 0x2c], 1
 jne short loc_00012444  ; jne 0x12444
 mov eax, dword [ebp - 0x34]
@@ -29752,11 +29744,11 @@ jne short loc_00012485  ; jne 0x12485
 test al, 0x10
 jne short loc_00012485  ; jne 0x12485
 
-loc_0001243f:  ; not directly referenced
+loc_0001243f:
 or edi, 1
 jmp short loc_00012485  ; jmp 0x12485
 
-loc_00012444:  ; not directly referenced
+loc_00012444:
 cmp dword [ebp - 0x2c], 2
 jne short loc_00012495  ; jne 0x12495
 mov eax, dword [ebp - 0x34]
@@ -29768,34 +29760,34 @@ add esp, 0x10
 test al, 3
 jne short loc_0001246b  ; jne 0x1246b
 
-loc_00012463:  ; not directly referenced
+loc_00012463:
 or edi, 1
 jmp near loc_00012c21  ; jmp 0x12c21
 
-loc_0001246b:  ; not directly referenced
+loc_0001246b:
 sub esp, 0xc
 push esi
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 and eax, 3
 cmp eax, 2
-jne loc_00012c21  ; jne 0x12c21
+jne near loc_00012c21  ; jne 0x12c21
 jmp short loc_00012463  ; jmp 0x12463
 
-loc_00012485:  ; not directly referenced
+loc_00012485:
 test al, 0x24
 je short loc_00012492  ; je 0x12492
 cmp bl, 1
 jne short loc_00012495  ; jne 0x12495
 test al, 0x20
 
-loc_00012490:  ; not directly referenced
+loc_00012490:
 jne short loc_00012495  ; jne 0x12495
 
-loc_00012492:  ; not directly referenced
+loc_00012492:
 or edi, 2
 
-loc_00012495:  ; not directly referenced
+loc_00012495:
 cmp dword [ebp - 0x2c], 1
 sete dl
 mov byte [ebp - 0x3b], dl
@@ -29806,7 +29798,7 @@ or eax, 4
 test dl, dl
 cmovne edi, eax
 
-loc_000124ae:  ; not directly referenced
+loc_000124ae:
 cmp dword [ebp - 0x2c], 2
 sete cl
 mov byte [ebp - 0x3c], cl
@@ -29817,7 +29809,7 @@ or eax, 4
 test cl, cl
 cmovne edi, eax
 
-loc_000124c6:  ; not directly referenced
+loc_000124c6:
 cmp bl, 3
 jne short loc_000124d7  ; jne 0x124d7
 mov eax, edi
@@ -29825,7 +29817,7 @@ or eax, 8
 cmp byte [ebp - 0x3b], 0
 cmovne edi, eax
 
-loc_000124d7:  ; not directly referenced
+loc_000124d7:
 cmp bl, 1
 jne short loc_000124e8  ; jne 0x124e8
 mov eax, edi
@@ -29833,7 +29825,7 @@ or eax, 8
 cmp byte [ebp - 0x3c], 0
 cmovne edi, eax
 
-loc_000124e8:  ; not directly referenced
+loc_000124e8:
 cmp bl, 4
 jne short loc_000124f8  ; jne 0x124f8
 cmp byte [ebp - 0x3b], 0
@@ -29841,7 +29833,7 @@ je short loc_000124f8  ; je 0x124f8
 or edi, 0x10
 jmp short loc_0001250c  ; jmp 0x1250c
 
-loc_000124f8:  ; not directly referenced
+loc_000124f8:
 cmp byte [ebp - 0x3c], 0
 je short loc_0001250c  ; je 0x1250c
 mov eax, edi
@@ -29850,7 +29842,7 @@ or eax, 0x10
 cmp dl, 3
 cmovbe edi, eax
 
-loc_0001250c:  ; not directly referenced
+loc_0001250c:
 cmp bl, 5
 jne short loc_0001251c  ; jne 0x1251c
 cmp byte [ebp - 0x3b], 0
@@ -29858,7 +29850,7 @@ je short loc_0001251c  ; je 0x1251c
 or edi, 0x20
 jmp short loc_00012548  ; jmp 0x12548
 
-loc_0001251c:  ; not directly referenced
+loc_0001251c:
 cmp byte [ebp - 0x3c], 0
 je short loc_00012542  ; je 0x12542
 mov eax, dword [ebp - 0x34]
@@ -29873,23 +29865,23 @@ test al, 0xf0
 cmove edi, edx
 jmp short loc_0001255c  ; jmp 0x1255c
 
-loc_00012542:  ; not directly referenced
+loc_00012542:
 cmp byte [ebp - 0x3b], 0
 je short loc_0001255c  ; je 0x1255c
 
-loc_00012548:  ; not directly referenced
+loc_00012548:
 cmp bl, 6
 jne short loc_00012552  ; jne 0x12552
 or edi, 0x40
 jmp short loc_0001255c  ; jmp 0x1255c
 
-loc_00012552:  ; not directly referenced
+loc_00012552:
 mov eax, edi
 or al, 0x80
 cmp bl, 7
 cmove edi, eax
 
-loc_0001255c:  ; not directly referenced
+loc_0001255c:
 mov eax, dword [ebp - 0x30]
 sub esp, 0xc
 add eax, 0x1030
@@ -29908,13 +29900,13 @@ mov eax, dword [ebp + 8]
 movzx eax, byte [eax + 0x1a7]
 mov dword [ebp - 0x48], eax
 
-loc_0001259f:  ; not directly referenced
+loc_0001259f:
 xor ecx, ecx
 mov eax, 0x10000
 mov dword [ebp - 0x34], 0
 mov edx, 1
 
-loc_000125b2:  ; not directly referenced
+loc_000125b2:
 cmp byte [ebp - 0x39], cl
 jbe short loc_000125d9  ; jbe 0x125d9
 imul ebx, ecx, 0x2c
@@ -29930,25 +29922,25 @@ mov ebx, edx
 shl ebx, cl
 or dword [ebp - 0x34], ebx
 
-loc_000125d6:  ; not directly referenced
+loc_000125d6:
 inc ecx
 jmp short loc_000125b2  ; jmp 0x125b2
 
-loc_000125d9:  ; not directly referenced
+loc_000125d9:
 cmp dword [ebp - 0x34], 0
 je short loc_000125e6  ; je 0x125e6
 mov eax, edi
 not eax
 and dword [ebp - 0x34], eax
 
-loc_000125e6:  ; not directly referenced
+loc_000125e6:
 mov eax, dword [ebp + 8]
 mov byte [ebp - 0x3a], 0xff
 cmp byte [eax + 0x1a9], 0
 jne short loc_0001264c  ; jne 0x1264c
 xor eax, eax
 
-loc_000125f8:  ; not directly referenced
+loc_000125f8:
 mov dl, al
 cmp al, byte [ebp - 0x39]
 jae short loc_00012616  ; jae 0x12616
@@ -29961,7 +29953,7 @@ inc eax
 mov byte [ebp - 0x3a], cl
 jmp short loc_000125f8  ; jmp 0x125f8
 
-loc_00012616:  ; not directly referenced
+loc_00012616:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001263f  ; je 0x1263f
@@ -29975,13 +29967,13 @@ push ref_00024f7b  ; push 0x24f7b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001263f:  ; not directly referenced
+loc_0001263f:
 mov cl, byte [ebp - 0x3a]
 mov eax, 1
 shl eax, cl
 or dword [ebp - 0x34], eax
 
-loc_0001264c:  ; not directly referenced
+loc_0001264c:
 sub esp, 0xc
 lea eax, [ebp - 0x20]
 push eax
@@ -30003,7 +29995,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00012687:  ; not directly referenced
+loc_00012687:
 push eax
 push ref_000206f4  ; push 0x206f4
 push 0x181
@@ -30011,7 +30003,7 @@ push ref_00024f7b  ; push 0x24f7b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001269f:  ; not directly referenced
+loc_0001269f:
 cmp dword [ebp - 0x20], 0x11
 je short loc_000126d9  ; je 0x126d9
 mov eax, dword [ebp + 8]
@@ -30029,21 +30021,21 @@ shl dword [ebp - 0x38], 7
 or dword [ebp - 0x38], eax
 jmp short loc_000126e0  ; jmp 0x126e0
 
-loc_000126d9:  ; not directly referenced
+loc_000126d9:
 mov dword [ebp - 0x38], 0x3e8
 
-loc_000126e0:  ; not directly referenced
+loc_000126e0:
 movzx eax, word [ebp - 0x3e]
 mov dword [ebp - 0x2c], 0
 mov dword [ebp - 0x44], 0
 mov dword [ebp - 0x58], eax
 
-loc_000126f5:  ; not directly referenced
+loc_000126f5:
 mov edx, dword [ebp - 0x2c]
 mov al, byte [ebp - 0x39]
 mov byte [ebp - 0x3e], dl
 cmp dl, al
-jae loc_00012ac0  ; jae 0x12ac0
+jae near loc_00012ac0  ; jae 0x12ac0
 push eax
 push eax
 push dword [ebp - 0x2c]
@@ -30076,7 +30068,7 @@ sbb eax, eax
 and eax, 0xfffffffd
 add eax, 0x2000433
 
-loc_00012762:  ; not directly referenced
+loc_00012762:
 push esi
 push esi
 push eax
@@ -30085,9 +30077,9 @@ push eax
 call fcn_00017e8f  ; call 0x17e8f
 add esp, 0x10
 
-loc_00012774:  ; not directly referenced
+loc_00012774:
 cmp byte [ebp - 0x3e], 0
-jne loc_00012869  ; jne 0x12869
+jne near loc_00012869  ; jne 0x12869
 mov esi, dword [ebp - 0x30]
 push eax
 push eax
@@ -30124,7 +30116,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000127d8:  ; not directly referenced
+loc_000127d8:
 push esi
 push ref_000206f4  ; push 0x206f4
 push 0x1ab
@@ -30132,7 +30124,7 @@ push ref_00024f7b  ; push 0x24f7b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000127f0:  ; not directly referenced
+loc_000127f0:
 mov esi, dword [ebp - 0x30]
 push ecx
 push ecx
@@ -30170,7 +30162,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00012851:  ; not directly referenced
+loc_00012851:
 push eax
 push ref_000206f4  ; push 0x206f4
 push 0x1b5
@@ -30178,14 +30170,14 @@ push ref_00024f7b  ; push 0x24f7b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00012869:  ; not directly referenced
+loc_00012869:
 mov cl, byte [ebp - 0x2c]
 mov esi, 1
 shl esi, cl
 mov eax, esi
 and eax, edi
 mov dword [ebp - 0x50], eax
-jne loc_00012c4c  ; jne 0x12c4c
+jne near loc_00012c4c  ; jne 0x12c4c
 push eax
 push eax
 push 0x100
@@ -30199,7 +30191,7 @@ call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 mov edx, dword [ebp - 0x54]
 test al, 0x40
-jne loc_00012939  ; jne 0x12939
+jne near loc_00012939  ; jne 0x12939
 imul eax, dword [ebp - 0x2c], 0x2c
 mov ecx, dword [ebp + 8]
 test byte [ecx + eax + 0x46], 8
@@ -30218,7 +30210,7 @@ lea eax, [ebx + 0x328]
 add esp, 0x10
 mov dword [ebp - 0x54], eax
 
-loc_000128e6:  ; not directly referenced
+loc_000128e6:
 sub esp, 0xc
 push dword [ebp - 0x54]
 call fcn_00017e4e  ; call 0x17e4e
@@ -30227,7 +30219,7 @@ and eax, 0xff000000
 cmp eax, 0x1000000
 jne short loc_00012927  ; jne 0x12927
 
-loc_00012900:  ; not directly referenced
+loc_00012900:
 push eax
 push eax
 push 0x8000000
@@ -30241,7 +30233,7 @@ shl eax, cl
 or dword [edx], eax
 jmp near loc_00012a55  ; jmp 0x12a55
 
-loc_00012927:  ; not directly referenced
+loc_00012927:
 sub esp, 0xc
 push 0x64
 call fcn_0001bb03  ; call 0x1bb03
@@ -30250,7 +30242,7 @@ dec esi
 jne short loc_000128e6  ; jne 0x128e6
 jmp short loc_00012900  ; jmp 0x12900
 
-loc_00012939:  ; not directly referenced
+loc_00012939:
 test dword [ebp - 0x34], esi
 jne short loc_00012972  ; jne 0x12972
 sub esp, 0xc
@@ -30267,7 +30259,7 @@ push eax
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_0001295e:  ; not directly referenced
+loc_0001295e:
 mov cl, byte [ebp - 0x2c]
 mov eax, 0x10000
 mov edx, dword [ebp + 0xc]
@@ -30275,7 +30267,7 @@ shl eax, cl
 or dword [edx], eax
 jmp near loc_00012a58  ; jmp 0x12a58
 
-loc_00012972:  ; not directly referenced
+loc_00012972:
 sub esp, 0xc
 lea eax, [ebx + 0xe0]
 push eax
@@ -30286,10 +30278,10 @@ jne short loc_0001298e  ; jne 0x1298e
 test al, 2
 je short loc_000129bc  ; je 0x129bc
 
-loc_0001298e:  ; not directly referenced
+loc_0001298e:
 lea esi, [ebx + 0x52]
 
-loc_00012991:  ; not directly referenced
+loc_00012991:
 mov eax, dword [ebp - 0x38]
 cmp dword [ebp - 0x44], eax
 jae short loc_000129bc  ; jae 0x129bc
@@ -30306,7 +30298,7 @@ add esp, 0x10
 inc dword [ebp - 0x44]
 jmp short loc_00012991  ; jmp 0x12991
 
-loc_000129bc:  ; not directly referenced
+loc_000129bc:
 sub esp, 0xc
 mov eax, dword [ebp - 0x2c]
 push dword [ebp - 0x30]
@@ -30330,7 +30322,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000129fc:  ; not directly referenced
+loc_000129fc:
 imul eax, dword [ebp - 0x2c], 0x2c
 mov ecx, dword [ebp + 8]
 test byte [ecx + eax + 0x46], 0x40
@@ -30361,10 +30353,10 @@ push 0xef
 push esi
 call fcn_0001875d  ; call 0x1875d
 
-loc_00012a55:  ; not directly referenced
+loc_00012a55:
 add esp, 0x10
 
-loc_00012a58:  ; not directly referenced
+loc_00012a58:
 sub esp, 0xc
 push ebx
 call fcn_00017e4e  ; call 0x17e4e
@@ -30376,7 +30368,7 @@ je short loc_00012a73  ; je 0x12a73
 test byte [ebp - 0x3e], 0xfb
 jmp short loc_00012a87  ; jmp 0x12a87
 
-loc_00012a73:  ; not directly referenced
+loc_00012a73:
 cmp byte [ebp - 0x3c], 0
 je short loc_00012a9f  ; je 0x12a9f
 mov cl, byte [ebp - 0x3e]
@@ -30386,10 +30378,10 @@ cmp al, 1
 jbe short loc_00012a89  ; jbe 0x12a89
 test cl, cl
 
-loc_00012a87:  ; not directly referenced
+loc_00012a87:
 jne short loc_00012a9f  ; jne 0x12a9f
 
-loc_00012a89:  ; not directly referenced
+loc_00012a89:
 push eax
 push eax
 push 0xf3
@@ -30398,7 +30390,7 @@ push eax
 call fcn_0001875d  ; call 0x1875d
 add esp, 0x10
 
-loc_00012a9f:  ; not directly referenced
+loc_00012a9f:
 cmp dword [ebp - 0x50], 0
 jne short loc_00012ab8  ; jne 0x12ab8
 push esi
@@ -30409,11 +30401,11 @@ push ebx
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_00012ab8:  ; not directly referenced
+loc_00012ab8:
 inc dword [ebp - 0x2c]
 jmp near loc_000126f5  ; jmp 0x126f5
 
-loc_00012ac0:  ; not directly referenced
+loc_00012ac0:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x1a9], 0
 jne short loc_00012afe  ; jne 0x12afe
@@ -30436,7 +30428,7 @@ and eax, edx
 mov edx, dword [ebp + 0xc]
 mov dword [edx], eax
 
-loc_00012afe:  ; not directly referenced
+loc_00012afe:
 sub esp, 0xc
 push dword [ebp - 0x4c]
 call fcn_00017e4e  ; call 0x17e4e
@@ -30472,7 +30464,7 @@ push eax
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00012b66:  ; not directly referenced
+loc_00012b66:
 mov edx, dword [ebp + 8]
 mov eax, dword [ebp + 0xc]
 cmp byte [edx + 0x1a8], 0
@@ -30491,10 +30483,10 @@ push eax
 call fcn_00011e74  ; call 0x11e74
 add esp, 0x20
 
-loc_00012b95:  ; not directly referenced
+loc_00012b95:
 xor ebx, ebx
 
-loc_00012b97:  ; not directly referenced
+loc_00012b97:
 cmp byte [ebp - 0x39], bl
 jbe short loc_00012bd7  ; jbe 0x12bd7
 push eax
@@ -30518,11 +30510,11 @@ push esi
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_00012bd4:  ; not directly referenced
+loc_00012bd4:
 inc ebx
 jmp short loc_00012b97  ; jmp 0x12b97
 
-loc_00012bd7:  ; not directly referenced
+loc_00012bd7:
 mov edi, dword [ebp - 0x30]
 push edx
 push edx
@@ -30550,13 +30542,13 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp short loc_00012c60  ; jmp 0x12c60
 
-loc_00012c21:  ; not directly referenced
+loc_00012c21:
 sub esp, 0xc
 push esi
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 test al, 0xc
-je loc_00012492  ; je 0x12492
+je near loc_00012492  ; je 0x12492
 sub esp, 0xc
 push esi
 call fcn_00017e4e  ; call 0x17e4e
@@ -30565,7 +30557,7 @@ and eax, 0xc
 cmp eax, 8
 jmp near loc_00012490  ; jmp 0x12490
 
-loc_00012c4c:  ; not directly referenced
+loc_00012c4c:
 mov cl, byte [ebp - 0x2c]
 mov eax, 0x10000
 shl eax, cl
@@ -30573,7 +30565,7 @@ mov ecx, dword [ebp + 0xc]
 or dword [ecx], eax
 jmp near loc_00012a58  ; jmp 0x12a58
 
-loc_00012c60:  ; not directly referenced
+loc_00012c60:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -30582,7 +30574,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00012c6a:  ; not directly referenced
+fcn_00012c6a:
 push ebp
 mov ebp, esp
 push edi
@@ -30593,7 +30585,7 @@ sub esp, 0xc
 mov edi, dword [ebp + 0xc]
 mov esi, dword [ebp + 0x10]
 
-loc_00012c7e:  ; not directly referenced
+loc_00012c7e:
 sub esp, 0xc
 push dword [ebp + 8]
 call fcn_00017dc2  ; call 0x17dc2
@@ -30610,10 +30602,10 @@ jne short loc_00012c7e  ; jne 0x12c7e
 mov eax, 0x80000012
 jmp short loc_00012cac  ; jmp 0x12cac
 
-loc_00012caa:  ; not directly referenced
+loc_00012caa:
 xor eax, eax
 
-loc_00012cac:  ; not directly referenced
+loc_00012cac:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -30621,7 +30613,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00012cb4:  ; not directly referenced
+fcn_00012cb4:
 push ebp
 mov ebp, esp
 push edi
@@ -30641,13 +30633,13 @@ test eax, eax
 jns short loc_00012cf0  ; jns 0x12cf0
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00012d7a  ; je 0x12d7a
+je near loc_00012d7a  ; je 0x12d7a
 push eax
 push eax
 push ref_00024ff3  ; push 0x24ff3
 jmp short loc_00012d6d  ; jmp 0x12d6d
 
-loc_00012cf0:  ; not directly referenced
+loc_00012cf0:
 mov eax, dword [ebp + 0xc]
 push ecx
 push ecx
@@ -30676,7 +30668,7 @@ push ebx
 call fcn_00018954  ; call 0x18954
 jmp short loc_00012d58  ; jmp 0x12d58
 
-loc_00012d2f:  ; not directly referenced
+loc_00012d2f:
 xor edi, edi
 cmp byte [ebp - 0x1c], 1
 jne short loc_00012d7f  ; jne 0x12d7f
@@ -30693,11 +30685,11 @@ call fcn_00017e4e  ; call 0x17e4e
 mov edx, dword [ebp + 0xc]
 mov dword [edx], eax
 
-loc_00012d58:  ; not directly referenced
+loc_00012d58:
 add esp, 0x10
 jmp short loc_00012d7f  ; jmp 0x12d7f
 
-loc_00012d5d:  ; not directly referenced
+loc_00012d5d:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00012d7a  ; je 0x12d7a
@@ -30705,15 +30697,15 @@ push eax
 push eax
 push ref_00025022  ; push 0x25022
 
-loc_00012d6d:  ; not directly referenced
+loc_00012d6d:
 push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00012d7a:  ; not directly referenced
+loc_00012d7a:
 mov edi, 0x80000007
 
-loc_00012d7f:  ; not directly referenced
+loc_00012d7f:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -30722,7 +30714,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00012d89:  ; not directly referenced
+fcn_00012d89:
 push ebp
 mov ebp, esp
 push edi
@@ -30745,11 +30737,11 @@ push ref_00025059  ; push 0x25059
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00012dc5:  ; not directly referenced
+loc_00012dc5:
 xor ebx, ebx
 lea esi, [ebp - 0x1c]
 
-loc_00012dca:  ; not directly referenced
+loc_00012dca:
 push esi
 push 0
 push ebx
@@ -30774,19 +30766,19 @@ je short loc_00012e0b  ; je 0x12e0b
 cmp cl, byte [ebp - 0x29]
 jne short loc_00012e18  ; jne 0x12e18
 
-loc_00012e0b:  ; not directly referenced
+loc_00012e0b:
 mov dl, byte [edx + 5]
 cmp dl, 0xff
 je short loc_00012e1d  ; je 0x12e1d
 cmp dl, byte [ebp - 0x2a]
 je short loc_00012e1d  ; je 0x12e1d
 
-loc_00012e18:  ; not directly referenced
+loc_00012e18:
 inc ebx
 test eax, eax
 je short loc_00012dca  ; je 0x12dca
 
-loc_00012e1d:  ; not directly referenced
+loc_00012e1d:
 mov eax, dword [ebp - 0x1c]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -30795,7 +30787,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00012e28:  ; not directly referenced
+fcn_00012e28:
 push ebp
 mov ebp, esp
 push esi
@@ -30819,7 +30811,7 @@ add ax, 0x633f
 cmp ax, 0xa
 ja short loc_00012ea9  ; ja 0x12ea9
 
-loc_00012e66:  ; not directly referenced
+loc_00012e66:
 push ecx
 push 0
 push 0x1b
@@ -30838,7 +30830,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00012e94:  ; not directly referenced
+loc_00012e94:
 push eax
 mov eax, esi
 movzx esi, al
@@ -30849,7 +30841,7 @@ push ebx
 call fcn_0001878a  ; call 0x1878a
 add esp, 0x10
 
-loc_00012ea9:  ; not directly referenced
+loc_00012ea9:
 lea esp, [ebp - 8]
 xor eax, eax
 pop ebx
@@ -30857,7 +30849,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00012eb2:  ; not directly referenced
+fcn_00012eb2:
 push ebp
 mov ebp, esp
 push edi
@@ -30874,7 +30866,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00012ed5:  ; not directly referenced
+loc_00012ed5:
 mov eax, dword [ebp + 8]
 mov esi, dword [eax + 4]
 call fcn_0001bfbb  ; call 0x1bfbb
@@ -30925,7 +30917,7 @@ push eax
 call fcn_00018954  ; call 0x18954
 add esp, 0x10
 
-loc_00012f6f:  ; not directly referenced
+loc_00012f6f:
 sub esp, 0xc
 push esi
 call fcn_00017e4e  ; call 0x17e4e
@@ -30948,7 +30940,7 @@ push esi
 call fcn_00018b14  ; call 0x18b14
 jmp short loc_00012fc0  ; jmp 0x12fc0
 
-loc_00012fad:  ; not directly referenced
+loc_00012fad:
 cmp dword [ebp - 0x2c], 2
 jne short loc_00012fc3  ; jne 0x12fc3
 push ecx
@@ -30957,10 +30949,10 @@ push 0x7fffffff
 push esi
 call fcn_00018b3e  ; call 0x18b3e
 
-loc_00012fc0:  ; not directly referenced
+loc_00012fc0:
 add esp, 0x10
 
-loc_00012fc3:  ; not directly referenced
+loc_00012fc3:
 mov eax, dword [ebp + 8]
 lea ecx, [ebx + 0x10]
 mov dword [ebp - 0x40], ecx
@@ -31004,7 +30996,7 @@ add esp, 0x10
 mov eax, 0x4000
 jmp short loc_0001304e  ; jmp 0x1304e
 
-loc_0001302e:  ; not directly referenced
+loc_0001302e:
 xor eax, eax
 cmp dword [ebp - 0x2c], 2
 jne short loc_0001304e  ; jne 0x1304e
@@ -31017,7 +31009,7 @@ call fcn_0001875d  ; call 0x1875d
 add esp, 0x10
 mov eax, 0x1000000
 
-loc_0001304e:  ; not directly referenced
+loc_0001304e:
 push edx
 push edx
 push eax
@@ -31035,7 +31027,7 @@ push eax
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 
-loc_0001307c:  ; not directly referenced
+loc_0001307c:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x372], 0
 jne short loc_00013097  ; jne 0x13097
@@ -31047,7 +31039,7 @@ push eax
 call fcn_0001875d  ; call 0x1875d
 jmp short loc_000130c3  ; jmp 0x130c3
 
-loc_00013097:  ; not directly referenced
+loc_00013097:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x373], 0
 je short loc_000130c6  ; je 0x130c6
@@ -31065,10 +31057,10 @@ lea eax, [ebx + 0x4c]
 push eax
 call fcn_00018730  ; call 0x18730
 
-loc_000130c3:  ; not directly referenced
+loc_000130c3:
 add esp, 0x10
 
-loc_000130c6:  ; not directly referenced
+loc_000130c6:
 cmp dword [ebp - 0x2c], 2
 jne short loc_000130f9  ; jne 0x130f9
 push eax
@@ -31092,7 +31084,7 @@ push eax
 call fcn_00018730  ; call 0x18730
 add esp, 0x10
 
-loc_000130f9:  ; not directly referenced
+loc_000130f9:
 mov edi, dword [ebp - 0x34]
 push eax
 push eax
@@ -31140,13 +31132,13 @@ test eax, eax
 jns short loc_00013180  ; jns 0x13180
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00013497  ; je 0x13497
+je near loc_00013497  ; je 0x13497
 push eax
 push eax
 push ref_000250dd  ; push 0x250dd
 jmp short loc_000131c6  ; jmp 0x131c6
 
-loc_00013180:  ; not directly referenced
+loc_00013180:
 push edi
 push edi
 push 1
@@ -31167,18 +31159,18 @@ test eax, eax
 jns short loc_000131d8  ; jns 0x131d8
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00013497  ; je 0x13497
+je near loc_00013497  ; je 0x13497
 push ecx
 push ecx
 push ref_00025118  ; push 0x25118
 
-loc_000131c6:  ; not directly referenced
+loc_000131c6:
 push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp near loc_00013497  ; jmp 0x13497
 
-loc_000131d8:  ; not directly referenced
+loc_000131d8:
 cmp dword [ebp - 0x2c], 2
 mov edx, 3
 mov eax, 0xf
@@ -31187,7 +31179,7 @@ cmove eax, edx
 xor edx, edx
 mov word [ebp - 0x38], ax
 
-loc_000131f4:  ; not directly referenced
+loc_000131f4:
 sub esp, 0xc
 push dword [ebp - 0x3c]
 mov dword [ebp - 0x4c], edx
@@ -31203,7 +31195,7 @@ jne short loc_0001321c  ; jne 0x1321c
 test al, al
 jne short loc_0001326b  ; jne 0x1326b
 
-loc_0001321c:  ; not directly referenced
+loc_0001321c:
 sub esp, 0xc
 push 0x64
 call fcn_0001bb03  ; call 0x1bb03
@@ -31213,7 +31205,7 @@ je short loc_00013231  ; je 0x13231
 mov dl, byte [ebp - 0x2d]
 jmp short loc_000131f4  ; jmp 0x131f4
 
-loc_00013231:  ; not directly referenced
+loc_00013231:
 cmp byte [ebp - 0x2d], 0
 jne short loc_0001326b  ; jne 0x1326b
 call fcn_00015479  ; call 0x15479
@@ -31226,7 +31218,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00013254:  ; not directly referenced
+loc_00013254:
 push eax
 mov edi, 0x80000007
 push eax
@@ -31236,7 +31228,7 @@ call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 jmp near loc_00013497  ; jmp 0x13497
 
-loc_0001326b:  ; not directly referenced
+loc_0001326b:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x371], 1
 jne short loc_0001328a  ; jne 0x1328a
@@ -31248,7 +31240,7 @@ push ebx
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 
-loc_0001328a:  ; not directly referenced
+loc_0001328a:
 xor eax, eax
 cmp dword [ebp - 0x2c], 2
 mov byte [ebp - 0x2c], 0
@@ -31256,22 +31248,22 @@ setne al
 lea eax, [eax + eax + 2]
 mov word [ebp - 0x3c], ax
 
-loc_0001329f:  ; not directly referenced
+loc_0001329f:
 movzx eax, byte [ebp - 0x2c]
 cmp ax, word [ebp - 0x3c]
-jae loc_00013495  ; jae 0x13495
+jae near loc_00013495  ; jae 0x13495
 test byte [ebp - 0x2d], 1
 jne short loc_000132d0  ; jne 0x132d0
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_0001348a  ; je 0x1348a
+je near loc_0001348a  ; je 0x1348a
 push eax
 movzx eax, byte [ebp - 0x2c]
 push eax
 push ref_00025172  ; push 0x25172
 jmp near loc_000133d5  ; jmp 0x133d5
 
-loc_000132d0:  ; not directly referenced
+loc_000132d0:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x371], 0
 je short loc_000132fb  ; je 0x132fb
@@ -31288,7 +31280,7 @@ push eax
 call fcn_00018927  ; call 0x18927
 add esp, 0x10
 
-loc_000132fb:  ; not directly referenced
+loc_000132fb:
 movzx ebx, byte [ebp - 0x2c]
 mov eax, ebx
 shl eax, 0x1c
@@ -31307,13 +31299,13 @@ test eax, eax
 jns short loc_00013340  ; jns 0x13340
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00013497  ; je 0x13497
+je near loc_00013497  ; je 0x13497
 push eax
 push eax
 push ref_0002518f  ; push 0x2518f
 jmp near loc_000131c6  ; jmp 0x131c6
 
-loc_00013340:  ; not directly referenced
+loc_00013340:
 mov eax, dword [ebp - 0x38]
 push esi
 push 1
@@ -31329,13 +31321,13 @@ test eax, eax
 jns short loc_0001337c  ; jns 0x1337c
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_00013497  ; je 0x13497
+je near loc_00013497  ; je 0x13497
 push ecx
 push ecx
 push ref_000251c3  ; push 0x251c3
 jmp near loc_000131c6  ; jmp 0x131c6
 
-loc_0001337c:  ; not directly referenced
+loc_0001337c:
 mov eax, dword [ebp - 0x20]
 movzx eax, ah
 mov dword [ebp - 0x20], eax
@@ -31351,7 +31343,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x20
 
-loc_000133a7:  ; not directly referenced
+loc_000133a7:
 movzx eax, byte [ebp - 0x20]
 push edx
 push ebx
@@ -31364,18 +31356,18 @@ test eax, eax
 jne short loc_000133e7  ; jne 0x133e7
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_0001348a  ; je 0x1348a
+je near loc_0001348a  ; je 0x1348a
 push eax
 push dword [ebp - 0x24]
 push ref_0002521f  ; push 0x2521f
 
-loc_000133d5:  ; not directly referenced
+loc_000133d5:
 push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp near loc_0001348a  ; jmp 0x1348a
 
-loc_000133e7:  ; not directly referenced
+loc_000133e7:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00013418  ; je 0x13418
@@ -31395,10 +31387,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x20
 
-loc_00013418:  ; not directly referenced
+loc_00013418:
 xor ebx, ebx
 
-loc_0001341a:  ; not directly referenced
+loc_0001341a:
 movzx eax, word [esi + 6]
 cmp ebx, eax
 jae short loc_0001348a  ; jae 0x1348a
@@ -31417,7 +31409,7 @@ push ref_00025059  ; push 0x25059
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00013452:  ; not directly referenced
+loc_00013452:
 mov eax, dword [ebp - 0x38]
 or dword [ebp - 0x1c], eax
 push eax
@@ -31438,19 +31430,19 @@ push dword [ebp - 0x24]
 push ref_000252d5  ; push 0x252d5
 jmp near loc_000131c6  ; jmp 0x131c6
 
-loc_00013487:  ; not directly referenced
+loc_00013487:
 inc ebx
 jmp short loc_0001341a  ; jmp 0x1341a
 
-loc_0001348a:  ; not directly referenced
+loc_0001348a:
 inc byte [ebp - 0x2c]
 shr byte [ebp - 0x2d], 1
 jmp near loc_0001329f  ; jmp 0x1329f
 
-loc_00013495:  ; not directly referenced
+loc_00013495:
 xor edi, edi
 
-loc_00013497:  ; not directly referenced
+loc_00013497:
 push edx
 push edx
 push 0xfffd
@@ -31477,7 +31469,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000134db:  ; not directly referenced
+loc_000134db:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -31619,7 +31611,7 @@ mov dword [ebp - 0x2c], eax
 loc_000135f3:
 call fcn_0001c245  ; call 0x1c245
 cmp byte [ebp - 0x19], al
-jae loc_000137f4  ; jae 0x137f4
+jae near loc_000137f4  ; jae 0x137f4
 movzx esi, byte [ebp - 0x19]
 push ecx
 movzx eax, byte [esi + esi + ref_000204f1]  ; movzx eax, byte [esi + esi + 0x204f1]
@@ -31848,7 +31840,7 @@ mov dword [ebp - 0x1c], eax
 call fcn_0001bbfd  ; call 0x1bbfd
 mov eax, dword [ebp - 0x20]
 cmp byte [eax + 0x10], 0
-je loc_00013c36  ; je 0x13c36
+je near loc_00013c36  ; je 0x13c36
 cmp esi, 1
 jne short loc_0001386c  ; jne 0x1386c
 sub esp, 0xc
@@ -31934,7 +31926,7 @@ jmp short loc_0001393e  ; jmp 0x1393e
 
 loc_00013921:
 cmp dword [ebp - 0x1c], 2
-jne loc_00013a5a  ; jne 0x13a5a
+jne near loc_00013a5a  ; jne 0x13a5a
 push eax
 add edi, 0xa8
 push eax
@@ -32039,7 +32031,7 @@ jmp near loc_00013966  ; jmp 0x13966
 
 loc_00013a65:
 cmp esi, 1
-jne loc_00013c27  ; jne 0x13c27
+jne near loc_00013c27  ; jne 0x13c27
 push ecx
 xor edi, edi
 push 0x100800
@@ -32079,7 +32071,7 @@ push edx
 call fcn_00018b3e  ; call 0x18b3e
 add esp, 0x10
 cmp esi, 2
-jne loc_00013b80  ; jne 0x13b80
+jne near loc_00013b80  ; jne 0x13b80
 push ecx
 push ecx
 push 3
@@ -32325,9 +32317,9 @@ mov edx, dword [ebp - 0x1c]
 cmp eax, 1
 sete cl
 cmp edi, 1
-jne loc_00013e6d  ; jne 0x13e6d
+jne near loc_00013e6d  ; jne 0x13e6d
 test cl, cl
-je loc_00013e6d  ; je 0x13e6d
+je near loc_00013e6d  ; je 0x13e6d
 mov eax, dword [ebp + 8]
 sub esp, 0xc
 lea edi, [eax + 0xe0]
@@ -32407,7 +32399,7 @@ add esp, 0x10
 and eax, 0x20
 je short loc_00013e5f  ; je 0x13e5f
 cmp eax, 0x20
-jne loc_00013f35  ; jne 0x13f35
+jne near loc_00013f35  ; jne 0x13f35
 mov byte [esi], 0
 and dword [ebx], 0xffffbfff
 jmp near loc_00013f35  ; jmp 0x13f35
@@ -32437,7 +32429,7 @@ add esp, 0x10
 and eax, 0x20
 je short loc_00013ebc  ; je 0x13ebc
 cmp eax, 0x20
-jne loc_00013f35  ; jne 0x13f35
+jne near loc_00013f35  ; jne 0x13f35
 mov byte [esi], 0
 and dword [ebx], 0xfffffeff
 jmp short loc_00013f35  ; jmp 0x13f35
@@ -32544,7 +32536,7 @@ jne short loc_00013fd2  ; jne 0x13fd2
 loc_00013fa8:
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0001489b  ; je 0x1489b
+je near loc_0001489b  ; je 0x1489b
 push eax
 push ref_00022281  ; push 0x22281
 push 0x601
@@ -32556,7 +32548,7 @@ jmp near loc_0001489b  ; jmp 0x1489b
 loc_00013fd2:
 mov eax, dword [ebp + 8]
 cmp byte [eax + 0x10], 0
-je loc_0001489b  ; je 0x1489b
+je near loc_0001489b  ; je 0x1489b
 push eax
 push eax
 lea eax, [ebp - 0x20]
@@ -32605,7 +32597,7 @@ push eax
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 test al, 1
-je loc_000140df  ; je 0x140df
+je near loc_000140df  ; je 0x140df
 sub esp, 0xc
 add ebx, 0x24
 push ebx
@@ -32682,7 +32674,7 @@ mov dword [esp], eax
 call fcn_00019797  ; call 0x19797
 add esp, 0x10
 cmp dword [ebp - 0x1c], 0x11
-je loc_0001489b  ; je 0x1489b
+je near loc_0001489b  ; je 0x1489b
 mov eax, dword [ebp + 0x1c]
 sub esp, 0xc
 add eax, 0xa2
@@ -32751,17 +32743,17 @@ mov eax, dword [ebp + 8]
 mov esi, 1
 mov al, byte [eax + 0x11]
 test al, al
-je loc_000142d0  ; je 0x142d0
+je near loc_000142d0  ; je 0x142d0
 xor esi, esi
 dec al
-jne loc_000142d0  ; jne 0x142d0
+jne near loc_000142d0  ; jne 0x142d0
 mov eax, dword [ebp + 8]
 mov al, byte [eax + 0x10]
 cmp al, 2
 sete cl
 dec al
 mov esi, ecx
-jne loc_000142d0  ; jne 0x142d0
+jne near loc_000142d0  ; jne 0x142d0
 sub esp, 0xc
 push dword [ebp - 0x40]
 call fcn_00017dc2  ; call 0x17dc2
@@ -32841,17 +32833,17 @@ push 0x2710
 call fcn_0001bb03  ; call 0x1bb03
 add esp, 0x10
 and esi, 0x10
-je loc_00014230  ; je 0x14230
+je near loc_00014230  ; je 0x14230
 dec ebx
 jne short loc_0001427b  ; jne 0x1427b
 jmp near loc_00014230  ; jmp 0x14230
 
 loc_000142d0:
 cmp byte [ebp - 0x25], 0
-je loc_00014506  ; je 0x14506
+je near loc_00014506  ; je 0x14506
 mov eax, esi
 dec al
-jne loc_00014506  ; jne 0x14506
+jne near loc_00014506  ; jne 0x14506
 mov eax, dword [ebp + 0x18]
 sub esp, 0xc
 lea ebx, [eax + 0xd0]
@@ -33108,7 +33100,7 @@ jmp short loc_00014570  ; jmp 0x14570
 
 loc_00014506:
 cmp byte [ebp - 0x25], 0
-je loc_0001461f  ; je 0x1461f
+je near loc_0001461f  ; je 0x1461f
 mov eax, esi
 cmp al, 2
 jne short loc_00014578  ; jne 0x14578
@@ -33154,7 +33146,7 @@ push dword [ebp - 0x40]
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 test al, 0x20
-je loc_0001461f  ; je 0x1461f
+je near loc_0001461f  ; je 0x1461f
 mov bl, byte [ebp - 0x2d]
 xor esi, esi
 and ebx, 1
@@ -33230,7 +33222,7 @@ loc_0001461f:
 mov eax, dword [ebp + 8]
 xor ebx, ebx
 cmp byte [eax + 0x13], 1
-jne loc_0001485c  ; jne 0x1485c
+jne near loc_0001485c  ; jne 0x1485c
 
 loc_0001462e:
 movzx eax, byte [ebp - 0x27]
@@ -33558,9 +33550,9 @@ call fcn_0001c0bd  ; call 0x1c0bd
 mov edx, dword [ebp + 8]
 add esp, 0x10
 cmp byte [edx + 0x10], 0
-je loc_00014b50  ; je 0x14b50
+je near loc_00014b50  ; je 0x14b50
 cmp eax, 1
-jne loc_00014a1b  ; jne 0x14a1b
+jne near loc_00014a1b  ; jne 0x14a1b
 mov dword [ebp - 0x3c], 0
 xor edi, edi
 xor ebx, ebx
@@ -33671,7 +33663,7 @@ push eax
 call fcn_00017e8f  ; call 0x17e8f
 add esp, 0x10
 cmp dword [ebp - 0x40], 1
-jne loc_00014b50  ; jne 0x14b50
+jne near loc_00014b50  ; jne 0x14b50
 push eax
 push eax
 mov eax, dword [ebp + 0xc]
@@ -33691,7 +33683,7 @@ jmp near loc_00014b4d  ; jmp 0x14b4d
 loc_00014a1b:
 xor ebx, ebx
 cmp eax, 2
-jne loc_00014b2f  ; jne 0x14b2f
+jne near loc_00014b2f  ; jne 0x14b2f
 
 loc_00014a26:
 call fcn_0001c2f8  ; call 0x1c2f8
@@ -33951,7 +33943,7 @@ loc_00014c74:
 call fcn_0001c298  ; call 0x1c298
 movzx eax, al
 cmp ebx, eax
-jae loc_00014d11  ; jae 0x14d11
+jae near loc_00014d11  ; jae 0x14d11
 cmp ebx, 7
 ja short loc_00014cc5  ; ja 0x14cc5
 cmp byte [esi], 1
@@ -34041,7 +34033,7 @@ mov edi, dword [ebp + 0xc]
 call fcn_0001bfbb  ; call 0x1bfbb
 cmp byte [esi + 0x10], 0
 mov dword [ebp - 0x1c], eax
-je loc_00014e0a  ; je 0x14e0a
+je near loc_00014e0a  ; je 0x14e0a
 lea eax, [edi + 0xe4]
 sub esp, 0xc
 push eax
@@ -34245,7 +34237,7 @@ loc_00014f01:
 call fcn_0001c261  ; call 0x1c261
 movzx eax, al
 cmp ebx, eax
-jae loc_00014fc1  ; jae 0x14fc1
+jae near loc_00014fc1  ; jae 0x14fc1
 inc ebx
 mov eax, ebx
 push 0
@@ -34456,7 +34448,7 @@ mov dword [ebp - 0x24], eax
 
 loc_0001512d:
 cmp ebx, dword [ebp - 0x24]
-je loc_000151bf  ; je 0x151bf
+je near loc_000151bf  ; je 0x151bf
 cmp byte [ebx], 1
 jne short loc_000151b1  ; jne 0x151b1
 mov byte [ebp - 0x19], 0
@@ -34748,7 +34740,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00015400:  ; not directly referenced
+fcn_00015400:
 push ebp
 mov ebp, esp
 push esi
@@ -34757,7 +34749,7 @@ push ebx
 mov ebx, dword [ebp + 0xc]
 add esi, ebx
 
-loc_0001540d:  ; not directly referenced
+loc_0001540d:
 cmp ebx, esi
 je short loc_00015424  ; je 0x15424
 inc ebx
@@ -34768,7 +34760,7 @@ call fcn_0001641a  ; call 0x1641a
 add esp, 0x10
 jmp short loc_0001540d  ; jmp 0x1540d
 
-loc_00015424:  ; not directly referenced
+loc_00015424:
 lea esp, [ebp - 8]
 or eax, 0xffffffff
 pop ebx
@@ -34776,7 +34768,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001542e:  ; not directly referenced
+fcn_0001542e:
 push ebp
 mov ebp, esp
 push ebx
@@ -34976,7 +34968,7 @@ mov eax, ref_00020558  ; mov eax, 0x20558
 call fcn_00015491  ; call 0x15491
 add esp, 0x10
 test eax, eax
-js loc_00015518  ; js 0x15518
+js near loc_00015518  ; js 0x15518
 
 loc_0001559f:
 mov eax, dword [ebp + 0x1c]
@@ -35007,7 +34999,7 @@ jmp short loc_00015631  ; jmp 0x15631
 
 loc_000155d8:
 cmp dl, 0x2a
-jne loc_0001566c  ; jne 0x1566c
+jne near loc_0001566c  ; jne 0x1566c
 mov ecx, dword [ebx]
 lea eax, [ebx + 4]
 mov dword [ebp - 0xc4], ecx
@@ -35022,7 +35014,7 @@ mov ebx, eax
 
 loc_00015600:
 cmp dword [ebp - 0xc4], 0x1f4
-jle loc_000156c4  ; jle 0x156c4
+jle near loc_000156c4  ; jle 0x156c4
 
 loc_00015610:
 or eax, 0xffffffff
@@ -35050,7 +35042,7 @@ mov eax, esi
 
 loc_00015631:
 cmp byte [eax], 0
-je loc_0001613b  ; je 0x1613b
+je near loc_0001613b  ; je 0x1613b
 mov esi, eax
 jmp short loc_0001561d  ; jmp 0x1561d
 
@@ -35086,15 +35078,15 @@ mov eax, ref_0002053c  ; mov eax, 0x2053c
 loc_0001567d:
 mov cl, byte [eax]
 cmp cl, dl
-je loc_00016143  ; je 0x16143
+je near loc_00016143  ; je 0x16143
 test cl, cl
-je loc_000155d8  ; je 0x155d8
+je near loc_000155d8  ; je 0x155d8
 inc eax
 jmp short loc_0001567d  ; jmp 0x1567d
 
 loc_00015692:
 cmp dword [ebp - 0xc4], 0x1f3
-jg loc_00015600  ; jg 0x15600
+jg near loc_00015600  ; jg 0x15600
 imul edx, dword [ebp - 0xc4], 0xa
 inc edi
 lea eax, [edx + eax - 0x30]
@@ -35122,7 +35114,7 @@ lea eax, [ebx + 4]
 mov ebx, dword [ebx]
 mov dword [ebp - 0xc0], ebx
 cmp ebx, 0x1f4
-jg loc_00015610  ; jg 0x15610
+jg near loc_00015610  ; jg 0x15610
 add edi, 2
 mov ebx, eax
 jmp short loc_0001573d  ; jmp 0x1573d
@@ -35143,7 +35135,7 @@ jbe short loc_00015704  ; jbe 0x15704
 
 loc_0001572d:
 cmp dword [ebp - 0xc0], 0x1f4
-jg loc_00015610  ; jg 0x15610
+jg near loc_00015610  ; jg 0x15610
 
 loc_0001573d:
 cmp byte [edi], 0x3a
@@ -35184,7 +35176,7 @@ jbe short loc_0001577c  ; jbe 0x1577c
 
 loc_000157a2:
 cmp dword [ebp - 0xb0], 0x24
-jg loc_00015610  ; jg 0x15610
+jg near loc_00015610  ; jg 0x15610
 
 loc_000157af:
 cmp byte [edi], 0x5b
@@ -35200,7 +35192,7 @@ mov dl, byte [eax]
 lea edi, [eax + esi]
 mov dword [ebp - 0xcc], edi
 test dl, dl
-je loc_00015610  ; je 0x15610
+je near loc_00015610  ; je 0x15610
 cmp dl, 0x5d
 lea eax, [eax + 1]
 jne short loc_000157cb  ; jne 0x157cb
@@ -35229,9 +35221,9 @@ loc_00015804:
 mov dl, byte [edi + 1]
 lea esi, [edi + 1]
 test dl, dl
-je loc_0001615b  ; je 0x1615b
+je near loc_0001615b  ; je 0x1615b
 cmp dl, al
-jne loc_0001615b  ; jne 0x1615b
+jne near loc_0001615b  ; jne 0x1615b
 or eax, 1
 add edi, 2
 
@@ -35251,7 +35243,7 @@ mov cl, byte [edi + 1]
 lea esi, [edi + 1]
 mov byte [ebp - 0xb8], cl
 test cl, cl
-je loc_00015610  ; je 0x15610
+je near loc_00015610  ; je 0x15610
 mov edi, esi
 
 loc_00015852:
@@ -35260,7 +35252,7 @@ cmp dl, 0x6e
 jne short loc_000158b3  ; jne 0x158b3
 mov edx, dword [ebx]
 test edx, edx
-je loc_0001616f  ; je 0x1616f
+je near loc_0001616f  ; je 0x1616f
 cmp al, 0x68
 jne short loc_00015879  ; jne 0x15879
 mov eax, dword [ebp - 0xd4]
@@ -35351,7 +35343,7 @@ lea edx, [ebp + 0xc]
 call fcn_000154de  ; call 0x154de
 add esp, 0x20
 cmp eax, 0xffffffff
-je loc_00015610  ; je 0x15610
+je near loc_00015610  ; je 0x15610
 add esi, eax
 dec dword [ebp - 0xb0]
 jne short loc_00015927  ; jne 0x15927
@@ -35360,7 +35352,7 @@ jmp near loc_00016125  ; jmp 0x16125
 
 loc_00015964:
 cmp dl, 0x73
-jne loc_000159fb  ; jne 0x159fb
+jne near loc_000159fb  ; jne 0x159fb
 lea eax, [ebx + 4]
 mov edx, ref_00025456  ; mov edx, 0x25456
 mov dword [ebp - 0xb0], eax
@@ -35494,7 +35486,7 @@ mov esi, 2
 
 loc_00015ad8:
 test byte [ebp - 0xb4], 0x80
-je loc_00015b9d  ; je 0x15b9d
+je near loc_00015b9d  ; je 0x15b9d
 cmp al, 0x6c
 jne short loc_00015aee  ; jne 0x15aee
 lea eax, [ebx + 4]
@@ -35560,7 +35552,7 @@ mov byte [ebp - 0xa2], al
 loc_00015b70:
 cmp byte [ebp - 0xa2], 0
 mov dword [ebp - 0xd0], 0
-je loc_00015c54  ; je 0x15c54
+je near loc_00015c54  ; je 0x15c54
 or dword [ebp - 0xb4], 8
 mov dword [ebp - 0xd0], 1
 jmp near loc_00015c54  ; jmp 0x15c54
@@ -35686,7 +35678,7 @@ mov edx, dword [ebp - 0xac]
 mov eax, dword [ebp - 0xb0]
 mov ebx, edx
 or ebx, eax
-je loc_00015ea6  ; je 0x15ea6
+je near loc_00015ea6  ; je 0x15ea6
 push esi
 push 0xa
 push dword [ebp - 0xac]
@@ -35738,7 +35730,7 @@ mov esi, dword [ebp - 0xac]
 mov ebx, dword [ebp - 0xb0]
 mov edx, esi
 or edx, ebx
-je loc_00015ea6  ; je 0x15ea6
+je near loc_00015ea6  ; je 0x15ea6
 mov edx, dword [ebp - 0xb0]
 and edx, eax
 cmp byte [ebp - 0xc8], 0x78
@@ -35811,7 +35803,7 @@ jmp short loc_00015e59  ; jmp 0x15e59
 loc_00015ea6:
 cmp dword [ebp - 0xcc], 0
 mov dword [ebp - 0xe8], 0
-je loc_00016060  ; je 0x16060
+je near loc_00016060  ; je 0x16060
 mov eax, dword [ebp - 0xe0]
 mov ebx, dword [ebp - 0xcc]
 mov ecx, dword [ebp - 0xbc]
@@ -35825,13 +35817,13 @@ mov byte [ebp - 0xe4], 0
 
 loc_00015ef8:
 cmp dword [ebp - 0xb0], 0
-je loc_00016060  ; je 0x16060
+je near loc_00016060  ; je 0x16060
 cmp dword [ebp - 0xcc], 0
-je loc_00016162  ; je 0x16162
+je near loc_00016162  ; je 0x16162
 mov ebx, dword [ebp - 0xd8]
 mov al, byte [ebx]
 cmp al, 0x2d
-je loc_00016060  ; je 0x16060
+je near loc_00016060  ; je 0x16060
 cmp al, 0x2a
 je short loc_00015f43  ; je 0x15f43
 mov ecx, dword [ebp - 0xcc]
@@ -35847,7 +35839,7 @@ mov eax, dword [ebp - 0xb8]
 lea esi, [eax + 4]
 mov eax, dword [eax]
 test eax, eax
-js loc_0001605a  ; js 0x1605a
+js near loc_0001605a  ; js 0x1605a
 mov ecx, dword [ebp - 0xd8]
 mov edx, dword [ebp - 0xcc]
 mov dword [ebp - 0xb8], esi
@@ -35865,7 +35857,7 @@ imul ebx, edx, 0xa
 add eax, esi
 dec dword [ebp - 0xdc]
 mov edx, ebx
-je loc_00016060  ; je 0x16060
+je near loc_00016060  ; je 0x16060
 
 loc_00015f93:
 mov ebx, dword [ebp - 0xdc]
@@ -35925,7 +35917,7 @@ jmp near loc_00015ef8  ; jmp 0x15ef8
 
 loc_0001604b:
 cmp dword [ebp - 0xcc], 0
-jne loc_00015ef8  ; jne 0x15ef8
+jne near loc_00015ef8  ; jne 0x15ef8
 jmp short loc_00016060  ; jmp 0x16060
 
 loc_0001605a:
@@ -36002,7 +35994,7 @@ add esp, 0x20
 
 loc_00016125:
 test eax, eax
-js loc_00015610  ; js 0x15610
+js near loc_00015610  ; js 0x15610
 
 loc_0001612d:
 add dword [ebp - 0xd4], eax
@@ -36026,7 +36018,7 @@ jmp near loc_00015820  ; jmp 0x15820
 
 loc_00016162:
 test eax, eax
-jne loc_00015feb  ; jne 0x15feb
+jne near loc_00015feb  ; jne 0x15feb
 jmp near loc_00016060  ; jmp 0x16060
 
 loc_0001616f:
@@ -36042,7 +36034,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001617e:  ; not directly referenced
+fcn_0001617e:
 push ebp
 mov edx, dword [ref_00029bb8]  ; mov edx, dword [0x29bb8]
 mov ebp, esp
@@ -36052,7 +36044,7 @@ xor eax, eax
 pop ebp
 ret
 
-fcn_00016190:  ; not directly referenced
+fcn_00016190:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0xc]
@@ -36061,20 +36053,20 @@ mov dword [ref_00029bb8], eax  ; mov dword [0x29bb8], eax
 xor eax, eax
 ret
 
-fcn_0001619f:  ; not directly referenced
+fcn_0001619f:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_000161a6:  ; not directly referenced
+fcn_000161a6:
 push ebp
 mov ebp, esp
 pop ebp
 jmp near fcn_0001713e  ; jmp 0x1713e
 
-fcn_000161af:  ; not directly referenced
+fcn_000161af:
 push ebp
 mov ebp, esp
 push ebx
@@ -36110,12 +36102,12 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x40
 
-loc_00016205:  ; not directly referenced
+loc_00016205:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001620a:  ; not directly referenced
+fcn_0001620a:
 push ebp
 mov ebp, esp
 push edi
@@ -36124,11 +36116,11 @@ push ebx
 sub esp, 0xc
 mov ebx, dword [ebp + 0xc]
 
-loc_00016216:  ; not directly referenced
+loc_00016216:
 mov esi, ref_00029b3c  ; mov esi, 0x29b3c
 xor edi, edi
 
-loc_0001621d:  ; not directly referenced
+loc_0001621d:
 cmp edi, dword [ref_00029cb0]  ; cmp edi, dword [0x29cb0]
 jae short loc_00016267  ; jae 0x16267
 push eax
@@ -36150,16 +36142,16 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001625a:  ; not directly referenced
+loc_0001625a:
 mov eax, dword [ebx + 4]
 call fcn_000161af  ; call 0x161af
 jmp short loc_00016267  ; jmp 0x16267
 
-loc_00016264:  ; not directly referenced
+loc_00016264:
 inc edi
 jmp short loc_0001621d  ; jmp 0x1621d
 
-loc_00016267:  ; not directly referenced
+loc_00016267:
 cmp edi, dword [ref_00029cb0]  ; cmp edi, dword [0x29cb0]
 jne short loc_000162a4  ; jne 0x162a4
 cmp edi, 0x13
@@ -36176,11 +36168,11 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp short loc_000162fc  ; jmp 0x162fc
 
-loc_0001629c:  ; not directly referenced
+loc_0001629c:
 lea eax, [edi + 1]
 mov dword [ref_00029cb0], eax  ; mov dword [0x29cb0], eax
 
-loc_000162a4:  ; not directly referenced
+loc_000162a4:
 imul edi, edi, 0xc
 mov ecx, 3
 mov esi, ebx
@@ -36189,7 +36181,7 @@ rep movsd  ; rep movsd dword es:[edi], dword ptr [esi]
 mov edi, ref_00029cb4  ; mov edi, 0x29cb4
 xor esi, esi
 
-loc_000162bd:  ; not directly referenced
+loc_000162bd:
 cmp esi, dword [ref_00029da4]  ; cmp esi, dword [0x29da4]
 jae short loc_000162ed  ; jae 0x162ed
 push edx
@@ -36207,19 +36199,19 @@ push dword [ebp + 8]
 call dword [edi + 8]  ; ucall
 add esp, 0x10
 
-loc_000162e7:  ; not directly referenced
+loc_000162e7:
 inc esi
 add edi, 0xc
 jmp short loc_000162bd  ; jmp 0x162bd
 
-loc_000162ed:  ; not directly referenced
+loc_000162ed:
 mov eax, dword [ebx]
 add ebx, 0xc
 test eax, eax
-jns loc_00016216  ; jns 0x16216
+jns near loc_00016216  ; jns 0x16216
 xor ebx, ebx
 
-loc_000162fc:  ; not directly referenced
+loc_000162fc:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -36228,7 +36220,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016306:  ; not directly referenced
+fcn_00016306:
 push ebp
 mov ebp, esp
 push edi
@@ -36238,7 +36230,7 @@ push ebx
 xor ebx, ebx
 sub esp, 0xc
 
-loc_00016316:  ; not directly referenced
+loc_00016316:
 cmp ebx, dword [ref_00029cb0]  ; cmp ebx, dword [0x29cb0]
 jae short loc_00016346  ; jae 0x16346
 push eax
@@ -36257,11 +36249,11 @@ mov dword [eax], edx
 xor eax, eax
 jmp short loc_00016374  ; jmp 0x16374
 
-loc_00016343:  ; not directly referenced
+loc_00016343:
 inc ebx
 jmp short loc_00016316  ; jmp 0x16316
 
-loc_00016346:  ; not directly referenced
+loc_00016346:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_00016367  ; je 0x16367
@@ -36272,12 +36264,12 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00016367:  ; not directly referenced
+loc_00016367:
 mov eax, dword [ebp + 0xc]
 call fcn_000161af  ; call 0x161af
 mov eax, 0x8000000e
 
-loc_00016374:  ; not directly referenced
+loc_00016374:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -36285,7 +36277,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001637c:  ; not directly referenced
+fcn_0001637c:
 push ebp
 xor eax, eax
 mov ebp, esp
@@ -36296,7 +36288,7 @@ sub esp, 0xc
 mov ebx, dword [ref_00029da4]  ; mov ebx, dword [0x29da4]
 imul edx, ebx, 0xc
 
-loc_00016390:  ; not directly referenced
+loc_00016390:
 cmp ebx, 0x13
 jbe short loc_000163b5  ; jbe 0x163b5
 call fcn_00015479  ; call 0x15479
@@ -36309,7 +36301,7 @@ push ref_000254dd  ; push 0x254dd
 push 0x80000000
 jmp short loc_000163f4  ; jmp 0x163f4
 
-loc_000163b5:  ; not directly referenced
+loc_000163b5:
 mov esi, dword [ebp + 0xc]
 inc ebx
 mov ecx, 3
@@ -36331,11 +36323,11 @@ push ref_00020578  ; push 0x20578
 push ref_000254fd  ; push 0x254fd
 push 0x40
 
-loc_000163f4:  ; not directly referenced
+loc_000163f4:
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000163fc:  ; not directly referenced
+loc_000163fc:
 lea esp, [ebp - 0xc]
 mov eax, esi
 pop ebx
@@ -36344,7 +36336,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016406:  ; not directly referenced
+fcn_00016406:
 push ebp
 mov eax, ref_00029b3c  ; mov eax, 0x29b3c
 mov ebp, esp
@@ -36358,7 +36350,7 @@ mov ebp, esp
 pop ebp
 ret
 
-fcn_0001641a:  ; not directly referenced
+fcn_0001641a:
 mov eax, dword [ref_00029dac]  ; mov eax, dword [0x29dac]
 push ebp
 mov ebp, esp
@@ -36370,7 +36362,7 @@ mov dword [ebp + 8], edx
 pop ebp
 jmp eax
 
-loc_00016432:  ; not directly referenced
+loc_00016432:
 pop ebp
 ret
 
@@ -36471,7 +36463,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000165b9:  ; not directly referenced
+fcn_000165b9:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -36526,19 +36518,19 @@ mov ebp, esp
 pop ebp
 ret
 
-fcn_0001662e:  ; not directly referenced
+fcn_0001662e:
 push ebp
 mov ebp, esp
 pop ebp
 ret
 
-fcn_00016633:  ; not directly referenced
+fcn_00016633:
 push ebp
 mov ebp, esp
 pop ebp
 ret
 
-fcn_00016638:  ; not directly referenced
+fcn_00016638:
 push ebp
 mov ebp, esp
 push edi
@@ -36550,21 +36542,21 @@ mov edx, dword [ebp + 8]
 mov word [ebp - 0x2a], cx
 mov dword [ebp - 0x1c], 0x80000007
 test esi, esi
-je loc_00016701  ; je 0x16701
+je near loc_00016701  ; je 0x16701
 cmp cx, 0x1ff
-ja loc_00016701  ; ja 0x16701
+ja near loc_00016701  ; ja 0x16701
 mov edi, edx
 movzx edx, dx
 add edx, ecx
 cmp edx, 0x1ff
-jg loc_00016701  ; jg 0x16701
+jg near loc_00016701  ; jg 0x16701
 lea ecx, [edi + esi]
 movzx eax, al
 mov ebx, esi
 mov word [ebp - 0x2c], cx
 mov dword [ebp - 0x30], eax
 
-loc_00016686:  ; not directly referenced
+loc_00016686:
 cmp word [ebp - 0x2c], bx
 je short loc_000166fa  ; je 0x166fa
 mov dx, word [ebp - 0x2a]
@@ -36580,10 +36572,10 @@ mov byte [edi], al
 mov al, 1
 jmp short loc_000166ad  ; jmp 0x166ad
 
-loc_000166ab:  ; not directly referenced
+loc_000166ab:
 xor eax, eax
 
-loc_000166ad:  ; not directly referenced
+loc_000166ad:
 dec al
 movzx edi, dl
 jne short loc_000166d2  ; jne 0x166d2
@@ -36600,7 +36592,7 @@ push eax
 call fcn_0001a2fa  ; call 0x1a2fa
 add esp, 0x10
 
-loc_000166d2:  ; not directly referenced
+loc_000166d2:
 shl edi, 8
 push eax
 or edi, dword [ebp - 0x30]
@@ -36618,10 +36610,10 @@ cmp dword [ebp - 0x1c], 0
 je short loc_00016686  ; je 0x16686
 mov byte [edx], 0
 
-loc_000166fa:  ; not directly referenced
+loc_000166fa:
 mov dword [ebp - 0x1c], 0
 
-loc_00016701:  ; not directly referenced
+loc_00016701:
 mov eax, dword [ebp - 0x1c]
 lea esp, [ebp - 0xc]
 pop ebx
@@ -36630,7 +36622,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001670c:  ; not directly referenced
+fcn_0001670c:
 push ebp
 mov ecx, 2
 mov ebp, esp
@@ -36663,7 +36655,7 @@ lea eax, [eax + eax*4]
 add eax, ebx
 mov dword [ebp - 0x34], eax
 
-loc_00016763:  ; not directly referenced
+loc_00016763:
 cmp ebx, dword [ebp - 0x34]
 je short loc_000167a0  ; je 0x167a0
 movzx eax, byte [ebx + 4]
@@ -36688,11 +36680,11 @@ je short loc_0001679b  ; je 0x1679b
 mov esi, eax
 jmp short loc_000167a0  ; jmp 0x167a0
 
-loc_0001679b:  ; not directly referenced
+loc_0001679b:
 add ebx, 5
 jmp short loc_00016763  ; jmp 0x16763
 
-loc_000167a0:  ; not directly referenced
+loc_000167a0:
 test esi, esi
 sete al
 lea esp, [ebp - 0xc]
@@ -36702,7 +36694,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000167ad:  ; not directly referenced
+fcn_000167ad:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -36716,11 +36708,11 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000167ce:  ; not directly referenced
+loc_000167ce:
 leave
 ret
 
-fcn_000167d0:  ; not directly referenced
+fcn_000167d0:
 push ebp
 mov ebp, esp
 mov edx, dword [ebp + 0x10]
@@ -36739,7 +36731,7 @@ movzx edx, dx
 or eax, edx
 ret
 
-fcn_000167fe:  ; not directly referenced
+fcn_000167fe:
 push ebp
 mov ebp, esp
 movzx eax, byte [ebp + 0x10]
@@ -36755,7 +36747,7 @@ shl eax, 0x14
 add eax, edx
 ret
 
-fcn_00016822:  ; not directly referenced
+fcn_00016822:
 push ebp
 mov ebp, esp
 push ebx
@@ -36781,7 +36773,7 @@ mov ebx, dword [ebp - 4]
 leave
 jmp near fcn_00018ee1  ; jmp 0x18ee1
 
-fcn_00016861:  ; not directly referenced
+fcn_00016861:
 push ebp
 mov edx, 0xfffff
 mov ebp, esp
@@ -36793,7 +36785,7 @@ mov edi, dword [ebp + 8]
 mov esi, dword [ebp + 0xc]
 mov ebx, dword [ebp + 0x10]
 
-loc_00016878:  ; not directly referenced
+loc_00016878:
 push ecx
 push ecx
 push 0xa
@@ -36810,11 +36802,11 @@ dec edx
 jne short loc_00016878  ; jne 0x16878
 jmp short loc_000168a5  ; jmp 0x168a5
 
-loc_000168a1:  ; not directly referenced
+loc_000168a1:
 test edx, edx
 jne short loc_0001691b  ; jne 0x1691b
 
-loc_000168a5:  ; not directly referenced
+loc_000168a5:
 push eax
 push eax
 push 0xb
@@ -36861,7 +36853,7 @@ push 0x71
 call fcn_00018eea  ; call 0x18eea
 add esp, 0x10
 
-loc_0001691b:  ; not directly referenced
+loc_0001691b:
 push eax
 push eax
 push 0
@@ -36972,7 +36964,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016a4e:  ; not directly referenced
+fcn_00016a4e:
 push ebp
 mov ebp, esp
 push ebx
@@ -36994,48 +36986,48 @@ push eax
 call fcn_000174b9  ; call 0x174b9
 add esp, 0x10
 
-loc_00016a84:  ; not directly referenced
+loc_00016a84:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00016a89:  ; not directly referenced
+fcn_00016a89:
 push ebp
 xor edx, edx
 mov ebp, esp
 mov eax, dword [ebp + 8]
 mov ecx, dword [ebp + 0x10]
 
-loc_00016a94:  ; not directly referenced
+loc_00016a94:
 cmp edx, dword [ebp + 0xc]
 je short loc_00016aa0  ; je 0x16aa0
 mov word [eax + edx*2], cx
 inc edx
 jmp short loc_00016a94  ; jmp 0x16a94
 
-loc_00016aa0:  ; not directly referenced
+loc_00016aa0:
 pop ebp
 ret
 
-fcn_00016aa2:  ; not directly referenced
+fcn_00016aa2:
 push ebp
 xor edx, edx
 mov ebp, esp
 mov eax, dword [ebp + 8]
 mov ecx, dword [ebp + 0x10]
 
-loc_00016aad:  ; not directly referenced
+loc_00016aad:
 cmp edx, dword [ebp + 0xc]
 je short loc_00016ab8  ; je 0x16ab8
 mov dword [eax + edx*4], ecx
 inc edx
 jmp short loc_00016aad  ; jmp 0x16aad
 
-loc_00016ab8:  ; not directly referenced
+loc_00016ab8:
 pop ebp
 ret
 
-fcn_00016aba:  ; not directly referenced
+fcn_00016aba:
 push ebp
 mov ebp, esp
 push edi
@@ -37060,7 +37052,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016afd:  ; not directly referenced
+fcn_00016afd:
 push ebp
 mov ebp, esp
 push edi
@@ -37086,7 +37078,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016b44:  ; not directly referenced
+fcn_00016b44:
 push ebp
 xor eax, eax
 mov ebp, esp
@@ -37094,7 +37086,7 @@ push ebx
 mov ebx, 0x186a0
 sub esp, 0x14
 
-loc_00016b52:  ; not directly referenced
+loc_00016b52:
 test eax, eax
 jne short loc_00016b9f  ; jne 0x16b9f
 test ebx, ebx
@@ -37109,10 +37101,10 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00016b74:  ; not directly referenced
+loc_00016b74:
 clc
 
-loc_00016b75:  ; not directly referenced
+loc_00016b75:
 rdrand eax
 mov dword [ebp - 0xc], eax
 jae short loc_00016b75  ; jae 0x16b75
@@ -37126,31 +37118,31 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00016b99:  ; not directly referenced
+loc_00016b99:
 mov eax, dword [ebp - 0xc]
 dec ebx
 jmp short loc_00016b52  ; jmp 0x16b52
 
-loc_00016b9f:  ; not directly referenced
+loc_00016b9f:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00016ba4:  ; not directly referenced
+fcn_00016ba4:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_00016bab:  ; not directly referenced
+fcn_00016bab:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x14]
 pop ebp
 ret
 
-fcn_00016bb3:  ; not directly referenced
+fcn_00016bb3:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -37164,12 +37156,12 @@ push eax
 call dword [edx + 0xcc]  ; ucall
 add esp, 0x10
 
-loc_00016bd8:  ; not directly referenced
+loc_00016bd8:
 xor eax, eax
 leave
 ret
 
-fcn_00016bdc:  ; not directly referenced
+fcn_00016bdc:
 push ebp
 mov ebp, esp
 mov edx, dword [ebp + 8]
@@ -37195,7 +37187,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00016c1d:  ; not directly referenced
+loc_00016c1d:
 sub esp, 0xc
 push 0x48
 call fcn_00016822  ; call 0x16822
@@ -37216,7 +37208,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00016c50:  ; not directly referenced
+fcn_00016c50:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -37230,7 +37222,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00016c72:  ; not directly referenced
+loc_00016c72:
 push eax
 mov eax, 0x1000
 in al, 0x99
@@ -37238,7 +37230,7 @@ pop eax
 leave
 ret
 
-fcn_00016c7d:  ; not directly referenced
+fcn_00016c7d:
 push ebp
 mov ebp, esp
 push ebx
@@ -37541,7 +37533,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00016f4f:  ; not directly referenced
+fcn_00016f4f:
 push ebp
 mov ebp, esp
 push esi
@@ -37560,7 +37552,7 @@ push ref_0002577c  ; push 0x2577c
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00016f80:  ; not directly referenced
+loc_00016f80:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00016fa9  ; je 0x16fa9
@@ -37575,7 +37567,7 @@ push ref_0002577c  ; push 0x2577c
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00016fa9:  ; not directly referenced
+loc_00016fa9:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00016fd2  ; je 0x16fd2
@@ -37588,11 +37580,11 @@ push ref_0002577c  ; push 0x2577c
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00016fd2:  ; not directly referenced
+loc_00016fd2:
 and esi, 0xfffffff0
 add esi, ebx
 
-loc_00016fd7:  ; not directly referenced
+loc_00016fd7:
 cmp ebx, esi
 jae short loc_00016ff2  ; jae 0x16ff2
 push eax
@@ -37606,14 +37598,14 @@ jne short loc_00016ff6  ; jne 0x16ff6
 add ebx, 0x10
 jmp short loc_00016fd7  ; jmp 0x16fd7
 
-loc_00016ff2:  ; not directly referenced
+loc_00016ff2:
 xor eax, eax
 jmp short loc_00016ff8  ; jmp 0x16ff8
 
-loc_00016ff6:  ; not directly referenced
+loc_00016ff6:
 mov eax, ebx
 
-loc_00016ff8:  ; not directly referenced
+loc_00016ff8:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
@@ -37676,9 +37668,9 @@ mov edi, dword [ebp + 0x10]
 mov ebx, dword [ebp + 8]
 mov esi, dword [ebp + 0xc]
 test edi, edi
-je loc_00017134  ; je 0x17134
+je near loc_00017134  ; je 0x17134
 cmp ebx, esi
-je loc_00017134  ; je 0x17134
+je near loc_00017134  ; je 0x17134
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_000170ab  ; je 0x170ab
@@ -37927,7 +37919,7 @@ pop edi
 pop ebp
 jmp near loc_000178a0  ; jmp 0x178a0
 
-fcn_00017299:  ; not directly referenced
+fcn_00017299:
 push ebp
 mov ebp, esp
 push ebx
@@ -37945,13 +37937,13 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000172c3:  ; not directly referenced
+loc_000172c3:
 mov ax, word [ebx]
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000172cb:  ; not directly referenced
+fcn_000172cb:
 push ebp
 mov ebp, esp
 push esi
@@ -37970,7 +37962,7 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000172f8:  ; not directly referenced
+loc_000172f8:
 mov word [esi], bx
 lea esp, [ebp - 8]
 mov eax, ebx
@@ -37979,7 +37971,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00017304:  ; not directly referenced
+fcn_00017304:
 push ebp
 mov ebp, esp
 push ebx
@@ -37997,14 +37989,14 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001732e:  ; not directly referenced
+loc_0001732e:
 mov eax, dword [ebx]
 mov ebx, dword [ebp - 4]
 leave
 and eax, 0xffffff
 ret
 
-fcn_0001733a:  ; not directly referenced
+fcn_0001733a:
 push ebp
 mov ebp, esp
 push esi
@@ -38023,7 +38015,7 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017367:  ; not directly referenced
+loc_00017367:
 push esi
 push 0x17
 push 0
@@ -38037,7 +38029,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001737e:  ; not directly referenced
+fcn_0001737e:
 push ebp
 mov ebp, esp
 push ebx
@@ -38055,13 +38047,13 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000173ab:  ; not directly referenced
+loc_000173ab:
 mov eax, dword [ebx]
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_000173b2:  ; not directly referenced
+fcn_000173b2:
 push ebp
 mov ebp, esp
 push esi
@@ -38080,7 +38072,7 @@ push ref_000259f8  ; push 0x259f8
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000173e2:  ; not directly referenced
+loc_000173e2:
 mov dword [esi], ebx
 lea esp, [ebp - 8]
 mov eax, ebx
@@ -38296,28 +38288,28 @@ mov ebp, esp
 pop ebp
 ret
 
-fcn_000175a3:  ; not directly referenced
+fcn_000175a3:
 push ebp
 mov ebp, esp
 sti
 pop ebp
 ret
 
-fcn_000175a9:  ; not directly referenced
+fcn_000175a9:
 push ebp
 mov ebp, esp
 cli
 pop ebp
 ret
 
-fcn_000175af:  ; not directly referenced
+fcn_000175af:
 push ebp
 mov ebp, esp
 pause
 pop ebp
 ret
 
-fcn_000175b6:  ; not directly referenced
+fcn_000175b6:
 push ebp
 mov ebp, esp
 int3
@@ -38342,7 +38334,7 @@ wrmsr
 pop ebp
 ret
 
-fcn_000175d6:  ; not directly referenced
+fcn_000175d6:
 push ebp
 mov ebp, esp
 pushfd
@@ -38350,35 +38342,35 @@ pop eax
 pop ebp
 ret
 
-fcn_000175dd:  ; not directly referenced
+fcn_000175dd:
 push ebp
 mov ebp, esp
 mov eax, cr0
 pop ebp
 ret
 
-fcn_000175e5:  ; not directly referenced
+fcn_000175e5:
 push ebp
 mov ebp, esp
 mov eax, cr2
 pop ebp
 ret
 
-fcn_000175ed:  ; not directly referenced
+fcn_000175ed:
 push ebp
 mov ebp, esp
 mov eax, cr3
 pop ebp
 ret
 
-fcn_000175f5:  ; not directly referenced
+fcn_000175f5:
 push ebp
 mov ebp, esp
 mov eax, cr4
 pop ebp
 ret
 
-fcn_000175fd:  ; not directly referenced
+fcn_000175fd:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38386,7 +38378,7 @@ mov cr0, eax
 pop ebp
 ret
 
-fcn_00017608:  ; not directly referenced
+fcn_00017608:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38394,7 +38386,7 @@ mov cr2, eax
 pop ebp
 ret
 
-fcn_00017613:  ; not directly referenced
+fcn_00017613:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38402,7 +38394,7 @@ mov cr3, eax
 pop ebp
 ret
 
-fcn_0001761e:  ; not directly referenced
+fcn_0001761e:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38410,63 +38402,63 @@ mov cr4, eax
 pop ebp
 ret
 
-fcn_00017629:  ; not directly referenced
+fcn_00017629:
 push ebp
 mov ebp, esp
 mov eax, dr0
 pop ebp
 ret
 
-fcn_00017631:  ; not directly referenced
+fcn_00017631:
 push ebp
 mov ebp, esp
 mov eax, dr1
 pop ebp
 ret
 
-fcn_00017639:  ; not directly referenced
+fcn_00017639:
 push ebp
 mov ebp, esp
 mov eax, dr2
 pop ebp
 ret
 
-fcn_00017641:  ; not directly referenced
+fcn_00017641:
 push ebp
 mov ebp, esp
 mov eax, dr3
 pop ebp
 ret
 
-fcn_00017649:  ; not directly referenced
+fcn_00017649:
 push ebp
 mov ebp, esp
 mov eax, dr4
 pop ebp
 ret
 
-fcn_00017651:  ; not directly referenced
+fcn_00017651:
 push ebp
 mov ebp, esp
 mov eax, dr5
 pop ebp
 ret
 
-fcn_00017659:  ; not directly referenced
+fcn_00017659:
 push ebp
 mov ebp, esp
 mov eax, dr6
 pop ebp
 ret
 
-fcn_00017661:  ; not directly referenced
+fcn_00017661:
 push ebp
 mov ebp, esp
 mov eax, dr7
 pop ebp
 ret
 
-fcn_00017669:  ; not directly referenced
+fcn_00017669:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38474,7 +38466,7 @@ mov dr0, eax
 pop ebp
 ret
 
-fcn_00017674:  ; not directly referenced
+fcn_00017674:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38482,7 +38474,7 @@ mov dr1, eax
 pop ebp
 ret
 
-fcn_0001767f:  ; not directly referenced
+fcn_0001767f:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38490,7 +38482,7 @@ mov dr2, eax
 pop ebp
 ret
 
-fcn_0001768a:  ; not directly referenced
+fcn_0001768a:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38498,7 +38490,7 @@ mov dr3, eax
 pop ebp
 ret
 
-fcn_00017695:  ; not directly referenced
+fcn_00017695:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38506,7 +38498,7 @@ mov dr4, eax
 pop ebp
 ret
 
-fcn_000176a0:  ; not directly referenced
+fcn_000176a0:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38514,7 +38506,7 @@ mov dr5, eax
 pop ebp
 ret
 
-fcn_000176ab:  ; not directly referenced
+fcn_000176ab:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38522,7 +38514,7 @@ mov dr6, eax
 pop ebp
 ret
 
-fcn_000176b6:  ; not directly referenced
+fcn_000176b6:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38530,56 +38522,56 @@ mov dr7, eax
 pop ebp
 ret
 
-fcn_000176c1:  ; not directly referenced
+fcn_000176c1:
 push ebp
 mov ebp, esp
 mov ax, cs
 pop ebp
 ret
 
-fcn_000176c9:  ; not directly referenced
+fcn_000176c9:
 push ebp
 mov ebp, esp
 mov ax, ds
 pop ebp
 ret
 
-fcn_000176d1:  ; not directly referenced
+fcn_000176d1:
 push ebp
 mov ebp, esp
 mov ax, es
 pop ebp
 ret
 
-fcn_000176d9:  ; not directly referenced
+fcn_000176d9:
 push ebp
 mov ebp, esp
 mov ax, fs
 pop ebp
 ret
 
-fcn_000176e1:  ; not directly referenced
+fcn_000176e1:
 push ebp
 mov ebp, esp
 mov ax, gs
 pop ebp
 ret
 
-fcn_000176e9:  ; not directly referenced
+fcn_000176e9:
 push ebp
 mov ebp, esp
 mov ax, ds
 pop ebp
 ret
 
-fcn_000176f1:  ; not directly referenced
+fcn_000176f1:
 push ebp
 mov ebp, esp
 str ax
 pop ebp
 ret
 
-fcn_000176fa:  ; not directly referenced
+fcn_000176fa:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38587,7 +38579,7 @@ sgdt [eax]
 pop ebp
 ret
 
-fcn_00017705:  ; not directly referenced
+fcn_00017705:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38595,7 +38587,7 @@ lgdt [eax]
 pop ebp
 ret
 
-fcn_00017710:  ; not directly referenced
+fcn_00017710:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38603,7 +38595,7 @@ sidt [eax]
 pop ebp
 ret
 
-fcn_0001771b:  ; not directly referenced
+fcn_0001771b:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38611,21 +38603,21 @@ lidt [eax]
 pop ebp
 ret
 
-fcn_00017726:  ; not directly referenced
+fcn_00017726:
 push ebp
 mov ebp, esp
 sldt ax
 pop ebp
 ret
 
-fcn_0001772f:  ; not directly referenced
+fcn_0001772f:
 push ebp
 mov ebp, esp
 lldt word [ebp + 8]
 pop ebp
 ret
 
-fcn_00017738:  ; not directly referenced
+fcn_00017738:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38633,7 +38625,7 @@ fxsave [eax]
 pop ebp
 ret
 
-fcn_00017743:  ; not directly referenced
+fcn_00017743:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38641,7 +38633,7 @@ fxrstor [eax]
 pop ebp
 ret
 
-fcn_0001774e:  ; not directly referenced
+fcn_0001774e:
 push ebp
 mov ebp, esp
 push eax
@@ -38652,7 +38644,7 @@ pop edx
 pop ebp
 ret
 
-fcn_0001775b:  ; not directly referenced
+fcn_0001775b:
 push ebp
 mov ebp, esp
 push eax
@@ -38663,7 +38655,7 @@ pop edx
 pop ebp
 ret
 
-fcn_00017768:  ; not directly referenced
+fcn_00017768:
 push ebp
 mov ebp, esp
 push eax
@@ -38674,7 +38666,7 @@ pop edx
 pop ebp
 ret
 
-fcn_00017775:  ; not directly referenced
+fcn_00017775:
 push ebp
 mov ebp, esp
 push eax
@@ -38685,7 +38677,7 @@ pop edx
 pop ebp
 ret
 
-fcn_00017782:  ; not directly referenced
+fcn_00017782:
 push ebp
 mov ebp, esp
 push eax
@@ -38696,7 +38688,7 @@ pop edx
 pop ebp
 ret
 
-fcn_0001778f:  ; not directly referenced
+fcn_0001778f:
 push ebp
 mov ebp, esp
 push eax
@@ -38707,7 +38699,7 @@ pop edx
 pop ebp
 ret
 
-fcn_0001779c:  ; not directly referenced
+fcn_0001779c:
 push ebp
 mov ebp, esp
 push eax
@@ -38718,7 +38710,7 @@ pop edx
 pop ebp
 ret
 
-fcn_000177a9:  ; not directly referenced
+fcn_000177a9:
 push ebp
 mov ebp, esp
 push eax
@@ -38729,7 +38721,7 @@ pop edx
 pop ebp
 ret
 
-fcn_000177b6:  ; not directly referenced
+fcn_000177b6:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38741,7 +38733,7 @@ movq mm0, qword [ebp - 8]
 leave
 ret
 
-fcn_000177ce:  ; not directly referenced
+fcn_000177ce:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38753,7 +38745,7 @@ movq mm1, qword [ebp - 8]
 leave
 ret
 
-fcn_000177e6:  ; not directly referenced
+fcn_000177e6:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38765,7 +38757,7 @@ movq mm2, qword [ebp - 8]
 leave
 ret
 
-fcn_000177fe:  ; not directly referenced
+fcn_000177fe:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38777,7 +38769,7 @@ movq mm3, qword [ebp - 8]
 leave
 ret
 
-fcn_00017816:  ; not directly referenced
+fcn_00017816:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38789,7 +38781,7 @@ movq mm4, qword [ebp - 8]
 leave
 ret
 
-fcn_0001782e:  ; not directly referenced
+fcn_0001782e:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38801,7 +38793,7 @@ movq mm5, qword [ebp - 8]
 leave
 ret
 
-fcn_00017846:  ; not directly referenced
+fcn_00017846:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38813,7 +38805,7 @@ movq mm6, qword [ebp - 8]
 leave
 ret
 
-fcn_0001785e:  ; not directly referenced
+fcn_0001785e:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -38825,14 +38817,14 @@ movq mm7, qword [ebp - 8]
 leave
 ret
 
-fcn_00017876:  ; not directly referenced
+fcn_00017876:
 push ebp
 mov ebp, esp
 rdtsc
 pop ebp
 ret
 
-fcn_0001787d:  ; not directly referenced
+fcn_0001787d:
 push ebp
 mov ebp, esp
 mov ecx, dword [ebp + 8]
@@ -38840,21 +38832,21 @@ rdpmc
 pop ebp
 ret
 
-fcn_00017887:  ; not directly referenced
+fcn_00017887:
 push ebp
 mov ebp, esp
 wbinvd
 pop ebp
 ret
 
-fcn_0001788e:  ; not directly referenced
+fcn_0001788e:
 push ebp
 mov ebp, esp
 invd
 pop ebp
 ret
 
-fcn_00017895:  ; not directly referenced
+fcn_00017895:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -38873,7 +38865,7 @@ shrd eax, edx, cl
 shr edx, cl
 ret
 
-fcn_000178bb:  ; not directly referenced
+fcn_000178bb:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -38882,7 +38874,7 @@ call fcn_000175bc  ; call 0x175bc
 leave
 ret
 
-fcn_000178cb:  ; not directly referenced
+fcn_000178cb:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -38895,7 +38887,7 @@ call fcn_000175c6  ; call 0x175c6
 leave
 ret
 
-fcn_000178e2:  ; not directly referenced
+fcn_000178e2:
 push ebp
 mov ebp, esp
 push esi
@@ -38915,7 +38907,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f7b4  ; jmp 0x1f7b4
 
-fcn_0001790f:  ; not directly referenced
+fcn_0001790f:
 push ebp
 mov ebp, esp
 push edi
@@ -38940,7 +38932,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_00017943:  ; not directly referenced
+fcn_00017943:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -38953,7 +38945,7 @@ call fcn_0001790f  ; call 0x1790f
 leave
 ret
 
-fcn_0001795a:  ; not directly referenced
+fcn_0001795a:
 push ebp
 mov ebp, esp
 push edi
@@ -38978,7 +38970,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_0001798e:  ; not directly referenced
+fcn_0001798e:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -38991,7 +38983,7 @@ call fcn_0001795a  ; call 0x1795a
 leave
 ret
 
-fcn_000179a5:  ; not directly referenced
+fcn_000179a5:
 push ebp
 mov ebp, esp
 push edi
@@ -39022,7 +39014,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_000179eb:  ; not directly referenced
+fcn_000179eb:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -39039,7 +39031,7 @@ call fcn_000179a5  ; call 0x179a5
 leave
 ret
 
-fcn_00017a09:  ; not directly referenced
+fcn_00017a09:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -39053,7 +39045,7 @@ call fcn_0001fa1d  ; call 0x1fa1d
 leave
 ret
 
-fcn_00017a26:  ; not directly referenced
+fcn_00017a26:
 push ebp
 mov ebp, esp
 push edi
@@ -39090,7 +39082,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_00017a74:  ; not directly referenced
+fcn_00017a74:
 push ebp
 mov ebp, esp
 push esi
@@ -39109,7 +39101,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017aa5:  ; not directly referenced
+loc_00017aa5:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00017aca  ; je 0x17aca
@@ -39122,7 +39114,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017aca:  ; not directly referenced
+loc_00017aca:
 mov eax, dword [ebp + 0x14]
 sub esp, 0xc
 xor edx, edx
@@ -39138,7 +39130,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00017ae5:  ; not directly referenced
+fcn_00017ae5:
 push ebp
 mov ebp, esp
 push edi
@@ -39175,7 +39167,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_00017b33:  ; not directly referenced
+fcn_00017b33:
 push ebp
 mov ebp, esp
 push esi
@@ -39194,7 +39186,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017b64:  ; not directly referenced
+loc_00017b64:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00017b89  ; je 0x17b89
@@ -39207,7 +39199,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017b89:  ; not directly referenced
+loc_00017b89:
 mov eax, dword [ebp + 0x14]
 sub esp, 0xc
 xor edx, edx
@@ -39223,7 +39215,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00017ba4:  ; not directly referenced
+fcn_00017ba4:
 push ebp
 mov ebp, esp
 push edi
@@ -39260,7 +39252,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_00017bf2:  ; not directly referenced
+fcn_00017bf2:
 push ebp
 mov ebp, esp
 push esi
@@ -39279,7 +39271,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017c23:  ; not directly referenced
+loc_00017c23:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00017c48  ; je 0x17c48
@@ -39292,7 +39284,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017c48:  ; not directly referenced
+loc_00017c48:
 mov eax, dword [ebp + 0x14]
 sub esp, 0xc
 xor edx, edx
@@ -39308,7 +39300,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00017c63:  ; not directly referenced
+fcn_00017c63:
 push ebp
 mov ebp, esp
 push edi
@@ -39349,7 +39341,7 @@ pop edi
 pop ebp
 jmp near fcn_000175c6  ; jmp 0x175c6
 
-fcn_00017cc1:  ; not directly referenced
+fcn_00017cc1:
 push ebp
 mov ebp, esp
 push esi
@@ -39368,7 +39360,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017cf2:  ; not directly referenced
+loc_00017cf2:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00017d17  ; je 0x17d17
@@ -39381,7 +39373,7 @@ push ref_00025afe  ; push 0x25afe
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017d17:  ; not directly referenced
+loc_00017d17:
 push eax
 mov eax, dword [ebp + 0x18]
 xor edx, edx
@@ -39401,7 +39393,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00017d37:  ; not directly referenced
+fcn_00017d37:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -39415,13 +39407,13 @@ push ref_00025b7e  ; push 0x25b7e
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017d5b:  ; not directly referenced
+loc_00017d5b:
 xor eax, eax
 xor edx, edx
 leave
 ret
 
-fcn_00017d61:  ; not directly referenced
+fcn_00017d61:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -39435,7 +39427,7 @@ push ref_00025b7e  ; push 0x25b7e
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00017d85:  ; not directly referenced
+loc_00017d85:
 xor eax, eax
 xor edx, edx
 leave
@@ -39697,7 +39689,7 @@ pop esi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_00017fd9:  ; not directly referenced
+fcn_00017fd9:
 push ebp
 mov ebp, esp
 push edi
@@ -39722,7 +39714,7 @@ pop edi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_0001800d:  ; not directly referenced
+fcn_0001800d:
 push ebp
 mov ebp, esp
 push esi
@@ -39743,7 +39735,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f2b6  ; jmp 0x1f2b6
 
-fcn_0001803d:  ; not directly referenced
+fcn_0001803d:
 push ebp
 mov ebp, esp
 push edi
@@ -39777,7 +39769,7 @@ pop edi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_00018087:  ; not directly referenced
+fcn_00018087:
 push ebp
 mov ebp, esp
 push edi
@@ -39811,7 +39803,7 @@ pop edi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_000180d1:  ; not directly referenced
+fcn_000180d1:
 push ebp
 mov ebp, esp
 push edi
@@ -39845,7 +39837,7 @@ pop edi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_0001811b:  ; not directly referenced
+fcn_0001811b:
 push ebp
 mov ebp, esp
 push edi
@@ -39885,7 +39877,7 @@ pop edi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_00018176:  ; not directly referenced
+fcn_00018176:
 push ebp
 mov ebp, esp
 push esi
@@ -39906,7 +39898,7 @@ pop esi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_000181a3:  ; not directly referenced
+fcn_000181a3:
 push ebp
 mov ebp, esp
 push esi
@@ -39927,7 +39919,7 @@ pop esi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_000181d0:  ; not directly referenced
+fcn_000181d0:
 push ebp
 mov ebp, esp
 push edi
@@ -39952,7 +39944,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_00018204:  ; not directly referenced
+fcn_00018204:
 push ebp
 mov ebp, esp
 push esi
@@ -39973,7 +39965,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f53c  ; jmp 0x1f53c
 
-fcn_00018234:  ; not directly referenced
+fcn_00018234:
 push ebp
 mov ebp, esp
 push edi
@@ -40006,7 +39998,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_0001827c:  ; not directly referenced
+fcn_0001827c:
 push ebp
 mov ebp, esp
 push edi
@@ -40039,7 +40031,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_000182c4:  ; not directly referenced
+fcn_000182c4:
 push ebp
 mov ebp, esp
 push edi
@@ -40072,7 +40064,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_0001830c:  ; not directly referenced
+fcn_0001830c:
 push ebp
 mov ebp, esp
 push edi
@@ -40150,7 +40142,7 @@ pop esi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_000183b7:  ; not directly referenced
+fcn_000183b7:
 push ebp
 mov ebp, esp
 push edi
@@ -40174,7 +40166,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_000183e8:  ; not directly referenced
+fcn_000183e8:
 push ebp
 mov ebp, esp
 push esi
@@ -40194,7 +40186,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f7b4  ; jmp 0x1f7b4
 
-fcn_00018415:  ; not directly referenced
+fcn_00018415:
 push ebp
 mov ebp, esp
 push edi
@@ -40224,7 +40216,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_00018454:  ; not directly referenced
+fcn_00018454:
 push ebp
 mov ebp, esp
 push edi
@@ -40254,7 +40246,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_00018493:  ; not directly referenced
+fcn_00018493:
 push ebp
 mov ebp, esp
 push edi
@@ -40284,7 +40276,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_000184d2:  ; not directly referenced
+fcn_000184d2:
 push ebp
 mov ebp, esp
 push edi
@@ -40318,7 +40310,7 @@ pop edi
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_0001851d:  ; not directly referenced
+fcn_0001851d:
 push ebp
 mov ebp, esp
 push edi
@@ -40343,7 +40335,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_00018551:  ; not directly referenced
+fcn_00018551:
 push ebp
 mov ebp, esp
 push edi
@@ -40368,7 +40360,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_00018585:  ; not directly referenced
+fcn_00018585:
 push ebp
 mov ebp, esp
 push edi
@@ -40399,7 +40391,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_000185cb:  ; not directly referenced
+fcn_000185cb:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -40413,7 +40405,7 @@ call fcn_0001fa1d  ; call 0x1fa1d
 leave
 ret
 
-fcn_000185e8:  ; not directly referenced
+fcn_000185e8:
 push ebp
 mov ebp, esp
 push edi
@@ -40450,7 +40442,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_00018636:  ; not directly referenced
+fcn_00018636:
 push ebp
 mov ebp, esp
 push edi
@@ -40487,7 +40479,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_00018684:  ; not directly referenced
+fcn_00018684:
 push ebp
 mov ebp, esp
 push edi
@@ -40524,7 +40516,7 @@ pop edi
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_000186d2:  ; not directly referenced
+fcn_000186d2:
 push ebp
 mov ebp, esp
 push edi
@@ -40632,7 +40624,7 @@ pop edi
 pop ebp
 jmp near fcn_00017da5  ; jmp 0x17da5
 
-fcn_000187be:  ; not directly referenced
+fcn_000187be:
 push ebp
 mov ebp, esp
 push esi
@@ -40653,7 +40645,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f2b6  ; jmp 0x1f2b6
 
-fcn_000187ee:  ; not directly referenced
+fcn_000187ee:
 push ebp
 mov ebp, esp
 push edi
@@ -40687,7 +40679,7 @@ pop edi
 pop ebp
 jmp near fcn_00017da5  ; jmp 0x17da5
 
-fcn_00018838:  ; not directly referenced
+fcn_00018838:
 push ebp
 mov ebp, esp
 push edi
@@ -40721,7 +40713,7 @@ pop edi
 pop ebp
 jmp near fcn_00017da5  ; jmp 0x17da5
 
-fcn_00018882:  ; not directly referenced
+fcn_00018882:
 push ebp
 mov ebp, esp
 push edi
@@ -40755,7 +40747,7 @@ pop edi
 pop ebp
 jmp near fcn_00017da5  ; jmp 0x17da5
 
-fcn_000188cc:  ; not directly referenced
+fcn_000188cc:
 push ebp
 mov ebp, esp
 push edi
@@ -40862,7 +40854,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_000189b5:  ; not directly referenced
+fcn_000189b5:
 push ebp
 mov ebp, esp
 push esi
@@ -40883,7 +40875,7 @@ pop esi
 pop ebp
 jmp near fcn_0001f53c  ; jmp 0x1f53c
 
-fcn_000189e5:  ; not directly referenced
+fcn_000189e5:
 push ebp
 mov ebp, esp
 push edi
@@ -40916,7 +40908,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_00018a2d:  ; not directly referenced
+fcn_00018a2d:
 push ebp
 mov ebp, esp
 push edi
@@ -40949,7 +40941,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_00018a75:  ; not directly referenced
+fcn_00018a75:
 push ebp
 mov ebp, esp
 push edi
@@ -40982,7 +40974,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_00018abd:  ; not directly referenced
+fcn_00018abd:
 push ebp
 mov ebp, esp
 push edi
@@ -41084,7 +41076,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_00018b99:  ; not directly referenced
+fcn_00018b99:
 push ebp
 mov ebp, esp
 push esi
@@ -41134,7 +41126,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_00018c05:  ; not directly referenced
+fcn_00018c05:
 push ebp
 mov ebp, esp
 push edi
@@ -41164,7 +41156,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_00018c44:  ; not directly referenced
+fcn_00018c44:
 push ebp
 mov ebp, esp
 push edi
@@ -41194,7 +41186,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_00018c83:  ; not directly referenced
+fcn_00018c83:
 push ebp
 mov ebp, esp
 push edi
@@ -41228,7 +41220,7 @@ pop edi
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_00018cce:  ; not directly referenced
+fcn_00018cce:
 push ebp
 mov ebp, esp
 push edi
@@ -41278,7 +41270,7 @@ pop edi
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_00018d36:  ; not directly referenced
+fcn_00018d36:
 push ebp
 mov ebp, esp
 push edi
@@ -41309,7 +41301,7 @@ pop edi
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_00018d7c:  ; not directly referenced
+fcn_00018d7c:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -41323,7 +41315,7 @@ call fcn_0001fa1d  ; call 0x1fa1d
 leave
 ret
 
-fcn_00018d99:  ; not directly referenced
+fcn_00018d99:
 push ebp
 mov ebp, esp
 push edi
@@ -41360,7 +41352,7 @@ pop edi
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_00018de7:  ; not directly referenced
+fcn_00018de7:
 push ebp
 mov ebp, esp
 push edi
@@ -41397,7 +41389,7 @@ pop edi
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_00018e35:  ; not directly referenced
+fcn_00018e35:
 push ebp
 mov ebp, esp
 push edi
@@ -41434,7 +41426,7 @@ pop edi
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_00018e83:  ; not directly referenced
+fcn_00018e83:
 push ebp
 mov ebp, esp
 push edi
@@ -41682,7 +41674,7 @@ pop esi
 pop ebp
 ret
 
-fcn_000190a0:  ; not directly referenced
+fcn_000190a0:
 push ebp
 mov ebp, esp
 push ebx
@@ -41748,7 +41740,7 @@ call fcn_000190be  ; call 0x190be
 leave
 ret
 
-fcn_00019115:  ; not directly referenced
+fcn_00019115:
 push ebp
 mov ebp, esp
 push ebx
@@ -41773,7 +41765,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_00019154:  ; not directly referenced
+loc_00019154:
 push eax
 push ref_000206f4  ; push 0x206f4
 push 0xd8
@@ -41781,13 +41773,13 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001916c:  ; not directly referenced
+loc_0001916c:
 mov eax, dword [ebp - 0xc]
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00019174:  ; not directly referenced
+fcn_00019174:
 push ebp
 mov ebp, esp
 sub esp, 0x1c
@@ -41803,7 +41795,7 @@ test eax, eax
 jns short loc_0001919b  ; jns 0x1919b
 mov dword [ebp - 0xc], 0
 
-loc_0001919b:  ; not directly referenced
+loc_0001919b:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_000191c2  ; je 0x191c2
@@ -41816,12 +41808,12 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000191c2:  ; not directly referenced
+loc_000191c2:
 mov eax, dword [ebp - 0xc]
 leave
 ret
 
-fcn_000191c7:  ; not directly referenced
+fcn_000191c7:
 push ebp
 mov ebp, esp
 push edi
@@ -41846,7 +41838,7 @@ jne short loc_00019207  ; jne 0x19207
 test ebx, 0xfff
 je short loc_0001921f  ; je 0x1921f
 
-loc_00019207:  ; not directly referenced
+loc_00019207:
 push eax
 push ref_00025ccb  ; push 0x25ccb
 push 0x11a
@@ -41854,7 +41846,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001921f:  ; not directly referenced
+loc_0001921f:
 push edi
 push edi
 push 0x48
@@ -41895,7 +41887,7 @@ mov edx, dword [ebp - 0x1c]
 mov dword [edi + 0x40], eax
 mov dword [edi + 0x44], edx
 
-loc_00019286:  ; not directly referenced
+loc_00019286:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -41903,7 +41895,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001928e:  ; not directly referenced
+fcn_0001928e:
 push ebp
 mov ebp, esp
 push edi
@@ -41932,14 +41924,14 @@ mov dword [eax + 0x28], esi
 mov dword [eax + 0x2c], edi
 mov dword [eax + 0x1c], edx
 
-loc_000192d6:  ; not directly referenced
+loc_000192d6:
 lea esp, [ebp - 8]
 pop esi
 pop edi
 pop ebp
 ret
 
-fcn_000192dd:  ; not directly referenced
+fcn_000192dd:
 push ebp
 mov ebp, esp
 push esi
@@ -41958,7 +41950,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001930d:  ; not directly referenced
+loc_0001930d:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00019336  ; je 0x19336
@@ -41971,7 +41963,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019336:  ; not directly referenced
+loc_00019336:
 add ebx, 0x18
 push edx
 movzx ebx, bx
@@ -41993,17 +41985,17 @@ lea eax, [ebx + 0x18]
 add esp, 0x10
 jmp short loc_00019365  ; jmp 0x19365
 
-loc_00019363:  ; not directly referenced
+loc_00019363:
 xor eax, eax
 
-loc_00019365:  ; not directly referenced
+loc_00019365:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0001936c:  ; not directly referenced
+fcn_0001936c:
 push ebp
 mov ebp, esp
 push edi
@@ -42027,7 +42019,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000193a7:  ; not directly referenced
+loc_000193a7:
 push eax
 push eax
 push ebx
@@ -42046,7 +42038,7 @@ pop edi
 pop ebp
 jmp near fcn_0001713e  ; jmp 0x1713e
 
-loc_000193cc:  ; not directly referenced
+loc_000193cc:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -42055,7 +42047,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000193d6:  ; not directly referenced
+fcn_000193d6:
 push ebp
 mov ebp, esp
 push edi
@@ -42080,14 +42072,14 @@ mov dword [eax + 0xc], edi
 mov dword [eax + 0x10], edx
 mov dword [eax + 0x14], ecx
 
-loc_00019412:  ; not directly referenced
+loc_00019412:
 lea esp, [ebp - 8]
 pop esi
 pop edi
 pop ebp
 ret
 
-fcn_00019419:  ; not directly referenced
+fcn_00019419:
 push ebp
 mov ebp, esp
 push edi
@@ -42136,7 +42128,7 @@ pop edi
 pop ebp
 jmp near fcn_00016ea7  ; jmp 0x16ea7
 
-loc_0001948e:  ; not directly referenced
+loc_0001948e:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -42144,7 +42136,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00019496:  ; not directly referenced
+fcn_00019496:
 push ebp
 mov ebp, esp
 push edi
@@ -42169,14 +42161,14 @@ mov dword [eax + 0xc], edi
 mov dword [eax + 0x10], edx
 mov dword [eax + 0x14], ecx
 
-loc_000194d2:  ; not directly referenced
+loc_000194d2:
 lea esp, [ebp - 8]
 pop esi
 pop edi
 pop ebp
 ret
 
-fcn_000194d9:  ; not directly referenced
+fcn_000194d9:
 push ebp
 mov ebp, esp
 push esi
@@ -42203,14 +42195,14 @@ pop esi
 pop ebp
 jmp near fcn_00016fff  ; jmp 0x16fff
 
-loc_00019516:  ; not directly referenced
+loc_00019516:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
 pop ebp
 ret
 
-fcn_0001951d:  ; not directly referenced
+fcn_0001951d:
 push ebp
 mov ebp, esp
 push edi
@@ -42230,7 +42222,7 @@ jne short loc_0001954e  ; jne 0x1954e
 test ebx, 0xfff
 je short loc_00019566  ; je 0x19566
 
-loc_0001954e:  ; not directly referenced
+loc_0001954e:
 push ecx
 push ref_00025d9b  ; push 0x25d9b
 push 0x251
@@ -42238,7 +42230,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019566:  ; not directly referenced
+loc_00019566:
 push edx
 push edx
 push 0x30
@@ -42273,7 +42265,7 @@ pop edi
 pop ebp
 jmp near fcn_00016fff  ; jmp 0x16fff
 
-loc_000195c2:  ; not directly referenced
+loc_000195c2:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -42281,7 +42273,7 @@ pop edi
 pop ebp
 ret
 
-fcn_000195ca:  ; not directly referenced
+fcn_000195ca:
 push ebp
 mov ebp, esp
 push edi
@@ -42303,7 +42295,7 @@ jne short loc_00019601  ; jne 0x19601
 test ebx, 0xfff
 je short loc_00019619  ; je 0x19619
 
-loc_00019601:  ; not directly referenced
+loc_00019601:
 push ecx
 push ref_00025d9b  ; push 0x25d9b
 push 0x27c
@@ -42311,7 +42303,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019619:  ; not directly referenced
+loc_00019619:
 push edx
 push edx
 push 0x30
@@ -42347,7 +42339,7 @@ pop edi
 pop ebp
 jmp near fcn_00016fff  ; jmp 0x16fff
 
-loc_00019674:  ; not directly referenced
+loc_00019674:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -42355,7 +42347,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001967c:  ; not directly referenced
+fcn_0001967c:
 push ebp
 mov ebp, esp
 push edi
@@ -42377,7 +42369,7 @@ jne short loc_000196b3  ; jne 0x196b3
 test ebx, 0xfff
 je short loc_000196cb  ; je 0x196cb
 
-loc_000196b3:  ; not directly referenced
+loc_000196b3:
 push ecx
 push ref_00025d9b  ; push 0x25d9b
 push 0x2a7
@@ -42385,7 +42377,7 @@ push ref_00025c52  ; push 0x25c52
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_000196cb:  ; not directly referenced
+loc_000196cb:
 push edx
 push edx
 push 0x30
@@ -42421,7 +42413,7 @@ pop edi
 pop ebp
 jmp near fcn_00016fff  ; jmp 0x16fff
 
-loc_00019723:  ; not directly referenced
+loc_00019723:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -42443,7 +42435,7 @@ call dword [edx + 0x18]  ; ucall
 leave
 ret
 
-fcn_00019743:  ; not directly referenced
+fcn_00019743:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -42501,7 +42493,7 @@ call dword [edx + 0x28]  ; ucall
 leave
 ret
 
-fcn_000197af:  ; not directly referenced
+fcn_000197af:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -42551,7 +42543,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00019807:  ; not directly referenced
+fcn_00019807:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -42565,7 +42557,7 @@ call dword [edx + 0x38]  ; ucall
 leave
 ret
 
-fcn_00019821:  ; not directly referenced
+fcn_00019821:
 push ebp
 mov ebp, esp
 push ebx
@@ -42583,7 +42575,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00019843:  ; not directly referenced
+fcn_00019843:
 push ebp
 mov ebp, esp
 push ebx
@@ -42601,7 +42593,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00019865:  ; not directly referenced
+fcn_00019865:
 push ebp
 mov ebp, esp
 push edi
@@ -42628,7 +42620,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001989c:  ; not directly referenced
+fcn_0001989c:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -42656,7 +42648,7 @@ call dword [edx + 0x4c]  ; ucall
 leave
 ret
 
-fcn_000198d2:  ; not directly referenced
+fcn_000198d2:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -42940,7 +42932,7 @@ mov eax, dword [ref_000312f0]  ; mov eax, dword [0x312f0]
 leave
 ret
 
-fcn_00019b65:  ; not directly referenced
+fcn_00019b65:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0xc]
@@ -42949,7 +42941,7 @@ mov dword [ref_000312f0], eax  ; mov dword [0x312f0], eax
 xor eax, eax
 ret
 
-fcn_00019b74:  ; not directly referenced
+fcn_00019b74:
 push ebp
 mov ebp, esp
 sub esp, 0x18
@@ -42957,11 +42949,11 @@ mov eax, dword [ebp + 0xc]
 test eax, eax
 jne short loc_00019b85  ; jne 0x19b85
 
-loc_00019b81:  ; not directly referenced
+loc_00019b81:
 xor eax, eax
 jmp short loc_00019b9d  ; jmp 0x19b9d
 
-loc_00019b85:  ; not directly referenced
+loc_00019b85:
 push edx
 lea edx, [ebp - 0x10]
 push edx
@@ -42973,11 +42965,11 @@ test eax, eax
 js short loc_00019b81  ; js 0x19b81
 mov eax, dword [ebp - 0x10]
 
-loc_00019b9d:  ; not directly referenced
+loc_00019b9d:
 leave
 ret
 
-fcn_00019b9f:  ; not directly referenced
+fcn_00019b9f:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -42987,7 +42979,7 @@ call fcn_00019b74  ; call 0x19b74
 leave
 ret
 
-fcn_00019bb1:  ; not directly referenced
+fcn_00019bb1:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -42997,7 +42989,7 @@ call fcn_00019b74  ; call 0x19b74
 leave
 ret
 
-fcn_00019bc3:  ; not directly referenced
+fcn_00019bc3:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -43007,7 +42999,7 @@ call fcn_00019b74  ; call 0x19b74
 leave
 ret
 
-fcn_00019bd5:  ; not directly referenced
+fcn_00019bd5:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -43023,11 +43015,11 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019c02:  ; not directly referenced
+loc_00019c02:
 leave
 ret
 
-fcn_00019c04:  ; not directly referenced
+fcn_00019c04:
 push ebp
 mov ebp, esp
 push esi
@@ -43047,7 +43039,7 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019c37:  ; not directly referenced
+loc_00019c37:
 test esi, esi
 je short loc_00019ca6  ; je 0x19ca6
 call fcn_00015480  ; call 0x15480
@@ -43069,7 +43061,7 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019c74:  ; not directly referenced
+loc_00019c74:
 push eax
 push eax
 mov eax, ebx
@@ -43091,10 +43083,10 @@ add ebx, eax
 and edx, ebx
 jmp short loc_00019ca8  ; jmp 0x19ca8
 
-loc_00019ca6:  ; not directly referenced
+loc_00019ca6:
 xor edx, edx
 
-loc_00019ca8:  ; not directly referenced
+loc_00019ca8:
 lea esp, [ebp - 8]
 mov eax, edx
 pop ebx
@@ -43102,7 +43094,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00019cb1:  ; not directly referenced
+fcn_00019cb1:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -43113,7 +43105,7 @@ call fcn_00019c04  ; call 0x19c04
 leave
 ret
 
-fcn_00019cc6:  ; not directly referenced
+fcn_00019cc6:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -43124,7 +43116,7 @@ call fcn_00019c04  ; call 0x19c04
 leave
 ret
 
-fcn_00019cdb:  ; not directly referenced
+fcn_00019cdb:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -43135,7 +43127,7 @@ call fcn_00019c04  ; call 0x19c04
 leave
 ret
 
-fcn_00019cf0:  ; not directly referenced
+fcn_00019cf0:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -43151,11 +43143,11 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019d1d:  ; not directly referenced
+loc_00019d1d:
 leave
 ret
 
-fcn_00019d1f:  ; not directly referenced
+fcn_00019d1f:
 push ebp
 xor edx, edx
 mov ebp, esp
@@ -43186,7 +43178,7 @@ mov eax, dword [ebp - 0xc]
 leave
 ret
 
-fcn_00019d62:  ; not directly referenced
+fcn_00019d62:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -43196,7 +43188,7 @@ call fcn_00019d1f  ; call 0x19d1f
 leave
 ret
 
-fcn_00019d74:  ; not directly referenced
+fcn_00019d74:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -43206,7 +43198,7 @@ call fcn_00019d1f  ; call 0x19d1f
 leave
 ret
 
-fcn_00019d86:  ; not directly referenced
+fcn_00019d86:
 push ebp
 mov ebp, esp
 push ebx
@@ -43224,7 +43216,7 @@ mov dword [ebp + 8], eax
 leave
 jmp near fcn_00016fff  ; jmp 0x16fff
 
-loc_00019daf:  ; not directly referenced
+loc_00019daf:
 xor eax, eax
 mov ebx, dword [ebp - 4]
 leave
@@ -43253,7 +43245,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00019dde:  ; not directly referenced
+fcn_00019dde:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -43263,7 +43255,7 @@ call fcn_00019d86  ; call 0x19d86
 leave
 ret
 
-fcn_00019df0:  ; not directly referenced
+fcn_00019df0:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -43273,7 +43265,7 @@ call fcn_00019d86  ; call 0x19d86
 leave
 ret
 
-fcn_00019e02:  ; not directly referenced
+fcn_00019e02:
 push ebp
 mov ebp, esp
 push edi
@@ -43295,7 +43287,7 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019e39:  ; not directly referenced
+loc_00019e39:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_00019e62  ; je 0x19e62
@@ -43310,7 +43302,7 @@ push ref_00025f54  ; push 0x25f54
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019e62:  ; not directly referenced
+loc_00019e62:
 push eax
 push eax
 push esi
@@ -43329,7 +43321,7 @@ pop edi
 pop ebp
 jmp near fcn_0001713e  ; jmp 0x1713e
 
-loc_00019e87:  ; not directly referenced
+loc_00019e87:
 lea esp, [ebp - 0xc]
 xor eax, eax
 pop ebx
@@ -43393,7 +43385,7 @@ pop esi
 pop ebp
 ret
 
-fcn_00019f0d:  ; not directly referenced
+fcn_00019f0d:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -43404,7 +43396,7 @@ call fcn_00019e02  ; call 0x19e02
 leave
 ret
 
-fcn_00019f22:  ; not directly referenced
+fcn_00019f22:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -43415,7 +43407,7 @@ call fcn_00019e02  ; call 0x19e02
 leave
 ret
 
-fcn_00019f37:  ; not directly referenced
+fcn_00019f37:
 push ebp
 mov ebp, esp
 push edi
@@ -43442,7 +43434,7 @@ push edi
 call fcn_0001713e  ; call 0x1713e
 add esp, 0x10
 
-loc_00019f6f:  ; not directly referenced
+loc_00019f6f:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -43451,7 +43443,7 @@ pop edi
 pop ebp
 ret
 
-fcn_00019f79:  ; not directly referenced
+fcn_00019f79:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -43463,7 +43455,7 @@ call fcn_00019f37  ; call 0x19f37
 leave
 ret
 
-fcn_00019f91:  ; not directly referenced
+fcn_00019f91:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -43475,7 +43467,7 @@ call fcn_00019f37  ; call 0x19f37
 leave
 ret
 
-fcn_00019fa9:  ; not directly referenced
+fcn_00019fa9:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -43487,13 +43479,13 @@ call fcn_00019f37  ; call 0x19f37
 leave
 ret
 
-fcn_00019fc1:  ; not directly referenced
+fcn_00019fc1:
 push ebp
 mov ebp, esp
 pop ebp
 ret
 
-fcn_00019fc6:  ; not directly referenced
+fcn_00019fc6:
 push ebp
 mov ebp, esp
 push ebx
@@ -43511,7 +43503,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_00019ff4:  ; not directly referenced
+loc_00019ff4:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a019  ; je 0x1a019
@@ -43525,7 +43517,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a019:  ; not directly referenced
+loc_0001a019:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a03f  ; je 0x1a03f
@@ -43538,7 +43530,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a03f:  ; not directly referenced
+loc_0001a03f:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a065  ; je 0x1a065
@@ -43551,7 +43543,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a065:  ; not directly referenced
+loc_0001a065:
 sub esp, 0xc
 push dword [ebp + 0xc]
 push 0
@@ -43564,7 +43556,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a07f:  ; not directly referenced
+fcn_0001a07f:
 push ebp
 mov ebp, esp
 push ebx
@@ -43582,7 +43574,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a0ad:  ; not directly referenced
+loc_0001a0ad:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a0d2  ; je 0x1a0d2
@@ -43596,7 +43588,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a0d2:  ; not directly referenced
+loc_0001a0d2:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a0f8  ; je 0x1a0f8
@@ -43609,7 +43601,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a0f8:  ; not directly referenced
+loc_0001a0f8:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a11e  ; je 0x1a11e
@@ -43622,7 +43614,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a11e:  ; not directly referenced
+loc_0001a11e:
 sub esp, 0xc
 push dword [ebp + 0xc]
 push 0
@@ -43635,7 +43627,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a138:  ; not directly referenced
+fcn_0001a138:
 push ebp
 mov ebp, esp
 push ebx
@@ -43654,7 +43646,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a16a:  ; not directly referenced
+loc_0001a16a:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a193  ; je 0x1a193
@@ -43667,7 +43659,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a193:  ; not directly referenced
+loc_0001a193:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a1bc  ; je 0x1a1bc
@@ -43680,7 +43672,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a1bc:  ; not directly referenced
+loc_0001a1bc:
 sub esp, 0xc
 push dword [ebp + 0xc]
 lea eax, [ebp - 9]
@@ -43694,7 +43686,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a1d8:  ; not directly referenced
+fcn_0001a1d8:
 push ebp
 mov ebp, esp
 push esi
@@ -43715,7 +43707,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a20e:  ; not directly referenced
+loc_0001a20e:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a237  ; je 0x1a237
@@ -43728,7 +43720,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a237:  ; not directly referenced
+loc_0001a237:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a260  ; je 0x1a260
@@ -43741,7 +43733,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a260:  ; not directly referenced
+loc_0001a260:
 sub esp, 0xc
 mov eax, esi
 push dword [ebp + 0x10]
@@ -43759,7 +43751,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001a282:  ; not directly referenced
+fcn_0001a282:
 push ebp
 mov ebp, esp
 push ebx
@@ -43777,7 +43769,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a2b5:  ; not directly referenced
+loc_0001a2b5:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a2de  ; je 0x1a2de
@@ -43790,7 +43782,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a2de:  ; not directly referenced
+loc_0001a2de:
 sub esp, 0xc
 push dword [ebp + 0xc]
 lea eax, [ebp - 9]
@@ -43804,7 +43796,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a2fa:  ; not directly referenced
+fcn_0001a2fa:
 push ebp
 mov ebp, esp
 push esi
@@ -43824,7 +43816,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a331:  ; not directly referenced
+loc_0001a331:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a35a  ; je 0x1a35a
@@ -43837,7 +43829,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a35a:  ; not directly referenced
+loc_0001a35a:
 sub esp, 0xc
 mov eax, esi
 push dword [ebp + 0x10]
@@ -43855,7 +43847,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001a37c:  ; not directly referenced
+fcn_0001a37c:
 push ebp
 mov ebp, esp
 push ebx
@@ -43873,7 +43865,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a3af:  ; not directly referenced
+loc_0001a3af:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a3d8  ; je 0x1a3d8
@@ -43886,7 +43878,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a3d8:  ; not directly referenced
+loc_0001a3d8:
 sub esp, 0xc
 push dword [ebp + 0xc]
 lea eax, [ebp - 0xa]
@@ -43900,7 +43892,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a3f5:  ; not directly referenced
+fcn_0001a3f5:
 push ebp
 mov ebp, esp
 push esi
@@ -43920,7 +43912,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a42c:  ; not directly referenced
+loc_0001a42c:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a455  ; je 0x1a455
@@ -43933,7 +43925,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a455:  ; not directly referenced
+loc_0001a455:
 sub esp, 0xc
 push dword [ebp + 0x10]
 lea eax, [ebp - 0xa]
@@ -43950,7 +43942,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001a476:  ; not directly referenced
+fcn_0001a476:
 push ebp
 mov ebp, esp
 push ebx
@@ -43970,7 +43962,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a4b0:  ; not directly referenced
+loc_0001a4b0:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a4d9  ; je 0x1a4d9
@@ -43983,7 +43975,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a4d9:  ; not directly referenced
+loc_0001a4d9:
 sub esp, 0xc
 push dword [ebp + 0x10]
 lea eax, [ebp - 0xc]
@@ -43997,7 +43989,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a4f5:  ; not directly referenced
+fcn_0001a4f5:
 push ebp
 mov ebp, esp
 push esi
@@ -44016,7 +44008,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a525:  ; not directly referenced
+loc_0001a525:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a54e  ; je 0x1a54e
@@ -44029,7 +44021,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a54e:  ; not directly referenced
+loc_0001a54e:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a577  ; je 0x1a577
@@ -44042,7 +44034,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a577:  ; not directly referenced
+loc_0001a577:
 sub esp, 0xc
 push dword [ebp + 0x10]
 push esi
@@ -44056,7 +44048,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001a58f:  ; not directly referenced
+fcn_0001a58f:
 push ebp
 mov ebp, esp
 push esi
@@ -44075,7 +44067,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a5bf:  ; not directly referenced
+loc_0001a5bf:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a5e8  ; je 0x1a5e8
@@ -44088,7 +44080,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a5e8:  ; not directly referenced
+loc_0001a5e8:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a616  ; je 0x1a616
@@ -44104,7 +44096,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a616:  ; not directly referenced
+loc_0001a616:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a63f  ; je 0x1a63f
@@ -44117,7 +44109,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a63f:  ; not directly referenced
+loc_0001a63f:
 sub esp, 0xc
 mov eax, ebx
 push dword [ebp + 0x10]
@@ -44134,7 +44126,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001a65e:  ; not directly referenced
+fcn_0001a65e:
 push ebp
 mov ebp, esp
 push edi
@@ -44155,7 +44147,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a692:  ; not directly referenced
+loc_0001a692:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a6b9  ; je 0x1a6b9
@@ -44168,7 +44160,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a6b9:  ; not directly referenced
+loc_0001a6b9:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a6e2  ; je 0x1a6e2
@@ -44181,7 +44173,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a6e2:  ; not directly referenced
+loc_0001a6e2:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a710  ; je 0x1a710
@@ -44197,7 +44189,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a710:  ; not directly referenced
+loc_0001a710:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a739  ; je 0x1a739
@@ -44210,7 +44202,7 @@ push ref_0002607b  ; push 0x2607b
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a739:  ; not directly referenced
+loc_0001a739:
 mov esi, ebx
 shr esi, 0x10
 push eax
@@ -44233,7 +44225,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001a762:  ; not directly referenced
+fcn_0001a762:
 push ebp
 mov ebp, esp
 push ebx
@@ -44261,7 +44253,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001a7aa:  ; not directly referenced
+loc_0001a7aa:
 push edx
 push ref_000206f4  ; push 0x206f4
 push 0x24
@@ -44269,7 +44261,7 @@ push ref_000261b1  ; push 0x261b1
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a7bf:  ; not directly referenced
+loc_0001a7bf:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001a7e3  ; je 0x1a7e3
@@ -44282,13 +44274,13 @@ push ref_000261b1  ; push 0x261b1
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001a7e3:  ; not directly referenced
+loc_0001a7e3:
 mov eax, dword [ebp - 0xc]
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001a7eb:  ; not directly referenced
+fcn_0001a7eb:
 push ebp
 mov ebp, esp
 push esi
@@ -44318,7 +44310,7 @@ test esi, esi
 je short loc_0001a827  ; je 0x1a827
 mov dword [esi], eax
 
-loc_0001a827:  ; not directly referenced
+loc_0001a827:
 mov eax, dword [ebp + 0x10]
 lea esp, [ebp - 8]
 pop ebx
@@ -44338,7 +44330,7 @@ mov eax, dword [ebp + 8]
 leave
 ret
 
-fcn_0001a84b:  ; not directly referenced
+fcn_0001a84b:
 push ebp
 mov ebp, esp
 sub esp, 0x10
@@ -44350,21 +44342,21 @@ mov eax, dword [ebp + 8]
 leave
 ret
 
-fcn_0001a865:  ; not directly referenced
+fcn_0001a865:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_0001a86c:  ; not directly referenced
+fcn_0001a86c:
 push ebp
 xor eax, eax
 mov ebp, esp
 pop ebp
 ret
 
-fcn_0001a873:  ; not directly referenced
+fcn_0001a873:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44372,7 +44364,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017d8b  ; jmp 0x17d8b
 
-fcn_0001a882:  ; not directly referenced
+fcn_0001a882:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44380,7 +44372,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017dc2  ; jmp 0x17dc2
 
-fcn_0001a891:  ; not directly referenced
+fcn_0001a891:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44388,7 +44380,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017e4e  ; jmp 0x17e4e
 
-fcn_0001a8a0:  ; not directly referenced
+fcn_0001a8a0:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44396,7 +44388,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017ed8  ; jmp 0x17ed8
 
-fcn_0001a8af:  ; not directly referenced
+fcn_0001a8af:
 push ebp
 mov ebp, esp
 movzx eax, byte [ebp + 0x18]
@@ -44406,7 +44398,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017da5  ; jmp 0x17da5
 
-fcn_0001a8c5:  ; not directly referenced
+fcn_0001a8c5:
 push ebp
 mov ebp, esp
 movzx eax, word [ebp + 0x18]
@@ -44416,7 +44408,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017e04  ; jmp 0x17e04
 
-fcn_0001a8db:  ; not directly referenced
+fcn_0001a8db:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x18]
@@ -44426,7 +44418,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017e8f  ; jmp 0x17e8f
 
-fcn_0001a8f0:  ; not directly referenced
+fcn_0001a8f0:
 push ebp
 mov ebp, esp
 mov ecx, dword [ebp + 0x10]
@@ -44438,7 +44430,7 @@ mov dword [ebp + 0x10], edx
 pop ebp
 jmp near fcn_00017f28  ; jmp 0x17f28
 
-fcn_0001a90b:  ; not directly referenced
+fcn_0001a90b:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44446,7 +44438,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018ee1  ; jmp 0x18ee1
 
-fcn_0001a91a:  ; not directly referenced
+fcn_0001a91a:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44454,7 +44446,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018ef6  ; jmp 0x18ef6
 
-fcn_0001a929:  ; not directly referenced
+fcn_0001a929:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44462,7 +44454,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018f64  ; jmp 0x18f64
 
-fcn_0001a938:  ; not directly referenced
+fcn_0001a938:
 push ebp
 mov ebp, esp
 movzx eax, byte [ebp + 0x18]
@@ -44472,7 +44464,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_0001a94e:  ; not directly referenced
+fcn_0001a94e:
 push ebp
 mov ebp, esp
 movzx eax, word [ebp + 0x18]
@@ -44482,7 +44474,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018f27  ; jmp 0x18f27
 
-fcn_0001a964:  ; not directly referenced
+fcn_0001a964:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x18]
@@ -44492,7 +44484,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00018f97  ; jmp 0x18f97
 
-fcn_0001a979:  ; not directly referenced
+fcn_0001a979:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0x10]
@@ -44500,7 +44492,7 @@ mov dword [ebp + 8], eax
 pop ebp
 jmp near fcn_00017d37  ; jmp 0x17d37
 
-fcn_0001a988:  ; not directly referenced
+fcn_0001a988:
 push ebp
 mov ebp, esp
 mov ecx, dword [ebp + 0x10]
@@ -44512,7 +44504,7 @@ mov dword [ebp + 0x10], edx
 pop ebp
 jmp near fcn_00017d61  ; jmp 0x17d61
 
-fcn_0001a9a3:  ; not directly referenced
+fcn_0001a9a3:
 push ebp
 mov ebp, esp
 push edi
@@ -44527,7 +44519,7 @@ mov dword [ebp - 0x1c], eax
 mov edi, dword [ebp + 0x14]
 mov eax, 0x80000002
 mov ebx, dword [ebp + 0x18]
-je loc_0001aa50  ; je 0x1aa50
+je near loc_0001aa50  ; je 0x1aa50
 cmp esi, 0xb
 ja short loc_0001aa50  ; ja 0x1aa50
 lea edx, [esi - 4]
@@ -44540,7 +44532,7 @@ jne short loc_0001a9ec  ; jne 0x1a9ec
 test cl, cl
 je short loc_0001aa50  ; je 0x1aa50
 
-loc_0001a9ec:  ; not directly referenced
+loc_0001a9ec:
 mov eax, 0xffff
 xor edx, edx
 test cl, cl
@@ -44548,22 +44540,22 @@ je short loc_0001a9fc  ; je 0x1a9fc
 or eax, 0xffffffff
 xor edx, edx
 
-loc_0001a9fc:  ; not directly referenced
+loc_0001a9fc:
 test ebx, ebx
 jne short loc_0001aa12  ; jne 0x1aa12
 cmp edi, edx
 jb short loc_0001aa46  ; jb 0x1aa46
 ja short loc_0001aa0b  ; ja 0x1aa0b
 
-loc_0001aa06:  ; not directly referenced
+loc_0001aa06:
 cmp dword [ebp - 0x1c], eax
 jbe short loc_0001aa46  ; jbe 0x1aa46
 
-loc_0001aa0b:  ; not directly referenced
+loc_0001aa0b:
 mov eax, 0x80000003
 jmp short loc_0001aa50  ; jmp 0x1aa50
 
-loc_0001aa12:  ; not directly referenced
+loc_0001aa12:
 push ecx
 push esi
 push edx
@@ -44574,7 +44566,7 @@ add esp, 0x10
 cmp edx, 0
 jbe short loc_0001aa4a  ; jbe 0x1aa4a
 
-loc_0001aa26:  ; not directly referenced
+loc_0001aa26:
 push ecx
 mov ecx, ebx
 xor ebx, ebx
@@ -44591,16 +44583,16 @@ cmp edi, edx
 ja short loc_0001aa0b  ; ja 0x1aa0b
 jae short loc_0001aa06  ; jae 0x1aa06
 
-loc_0001aa46:  ; not directly referenced
+loc_0001aa46:
 xor eax, eax
 jmp short loc_0001aa50  ; jmp 0x1aa50
 
-loc_0001aa4a:  ; not directly referenced
+loc_0001aa4a:
 cmp eax, ecx
 jb short loc_0001aa0b  ; jb 0x1aa0b
 jmp short loc_0001aa26  ; jmp 0x1aa26
 
-loc_0001aa50:  ; not directly referenced
+loc_0001aa50:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -44608,7 +44600,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001aa58:  ; not directly referenced
+fcn_0001aa58:
 push ebp
 mov ebp, esp
 push edi
@@ -44629,7 +44621,7 @@ push 1
 call fcn_0001a9a3  ; call 0x1a9a3
 add esp, 0x20
 test eax, eax
-js loc_0001ab7d  ; js 0x1ab7d
+js near loc_0001ab7d  ; js 0x1ab7d
 mov edx, dword [ebp - 0x1c]
 mov dword [ebp - 0x24], 0
 mov al, byte [edx + ref_000295ec]  ; mov al, byte [edx + 0x295ec]
@@ -44644,9 +44636,9 @@ movzx eax, byte [edx + ref_000295f8]  ; movzx eax, byte [edx + 0x295f8]
 sete byte [ebp - 0x1d]
 mov dword [ebp - 0x28], eax
 
-loc_0001aabc:  ; not directly referenced
+loc_0001aabc:
 cmp dword [ebp + 0x1c], 0
-je loc_0001ab7b  ; je 0x1ab7b
+je near loc_0001ab7b  ; je 0x1ab7b
 cmp dword [ebp - 0x1c], 0
 jne short loc_0001aadc  ; jne 0x1aadc
 sub esp, 0xc
@@ -44655,7 +44647,7 @@ call fcn_00017d8b  ; call 0x17d8b
 mov byte [ebx], al
 jmp near loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001aadc:  ; not directly referenced
+loc_0001aadc:
 cmp dword [ebp - 0x1c], 1
 jne short loc_0001ab0d  ; jne 0x1ab0d
 cmp byte [ebp - 0x1d], 0
@@ -44666,7 +44658,7 @@ call fcn_00017dc2  ; call 0x17dc2
 mov word [ebx], ax
 jmp short loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001aaf6:  ; not directly referenced
+loc_0001aaf6:
 sub esp, 0xc
 push esi
 call fcn_00017dc2  ; call 0x17dc2
@@ -44678,7 +44670,7 @@ push ebx
 call fcn_000172cb  ; call 0x172cb
 jmp short loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001ab0d:  ; not directly referenced
+loc_0001ab0d:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001ab3a  ; jne 0x1ab3a
 cmp byte [ebp - 0x1d], 0
@@ -44689,7 +44681,7 @@ call fcn_00017e4e  ; call 0x17e4e
 mov dword [ebx], eax
 jmp short loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001ab26:  ; not directly referenced
+loc_0001ab26:
 sub esp, 0xc
 push esi
 call fcn_00017e4e  ; call 0x17e4e
@@ -44700,7 +44692,7 @@ push ebx
 call fcn_000173b2  ; call 0x173b2
 jmp short loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001ab3a:  ; not directly referenced
+loc_0001ab3a:
 cmp byte [ebp - 0x1d], 0
 je short loc_0001ab50  ; je 0x1ab50
 sub esp, 0xc
@@ -44710,7 +44702,7 @@ mov dword [ebx], eax
 mov dword [ebx + 4], edx
 jmp short loc_0001ab64  ; jmp 0x1ab64
 
-loc_0001ab50:  ; not directly referenced
+loc_0001ab50:
 sub esp, 0xc
 push esi
 call fcn_00017ed8  ; call 0x17ed8
@@ -44720,7 +44712,7 @@ push eax
 push ebx
 call fcn_00017424  ; call 0x17424
 
-loc_0001ab64:  ; not directly referenced
+loc_0001ab64:
 movzx eax, byte [ebp - 0x1e]
 add esp, 0x10
 add esi, dword [ebp - 0x28]
@@ -44729,10 +44721,10 @@ dec dword [ebp + 0x1c]
 add ebx, eax
 jmp near loc_0001aabc  ; jmp 0x1aabc
 
-loc_0001ab7b:  ; not directly referenced
+loc_0001ab7b:
 xor eax, eax
 
-loc_0001ab7d:  ; not directly referenced
+loc_0001ab7d:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -44740,7 +44732,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001ab85:  ; not directly referenced
+fcn_0001ab85:
 push ebp
 mov ebp, esp
 push edi
@@ -44761,7 +44753,7 @@ push 1
 call fcn_0001a9a3  ; call 0x1a9a3
 add esp, 0x20
 test eax, eax
-js loc_0001ac92  ; js 0x1ac92
+js near loc_0001ac92  ; js 0x1ac92
 mov edx, dword [ebp - 0x1c]
 mov dword [ebp - 0x24], 0
 mov al, byte [edx + ref_000295ec]  ; mov al, byte [edx + 0x295ec]
@@ -44776,9 +44768,9 @@ movzx eax, byte [edx + ref_000295f8]  ; movzx eax, byte [edx + 0x295f8]
 sete byte [ebp - 0x1d]
 mov dword [ebp - 0x28], eax
 
-loc_0001abe9:  ; not directly referenced
+loc_0001abe9:
 cmp dword [ebp + 0x1c], 0
-je loc_0001ac90  ; je 0x1ac90
+je near loc_0001ac90  ; je 0x1ac90
 cmp dword [ebp - 0x1c], 0
 jne short loc_0001ac07  ; jne 0x1ac07
 push eax
@@ -44789,7 +44781,7 @@ push esi
 call fcn_00017da5  ; call 0x17da5
 jmp short loc_0001ac79  ; jmp 0x1ac79
 
-loc_0001ac07:  ; not directly referenced
+loc_0001ac07:
 cmp dword [ebp - 0x1c], 1
 jne short loc_0001ac31  ; jne 0x1ac31
 cmp byte [ebp - 0x1d], 0
@@ -44799,7 +44791,7 @@ push eax
 movzx eax, word [ebx]
 jmp short loc_0001ac28  ; jmp 0x1ac28
 
-loc_0001ac1a:  ; not directly referenced
+loc_0001ac1a:
 sub esp, 0xc
 push ebx
 call fcn_00017299  ; call 0x17299
@@ -44807,13 +44799,13 @@ pop edx
 pop ecx
 movzx eax, ax
 
-loc_0001ac28:  ; not directly referenced
+loc_0001ac28:
 push eax
 push esi
 call fcn_00017e04  ; call 0x17e04
 jmp short loc_0001ac79  ; jmp 0x1ac79
 
-loc_0001ac31:  ; not directly referenced
+loc_0001ac31:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001ac57  ; jne 0x1ac57
 cmp byte [ebp - 0x1d], 0
@@ -44823,7 +44815,7 @@ push eax
 push dword [ebx]
 jmp short loc_0001ac4f  ; jmp 0x1ac4f
 
-loc_0001ac43:  ; not directly referenced
+loc_0001ac43:
 sub esp, 0xc
 push ebx
 call fcn_0001737e  ; call 0x1737e
@@ -44831,12 +44823,12 @@ pop edx
 pop ecx
 push eax
 
-loc_0001ac4f:  ; not directly referenced
+loc_0001ac4f:
 push esi
 call fcn_00017e8f  ; call 0x17e8f
 jmp short loc_0001ac79  ; jmp 0x1ac79
 
-loc_0001ac57:  ; not directly referenced
+loc_0001ac57:
 cmp byte [ebp - 0x1d], 0
 je short loc_0001ac65  ; je 0x1ac65
 push eax
@@ -44844,7 +44836,7 @@ push dword [ebx + 4]
 push dword [ebx]
 jmp short loc_0001ac73  ; jmp 0x1ac73
 
-loc_0001ac65:  ; not directly referenced
+loc_0001ac65:
 sub esp, 0xc
 push ebx
 call fcn_000173ed  ; call 0x173ed
@@ -44852,11 +44844,11 @@ add esp, 0xc
 push edx
 push eax
 
-loc_0001ac73:  ; not directly referenced
+loc_0001ac73:
 push esi
 call fcn_00017f28  ; call 0x17f28
 
-loc_0001ac79:  ; not directly referenced
+loc_0001ac79:
 movzx eax, byte [ebp - 0x1e]
 add esp, 0x10
 add esi, dword [ebp - 0x28]
@@ -44865,10 +44857,10 @@ dec dword [ebp + 0x1c]
 add ebx, eax
 jmp near loc_0001abe9  ; jmp 0x1abe9
 
-loc_0001ac90:  ; not directly referenced
+loc_0001ac90:
 xor eax, eax
 
-loc_0001ac92:  ; not directly referenced
+loc_0001ac92:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -44876,7 +44868,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001ac9a:  ; not directly referenced
+fcn_0001ac9a:
 push ebp
 mov ebp, esp
 push edi
@@ -44897,7 +44889,7 @@ push 0
 call fcn_0001a9a3  ; call 0x1a9a3
 add esp, 0x20
 test eax, eax
-js loc_0001ad90  ; js 0x1ad90
+js near loc_0001ad90  ; js 0x1ad90
 mov edx, dword [ebp - 0x1c]
 mov dword [ebp - 0x24], 0
 mov al, byte [edx + ref_000295ec]  ; mov al, byte [edx + 0x295ec]
@@ -44912,9 +44904,9 @@ movzx eax, byte [edx + ref_000295f8]  ; movzx eax, byte [edx + 0x295f8]
 sete byte [ebp - 0x1d]
 mov dword [ebp - 0x28], eax
 
-loc_0001acfe:  ; not directly referenced
+loc_0001acfe:
 cmp dword [ebp + 0x1c], 0
-je loc_0001ad8e  ; je 0x1ad8e
+je near loc_0001ad8e  ; je 0x1ad8e
 cmp dword [ebp - 0x1c], 0
 jne short loc_0001ad1b  ; jne 0x1ad1b
 sub esp, 0xc
@@ -44923,7 +44915,7 @@ call fcn_00018ee1  ; call 0x18ee1
 mov byte [ebx], al
 jmp short loc_0001ad77  ; jmp 0x1ad77
 
-loc_0001ad1b:  ; not directly referenced
+loc_0001ad1b:
 cmp dword [ebp - 0x1c], 1
 jne short loc_0001ad4c  ; jne 0x1ad4c
 cmp byte [ebp - 0x1d], 0
@@ -44934,7 +44926,7 @@ call fcn_00018ef6  ; call 0x18ef6
 mov word [ebx], ax
 jmp short loc_0001ad77  ; jmp 0x1ad77
 
-loc_0001ad35:  ; not directly referenced
+loc_0001ad35:
 sub esp, 0xc
 push esi
 call fcn_00018ef6  ; call 0x18ef6
@@ -44946,7 +44938,7 @@ push ebx
 call fcn_000172cb  ; call 0x172cb
 jmp short loc_0001ad77  ; jmp 0x1ad77
 
-loc_0001ad4c:  ; not directly referenced
+loc_0001ad4c:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001ad7a  ; jne 0x1ad7a
 cmp byte [ebp - 0x1d], 0
@@ -44957,7 +44949,7 @@ call fcn_00018f64  ; call 0x18f64
 mov dword [ebx], eax
 jmp short loc_0001ad77  ; jmp 0x1ad77
 
-loc_0001ad65:  ; not directly referenced
+loc_0001ad65:
 sub esp, 0xc
 push esi
 call fcn_00018f64  ; call 0x18f64
@@ -44967,10 +44959,10 @@ push eax
 push ebx
 call fcn_000173b2  ; call 0x173b2
 
-loc_0001ad77:  ; not directly referenced
+loc_0001ad77:
 add esp, 0x10
 
-loc_0001ad7a:  ; not directly referenced
+loc_0001ad7a:
 movzx eax, byte [ebp - 0x1e]
 add esi, dword [ebp - 0x28]
 adc edi, dword [ebp - 0x24]
@@ -44978,10 +44970,10 @@ dec dword [ebp + 0x1c]
 add ebx, eax
 jmp near loc_0001acfe  ; jmp 0x1acfe
 
-loc_0001ad8e:  ; not directly referenced
+loc_0001ad8e:
 xor eax, eax
 
-loc_0001ad90:  ; not directly referenced
+loc_0001ad90:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -44989,7 +44981,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001ad98:  ; not directly referenced
+fcn_0001ad98:
 push ebp
 mov ebp, esp
 push edi
@@ -45010,7 +45002,7 @@ push 0
 call fcn_0001a9a3  ; call 0x1a9a3
 add esp, 0x20
 test eax, eax
-js loc_0001ae7a  ; js 0x1ae7a
+js near loc_0001ae7a  ; js 0x1ae7a
 mov edx, dword [ebp - 0x1c]
 mov dword [ebp - 0x24], 0
 mov al, byte [edx + ref_000295ec]  ; mov al, byte [edx + 0x295ec]
@@ -45025,7 +45017,7 @@ movzx eax, byte [edx + ref_000295f8]  ; movzx eax, byte [edx + 0x295f8]
 sete byte [ebp - 0x1d]
 mov dword [ebp - 0x28], eax
 
-loc_0001adfc:  ; not directly referenced
+loc_0001adfc:
 cmp dword [ebp + 0x1c], 0
 je short loc_0001ae78  ; je 0x1ae78
 cmp dword [ebp - 0x1c], 0
@@ -45038,7 +45030,7 @@ push esi
 call fcn_00018eea  ; call 0x18eea
 jmp short loc_0001ae64  ; jmp 0x1ae64
 
-loc_0001ae16:  ; not directly referenced
+loc_0001ae16:
 cmp dword [ebp - 0x1c], 1
 jne short loc_0001ae40  ; jne 0x1ae40
 cmp byte [ebp - 0x1d], 0
@@ -45048,7 +45040,7 @@ push eax
 movzx eax, word [ebx]
 jmp short loc_0001ae37  ; jmp 0x1ae37
 
-loc_0001ae29:  ; not directly referenced
+loc_0001ae29:
 sub esp, 0xc
 push ebx
 call fcn_00017299  ; call 0x17299
@@ -45056,13 +45048,13 @@ pop edx
 pop ecx
 movzx eax, ax
 
-loc_0001ae37:  ; not directly referenced
+loc_0001ae37:
 push eax
 push esi
 call fcn_00018f27  ; call 0x18f27
 jmp short loc_0001ae64  ; jmp 0x1ae64
 
-loc_0001ae40:  ; not directly referenced
+loc_0001ae40:
 cmp dword [ebp - 0x1c], 2
 jne short loc_0001ae67  ; jne 0x1ae67
 cmp byte [ebp - 0x1d], 0
@@ -45072,7 +45064,7 @@ push eax
 push dword [ebx]
 jmp short loc_0001ae5e  ; jmp 0x1ae5e
 
-loc_0001ae52:  ; not directly referenced
+loc_0001ae52:
 sub esp, 0xc
 push ebx
 call fcn_0001737e  ; call 0x1737e
@@ -45080,14 +45072,14 @@ pop edx
 pop ecx
 push eax
 
-loc_0001ae5e:  ; not directly referenced
+loc_0001ae5e:
 push esi
 call fcn_00018f97  ; call 0x18f97
 
-loc_0001ae64:  ; not directly referenced
+loc_0001ae64:
 add esp, 0x10
 
-loc_0001ae67:  ; not directly referenced
+loc_0001ae67:
 movzx eax, byte [ebp - 0x1e]
 add esi, dword [ebp - 0x28]
 adc edi, dword [ebp - 0x24]
@@ -45095,10 +45087,10 @@ dec dword [ebp + 0x1c]
 add ebx, eax
 jmp short loc_0001adfc  ; jmp 0x1adfc
 
-loc_0001ae78:  ; not directly referenced
+loc_0001ae78:
 xor eax, eax
 
-loc_0001ae7a:  ; not directly referenced
+loc_0001ae7a:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -45166,7 +45158,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001af1f:  ; not directly referenced
+fcn_0001af1f:
 push ebp
 mov ebp, esp
 push edi
@@ -45193,7 +45185,7 @@ push 0x80000
 call fcn_00015487  ; call 0x15487
 add esp, 0x20
 
-loc_0001af62:  ; not directly referenced
+loc_0001af62:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001af8b  ; je 0x1af8b
@@ -45207,10 +45199,10 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp short loc_0001af8e  ; jmp 0x1af8e
 
-loc_0001af8b:  ; not directly referenced
+loc_0001af8b:
 sub esi, 0x18
 
-loc_0001af8e:  ; not directly referenced
+loc_0001af8e:
 push edx
 mov eax, edi
 push edx
@@ -45238,7 +45230,7 @@ push 0x80000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001afd4:  ; not directly referenced
+loc_0001afd4:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -45341,7 +45333,7 @@ jne short loc_0001b11e  ; jne 0x1b11e
 call fcn_00015479  ; call 0x15479
 mov ebx, 0x80000009
 test al, al
-je loc_0001b250  ; je 0x1b250
+je near loc_0001b250  ; je 0x1b250
 push eax
 push eax
 push ref_0002633f  ; push 0x2633f
@@ -45473,7 +45465,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001b259:  ; not directly referenced
+fcn_0001b259:
 push ebp
 mov ebp, esp
 push ebx
@@ -45492,10 +45484,10 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp short loc_0001b290  ; jmp 0x1b290
 
-loc_0001b28d:  ; not directly referenced
+loc_0001b28d:
 sub ebx, 0x38
 
-loc_0001b290:  ; not directly referenced
+loc_0001b290:
 push eax
 push eax
 push ebx
@@ -45506,28 +45498,28 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001b2a2:  ; not directly referenced
+fcn_0001b2a2:
 push ebp
 mov eax, 0x80000003
 mov ebp, esp
 pop ebp
 ret
 
-fcn_0001b2ac:  ; not directly referenced
+fcn_0001b2ac:
 push ebp
 mov eax, 0x80000003
 mov ebp, esp
 pop ebp
 ret
 
-fcn_0001b2b6:  ; not directly referenced
+fcn_0001b2b6:
 push ebp
 mov eax, 0x80000003
 mov ebp, esp
 pop ebp
 ret
 
-fcn_0001b2c0:  ; not directly referenced
+fcn_0001b2c0:
 push ebp
 mov ebp, esp
 pop ebp
@@ -45570,7 +45562,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001b31e:  ; not directly referenced
+fcn_0001b31e:
 push ebp
 mov ebp, esp
 push ebx
@@ -45604,14 +45596,14 @@ pop esi
 pop ebp
 jmp near fcn_00018eea  ; jmp 0x18eea
 
-fcn_0001b363:  ; not directly referenced
+fcn_0001b363:
 push ebp
 mov ebp, esp
 push ebx
 mov ebx, 0x186a0
 push eax
 
-loc_0001b36d:  ; not directly referenced
+loc_0001b36d:
 sub esp, 0xc
 push 0
 call fcn_0001b31e  ; call 0x1b31e
@@ -45629,15 +45621,15 @@ jne short loc_0001b36d  ; jne 0x1b36d
 xor eax, eax
 jmp short loc_0001b399  ; jmp 0x1b399
 
-loc_0001b397:  ; not directly referenced
+loc_0001b397:
 mov al, 1
 
-loc_0001b399:  ; not directly referenced
+loc_0001b399:
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001b39e:  ; not directly referenced
+fcn_0001b39e:
 push ebp
 mov ebp, esp
 push ebx
@@ -45658,7 +45650,7 @@ call fcn_0001b33b  ; call 0x1b33b
 add esp, 0x10
 jmp short loc_0001b3e1  ; jmp 0x1b3e1
 
-loc_0001b3cf:  ; not directly referenced
+loc_0001b3cf:
 push edx
 movzx eax, al
 push edx
@@ -45668,13 +45660,13 @@ push 0
 call fcn_0001b33b  ; call 0x1b33b
 add esp, 0x10
 
-loc_0001b3e1:  ; not directly referenced
+loc_0001b3e1:
 mov eax, ebx
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001b3e8:  ; not directly referenced
+fcn_0001b3e8:
 push ebp
 mov ebp, esp
 push edi
@@ -45687,42 +45679,42 @@ mov edi, dword [ebp + 0x18]
 mov byte [ebp - 0x2f], al
 jbe short loc_0001b412  ; jbe 0x1b412
 cmp dword [ebp + 0x1c], 0
-je loc_0001b914  ; je 0x1b914
+je near loc_0001b914  ; je 0x1b914
 test edi, edi
-je loc_0001b914  ; je 0x1b914
+je near loc_0001b914  ; je 0x1b914
 
-loc_0001b412:  ; not directly referenced
+loc_0001b412:
 call fcn_0001b39e  ; call 0x1b39e
 test eax, eax
-js loc_0001b919  ; js 0x1b919
+js near loc_0001b919  ; js 0x1b919
 mov al, byte [ebp + 8]
 mov dword [ebp - 0x34], 3
 mov byte [ebp - 0x2d], 0
 lea eax, [eax + eax + 1]
 mov byte [ebp - 0x2e], al
 
-loc_0001b434:  ; not directly referenced
+loc_0001b434:
 mov al, byte [ebp - 0x2e]
 cmp dword [ebp + 0x10], 0xb
 mov byte [ebp - 0x2c], al
 mov al, byte [ebp + 0xc]
 mov byte [ebp - 0x30], al
-ja loc_0001b5e9  ; ja 0x1b5e9
+ja near loc_0001b5e9  ; ja 0x1b5e9
 mov eax, dword [ebp + 0x10]
 jmp dword [eax*4 + ref_000205a0]  ; ujmp: jmp dword [eax*4 + 0x205a0]
 
-loc_0001b454:  ; not directly referenced
+loc_0001b454:
 mov al, byte [ebp - 0x2e]
 dec eax
 mov byte [ebp - 0x2c], al
 
-loc_0001b45b:  ; not directly referenced
+loc_0001b45b:
 cmp byte [ebp - 0x2f], 1
-je loc_0001b5d9  ; je 0x1b5d9
+je near loc_0001b5d9  ; je 0x1b5d9
 xor esi, esi
 jmp near loc_0001b5d5  ; jmp 0x1b5d5
 
-loc_0001b46c:  ; not directly referenced
+loc_0001b46c:
 mov eax, dword [ebp + 0x1c]
 mov al, byte [eax]
 mov byte [ebp - 0x30], al
@@ -45730,7 +45722,7 @@ mov al, byte [ebp - 0x2e]
 dec eax
 mov byte [ebp - 0x2c], al
 
-loc_0001b47b:  ; not directly referenced
+loc_0001b47b:
 cmp dword [edi], 1
 mov esi, 4
 mov dword [edi], 1
@@ -45738,7 +45730,7 @@ sbb ebx, ebx
 and ebx, 0x80000005
 jmp near loc_0001b597  ; jmp 0x1b597
 
-loc_0001b496:  ; not directly referenced
+loc_0001b496:
 mov eax, dword [ebp + 0x1c]
 push ecx
 push ecx
@@ -45752,20 +45744,20 @@ mov dword [edi], 1
 dec eax
 mov byte [ebp - 0x2c], al
 
-loc_0001b4b6:  ; not directly referenced
+loc_0001b4b6:
 mov eax, dword [edi]
 test eax, eax
-je loc_0001b5c6  ; je 0x1b5c6
+je near loc_0001b5c6  ; je 0x1b5c6
 cmp eax, 1
-je loc_0001b5d0  ; je 0x1b5d0
+je near loc_0001b5d0  ; je 0x1b5d0
 cmp eax, 0x100
-ja loc_0001b5e9  ; ja 0x1b5e9
+ja near loc_0001b5e9  ; ja 0x1b5e9
 cmp byte [ebp - 0x2f], 1
-je loc_0001b5d9  ; je 0x1b5d9
+je near loc_0001b5d9  ; je 0x1b5d9
 mov esi, 0x18
 jmp near loc_0001b5d5  ; jmp 0x1b5d5
 
-loc_0001b4e8:  ; not directly referenced
+loc_0001b4e8:
 mov al, byte [ebp - 0x2e]
 dec eax
 mov byte [ebp - 0x2c], al
@@ -45785,7 +45777,7 @@ push 5
 call fcn_0001b33b  ; call 0x1b33b
 add esp, 0x10
 
-loc_0001b513:  ; not directly referenced
+loc_0001b513:
 cmp dword [edi], 2
 mov esi, 0xc
 mov dword [edi], 2
@@ -45793,7 +45785,7 @@ sbb ebx, ebx
 and ebx, 0x80000005
 jmp short loc_0001b597  ; jmp 0x1b597
 
-loc_0001b52b:  ; not directly referenced
+loc_0001b52b:
 push eax
 push eax
 movzx eax, byte [edi]
@@ -45807,15 +45799,15 @@ mov byte [ebp - 0x2c], al
 mov al, byte [edi]
 mov byte [ebp - 0x2d], al
 
-loc_0001b547:  ; not directly referenced
+loc_0001b547:
 mov eax, dword [edi]
 dec eax
 cmp eax, 0x1f
-ja loc_0001b5e9  ; ja 0x1b5e9
+ja near loc_0001b5e9  ; ja 0x1b5e9
 mov esi, 0x14
 jmp near loc_0001b5e3  ; jmp 0x1b5e3
 
-loc_0001b55d:  ; not directly referenced
+loc_0001b55d:
 mov eax, dword [ebp + 0x1c]
 push ebx
 push ebx
@@ -45837,13 +45829,13 @@ mov dword [edi], 2
 sbb ebx, ebx
 and ebx, 0x80000005
 
-loc_0001b597:  ; not directly referenced
+loc_0001b597:
 xor eax, eax
 test ebx, ebx
 jns short loc_0001b5f3  ; jns 0x1b5f3
 jmp near loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b5a2:  ; not directly referenced
+loc_0001b5a2:
 mov eax, dword [edi]
 dec eax
 cmp eax, 0x1f
@@ -45860,33 +45852,33 @@ add esp, 0x10
 mov byte [ebp - 0x2d], al
 jmp short loc_0001b5e3  ; jmp 0x1b5e3
 
-loc_0001b5c6:  ; not directly referenced
+loc_0001b5c6:
 mov ebx, 0x80000005
 jmp near loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b5d0:  ; not directly referenced
+loc_0001b5d0:
 mov esi, 8
 
-loc_0001b5d5:  ; not directly referenced
+loc_0001b5d5:
 xor eax, eax
 jmp short loc_0001b5e5  ; jmp 0x1b5e5
 
-loc_0001b5d9:  ; not directly referenced
+loc_0001b5d9:
 mov ebx, 0x80000003
 jmp near loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b5e3:  ; not directly referenced
+loc_0001b5e3:
 mov al, 2
 
-loc_0001b5e5:  ; not directly referenced
+loc_0001b5e5:
 xor ebx, ebx
 jmp short loc_0001b5f3  ; jmp 0x1b5f3
 
-loc_0001b5e9:  ; not directly referenced
+loc_0001b5e9:
 mov ebx, 0x80000002
 jmp near loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b5f3:  ; not directly referenced
+loc_0001b5f3:
 mov dl, al
 or edx, 1
 cmp byte [ebp - 0x2f], 1
@@ -45905,7 +45897,7 @@ and eax, 0xfffffffd
 cmp eax, 9
 je short loc_0001b643  ; je 0x1b643
 
-loc_0001b626:  ; not directly referenced
+loc_0001b626:
 movzx eax, byte [ebp - 0x2c]
 push ecx
 push ecx
@@ -45918,12 +45910,12 @@ cmp dword [ebp + 0x10], 4
 jne short loc_0001b67a  ; jne 0x1b67a
 jmp short loc_0001b66e  ; jmp 0x1b66e
 
-loc_0001b643:  ; not directly referenced
+loc_0001b643:
 movzx ecx, byte [ebp - 0x2d]
 xor eax, eax
 mov dword [ebp - 0x38], ecx
 
-loc_0001b64c:  ; not directly referenced
+loc_0001b64c:
 cmp eax, dword [ebp - 0x38]
 jae short loc_0001b626  ; jae 0x1b626
 mov ecx, dword [ebp + 0x1c]
@@ -45939,7 +45931,7 @@ add esp, 0x10
 inc eax
 jmp short loc_0001b64c  ; jmp 0x1b64c
 
-loc_0001b66e:  ; not directly referenced
+loc_0001b66e:
 cmp dword [edi], 1
 jbe short loc_0001b67a  ; jbe 0x1b67a
 push ecx
@@ -45948,13 +45940,13 @@ push eax
 push 6
 jmp short loc_0001b67f  ; jmp 0x1b67f
 
-loc_0001b67a:  ; not directly referenced
+loc_0001b67a:
 push edx
 push edx
 push eax
 push 3
 
-loc_0001b67f:  ; not directly referenced
+loc_0001b67f:
 call fcn_0001b33b  ; call 0x1b33b
 add esp, 0x10
 lea eax, [esi + 0x40]
@@ -45969,7 +45961,7 @@ mov dword [esp], eax
 call fcn_0001b363  ; call 0x1b363
 add esp, 0x10
 test al, al
-je loc_0001b8e4  ; je 0x1b8e4
+je near loc_0001b8e4  ; je 0x1b8e4
 mov al, byte [ebp - 0x19]
 test al, 4
 je short loc_0001b6d6  ; je 0x1b6d6
@@ -45984,7 +45976,7 @@ and ebx, 0xffffffec
 sub ebx, 0x7fffffe5
 jmp near loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b6d6:  ; not directly referenced
+loc_0001b6d6:
 test al, 8
 je short loc_0001b6fe  ; je 0x1b6fe
 push ebx
@@ -46003,14 +45995,14 @@ push 1
 push 0xc
 jmp near loc_0001b8c0  ; jmp 0x1b8c0
 
-loc_0001b6fe:  ; not directly referenced
+loc_0001b6fe:
 mov eax, dword [ebp + 0x10]
 sub eax, 2
 cmp eax, 9
-ja loc_0001b8ac  ; ja 0x1b8ac
+ja near loc_0001b8ac  ; ja 0x1b8ac
 jmp dword [eax*4 + ref_000205d0]  ; ujmp: jmp dword [eax*4 + 0x205d0]
 
-loc_0001b714:  ; not directly referenced
+loc_0001b714:
 sub esp, 0xc
 push 6
 call fcn_0001b31e  ; call 0x1b31e
@@ -46019,14 +46011,14 @@ mov byte [ecx + 1], al
 mov dword [esp], 5
 jmp near loc_0001b7eb  ; jmp 0x1b7eb
 
-loc_0001b730:  ; not directly referenced
+loc_0001b730:
 cmp dword [edi], 1
-jbe loc_0001b7e6  ; jbe 0x1b7e6
+jbe near loc_0001b7e6  ; jbe 0x1b7e6
 xor esi, esi
 
-loc_0001b73b:  ; not directly referenced
+loc_0001b73b:
 cmp esi, dword [edi]
-jae loc_0001b8ac  ; jae 0x1b8ac
+jae near loc_0001b8ac  ; jae 0x1b8ac
 sub esp, 0xc
 push 7
 call fcn_0001b31e  ; call 0x1b31e
@@ -46046,7 +46038,7 @@ or eax, 0x20
 movzx eax, al
 jmp short loc_0001b789  ; jmp 0x1b789
 
-loc_0001b773:  ; not directly referenced
+loc_0001b773:
 dec eax
 cmp esi, eax
 jne short loc_0001b794  ; jne 0x1b794
@@ -46057,13 +46049,13 @@ pop edx
 pop ecx
 and eax, 0xdf
 
-loc_0001b789:  ; not directly referenced
+loc_0001b789:
 push eax
 push 2
 call fcn_0001b33b  ; call 0x1b33b
 add esp, 0x10
 
-loc_0001b794:  ; not directly referenced
+loc_0001b794:
 push eax
 push eax
 push 0x80
@@ -46076,7 +46068,7 @@ cmp esi, eax
 jae short loc_0001b7e0  ; jae 0x1b7e0
 mov dword [ebp - 0x2c], 0x64
 
-loc_0001b7b3:  ; not directly referenced
+loc_0001b7b3:
 sub esp, 0xc
 push 0
 call fcn_0001b31e  ; call 0x1b31e
@@ -46092,32 +46084,32 @@ jne short loc_0001b7b3  ; jne 0x1b7b3
 mov ebx, 0x80000012
 jmp near loc_0001b8ac  ; jmp 0x1b8ac
 
-loc_0001b7e0:  ; not directly referenced
+loc_0001b7e0:
 inc esi
 jmp near loc_0001b73b  ; jmp 0x1b73b
 
-loc_0001b7e6:  ; not directly referenced
+loc_0001b7e6:
 sub esp, 0xc
 push 5
 
-loc_0001b7eb:  ; not directly referenced
+loc_0001b7eb:
 call fcn_0001b31e  ; call 0x1b31e
 mov ecx, dword [ebp + 0x1c]
 mov byte [ecx], al
 jmp short loc_0001b805  ; jmp 0x1b805
 
-loc_0001b7f7:  ; not directly referenced
+loc_0001b7f7:
 push eax
 push eax
 push 0x80
 push 0
 call fcn_0001b33b  ; call 0x1b33b
 
-loc_0001b805:  ; not directly referenced
+loc_0001b805:
 add esp, 0x10
 jmp near loc_0001b8ac  ; jmp 0x1b8ac
 
-loc_0001b80d:  ; not directly referenced
+loc_0001b80d:
 sub esp, 0xc
 xor esi, esi
 push 5
@@ -46129,7 +46121,7 @@ mov al, 1
 cmp dword [edi], edx
 jb short loc_0001b84a  ; jb 0x1b84a
 
-loc_0001b828:  ; not directly referenced
+loc_0001b828:
 cmp esi, edx
 jae short loc_0001b848  ; jae 0x1b848
 sub esp, 0xc
@@ -46143,17 +46135,17 @@ mov byte [ecx + esi], al
 inc esi
 jmp short loc_0001b828  ; jmp 0x1b828
 
-loc_0001b848:  ; not directly referenced
+loc_0001b848:
 xor eax, eax
 
-loc_0001b84a:  ; not directly referenced
+loc_0001b84a:
 test al, al
 mov eax, 0x80000005
 mov dword [edi], edx
 cmovne ebx, eax
 jmp short loc_0001b8ac  ; jmp 0x1b8ac
 
-loc_0001b858:  ; not directly referenced
+loc_0001b858:
 sub esp, 0xc
 push 5
 call fcn_0001b31e  ; call 0x1b31e
@@ -46168,7 +46160,7 @@ add eax, edx
 cmp eax, 0x20
 jg short loc_0001b8a7  ; jg 0x1b8a7
 
-loc_0001b87c:  ; not directly referenced
+loc_0001b87c:
 cmp esi, edx
 jae short loc_0001b89c  ; jae 0x1b89c
 sub esp, 0xc
@@ -46182,18 +46174,18 @@ mov byte [ecx + esi], al
 inc esi
 jmp short loc_0001b87c  ; jmp 0x1b87c
 
-loc_0001b89c:  ; not directly referenced
+loc_0001b89c:
 mov dword [edi], edx
 jmp short loc_0001b8ac  ; jmp 0x1b8ac
 
-loc_0001b8a0:  ; not directly referenced
+loc_0001b8a0:
 mov ebx, 0x80000005
 jmp short loc_0001b8ac  ; jmp 0x1b8ac
 
-loc_0001b8a7:  ; not directly referenced
+loc_0001b8a7:
 mov ebx, 0x80000007
 
-loc_0001b8ac:  ; not directly referenced
+loc_0001b8ac:
 test byte [ebp - 0x19], 8
 je short loc_0001b8e9  ; je 0x1b8e9
 cmp ebx, 0x80000005
@@ -46203,20 +46195,20 @@ push eax
 push 8
 push 0
 
-loc_0001b8c0:  ; not directly referenced
+loc_0001b8c0:
 call fcn_0001b33b  ; call 0x1b33b
 mov dword [esp], 0xa
 call fcn_0001bb03  ; call 0x1bb03
 add esp, 0x10
 dec dword [ebp - 0x34]
-jne loc_0001b434  ; jne 0x1b434
+jne near loc_0001b434  ; jne 0x1b434
 mov ebx, 0x80000007
 jmp short loc_0001b8e9  ; jmp 0x1b8e9
 
-loc_0001b8e4:  ; not directly referenced
+loc_0001b8e4:
 mov ebx, 0x80000012
 
-loc_0001b8e9:  ; not directly referenced
+loc_0001b8e9:
 push eax
 push eax
 push 0xff
@@ -46236,10 +46228,10 @@ add esp, 0x10
 mov eax, ebx
 jmp short loc_0001b919  ; jmp 0x1b919
 
-loc_0001b914:  ; not directly referenced
+loc_0001b914:
 mov eax, 0x80000002
 
-loc_0001b919:  ; not directly referenced
+loc_0001b919:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -46247,7 +46239,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001b921:  ; not directly referenced
+fcn_0001b921:
 push ebp
 mov ebp, esp
 push ebx
@@ -46302,7 +46294,7 @@ call fcn_00019db6  ; call 0x19db6
 add esp, 0x10
 mov ebx, eax
 test eax, eax
-je loc_0001ba2d  ; je 0x1ba2d
+je near loc_0001ba2d  ; je 0x1ba2d
 sub esp, 0xc
 lea eax, [eax + 0xc]
 push eax
@@ -46358,7 +46350,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001ba36:  ; not directly referenced
+fcn_0001ba36:
 push ebp
 mov ebp, esp
 push edi
@@ -46380,7 +46372,7 @@ jne short loc_0001ba89  ; jne 0x1ba89
 call fcn_00015479  ; call 0x15479
 mov ebx, 0x80000003
 test al, al
-je loc_0001baf9  ; je 0x1baf9
+je near loc_0001baf9  ; je 0x1baf9
 push ecx
 push ecx
 push ref_00026435  ; push 0x26435
@@ -46389,11 +46381,11 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp short loc_0001baf9  ; jmp 0x1baf9
 
-loc_0001ba89:  ; not directly referenced
+loc_0001ba89:
 xor ebx, ebx
 lea edi, [ebp - 0x1c]
 
-loc_0001ba8e:  ; not directly referenced
+loc_0001ba8e:
 push edi
 push 0
 push ebx
@@ -46409,7 +46401,7 @@ push dword [ebp + 8]
 call dword [eax]  ; ucall
 jmp short loc_0001baeb  ; jmp 0x1baeb
 
-loc_0001bab2:  ; not directly referenced
+loc_0001bab2:
 cmp eax, 0x8000000e
 jne short loc_0001bad4  ; jne 0x1bad4
 test ebx, ebx
@@ -46423,7 +46415,7 @@ push ref_0002645f  ; push 0x2645f
 push 0x80000040
 jmp short loc_0001bae6  ; jmp 0x1bae6
 
-loc_0001bad4:  ; not directly referenced
+loc_0001bad4:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001baee  ; je 0x1baee
@@ -46432,19 +46424,19 @@ push eax
 push ref_0002648a  ; push 0x2648a
 push 0x40
 
-loc_0001bae6:  ; not directly referenced
+loc_0001bae6:
 call fcn_00015487  ; call 0x15487
 
-loc_0001baeb:  ; not directly referenced
+loc_0001baeb:
 add esp, 0x10
 
-loc_0001baee:  ; not directly referenced
+loc_0001baee:
 inc ebx
 cmp esi, 0x8000000e
 jne short loc_0001ba8e  ; jne 0x1ba8e
 xor ebx, ebx
 
-loc_0001baf9:  ; not directly referenced
+loc_0001baf9:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -46462,7 +46454,7 @@ push ebx
 sub esp, 0x1c
 mov edi, dword [ebp + 8]
 test edi, edi
-je loc_0001bba1  ; je 0x1bba1
+je near loc_0001bba1  ; je 0x1bba1
 push eax
 push 0
 push 0x1f
@@ -46604,7 +46596,7 @@ jne short loc_0001bca7  ; jne 0x1bca7
 
 loc_0001bc80:
 cmp dl, 4
-je loc_0001bd5d  ; je 0x1bd5d
+je near loc_0001bd5d  ; je 0x1bd5d
 cmp dl, 5
 je short loc_0001bc9d  ; je 0x1bc9d
 mov eax, 1
@@ -46622,12 +46614,12 @@ cmp cx, 5
 ja short loc_0001bcd5  ; ja 0x1bcd5
 mov eax, 0x10
 test dl, dl
-je loc_0001bd70  ; je 0x1bd70
+je near loc_0001bd70  ; je 0x1bd70
 
 loc_0001bcc0:
 call fcn_00015479  ; call 0x15479
 test al, al
-je loc_0001bd56  ; je 0x1bd56
+je near loc_0001bd56  ; je 0x1bd56
 push ecx
 push ref_000264b4  ; push 0x264b4
 jmp short loc_0001bd44  ; jmp 0x1bd44
@@ -46731,7 +46723,7 @@ mov eax, ebx
 mov esi, 1
 and eax, 0xfffffffd
 cmp ax, 0x8c44
-je loc_0001be46  ; je 0x1be46
+je near loc_0001be46  ; je 0x1be46
 lea eax, [ebx + 0x73b2]
 cmp ax, 2
 jbe short loc_0001be46  ; jbe 0x1be46
@@ -46844,7 +46836,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001beca:  ; not directly referenced
+fcn_0001beca:
 push ebp
 mov ebp, esp
 push edi
@@ -46895,7 +46887,7 @@ shr eax, 6
 mov edx, eax
 and edx, 1
 
-loc_0001bf57:  ; not directly referenced
+loc_0001bf57:
 lea esp, [ebp - 0xc]
 mov al, dl
 pop ebx
@@ -46904,7 +46896,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001bf61:  ; not directly referenced
+fcn_0001bf61:
 push ebp
 mov ebp, esp
 push esi
@@ -46936,7 +46928,7 @@ add esp, 0x10
 shr eax, 0xe
 and eax, 1
 
-loc_0001bfb4:  ; not directly referenced
+loc_0001bfb4:
 lea esp, [ebp - 8]
 pop ebx
 pop esi
@@ -46962,18 +46954,18 @@ movzx ebx, ax
 mov eax, ebx
 and eax, 0xfffffffd
 cmp ax, 0x8c44
-je loc_0001c0b4  ; je 0x1c0b4
+je near loc_0001c0b4  ; je 0x1c0b4
 lea eax, [ebx + 0x73b2]
 cmp ax, 2
-jbe loc_0001c0b4  ; jbe 0x1c0b4
+jbe near loc_0001c0b4  ; jbe 0x1c0b4
 lea eax, [ebx + 0x73b7]
 cmp ax, 3
-jbe loc_0001c0b4  ; jbe 0x1c0b4
+jbe near loc_0001c0b4  ; jbe 0x1c0b4
 lea eax, [ebx + 0x73bf]
 cmp ax, 1
-jbe loc_0001c0b4  ; jbe 0x1c0b4
+jbe near loc_0001c0b4  ; jbe 0x1c0b4
 cmp bx, 0x8c58
-je loc_0001c0b4  ; je 0x1c0b4
+je near loc_0001c0b4  ; je 0x1c0b4
 mov eax, ebx
 and eax, 0xfffffffb
 cmp ax, 0x8c52
@@ -47045,18 +47037,18 @@ movzx ebx, ax
 mov eax, ebx
 and eax, 0xfffffffd
 cmp ax, 0x8c44
-je loc_0001c1b6  ; je 0x1c1b6
+je near loc_0001c1b6  ; je 0x1c1b6
 lea eax, [ebx + 0x73b2]
 cmp ax, 2
-jbe loc_0001c1b6  ; jbe 0x1c1b6
+jbe near loc_0001c1b6  ; jbe 0x1c1b6
 lea eax, [ebx + 0x73b7]
 cmp ax, 3
-jbe loc_0001c1b6  ; jbe 0x1c1b6
+jbe near loc_0001c1b6  ; jbe 0x1c1b6
 lea eax, [ebx + 0x73bf]
 cmp ax, 1
-jbe loc_0001c1b6  ; jbe 0x1c1b6
+jbe near loc_0001c1b6  ; jbe 0x1c1b6
 cmp bx, 0x8c58
-je loc_0001c1b6  ; je 0x1c1b6
+je near loc_0001c1b6  ; je 0x1c1b6
 mov eax, ebx
 and eax, 0xfffffffb
 cmp ax, 0x8c52
@@ -47149,7 +47141,7 @@ loc_0001c1fe:
 leave
 ret
 
-fcn_0001c200:  ; not directly referenced
+fcn_0001c200:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -47160,14 +47152,14 @@ cmp eax, 2
 sete al
 jmp short loc_0001c21a  ; jmp 0x1c21a
 
-loc_0001c218:  ; not directly referenced
+loc_0001c218:
 mov al, 2
 
-loc_0001c21a:  ; not directly referenced
+loc_0001c21a:
 leave
 ret
 
-fcn_0001c21c:  ; not directly referenced
+fcn_0001c21c:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -47180,12 +47172,12 @@ jne short loc_0001c23a  ; jne 0x1c23a
 mov al, 0xe
 jmp short loc_0001c243  ; jmp 0x1c243
 
-loc_0001c23a:  ; not directly referenced
+loc_0001c23a:
 cmp eax, 2
 sete al
 shl eax, 3
 
-loc_0001c243:  ; not directly referenced
+loc_0001c243:
 leave
 ret
 
@@ -47379,7 +47371,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001c39f:  ; not directly referenced
+fcn_0001c39f:
 push ebp
 mov ebp, esp
 push ebx
@@ -47397,7 +47389,7 @@ shr eax, cl
 and eax, 7
 ret
 
-fcn_0001c3cb:  ; not directly referenced
+fcn_0001c3cb:
 push ebp
 mov ebp, esp
 push edi
@@ -47409,7 +47401,7 @@ mov eax, dword [ebp + 8]
 movzx edi, byte [ebp + 0xc]
 lea esi, [eax + 0x404]
 
-loc_0001c3e3:  ; not directly referenced
+loc_0001c3e3:
 call fcn_0001c1bf  ; call 0x1c1bf
 cmp bl, al
 jae short loc_0001c40a  ; jae 0x1c40a
@@ -47426,7 +47418,7 @@ je short loc_0001c42d  ; je 0x1c42d
 inc ebx
 jmp short loc_0001c3e3  ; jmp 0x1c3e3
 
-loc_0001c40a:  ; not directly referenced
+loc_0001c40a:
 call fcn_00015480  ; call 0x15480
 mov bl, 0xff
 test al, al
@@ -47438,7 +47430,7 @@ push ref_00026529  ; push 0x26529
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001c42d:  ; not directly referenced
+loc_0001c42d:
 lea esp, [ebp - 0xc]
 mov al, bl
 pop ebx
@@ -47447,7 +47439,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001c437:  ; not directly referenced
+fcn_0001c437:
 push ebp
 mov ebp, esp
 push ebx
@@ -47496,7 +47488,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001c4b5:  ; not directly referenced
+loc_0001c4b5:
 push ecx
 push ref_000206f4  ; push 0x206f4
 push 0x3b7
@@ -47504,7 +47496,7 @@ push ref_00026529  ; push 0x26529
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001c4cd:  ; not directly referenced
+loc_0001c4cd:
 mov ebx, dword [ebp - 0xc]
 test ebx, 0x80000
 je short loc_0001c543  ; je 0x1c543
@@ -47520,7 +47512,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001c4fb:  ; not directly referenced
+loc_0001c4fb:
 call fcn_0001bfbb  ; call 0x1bfbb
 lea edx, [ebx + 1]
 cmp eax, 2
@@ -47533,11 +47525,11 @@ ja short loc_0001c522  ; ja 0x1c522
 mov edx, 5
 jmp short loc_0001c54c  ; jmp 0x1c54c
 
-loc_0001c51b:  ; not directly referenced
+loc_0001c51b:
 mov edx, 3
 jmp short loc_0001c54c  ; jmp 0x1c54c
 
-loc_0001c522:  ; not directly referenced
+loc_0001c522:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001c543  ; je 0x1c543
@@ -47548,20 +47540,20 @@ push ref_00026529  ; push 0x26529
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001c543:  ; not directly referenced
+loc_0001c543:
 xor edx, edx
 jmp short loc_0001c54c  ; jmp 0x1c54c
 
-loc_0001c547:  ; not directly referenced
+loc_0001c547:
 mov edx, 4
 
-loc_0001c54c:  ; not directly referenced
+loc_0001c54c:
 mov eax, edx
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001c553:  ; not directly referenced
+fcn_0001c553:
 push ebp
 mov eax, 0x80000002
 mov ebp, esp
@@ -47590,11 +47582,11 @@ sub esp, 0xc
 lea eax, [eax + ebx*4 + 0x3854]
 jmp short loc_0001c5a9  ; jmp 0x1c5a9
 
-loc_0001c5a1:  ; not directly referenced
+loc_0001c5a1:
 sub esp, 0xc
 add eax, 0x3800
 
-loc_0001c5a9:  ; not directly referenced
+loc_0001c5a9:
 push eax
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
@@ -47606,7 +47598,7 @@ mov word [edi], dx
 mov word [esi], ax
 xor eax, eax
 
-loc_0001c5c9:  ; not directly referenced
+loc_0001c5c9:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -47716,7 +47708,7 @@ leave
 and eax, 0xf
 ret
 
-fcn_0001c69d:  ; not directly referenced
+fcn_0001c69d:
 push ebp
 mov ebp, esp
 push edi
@@ -47753,10 +47745,10 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp short loc_0001c70a  ; jmp 0x1c70a
 
-loc_0001c708:  ; not directly referenced
+loc_0001c708:
 mov bl, 1
 
-loc_0001c70a:  ; not directly referenced
+loc_0001c70a:
 lea esp, [ebp - 0xc]
 mov al, bl
 pop ebx
@@ -47765,7 +47757,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001c714:  ; not directly referenced
+fcn_0001c714:
 push ebp
 mov ebp, esp
 push ebx
@@ -47792,18 +47784,18 @@ cmp eax, 0x306d0
 je short loc_0001c766  ; je 0x1c766
 jmp short loc_0001c76a  ; jmp 0x1c76a
 
-loc_0001c756:  ; not directly referenced
+loc_0001c756:
 cmp eax, 0x40660
 je short loc_0001c7b1  ; je 0x1c7b1
 cmp eax, 0x40670
 jne short loc_0001c76a  ; jne 0x1c76a
 jmp short loc_0001c7b1  ; jmp 0x1c7b1
 
-loc_0001c766:  ; not directly referenced
+loc_0001c766:
 xor ebx, ebx
 jmp short loc_0001c7b3  ; jmp 0x1c7b3
 
-loc_0001c76a:  ; not directly referenced
+loc_0001c76a:
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001c78f  ; je 0x1c78f
@@ -47816,7 +47808,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001c78f:  ; not directly referenced
+loc_0001c78f:
 call fcn_00015480  ; call 0x15480
 mov bl, 2
 test al, al
@@ -47829,16 +47821,16 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp short loc_0001c7b3  ; jmp 0x1c7b3
 
-loc_0001c7b1:  ; not directly referenced
+loc_0001c7b1:
 mov bl, 1
 
-loc_0001c7b3:  ; not directly referenced
+loc_0001c7b3:
 mov al, bl
 mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_0001c7ba:  ; not directly referenced
+fcn_0001c7ba:
 push ebp
 mov ebp, esp
 sub esp, 0x20
@@ -47862,7 +47854,7 @@ and eax, 0x3f
 inc eax
 ret
 
-fcn_0001c7ea:  ; not directly referenced
+fcn_0001c7ea:
 push ebp
 mov ebp, esp
 sub esp, 0xc
@@ -47887,7 +47879,7 @@ call fcn_0001724f  ; call 0x1724f
 leave
 ret
 
-fcn_0001c82d:  ; not directly referenced
+fcn_0001c82d:
 push ebp
 mov ebp, esp
 push edi
@@ -47908,12 +47900,12 @@ test edi, edi
 jne short loc_0001c879  ; jne 0x1c879
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0001c920  ; je 0x1c920
+je near loc_0001c920  ; je 0x1c920
 mov dword [ebp + 0x10], ref_00026647  ; mov dword [ebp + 0x10], 0x26647
 mov dword [ebp + 0xc], 0xc8
 jmp near loc_0001c905  ; jmp 0x1c905
 
-loc_0001c879:  ; not directly referenced
+loc_0001c879:
 push ecx
 push 0x10
 push dword [ebp - 0x1c]
@@ -47925,12 +47917,12 @@ test esi, esi
 jne short loc_0001c8ae  ; jne 0x1c8ae
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0001c920  ; je 0x1c920
+je near loc_0001c920  ; je 0x1c920
 mov dword [ebp + 0x10], ref_00026672  ; mov dword [ebp + 0x10], 0x26672
 mov dword [ebp + 0xc], 0xd2
 jmp short loc_0001c905  ; jmp 0x1c905
 
-loc_0001c8ae:  ; not directly referenced
+loc_0001c8ae:
 movzx eax, ax
 push edx
 xor edx, edx
@@ -47950,7 +47942,7 @@ mov dword [ebp + 0x10], ref_000266a0  ; mov dword [ebp + 0x10], 0x266a0
 mov dword [ebp + 0xc], 0xdc
 jmp short loc_0001c905  ; jmp 0x1c905
 
-loc_0001c8e3:  ; not directly referenced
+loc_0001c8e3:
 cmp dword [ebp - 0x24], 0
 mov word [ebx], 1
 jne short loc_0001c918  ; jne 0x1c918
@@ -47960,7 +47952,7 @@ je short loc_0001c920  ; je 0x1c920
 mov dword [ebp + 0x10], ref_000266c7  ; mov dword [ebp + 0x10], 0x266c7
 mov dword [ebp + 0xc], 0xe3
 
-loc_0001c905:  ; not directly referenced
+loc_0001c905:
 mov dword [ebp + 8], ref_0002660b  ; mov dword [ebp + 8], 0x2660b
 lea esp, [ebp - 0xc]
 pop ebx
@@ -47969,11 +47961,11 @@ pop edi
 pop ebp
 jmp near fcn_0001548c  ; jmp 0x1548c
 
-loc_0001c918:  ; not directly referenced
+loc_0001c918:
 mov eax, dword [ebp - 0x24]
 mov word [eax], 1
 
-loc_0001c920:  ; not directly referenced
+loc_0001c920:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -48042,7 +48034,7 @@ mov dl, al
 and dl, 1
 je short loc_0001c9c1  ; je 0x1c9c1
 cmp bx, 0x3e7
-jbe loc_0001c93b  ; jbe 0x1c93b
+jbe near loc_0001c93b  ; jbe 0x1c93b
 
 loc_0001c9c1:
 cmp bx, 0x3e8
@@ -48086,7 +48078,7 @@ call fcn_0001c928  ; call 0x1c928
 add esp, 0x10
 mov ebx, eax
 test eax, eax
-js loc_0001cc05  ; js 0x1cc05
+js near loc_0001cc05  ; js 0x1cc05
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001ca39  ; je 0x1ca39
@@ -48102,7 +48094,7 @@ loc_0001ca39:
 cmp edi, 1
 je short loc_0001ca4c  ; je 0x1ca4c
 cmp edi, 2
-je loc_0001cb13  ; je 0x1cb13
+je near loc_0001cb13  ; je 0x1cb13
 jmp near loc_0001cbc5  ; jmp 0x1cbc5
 
 loc_0001ca4c:
@@ -48222,7 +48214,7 @@ cmp dword [ebp - 0x24], eax
 je short loc_0001cbba  ; je 0x1cbba
 mov eax, dword [ebp - 0x20]
 cmp dword [ebp - 0x28], eax
-jne loc_0001cadf  ; jne 0x1cadf
+jne near loc_0001cadf  ; jne 0x1cadf
 
 loc_0001cbba:
 movzx eax, byte [ebp - 0x24]
@@ -48277,7 +48269,7 @@ call fcn_0001c928  ; call 0x1c928
 add esp, 0x10
 mov ebx, eax
 test eax, eax
-js loc_0001ce1b  ; js 0x1ce1b
+js near loc_0001ce1b  ; js 0x1ce1b
 call fcn_00015479  ; call 0x15479
 test al, al
 je short loc_0001cc50  ; je 0x1cc50
@@ -48294,7 +48286,7 @@ loc_0001cc50:
 cmp edi, 1
 je short loc_0001cc63  ; je 0x1cc63
 cmp edi, 2
-je loc_0001cd24  ; je 0x1cd24
+je near loc_0001cd24  ; je 0x1cd24
 jmp near loc_0001cddb  ; jmp 0x1cddb
 
 loc_0001cc63:
@@ -48410,7 +48402,7 @@ cmp dword [ebp - 0x24], eax
 je short loc_0001cdc4  ; je 0x1cdc4
 mov eax, dword [ebp - 0x20]
 cmp dword [ebp - 0x28], eax
-jne loc_0001ccec  ; jne 0x1ccec
+jne near loc_0001ccec  ; jne 0x1ccec
 
 loc_0001cdc4:
 mov ecx, dword [ebp + 0x14]
@@ -48460,7 +48452,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001ce25:  ; not directly referenced
+fcn_0001ce25:
 push ebp
 mov eax, 0x80000002
 mov ebp, esp
@@ -48470,7 +48462,7 @@ push ebx
 sub esp, 0x1c
 mov ebx, dword [ebp + 0xc]
 test ebx, ebx
-je loc_0001cf0f  ; je 0x1cf0f
+je near loc_0001cf0f  ; je 0x1cf0f
 lea edi, [ebp - 0x1c]
 call fcn_0001c651  ; call 0x1c651
 lea esi, [ebp - 0x20]
@@ -48491,19 +48483,19 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001ce7b:  ; not directly referenced
+loc_0001ce7b:
 cmp dword [ebp - 0x1c], 0
 je short loc_0001ce8b  ; je 0x1ce8b
 
-loc_0001ce81:  ; not directly referenced
+loc_0001ce81:
 mov eax, 0x8000000e
 jmp near loc_0001cf0f  ; jmp 0x1cf0f
 
-loc_0001ce8b:  ; not directly referenced
+loc_0001ce8b:
 mov edx, dword [ebp - 0x20]
 xor eax, eax
 
-loc_0001ce90:  ; not directly referenced
+loc_0001ce90:
 mov ecx, edx
 and edx, 0x3f
 mov byte [ebx + eax], dl
@@ -48514,16 +48506,16 @@ je short loc_0001cea5  ; je 0x1cea5
 mov edx, ecx
 jmp short loc_0001ce90  ; jmp 0x1ce90
 
-loc_0001cea5:  ; not directly referenced
+loc_0001cea5:
 cmp dword [ebp + 8], 4
 mov dword [ebp - 0x20], ecx
 ja short loc_0001ceb2  ; ja 0x1ceb2
 
-loc_0001ceae:  ; not directly referenced
+loc_0001ceae:
 xor eax, eax
 jmp short loc_0001cf0f  ; jmp 0x1cf0f
 
-loc_0001ceb2:  ; not directly referenced
+loc_0001ceb2:
 call fcn_0001c714  ; call 0x1c714
 test al, al
 jne short loc_0001ceae  ; jne 0x1ceae
@@ -48543,7 +48535,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_0001cee8:  ; not directly referenced
+loc_0001cee8:
 cmp dword [ebp - 0x1c], 0
 jne short loc_0001ce81  ; jne 0x1ce81
 mov eax, dword [ebp - 0x20]
@@ -48559,7 +48551,7 @@ mov byte [ebx + 5], dl
 mov byte [ebx + 6], al
 jmp short loc_0001ceae  ; jmp 0x1ceae
 
-loc_0001cf0f:  ; not directly referenced
+loc_0001cf0f:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -48567,7 +48559,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001cf17:  ; not directly referenced
+fcn_0001cf17:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -48578,7 +48570,7 @@ shrd eax, edx, 8
 and eax, 1
 ret
 
-fcn_0001cf2d:  ; not directly referenced
+fcn_0001cf2d:
 push ebp
 mov ebp, esp
 sub esp, 0x14
@@ -48659,7 +48651,7 @@ mov ecx, dword [ebp + 0x10]
 mov dword [ebp - 0xc], 0
 mov word [ebx], 0
 test ax, ax
-je loc_0001d073  ; je 0x1d073
+je near loc_0001d073  ; je 0x1d073
 mov edx, eax
 test cl, cl
 jne short loc_0001d024  ; jne 0x1d024
@@ -48740,7 +48732,7 @@ mov eax, dword [ebp + 0x10]
 add esp, 0x10
 dec eax
 cmp eax, 0x14
-ja loc_0001d1d0  ; ja 0x1d1d0
+ja near loc_0001d1d0  ; ja 0x1d1d0
 jmp dword [eax*4 + ref_0002060c]  ; ujmp: jmp dword [eax*4 + 0x2060c]
 
 loc_0001d0a8:
@@ -48956,7 +48948,7 @@ call fcn_0001c9fc  ; call 0x1c9fc
 leave
 ret
 
-fcn_0001d2a3:  ; not directly referenced
+fcn_0001d2a3:
 push ebp
 mov ebp, esp
 push edi
@@ -48992,7 +48984,7 @@ shr edx, 1
 mov byte [ebx], cl
 mov byte [ebx + 1], dl
 
-loc_0001d2f3:  ; not directly referenced
+loc_0001d2f3:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -49000,7 +48992,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001d2fb:  ; not directly referenced
+fcn_0001d2fb:
 push ebp
 mov ebp, esp
 sub esp, 0x1c
@@ -49018,7 +49010,7 @@ call fcn_0001c9fc  ; call 0x1c9fc
 leave
 ret
 
-fcn_0001d322:  ; not directly referenced
+fcn_0001d322:
 push ebp
 mov ebp, esp
 push edi
@@ -49053,7 +49045,7 @@ shr edx, 0x1f
 mov word [ebx], cx
 mov byte [ebx + 2], dl
 
-loc_0001d373:  ; not directly referenced
+loc_0001d373:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -49061,7 +49053,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001d37b:  ; not directly referenced
+fcn_0001d37b:
 push ebp
 mov ebp, esp
 sub esp, 0x1c
@@ -49129,7 +49121,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001d415:  ; not directly referenced
+fcn_0001d415:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -49142,7 +49134,7 @@ jne short loc_0001d43a  ; jne 0x1d43a
 mov dword [ref_000312e4], ref_00029db0  ; mov dword [0x312e4], 0x29db0
 jmp short loc_0001d460  ; jmp 0x1d460
 
-loc_0001d43a:  ; not directly referenced
+loc_0001d43a:
 mov ecx, dword [ref_000312e4]  ; mov ecx, dword [0x312e4]
 cmp dword [ecx + edx], 0x900ddea1
 je short loc_0001d460  ; je 0x1d460
@@ -49153,10 +49145,10 @@ push ref_00026822  ; push 0x26822
 call fcn_0001545e  ; call 0x1545e
 add esp, 0x10
 
-loc_0001d45e:  ; not directly referenced
+loc_0001d45e:
 jmp short loc_0001d45e  ; jmp 0x1d45e
 
-loc_0001d460:  ; not directly referenced
+loc_0001d460:
 lea ecx, [eax + edx]
 cmp ecx, 0x752c
 jbe short loc_0001d482  ; jbe 0x1d482
@@ -49167,10 +49159,10 @@ push ref_00026842  ; push 0x26842
 call fcn_0001545e  ; call 0x1545e
 add esp, 0x10
 
-loc_0001d480:  ; not directly referenced
+loc_0001d480:
 jmp short loc_0001d480  ; jmp 0x1d480
 
-loc_0001d482:  ; not directly referenced
+loc_0001d482:
 mov eax, dword [ref_000312e4]  ; mov eax, dword [0x312e4]
 mov dword [ref_000312e0], ecx  ; mov dword [0x312e0], ecx
 mov dword [eax + ecx], 0x900ddea1
@@ -49181,7 +49173,7 @@ mov dword [ecx], edx
 leave
 ret
 
-fcn_0001d49f:  ; not directly referenced
+fcn_0001d49f:
 push ebp
 mov ebp, esp
 push edi
@@ -49216,7 +49208,7 @@ call fcn_00015487  ; call 0x15487
 add esp, 0x10
 jmp short loc_0001d55f  ; jmp 0x1d55f
 
-loc_0001d4fb:  ; not directly referenced
+loc_0001d4fb:
 lea eax, [eax + 4]
 mov dword [ebx], eax
 mov eax, dword [ebp - 0x1c]
@@ -49247,7 +49239,7 @@ push 0x40
 call fcn_00015487  ; call 0x15487
 add esp, 0x20
 
-loc_0001d55f:  ; not directly referenced
+loc_0001d55f:
 lea esp, [ebp - 0xc]
 mov eax, edi
 pop ebx
@@ -49256,7 +49248,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001d569:  ; not directly referenced
+fcn_0001d569:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -49295,7 +49287,7 @@ jmp near loc_0001d72a  ; jmp 0x1d72a
 
 loc_0001d5c2:
 cmp dword [ebp - 0x1c], 0
-je loc_0001d737  ; je 0x1d737
+je near loc_0001d737  ; je 0x1d737
 
 loc_0001d5cc:
 sub esp, 0xc
@@ -49315,7 +49307,7 @@ jmp near loc_0001d72a  ; jmp 0x1d72a
 
 loc_0001d5f8:
 cmp dword [ebp - 0x20], 0
-je loc_0001d737  ; je 0x1d737
+je near loc_0001d737  ; je 0x1d737
 
 loc_0001d602:
 sub esp, 0xc
@@ -49335,7 +49327,7 @@ jmp near loc_0001d72a  ; jmp 0x1d72a
 
 loc_0001d62e:
 cmp dword [ebp - 0x24], 0
-je loc_0001d737  ; je 0x1d737
+je near loc_0001d737  ; je 0x1d737
 
 loc_0001d638:
 sub esp, 0xc
@@ -49355,7 +49347,7 @@ jmp near loc_0001d72a  ; jmp 0x1d72a
 
 loc_0001d664:
 cmp dword [ebp - 0x28], 0
-je loc_0001d737  ; je 0x1d737
+je near loc_0001d737  ; je 0x1d737
 
 loc_0001d66e:
 sub esp, 0xc
@@ -49375,7 +49367,7 @@ jmp near loc_0001d72a  ; jmp 0x1d72a
 
 loc_0001d69a:
 test ebx, ebx
-je loc_0001d737  ; je 0x1d737
+je near loc_0001d737  ; je 0x1d737
 
 loc_0001d6a2:
 sub esp, 0xc
@@ -50133,7 +50125,7 @@ loc_0001e24c:
 call fcn_0001c1e1  ; call 0x1c1e1
 mov edx, edi
 cmp dl, al
-jae loc_0001e2db  ; jae 0x1e2db
+jae near loc_0001e2db  ; jae 0x1e2db
 mov eax, edi
 inc edi
 movzx eax, al
@@ -50407,7 +50399,7 @@ test ebx, ebx
 jne short loc_0001e6bd  ; jne 0x1e6bd
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0001ecf3  ; je 0x1ecf3
+je near loc_0001ecf3  ; je 0x1ecf3
 push edx
 push ref_00022281  ; push 0x22281
 push 0x35
@@ -50622,7 +50614,7 @@ mov byte [ebx + 0x92], al
 mov al, byte [esi + 0x9f]
 mov byte [ebx + 0x9a], al
 cmp edi, 1
-jne loc_0001eb4c  ; jne 0x1eb4c
+jne near loc_0001eb4c  ; jne 0x1eb4c
 mov eax, edx
 and eax, 0xfffffff7
 cmp ax, 0x8c44
@@ -50699,7 +50691,7 @@ je short loc_0001eae5  ; je 0x1eae5
 
 loc_0001eacd:
 cmp dword [esi + 0x10], 0
-je loc_0001ec26  ; je 0x1ec26
+je near loc_0001ec26  ; je 0x1ec26
 mov byte [ebx], 1
 xor edi, edi
 mov byte [ebx + 0x13], 1
@@ -50765,7 +50757,7 @@ jmp short loc_0001eaea  ; jmp 0x1eaea
 
 loc_0001eb4c:
 cmp edi, 2
-jne loc_0001eacd  ; jne 0x1eacd
+jne near loc_0001eacd  ; jne 0x1eacd
 lea eax, [edx + 0x63bf]
 xor ecx, ecx
 mov word [ebp - 0x1c], ax
@@ -50779,7 +50771,7 @@ call fcn_0001c261  ; call 0x1c261
 mov ecx, dword [ebp - 0x24]
 movzx eax, al
 cmp ecx, eax
-jae loc_0001eacd  ; jae 0x1eacd
+jae near loc_0001eacd  ; jae 0x1eacd
 cmp word [ebp - 0x1c], 6
 ja short loc_0001ebad  ; ja 0x1ebad
 mov al, byte [edi + 3]
@@ -50873,7 +50865,7 @@ loc_0001ec28:
 call fcn_0001c2f8  ; call 0x1c2f8
 movzx eax, al
 cmp ebx, eax
-jae loc_0001ecf3  ; jae 0x1ecf3
+jae near loc_0001ecf3  ; jae 0x1ecf3
 mov dl, byte [esi + ebx + 0xb2]
 mov eax, dword [ebp + 0xc]
 mov ecx, dword [ebp + 0xc]
@@ -50968,7 +50960,7 @@ test eax, eax
 jne short loc_0001ed2b  ; jne 0x1ed2b
 call fcn_00015480  ; call 0x15480
 test al, al
-je loc_0001edab  ; je 0x1edab
+je near loc_0001edab  ; je 0x1edab
 push eax
 push ref_00026a09  ; push 0x26a09
 push 0x34
@@ -51333,13 +51325,13 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f0dc:  ; not directly referenced
+fcn_0001f0dc:
 push ebp
 mov ebp, esp
 pop ebp
 jmp near fcn_0001f0e5  ; jmp 0x1f0e5
 
-fcn_0001f0e5:  ; not directly referenced
+fcn_0001f0e5:
 push ebp
 mov ebp, esp
 push edi
@@ -51350,7 +51342,7 @@ mov esi, dword [ebp + 0xc]
 mov ebx, dword [ebp + 8]
 mov edi, dword [ebp + 0x10]
 test esi, esi
-je loc_0001f1ab  ; je 0x1f1ab
+je near loc_0001f1ab  ; je 0x1f1ab
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f121  ; je 0x1f121
@@ -51363,7 +51355,7 @@ push ref_00026bcd  ; push 0x26bcd
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f121:  ; not directly referenced
+loc_0001f121:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f14a  ; je 0x1f14a
@@ -51379,7 +51371,7 @@ push ref_00026bcd  ; push 0x26bcd
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f14a:  ; not directly referenced
+loc_0001f14a:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f16d  ; je 0x1f16d
@@ -51392,7 +51384,7 @@ push ref_00026bcd  ; push 0x26bcd
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f16d:  ; not directly referenced
+loc_0001f16d:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f193  ; je 0x1f193
@@ -51405,7 +51397,7 @@ push ref_00026bcd  ; push 0x26bcd
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f193:  ; not directly referenced
+loc_0001f193:
 shr esi, 2
 mov dword [ebp + 0x10], edi
 mov dword [ebp + 0xc], esi
@@ -51417,7 +51409,7 @@ pop edi
 pop ebp
 jmp near loc_0001f1e0  ; jmp 0x1f1e0
 
-loc_0001f1ab:  ; not directly referenced
+loc_0001f1ab:
 lea esp, [ebp - 0xc]
 mov eax, ebx
 pop ebx
@@ -51444,7 +51436,7 @@ mov eax, dword [esp + 8]
 pop edi
 ret
 
-loc_0001f1e0:  ; not directly referenced
+loc_0001f1e0:
 push edi
 mov eax, dword [esp + 0x10]
 mov edi, dword [esp + 8]
@@ -51454,7 +51446,7 @@ mov eax, dword [esp + 8]
 pop edi
 ret
 
-fcn_0001f1f5:  ; not directly referenced
+fcn_0001f1f5:
 push ebp
 mov eax, 0xfffffffe
 mov ebp, esp
@@ -51538,7 +51530,7 @@ and eax, dword [ebp + 8]
 leave
 ret
 
-fcn_0001f2b6:  ; not directly referenced
+fcn_0001f2b6:
 push ebp
 mov ebp, esp
 push ebx
@@ -51556,7 +51548,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f2e5:  ; not directly referenced
+loc_0001f2e5:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f30e  ; je 0x1f30e
@@ -51570,7 +51562,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f30e:  ; not directly referenced
+loc_0001f30e:
 mov cl, byte [ebp + 0x10]
 mov eax, 0xfffffffe
 movzx ebx, bl
@@ -51583,7 +51575,7 @@ leave
 shr eax, cl
 ret
 
-fcn_0001f329:  ; not directly referenced
+fcn_0001f329:
 push ebp
 mov ebp, esp
 push edi
@@ -51605,7 +51597,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f361:  ; not directly referenced
+loc_0001f361:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f387  ; je 0x1f387
@@ -51618,7 +51610,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f387:  ; not directly referenced
+loc_0001f387:
 mov eax, edi
 movzx edi, al
 mov eax, esi
@@ -51635,7 +51627,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f3a4:  ; not directly referenced
+fcn_0001f3a4:
 push ebp
 mov ebp, esp
 push edi
@@ -51657,7 +51649,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f3dc:  ; not directly referenced
+loc_0001f3dc:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f402  ; je 0x1f402
@@ -51670,7 +51662,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f402:  ; not directly referenced
+loc_0001f402:
 mov eax, edi
 movzx edi, al
 mov eax, esi
@@ -51687,7 +51679,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f41f:  ; not directly referenced
+fcn_0001f41f:
 push ebp
 mov ebp, esp
 push edi
@@ -51713,7 +51705,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f463:  ; not directly referenced
+loc_0001f463:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f488  ; je 0x1f488
@@ -51726,7 +51718,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f488:  ; not directly referenced
+loc_0001f488:
 mov eax, edi
 movzx edi, al
 movzx eax, byte [ebp - 0x1c]
@@ -51749,7 +51741,7 @@ pop edi
 pop ebp
 jmp near fcn_0001f329  ; jmp 0x1f329
 
-fcn_0001f4bc:  ; not directly referenced
+fcn_0001f4bc:
 push ebp
 mov ebp, esp
 push edi
@@ -51771,7 +51763,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f4f4:  ; not directly referenced
+loc_0001f4f4:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f51a  ; je 0x1f51a
@@ -51784,7 +51776,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f51a:  ; not directly referenced
+loc_0001f51a:
 mov eax, edi
 sub esp, 0xc
 movzx edi, al
@@ -51803,7 +51795,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f53c:  ; not directly referenced
+fcn_0001f53c:
 push ebp
 mov ebp, esp
 push ebx
@@ -51821,7 +51813,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f56b:  ; not directly referenced
+loc_0001f56b:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f594  ; je 0x1f594
@@ -51835,7 +51827,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f594:  ; not directly referenced
+loc_0001f594:
 mov cl, byte [ebp + 0x10]
 mov eax, 0xfffffffe
 movzx ebx, bx
@@ -51848,7 +51840,7 @@ leave
 shr eax, cl
 ret
 
-fcn_0001f5af:  ; not directly referenced
+fcn_0001f5af:
 push ebp
 mov ebp, esp
 push edi
@@ -51870,7 +51862,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f5e7:  ; not directly referenced
+loc_0001f5e7:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f60d  ; je 0x1f60d
@@ -51883,7 +51875,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f60d:  ; not directly referenced
+loc_0001f60d:
 movzx edi, di
 movzx esi, si
 push edi
@@ -51898,7 +51890,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f626:  ; not directly referenced
+fcn_0001f626:
 push ebp
 mov ebp, esp
 push edi
@@ -51920,7 +51912,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f65e:  ; not directly referenced
+loc_0001f65e:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f684  ; je 0x1f684
@@ -51933,7 +51925,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f684:  ; not directly referenced
+loc_0001f684:
 movzx edi, di
 movzx esi, si
 push edi
@@ -51948,7 +51940,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f69d:  ; not directly referenced
+fcn_0001f69d:
 push ebp
 mov ebp, esp
 push edi
@@ -51974,7 +51966,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f6e1:  ; not directly referenced
+loc_0001f6e1:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f706  ; je 0x1f706
@@ -51987,7 +51979,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f706:  ; not directly referenced
+loc_0001f706:
 movzx eax, word [ebp - 0x1c]
 movzx edi, di
 push edi
@@ -52009,7 +52001,7 @@ pop edi
 pop ebp
 jmp near fcn_0001f5af  ; jmp 0x1f5af
 
-fcn_0001f738:  ; not directly referenced
+fcn_0001f738:
 push ebp
 mov ebp, esp
 push edi
@@ -52031,7 +52023,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f770:  ; not directly referenced
+loc_0001f770:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f796  ; je 0x1f796
@@ -52044,7 +52036,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f796:  ; not directly referenced
+loc_0001f796:
 sub esp, 0xc
 movzx edi, di
 push edi
@@ -52061,7 +52053,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001f7b4:  ; not directly referenced
+fcn_0001f7b4:
 push ebp
 mov ebp, esp
 sub esp, 8
@@ -52077,7 +52069,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f7e1:  ; not directly referenced
+loc_0001f7e1:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001f80a  ; je 0x1f80a
@@ -52091,7 +52083,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001f80a:  ; not directly referenced
+loc_0001f80a:
 mov cl, byte [ebp + 0x10]
 mov eax, 0xfffffffe
 shl eax, cl
@@ -52306,7 +52298,7 @@ pop esi
 pop ebp
 ret
 
-fcn_0001fa1d:  ; not directly referenced
+fcn_0001fa1d:
 push ebp
 mov ebp, esp
 push edi
@@ -52330,7 +52322,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fa5b:  ; not directly referenced
+loc_0001fa5b:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fa80  ; je 0x1fa80
@@ -52343,7 +52335,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fa80:  ; not directly referenced
+loc_0001fa80:
 push eax
 push ebx
 push 0xffffffffffffffff
@@ -52364,7 +52356,7 @@ pop edi
 pop ebp
 jmp near fcn_0001724f  ; jmp 0x1724f
 
-fcn_0001faac:  ; not directly referenced
+fcn_0001faac:
 push ebp
 mov ebp, esp
 push edi
@@ -52389,7 +52381,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001faee:  ; not directly referenced
+loc_0001faee:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fb17  ; je 0x1fb17
@@ -52403,7 +52395,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fb17:  ; not directly referenced
+loc_0001fb17:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fb6a  ; je 0x1fb6a
@@ -52429,7 +52421,7 @@ jne short loc_0001fb52  ; jne 0x1fb52
 cmp dword [ebp - 0x1c], eax
 je short loc_0001fb6a  ; je 0x1fb6a
 
-loc_0001fb52:  ; not directly referenced
+loc_0001fb52:
 push edx
 push ref_00026d5e  ; push 0x26d5e
 push 0x331
@@ -52437,7 +52429,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fb6a:  ; not directly referenced
+loc_0001fb6a:
 push eax
 push dword [ebp + 0x10]
 push edi
@@ -52463,7 +52455,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001fb9e:  ; not directly referenced
+fcn_0001fb9e:
 push ebp
 mov ebp, esp
 push edi
@@ -52488,7 +52480,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fbe0:  ; not directly referenced
+loc_0001fbe0:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fc09  ; je 0x1fc09
@@ -52502,7 +52494,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fc09:  ; not directly referenced
+loc_0001fc09:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fc5c  ; je 0x1fc5c
@@ -52528,7 +52520,7 @@ jne short loc_0001fc44  ; jne 0x1fc44
 cmp dword [ebp - 0x1c], eax
 je short loc_0001fc5c  ; je 0x1fc5c
 
-loc_0001fc44:  ; not directly referenced
+loc_0001fc44:
 push edx
 push ref_00026db3  ; push 0x26db3
 push 0x365
@@ -52536,7 +52528,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fc5c:  ; not directly referenced
+loc_0001fc5c:
 push eax
 mov ecx, esi
 push dword [ebp + 0x10]
@@ -52568,7 +52560,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001fc9c:  ; not directly referenced
+fcn_0001fc9c:
 push ebp
 mov ebp, esp
 push edi
@@ -52600,7 +52592,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fcf2:  ; not directly referenced
+loc_0001fcf2:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fd18  ; je 0x1fd18
@@ -52613,7 +52605,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fd18:  ; not directly referenced
+loc_0001fd18:
 push eax
 push eax
 push dword [ebp - 0x2c]
@@ -52638,7 +52630,7 @@ pop edi
 pop ebp
 jmp near fcn_0001faac  ; jmp 0x1faac
 
-fcn_0001fd53:  ; not directly referenced
+fcn_0001fd53:
 push ebp
 mov ebp, esp
 push edi
@@ -52664,7 +52656,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fd97:  ; not directly referenced
+loc_0001fd97:
 call fcn_00015480  ; call 0x15480
 test al, al
 je short loc_0001fdbd  ; je 0x1fdbd
@@ -52677,7 +52669,7 @@ push ref_00026cb0  ; push 0x26cb0
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fdbd:  ; not directly referenced
+loc_0001fdbd:
 push edi
 push esi
 push 0
@@ -52694,7 +52686,7 @@ pop edi
 pop ebp
 ret
 
-fcn_0001fdda:  ; not directly referenced
+fcn_0001fdda:
 push ebp
 mov ebp, esp
 push edi
@@ -52716,7 +52708,7 @@ push ref_00026e0a  ; push 0x26e0a
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fe0f:  ; not directly referenced
+loc_0001fe0f:
 mov dword [ebp + 0x10], ebx
 mov dword [ebp + 8], esi
 mov dword [ebp + 0xc], edi
@@ -52727,13 +52719,13 @@ pop edi
 pop ebp
 jmp near loc_0001ff76  ; jmp 0x1ff76
 
-fcn_0001fe24:  ; not directly referenced
+fcn_0001fe24:
 push ebp
 mov ebp, esp
 pop ebp
 jmp near loc_0001fe90  ; jmp 0x1fe90
 
-fcn_0001fe2d:  ; not directly referenced
+fcn_0001fe2d:
 push ebp
 mov ebp, esp
 push edi
@@ -52760,7 +52752,7 @@ push ref_00026e3f  ; push 0x26e3f
 call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 
-loc_0001fe6f:  ; not directly referenced
+loc_0001fe6f:
 mov eax, dword [ebp - 0x20]
 mov edx, dword [ebp - 0x1c]
 mov dword [ebp + 0x18], edi
@@ -52775,7 +52767,7 @@ pop edi
 pop ebp
 jmp near loc_0001fea2  ; jmp 0x1fea2
 
-loc_0001fe90:  ; not directly referenced
+loc_0001fe90:
 mov ecx, dword [esp + 0xc]
 mov eax, ecx
 imul ecx, dword [esp + 8]
@@ -52783,7 +52775,7 @@ mul dword [esp + 4]
 add edx, ecx
 ret
 
-loc_0001fea2:  ; not directly referenced
+loc_0001fea2:
 mov ecx, dword [esp + 0x10]
 test ecx, ecx
 jne short loc_0001febd  ; jne 0x1febd
@@ -52792,10 +52784,10 @@ jecxz loc_0001feb8  ; jecxz 0x1feb8
 and dword [ecx + 4], 0
 mov dword [esp + 0x10], ecx
 
-loc_0001feb8:  ; not directly referenced
+loc_0001feb8:
 jmp near loc_00017581  ; jmp 0x17581
 
-loc_0001febd:  ; not directly referenced
+loc_0001febd:
 push ebx
 push esi
 push edi
@@ -52805,7 +52797,7 @@ mov edi, edx
 mov esi, eax
 mov ebx, dword [esp + 0x18]
 
-loc_0001fed0:  ; not directly referenced
+loc_0001fed0:
 shr edx, 1
 rcr eax, 1
 shrd ebx, ecx, 1
@@ -52825,20 +52817,20 @@ jb short loc_0001fefd  ; jb 0x1fefd
 cmp esi, eax
 jae short loc_0001ff08  ; jae 0x1ff08
 
-loc_0001fefd:  ; not directly referenced
+loc_0001fefd:
 dec ebx
 jecxz loc_0001ff13  ; jecxz 0x1ff13
 sub eax, dword [esp + 0x18]
 sbb edx, dword [esp + 0x1c]
 
-loc_0001ff08:  ; not directly referenced
+loc_0001ff08:
 jecxz loc_0001ff13  ; jecxz 0x1ff13
 sub esi, eax
 sbb edi, edx
 mov dword [ecx], esi
 mov dword [ecx + 4], edi
 
-loc_0001ff13:  ; not directly referenced
+loc_0001ff13:
 mov eax, ebx
 xor edx, edx
 pop edi
@@ -52849,7 +52841,7 @@ ret
 fcn_0001ff1b:
 push ebx
 
-fcn_0001ff1c:  ; not directly referenced
+fcn_0001ff1c:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0xc]
@@ -52880,10 +52872,10 @@ leave
 pop ebx
 ret
 
-fcn_0001ff47:  ; not directly referenced
+fcn_0001ff47:
 push ebx
 
-fcn_0001ff48:  ; not directly referenced
+fcn_0001ff48:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 0xc]
@@ -52894,28 +52886,28 @@ mov ecx, dword [ebp + 0x14]
 jecxz loc_0001ff5b  ; jecxz 0x1ff5b
 mov dword [ecx], eax
 
-loc_0001ff5b:  ; not directly referenced
+loc_0001ff5b:
 mov ecx, dword [ebp + 0x18]
 jecxz loc_0001ff62  ; jecxz 0x1ff62
 mov dword [ecx], ebx
 
-loc_0001ff62:  ; not directly referenced
+loc_0001ff62:
 mov ecx, dword [ebp + 0x20]
 jecxz loc_0001ff69  ; jecxz 0x1ff69
 mov dword [ecx], edx
 
-loc_0001ff69:  ; not directly referenced
+loc_0001ff69:
 mov ecx, dword [ebp + 0x1c]
 jecxz loc_0001ff70  ; jecxz 0x1ff70
 pop dword [ecx]
 
-loc_0001ff70:  ; not directly referenced
+loc_0001ff70:
 mov eax, dword [ebp + 0xc]
 leave
 pop ebx
 ret
 
-loc_0001ff76:  ; not directly referenced
+loc_0001ff76:
 mov cl, byte [esp + 0xc]
 xor eax, eax
 mov edx, dword [esp + 4]
@@ -52964,7 +52956,7 @@ mov ebx, dword [ebp - 4]
 leave
 ret
 
-fcn_00020000:  ; not directly referenced
+fcn_00020000:
 push ebp
 mov ebp, esp
 mov eax, dword [ebp + 8]
@@ -52980,18 +52972,18 @@ movzx ebx, ax
 mov eax, ebx
 and eax, 0xfffffffd
 cmp ax, 0x8c44
-je loc_000200ee  ; je 0x200ee
+je near loc_000200ee  ; je 0x200ee
 lea eax, [ebx + 0x73b2]
 cmp ax, 2
-jbe loc_000200ee  ; jbe 0x200ee
+jbe near loc_000200ee  ; jbe 0x200ee
 lea eax, [ebx + 0x73b7]
 cmp ax, 3
-jbe loc_000200ee  ; jbe 0x200ee
+jbe near loc_000200ee  ; jbe 0x200ee
 lea eax, [ebx + 0x73bf]
 cmp ax, 1
-jbe loc_000200ee  ; jbe 0x200ee
+jbe near loc_000200ee  ; jbe 0x200ee
 cmp bx, 0x8c58
-je loc_000200ee  ; je 0x200ee
+je near loc_000200ee  ; je 0x200ee
 mov eax, ebx
 and eax, 0xfffffffb
 cmp ax, 0x8c52
@@ -53020,7 +53012,7 @@ push 0x80000000
 call fcn_00015487  ; call 0x15487
 add esp, 0x10
 
-loc_000200c4:  ; not directly referenced
+loc_000200c4:
 call fcn_00015480  ; call 0x15480
 mov esi, 3
 test al, al
@@ -53033,10 +53025,10 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp short loc_000200ee  ; jmp 0x200ee
 
-loc_000200e9:  ; not directly referenced
+loc_000200e9:
 mov esi, 1
 
-loc_000200ee:  ; not directly referenced
+loc_000200ee:
 lea esp, [ebp - 8]
 mov eax, esi
 pop ebx
@@ -53044,7 +53036,7 @@ pop esi
 pop ebp
 ret
 
-fcn_000200f7:  ; not directly referenced
+fcn_000200f7:
 push ebp
 mov ebp, esp
 push edi
@@ -53065,10 +53057,10 @@ call fcn_0001548c  ; call 0x1548c
 add esp, 0x10
 jmp short loc_0002012f  ; jmp 0x2012f
 
-loc_0002012c:  ; not directly referenced
+loc_0002012c:
 sub ebx, 8
 
-loc_0002012f:  ; not directly referenced
+loc_0002012f:
 mov esi, dword [ebx + 0x10]
 sub esp, 0xc
 push esi
@@ -53085,11 +53077,11 @@ mov dword [esp], eax
 call fcn_00017dc2  ; call 0x17dc2
 add esp, 0x10
 cmp dword [ebp + 0xc], 5
-ja loc_00020388  ; ja 0x20388
+ja near loc_00020388  ; ja 0x20388
 mov edx, dword [ebp + 0xc]
 jmp dword [edx*4 + ref_00020670]  ; ujmp: jmp dword [edx*4 + 0x20670]
 
-loc_00020172:  ; not directly referenced
+loc_00020172:
 push eax
 mov esi, 4
 push eax
@@ -53099,7 +53091,7 @@ call fcn_00018eea  ; call 0x18eea
 add esp, 0x10
 jmp near loc_0002034f  ; jmp 0x2034f
 
-loc_0002018d:  ; not directly referenced
+loc_0002018d:
 push eax
 mov esi, 6
 push eax
@@ -53109,7 +53101,7 @@ call fcn_00018eea  ; call 0x18eea
 add esp, 0x10
 jmp near loc_0002034f  ; jmp 0x2034f
 
-loc_000201a8:  ; not directly referenced
+loc_000201a8:
 push eax
 add esi, 0x44
 push eax
@@ -53129,7 +53121,7 @@ push eax
 call fcn_00018f97  ; call 0x18f97
 jmp short loc_000201f5  ; jmp 0x201f5
 
-loc_000201d8:  ; not directly referenced
+loc_000201d8:
 dec edi
 jne short loc_000201f8  ; jne 0x201f8
 push ecx
@@ -53145,10 +53137,10 @@ push 0
 push eax
 call fcn_00018f27  ; call 0x18f27
 
-loc_000201f5:  ; not directly referenced
+loc_000201f5:
 add esp, 0x10
 
-loc_000201f8:  ; not directly referenced
+loc_000201f8:
 push ecx
 push ecx
 push 0x100
@@ -53177,7 +53169,7 @@ add esp, 0x10
 xor eax, eax
 jmp near loc_0002038d  ; jmp 0x2038d
 
-loc_00020242:  ; not directly referenced
+loc_00020242:
 mov ebx, eax
 push edx
 and ebx, 0xfffc
@@ -53203,7 +53195,7 @@ mov eax, dword [ebp + 0xc]
 add esp, 0x10
 sub eax, 4
 cmp eax, 1
-ja loc_0002034a  ; ja 0x2034a
+ja near loc_0002034a  ; ja 0x2034a
 push ecx
 add esi, 0xac
 push ecx
@@ -53212,7 +53204,7 @@ push esi
 call fcn_00018b14  ; call 0x18b14
 add esp, 0x10
 cmp dword [ebp + 0xc], 5
-jne loc_0002034a  ; jne 0x2034a
+jne near loc_0002034a  ; jne 0x2034a
 mov eax, dword [ebp - 0x1c]
 sub esp, 0xc
 add eax, 0x332c
@@ -53220,7 +53212,7 @@ push eax
 call fcn_00017e4e  ; call 0x17e4e
 add esp, 0x10
 test al, 3
-jne loc_0002034a  ; jne 0x2034a
+jne near loc_0002034a  ; jne 0x2034a
 mov eax, dword [ebp - 0x1c]
 sub esp, 0xc
 add eax, 0x3330
@@ -53248,7 +53240,7 @@ pop edx
 push 0xbfffffff
 jmp short loc_0002032f  ; jmp 0x2032f
 
-loc_00020309:  ; not directly referenced
+loc_00020309:
 cmp edi, 2
 jne short loc_00020338  ; jne 0x20338
 push ecx
@@ -53266,12 +53258,12 @@ pop eax
 pop edx
 push 0x7fffffff
 
-loc_0002032f:  ; not directly referenced
+loc_0002032f:
 push ebx
 call fcn_0001838d  ; call 0x1838d
 add esp, 0x10
 
-loc_00020338:  ; not directly referenced
+loc_00020338:
 push edx
 push edx
 push 0x40000000
@@ -53279,10 +53271,10 @@ push dword [ebp - 0x20]
 call fcn_00018363  ; call 0x18363
 add esp, 0x10
 
-loc_0002034a:  ; not directly referenced
+loc_0002034a:
 mov esi, 0xe
 
-loc_0002034f:  ; not directly referenced
+loc_0002034f:
 sub esp, 0xc
 push dword [ebp + 0xc]
 call fcn_0001ba36  ; call 0x1ba36
@@ -53293,7 +53285,7 @@ je short loc_0002036a  ; je 0x2036a
 test ebx, ebx
 jne short loc_0002038d  ; jne 0x2038d
 
-loc_0002036a:  ; not directly referenced
+loc_0002036a:
 push eax
 push eax
 mov eax, esi
@@ -53306,10 +53298,10 @@ add esp, 0x10
 mov eax, ebx
 jmp short loc_0002038d  ; jmp 0x2038d
 
-loc_00020388:  ; not directly referenced
+loc_00020388:
 mov eax, 0x80000002
 
-loc_0002038d:  ; not directly referenced
+loc_0002038d:
 lea esp, [ebp - 0xc]
 pop ebx
 pop esi
@@ -53317,7 +53309,7 @@ pop edi
 pop ebp
 ret
 
-loc_00020395:
+endloc_00020395:
 db 0x66
 db 0x90
 db 0x66
